@@ -1,0 +1,13 @@
+packages
+bin
+obj
+*.userprefs
+*.rej
+**/.vs/
+*.suo
+*.csproj.user
+*.shproj.user
+*.usertest
+*.lock.json
+*.orig
+XamarinSDK/SDKBrowser/SDKBrowser.Android/Resources/Resource.Designer.cs
