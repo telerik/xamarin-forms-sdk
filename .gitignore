@@ -1,6 +1,7 @@
 packages
 bin
 obj
+*.DS_Store
 *.userprefs
 *.rej
 **/.vs/
