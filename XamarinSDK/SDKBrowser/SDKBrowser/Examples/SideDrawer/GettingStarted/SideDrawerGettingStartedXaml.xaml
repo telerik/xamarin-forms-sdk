@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SDKBrowser.Examples.SideDrawer.SideDrawerGettingStartedXaml">
+	<!-- >> sidedrawer-gettingstarted-xaml -->
+	<telerikPrimitives:RadSideDrawer x:Name="drawer" DrawerLength="200">
+		<telerikPrimitives:RadSideDrawer.MainContent>
+			<Label Text="Main content" />
+		</telerikPrimitives:RadSideDrawer.MainContent>
+		<telerikPrimitives:RadSideDrawer.DrawerContent>
+			<StackLayout>
+				<Button Text="Mail" />
+				<Button Text="Calendar" />
+				<Button Text="People" />
+				<Button Text="Tasks" />
+			</StackLayout>
+		</telerikPrimitives:RadSideDrawer.DrawerContent>
+	</telerikPrimitives:RadSideDrawer>
+	<!-- << sidedrawer-gettingstarted-xaml -->
+</ContentPage>

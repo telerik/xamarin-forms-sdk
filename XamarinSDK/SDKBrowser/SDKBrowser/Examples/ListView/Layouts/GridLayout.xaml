@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls" xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SDKBrowser.Examples.ListView.GridLayout">
+  <!-- >> listview-layouts-gridlayout-listview -->
+  <telerikDataControls:RadListView x:Name="listView" BackgroundColor="White">
+    <telerikDataControls:RadListView.ItemTemplate>
+      <DataTemplate>
+        <telerikListView:ListViewTemplateCell>
+          <telerikListView:ListViewTemplateCell.View>
+            <Grid BackgroundColor="{Binding Color}"/>
+          </telerikListView:ListViewTemplateCell.View>
+        </telerikListView:ListViewTemplateCell>
+      </DataTemplate>
+    </telerikDataControls:RadListView.ItemTemplate>
+    <telerikDataControls:RadListView.LayoutDefinition>
+      <telerikListView:ListViewGridLayout VerticalItemSpacing="5" HorizontalItemSpacing="5" SpanCount="2" ItemLength="120" />
+    </telerikDataControls:RadListView.LayoutDefinition>
+  </telerikDataControls:RadListView>
+  <!-- << listview-layouts-gridlayout-listview -->
+</ContentPage>

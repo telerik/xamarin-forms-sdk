@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SDKBrowser.Examples.DataForm.DataFormCustomSource" xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+		<!-- >> dataform-source-customsource-dataform -->
+		<telerikInput:RadDataForm x:Name="dataForm" />
+        <!-- << dataform-source-customsource-dataform -->
+		<StackLayout Grid.Row="1">
+			<Button Clicked="GetSourceProperties" Text="Get source properties" />
+			<StackLayout x:Name="sourceProperties" />
+		</StackLayout>
+	</Grid>
+</ContentPage>

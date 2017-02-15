@@ -1,0 +1,32 @@
+﻿<forms:WindowsPage x:Class="SDKBrowser.WinRT.MainPage"
+                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:forms="using:Xamarin.Forms.Platform.WinRT"
+                   xmlns:local="using:SDKBrowser.WinRT"
+                   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                   xmlns:xf="using:Xamarin.Forms.Platform.WinRT"
+                   mc:Ignorable="d">
+    <forms:WindowsPage.Resources>
+        <Style TargetType="xf:PageControl">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="xf:PageControl">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="70"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <AppBarButton Icon="Back" x:Name="backButton" Visibility="Collapsed"/>
+                            <local:TopAppBar HorizontalAlignment="Right"/>
+                            <ContentPresenter x:Name="presenter" Grid.Row="1"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </forms:WindowsPage.Resources>
+    <Grid >
+
+    </Grid>
+</forms:WindowsPage>

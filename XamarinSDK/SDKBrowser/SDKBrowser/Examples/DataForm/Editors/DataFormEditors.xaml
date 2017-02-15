@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SDKBrowser.Examples.DataForm.DataFormEditors"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+    <ScrollView>
+      <telerikInput:RadDataForm  x:Name="dataForm" Source="{Binding}"/>
+    </ScrollView>
+    <Button  Grid.Row="1" Clicked="CommitButtonButtonClicked" Text="Commit"/>
+  </Grid>
+</ContentPage>

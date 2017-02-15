@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input" xmlns:dataForm="clr-namespace:Telerik.XamarinForms.Input.DataForm;assembly=Telerik.XamarinForms.Input" x:Class="SDKBrowser.Examples.DataForm.DataFormStylingEditors">
+	<telerikInput:RadDataForm Source="{Binding}" x:Name="dataForm" />
+</ContentPage>

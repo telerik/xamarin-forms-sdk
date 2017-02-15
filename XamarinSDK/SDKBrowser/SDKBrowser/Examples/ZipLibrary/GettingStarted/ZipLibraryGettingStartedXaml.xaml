@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		xmlns:local="clr-namespace:SDKBrowser.Examples.ZipLibrary.GettingStarted"
+        xmlns:common="clr-namespace:SDKBrowser.Common"
+		x:Class="SDKBrowser.Examples.ZipLibrary.ZipLibraryGettingStartedXaml">
+	<ContentPage.BindingContext>
+		<local:ViewModel />
+	</ContentPage.BindingContext>
+	<ContentPage.Content>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="Auto" />
+			</Grid.ColumnDefinitions>
+
+			<Label Text="Uncompressed size" />
+			<Label Grid.Column="1" Text="{Binding Path=CompressUnCompressedSize}" />
+			
+			<Label Text="Compressed size" Grid.Row="1" />
+			<Label Grid.Row="1" Grid.Column="1" Text="{Binding Path=CompressCompressedSize}" />
+
+			<Label VerticalTextAlignment="Center" Text="Compression level" Grid.Row="2" />
+			<Picker common:PickerItemsSourceAttachedProperty.ItemsSource="{Binding Path=CompressionLevelItemsSource}"
+				SelectedIndex="{Binding Path=SelectedCompressionLevelIndex}" Title="Compression level" Grid.Row="2" Grid.Column="1" />
+			
+			<Button Text="Compress" Command="{Binding Path=CompressCommand}" Grid.Row="3" Grid.ColumnSpan="2" Margin="0, 0, 0, 20" />
+			
+			<Label Text="Compressed size" Grid.Row="4" />
+			<Label Grid.Row="4" Grid.Column="1" Text="{Binding Path=UnCompressCompressedSize}" />
+			
+			<Label Text="Uncompressed size" Grid.Row="5" />
+			<Label Grid.Row="5" Grid.Column="1" Text="{Binding Path=UnCompressUnCompressedSize}" />
+
+			<Button Text="Uncompress" Command="{Binding Path=UnCompressCommand}" Grid.Row="6" Grid.ColumnSpan="2" />
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>

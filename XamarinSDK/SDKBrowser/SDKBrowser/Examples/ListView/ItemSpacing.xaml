@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls"
+             x:Class="SDKBrowser.Examples.ListView.ItemSpacing">
+  <Grid BackgroundColor="#33888888">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+    <Grid>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="Auto"/>
+      </Grid.ColumnDefinitions>
+      <Button Clicked="DecreaseHorizontalSpacing" Text="- 10" Grid.Column="0" />
+      <Label Text="VerticalItemSpacing" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1"/>
+      <Button Clicked="IncreaseHorizontalSpacing" Text="+ 10" Grid.Column="2" MinimumWidthRequest="0"/>
+    </Grid>
+
+    <Grid Grid.Row="1">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="Auto"/>
+      </Grid.ColumnDefinitions>
+      <Button Clicked="DecreaseVerticalSpacing" Text="- 10" Grid.Column="0"/>
+      <Label Text="HorizontalItemSpacing" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1"/>
+      <Button Clicked="IncreaseVerticalSpacing" Text="+ 10" Grid.Column="2"/>
+    </Grid>
+
+    <telerikDataControls:RadListView x:Name="listView" Grid.Row="2" BackgroundColor="#55FFFFFF">
+      <telerikDataControls:RadListView.ItemTemplate>
+        <DataTemplate>
+          <telerikListView:ListViewTemplateCell>
+            <telerikListView:ListViewTemplateCell.View>
+              <Grid BackgroundColor="White">
+                <Label Text="{Binding Name}" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center"/>
+              </Grid>
+            </telerikListView:ListViewTemplateCell.View>
+          </telerikListView:ListViewTemplateCell>
+        </DataTemplate>
+      </telerikDataControls:RadListView.ItemTemplate>
+      <telerikDataControls:RadListView.LayoutDefinition>
+        <telerikListView:ListViewGridLayout HorizontalItemSpacing="10" VerticalItemSpacing="10">
+          <telerikListView:ListViewGridLayout.ItemLength>
+            <OnPlatform x:TypeArguments="x:Double" iOS="70" Android="90" WinPhone="-1" />
+          </telerikListView:ListViewGridLayout.ItemLength>
+        </telerikListView:ListViewGridLayout>
+      </telerikDataControls:RadListView.LayoutDefinition>
+    </telerikDataControls:RadListView>
+  </Grid>
+</ContentPage>

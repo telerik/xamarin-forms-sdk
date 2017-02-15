@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+        xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls"
+        xmlns:common="clr-namespace:SDKBrowser.Common"
+        BackgroundColor="White"
+		x:Class="SDKBrowser.Examples.SpreadStreamProcessing.Styling">
+    <Grid Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <telerikDataControls:RadListView ItemsSource="{Binding Source}" >
+            <telerikDataControls:RadListView.ItemTemplate>
+                <DataTemplate>
+                    <telerikListView:ListViewTemplateCell>
+                        <telerikListView:ListViewTemplateCell.View>
+                            <Grid>
+                                <StackLayout Orientation="Horizontal" Margin="10, 10, 10, 0">
+                                    <Label Text="{Binding Title}" FontSize="16" FontAttributes="Bold" TextColor="Black" VerticalOptions="Center" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Grid.Row="1" Margin="10, 0, 10, 10">
+                                    <Label Text="by" FontSize="13" FontAttributes="Italic" TextColor="Gray" />
+                                    <Label Text="{Binding Author}" FontSize="13" FontAttributes="Italic" TextColor="Gray" />
+                                </StackLayout>
+                            </Grid>
+                        </telerikListView:ListViewTemplateCell.View>
+                    </telerikListView:ListViewTemplateCell>
+                </DataTemplate>
+            </telerikDataControls:RadListView.ItemTemplate>
+        </telerikDataControls:RadListView>
+
+        <Button Text="Generate XLSX document" Command="{Binding Path=GenerateDocumentCommand}" BackgroundColor="Gray" TextColor="Black" Grid.Row="1" />
+
+    </Grid>
+</ContentPage>

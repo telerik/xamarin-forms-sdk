@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:SDKBrowser.Examples.DataForm.Styling.Groups" xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input" xmlns:telerikDataForm="clr-namespace:Telerik.XamarinForms.Input.DataForm;assembly=Telerik.XamarinForms.Input" x:Class="SDKBrowser.Examples.DataForm.DataFormStylingGroupsXaml">
+	<!-- >> dataform-styling-groups-xaml -->
+	<telerikInput:RadDataForm Source="{Binding}">
+		<telerikInput:RadDataForm.GroupHeaderStyle>
+			<telerikDataForm:DataFormGroupHeaderStyle Background="#FFC300" Foreground="Black" Height="60" Padding="20" TextAlignment="Center" />
+		</telerikInput:RadDataForm.GroupHeaderStyle>
+	</telerikInput:RadDataForm>
+	<!-- << dataform-styling-groups-xaml -->
+</ContentPage>

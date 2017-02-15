@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input" xmlns:local="clr-namespace:SDKBrowser.Examples.DataForm.GettingStarted" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SDKBrowser.Examples.DataForm.DataFormGettingStartedXaml">
+<!-- >> dataform-gettingstarted-setup-xaml -->
+	<telerikInput:RadDataForm x:Name="dataForm">
+		<telerikInput:RadDataForm.Source>
+			<local:SourceItem />
+		</telerikInput:RadDataForm.Source>
+	</telerikInput:RadDataForm>
+<!-- << dataform-gettingstarted-setup-xaml -->
+	
+</ContentPage>

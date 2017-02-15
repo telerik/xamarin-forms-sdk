@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SDKBrowser.Examples.Gauge.Positioning"
+             xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+             xmlns:telerikGauges="clr-namespace:Telerik.XamarinForms.DataVisualization.Gauges;assembly=Telerik.XamarinForms.DataVisualization">
+
+  <!-- >> gauge-positioning -->
+  <telerikGauges:RadRadialGauge StartAngle="90" SweepAngle="360" AxisRadiusFactor="1" Margin="2">
+    <telerikGauges:RadRadialGauge.Axis>
+      <telerikGauges:GaugeLinearAxis Minimum="0"
+                                     Maximum="100"
+                                     StrokeThickness="0"
+                                     ShowLabels="False" />
+    </telerikGauges:RadRadialGauge.Axis>
+    <telerikGauges:RadRadialGauge.Ranges>
+      <telerikGauges:GaugeRangesDefinition Offset="0" StartThickness="1" EndThickness="1">
+        <telerikGauges:GaugeRange From="0" To="25" Color="#FFDD789B" />
+        <telerikGauges:GaugeRange From="25" To="50" Color="#FFAAC271" />
+        <telerikGauges:GaugeRange From="50" To="75" Color="#FF4062AD" />
+      </telerikGauges:GaugeRangesDefinition>
+    </telerikGauges:RadRadialGauge.Ranges>
+    <telerikGauges:RadRadialGauge.Indicators>
+      <telerikGauges:GaugeBarIndicator Value="12.5"
+                                       Offset="3"
+                                       StartThickness="10"
+                                       EndThickness="10"
+                                       Fill="#FFDD789B"
+                                       EndCap="Oval" />
+      <telerikGauges:GaugeBarIndicator Value="37.5"
+                                       Offset="15"
+                                       StartThickness="10"
+                                       EndThickness="10"
+                                       Fill="#FFAAC271"
+                                       EndCap="Oval" />
+      <telerikGauges:GaugeBarIndicator Value="62.5"
+                                       Offset="27"
+                                       StartThickness="10"
+                                       EndThickness="10"
+                                       Fill="#FF4062AD"
+                                       EndCap="Oval" />
+      <telerikGauges:GaugeShapeIndicator Value="56"
+                                         Position="Start"
+                                         Offset="39"
+                                         Fill="#FF4062AD" />
+      <telerikGauges:GaugeNeedleIndicator Value="37.5"
+                                          Position="Start"
+                                          Offset="51"
+                                          Fill="#FFAAC271" />
+    </telerikGauges:RadRadialGauge.Indicators>
+  </telerikGauges:RadRadialGauge>
+  <!-- << gauge-positioning -->
+
+</ContentPage>

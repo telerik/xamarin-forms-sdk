@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<namespaces>
+	<chart>
+		<!-- >> xmlns-telerikchart -->
+    xmlns:telerikChart="clr-namespace:Telerik.XamarinForms.Chart;assembly=Telerik.XamarinForms.Chart"
+    <!-- << xmlns-telerikchart --></chart>
+	<dataForm>
+		<!-- >> xmlns-telerikdataform -->
+    xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+    xmlns:telerikDataForm="clr-namespace:Telerik.XamarinForms.Input.DataForm;assembly=Telerik.XamarinForms.Input"
+    <!-- << xmlns-telerikdataform --></dataForm>
+	<datacontrols>
+		<!-- >> xmlns-telerikdatacontrols -->
+    xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+    <!-- << xmlns-telerikdatacontrols --></datacontrols>
+  <gauge>
+    <!-- >> xmlns-telerikgauges -->
+    xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+    xmlns:telerikGauges="clr-namespace:Telerik.XamarinForms.DataVisualization.Gauges;assembly=Telerik.XamarinForms.DataVisualization"
+    <!-- << xmlns-telerikgauges -->
+  </gauge>
+	<input>
+		<!-- >> xmlns-telerikinput -->
+    xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+    <!-- << xmlns-telerikinput --></input>
+	<listview>
+		<!-- >> xmlns-teleriklistview -->
+    xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+    xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls"
+    <!-- << xmlns-teleriklistview --></listview>
+	<primitives>
+		<!-- >> xmlns-telerikprimitives -->
+    xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+    <!-- << xmlns-telerikprimitives --></primitives>
+</namespaces>

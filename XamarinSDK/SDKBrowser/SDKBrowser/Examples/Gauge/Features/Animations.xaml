@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SDKBrowser.Examples.Gauge.Animations"
+             xmlns:telerikGauges="clr-namespace:Telerik.XamarinForms.DataVisualization.Gauges;assembly=Telerik.XamarinForms.DataVisualization"
+             xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls">
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+
+    <Grid Grid.ColumnSpan="2">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <Label Text="Duration:" VerticalTextAlignment="Center" />
+      <Slider Grid.Column="1" 
+              Minimum="0" 
+              Maximum="2000" 
+              Value="800" 
+              ValueChanged="SliderDuration_ValueChanged" />
+    </Grid>
+
+    <telerikDataControls:RadListView x:Name="listView1" 
+                                     Grid.Row="1" 
+                                     Grid.Column="0" 
+                                     WidthRequest="150" 
+                                     SelectionChanged="ListViewEasing_SelectionChanged" />
+
+    <!-- >> gauge-animations -->
+    <telerikGauges:RadRadialGauge x:Name="gauge1" Grid.Row="1" Grid.Column="1">
+      <telerikGauges:RadRadialGauge.AnimationSettings>
+        <telerikCommon:AnimationSettings x:Name="gauge1Animations" Easing="CubicOut" />
+      </telerikGauges:RadRadialGauge.AnimationSettings>
+      <telerikGauges:RadRadialGauge.Axis>
+        <telerikGauges:GaugeLinearAxis Minimum="0" Maximum="200" Step="25" />
+      </telerikGauges:RadRadialGauge.Axis>
+      <telerikGauges:RadRadialGauge.Indicators>
+        <telerikGauges:GaugeShapeIndicator Value="80" />
+        <telerikGauges:GaugeBarIndicator Value="100" Offset="30" />
+        <telerikGauges:GaugeNeedleIndicator Value="120" Fill="Blue" Position="Start" Offset="30" />
+      </telerikGauges:RadRadialGauge.Indicators>
+      <telerikGauges:RadRadialGauge.Ranges>
+        <telerikGauges:GaugeRangesDefinition>
+          <telerikGauges:GaugeRange From="0" To="150" Color="Green" />
+          <telerikGauges:GaugeGradientRange From="150" To="200">
+            <telerikCommon:RadGradientStop Color="Yellow" Offset="150" />
+            <telerikCommon:RadGradientStop Color="Red" Offset="200" />
+          </telerikGauges:GaugeGradientRange>
+        </telerikGauges:GaugeRangesDefinition>
+      </telerikGauges:RadRadialGauge.Ranges>
+    </telerikGauges:RadRadialGauge>
+    <!-- << gauge-animations -->
+    
+  </Grid>
+</ContentPage>

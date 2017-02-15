@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="SDKBrowser.Examples.Gauge.GaugeAxisCustomization"
+            xmlns:telerikGauges="clr-namespace:Telerik.XamarinForms.DataVisualization.Gauges;assembly=Telerik.XamarinForms.DataVisualization"
+            xmlns:local="clr-namespace:SDKBrowser.Examples.Gauge">
+
+  <VisualElement.Resources>
+    <ResourceDictionary>
+      <telerikGauges:RadRadialGauge x:Key="Gauge_Axis Range">
+        <telerikGauges:RadRadialGauge.Axis>
+          <!-- >> gauge-axis-range -->
+          <telerikGauges:GaugeLinearAxis Minimum="0"
+                                         Maximum="4"
+                                         Step="0.5" />
+          <!-- << gauge-axis-range -->
+        </telerikGauges:RadRadialGauge.Axis>
+      </telerikGauges:RadRadialGauge>
+      <telerikGauges:RadRadialGauge x:Key="Gauge_Appearance">
+        <telerikGauges:RadRadialGauge.Axis>
+          <!-- >> gauge-axis-appearance -->
+          <telerikGauges:GaugeLinearAxis Minimum="0"
+                                         Maximum="4"
+                                         Step="0.5"
+                                         Stroke="#FFDD789B"
+                                         StrokeThickness="1"
+                                         TickStroke="#FFAAC271"
+                                         TickThickness="2"
+                                         TextColor="#FF4062AD" />
+          <!-- << gauge-axis-appearance -->
+        </telerikGauges:RadRadialGauge.Axis>
+      </telerikGauges:RadRadialGauge>
+      <telerikGauges:RadRadialGauge x:Key="Gauge_Font Style">
+        <telerikGauges:RadRadialGauge.Axis>
+          <!-- >> gauge-axis-font-style -->
+          <telerikGauges:GaugeLinearAxis Minimum="0"
+                                         Maximum="4"
+                                         Step="0.5"
+                                         FontSize="30"
+                                         FontAttributes="Bold" />
+          <!-- << gauge-axis-font-style -->
+        </telerikGauges:RadRadialGauge.Axis>
+      </telerikGauges:RadRadialGauge>
+      <telerikGauges:RadRadialGauge x:Key="Gauge_Font Family">
+        <telerikGauges:RadRadialGauge.Axis>
+          <!-- >> gauge-axis-font-family -->
+          <telerikGauges:GaugeLinearAxis Minimum="0"
+                                         Maximum="4"
+                                         Step="0.5">
+            <telerikGauges:GaugeLinearAxis.FontFamily>
+              <OnPlatform x:TypeArguments="x:String">
+                <OnPlatform.iOS>Helvetica</OnPlatform.iOS>
+                <OnPlatform.Android>sans-serif-light</OnPlatform.Android>
+                <OnPlatform.WinPhone>Comic Sans MS</OnPlatform.WinPhone>
+              </OnPlatform>
+            </telerikGauges:GaugeLinearAxis.FontFamily>
+          </telerikGauges:GaugeLinearAxis>
+          <!-- << gauge-axis-font-family -->
+      </telerikGauges:RadRadialGauge.Axis>
+      </telerikGauges:RadRadialGauge>
+      <telerikGauges:RadRadialGauge x:Key="Gauge_Label Format">
+        <telerikGauges:RadRadialGauge.Axis>
+          <!-- >> gauge-axis-label-format -->
+          <telerikGauges:GaugeLinearAxis Minimum="0"
+                                         Maximum="4"
+                                         Step="0.5"
+                                         LabelFormat="N2" />
+          <!-- << gauge-axis-label-format -->
+        </telerikGauges:RadRadialGauge.Axis>
+      </telerikGauges:RadRadialGauge>
+      <telerikGauges:RadRadialGauge x:Key="Gauge_Label And Tick Position">
+        <telerikGauges:RadRadialGauge.Axis>
+          <!-- >> gauge-axis-label-and-tick-position -->
+          <telerikGauges:GaugeLinearAxis Minimum="0"
+                                         Maximum="4"
+                                         Step="0.5"
+                                         TickPosition="Start"
+                                         LabelPosition="Start" />
+          <!-- << gauge-axis-label-and-tick-position -->
+        </telerikGauges:RadRadialGauge.Axis>
+      </telerikGauges:RadRadialGauge>
+      <telerikGauges:RadRadialGauge x:Key="Gauge_Offset And Length">
+        <telerikGauges:RadRadialGauge.Axis>
+          <!-- >> gauge-axis-offset-and-length -->
+          <telerikGauges:GaugeLinearAxis Minimum="0"
+                                         Maximum="4"
+                                         Step="0.5"
+                                         TickOffset="3"
+                                         TickLength="3"
+                                         LabelOffset="8" />
+          <!-- << gauge-axis-offset-and-length -->
+        </telerikGauges:RadRadialGauge.Axis>
+      </telerikGauges:RadRadialGauge>
+    </ResourceDictionary>
+  </VisualElement.Resources>
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <StackLayout Orientation="Horizontal">
+      <Label Text="Choose a gauge: " />
+      <Picker x:Name="pickerGauges" HorizontalOptions="FillAndExpand"  />
+    </StackLayout>
+    <ContentView x:Name="contentViewGauge" Grid.Row="1" />
+  </Grid>
+
+</ContentPage>

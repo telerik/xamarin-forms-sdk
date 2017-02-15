@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input" xmlns:dataForm="clr-namespace:Telerik.XamarinForms.Input.DataForm;assembly=Telerik.XamarinForms.Input" xmlns:local="clr-namespace:SDKBrowser.Examples.DataForm.GroupLayouts.LayoutSelector" x:Class="SDKBrowser.Examples.DataForm.DataFormLayoutSelectorXaml">
+	<!-- >> dataform-grouplayouts-layoutselector-xaml -->
+	<telerikInput:RadDataForm>
+		<telerikInput:RadDataForm.Source>
+			<local:SourceItem />
+		</telerikInput:RadDataForm.Source>
+		<telerikInput:RadDataForm.GroupLayoutDefinitionSelector>
+			<local:CustomGroupLayoutDefinitionSelector />
+		</telerikInput:RadDataForm.GroupLayoutDefinitionSelector>
+	</telerikInput:RadDataForm>
+	<!-- << dataform-grouplayouts-layoutselector-xaml -->
+</ContentPage>

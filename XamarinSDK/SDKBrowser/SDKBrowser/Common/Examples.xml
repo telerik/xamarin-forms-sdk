@@ -1,0 +1,581 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfXFControl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <XFControl>
+    <!--This parameter should be set to one of the following strings from ExtendedDevice enum.-->
+    <ExcludeFrom>WinPhone80</ExcludeFrom>
+    <Name>AutoComplete</Name>
+    <Examples>
+      <Example>
+        <PageName>AutoCompleteGettingStartedXaml</PageName>
+        <Title>Getting Started - Xaml</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <PageName>AutoCompleteGettingStartedCSharp</PageName>
+        <Title>Getting Started - Code</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <PageName>DataBinding</PageName>
+        <Title>DataBinding</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <PageName>SuggestionItemTemplate</PageName>
+        <Title>SuggestionItem Template</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <PageName>CustomHighlight</PageName>
+        <Title>Custom Text Highlight</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+    </Examples>
+  </XFControl>
+  <XFControl>
+    <Name>Calendar</Name>
+    <Examples>
+      <Example>
+        <PageName>CalendarGettingStartedXaml</PageName>
+        <Title>Getting Started - Xaml</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <PageName>CalendarGettingStartedCSharp</PageName>
+        <Title>Getting Started - Code</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <Title>Appointments</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <Title>CellStyling</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <PageName>CalendarCustomRendererExample</PageName>
+        <Title>Custom Renderers</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+    </Examples>
+  </XFControl>
+  <XFControl>
+    <Name>Chart</Name>
+    <Examples>
+      <Example>
+        <PageName>ChartGettingStartedXaml</PageName>
+        <Title>Getting Started - Xaml</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <PageName>ChartGettingStartedCSharp</PageName>
+        <Title>Getting Started - Code</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <PageName>LineSeriesPage</PageName>
+        <Title>Line</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>AreaSeriesPage</PageName>
+        <Title>Area</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>BarSeriesHorizontal</PageName>
+        <Title>Horizontal Bar</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>BarSeriesPage</PageName>
+        <Title>Vertical Bar</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>FormatAxisLabels</PageName>
+        <Title>Format Axis Labels</Title>
+        <GroupName>Customization</GroupName>
+      </Example>
+      <Example>
+        <PageName>ChartGridLinesPage</PageName>
+        <Title>Grid lines</Title>
+        <GroupName>Customization</GroupName>
+      </Example>
+      <Example>
+        <PageName>CustomPalettePage</PageName>
+        <Title>Custom Palette</Title>
+        <GroupName>Customization</GroupName>
+      </Example>
+      <Example>
+        <PageName>GridLineAnnotationsPage</PageName>
+        <Title>Gridline</Title>
+        <GroupName>Annotations</GroupName>
+      </Example>
+      <Example>
+        <PageName>PlotBandAnnotationsPage</PageName>
+        <Title>Plotband</Title>
+        <GroupName>Annotations</GroupName>
+      </Example>
+      <Example>
+        <PageName>ScatterAreaSeriesPage</PageName>
+        <Title>Scatter Area</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>ScatterLineSeriesPage</PageName>
+        <Title>Scatter Line</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>ScatterPointSeriesPage</PageName>
+        <Title>Scatter Point</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>ScatterSplineAreaSeriesPage</PageName>
+        <Title>Scatter Spline Area</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>ScatterSplineSeriesPage</PageName>
+        <Title>Scatter Spline</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>SplineArea</PageName>
+        <Title>Spline Area</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>SplineSeriesPage</PageName>
+        <Title>Spline</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>StackBarHorizontal</PageName>
+        <Title>Horizontal Stacked Bar</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>StackBarVertical</PageName>
+        <Title>Vertical Stacked Bar</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>StackedArea</PageName>
+        <Title>Stacked Area</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>StackSplineArea</PageName>
+        <Title>Stack Spline Area</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>SelectionSeriesPage</PageName>
+        <Title>Selection</Title>
+        <GroupName>Interactivity</GroupName>
+      </Example>
+      <Example>
+        <PageName>PanZoomPage</PageName>
+        <Title><![CDATA[Pan & Zoom]]></Title>
+        <GroupName>Interactivity</GroupName>
+      </Example>
+      <Example>
+        <PageName>PieChartPage</PageName>
+        <Title>Pie Chart</Title>
+        <GroupName>Pie Chart</GroupName>
+      </Example>
+      <Example>
+        <PageName>TrackballSeriesPage</PageName>
+        <Title>Trackball</Title>
+        <GroupName>Interactivity</GroupName>
+      </Example>
+    </Examples>
+  </XFControl>
+  <XFControl>
+    <!--This parameter should be set to one of the following strings from ExtendedDevice enum.-->
+    <ExcludeFrom>WinPhone80,WinPhone81,Windows81</ExcludeFrom>
+    <Name>Gauge</Name>
+    <Examples>
+      <Example>
+        <PageName>GaugeGettingStartedXaml</PageName>
+        <Title>Getting Started - Xaml</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <PageName>GaugeGettingStartedCSharp</PageName>
+        <Title>Getting Started - Code</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <PageName>SpeedometerXaml</PageName>
+        <Title>Speedometer - Xaml</Title>
+        <GroupName>Customizations</GroupName>
+      </Example>
+      <Example>
+        <PageName>SpeedometerCSharp</PageName>
+        <Title>Speedometer - Code</Title>
+        <GroupName>Customizations</GroupName>
+      </Example>
+      <Example>
+        <PageName>Animations</PageName>
+        <Title>Animations</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <PageName>BarIndicators</PageName>
+        <Title>Bar Indicators</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <PageName>CustomNeedlesXaml</PageName>
+        <Title>Custom Needles</Title>
+        <GroupName>Customizations</GroupName>
+      </Example>
+      <Example>
+        <PageName>CustomShapes</PageName>
+        <Title>Custom Shapes</Title>
+        <GroupName>Customizations</GroupName>
+      </Example>
+      <Example>
+        <PageName>GaugeAxisCustomization</PageName>
+        <Title>Axis Customization</Title>
+        <GroupName>Customizations</GroupName>
+      </Example>
+      <Example>
+        <PageName>Positioning</PageName>
+        <Title>Positioning</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <PageName>Ranges</PageName>
+        <Title>Ranges</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+    </Examples>
+  </XFControl>
+  <XFControl>
+    <!--This parameter should be set to one of the following strings from ExtendedDevice enum.-->
+    <ExcludeFrom>WinPhone80</ExcludeFrom>
+    <Name>ListView</Name>
+    <Examples>
+      <Example>
+        <PageName>ListViewGettingStartedXaml</PageName>
+        <Title>Getting Started - Xaml</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <PageName>ListViewGettingStartedCSharp</PageName>
+        <Title>Getting Started - Code</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <PageName>FirstLook</PageName>
+        <Title>First Look</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <Title>DataOperations</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <PageName>ListViewTextCellXaml</PageName>
+        <Title>TextCell - Xaml</Title>
+        <GroupName>Cell Types</GroupName>
+      </Example>
+      <Example>
+        <PageName>ListViewTextCellCSharp</PageName>
+        <Title>TextCell - Code</Title>
+        <GroupName>Cell Types</GroupName>
+      </Example>
+      <Example>
+        <PageName>ListViewTemplateCellXaml</PageName>
+        <Title>TemplateCell - Xaml</Title>
+        <GroupName>Cell Types</GroupName>
+      </Example>
+      <Example>
+        <PageName>ListViewTemplateCellCSharp</PageName>
+        <Title>TemplateCell - Code</Title>
+        <GroupName>Cell Types</GroupName>
+      </Example>
+      <Example>
+        <Title>LinearLayout</Title>
+        <GroupName>Layouts</GroupName>
+      </Example>
+      <Example>
+        <Title>GridLayout</Title>
+        <GroupName>Layouts</GroupName>
+      </Example>
+      <Example>
+        <Title>Selection</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <PageName>ListViewCellSwipeInteractiveContent</PageName>
+        <Title>Cell Swipe - Interactive Content</Title>
+        <GroupName>Gestures</GroupName>
+      </Example>
+      <Example>
+        <PageName>ListViewCellSwipeSwipeEvents</PageName>
+        <Title>Cell Swipe - Swipe Events</Title>
+        <GroupName>Gestures</GroupName>
+      </Example>
+      <Example>
+        <PageName>ReorderItems</PageName>
+        <Title>Reorder Items</Title>
+        <GroupName>Gestures</GroupName>
+      </Example>
+      <Example>
+        <PageName>PullToRefresh</PageName>
+        <Title>Pull to Refresh</Title>
+        <GroupName>Gestures</GroupName>
+      </Example>
+      <Example>
+        <Title>ItemSpacing</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <PageName>LoadOnDemandEventAuto</PageName>
+        <Title>LoadOnDemand Auto</Title>
+        <GroupName>LoadOnDemand</GroupName>
+      </Example>
+      <Example>
+        <PageName>LoadOnDemandEventManual</PageName>
+        <Title>LoadOnDemand Manual</Title>
+        <GroupName>LoadOnDemand</GroupName>
+      </Example>
+      <Example>
+        <PageName>LoadOnDemandCollection</PageName>
+        <Title>LoadOnDemandCollection</Title>
+        <GroupName>LoadOnDemand</GroupName>
+      </Example>
+      <Example>
+        <PageName>LoadOnDemandCustomizations</PageName>
+        <Title>Customizations</Title>
+        <GroupName>LoadOnDemand</GroupName>
+      </Example>
+      <Example>
+        <PageName>ListViewItemStylesXaml</PageName>
+        <Title>Item Styles - Xaml</Title>
+      </Example>
+      <Example>
+        <PageName>ListViewItemStylesCSharp</PageName>
+        <Title>Item Styles - Code</Title>
+      </Example>
+      <Example>
+        <PageName>ListViewItemStyleSelectorXaml</PageName>
+        <Title>Conditional Styling - Xaml</Title>
+      </Example>
+      <Example>
+        <PageName>ListViewItemStyleSelectorCSharp</PageName>
+        <Title>Conditional Styling - Code</Title>
+      </Example>
+    </Examples>
+  </XFControl>
+  <XFControl>
+    <!--This parameter should be set to one of the following strings from ExtendedDevice enum.-->
+    <ExcludeFrom>WinPhone80</ExcludeFrom>
+    <Name>DataForm</Name>
+    <Examples>
+      <Example>
+        <Title>Getting Started - Xaml</Title>
+        <PageName>DataFormGettingStartedXaml</PageName>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <Title>Getting Started - Code</Title>
+        <PageName>DataFormGettingStartedCSharp</PageName>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <Title>Converter</Title>
+        <PageName>DataFormDataAnnotationsConverter</PageName>
+        <GroupName>Data Annotations</GroupName>
+      </Example>
+      <Example>
+        <Title>NativeConversionContext</Title>
+        <PageName>DataFormDataAnnotationsConversionContext</PageName>
+        <GroupName>Data Annotations</GroupName>
+      </Example>
+      <Example>
+        <Title>DataSourceKey</Title>
+        <PageName>DataFormDataAnnotationsDataSourceKey</PageName>
+        <GroupName>Data Annotations</GroupName>
+      </Example>
+      <Example>
+        <Title>DisplayOptions</Title>
+        <PageName>DataFormDataAnnotationsDisplayOptions</PageName>
+        <GroupName>Data Annotations</GroupName>
+      </Example>
+      <Example>
+        <Title>DisplayValueFormat</Title>
+        <PageName>DataFormDataAnnotationsDisplayValueFormat</PageName>
+        <GroupName>Data Annotations</GroupName>
+      </Example>
+      <Example>
+        <Title>Ignore</Title>
+        <PageName>DataFormDataAnnotationsIgnore</PageName>
+        <GroupName>Data Annotations</GroupName>
+      </Example>
+      <Example>
+        <Title>Read only</Title>
+        <PageName>DataFormDataAnnotationsReadonly</PageName>
+        <GroupName>Data Annotations</GroupName>
+      </Example>
+      <Example>
+        <Title>Validation</Title>
+        <PageName>DataFormDataAnnotationsValidation</PageName>
+        <GroupName>Data Annotations</GroupName>
+      </Example>
+      <Example>
+        <Title>Editors</Title>
+        <PageName>DataFormEditors</PageName>
+        <GroupName>Editors</GroupName>
+      </Example>
+      <Example>
+        <Title>Groups</Title>
+        <PageName>DataFormGroups</PageName>
+        <GroupName>Groups</GroupName>
+      </Example>
+      <Example>
+        <Title>Groups Styling - Code</Title>
+        <PageName>DataFormStylingGroupsCSharp</PageName>
+        <GroupName>Styling</GroupName>
+      </Example>
+      <Example>
+        <Title>Groups Styling - Xaml</Title>
+        <PageName>DataFormStylingGroupsXaml</PageName>
+        <GroupName>Styling</GroupName>
+      </Example>
+      <Example>
+        <Title>Editors Styling</Title>
+        <PageName>DataFormStylingEditors</PageName>
+        <GroupName>Styling</GroupName>
+      </Example>
+      <Example>
+        <Title>GridLayout - Xaml</Title>
+        <PageName>DataFormGridLayoutXaml</PageName>
+        <GroupName>Layouts</GroupName>
+      </Example>
+      <Example>
+        <Title>GridLayout - Code</Title>
+        <PageName>DataFormGridLayoutCSharp</PageName>
+        <GroupName>Layouts</GroupName>
+      </Example>
+      <Example>
+        <Title>StackLayout - Xaml</Title>
+        <PageName>DataFormStackLayoutXaml</PageName>
+        <GroupName>Layouts</GroupName>
+      </Example>
+      <Example>
+        <Title>StackLayout - Code</Title>
+        <PageName>DataFormStackLayoutCSharp</PageName>
+        <GroupName>Layouts</GroupName>
+      </Example>
+      <Example>
+        <Title>Group Layout Selector - Xaml</Title>
+        <PageName>DataFormLayoutSelectorXaml</PageName>
+        <GroupName>Layouts</GroupName>
+      </Example>
+      <Example>
+        <Title>Group Layout Selector - Code</Title>
+        <PageName>DataFormLayoutSelectorCSharp</PageName>
+        <GroupName>Layouts</GroupName>
+      </Example>
+      <Example>
+        <Title>Custom Source</Title>
+        <PageName>DataFormCustomSource</PageName>
+        <GroupName>Source</GroupName>
+      </Example>
+      <Example>
+        <Title>Data Class</Title>
+        <PageName>DataFormSourceDataClass</PageName>
+        <GroupName>Source</GroupName>
+      </Example>
+      <Example>
+        <Title>CommitModes</Title>
+        <PageName>DataFormCommitMode</PageName>
+        <GroupName>Commit/Validate</GroupName>
+      </Example>
+      <Example>
+        <Title>Validation</Title>
+        <PageName>DataFormValidation</PageName>
+        <GroupName>Commit/Validate</GroupName>
+      </Example>
+    </Examples>
+  </XFControl>
+  <XFControl>
+    <!--This parameter should be set to one of the following strings from ExtendedDevice enum.-->
+    <ExcludeFrom>WinPhone80</ExcludeFrom>
+    <Name>SideDrawer</Name>
+    <Examples>
+      <Example>
+        <PageName>SideDrawerGettingStartedXaml</PageName>
+        <Title>Getting Started - Xaml</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <PageName>SideDrawerGettingStartedCSharp</PageName>
+        <Title>Getting Started - Code</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <Title>Transitions</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <Title>Location</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+    </Examples>
+  </XFControl>
+  <XFControl>
+    <Name>ZipLibrary</Name>
+    <Examples>
+      <Example>
+        <PageName>ZipLibraryGettingStartedXaml</PageName>
+        <Title>Getting Started - Xaml</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <PageName>ZipLibraryGettingStartedCSharp</PageName>
+        <Title>Getting Started - Code</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <PageName>ZipLibraryEncryptionXaml</PageName>
+        <Title>Encryption - Xaml</Title>
+        <GroupName>Encryption</GroupName>
+      </Example>
+      <Example>
+        <PageName>ZipLibraryEncryptionCSharp</PageName>
+        <Title>Encryption - Code</Title>
+        <GroupName>Encryption</GroupName>
+      </Example>
+    </Examples>
+  </XFControl>
+  <XFControl>
+    <Name>SpreadStreamProcessing</Name>
+    <ExcludeFrom>WinPhone80</ExcludeFrom>
+    <Examples>
+      <Example>
+        <PageName>SpreadStreamProcessingGettingStartedXaml</PageName>
+        <Title>Getting Started - Xaml</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <PageName>SpreadStreamProcessingGettingStartedCSharp</PageName>
+        <Title>Getting Started - Code</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <PageName>Styling</PageName>
+        <Title>Styling</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+    </Examples>
+  </XFControl>
+</ArrayOfXFControl>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input" xmlns:local="clr-namespace:SDKBrowser.Examples.AutoComplete.Features.SuggestionItemTemplate" x:Class="SDKBrowser.Examples.AutoComplete.SuggestionItemTemplate">
+  <StackLayout BackgroundColor="Silver">
+    <!-- >> autocomplete-features-suggestion-item-template -->
+    <telerikInput:RadAutoComplete BackgroundColor="White" ItemsSource="{Binding Source}" TextSearchPath="Name" VerticalOptions="Start">
+      <telerikInput:RadAutoComplete.BindingContext>
+        <local:ViewModel />
+      </telerikInput:RadAutoComplete.BindingContext>
+      <telerikInput:RadAutoComplete.SuggestionViewHeight>
+        <OnPlatform x:TypeArguments="x:Double" iOS="400" Android="200" WinPhone="400" />
+      </telerikInput:RadAutoComplete.SuggestionViewHeight>
+      <telerikInput:RadAutoComplete.SuggestionItemTemplate>
+        <DataTemplate>
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" />
+              <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Label TextColor="Black" Text="{Binding Item.Name}" FontSize="24" Margin="5" />
+            <Image Grid.Column="1" HeightRequest="20" WidthRequest="20" Source="{Binding Item.ImageSource}" Margin="5" />
+          </Grid>
+        </DataTemplate>
+      </telerikInput:RadAutoComplete.SuggestionItemTemplate>
+    </telerikInput:RadAutoComplete>
+    <!-- << autocomplete-features-suggestion-item-template -->
+  </StackLayout>
+</ContentPage>

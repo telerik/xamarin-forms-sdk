@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SDKBrowser.Examples.ListView.DataOperations"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.ListView">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style x:Key="LabelStyle" TargetType="Label">
+        <Setter Property="FontSize">
+          <Setter.Value>
+            <OnPlatform x:TypeArguments="x:Double" iOS="17" Android="22"/>
+          </Setter.Value>
+        </Setter>
+        <Setter Property="VerticalOptions" Value="Center"/>
+      </Style>
+      <local:GroupConverter x:Key="groupConverter"></local:GroupConverter>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <Grid BackgroundColor="#33888888">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition/>
+    </Grid.RowDefinitions>
+
+    <Grid Padding="10">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto"/>
+        <ColumnDefinition/>
+      </Grid.ColumnDefinitions>
+
+      <Label Text="group by age" Style="{StaticResource LabelStyle}"/>
+      <Switch x:Name="groupSwitch" Grid.Column="1" HorizontalOptions="End"/>
+      
+      <Label Grid.Row="1" Text="Sort groups desc" Style="{StaticResource LabelStyle}"/>
+      <Switch  Grid.Row="1" x:Name="sortGroupSwitch" Grid.Column="1" HorizontalOptions="End"/>
+
+      <Label Grid.Row="2" Style="{StaticResource LabelStyle}" Text="filter by age (25 - 35)"/>
+      <Switch x:Name="filterSwitch" Grid.Row="2" Grid.Column="1" HorizontalOptions="End"/>
+      <Grid Grid.Row="3" Grid.ColumnSpan="2">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto"/>
+          <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Text="sort direction:" Style="{StaticResource LabelStyle}"/>
+        <Picker x:Name="sortDirectionPicker" Grid.Column="1"/>
+      </Grid>
+    </Grid>
+
+    <telerikDataControls:RadListView BackgroundColor="White" Grid.Row="1" x:Name="listView" ItemsSource="{Binding Items}">
+      <telerikDataControls:RadListView.GroupHeaderTemplate>
+        <DataTemplate>
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="#6fb5be">
+              <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness"
+                            iOS="4"
+                            Android="2" />
+              </StackLayout.Padding>
+              <Label Text="{Binding Converter={StaticResource groupConverter}}" TextColor="#FFFFFF" FontSize="Medium"  FontAttributes="Bold" HorizontalOptions="Center" VerticalTextAlignment="Center"/>
+            </StackLayout>
+        </DataTemplate>
+      </telerikDataControls:RadListView.GroupHeaderTemplate>
+      <telerikDataControls:RadListView.ItemTemplate>
+        <DataTemplate>
+          <telerikListView:ListViewTemplateCell>
+            <telerikListView:ListViewTemplateCell.View>
+              <StackLayout Padding="10">
+                <StackLayout Orientation="Horizontal">
+                  <Label Text="Name:" TextColor="Black"/>
+                  <Label Text="{Binding Name}" TextColor="Red"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="1">
+                  <Label Text="Age:" TextColor="Black"/>
+                  <Label Text="{Binding Age}" TextColor="Red"/>
+                </StackLayout>
+              </StackLayout>
+            </telerikListView:ListViewTemplateCell.View>
+          </telerikListView:ListViewTemplateCell>
+        </DataTemplate>
+      </telerikDataControls:RadListView.ItemTemplate>
+      <telerikDataControls:RadListView.LayoutDefinition>
+        <telerikListView:ListViewLinearLayout Orientation="Vertical" ItemLength="70"/>
+      </telerikDataControls:RadListView.LayoutDefinition>
+    </telerikDataControls:RadListView>
+  </Grid>
+</ContentPage>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikGauges="clr-namespace:Telerik.XamarinForms.DataVisualization.Gauges;assembly=Telerik.XamarinForms.DataVisualization"
+             xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+             x:Class="SDKBrowser.Examples.Gauge.Ranges">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition />
+      <RowDefinition />
+      <RowDefinition />
+    </Grid.RowDefinitions>
+
+    <telerikGauges:RadRadialGauge>
+      <telerikGauges:RadRadialGauge.Axis>
+        <telerikGauges:GaugeLinearAxis Minimum="0" Maximum="200" Step="20" />
+      </telerikGauges:RadRadialGauge.Axis>
+      <telerikGauges:RadRadialGauge.Ranges>
+
+        <!-- >> gauge-ranges -->
+        <telerikGauges:GaugeRangesDefinition>
+          <telerikGauges:GaugeRange From="0" To="100" Color="Green" />
+          <telerikGauges:GaugeRange From="100" To="150" Color="Yellow" />
+          <telerikGauges:GaugeGradientRange From="150" To="200">
+            <telerikCommon:RadGradientStop Color="Red" Offset="150" />
+            <telerikCommon:RadGradientStop Color="Black" Offset="200" />
+          </telerikGauges:GaugeGradientRange>
+        </telerikGauges:GaugeRangesDefinition>
+        <!-- << gauge-ranges -->
+
+      </telerikGauges:RadRadialGauge.Ranges>
+    </telerikGauges:RadRadialGauge>
+
+    <telerikGauges:RadRadialGauge Grid.Row="1">
+      <telerikGauges:RadRadialGauge.Axis>
+        <telerikGauges:GaugeLinearAxis Minimum="-25" Maximum="25" Step="5" />
+      </telerikGauges:RadRadialGauge.Axis>
+      <telerikGauges:RadRadialGauge.Ranges>
+        
+        <!-- >> gauge-ranges-absolute-offset -->
+        <telerikGauges:GaugeRangesDefinition StartThickness="0" EndThickness="15" Offset="2">
+          <telerikGauges:GaugeGradientRange From="-25" To="25">
+            <telerikCommon:RadGradientStop Color="Blue" Offset="-25" />
+            <telerikCommon:RadGradientStop Color="Red" Offset="25" />
+          </telerikGauges:GaugeGradientRange>
+        </telerikGauges:GaugeRangesDefinition>
+        <!-- << gauge-ranges-absolute-offset -->
+        
+      </telerikGauges:RadRadialGauge.Ranges>
+    </telerikGauges:RadRadialGauge>
+
+    <telerikGauges:RadRadialGauge Grid.Row="2">
+      <telerikGauges:RadRadialGauge.Axis>
+        <telerikGauges:GaugeLinearAxis Minimum="-25" Maximum="25" Step="5" />
+      </telerikGauges:RadRadialGauge.Axis>
+      <telerikGauges:RadRadialGauge.Ranges>
+
+        <!-- >> gauge-ranges-relative-offset -->
+        <telerikGauges:GaugeRangesDefinition>
+          <telerikGauges:GaugeGradientRange From="-25" To="25" IsOffsetRelative="True">
+            <telerikCommon:RadGradientStop Color="Blue" Offset="0" />
+            <telerikCommon:RadGradientStop Color="Red" Offset="1" />
+          </telerikGauges:GaugeGradientRange>
+        </telerikGauges:GaugeRangesDefinition>
+        <!-- << gauge-ranges-relative-offset -->
+
+      </telerikGauges:RadRadialGauge.Ranges>
+    </telerikGauges:RadRadialGauge>
+
+  </Grid>
+</ContentPage>

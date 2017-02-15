@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SDKBrowser.Examples.ListView.Selection"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls">
+  
+  <Grid BackgroundColor="#33888888">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition/>
+    </Grid.RowDefinitions>
+    
+    <StackLayout Padding="10">
+      <Label Text="set selection mode:" FontSize="Medium"/>
+      <Picker x:Name="selectionModePicker"/>
+      <Label Text="set selection gesture:" FontSize="Medium"/>
+      <Picker x:Name="selectionGesturePicker"/>
+    </StackLayout>
+    
+    <telerikDataControls:RadListView  x:Name="listView" Grid.Row="1">
+      <telerikDataControls:RadListView.SelectedItemStyle>
+        <telerikListView:ListViewItemStyle BackgroundColor="#88888888"/>
+      </telerikDataControls:RadListView.SelectedItemStyle>
+    </telerikDataControls:RadListView>
+  </Grid>
+</ContentPage>
