@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input" x:Class="SDKBrowser.Examples.AutoComplete.AutoCompleteGettingStartedXaml">
   <StackLayout BackgroundColor="Silver">
     <!-- >> autocomplete-getting-started-xaml -->
-    <telerikInput:RadAutoComplete BackgroundColor="White" x:Name="autoComplete" />
+    <telerikInput:RadAutoComplete BackgroundColor="White" x:Name="autoComplete" Watermark="Search here..." />
     <!-- << autocomplete-getting-started-xaml -->
   </StackLayout>
 </ContentPage>
