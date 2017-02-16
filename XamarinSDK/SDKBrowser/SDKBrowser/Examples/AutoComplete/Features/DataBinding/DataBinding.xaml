@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input" xmlns:local="clr-namespace:SDKBrowser.Examples.AutoComplete.Features.DataBinding" x:Class="SDKBrowser.Examples.AutoComplete.DataBinding">
   <StackLayout BackgroundColor="Silver">
     <!-- >> autocomplete-features-data-binding -->
-    <telerikInput:RadAutoComplete BackgroundColor="White" ItemsSource="{Binding Source}" TextSearchPath="Name" ImagePath="ImageSource" Watermark="Search here...">
+    <telerikInput:RadAutoComplete BackgroundColor="White" ItemsSource="{Binding Source}" TextSearchPath="Name" ImagePath="ImageSource">
       <telerikInput:RadAutoComplete.SuggestionViewHeight>
         <OnPlatform x:TypeArguments="x:Double" iOS="400" Android="200" WinPhone="400" />
       </telerikInput:RadAutoComplete.SuggestionViewHeight>
