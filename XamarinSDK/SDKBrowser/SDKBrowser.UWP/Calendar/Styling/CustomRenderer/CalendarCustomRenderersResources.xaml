@@ -1,0 +1,66 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <!-- >> calendar-styling-custom-renderers-styles -->
+    
+    <Style x:Key="NormalCellContentStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="17" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="NormalCellDecorationStyle" TargetType="Border" >
+        <Setter Property="BorderBrush" Value="DarkGray" />
+        <Setter Property="BorderThickness" Value="4, 3, 2, 1" />
+        <Setter Property="Background" Value="LightGray" />
+        <Setter Property="CornerRadius" Value="0" />
+    </Style>
+
+    <Style x:Key="SelectedCellDecorationStyle" TargetType="Border"
+           BasedOn="{StaticResource ResourceKey=NormalCellDecorationStyle}" >
+        <Setter Property="BorderBrush" Value="SlateGray" />
+        <Setter Property="Background" Value="DarkGray" />
+    </Style>
+
+    <Style x:Key="AnotherViewCellContentStyle" TargetType="TextBlock"
+           BasedOn="{StaticResource ResourceKey=NormalCellContentStyle}" >
+        <Setter Property="FontWeight" Value="ExtraLight" />
+        <Setter Property="Foreground" Value="Gray" />
+    </Style>
+
+    <Style x:Key="AnotherViewCellDecorationStyle" TargetType="Border"
+           BasedOn="{StaticResource ResourceKey=NormalCellDecorationStyle}" >
+        <Setter Property="BorderBrush" Value="DarkGray" />
+    </Style>
+
+    <Style x:Key="CurrentCellDecorationStyle" TargetType="Border"
+           BasedOn="{StaticResource ResourceKey=NormalCellDecorationStyle}" >
+        <Setter Property="BorderBrush" Value="Green" />
+        <Setter Property="Background" Value="Transparent" />
+    </Style>
+
+    <Style x:Key="HighlightedCellContentStyle" TargetType="TextBlock"
+           BasedOn="{StaticResource ResourceKey=NormalCellContentStyle}" >
+        <Setter Property="FontWeight" Value="Black" />
+    </Style>
+
+    <Style x:Key="HighlightedCellDecorationStyle" TargetType="Border"
+           BasedOn="{StaticResource ResourceKey=NormalCellDecorationStyle}" >
+        <Setter Property="BorderBrush" Value="Blue" />
+    </Style>
+
+    <Style x:Key="DayNameCellContentStyle" TargetType="TextBlock"
+           BasedOn="{StaticResource ResourceKey=NormalCellContentStyle}" >
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+
+    <Style x:Key="DayNameCellDecorationStyle" TargetType="Border"
+           BasedOn="{StaticResource ResourceKey=NormalCellDecorationStyle}" >
+        <Setter Property="BorderBrush" Value="Gray" />
+    </Style>
+
+    <!-- << calendar-styling-custom-renderers-styles -->
+</ResourceDictionary>

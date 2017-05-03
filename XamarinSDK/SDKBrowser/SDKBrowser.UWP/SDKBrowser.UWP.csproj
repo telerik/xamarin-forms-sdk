@@ -93,7 +93,7 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Calendar\Features\CustomRenderer\CustomCalendarRenderer.cs" />
+    <Compile Include="Calendar\Styling\CustomRenderer\CustomCalendarRenderer.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -139,7 +139,7 @@
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Calendar\Features\CustomRenderer\CalendarCustomRenderersResources.xaml">
+    <Page Include="Calendar\Styling\CustomRenderer\CalendarCustomRenderersResources.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

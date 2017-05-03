@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <Import Project="..\..\config.targets"/>
@@ -56,9 +56,9 @@
     <Compile Include="Examples\AutoComplete\GettingStarted\AutoCompleteGettingStartedXaml.xaml.cs">
       <DependentUpon>AutoCompleteGettingStartedXaml.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Examples\Calendar\Features\CustomRenderer\CalendarCustomRendererExample.cs" />
-    <Compile Include="Examples\Calendar\CellStyling.cs" />
-    <Compile Include="Examples\Calendar\Features\CustomRenderer\CustomCalendar.cs" />
+    <Compile Include="Examples\Calendar\Styling\CustomRenderer\CalendarCustomRendererExample.cs" />
+    <Compile Include="Examples\Calendar\Styling\CellStyling.cs" />
+    <Compile Include="Examples\Calendar\Styling\CustomRenderer\CustomCalendar.cs" />
     <Compile Include="Examples\Chart\ChartGridLinesPage.xaml.cs">
       <DependentUpon>ChartGridLinesPage.xaml</DependentUpon>
     </Compile>
@@ -68,7 +68,7 @@
       <DependentUpon>ExamplesPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Common\PageFactory.cs" />
-    <Compile Include="Examples\Calendar\Appointments.xaml.cs">
+    <Compile Include="Examples\Calendar\Styling\Appointments.xaml.cs">
       <DependentUpon>Appointments.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\Chart\GettingStarted\ChartGettingStartedXaml.xaml.cs">
@@ -384,6 +384,7 @@
     <Compile Include="Examples\DataForm\DataAnnotations\NativeConversionContext\DataFormDataAnnotationsConversionContext.xaml.cs">
       <DependentUpon>DataFormDataAnnotationsConversionContext.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Examples\Calendar\Styling\ElementsDisplayMode.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SkiaSharp, Version=1.55.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
@@ -422,15 +423,15 @@
       <HintPath>..\..\$(BinariesPath)\DPL\Telerik.Documents.SpreadsheetStreaming.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.2.3.3.180\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.224\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.2.3.3.180\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Platform.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.224\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Platform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.2.3.3.180\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.224\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
@@ -666,7 +667,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Examples\Calendar\Appointments.xaml">
+    <EmbeddedResource Include="Examples\Calendar\Styling\Appointments.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -736,15 +737,7 @@
     <None Include="Images\delete.png" />
     <None Include="Images\unread.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Examples\AutoComplete\Features\" />
-    <Folder Include="Examples\AutoComplete\Features\DataBinding\" />
-    <Folder Include="Examples\AutoComplete\Features\CustomHighlight\" />
-    <Folder Include="Examples\AutoComplete\Features\SuggestionItemTemplate\" />
-    <Folder Include="Examples\Chart\Customization\" />
-    <Folder Include="Examples\Chart\Customization\FormatAxisLabels\" />
-    <Folder Include="Examples\DataForm\DataAnnotations\NativeConversionContext\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Examples\Gauge\Customizations\GaugeAxisCustomization.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -863,12 +856,12 @@
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
-  <Import Project="..\..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+  <Import Project="..\..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

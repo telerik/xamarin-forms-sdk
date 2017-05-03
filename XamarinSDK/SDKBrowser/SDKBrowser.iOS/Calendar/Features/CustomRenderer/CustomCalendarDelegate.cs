@@ -3,8 +3,9 @@ using TelerikUI;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
-namespace SDKBrowser.iOS.Calendar.Features.CustomRenderer
+namespace SDKBrowser.iOS.Calendar.Styling.CustomRenderer
 {
+    // >> calendar-styling-custom-renderers-custom-delegate
     public class CustomCalendarDelegate : CalendarDelegate
     {
         public override void UpdateVisualsForCell(TKCalendar calendar, TKCalendarCell cell)
@@ -15,7 +16,8 @@ namespace SDKBrowser.iOS.Calendar.Features.CustomRenderer
             {
                 this.SetBordersWidth(dayCell, 0);
 
-                if ((dayCell.State & TKCalendarDayState.CurrentMonth) == TKCalendarDayState.CurrentMonth)
+                TKCalendarDayState currentMonthState = TKCalendarDayState.CurrentMonth;
+                if ((dayCell.State & currentMonthState) == currentMonthState)
                 {
                     dayCell.Style.BackgroundColor = Color.FromHex("#F8F8F8").ToUIColor();
                     dayCell.Style.TextColor = Color.FromHex("#000000").ToUIColor();
@@ -26,9 +28,10 @@ namespace SDKBrowser.iOS.Calendar.Features.CustomRenderer
                     dayCell.Style.TextColor = Color.FromHex("#FFFFFF").ToUIColor();
                 }
 
-                if ((dayCell.State & TKCalendarDayState.Weekend) == TKCalendarDayState.Weekend)
+                TKCalendarDayState weekendState = TKCalendarDayState.Weekend;
+                if ((dayCell.State & weekendState) == weekendState)
                 {
-                    if ((dayCell.State & TKCalendarDayState.CurrentMonth) == TKCalendarDayState.CurrentMonth)
+                    if ((dayCell.State & currentMonthState) == currentMonthState)
                     {
                         dayCell.Style.BackgroundColor = Color.FromHex("#EEEEEE").ToUIColor();
                         dayCell.Style.TextColor = Color.FromHex("#999999").ToUIColor();
@@ -40,7 +43,8 @@ namespace SDKBrowser.iOS.Calendar.Features.CustomRenderer
                     }
                 }
 
-                if ((dayCell.State & TKCalendarDayState.Today) == TKCalendarDayState.Today)
+                TKCalendarDayState todayState = TKCalendarDayState.Today;
+                if ((dayCell.State & todayState) == todayState)
                 {
                     var borderColor = Color.FromHex("#00FF44");
 
@@ -50,7 +54,8 @@ namespace SDKBrowser.iOS.Calendar.Features.CustomRenderer
                     this.SetBordersWidth(dayCell, 2);
                 }
 
-                if ((dayCell.State & TKCalendarDayState.Selected) == TKCalendarDayState.Selected)
+                TKCalendarDayState selectedState = TKCalendarDayState.Selected;
+                if ((dayCell.State & selectedState) == selectedState)
                 {
                     var borderColor = Color.FromHex("#0044FF");
 
@@ -80,4 +85,5 @@ namespace SDKBrowser.iOS.Calendar.Features.CustomRenderer
             cell.Style.BottomBorderColor = uiColor;
         }
     }
+    // << calendar-styling-custom-renderers-custom-delegate
 }

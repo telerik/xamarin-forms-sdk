@@ -8,10 +8,12 @@ namespace SDKBrowser.Examples.ListView
 {
     public partial class DataOperations : ContentPage
     {
+        private DataOperationsViewModel vm;
+
         public DataOperations()
         {
             InitializeComponent();
-            this.BindingContext = new DataOperationsViewModel();
+            this.BindingContext =vm = new DataOperationsViewModel();
             groupSwitch.Toggled += this.GroupSwitchToggled;
             filterSwitch.Toggled += this.FilterSwitchToggled;
             sortGroupSwitch.Toggled += SortGroupSwitch_Toggled;

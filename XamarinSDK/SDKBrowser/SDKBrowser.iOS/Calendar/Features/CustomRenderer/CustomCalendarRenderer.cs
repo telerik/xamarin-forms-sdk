@@ -1,10 +1,11 @@
-﻿using SDKBrowser.Examples.Calendar.Features.CustomRenderer;
-using SDKBrowser.iOS.Calendar.Features.CustomRenderer;
+﻿using SDKBrowser.Examples.Calendar.Styling.CustomRenderer;
+using SDKBrowser.iOS.Calendar.Styling.CustomRenderer;
 using Telerik.XamarinForms.InputRenderer.iOS;
 using Xamarin.Forms;
 
+// >> calendar-styling-custom-renderers-ios-renderer
 [assembly: ExportRenderer(typeof(CustomCalendar), typeof(CustomCalendarRenderer))]
-namespace SDKBrowser.iOS.Calendar.Features.CustomRenderer
+namespace SDKBrowser.iOS.Calendar.Styling.CustomRenderer
 {
     public class CustomCalendarRenderer : CalendarRenderer
     {
@@ -14,3 +15,4 @@ namespace SDKBrowser.iOS.Calendar.Features.CustomRenderer
         }
     }
 }
+// << calendar-styling-custom-renderers-ios-renderer

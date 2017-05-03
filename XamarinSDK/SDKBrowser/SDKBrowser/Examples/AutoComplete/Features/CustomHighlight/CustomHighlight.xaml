@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input" xmlns:local="clr-namespace:SDKBrowser.Examples.AutoComplete.Features.CustomHighlight" x:Class="SDKBrowser.Examples.AutoComplete.CustomHighlight">
-  <Grid BackgroundColor="Silver">
-    <telerikInput:RadAutoComplete CompletionMode="Contains" BackgroundColor="White" ItemsSource="{Binding Source}" TextSearchPath="Name" VerticalOptions="Start">
+  <Grid BackgroundColor="Silver" >
+    <telerikInput:RadAutoComplete BackgroundColor="White" CompletionMode="Contains" ItemsSource="{Binding Source}" TextSearchPath="Name" VerticalOptions="Start" Watermark="Search here...">
       <telerikInput:RadAutoComplete.SuggestionViewHeight>
         <OnPlatform x:TypeArguments="x:Double" iOS="400" Android="200" WinPhone="400" />
       </telerikInput:RadAutoComplete.SuggestionViewHeight>

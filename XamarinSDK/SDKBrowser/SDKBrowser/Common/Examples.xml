@@ -47,16 +47,21 @@
       </Example>
       <Example>
         <Title>Appointments</Title>
-        <GroupName>Features</GroupName>
+        <GroupName>Styling</GroupName>
       </Example>
       <Example>
         <Title>CellStyling</Title>
-        <GroupName>Features</GroupName>
+        <GroupName>Styling</GroupName>
       </Example>
       <Example>
         <PageName>CalendarCustomRendererExample</PageName>
         <Title>Custom Renderers</Title>
-        <GroupName>Features</GroupName>
+        <GroupName>Styling</GroupName>
+      </Example>
+	  <Example>
+        <PageName>ElementsDisplayMode</PageName>
+        <Title>Elements Display Mode</Title>
+        <GroupName>Styling</GroupName>
       </Example>
     </Examples>
   </XFControl>

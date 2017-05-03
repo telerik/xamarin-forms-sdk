@@ -4,7 +4,7 @@
     "SkiaSharp": "1.55.1",
     "SkiaSharp.Views": "1.55.1",
     "SkiaSharp.Views.Forms": "1.55.1",
-    "Xamarin.Forms": "2.3.3.180"
+    "Xamarin.Forms": "2.3.4.224"
   },
   "frameworks": {
     "uap10.0": {}
