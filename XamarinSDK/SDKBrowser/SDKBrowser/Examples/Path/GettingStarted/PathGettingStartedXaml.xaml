@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             x:Class="SDKBrowser.Examples.Path.PathGettingStartedXaml">
+    <ContentPage.Content>
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition>
+                    <RowDefinition.Height>
+                        <OnPlatform
+                            x:TypeArguments="GridLength"
+                            iOS="200"
+                            Android="250"
+                            WinPhone="250" />
+                    </RowDefinition.Height>
+                </RowDefinition>
+                <RowDefinition Height="200"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="0" Grid.Column="0" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <!--  >> path-gettingstarted-starpath-xaml  -->
+                <telerikPrimitives:RadPath x:Name="path"
+                                           Grid.Row="0"
+                                           StrokeThickness="0" 
+                                           Fill="#FFC325"/>
+                <!--  << path-gettingstarted-starpath-xaml  -->
+                <Label Text="Star Path" 
+                       TextColor="Black"
+                       HorizontalOptions="Center"
+                       Grid.Row="1"/>
+            </Grid>
+
+            <Grid Grid.Row="0" Grid.Column="1" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <!--  >> path-gettingstarted-custompath-xaml  -->
+                <telerikPrimitives:RadPath x:Name="customPath"
+                                       Grid.Row="0"
+                                       StrokeThickness="0" 
+                                       Fill="#2EC262"/>
+                <!--  << path-gettingstarted-custompath-xaml  -->
+                <Label Text="Custom Arc Path" 
+                       TextColor="Black"
+                       HorizontalOptions="Center"
+                       Grid.Row="1"/>
+            </Grid>
+
+            <Grid Grid.Row="1" Grid.Column="0" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <!--  >> path-geometry-linepath-xaml  -->
+                <telerikPrimitives:RadPath x:Name="customLine"
+                                       Grid.Row="0"
+                                       StrokeThickness="0" 
+                                       Fill="#3DBAFE"/>
+                <!--  << path-geometry-linepath-xaml  -->
+                <Label Text="Custom Line Path" 
+                       TextColor="Black"
+                       HorizontalOptions="Center"
+                       Grid.Row="1"/>
+            </Grid>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

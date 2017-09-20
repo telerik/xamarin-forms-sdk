@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="SDKBrowser.Examples.SegmentControl.SegmentControlGettingStartedXaml"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input">
+    <!--  >> segmentcontrol-gettingstarted-xaml  -->
+    <telerikInput:RadSegmentedControl x:Name="segmentControl"
+                                      HeightRequest="60"
+                                      VerticalOptions="Start">
+        <telerikInput:RadSegmentedControl.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>Popular</x:String>
+                <x:String>Library</x:String>
+                <x:String>Playlists</x:String>
+                <x:String>Friends</x:String>
+            </x:Array>
+        </telerikInput:RadSegmentedControl.ItemsSource>
+    </telerikInput:RadSegmentedControl>
+    <!--  << segmentcontrol-gettingstarted-xaml  -->
+</ContentPage>

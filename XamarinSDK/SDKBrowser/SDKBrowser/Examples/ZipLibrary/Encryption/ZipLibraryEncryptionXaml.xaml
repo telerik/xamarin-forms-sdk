@@ -1,33 +1,38 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-		xmlns:local="clr-namespace:SDKBrowser.Examples.ZipLibrary.Encryption"
-		x:Class="SDKBrowser.Examples.ZipLibrary.ZipLibraryEncryptionXaml">
-  <ContentPage.BindingContext>
-    <local:ViewModel />
-  </ContentPage.BindingContext>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="SDKBrowser.Examples.ZipLibrary.ZipLibraryEncryptionXaml"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.ZipLibrary.Encryption">
+    <ContentPage.BindingContext>
+        <local:ViewModel />
+    </ContentPage.BindingContext>
     <ContentPage.Content>
-		<ScrollView>
-			<StackLayout>
-				<Label Text="Write some text:" />
-				
-				<Frame OutlineColor="Gray" Padding="0" HasShadow="false" BackgroundColor="Transparent" >
-					<Editor Text="{Binding Path=Input, Mode=TwoWay}" HeightRequest="100" />
-				</Frame>
-				
-				<Entry Placeholder="Encryption  Password" Text="{Binding Path=EncryptionPassword, Mode=TwoWay}" />
-				
-				<Button Text="Encrypt" Command="{Binding Path=EncryptionCommand}" />
-				
-				<Entry Placeholder="Decryption Password" Text="{Binding Path=DecryptionPassword, Mode=TwoWay}" />
-				
-				<Button Text="Decrypt" Command="{Binding Path=DecryptionCommand}" />
-				
-				<Label Text="Decrypted text:" />
-				
-				<Label Text="{Binding Path=Output}" HeightRequest="100" LineBreakMode="WordWrap" />
-			
-			</StackLayout>
-		</ScrollView>
-	</ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Write some text:" />
+
+                <Frame Padding="0"
+                       BackgroundColor="Transparent"
+                       HasShadow="false"
+                       OutlineColor="Gray">
+                    <Editor HeightRequest="100" Text="{Binding Path=Input, Mode=TwoWay}" />
+                </Frame>
+
+                <Entry Placeholder="Encryption  Password" Text="{Binding Path=EncryptionPassword, Mode=TwoWay}" />
+
+                <Button Command="{Binding Path=EncryptionCommand}" Text="Encrypt" />
+
+                <Entry Placeholder="Decryption Password" Text="{Binding Path=DecryptionPassword, Mode=TwoWay}" />
+
+                <Button Command="{Binding Path=DecryptionCommand}" Text="Decrypt" />
+
+                <Label Text="Decrypted text:" />
+
+                <Label HeightRequest="100"
+                       LineBreakMode="WordWrap"
+                       Text="{Binding Path=Output}" />
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
 </ContentPage>

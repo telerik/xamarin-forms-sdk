@@ -13,6 +13,11 @@ namespace SDKBrowser.Droid.Calendar.Styling.CustomRenderer
 
         public void Apply(Java.Lang.Object p0)
         {
+            if (!(p0 is CalendarDayCell))
+            {
+                return;
+            }
+
             CalendarDayCell calendarCell = p0.JavaCast<CalendarDayCell>();
             if (calendarCell.CellType != CalendarCellType.Date)
             {

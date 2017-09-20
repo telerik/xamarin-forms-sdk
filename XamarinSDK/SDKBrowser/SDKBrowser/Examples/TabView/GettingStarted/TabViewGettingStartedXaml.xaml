@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="SDKBrowser.Examples.TabView.TabViewGettingStartedXaml"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives">
+    <!--  >> tabview-getting-started-xaml  -->
+    <telerikPrimitives:RadTabView x:Name="tabView">
+        <telerikPrimitives:RadTabView.Items>
+            <telerikPrimitives:TabViewItem HeaderText="Home">
+                <telerikPrimitives:TabViewItem.Content>
+                    <Label Margin="10" Text="This is the content of the Home tab" />
+                </telerikPrimitives:TabViewItem.Content>
+            </telerikPrimitives:TabViewItem>
+            <telerikPrimitives:TabViewItem HeaderText="Folder">
+                <telerikPrimitives:TabViewItem.Content>
+                    <Label Margin="10" Text="This is the content of the Folder tab" />
+                </telerikPrimitives:TabViewItem.Content>
+            </telerikPrimitives:TabViewItem>
+            <telerikPrimitives:TabViewItem HeaderText="View">
+                <telerikPrimitives:TabViewItem.Content>
+                    <Label Margin="10" Text="This is the content of the View tab" />
+                </telerikPrimitives:TabViewItem.Content>
+            </telerikPrimitives:TabViewItem>
+        </telerikPrimitives:RadTabView.Items>
+    </telerikPrimitives:RadTabView>
+    <!--  << tabview-getting-started-xaml  -->
+</ContentPage>

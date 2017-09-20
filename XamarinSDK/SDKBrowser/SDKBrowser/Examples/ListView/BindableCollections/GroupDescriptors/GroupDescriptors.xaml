@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SDKBrowser.Examples.ListView.GroupDescriptors"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.ListView.BindableCollections.GroupDescriptors"
+             xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             Title="GroupDescriptor">
+    <ContentPage.BindingContext>
+        <local:ViewModel />
+    </ContentPage.BindingContext>
+    <Grid Margin="16,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        
+        <StackLayout Orientation="Horizontal">
+            <StackLayout>
+                <Label Text="Group Ascending/Descending" />
+                <Label Text="Updates existing group descriptor" FontSize="Micro" TextColor="LimeGreen" />
+            </StackLayout>
+            <Switch IsToggled="{Binding IsSortOrderGroupSwitchToggled, Mode=TwoWay}" AutomationId="GroupSortingSwitch"/>
+        </StackLayout>
+        <StackLayout Grid.Row="1" Orientation="Horizontal">
+            <StackLayout>
+                <Label Text="Group Day/Category" />
+                <Label Text="Updates existing group descriptor" FontSize="Micro" TextColor="LimeGreen" />
+            </StackLayout>
+            <Switch IsToggled="{Binding IsPropertyNameGroupSwitchToggled, Mode=OneWayToSource}" AutomationId="GroupOrderSwitch"/>
+        </StackLayout>
+
+        <telerikDataControls:RadListView x:Name="listView" Grid.Row="2" GroupDescriptors="{Binding GroupDescriptors, Mode=OneWayToSource}"  ItemsSource="{Binding Items}">
+            <telerikDataControls:RadListView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding }" TextColor="Violet" FontSize="Large" HorizontalOptions="CenterAndExpand" />
+                </DataTemplate>
+            </telerikDataControls:RadListView.GroupHeaderTemplate>
+            <telerikDataControls:RadListView.ItemTemplate>
+                <DataTemplate>
+                    <telerikListView:ListViewTemplateCell>
+                        <telerikListView:ListViewTemplateCell.View>
+                            <StackLayout>
+                                <Label Text="{Binding Content}" FontSize="Medium" />
+                                <Label Text="{Binding Day}" FontSize="Small" TextColor="LimeGreen" />
+                                <Label Text="{Binding Category}" FontSize="Micro" TextColor="Red" />
+                            </StackLayout>
+                        </telerikListView:ListViewTemplateCell.View>
+                    </telerikListView:ListViewTemplateCell>
+                </DataTemplate>
+            </telerikDataControls:RadListView.ItemTemplate>
+        </telerikDataControls:RadListView>
+    </Grid>
+</ContentPage>

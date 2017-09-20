@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="SDKBrowser.Examples.Gauge.TextIndicators"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+             xmlns:telerikGauges="clr-namespace:Telerik.XamarinForms.DataVisualization.Gauges;assembly=Telerik.XamarinForms.DataVisualization">
+
+    <telerikGauges:RadRadialGauge x:Name="g1" AxisRadiusFactor="0.5">
+        <telerikGauges:RadRadialGauge.Axis>
+            <telerikGauges:GaugeLinearAxis Maximum="100"
+                                           Minimum="0"
+                                           Step="10" />
+        </telerikGauges:RadRadialGauge.Axis>
+        <telerikGauges:RadRadialGauge.Indicators>
+            <telerikGauges:GaugeShapeIndicator Fill="#FFDD789B" Value="5" />
+            <telerikGauges:GaugeTextIndicator HorizontalTextPlacement="Left"
+                                              Text="text indicator at 5"
+                                              TextColor="#FFDD789B"
+                                              VerticalTextPlacement="Bottom"
+                                              Offset="15"
+                                              Value="5" />
+            <telerikGauges:GaugeShapeIndicator Fill="#FFAAC271"
+                                               Position="Start"
+                                               Value="35" />
+            <telerikGauges:GaugeTextIndicator FontAttributes="Italic, Bold"
+                                              HorizontalTextPlacement="Right"
+                                              Position="Start"
+                                              Text="text indicator at 35"
+                                              TextColor="#FFAAC271"
+                                              VerticalTextPlacement="Bottom"
+                                              Offset="15"
+                                              Value="35" />
+            <telerikGauges:GaugeShapeIndicator Fill="#FF4062AD" Value="65" />
+            <telerikGauges:GaugeTextIndicator HorizontalTextPlacement="Right"
+                                              Stroke="#FF4062AD"
+                                              StrokeThickness="1"
+                                              Text="text indicator at 65"
+                                              TextColor="#FF4062AD"
+                                              TextMargin="4"
+                                              VerticalTextPlacement="Top"
+                                              Offset="15"
+                                              Value="65" />
+        </telerikGauges:RadRadialGauge.Indicators>
+    </telerikGauges:RadRadialGauge>
+
+</ContentPage>

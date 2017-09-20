@@ -12,11 +12,26 @@ namespace SDKBrowser.Common
 {
     public class ExamplesLoader
     {
+        private static string deviceOSName;
+
         private List<XFControl> controls;
 
         public ExamplesLoader(string sourceFile)
         {
             this.ReadXmlFile(sourceFile);
+        }
+
+        private static string DeviceOSName
+        {
+            get
+            {
+                if (deviceOSName == null)
+                {
+                    deviceOSName = DependencyService.Get<IDevice>().Device.ToString();
+                }
+
+                return deviceOSName;
+            }
         }
 
         private void ReadXmlFile(string sourceFile)
@@ -36,17 +51,9 @@ namespace SDKBrowser.Common
             List<string> controlsWithExamples = new List<string>();
             foreach (XFControl control in this.controls)
             {
-                if (control.ExcludeFrom != null || !string.IsNullOrEmpty(control.ExcludeFrom))
+                if (this.ShouldExcludeItemForCurrentDevice(control.ExcludeFrom))
                 {
-                    var excludeFlags = this.NormalizeExcludeFlags(control.ExcludeFrom);
-                    if (excludeFlags.Contains(DependencyService.Get<IDevice>().Device.ToString()))
-                    {
-                        continue;
-                    }
-                    else
-                    {
-                        controlsWithExamples.Add(control.Name);
-                    }
+                    continue;
                 }
                 else
                 {
@@ -93,7 +100,7 @@ namespace SDKBrowser.Common
 
                     foreach (Example example in control.Examples)
                     {
-                        if (string.IsNullOrEmpty(example.GroupName))
+                        if (string.IsNullOrEmpty(example.GroupName) || this.ShouldExcludeItemForCurrentDevice(example.ExcludeFrom))
                         {
                             continue;
                         }
@@ -138,6 +145,19 @@ namespace SDKBrowser.Common
                 continue;
             }
             throw new ArgumentException("Could not find PageName for {0} example.", exampleTitle);
+        }
+
+        private bool ShouldExcludeItemForCurrentDevice(string excludeFrom)
+        {
+            bool shouldExcludeItem = false;
+
+            if (!string.IsNullOrEmpty(excludeFrom))
+            {
+                var excludeFlags = this.NormalizeExcludeFlags(excludeFrom);
+                shouldExcludeItem = excludeFlags.Contains(DeviceOSName);
+            }
+
+            return shouldExcludeItem;
         }
     }
 }

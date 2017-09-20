@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-        xmlns:common="clr-namespace:SDKBrowser.Common"
-		x:Class="SDKBrowser.Examples.SpreadStreamProcessing.SpreadStreamProcessingGettingStartedXaml">
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="SDKBrowser.Examples.SpreadStreamProcessing.SpreadStreamProcessingGettingStartedXaml"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:common="clr-namespace:SDKBrowser.Common">
     <ScrollView>
         <StackLayout>
 
@@ -10,11 +10,13 @@
 
             <Entry Placeholder="Enter a formula example: =5+2" Text="{Binding Path=SecondCellValue}" />
 
-            <Picker common:PickerItemsSourceAttachedProperty.ItemsSource="{Binding Path=FontFamiliesItemsSource}"
-                    SelectedIndex="{Binding Path=SelectedFontFamilyIndex}" Title="Font family" />
+            <Picker Title="Font family"
+                    common:PickerItemsSourceAttachedProperty.ItemsSource="{Binding Path=FontFamiliesItemsSource}"
+                    SelectedIndex="{Binding Path=SelectedFontFamilyIndex}" />
 
-            <Picker common:PickerItemsSourceAttachedProperty.ItemsSource="{Binding Path=FontSizesItemsSource}"
-                    SelectedIndex="{Binding Path=SelectedFontSizeIndex}" Title="Font size" />
+            <Picker Title="Font size"
+                    common:PickerItemsSourceAttachedProperty.ItemsSource="{Binding Path=FontSizesItemsSource}"
+                    SelectedIndex="{Binding Path=SelectedFontSizeIndex}" />
 
             <Label Text="Bold" />
             <Switch IsToggled="{Binding Path=IsBold}" />
@@ -22,16 +24,19 @@
             <Label Text="Italic" />
             <Switch IsToggled="{Binding Path=IsItalic}" />
 
-            <Picker common:PickerItemsSourceAttachedProperty.ItemsSource="{Binding Path=ColorsItemsSource}"
-                    SelectedIndex="{Binding Path=SelectedFillColorIndex}" Title="Fill color" />
+            <Picker Title="Fill color"
+                    common:PickerItemsSourceAttachedProperty.ItemsSource="{Binding Path=ColorsItemsSource}"
+                    SelectedIndex="{Binding Path=SelectedFillColorIndex}" />
 
-            <Picker common:PickerItemsSourceAttachedProperty.ItemsSource="{Binding Path=ColorsItemsSource}"
-                    SelectedIndex="{Binding Path=SelectedTextColorIndex}" Title="Text color" />
+            <Picker Title="Text color"
+                    common:PickerItemsSourceAttachedProperty.ItemsSource="{Binding Path=ColorsItemsSource}"
+                    SelectedIndex="{Binding Path=SelectedTextColorIndex}" />
 
-            <Picker common:PickerItemsSourceAttachedProperty.ItemsSource="{Binding Path=UnderlineItemsSource}"
-                    SelectedIndex="{Binding Path=SelectedUnderlineIndex}" Title="Underline" />
+            <Picker Title="Underline"
+                    common:PickerItemsSourceAttachedProperty.ItemsSource="{Binding Path=UnderlineItemsSource}"
+                    SelectedIndex="{Binding Path=SelectedUnderlineIndex}" />
 
-            <Button Text="Generate XLSX document" Command="{Binding Path=GenerateDocumentCommand}" />
+            <Button Command="{Binding Path=GenerateDocumentCommand}" Text="Generate XLSX document" />
 
         </StackLayout>
     </ScrollView>

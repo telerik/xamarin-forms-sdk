@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="SDKBrowser.Examples.BusyIndicator.AnimationsXaml"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikBusyIndicator="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives">
+    <Grid>
+
+        <!--  >> busyindicator-animations-xaml  -->
+        <telerikBusyIndicator:RadBusyIndicator x:Name="radBusyIndicator"
+                                               AnimationType="Custom"
+                                               IsBusy="True">
+            <telerikBusyIndicator:RadBusyIndicator.Content>
+                <Label Text="This is the content of the RadBusyIndicator control displayed when the indicator is not busy." />
+            </telerikBusyIndicator:RadBusyIndicator.Content>
+            <telerikBusyIndicator:RadBusyIndicator.BusyContent>
+                <Label HorizontalOptions="Center"
+                       Text="Loading..."
+                       VerticalOptions="Center" />
+            </telerikBusyIndicator:RadBusyIndicator.BusyContent>
+        </telerikBusyIndicator:RadBusyIndicator>
+        <!--  << busyindicator-animations-xaml  -->
+    </Grid>
+</ContentPage>

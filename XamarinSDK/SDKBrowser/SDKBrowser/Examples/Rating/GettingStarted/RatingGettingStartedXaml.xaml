@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="SDKBrowser.Examples.Rating.RatingGettingStartedXaml"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:rating="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             Title="RatingGettingStartedXaml">
+    <StackLayout>
+        <Label Text="Please rate your experience." />
+        <!--  >> rating-gettingstarted-xaml  -->
+        <rating:RadShapeRating x:Name="rating"/>
+        <!--  << rating-gettingstarted-xaml  -->
+    </StackLayout>
+</ContentPage>

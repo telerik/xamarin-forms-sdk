@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="SDKBrowser.Examples.Rating.Geometries"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:rating="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             Title="Geometries">
+    <StackLayout>
+        <!--  >> rating-geometries-star  -->
+        <rating:RadShapeRating x:Name="rating1"/>
+        <!--  << rating-geometries-star  -->
+        <!--  >> rating-geometries-circle  -->
+        <rating:RadShapeRating ItemShape="{x:Static rating:Geometries.Circle}" x:Name="rating2"/>
+        <!--  << rating-geometries-circle  -->
+        <!--  >> rating-geometries-diamond  -->
+        <rating:RadShapeRating ItemShape="{x:Static rating:Geometries.Diamond}" x:Name="rating3"/>
+        <!--  << rating-geometries-diamond  -->
+        <!--  >> rating-geometries-heart  -->
+        <rating:RadShapeRating ItemShape="{x:Static rating:Geometries.Heart}" x:Name="rating4"/>
+        <!--  << rating-geometries-heart  -->
+    </StackLayout>
+</ContentPage>

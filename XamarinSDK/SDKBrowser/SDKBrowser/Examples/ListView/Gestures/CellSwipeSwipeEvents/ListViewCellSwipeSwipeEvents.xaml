@@ -1,43 +1,86 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns:local="clr-namespace:SDKBrowser.Examples.ListView.Gestures.CellSwipeSwipeEvents" xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls" xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SDKBrowser.Examples.ListView.ListViewCellSwipeSwipeEvents">
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="SDKBrowser.Examples.ListView.ListViewCellSwipeSwipeEvents"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:listView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.ListView.Gestures.CellSwipeSwipeEvents"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls">
 
-    <!-- >> listview-gestures-cellswipe-swipeevents-listview -->
-	<ContentPage.BindingContext>
-		<local:ViewModel />
-	</ContentPage.BindingContext>
-	<telerikDataControls:RadListView ItemsSource="{Binding Source}" BackgroundColor="White" IsItemSwipeEnabled="True" SwipeThreshold="70" SwipeOffset="70, 0, 70, 0" ItemSwipeCompleted="OnItemSwipeCompleted" SelectionMode="None">
-		<telerikDataControls:RadListView.ItemTemplate>
-			<DataTemplate>
-				<telerikListView:ListViewTemplateCell>
-					<telerikListView:ListViewTemplateCell.View>
-						<Grid BackgroundColor="White">
-							<StackLayout Orientation="Horizontal" Margin="10, 10, 10, 0">
-								<Image Source="unread.png" WidthRequest="10" HeightRequest="10" IsVisible="{Binding IsUnread}" VerticalOptions="Center" />
-								<Label Text="{Binding Sender}" FontSize="16" FontAttributes="Bold" Grid.Column="1" TextColor="Black" />
-							</StackLayout>
-							<StackLayout Orientation="Horizontal" Margin="10, 0, 10, 10" Grid.Row="1">
-								<Label Text="Subject:" FontSize="14" TextColor="Gray" />
-								<Label Text="{Binding Subject}" FontSize="14" TextColor="Gray" />
-							</StackLayout>
-						</Grid>
-					</telerikListView:ListViewTemplateCell.View>
-				</telerikListView:ListViewTemplateCell>
-			</DataTemplate>
-		</telerikDataControls:RadListView.ItemTemplate>
-		<telerikDataControls:RadListView.ItemSwipeContentTemplate>
-			<DataTemplate>
-				<Grid Padding="0" Margin="0" RowSpacing="0" ColumnSpacing="0">
-					<Grid.ColumnDefinitions>
-						<ColumnDefinition Width="70" />
-						<ColumnDefinition Width="*" />
-						<ColumnDefinition Width="70" />
-					</Grid.ColumnDefinitions>
-					<Label TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="#2474d2" WidthRequest="70" Text="Mark as read" />
-					<Label TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="Red" WidthRequest="70" Text="delete" Grid.Column="2" />
-				</Grid>
-			</DataTemplate>
-		</telerikDataControls:RadListView.ItemSwipeContentTemplate>
-	</telerikDataControls:RadListView>
-    <!-- << listview-gestures-cellswipe-swipeevents-listview -->
-	
+    <!--  >> listview-gestures-cellswipe-swipeevents-listview  -->
+    <ContentPage.BindingContext>
+        <local:ViewModel />
+    </ContentPage.BindingContext>
+    <telerikDataControls:RadListView x:Name="listView"
+                                     BackgroundColor="White"
+                                     IsItemSwipeEnabled="True"
+                                     ItemSwipeCompleted="OnItemSwipeCompleted"
+                                     ItemsSource="{Binding Source}"
+                                     SelectionMode="None"
+                                     SwipeOffset="70, 0, 70, 0"
+                                     SwipeThreshold="70">
+        <telerikDataControls:RadListView.ItemTemplate>
+            <DataTemplate>
+                <listView:ListViewTemplateCell>
+                    <listView:ListViewTemplateCell.View>
+                        <Grid BackgroundColor="White">
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <StackLayout Margin="10,10,10,0" Orientation="Horizontal">
+                                <Image HeightRequest="10"
+                                       IsVisible="{Binding IsUnread}"
+                                       Source="unread.png"
+                                       VerticalOptions="Center"
+                                       WidthRequest="10" />
+                                <Label FontAttributes="Bold"
+                                       FontSize="16"
+                                       Text="{Binding Sender}"
+                                       TextColor="Black" />
+                            </StackLayout>
+                            <StackLayout Grid.Row="1"
+                                         Margin="10,0,10,10"
+                                         Orientation="Horizontal">
+                                <Label FontSize="14"
+                                       Text="Subject:"
+                                       TextColor="Gray" />
+                                <Label FontSize="14"
+                                       Text="{Binding Subject}"
+                                       TextColor="Gray" />
+                            </StackLayout>
+                        </Grid>
+                    </listView:ListViewTemplateCell.View>
+                </listView:ListViewTemplateCell>
+            </DataTemplate>
+        </telerikDataControls:RadListView.ItemTemplate>
+        <telerikDataControls:RadListView.ItemSwipeContentTemplate>
+            <DataTemplate>
+                <Grid Margin="0"
+                      Padding="0"
+                      ColumnSpacing="0"
+                      RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="70" />
+                    </Grid.ColumnDefinitions>
+                    <Label BackgroundColor="#2474d2"
+                           HorizontalTextAlignment="Center"
+                           Text="Mark as read"
+                           TextColor="White"
+                           VerticalTextAlignment="Center"
+                           WidthRequest="70" />
+                    <Label Grid.Column="2"
+                           BackgroundColor="Red"
+                           HorizontalTextAlignment="Center"
+                           Text="delete"
+                           TextColor="White"
+                           VerticalTextAlignment="Center"
+                           WidthRequest="70" />
+                </Grid>
+            </DataTemplate>
+        </telerikDataControls:RadListView.ItemSwipeContentTemplate>
+    </telerikDataControls:RadListView>
+    <!--  << listview-gestures-cellswipe-swipeevents-listview  -->
+
 </ContentPage>

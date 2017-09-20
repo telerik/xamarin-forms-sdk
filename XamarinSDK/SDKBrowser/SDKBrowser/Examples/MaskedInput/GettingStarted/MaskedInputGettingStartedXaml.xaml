@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.MaskedInput.MaskedInputGettingStartedXaml">
+    <ContentPage.Content>
+        <StackLayout>
+            <!--  >> maskedinput-gettingstarted-text-xaml  -->
+            <telerikInput:RadMaskedInput x:Name="maskedInput"
+                                         WatermarkText="Watermark"
+                                         Mask="(CC) 00"
+                                         MaskType="Text"/>
+            <!--  << maskedinput-gettingstarted-text-xaml  -->
+
+            <!--  >> maskedinput-gettingstarted-regex-xaml  -->
+            <telerikInput:RadMaskedInput x:Name="maskedInput2"
+                                         WatermarkText="Email Address"
+                                         Mask=".+@[a-zA-Z]+\.[a-zA-Z]+"
+                                         MaskType="Regex"/>
+            <!--  << maskedinput-gettingstarted-regex-xaml  -->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

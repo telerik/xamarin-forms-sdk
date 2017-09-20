@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="SDKBrowser.Examples.Gauge.RadialGaugeExample"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+             xmlns:telerikGauges="clr-namespace:Telerik.XamarinForms.DataVisualization.Gauges;assembly=Telerik.XamarinForms.DataVisualization"
+             Title="RadialGaugeExample"
+             BackgroundColor="White">
+    <!--  >> gauge-types-radialgauge-xaml  -->
+    <telerikGauges:RadRadialGauge x:Name="gauge">
+        <telerikGauges:RadRadialGauge.Axis>
+            <telerikGauges:GaugeLinearAxis Maximum="200"
+                                           Minimum="0"
+                                           Step="25" />
+        </telerikGauges:RadRadialGauge.Axis>
+        <telerikGauges:RadRadialGauge.Indicators>
+            <telerikGauges:GaugeNeedleIndicator Offset="30" Value="60" />
+        </telerikGauges:RadRadialGauge.Indicators>
+        <telerikGauges:RadRadialGauge.Ranges>
+            <telerikGauges:GaugeRangesDefinition>
+                <telerikGauges:GaugeRange Color="Green"
+                                          From="0"
+                                          To="150" />
+                <telerikGauges:GaugeGradientRange From="150" To="200">
+                    <telerikCommon:RadGradientStop Offset="150" Color="Yellow" />
+                    <telerikCommon:RadGradientStop Offset="200" Color="Red" />
+                </telerikGauges:GaugeGradientRange>
+            </telerikGauges:GaugeRangesDefinition>
+        </telerikGauges:RadRadialGauge.Ranges>
+    </telerikGauges:RadRadialGauge>
+    <!--  << gauge-types-radialgauge-xaml  -->
+</ContentPage>

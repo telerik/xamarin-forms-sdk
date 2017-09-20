@@ -25,8 +25,8 @@ namespace SDKBrowser.Examples.Calendar
         {
             var background = Device.OnPlatform(Color.White, Color.White, Color.FromRgb(30, 30, 30));
             var selectedCellForegroundColor = Device.OnPlatform(Color.White, Color.FromRgb(139, 209, 0), Color.White);
-            var dayNamesFontSize = Device.OnPlatform(14, 30, 17);
-            var fontSize = Device.OnPlatform(14, 30, 17);
+            var dayNamesFontSize = Device.OnPlatform(14, 15, 17);
+            var fontSize = Device.OnPlatform(14, 15, 17);
             var todayBorderThickness = Device.OnPlatform(new Thickness(2), new Thickness(1), new Thickness(2));
             var todayBorderColor = Color.FromRgb(115, 174, 239);
 
@@ -34,7 +34,7 @@ namespace SDKBrowser.Examples.Calendar
             {
                 return new CalendarCellStyle
                 {
-                    BackgroundColor = Color.Transparent,
+                    BackgroundColor = Color.LightGray,
                     FontSize = dayNamesFontSize,
                     FontWeight = FontWeight.Bold,
                     ForegroundColor = Color.FromRgb(0, 122, 255)

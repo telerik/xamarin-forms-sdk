@@ -19,3 +19,9 @@ using Telerik.XamarinForms.DataControls.ListView;
 // >> ns-telerikprimitives
 using Telerik.XamarinForms.Primitives;
 // << ns-telerikprimitives
+// >> ns-telerikbusyindicator
+using Telerik.XamarinForms.Primitives;
+// << ns-telerikbusyindicator
+// >> ns-telerikrating
+using Telerik.XamarinForms.Input;
+// << ns-telerikrating

@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <Import Project="..\..\config.targets"/>
+  <Import Project="..\..\config.targets" />
   <PropertyGroup>
     <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -52,13 +52,29 @@
     <Compile Include="Common\IDevice.cs" />
     <Compile Include="Common\Usings.cs" />
     <Compile Include="Common\XFControl.cs" />
+    <Compile Include="Examples\AutoComplete\Features\CustomizeTokens\BusinessObject.cs" />
+    <Compile Include="Examples\AutoComplete\Features\CustomizeTokens\CustomizeTokens.xaml.cs">
+      <DependentUpon>CustomizeTokens.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\AutoComplete\Features\CustomizeTokens\CustomizeTokensViewModel.cs" />
     <Compile Include="Examples\AutoComplete\GettingStarted\AutoCompleteGettingStartedCSharp.cs" />
     <Compile Include="Examples\AutoComplete\GettingStarted\AutoCompleteGettingStartedXaml.xaml.cs">
       <DependentUpon>AutoCompleteGettingStartedXaml.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Examples\BusyIndicator\Features\Animations\AnimationsXaml.xaml.cs">
+      <DependentUpon>AnimationsXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\BusyIndicator\Features\Animations\AnimationsCSharp.cs" />
+    <Compile Include="Examples\BusyIndicator\GettingStarted\BusyIndicatorGettingStartedCSharp.cs" />
+    <Compile Include="Examples\BusyIndicator\GettingStarted\BusyIndicatorGettingStartedXaml.xaml.cs">
+      <DependentUpon>BusyIndicatorGettingStartedXaml.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Examples\Calendar\Styling\CustomRenderer\CalendarCustomRendererExample.cs" />
     <Compile Include="Examples\Calendar\Styling\CellStyling.cs" />
     <Compile Include="Examples\Calendar\Styling\CustomRenderer\CustomCalendar.cs" />
+    <Compile Include="Examples\Calendar\Styling\DayViewStyling.xaml.cs">
+      <DependentUpon>DayViewStyling.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Examples\Chart\ChartGridLinesPage.xaml.cs">
       <DependentUpon>ChartGridLinesPage.xaml</DependentUpon>
     </Compile>
@@ -71,11 +87,29 @@
     <Compile Include="Examples\Calendar\Styling\Appointments.xaml.cs">
       <DependentUpon>Appointments.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Examples\Chart\Customization\PaletteMode\PaletteModePage.xaml.cs">
+      <DependentUpon>PaletteModePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Chart\Customization\PaletteMode\ViewModel.cs" />
     <Compile Include="Examples\Chart\GettingStarted\ChartGettingStartedXaml.xaml.cs">
       <DependentUpon>ChartGettingStartedXaml.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\Chart\GettingStarted\ChartGettingStartedCSharp.cs" />
     <Compile Include="Examples\Chart\GettingStarted\ViewModel.cs" />
+    <Compile Include="Examples\Chart\Legend\CartesianChartRadLegendCSharp.cs" />
+    <Compile Include="Examples\Chart\Legend\CartesianChartRadLegendXaml.xaml.cs">
+      <DependentUpon>CartesianChartRadLegendXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Chart\Legend\PieChartRadLegendCSharp.cs" />
+    <Compile Include="Examples\Chart\Legend\PieChartRadLegendXaml.xaml.cs">
+      <DependentUpon>PieChartRadLegendXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Chart\Legend\ViewModel.cs" />
+    <Compile Include="Examples\Chart\PieChartPercentage\PercentageLabelFormatter.cs" />
+    <Compile Include="Examples\Chart\PieChartPercentage\PieChartPercentagePage.xaml.cs">
+      <DependentUpon>PieChartPercentagePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Chart\PieChartPercentage\PieChartPercentageViewModel.cs" />
     <Compile Include="Examples\Chart\PlotBandAnnotationsPage.xaml.cs">
       <DependentUpon>PlotBandAnnotationsPage.xaml</DependentUpon>
     </Compile>
@@ -100,6 +134,12 @@
     <Compile Include="Examples\Chart\PieChartPage.xaml.cs">
       <DependentUpon>PieChartPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Examples\DataForm\Editors\CustomEditor\CustomDataFormEditor.xaml.cs">
+      <DependentUpon>CustomDataFormEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataForm\Editors\CustomEditor\CustomEditorDataForm.cs" />
+    <Compile Include="Examples\DataForm\Editors\CustomEditor\Options.cs" />
+    <Compile Include="Examples\DataForm\Editors\CustomEditor\SourceItem.cs" />
     <Compile Include="Examples\DataForm\Editors\DataFormEditors.xaml.cs">
       <DependentUpon>DataFormEditors.xaml</DependentUpon>
     </Compile>
@@ -110,6 +150,41 @@
     <Compile Include="Examples\DataForm\Groups\DataFormGroups.xaml.cs">
       <DependentUpon>DataFormGroups.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Examples\DataForm\Styling\Editors\CustomDecimalEditorFormatter\CustomRadDataForm.cs" />
+    <Compile Include="Examples\DataForm\Styling\Editors\CustomDecimalEditorFormatter\DataFormCustomDecimalEditorFormatterCSharp.cs" />
+    <Compile Include="Examples\DataForm\Styling\Editors\CustomDecimalEditorFormatter\DataFormCustomDecimalEditorFormatterXaml.xaml.cs">
+      <DependentUpon>DataFormCustomDecimalEditorFormatterXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataForm\Styling\Editors\CustomDecimalEditorFormatter\SourceItem.cs" />
+    <Compile Include="Examples\DataGrid\Filtering\City.cs" />
+    <Compile Include="Examples\DataGrid\Filtering\ViewModel.cs" />
+    <Compile Include="Examples\DataGrid\Selection\ViewModel.cs" />
+    <Compile Include="Examples\DataGrid\Sorting\Country.cs" />
+    <Compile Include="Examples\DataGrid\Decorations\StringToColorConverter.cs" />
+    <Compile Include="Examples\DataGrid\Decorations\GridLines.xaml.cs">
+      <DependentUpon>GridLines.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataGrid\Filtering\ProgrammaticFiltering.xaml.cs">
+      <DependentUpon>ProgrammaticFiltering.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataGrid\Gender.cs" />
+    <Compile Include="Examples\DataGrid\Grouping\ProgrammaticGrouping.xaml.cs">
+      <DependentUpon>ProgrammaticGrouping.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataGrid\Person.cs" />
+    <Compile Include="Examples\DataGrid\Selection\GridUISelection.xaml.cs">
+      <DependentUpon>GridUISelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataGrid\Selection\ProgrammaticSelection.xaml.cs">
+      <DependentUpon>ProgrammaticSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataGrid\Sorting\ProgrammaticSorting.xaml.cs">
+      <DependentUpon>ProgrammaticSorting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataGrid\Decorations\ViewModel.cs" />
+    <Compile Include="Examples\Gauge\Features\BarIndicators.xaml.cs">
+      <DependentUpon>BarIndicators.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Examples\Gauge\Customizations\CustomShapes.xaml.cs">
       <DependentUpon>CustomShapes.xaml</DependentUpon>
     </Compile>
@@ -119,14 +194,23 @@
     <Compile Include="Examples\Gauge\Customizations\GaugeAxisCustomization.xaml.cs">
       <DependentUpon>GaugeAxisCustomization.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Examples\Gauge\Features\BarIndicators.xaml.cs">
-      <DependentUpon>BarIndicators.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Examples\Gauge\Features\Animations.xaml.cs">
       <DependentUpon>Animations.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Examples\Gauge\Features\TextIndicators.xaml.cs">
+      <DependentUpon>TextIndicators.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Examples\Gauge\Features\Ranges.xaml.cs">
       <DependentUpon>Ranges.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Gauge\GaugeTypes\RadialGaugeExample.xaml.cs">
+      <DependentUpon>RadialGaugeExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Gauge\GaugeTypes\HorizontalGaugeExample.xaml.cs">
+      <DependentUpon>HorizontalGaugeExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Gauge\GaugeTypes\VerticalGaugeExample.xaml.cs">
+      <DependentUpon>VerticalGaugeExample.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\Gauge\GettingStarted\GaugeGettingStartedCSharp.cs" />
     <Compile Include="Examples\Gauge\GettingStarted\GaugeGettingStartedXaml.xaml.cs">
@@ -136,6 +220,24 @@
     <Compile Include="Examples\Gauge\Customizations\SpeedometerXaml.cs">
       <DependentUpon>SpeedometerXaml.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Examples\ListView\CellTypes\TemplateSelectors\CustomItemTemplateSelector.cs" />
+    <Compile Include="Examples\ListView\CellTypes\TemplateSelectors\ListViewItemTemplateSelectorCSharp.cs" />
+    <Compile Include="Examples\ListView\CellTypes\TemplateSelectors\ViewModel.cs" />
+    <Compile Include="Examples\ListView\BindableCollections\GroupDescriptors\ViewModel.cs" />
+    <Compile Include="Examples\ListView\BindableCollections\SortDescriptors\Event.cs" />
+    <Compile Include="Examples\ListView\BindableCollections\FilterDescriptors\Event.cs" />
+    <Compile Include="Examples\ListView\BindableCollections\FilterDescriptors\FilterDescriptors.xaml.cs">
+      <DependentUpon>FilterDescriptors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ListView\BindableCollections\GroupDescriptors\Event.cs" />
+    <Compile Include="Examples\ListView\BindableCollections\GroupDescriptors\GroupDescriptors.xaml.cs">
+      <DependentUpon>GroupDescriptors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ListView\BindableCollections\SortDescriptors\SortDescriptors.xaml.cs">
+      <DependentUpon>SortDescriptors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ListView\BindableCollections\SortDescriptors\ViewModel.cs" />
+    <Compile Include="Examples\ListView\BindableCollections\FilterDescriptors\ViewModel.cs" />
     <Compile Include="Examples\ListView\DataOperations\DataOperationsViewModel.cs" />
     <Compile Include="Examples\ListView\DataOperations\GroupConverter.cs" />
     <Compile Include="Examples\ListView\Item.cs" />
@@ -166,6 +268,27 @@
     <Compile Include="Examples\ListView\Selection.xaml.cs">
       <DependentUpon>Selection.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Examples\ListView\Styling\BindableItemStyles\BindableListViewItemStyles.xaml.cs">
+      <DependentUpon>BindableListViewItemStyles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ListView\Styling\BindableItemStyles\StringToBorderLocationConverter.cs" />
+    <Compile Include="Examples\ListView\Styling\BindableItemStyles\StringToColorConverter.cs" />
+    <Compile Include="Examples\ListView\Styling\BindableItemStyles\SourceItem.cs" />
+    <Compile Include="Examples\ListView\Styling\BindableItemStyles\ViewModel.cs" />
+    <Compile Include="Examples\ListView\Styling\BindablePressedItemStyle\BindablePressedItemStyle.xaml.cs">
+      <DependentUpon>BindablePressedItemStyle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ListView\Styling\BindablePressedItemStyle\SourceItem.cs" />
+    <Compile Include="Examples\ListView\Styling\BindablePressedItemStyle\StringToBorderLocationConverter.cs" />
+    <Compile Include="Examples\ListView\Styling\BindablePressedItemStyle\StringToColorConverter.cs" />
+    <Compile Include="Examples\ListView\Styling\BindablePressedItemStyle\ViewModel.cs" />
+    <Compile Include="Examples\ListView\Styling\BindableSelectedItemStyle\BindableSelectedItemStyle.xaml.cs">
+      <DependentUpon>BindableSelectedItemStyle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ListView\Styling\BindableSelectedItemStyle\SourceItem.cs" />
+    <Compile Include="Examples\ListView\Styling\BindableSelectedItemStyle\StringToBorderLocationConverter.cs" />
+    <Compile Include="Examples\ListView\Styling\BindableSelectedItemStyle\StringToColorConverter.cs" />
+    <Compile Include="Examples\ListView\Styling\BindableSelectedItemStyle\ViewModel.cs" />
     <Compile Include="Examples\ListView\Styling\ItemStyles\ListViewItemStylesCSharp.cs" />
     <Compile Include="Examples\ListView\Styling\ItemStyles\ListViewItemStylesXaml.xaml.cs">
       <DependentUpon>ListViewItemStylesXaml.xaml</DependentUpon>
@@ -176,7 +299,59 @@
       <DependentUpon>ListViewItemStyleSelectorXaml.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\ListView\Styling\StyleSelectors\ExampleListViewStyleSelector.cs" />
+    <Compile Include="Examples\ListView\CellTypes\TemplateSelectors\ListViewItemTemplateSelectorXaml.xaml.cs">
+      <DependentUpon>ListViewItemTemplateSelectorXaml.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Examples\ListView\Styling\StyleSelectors\Source.cs" />
+    <Compile Include="Examples\MaskedInput\Features\RegexMask\RegexMask.xaml.cs">
+      <DependentUpon>RegexMask.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\MaskedInput\Features\Validation\Validation.xaml.cs">
+      <DependentUpon>Validation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\MaskedInput\GettingStarted\MaskedInputGettingStartedXaml.xaml.cs">
+      <DependentUpon>MaskedInputGettingStartedXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Path\GettingStarted\PathGettingStartedXaml.xaml.cs">
+      <DependentUpon>PathGettingStartedXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\MaskedInput\Features\Events.xaml.cs">
+      <DependentUpon>Events.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\MaskedInput\Features\Commands\CustomAfterTextMaskedCommand.cs" />
+    <Compile Include="Examples\MaskedInput\Features\Commands\CustomBeforeTextMaskedCommand.cs" />
+    <Compile Include="Examples\MaskedInput\Features\Commands\Commands.xaml.cs">
+      <DependentUpon>Commands.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\MaskedInput\Features\Configurator.xaml.cs">
+      <DependentUpon>Configurator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Rating\Configurator.xaml.cs">
+      <DependentUpon>Configurator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Rating\Geometries.xaml.cs">
+      <DependentUpon>Geometries.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Rating\GettingStarted\RatingGettingStartedCSharp.cs" />
+    <Compile Include="Examples\Rating\GettingStarted\RatingGettingStartedXaml.xaml.cs">
+      <DependentUpon>RatingGettingStartedXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Rating\Templates.xaml.cs">
+      <DependentUpon>Templates.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\SegmentControl\Features\CustomizeColors.xaml.cs">
+      <DependentUpon>CustomizeColors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\SegmentControl\Features\DisableSegment.xaml.cs">
+      <DependentUpon>DisableSegment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\SegmentControl\Features\Selection.xaml.cs">
+      <DependentUpon>Selection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\SegmentControl\GettingStarted\SegmentControlGettingStartedCSharp.cs" />
+    <Compile Include="Examples\SegmentControl\GettingStarted\SegmentControlGettingStartedXaml.xaml.cs">
+      <DependentUpon>SegmentControlGettingStartedXaml.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Examples\SideDrawer\Location.xaml.cs">
       <DependentUpon>Location.xaml</DependentUpon>
     </Compile>
@@ -186,6 +361,25 @@
     <Compile Include="Examples\SpreadStreamProcessing\GettingStarted\StylingViewModel.cs" />
     <Compile Include="Examples\SpreadStreamProcessing\GettingStarted\Book.cs" />
     <Compile Include="Examples\SpreadStreamProcessing\GettingStarted\PredefinedColors.cs" />
+    <Compile Include="Examples\TabView\Features\ItemsSource\TabViewUtilities.cs" />
+    <Compile Include="Examples\TabView\Features\Selection.cs" />
+    <Compile Include="Examples\TabView\Features\ItemsSource\TabViewItemsSource.xaml.cs">
+      <DependentUpon>TabViewItemsSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\TabView\Features\TabViewHeaderCustomTemplateExample.xaml.cs">
+      <DependentUpon>TabViewHeaderCustomTemplateExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\TabView\Features\TabViewHeaderExample.xaml.cs">
+      <DependentUpon>TabViewHeaderExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\TabView\Features\TabViewItemExample.xaml.cs">
+      <DependentUpon>TabViewItemExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\TabView\Features\ItemsSource\NavItem.cs" />
+    <Compile Include="Examples\TabView\GettingStarted\TabViewGettingStartedCSharp.cs" />
+    <Compile Include="Examples\TabView\GettingStarted\TabViewGettingStartedXaml.xaml.cs">
+      <DependentUpon>TabViewGettingStartedXaml.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Common\RootPage.xaml.cs">
       <DependentUpon>RootPage.xaml</DependentUpon>
@@ -385,54 +579,56 @@
       <DependentUpon>DataFormDataAnnotationsConversionContext.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\Calendar\Styling\ElementsDisplayMode.cs" />
+    <Compile Include="Examples\Calendar\Features\CalendarViewModesExample.xaml.cs">
+      <DependentUpon>CalendarViewModesExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Calendar\Features\CalendarAppointmentTapped.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="SkiaSharp, Version=1.55.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SkiaSharp.1.55.1\lib\portable-net45+win8+wpa81+wp8\SkiaSharp.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="SkiaSharp, Version=1.59.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SkiaSharp.1.59.1\lib\portable-net45+win8+wpa81+wp8\SkiaSharp.dll</HintPath>
     </Reference>
-    <Reference Include="SkiaSharp.Views.Forms, Version=1.55.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SkiaSharp.Views.Forms.1.55.1\lib\portable-net45+win8+wpa81+wp8\SkiaSharp.Views.Forms.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.XamarinForms.Chart">
-      <HintPath>..\..\$(BinariesPath)\XamarinForms\Common\Telerik.XamarinForms.Chart.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.XamarinForms.Common">
-      <HintPath>..\..\$(BinariesPath)\XamarinForms\Common\Telerik.XamarinForms.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.XamarinForms.DataControls">
-      <HintPath>..\..\$(BinariesPath)\XamarinForms\Common\Telerik.XamarinForms.DataControls.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.XamarinForms.DataVisualization">
-      <HintPath>..\..\$(BinariesPath)\XamarinForms\Common\Telerik.XamarinForms.DataVisualization.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.XamarinForms.Input">
-      <HintPath>..\..\$(BinariesPath)\XamarinForms\Common\Telerik.XamarinForms.Input.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.XamarinForms.Primitives">
-      <HintPath>..\..\$(BinariesPath)\XamarinForms\Common\Telerik.XamarinForms.Primitives.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.XamarinForms.SkiaSharp">
-      <HintPath>..\..\$(BinariesPath)\XamarinForms\Common\Telerik.XamarinForms.SkiaSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Zip">
-      <HintPath>..\..\$(BinariesPath)\DPL\Telerik.Zip.dll</HintPath>
+    <Reference Include="SkiaSharp.Views.Forms, Version=1.59.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SkiaSharp.Views.Forms.1.59.1\lib\portable-net45+win8+wpa81+wp8\SkiaSharp.Views.Forms.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Documents.SpreadsheetStreaming">
-      <HintPath>..\..\$(BinariesPath)\DPL\Telerik.Documents.SpreadsheetStreaming.dll</HintPath>
+      <HintPath>..\..\..\..\Binaries\Portable\Telerik.Documents.SpreadsheetStreaming.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.Chart">
+      <HintPath>..\..\..\..\Binaries\Portable\Telerik.XamarinForms.Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.Common">
+      <HintPath>..\..\..\..\Binaries\Portable\Telerik.XamarinForms.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.DataControls">
+      <HintPath>..\..\..\..\Binaries\Portable\Telerik.XamarinForms.DataControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.DataGrid">
+      <HintPath>..\..\..\..\Binaries\Portable\Telerik.XamarinForms.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.DataVisualization">
+      <HintPath>..\..\..\..\Binaries\Portable\Telerik.XamarinForms.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.Input">
+      <HintPath>..\..\..\..\Binaries\Portable\Telerik.XamarinForms.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.Primitives">
+      <HintPath>..\..\..\..\Binaries\Portable\Telerik.XamarinForms.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.SkiaSharp">
+      <HintPath>..\..\..\..\Binaries\Portable\Telerik.XamarinForms.SkiaSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Zip">
+      <HintPath>..\..\$(BinariesPath)\Portable\Telerik.Zip.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.224\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.270\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.224\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Platform.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.270\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Platform.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.224\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.270\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -543,6 +739,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Examples\DataForm\DataAnnotations\NativeConversionContext\DataFormDataAnnotationsConversionContext.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examples\Calendar\Features\CalendarViewModesExample.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -732,12 +931,31 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="app.config" />
     <None Include="Images\favourite.png" />
     <None Include="Images\delete.png" />
     <None Include="Images\unread.png" />
+    <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\BusyIndicator\GettingStarted\BusyIndicatorGettingStartedXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>
+      </SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Gauge\GaugeTypes\VerticalGaugeExample.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Rating\Geometries.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Examples\Gauge\Customizations\GaugeAxisCustomization.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -836,6 +1054,12 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Examples\Gauge\Features\TextIndicators.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
     <EmbeddedResource Include="Examples\Gauge\Customizations\Positioning.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
@@ -855,13 +1079,267 @@
       </SubType>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Rating\GettingStarted\RatingGettingStartedXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\BusyIndicator\Features\Animations\AnimationsXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Gauge\GaugeTypes\HorizontalGaugeExample.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Gauge\GaugeTypes\RadialGaugeExample.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Rating\Templates.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Rating\Configurator.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\TabView\GettingStarted\TabViewGettingStartedXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>
+      </SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\TabView\Features\TabViewHeaderExample.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>
+      </SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\TabView\Features\TabViewItemExample.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>
+      </SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\SegmentControl\GettingStarted\SegmentControlGettingStartedXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\SegmentControl\Features\DisableSegment.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\SegmentControl\Features\Selection.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\SegmentControl\Features\CustomizeColors.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\TabView\Features\ItemsSource\TabViewItemsSource.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>
+      </SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\TabView\Features\TabViewHeaderCustomTemplateExample.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examples\DataForm\Styling\Editors\CustomDecimalEditorFormatter\DataFormCustomDecimalEditorFormatterXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\MaskedInput\Features\Configurator.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examples\ListView\CellTypes\TemplateSelectors\ListViewItemTemplateSelectorXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\PieChartPercentage\PieChartPercentagePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examples\AutoComplete\Features\CustomizeTokens\CustomizeTokens.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ListView\Styling\BindableItemStyles\BindableListViewItemStyles.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ListView\Styling\BindablePressedItemStyle\BindablePressedItemStyle.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ListView\BindableCollections\SortDescriptors\SortDescriptors.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\DataForm\Editors\CustomEditor\CustomDataFormEditor.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ListView\Styling\BindableSelectedItemStyle\BindableSelectedItemStyle.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ListView\BindableCollections\FilterDescriptors\FilterDescriptors.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ListView\BindableCollections\GroupDescriptors\GroupDescriptors.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\Customization\PaletteMode\PaletteModePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\MaskedInput\Features\Commands\Commands.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\MaskedInput\Features\Events.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\Legend\PieChartRadLegendXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\Legend\CartesianChartRadLegendXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\DataGrid\Selection\ProgrammaticSelection.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\DataGrid\Selection\GridUISelection.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\DataGrid\Filtering\ProgrammaticFiltering.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\DataGrid\Grouping\ProgrammaticGrouping.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\DataGrid\Sorting\ProgrammaticSorting.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\DataGrid\Decorations\GridLines.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Calendar\Styling\DayViewStyling.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Path\GettingStarted\PathGettingStartedXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\MaskedInput\Features\RegexMask\RegexMask.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examples\MaskedInput\GettingStarted\MaskedInputGettingStartedXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\MaskedInput\Features\Validation\Validation.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
-  <Import Project="..\..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+  <Import Project="..\..\packages\Xamarin.Forms.2.3.4.270\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.270\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.3.4.270\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.3.4.270\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,73 +1,91 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="SDKBrowser.Examples.Gauge.CustomNeedlesXaml"
+             xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:telerikGauges="clr-namespace:Telerik.XamarinForms.DataVisualization.Gauges;assembly=Telerik.XamarinForms.DataVisualization"
              xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
-             x:Class="SDKBrowser.Examples.Gauge.CustomNeedlesXaml">
+             xmlns:telerikGauges="clr-namespace:Telerik.XamarinForms.DataVisualization.Gauges;assembly=Telerik.XamarinForms.DataVisualization">
 
-  <VisualElement.Resources>
-    <ResourceDictionary>
-      <telerikCommon:RadPathGeometry x:Key="Needle1">
-        <telerikCommon:RadPathFigure StartPoint="0.54, 0.5">
-          <telerikCommon:RadArcSegment Center="0.5, 0.5" Size="0.04, 0.04" StartAngle="0" SweepAngle="360" />
-          <telerikCommon:RadLineSegment Point="1, 0.5" />
-        </telerikCommon:RadPathFigure>
-      </telerikCommon:RadPathGeometry>
-      <telerikCommon:RadPathGeometry x:Key="Needle2">
-        <telerikCommon:RadPathFigure StartPoint="0.54, 0.5">
-          <telerikCommon:RadArcSegment Center="0.5, 0.5" Size="0.04, 0.04" StartAngle="0" SweepAngle="360" />
-          <telerikCommon:RadLineSegment Point="0.98, 0.5" />
-          <telerikCommon:RadLineSegment Point="0.98, 0.51" />
-          <telerikCommon:RadLineSegment Point="1, 0.5" />
-          <telerikCommon:RadLineSegment Point="0.98, 0.49" />
-          <telerikCommon:RadLineSegment Point="0.98, 0.5" />
-        </telerikCommon:RadPathFigure>
-      </telerikCommon:RadPathGeometry>
+    <VisualElement.Resources>
+        <ResourceDictionary>
+            <telerikCommon:RadPathGeometry x:Key="Needle1">
+                <telerikCommon:RadPathFigure StartPoint="0.54, 0.5">
+                    <telerikCommon:RadArcSegment Center="0.5, 0.5"
+                                                 Size="0.04, 0.04"
+                                                 StartAngle="0"
+                                                 SweepAngle="360" />
+                    <telerikCommon:RadLineSegment Point="1, 0.5" />
+                </telerikCommon:RadPathFigure>
+            </telerikCommon:RadPathGeometry>
+            <telerikCommon:RadPathGeometry x:Key="Needle2">
+                <telerikCommon:RadPathFigure StartPoint="0.54, 0.5">
+                    <telerikCommon:RadArcSegment Center="0.5, 0.5"
+                                                 Size="0.04, 0.04"
+                                                 StartAngle="0"
+                                                 SweepAngle="360" />
+                    <telerikCommon:RadLineSegment Point="0.98, 0.5" />
+                    <telerikCommon:RadLineSegment Point="0.98, 0.51" />
+                    <telerikCommon:RadLineSegment Point="1, 0.5" />
+                    <telerikCommon:RadLineSegment Point="0.98, 0.49" />
+                    <telerikCommon:RadLineSegment Point="0.98, 0.5" />
+                </telerikCommon:RadPathFigure>
+            </telerikCommon:RadPathGeometry>
 
-      <!-- >> gauge-custom-needle-shape -->
-      <telerikCommon:RadPathGeometry x:Key="Needle3">
-        <telerikCommon:RadPathFigure StartPoint="0.533, 0.51">
-          <telerikCommon:RadLineSegment Point="1, 0.5" />
-          <telerikCommon:RadLineSegment Point="0.533, 0.49" />
-          <telerikCommon:RadArcSegment Center="0.5, 0.5" Size="0.07, 0.07" StartAngle="20" SweepAngle="142" />
-          <telerikCommon:RadLineSegment Point="0.43, 0.488" />
-          <telerikCommon:RadLineSegment Point="0.43, 0.512" />
-          <telerikCommon:RadArcSegment Center="0.5, 0.5" Size="0.07, 0.07" StartAngle="200" SweepAngle="142" />
-        </telerikCommon:RadPathFigure>
-      </telerikCommon:RadPathGeometry>
-      <!-- << gauge-custom-needle-shape -->
-      
-    </ResourceDictionary>
-  </VisualElement.Resources>
+            <!--  >> gauge-custom-needle-shape  -->
+            <telerikCommon:RadPathGeometry x:Key="Needle3">
+                <telerikCommon:RadPathFigure StartPoint="0.533, 0.51">
+                    <telerikCommon:RadLineSegment Point="1, 0.5" />
+                    <telerikCommon:RadLineSegment Point="0.533, 0.49" />
+                    <telerikCommon:RadArcSegment Center="0.5, 0.5"
+                                                 Size="0.07, 0.07"
+                                                 StartAngle="20"
+                                                 SweepAngle="142" />
+                    <telerikCommon:RadLineSegment Point="0.43, 0.488" />
+                    <telerikCommon:RadLineSegment Point="0.43, 0.512" />
+                    <telerikCommon:RadArcSegment Center="0.5, 0.5"
+                                                 Size="0.07, 0.07"
+                                                 StartAngle="200"
+                                                 SweepAngle="142" />
+                </telerikCommon:RadPathFigure>
+            </telerikCommon:RadPathGeometry>
+            <!--  << gauge-custom-needle-shape  -->
 
-  <Grid>
-    <Grid.RowDefinitions>
-      <RowDefinition Height="*" />
-      <RowDefinition Height="Auto"/>
-      <RowDefinition Height="Auto"/>
-    </Grid.RowDefinitions>
+        </ResourceDictionary>
+    </VisualElement.Resources>
 
-    <telerikGauges:RadRadialGauge x:Name="gauge1">
-      <telerikGauges:RadRadialGauge.Axis>
-        <telerikGauges:GaugeLinearAxis Minimum="0" Maximum="200" Step="25" />
-      </telerikGauges:RadRadialGauge.Axis>
-      <telerikGauges:RadRadialGauge.Indicators>
-        <telerikGauges:GaugeNeedleIndicator Value="60" Position="Start" Offset="30" />
-      </telerikGauges:RadRadialGauge.Indicators>
-      <telerikGauges:RadRadialGauge.Ranges>
-        <telerikGauges:GaugeRangesDefinition>
-          <telerikGauges:GaugeRange From="0" To="150" Color="Green" />
-          <telerikGauges:GaugeGradientRange From="150" To="200">
-            <telerikCommon:RadGradientStop Color="Yellow" Offset="150" />
-            <telerikCommon:RadGradientStop Color="Red" Offset="200" />
-          </telerikGauges:GaugeGradientRange>
-        </telerikGauges:GaugeRangesDefinition>
-      </telerikGauges:RadRadialGauge.Ranges>
-    </telerikGauges:RadRadialGauge>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 
-    <Label Text="Pick needle:" Grid.Row="1"/>
+        <telerikGauges:RadRadialGauge x:Name="gauge1">
+            <telerikGauges:RadRadialGauge.Axis>
+                <telerikGauges:GaugeLinearAxis Maximum="200"
+                                               Minimum="0"
+                                               Step="25" />
+            </telerikGauges:RadRadialGauge.Axis>
+            <telerikGauges:RadRadialGauge.Indicators>
+                <telerikGauges:GaugeNeedleIndicator Offset="30" Value="60" />
+            </telerikGauges:RadRadialGauge.Indicators>
+            <telerikGauges:RadRadialGauge.Ranges>
+                <telerikGauges:GaugeRangesDefinition>
+                    <telerikGauges:GaugeRange Color="Green"
+                                              From="0"
+                                              To="150" />
+                    <telerikGauges:GaugeGradientRange From="150" To="200">
+                        <telerikCommon:RadGradientStop Offset="150" Color="Yellow" />
+                        <telerikCommon:RadGradientStop Offset="200" Color="Red" />
+                    </telerikGauges:GaugeGradientRange>
+                </telerikGauges:GaugeRangesDefinition>
+            </telerikGauges:RadRadialGauge.Ranges>
+        </telerikGauges:RadRadialGauge>
 
-    <Picker x:Name="pickerIndicators" Grid.Row="2" SelectedIndexChanged="PickerIndicatorType_SelectedIndexChanged" />
+        <Label Grid.Row="1" Text="Pick needle:" />
 
-  </Grid>
+        <Picker x:Name="pickerIndicators"
+                Grid.Row="2"
+                SelectedIndexChanged="PickerIndicatorType_SelectedIndexChanged" />
+
+    </Grid>
 </ContentPage>

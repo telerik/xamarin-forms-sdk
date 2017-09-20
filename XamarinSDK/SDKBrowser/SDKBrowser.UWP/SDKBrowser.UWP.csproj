@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <Import Project="..\..\config.targets"/>
+  <Import Project="..\..\config.targets" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
@@ -93,6 +93,9 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Calendar\Styling\CustomRenderer\CustomCalendarRenderer.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -139,6 +142,9 @@
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
   <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
     <Page Include="Calendar\Styling\CustomRenderer\CalendarCustomRenderersResources.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -156,74 +162,57 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Telerik.Core">
-      <HintPath>..\..\$(BinariesPath)\UWP\Telerik.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Data">
-      <HintPath>..\..\$(BinariesPath)\UWP\Telerik.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Documents.SpreadsheetStreaming">
-      <HintPath>..\..\$(BinariesPath)\DPL\Telerik.Documents.SpreadsheetStreaming.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.UI.Xaml.Chart.UWP">
-      <HintPath>..\..\$(BinariesPath)\UWP\Telerik.UI.Xaml.Chart.UWP.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.UI.Xaml.Controls.Data.UWP">
-      <HintPath>..\..\$(BinariesPath)\UWP\Telerik.UI.Xaml.Controls.Data.UWP.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.UI.Xaml.Input.UWP">
-      <HintPath>..\..\$(BinariesPath)\UWP\Telerik.UI.Xaml.Input.UWP.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.UI.Xaml.Primitives.UWP">
-      <HintPath>..\..\$(BinariesPath)\UWP\Telerik.UI.Xaml.Primitives.UWP.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.XamarinForms.Chart">
-      <HintPath>..\..\$(BinariesPath)\XamarinForms\Common\Telerik.XamarinForms.Chart.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.XamarinForms.ChartRenderer.UWP">
-      <HintPath>..\..\$(BinariesPath)\XamarinForms\UWP\Telerik.XamarinForms.ChartRenderer.UWP.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.XamarinForms.Common">
-      <HintPath>..\..\$(BinariesPath)\XamarinForms\Common\Telerik.XamarinForms.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.XamarinForms.Common.UWP">
-      <HintPath>..\..\$(BinariesPath)\XamarinForms\UWP\Telerik.XamarinForms.Common.UWP.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.XamarinForms.DataControls">
-      <HintPath>..\..\$(BinariesPath)\XamarinForms\Common\Telerik.XamarinForms.DataControls.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.XamarinForms.DataControlsRenderer.UWP">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\$(BinariesPath)\XamarinForms\UWP\Telerik.XamarinForms.DataControlsRenderer.UWP.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.XamarinForms.DataVisualization">
-      <HintPath>..\..\$(BinariesPath)\XamarinForms\Common\Telerik.XamarinForms.DataVisualization.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.XamarinForms.Input">
-      <HintPath>..\..\$(BinariesPath)\XamarinForms\Common\Telerik.XamarinForms.Input.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.XamarinForms.InputRenderer.UWP">
-      <HintPath>..\..\$(BinariesPath)\XamarinForms\UWP\Telerik.XamarinForms.InputRenderer.UWP.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.XamarinForms.Primitives">
-      <HintPath>..\..\$(BinariesPath)\XamarinForms\Common\Telerik.XamarinForms.Primitives.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.XamarinForms.PrimitivesRenderer.UWP">
-      <HintPath>..\..\$(BinariesPath)\XamarinForms\UWP\Telerik.XamarinForms.PrimitivesRenderer.UWP.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.XamarinForms.SkiaSharp">
-      <HintPath>..\..\$(BinariesPath)\XamarinForms\Common\Telerik.XamarinForms.SkiaSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Zip">
-      <HintPath>..\..\$(BinariesPath)\DPL\Telerik.Zip.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <SDKReference Include="Microsoft.VCLibs, Version=14.0">
       <Name>Visual C++ 2015 Runtime for Universal Windows Platform Apps</Name>
     </SDKReference>
   </ItemGroup>
-  <Import Project="..\SDKBrowser.WinRT\SDKBrowser.RT.Shared\SDKBrowser.WinRT.Shared.projitems" Label="Shared" />
+  <ItemGroup>
+    <Reference Include="Telerik.Core">
+      <HintPath>..\..\..\..\Binaries\UWP\Telerik.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Data">
+      <HintPath>..\..\..\..\Binaries\UWP\Telerik.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Documents.SpreadsheetStreaming">
+      <HintPath>..\..\..\..\Binaries\Portable\Telerik.Documents.SpreadsheetStreaming.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.UI.Xaml.Chart.UWP">
+      <HintPath>..\..\..\..\Binaries\UWP\Telerik.UI.Xaml.Chart.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.UI.Xaml.Controls.Data.UWP">
+      <HintPath>..\..\..\..\Binaries\UWP\Telerik.UI.Xaml.Controls.Data.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.UI.Xaml.Input.UWP">
+      <HintPath>..\..\..\..\Binaries\UWP\Telerik.UI.Xaml.Input.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.UI.Xaml.Primitives.UWP">
+      <HintPath>..\..\..\..\Binaries\UWP\Telerik.UI.Xaml.Primitives.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.Chart">
+      <HintPath>..\..\..\..\Binaries\UWP\Telerik.XamarinForms.Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.Common">
+      <HintPath>..\..\..\..\Binaries\UWP\Telerik.XamarinForms.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.DataControls">
+      <HintPath>..\..\..\..\Binaries\UWP\Telerik.XamarinForms.DataControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.DataVisualization">
+      <HintPath>..\..\..\..\Binaries\UWP\Telerik.XamarinForms.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.Input">
+      <HintPath>..\..\..\..\Binaries\UWP\Telerik.XamarinForms.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.Primitives">
+      <HintPath>..\..\..\..\Binaries\UWP\Telerik.XamarinForms.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.SkiaSharp">
+      <HintPath>..\..\..\..\Binaries\UWP\Telerik.XamarinForms.SkiaSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Zip">
+      <HintPath>..\..\..\..\Binaries\Portable\Telerik.Zip.dll</HintPath>
+    </Reference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

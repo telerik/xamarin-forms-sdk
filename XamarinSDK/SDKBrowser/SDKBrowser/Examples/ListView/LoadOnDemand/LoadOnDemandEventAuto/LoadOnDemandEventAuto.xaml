@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage x:Class="SDKBrowser.Examples.ListView.LoadOnDemandEventAuto"
+             xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
-             xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls"
-             x:Class="SDKBrowser.Examples.ListView.LoadOnDemandEventAuto">
-  <Grid>
-    <!-- >> listview-loadondemand-loadondemandeventauto-declaration -->
-    <telerikDataControls:RadListView x:Name="listView"
-                                     IsLoadOnDemandEnabled="True"
-                                     LoadOnDemandMode="Automatic"
-                                     LoadOnDemand="ListView_LoadOnDemand"/>
-    <!-- << listview-loadondemand-loadondemandeventauto-declaration -->
-  </Grid>
+             xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls">
+    <Grid>
+        <!--  >> listview-loadondemand-loadondemandeventauto-declaration  -->
+        <telerikDataControls:RadListView x:Name="listView"
+                                         IsLoadOnDemandEnabled="True"
+                                         LoadOnDemand="ListView_LoadOnDemand"
+                                         LoadOnDemandMode="Automatic" />
+        <!--  << listview-loadondemand-loadondemandeventauto-declaration  -->
+    </Grid>
 </ContentPage>

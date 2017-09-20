@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="SDKBrowser.Examples.BusyIndicator.BusyIndicatorGettingStartedXaml"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikBusyIndicator="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             BackgroundColor="White">
+    <!--  >> busyindicator-getting-started-xaml  -->
+    <telerikBusyIndicator:RadBusyIndicator x:Name="BusyIndicator"
+                                           AnimationContentHeightRequest="100"
+                                           AnimationContentWidthRequest="100"
+                                           IsBusy="True">
+        <telerikBusyIndicator:RadBusyIndicator.Content>
+            <Label Text="This is the content of the RadBusyIndicator control displayed when the indicator is not busy." TextColor="Black" />
+        </telerikBusyIndicator:RadBusyIndicator.Content>
+    </telerikBusyIndicator:RadBusyIndicator>
+    <!--  << busyindicator-getting-started-xaml  -->
+</ContentPage>

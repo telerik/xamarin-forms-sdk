@@ -1,15 +1,27 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input" xmlns:local="clr-namespace:SDKBrowser.Examples.AutoComplete.Features.DataBinding" x:Class="SDKBrowser.Examples.AutoComplete.DataBinding">
-  <StackLayout BackgroundColor="Silver">
-    <!-- >> autocomplete-features-data-binding -->
-    <telerikInput:RadAutoComplete BackgroundColor="White" ItemsSource="{Binding Source}" TextSearchPath="Name" ImagePath="ImageSource" Watermark="Search here...">
-      <telerikInput:RadAutoComplete.SuggestionViewHeight>
-        <OnPlatform x:TypeArguments="x:Double" iOS="400" Android="200" WinPhone="400" />
-      </telerikInput:RadAutoComplete.SuggestionViewHeight>
-      <telerikInput:RadAutoComplete.BindingContext>
-        <local:ViewModel />
-      </telerikInput:RadAutoComplete.BindingContext>
-    </telerikInput:RadAutoComplete>
-    <!-- << autocomplete-features-data-binding -->
-  </StackLayout>
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="SDKBrowser.Examples.AutoComplete.DataBinding"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.AutoComplete.Features.DataBinding"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input">
+    <StackLayout BackgroundColor="Silver">
+        <!--  >> autocomplete-features-data-binding  -->
+        <telerikInput:RadAutoComplete x:Name="AutoComplete"
+                                      BackgroundColor="White"
+                                      ImagePath="ImageSource"
+                                      ItemsSource="{Binding Source}"
+                                      TextSearchPath="Name"
+                                      Watermark="Search here...">
+            <telerikInput:RadAutoComplete.SuggestionViewHeight>
+                <OnPlatform x:TypeArguments="x:Double"
+                            Android="200"
+                            WinPhone="400"
+                            iOS="400" />
+            </telerikInput:RadAutoComplete.SuggestionViewHeight>
+            <telerikInput:RadAutoComplete.BindingContext>
+                <local:ViewModel />
+            </telerikInput:RadAutoComplete.BindingContext>
+        </telerikInput:RadAutoComplete>
+        <!--  << autocomplete-features-data-binding  -->
+    </StackLayout>
 </ContentPage>

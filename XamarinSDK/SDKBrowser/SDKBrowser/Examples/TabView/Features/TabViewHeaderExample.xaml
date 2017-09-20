@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="SDKBrowser.Examples.TabView.TabViewHeaderExample"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives">
+    <!--  >> tabview-features-tabviewheader-xaml  -->
+    <telerikPrimitives:RadTabView x:Name="tabView" HeaderPosition="Bottom">
+        <telerikPrimitives:RadTabView.Header>
+            <telerikPrimitives:TabViewHeader BackgroundColor="Orange" >
+                <telerikPrimitives:TabViewHeader.OverflowButtonTemplate>
+                    <DataTemplate>
+                        <Label Margin="3,0,3,0"
+                               BackgroundColor="#CA5100"
+                               Text=" + " />
+                    </DataTemplate>
+                </telerikPrimitives:TabViewHeader.OverflowButtonTemplate>
+            </telerikPrimitives:TabViewHeader>
+        </telerikPrimitives:RadTabView.Header>
+        <telerikPrimitives:RadTabView.Items>
+            <telerikPrimitives:TabViewItem HeaderText="Tab1 " />
+            <telerikPrimitives:TabViewItem HeaderText="Tab2 " />
+            <telerikPrimitives:TabViewItem HeaderText="Tab3 " />
+            <telerikPrimitives:TabViewItem HeaderText="Tab4 " />
+            <telerikPrimitives:TabViewItem HeaderText="Tab5 " />
+            <telerikPrimitives:TabViewItem HeaderText="Tab6 " />
+            <telerikPrimitives:TabViewItem HeaderText="Tab7 " />
+            <telerikPrimitives:TabViewItem HeaderText="Tab8 " />
+            <telerikPrimitives:TabViewItem HeaderText="Tab9 " />
+            <telerikPrimitives:TabViewItem HeaderText="Tab10 " />
+            <telerikPrimitives:TabViewItem HeaderText="Tab11 " />
+            <telerikPrimitives:TabViewItem HeaderText="Tab12 " />
+            <telerikPrimitives:TabViewItem HeaderText="Tab13 " />
+        </telerikPrimitives:RadTabView.Items>
+    </telerikPrimitives:RadTabView>
+    <!--  << tabview-features-tabviewheader-xaml  -->
+</ContentPage>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="SDKBrowser.Examples.Gauge.VerticalGaugeExample"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+             xmlns:telerikGauges="clr-namespace:Telerik.XamarinForms.DataVisualization.Gauges;assembly=Telerik.XamarinForms.DataVisualization"
+             Title="VerticalGaugeExample"
+             BackgroundColor="White">
+    <Grid Margin="120">
+        <!--  >> gauge-types-verticalgauge-xaml  -->
+        <telerikGauges:RadVerticalGauge x:Name="gauge">
+            <telerikGauges:RadVerticalGauge.Axis>
+                <telerikGauges:GaugeLinearAxis Maximum="200"
+                                               Minimum="0"
+                                               Step="25" />
+            </telerikGauges:RadVerticalGauge.Axis>
+            <telerikGauges:RadVerticalGauge.Indicators>
+                <telerikGauges:GaugeShapeIndicator Value="90" />
+            </telerikGauges:RadVerticalGauge.Indicators>
+            <telerikGauges:RadVerticalGauge.Ranges>
+                <telerikGauges:GaugeRangesDefinition>
+                    <telerikGauges:GaugeRange Color="Green"
+                                              From="0"
+                                              To="150" />
+                    <telerikGauges:GaugeGradientRange From="150" To="200">
+                        <telerikCommon:RadGradientStop Offset="150" Color="Yellow" />
+                        <telerikCommon:RadGradientStop Offset="200" Color="Red" />
+                    </telerikGauges:GaugeGradientRange>
+                </telerikGauges:GaugeRangesDefinition>
+            </telerikGauges:RadVerticalGauge.Ranges>
+        </telerikGauges:RadVerticalGauge>
+        <!--  << gauge-types-verticalgauge-xaml  -->
+    </Grid>
+</ContentPage>

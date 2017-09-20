@@ -1,19 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SDKBrowser.Examples.ListView.ReorderItems" xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls" xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls">
-	<!-- >> listview-gestures-reorderitems-listview -->
-	<telerikDataControls:RadListView x:Name="listView" IsItemsReorderEnabled="True" SelectionMode="None">
-		<telerikDataControls:RadListView.ItemTemplate>
-			<DataTemplate>
-				<telerikListView:ListViewTemplateCell>
-					<telerikListView:ListViewTemplateCell.View>
-						<StackLayout BackgroundColor="#88D4C4" Spacing="0">
-							<Label Text="{Binding}" TextColor="Black" FontSize="16" Margin="5, 10, 5 ,10" VerticalTextAlignment="Center" />
-							<BoxView BackgroundColor="White" HeightRequest="1" Margin="0" />
-						</StackLayout>
-					</telerikListView:ListViewTemplateCell.View>
-				</telerikListView:ListViewTemplateCell>
-			</DataTemplate>
-		</telerikDataControls:RadListView.ItemTemplate>
-	</telerikDataControls:RadListView>
-	<!-- << listview-gestures-reorderitems-listview -->
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="SDKBrowser.Examples.ListView.ReorderItems"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls">
+    <!--  >> listview-gestures-reorderitems-listview  -->
+    <telerikDataControls:RadListView x:Name="listView"
+                                     IsItemsReorderEnabled="True"
+                                     SelectionMode="None">
+        <telerikDataControls:RadListView.ItemTemplate>
+            <DataTemplate>
+                <telerikListView:ListViewTemplateCell>
+                    <telerikListView:ListViewTemplateCell.View>
+                        <StackLayout BackgroundColor="#88D4C4" Spacing="0">
+                            <Label Margin="5,10,5,10"
+                                   FontSize="16"
+                                   Text="{Binding}"
+                                   TextColor="Black"
+                                   VerticalTextAlignment="Center" />
+                            <BoxView Margin="0"
+                                     BackgroundColor="White"
+                                     HeightRequest="1" />
+                        </StackLayout>
+                    </telerikListView:ListViewTemplateCell.View>
+                </telerikListView:ListViewTemplateCell>
+            </DataTemplate>
+        </telerikDataControls:RadListView.ItemTemplate>
+    </telerikDataControls:RadListView>
+    <!--  << listview-gestures-reorderitems-listview  -->
 </ContentPage>

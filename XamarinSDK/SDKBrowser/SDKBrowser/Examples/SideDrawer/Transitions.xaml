@@ -1,50 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage x:Class="SDKBrowser.Examples.SideDrawer.Transitions"
+             xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			       xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
              xmlns:telerik="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
-             x:Class="SDKBrowser.Examples.SideDrawer.Transitions">
- <ContentPage.ToolbarItems>
-    <ToolbarItem Activated="OnToolbarButtonClick" Order="Primary" Priority="0" Text="Open SideDrawer">
-      <ToolbarItem.Icon>
-        <OnPlatform x:TypeArguments="FileImageSource"
-                        iOS="hamburgerButtonIcon.png"
-                        Android="hamburgerButtonIcon.png"
-                        WinPhone="Assets/hamburgerButtonIcon.png" />
-      </ToolbarItem.Icon>
-    </ToolbarItem>
-  </ContentPage.ToolbarItems>
-  <Grid>
-    <telerikPrimitives:RadSideDrawer x:Name="drawer" DrawerLength="250">
-      <telerikPrimitives:RadSideDrawer.MainContent>
-        <Grid BackgroundColor="Gray">
-          <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-          </Grid.RowDefinitions>
-            <Label Text="Transition Type:"/>
-            <Picker Grid.Row="1" x:Name="picker" SelectedIndexChanged="picker_SelectedIndexChanged">
-              <Picker.Items>
-                <x:String>Push</x:String>
-                <x:String>Reveal</x:String>
-                <x:String>ReverseSlideOut</x:String>
-                <x:String>ScaleUp</x:String>
-                <x:String>SlideAlong</x:String>
-                <x:String>SlideInOnTop</x:String>
-              </Picker.Items>
-            </Picker>
-            <Label Grid.Row="2" x:Name="descritpionLabel">
-            </Label>
-            <Button Text="Open SideDrawer" IsVisible="false" x:Name="button1"/>
-        </Grid>
-      </telerikPrimitives:RadSideDrawer.MainContent>
-      <telerikPrimitives:RadSideDrawer.DrawerContent>
-        <Grid BackgroundColor="#826182" WidthRequest="220">
-          <ListView x:Name="drawerList" />
-        </Grid>
-      </telerikPrimitives:RadSideDrawer.DrawerContent>
-    </telerikPrimitives:RadSideDrawer>
-  </Grid>
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Activated="OnToolbarButtonClick"
+                     Order="Primary"
+                     Priority="0"
+                     Text="Open SideDrawer">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource"
+                            Android="hamburgerButtonIcon.png"
+                            WinPhone="Assets/hamburgerButtonIcon.png"
+                            iOS="hamburgerButtonIcon.png" />
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <Grid>
+        <telerikPrimitives:RadSideDrawer x:Name="drawer" DrawerLength="250">
+            <telerikPrimitives:RadSideDrawer.MainContent>
+                <Grid BackgroundColor="Gray">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Label Text="Transition Type:" />
+                    <Picker x:Name="picker"
+                            Grid.Row="1"
+                            SelectedIndexChanged="picker_SelectedIndexChanged">
+                        <Picker.Items>
+                            <x:String>Push</x:String>
+                            <x:String>Reveal</x:String>
+                            <x:String>ReverseSlideOut</x:String>
+                            <x:String>ScaleUp</x:String>
+                            <x:String>SlideAlong</x:String>
+                            <x:String>SlideInOnTop</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Label x:Name="descritpionLabel" Grid.Row="2" />
+                    <Button x:Name="button1"
+                            IsVisible="false"
+                            Text="Open SideDrawer" />
+                </Grid>
+            </telerikPrimitives:RadSideDrawer.MainContent>
+            <telerikPrimitives:RadSideDrawer.DrawerContent>
+                <Grid BackgroundColor="#826182" WidthRequest="220">
+                    <ListView x:Name="drawerList" />
+                </Grid>
+            </telerikPrimitives:RadSideDrawer.DrawerContent>
+        </telerikPrimitives:RadSideDrawer>
+    </Grid>
 </ContentPage>

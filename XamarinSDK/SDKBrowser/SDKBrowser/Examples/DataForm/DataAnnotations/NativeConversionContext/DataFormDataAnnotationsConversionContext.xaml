@@ -1,28 +1,34 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SDKBrowser.Examples.DataForm.DataFormDataAnnotationsConversionContext" xmlns:local="clr-namespace:SDKBrowser.Examples.DataForm.DataAnnotations.NativeConversionContext" xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input">
-  <Grid>
-    <Grid.BindingContext>
-      <local:SourceItem />
-    </Grid.BindingContext>
-    <Grid.RowDefinitions>
-      <RowDefinition Height="*" />
-      <RowDefinition Height="Auto" />
-    </Grid.RowDefinitions>
-    <telerikInput:RadDataForm Source="{Binding}" x:Name="dataForm" CommitMode="Manual" />
-    <StackLayout Grid.Row="1">
-      <Button Text="commit changes" Clicked="Commit" />
-      <StackLayout Orientation="Horizontal">
-        <Label Text="Utc context: " />
-        <Label Text="{Binding Utc.Kind}" />
-      </StackLayout>
-      <StackLayout Orientation="Horizontal">
-        <Label Text="Default behavior: " />
-        <Label Text="{Binding Unspecified.Kind}" />
-      </StackLayout>
-      <StackLayout Orientation="Horizontal">
-        <Label Text="Local no context: " />
-        <Label Text="{Binding Local.Kind}" />
-      </StackLayout>
-    </StackLayout>
-  </Grid>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="SDKBrowser.Examples.DataForm.DataFormDataAnnotationsConversionContext"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.DataForm.DataAnnotations.NativeConversionContext"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input">
+    <Grid>
+        <Grid.BindingContext>
+            <local:SourceItem />
+        </Grid.BindingContext>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <telerikInput:RadDataForm x:Name="dataForm"
+                                  CommitMode="Manual"
+                                  Source="{Binding}" />
+        <StackLayout Grid.Row="1">
+            <Button Clicked="Commit" Text="commit changes" />
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Utc context: " />
+                <Label Text="{Binding Utc.Kind}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Default behavior: " />
+                <Label Text="{Binding Unspecified.Kind}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Local no context: " />
+                <Label Text="{Binding Local.Kind}" />
+            </StackLayout>
+        </StackLayout>
+    </Grid>
 </ContentPage>

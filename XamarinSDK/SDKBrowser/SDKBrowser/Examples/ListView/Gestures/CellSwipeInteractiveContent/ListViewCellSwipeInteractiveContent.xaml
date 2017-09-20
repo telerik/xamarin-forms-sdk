@@ -1,33 +1,61 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns:local="clr-namespace:SDKBrowser.Examples.ListView.Gestures.CellSwipeInteractiveContent" xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls" xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SDKBrowser.Examples.ListView.ListViewCellSwipeInteractiveContent">
-	<!-- >> listview-gestures-cellswipe-interactivecontent-listview -->
-	<ContentPage.BindingContext>
-		<local:ViewModel />
-	</ContentPage.BindingContext>
-	<telerikDataControls:RadListView ItemsSource="{Binding Source}" BackgroundColor="White" IsItemSwipeEnabled="True" SwipeThreshold="10" SwipeOffset="70, 0, 0, 0" SelectionMode="None">
-		<telerikDataControls:RadListView.ItemTemplate>
-			<DataTemplate>
-				<telerikListView:ListViewTemplateCell>
-					<telerikListView:ListViewTemplateCell.View>
-						<Grid>
-							<Label Text="{Binding Title}" FontSize="16" FontAttributes="Bold" TextColor="Black" Margin="10, 10, 10, 0" />
-							<Label Text="{Binding Author}" FontSize="13" FontAttributes="Italic" TextColor="Gray" Grid.Row="1" Margin="10, 0, 10, 10" />
-						</Grid>
-					</telerikListView:ListViewTemplateCell.View>
-				</telerikListView:ListViewTemplateCell>
-			</DataTemplate>
-		</telerikDataControls:RadListView.ItemTemplate>
-		<telerikDataControls:RadListView.ItemSwipeContentTemplate>
-			<DataTemplate>
-				<Grid Padding="0" Margin="0" RowSpacing="0" ColumnSpacing="0">
-					<Grid.ColumnDefinitions>
-						<ColumnDefinition Width="70" />
-						<ColumnDefinition Width="*" />
-					</Grid.ColumnDefinitions>
-					<Button BackgroundColor="Red" Image="delete.png" Clicked="RemoveBook" WidthRequest="70" BorderRadius="0" Margin="0" />
-				</Grid>
-			</DataTemplate>
-		</telerikDataControls:RadListView.ItemSwipeContentTemplate>
-	</telerikDataControls:RadListView>
-	<!-- << listview-gestures-cellswipe-interactivecontent-listview -->
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="SDKBrowser.Examples.ListView.ListViewCellSwipeInteractiveContent"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.ListView.Gestures.CellSwipeInteractiveContent"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls">
+    <!--  >> listview-gestures-cellswipe-interactivecontent-listview  -->
+    <ContentPage.BindingContext>
+        <local:ViewModel />
+    </ContentPage.BindingContext>
+    <telerikDataControls:RadListView x:Name="listView"
+                                     BackgroundColor="White"
+                                     IsItemSwipeEnabled="True"
+                                     ItemsSource="{Binding Source}"
+                                     SelectionMode="None"
+                                     SwipeOffset="70, 0, 0, 0"
+                                     SwipeThreshold="10">
+        <telerikDataControls:RadListView.ItemTemplate>
+            <DataTemplate>
+                <telerikListView:ListViewTemplateCell>
+                    <telerikListView:ListViewTemplateCell.View>
+                        <Grid>
+                            <Label Margin="10,10,10,0"
+                                   FontAttributes="Bold"
+                                   FontSize="16"
+                                   Text="{Binding Title}"
+                                   TextColor="Black" />
+                            <Label Grid.Row="1"
+                                   Margin="10,0,10,10"
+                                   FontAttributes="Italic"
+                                   FontSize="13"
+                                   Text="{Binding Author}"
+                                   TextColor="Gray" />
+                        </Grid>
+                    </telerikListView:ListViewTemplateCell.View>
+                </telerikListView:ListViewTemplateCell>
+            </DataTemplate>
+        </telerikDataControls:RadListView.ItemTemplate>
+        <telerikDataControls:RadListView.ItemSwipeContentTemplate>
+            <DataTemplate>
+                <Grid Margin="0"
+                      Padding="0"
+                      ColumnSpacing="0"
+                      RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Button Margin="0"
+                            BackgroundColor="Red"
+                            BorderRadius="0"
+                            Clicked="RemoveBook"
+                            Image="delete.png"
+                            WidthRequest="70" />
+                </Grid>
+            </DataTemplate>
+        </telerikDataControls:RadListView.ItemSwipeContentTemplate>
+    </telerikDataControls:RadListView>
+    <!--  << listview-gestures-cellswipe-interactivecontent-listview  -->
 </ContentPage>

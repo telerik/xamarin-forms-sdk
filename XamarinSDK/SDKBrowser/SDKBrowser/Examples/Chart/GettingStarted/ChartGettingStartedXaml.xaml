@@ -6,7 +6,7 @@
              xmlns:telerikChart="clr-namespace:Telerik.XamarinForms.Chart;assembly=Telerik.XamarinForms.Chart">
 
   <!-- >> chart-getting-started-xaml-chart -->
-  <telerikChart:RadCartesianChart>
+  <telerikChart:RadCartesianChart x:Name="chart">
     <telerikChart:RadCartesianChart.BindingContext>
       <local:ViewModel />
     </telerikChart:RadCartesianChart.BindingContext>

@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ArrayOfXFControl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <XFControl>
-    <!--This parameter should be set to one of the following strings from ExtendedDevice enum.-->
-    <ExcludeFrom>WinPhone80</ExcludeFrom>
     <Name>AutoComplete</Name>
     <Examples>
       <Example>
@@ -28,6 +26,36 @@
       <Example>
         <PageName>CustomHighlight</PageName>
         <Title>Custom Text Highlight</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+         <PageName>CustomizeTokens</PageName>
+         <Title>Customized Tokens</Title>
+         <GroupName>Features</GroupName>
+      </Example>
+    </Examples>
+  </XFControl>
+  <XFControl>
+    <Name>BusyIndicator</Name>
+    <Examples>
+      <Example>
+        <PageName>BusyIndicatorGettingStartedXaml</PageName>
+        <Title>Getting Started - Xaml</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <PageName>BusyIndicatorGettingStartedCSharp</PageName>
+        <Title>Getting Started - Code</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <PageName>AnimationsXaml</PageName>
+        <Title>Animations - Xaml</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <PageName>AnimationsCSharp</PageName>
+        <Title>Animations - Code</Title>
         <GroupName>Features</GroupName>
       </Example>
     </Examples>
@@ -58,10 +86,25 @@
         <Title>Custom Renderers</Title>
         <GroupName>Styling</GroupName>
       </Example>
-	  <Example>
+      <Example>
         <PageName>ElementsDisplayMode</PageName>
         <Title>Elements Display Mode</Title>
         <GroupName>Styling</GroupName>
+      </Example>
+      <Example>
+        <PageName>DayViewStyling</PageName>
+        <Title>Calendar Dayview Styling</Title>
+        <GroupName>Styling</GroupName>
+      </Example>
+      <Example>
+        <PageName>CalendarViewModesExample</PageName>
+        <Title>Calendar View Modes</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <PageName>CalendarAppointmentTapped</PageName>
+        <Title>DayView AppointmentTapped</Title>
+        <GroupName>Features</GroupName>
       </Example>
     </Examples>
   </XFControl>
@@ -111,6 +154,11 @@
       <Example>
         <PageName>CustomPalettePage</PageName>
         <Title>Custom Palette</Title>
+        <GroupName>Customization</GroupName>
+      </Example>
+      <Example>
+        <PageName>PaletteModePage</PageName>
+        <Title>Palette Mode</Title>
         <GroupName>Customization</GroupName>
       </Example>
       <Example>
@@ -189,8 +237,33 @@
         <GroupName>Interactivity</GroupName>
       </Example>
       <Example>
+        <PageName>CartesianChartRadLegendXaml</PageName>
+        <Title>CartesianChart RadLegend - Xml</Title>
+        <GroupName>Legend</GroupName>
+      </Example>
+      <Example>
+        <PageName>CartesianChartRadLegendCSharp</PageName>
+        <Title>CartesianChart RadLegend - Code</Title>
+        <GroupName>Legend</GroupName>
+      </Example>
+      <Example>
+        <PageName>PieChartRadLegendXaml</PageName>
+        <Title>PieChart RadLegend - Xml</Title>
+        <GroupName>Legend</GroupName>
+      </Example>
+      <Example>
+        <PageName>PieChartRadLegendCSharp</PageName>
+        <Title>PieChart RadLegend - Code</Title>
+        <GroupName>Legend</GroupName>
+      </Example>
+      <Example>
         <PageName>PieChartPage</PageName>
         <Title>Pie Chart</Title>
+        <GroupName>Pie Chart</GroupName>
+      </Example>
+      <Example>
+        <PageName>PieChartPercentagePage</PageName>
+        <Title>Pie Chart Percentage</Title>
         <GroupName>Pie Chart</GroupName>
       </Example>
       <Example>
@@ -201,8 +274,6 @@
     </Examples>
   </XFControl>
   <XFControl>
-    <!--This parameter should be set to one of the following strings from ExtendedDevice enum.-->
-    <ExcludeFrom>WinPhone80,WinPhone81,Windows81</ExcludeFrom>
     <Name>Gauge</Name>
     <Examples>
       <Example>
@@ -214,6 +285,21 @@
         <PageName>GaugeGettingStartedCSharp</PageName>
         <Title>Getting Started - Code</Title>
         <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <PageName>VerticalGaugeExample</PageName>
+        <Title>Vertical Gauge</Title>
+        <GroupName>GaugeTypes</GroupName>
+      </Example>
+      <Example>
+        <PageName>HorizontalGaugeExample</PageName>
+        <Title>Horizontal Gauge</Title>
+        <GroupName>GaugeTypes</GroupName>
+      </Example>
+      <Example>
+        <PageName>RadialGaugeExample</PageName>
+        <Title>Radial Gauge</Title>
+        <GroupName>GaugeTypes</GroupName>
       </Example>
       <Example>
         <PageName>SpeedometerXaml</PageName>
@@ -241,6 +327,11 @@
         <GroupName>Customizations</GroupName>
       </Example>
       <Example>
+        <PageName>TextIndicators</PageName>
+        <Title>Text Indicators</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
         <PageName>CustomShapes</PageName>
         <Title>Custom Shapes</Title>
         <GroupName>Customizations</GroupName>
@@ -263,8 +354,6 @@
     </Examples>
   </XFControl>
   <XFControl>
-    <!--This parameter should be set to one of the following strings from ExtendedDevice enum.-->
-    <ExcludeFrom>WinPhone80</ExcludeFrom>
     <Name>ListView</Name>
     <Examples>
       <Example>
@@ -304,6 +393,16 @@
       <Example>
         <PageName>ListViewTemplateCellCSharp</PageName>
         <Title>TemplateCell - Code</Title>
+        <GroupName>Cell Types</GroupName>
+      </Example>
+      <Example>
+        <PageName>ListViewItemTemplateSelectorXaml</PageName>
+        <Title>TemplateCell Selector - Xaml</Title>
+        <GroupName>Cell Types</GroupName>
+      </Example>
+      <Example>
+        <PageName>ListViewItemTemplateSelectorCSharp</PageName>
+        <Title>TemplateCell Selector - Code</Title>
         <GroupName>Cell Types</GroupName>
       </Example>
       <Example>
@@ -365,24 +464,56 @@
       <Example>
         <PageName>ListViewItemStylesXaml</PageName>
         <Title>Item Styles - Xaml</Title>
+        <GroupName>Styling</GroupName>
       </Example>
       <Example>
         <PageName>ListViewItemStylesCSharp</PageName>
         <Title>Item Styles - Code</Title>
+        <GroupName>Styling</GroupName>
       </Example>
       <Example>
         <PageName>ListViewItemStyleSelectorXaml</PageName>
         <Title>Conditional Styling - Xaml</Title>
+        <GroupName>Styling</GroupName>
       </Example>
       <Example>
         <PageName>ListViewItemStyleSelectorCSharp</PageName>
         <Title>Conditional Styling - Code</Title>
+        <GroupName>Styling</GroupName>
+      </Example>
+      <Example>
+        <PageName>BindableListViewItemStyles</PageName>
+        <Title>Bindable ListViewItemStyles</Title>
+        <GroupName>Styling</GroupName>
+      </Example>
+      <Example>
+        <PageName>BindablePressedItemStyle</PageName>
+        <Title>Bindable ListViewPressedItemStyles</Title>
+        <GroupName>Styling</GroupName>
+      </Example>
+      <Example>
+        <PageName>BindableSelectedItemStyle</PageName>
+        <Title>Bindable ListViewSelectedItemStyles</Title>
+        <GroupName>Styling</GroupName>
+      </Example>
+      <Example>
+        <PageName>SortDescriptors</PageName>
+        <Title>Bindable SortDescriptors</Title>
+        <GroupName>BindableCollections</GroupName>
+      </Example>
+      <Example>
+        <PageName>FilterDescriptors</PageName>
+        <Title>Bindable FilterDescriptors</Title>
+        <GroupName>BindableCollections</GroupName>
+      </Example>
+      <Example>
+        <PageName>GroupDescriptors</PageName>
+        <Title>Bindable GroupDescriptors</Title>
+        <GroupName>BindableCollections</GroupName>
       </Example>
     </Examples>
   </XFControl>
   <XFControl>
-    <!--This parameter should be set to one of the following strings from ExtendedDevice enum.-->
-    <ExcludeFrom>WinPhone80</ExcludeFrom>
     <Name>DataForm</Name>
     <Examples>
       <Example>
@@ -441,6 +572,12 @@
         <GroupName>Editors</GroupName>
       </Example>
       <Example>
+        <ExcludeFrom>Windows10,IOS</ExcludeFrom>
+        <Title>DataForm Custom Editor</Title>
+        <PageName>CustomDataFormEditor</PageName>
+        <GroupName>Editors</GroupName>
+      </Example>
+      <Example>
         <Title>Groups</Title>
         <PageName>DataFormGroups</PageName>
         <GroupName>Groups</GroupName>
@@ -453,6 +590,18 @@
       <Example>
         <Title>Groups Styling - Xaml</Title>
         <PageName>DataFormStylingGroupsXaml</PageName>
+        <GroupName>Styling</GroupName>
+      </Example>
+      <Example>
+        <ExcludeFrom>Windows10,IOS</ExcludeFrom>
+        <Title>Custom DecimalEditor Formatter - Code</Title>
+        <PageName>Styling.Editors.CustomDecimalEditorFormatter.DataFormCustomDecimalEditorFormatterCSharp</PageName>
+        <GroupName>Styling</GroupName>
+      </Example>
+      <Example>
+        <ExcludeFrom>Windows10,IOS</ExcludeFrom>
+        <Title>Custom DecimalEditor Formatter - Xaml</Title>
+        <PageName>Styling.Editors.CustomDecimalEditorFormatter.DataFormCustomDecimalEditorFormatterXaml</PageName>
         <GroupName>Styling</GroupName>
       </Example>
       <Example>
@@ -513,8 +662,137 @@
     </Examples>
   </XFControl>
   <XFControl>
-    <!--This parameter should be set to one of the following strings from ExtendedDevice enum.-->
-    <ExcludeFrom>WinPhone80</ExcludeFrom>
+    <Name>DataGrid</Name>
+    <Examples>
+      <Example>
+        <Title>UI Selection</Title>
+        <PageName>GridUISelection</PageName>
+        <GroupName>Selection</GroupName>
+      </Example>
+      <Example>
+        <Title>Programmatic Selection</Title>
+        <PageName>ProgrammaticSelection</PageName>
+        <GroupName>Selection</GroupName>
+      </Example>
+      <Example>
+        <Title>Programmatic Filtering</Title>
+        <PageName>ProgrammaticFiltering</PageName>
+        <GroupName>Filtering</GroupName>
+      </Example>
+      <Example>
+        <Title>Programmatic Grouping</Title>
+        <PageName>ProgrammaticGrouping</PageName>
+        <GroupName>Grouping</GroupName>
+      </Example>
+      <Example>
+        <Title>Programmatic Sorting</Title>
+        <PageName>ProgrammaticSorting</PageName>
+        <GroupName>Sorting</GroupName>
+      </Example>
+      <Example>
+        <Title>Grid Lines</Title>
+        <PageName>GridLines</PageName>
+        <GroupName>Decorations</GroupName>
+      </Example>
+    </Examples>
+    
+  </XFControl>
+  <XFControl>
+    <Name>Rating</Name>
+    <Examples>
+      <Example>
+        <Title>Getting Started - Xaml</Title>
+        <PageName>RatingGettingStartedXaml</PageName>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <Title>Getting Started - CSharp</Title>
+        <PageName>RatingGettingStartedCSharp</PageName>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <Title>Geometries</Title>
+        <PageName>Geometries</PageName>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <Title>Templates</Title>
+        <PageName>Templates</PageName>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <Title>Configurator</Title>
+        <PageName>Configurator</PageName>
+        <GroupName>Features</GroupName>
+      </Example>
+    </Examples>
+  </XFControl>
+  <XFControl>
+    <Name>MaskedInput</Name>
+    <Examples>
+	<Example>
+        <Title>Getting Started</Title>
+        <PageName>MaskedInputGettingStartedXaml</PageName>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+	   <Example>
+        <Title>Validation</Title>
+        <PageName>Validation</PageName>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <Title>Configurator</Title>
+        <PageName>Configurator</PageName>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <Title>RegexMask</Title>
+        <PageName>RegexMask</PageName>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <Title>Commands</Title>
+        <PageName>Commands</PageName>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <Title>Events</Title>
+        <PageName>Events</PageName>
+        <GroupName>Features</GroupName>
+      </Example>
+    </Examples>
+  </XFControl>
+  <XFControl>
+    <Name>SegmentControl</Name>
+    <Examples>
+      <Example>
+        <PageName>SegmentControlGettingStartedXaml</PageName>
+        <Title>Getting Started - Xaml</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <PageName>SegmentControlGettingStartedCSharp</PageName>
+        <Title>Getting Started - Code</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <PageName>DisableSegment</PageName>
+        <Title>Disable segment</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <PageName>Selection</PageName>
+        <Title>Selection</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <PageName>CustomizeColors</PageName>
+        <Title>Customize colors</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+    </Examples>
+  </XFControl>
+  <XFControl>
     <Name>SideDrawer</Name>
     <Examples>
       <Example>
@@ -536,6 +814,46 @@
         <GroupName>Features</GroupName>
       </Example>
     </Examples>
+  </XFControl>
+  <XFControl>
+    <Name>TabView</Name>
+    <Examples>
+      <Example>
+        <PageName>TabViewGettingStartedXaml</PageName>
+        <Title>Getting Started - XAML</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <PageName>TabViewGettingStartedCSharp</PageName>
+        <Title>Getting Started - Code</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <PageName>TabViewItemExample</PageName>
+        <Title>TabViewItem</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <PageName>TabViewHeaderExample</PageName>
+        <Title>TabViewHeader</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <PageName>TabViewHeaderCustomTemplateExample</PageName>
+        <Title>Header - Custom Template</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <PageName>Selection</PageName>
+        <Title>Selection</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <PageName>TabViewItemsSource</PageName>
+        <Title>ItemsSource</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+    </Examples>    
   </XFControl>
   <XFControl>
     <Name>ZipLibrary</Name>
@@ -564,7 +882,6 @@
   </XFControl>
   <XFControl>
     <Name>SpreadStreamProcessing</Name>
-    <ExcludeFrom>WinPhone80</ExcludeFrom>
     <Examples>
       <Example>
         <PageName>SpreadStreamProcessingGettingStartedXaml</PageName>
@@ -579,6 +896,16 @@
       <Example>
         <PageName>Styling</PageName>
         <Title>Styling</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+    </Examples>
+  </XFControl>
+   <XFControl>
+    <Name>Path</Name>
+    <Examples>
+      <Example>
+        <PageName>PathGettingStartedXaml</PageName>
+        <Title>Getting Started</Title>
         <GroupName>Getting Started</GroupName>
       </Example>
     </Examples>

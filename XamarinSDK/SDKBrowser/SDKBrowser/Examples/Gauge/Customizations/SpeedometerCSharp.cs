@@ -42,7 +42,6 @@ namespace SDKBrowser.Examples.Gauge
                 Fill = Color.FromHex("037AFF"),
                 Stroke = Color.FromHex("037AFF"),
                 StrokeThickness = 3,
-                Position = GaugeElementPosition.Start,
                 Offset = 35,
                 Shape = needleGeometry
             });

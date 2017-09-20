@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns:local="clr-namespace:SDKBrowser.Examples.ListView.CellTypes.TemplateCell" xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls" xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SDKBrowser.Examples.ListView.ListViewTemplateCellXaml">
 	<!-- >> listview-celltypes-templatecell-listview-xaml -->
-	<telerikDataControls:RadListView ItemsSource="{Binding Source}" BackgroundColor="White">
+	<telerikDataControls:RadListView ItemsSource="{Binding Source}" BackgroundColor="White" x:Name="listView">
 		<telerikDataControls:RadListView.BindingContext>
 			<local:ViewModel />
 		</telerikDataControls:RadListView.BindingContext>

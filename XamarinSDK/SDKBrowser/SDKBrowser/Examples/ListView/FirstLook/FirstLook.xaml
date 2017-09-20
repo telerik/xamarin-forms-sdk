@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage x:Class="SDKBrowser.Examples.ListView.FirstLook"
+             xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SDKBrowser.Examples.ListView.FirstLook"
              xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
              xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls">
-  <Grid>
-    <telerikDataControls:RadListView ItemsSource="{Binding Items}"/>
-  </Grid>
+    <Grid>
+        <telerikDataControls:RadListView x:Name="listView" ItemsSource="{Binding Items}" />
+    </Grid>
 </ContentPage>

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:grid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             x:Class="SDKBrowser.Examples.DataGrid.ProgrammaticSelection">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Label Text="Selection Mode:" 
+               Grid.ColumnSpan="2" />
+        <Label Text="Selection Unit:"
+               Grid.Column="2"
+               Grid.ColumnSpan="2" />
+        <Picker x:Name="smPicker" 
+                ItemsSource="{Binding SelectionModeSource}"
+                SelectedItem="{Binding SelectedMode}"
+                Grid.Row="1"
+                Grid.ColumnSpan="2" />
+        <Picker x:Name="suPicker" 
+                ItemsSource="{Binding SelectionUnitSource}"
+                SelectedItem="{Binding SelectedUnit}"
+                Grid.Row="1" Grid.Column="2"
+                Grid.ColumnSpan="2" />
+        <Label Text="Choose item:" 
+               Grid.Row="2" />
+        <Label Text="Choose column:"
+               Grid.Row="2"
+               Grid.Column="1" />
+        <Picker x:Name="siPicker" 
+                ItemsSource="{Binding SelectedIndexSource}" 
+                SelectedItem="{Binding SelectedIndex}" 
+                Grid.Row="3"  />
+        <Picker x:Name="cPicker" 
+                ItemsSource="{Binding SelectedColumnIndexSource}" 
+                SelectedItem="{Binding SelectedColumn}" 
+                IsEnabled="{Binding IsPickerEnabled}"
+                Grid.Row="3" 
+                Grid.Column="1"/>
+        <Button Clicked="SelectItem"
+                Text="Select"
+                Grid.Row="3" 
+                Grid.Column="2" />
+        <Button Clicked="DeselectItem" 
+                Text="Deselect"
+                Grid.Row="3"
+                Grid.Column="3" />
+        <Button Clicked="SelectAll"
+                Text="Select All"
+                Grid.Row="4"
+                Grid.ColumnSpan="2"  />
+        <Button Clicked="DeselectAll"
+                Text="Deselect All" 
+                Grid.Row="4" 
+                Grid.Column="2" 
+                Grid.ColumnSpan="2"  />
+
+        <grid:RadDataGrid x:Name="grid" 
+                          ItemsSource="{Binding GridSource}" 
+                          Grid.Row="5" 
+                          Grid.ColumnSpan="4" 
+                          SelectionMode="{Binding SelectedMode}"
+                          SelectionUnit="{Binding SelectedUnit}"/>
+    </Grid>
+</ContentPage>

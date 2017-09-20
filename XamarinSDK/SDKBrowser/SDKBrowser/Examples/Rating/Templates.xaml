@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="SDKBrowser.Examples.Rating.Templates"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:rating="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             Title="Templates">
+    <StackLayout>
+        <!--  >> rating-templates  -->
+        <rating:RadTemplatedRating ValueChanged="RadTemplatedRating_ValueChanged">
+            <rating:RadTemplatedRating.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="unread.png" />
+                </DataTemplate>
+            </rating:RadTemplatedRating.ItemTemplate>
+            <rating:RadTemplatedRating.SelectedItemTemplate>
+                <DataTemplate>
+                    <Image Source="success.png" />
+                </DataTemplate>
+            </rating:RadTemplatedRating.SelectedItemTemplate>
+        </rating:RadTemplatedRating>
+        <!--  << rating-templates  -->
+        <Label x:Name="label"/>
+    </StackLayout>
+</ContentPage>

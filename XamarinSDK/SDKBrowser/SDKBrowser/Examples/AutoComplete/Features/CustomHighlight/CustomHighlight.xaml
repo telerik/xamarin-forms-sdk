@@ -1,27 +1,49 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input" xmlns:local="clr-namespace:SDKBrowser.Examples.AutoComplete.Features.CustomHighlight" x:Class="SDKBrowser.Examples.AutoComplete.CustomHighlight">
-  <Grid BackgroundColor="Silver" >
-    <telerikInput:RadAutoComplete BackgroundColor="White" CompletionMode="Contains" ItemsSource="{Binding Source}" TextSearchPath="Name" VerticalOptions="Start" Watermark="Search here...">
-      <telerikInput:RadAutoComplete.SuggestionViewHeight>
-        <OnPlatform x:TypeArguments="x:Double" iOS="400" Android="200" WinPhone="400" />
-      </telerikInput:RadAutoComplete.SuggestionViewHeight>
-      <telerikInput:RadAutoComplete.BindingContext>
-        <local:ViewModel />
-      </telerikInput:RadAutoComplete.BindingContext>
-      <!-- >> autocomplete-features-custom-highlight -->
-      <telerikInput:RadAutoComplete.SuggestionItemTemplate>
-        <DataTemplate>
-          <Grid>
-            <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="Auto" />
-              <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Image HeightRequest="20" WidthRequest="20" Source="{Binding Item.ImageSource}" VerticalOptions="Center" Margin="5" />
-            <telerikInput:RadAutoCompleteLabel TextColor="Silver" HighlightColor="Black" FontSize="24" Grid.Column="1" VerticalOptions="Center" Margin="5" />
-          </Grid>
-        </DataTemplate>
-      </telerikInput:RadAutoComplete.SuggestionItemTemplate>
-      <!-- << autocomplete-features-custom-highlight -->
-    </telerikInput:RadAutoComplete>
-  </Grid>
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="SDKBrowser.Examples.AutoComplete.CustomHighlight"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.AutoComplete.Features.CustomHighlight"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input">
+    <Grid BackgroundColor="Silver">
+        <telerikInput:RadAutoComplete x:Name="AutoComplete"
+                                      BackgroundColor="White"
+                                      CompletionMode="Contains"
+                                      ItemsSource="{Binding Source}"
+                                      TextSearchPath="Name"
+                                      VerticalOptions="Start"
+                                      Watermark="Search here...">
+            <telerikInput:RadAutoComplete.SuggestionViewHeight>
+                <OnPlatform x:TypeArguments="x:Double"
+                            Android="200"
+                            WinPhone="400"
+                            iOS="400" />
+            </telerikInput:RadAutoComplete.SuggestionViewHeight>
+            <telerikInput:RadAutoComplete.BindingContext>
+                <local:ViewModel />
+            </telerikInput:RadAutoComplete.BindingContext>
+            <!--  >> autocomplete-features-custom-highlight  -->
+            <telerikInput:RadAutoComplete.SuggestionItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Margin="5"
+                               HeightRequest="20"
+                               Source="{Binding Item.ImageSource}"
+                               VerticalOptions="Center"
+                               WidthRequest="20" />
+                        <telerikInput:RadAutoCompleteLabel Grid.Column="1"
+                                                           Margin="5"
+                                                           FontSize="24"
+                                                           HighlightColor="Black"
+                                                           TextColor="Silver"
+                                                           VerticalOptions="Center" />
+                    </Grid>
+                </DataTemplate>
+            </telerikInput:RadAutoComplete.SuggestionItemTemplate>
+            <!--  << autocomplete-features-custom-highlight  -->
+        </telerikInput:RadAutoComplete>
+    </Grid>
 </ContentPage>

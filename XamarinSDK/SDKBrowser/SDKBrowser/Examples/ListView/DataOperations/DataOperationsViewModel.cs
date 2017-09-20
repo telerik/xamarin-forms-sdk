@@ -9,7 +9,7 @@ namespace SDKBrowser.Examples.ListView
 
         public DataOperationsViewModel()
         {
-            this.Items = GetData(500);
+            this.Items = GetData(5000);
         }
 
         public ObservableCollection<Item> Items { get; set; }

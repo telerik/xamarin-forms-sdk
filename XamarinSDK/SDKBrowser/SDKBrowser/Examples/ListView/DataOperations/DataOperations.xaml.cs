@@ -19,8 +19,8 @@ namespace SDKBrowser.Examples.ListView
             sortGroupSwitch.Toggled += SortGroupSwitch_Toggled;
 
             sortDirectionPicker.Items.Add("no sort");
-            sortDirectionPicker.Items.Add("sort by age ascending");
-            sortDirectionPicker.Items.Add("sort by age descending");
+            sortDirectionPicker.Items.Add("sort by name ascending");
+            sortDirectionPicker.Items.Add("sort by name descending");
             sortDirectionPicker.SelectedIndex = 0;
             sortDirectionPicker.SelectedIndexChanged += this.SortDirectionPickerSelectedIndexChanged;
         }
@@ -47,12 +47,12 @@ namespace SDKBrowser.Examples.ListView
                     listView.SortDescriptors.Clear();
                     break;
                 case 1:
-                    var descriptor_Ascending = new PropertySortDescriptor { PropertyName = "Age", SortOrder = SortOrder.Ascending };
+                    var descriptor_Ascending = new PropertySortDescriptor { PropertyName = "Name", SortOrder = SortOrder.Ascending };
                     listView.SortDescriptors.Clear();
                     listView.SortDescriptors.Add(descriptor_Ascending);
                     break;
                 case 2:
-                    var descriptor_Descending = new PropertySortDescriptor { PropertyName = "Age", SortOrder = SortOrder.Descending };
+                    var descriptor_Descending = new PropertySortDescriptor { PropertyName = "Name", SortOrder = SortOrder.Descending };
                     listView.SortDescriptors.Clear();
                     listView.SortDescriptors.Add(descriptor_Descending);
                     break;

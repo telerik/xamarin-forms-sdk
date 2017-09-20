@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SDKBrowser.Examples.Chart.PaletteModePage"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.Chart.Customization.PaletteMode"
+             xmlns:telerikChart="clr-namespace:Telerik.XamarinForms.Chart;assembly=Telerik.XamarinForms.Chart">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <telerikChart:RadCartesianChart x:Name="chart" Grid.Row="0">
+            <telerikChart:RadCartesianChart.BindingContext>
+                <local:ViewModel />
+            </telerikChart:RadCartesianChart.BindingContext>
+            <telerikChart:RadCartesianChart.HorizontalAxis>
+                <telerikChart:CategoricalAxis />
+            </telerikChart:RadCartesianChart.HorizontalAxis>
+            <telerikChart:RadCartesianChart.VerticalAxis>
+                <telerikChart:NumericalAxis />
+            </telerikChart:RadCartesianChart.VerticalAxis>
+            <telerikChart:RadCartesianChart.Series>
+                <telerikChart:BarSeries x:Name="barSeries"
+                                    CategoryBinding="Category"
+                                    PaletteMode="DataPoint"
+                                    ValueBinding="Value" 
+                                    ItemsSource="{Binding Data}" />
+            </telerikChart:RadCartesianChart.Series>
+        </telerikChart:RadCartesianChart>
+
+        <Label Grid.Row="1" Text="Select PaletteMode:" TextColor="Black"></Label>
+
+        <Picker x:Name="pickerPaletteMode"
+                TextColor="Black"
+                Grid.Row="2"
+                SelectedIndexChanged="PickerPaletteMode_SelectedIndexChanged" />
+
+    </Grid>
+</ContentPage>

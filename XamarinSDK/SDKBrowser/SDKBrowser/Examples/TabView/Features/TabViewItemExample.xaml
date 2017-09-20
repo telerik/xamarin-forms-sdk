@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="SDKBrowser.Examples.TabView.TabViewItemExample"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives">
+    <!--  >> tabview-features-tabviewitem-xaml  -->
+    <telerikPrimitives:RadTabView x:Name="tabView">
+        <telerikPrimitives:RadTabView.Items>
+
+            <telerikPrimitives:TabViewItem HeaderText="Home">
+                <telerikPrimitives:TabViewItem.Content>
+                    <Label Margin="10" Text="This is the content of the Home tab" />
+                </telerikPrimitives:TabViewItem.Content>
+            </telerikPrimitives:TabViewItem>
+
+            <telerikPrimitives:TabViewItem HeaderText="View">
+                <telerikPrimitives:TabViewItem.Content>
+                    <Label Margin="10" Text="This is the content of the View tab" />
+                </telerikPrimitives:TabViewItem.Content>
+            </telerikPrimitives:TabViewItem>
+
+            <telerikPrimitives:TabViewItem>
+                <telerikPrimitives:TabViewItem.Header>
+                    <telerikPrimitives:TabViewHeaderItem>
+                        <telerikPrimitives:TabViewHeaderItem.Content>
+                            <StackLayout Margin="5,0,0,0" Orientation="Horizontal">
+                                <ContentView BackgroundColor="#CA5100"
+                                             HeightRequest="10"
+                                             VerticalOptions="Center"
+                                             WidthRequest="10" />
+                                <Label Text="Folder" />
+                            </StackLayout>
+                        </telerikPrimitives:TabViewHeaderItem.Content>
+                    </telerikPrimitives:TabViewHeaderItem>
+                </telerikPrimitives:TabViewItem.Header>
+                <telerikPrimitives:TabViewItem.Content>
+                    <Label Margin="10" Text="This is the content of the Folder tab" />
+                </telerikPrimitives:TabViewItem.Content>
+            </telerikPrimitives:TabViewItem>
+
+        </telerikPrimitives:RadTabView.Items>
+    </telerikPrimitives:RadTabView>
+    <!--  << tabview-features-tabviewitem-xaml  -->
+</ContentPage>

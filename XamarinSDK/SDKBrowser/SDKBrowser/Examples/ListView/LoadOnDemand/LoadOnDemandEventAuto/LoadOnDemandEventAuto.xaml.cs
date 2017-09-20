@@ -30,13 +30,19 @@ namespace SDKBrowser.Examples.ListView
         // >> listview-loadondemand-loadondemandeventauto-event
         private int lodItemsCount = 0;
 
-        private void ListView_LoadOnDemand(object sender, EventArgs e)
+        private async void ListView_LoadOnDemand(object sender, EventArgs e)
         {
+            //simulates connection latency
+            await Task.Delay(4000);
+
             this.lodItemsCount++;
             foreach (string item in Enum.GetNames(typeof(DayOfWeek)))
             {
                 (listView.ItemsSource as ObservableCollection<string>).Add(string.Format("LOD: {0} - {1}", lodItemsCount, item));
             }
+            this.listView.IsLoadOnDemandActive = false;
+
+
         }
         // << listview-loadondemand-loadondemandeventauto-event
     }

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerik="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.MaskedInput.Validation">
+    <StackLayout Margin="0, 50, 0, 0">
+
+        <Label>Leave the last symbol empty or type a letter on its position to trigger the validation</Label>
+        <!--  >> maskedinput-features-validation-xaml  -->
+        <telerik:RadMaskedInput x:Name="maskedInput" 
+                                     RejectedSymbolErrorText="Rejected Symbol"
+                                     InvalidInputErrorText="Invalid Input"
+                                     ErrorColor="Red"
+                                     ErrorFontSize="22"
+                                     Mask="(CC) 09"
+                                     MaskType="Text"/>
+        <!--  << maskedinput-features-validation-xaml  -->
+        </StackLayout>
+</ContentPage>

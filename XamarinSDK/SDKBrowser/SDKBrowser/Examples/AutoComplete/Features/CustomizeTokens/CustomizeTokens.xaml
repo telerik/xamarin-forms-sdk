@@ -1,0 +1,34 @@
+﻿<ContentPage x:Class="SDKBrowser.Examples.AutoComplete.CustomizeTokens"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:autoComplete="clr-namespace:Telerik.XamarinForms.Input.AutoComplete;assembly=Telerik.XamarinForms.Input"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.AutoComplete.Features.CustomizeTokens"
+             xmlns:telerik="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input">
+    <ContentPage.BindingContext>
+        <local:CustomizeTokensViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <telerik:RadAutoComplete CompletionMode="Contains"
+                                     DisplayMode="Tokens"
+                                     ItemsSource="{Binding Source}"
+                                     TextSearchPath="Name"
+                                     Watermark="Search Here...">
+                <telerik:RadAutoComplete.TokenStyle>
+                    <autoComplete:AutoCompleteTokenStyle BackgroundColor="LightBlue"
+                                                         CornerRadius="5"
+                                                         StrokeColor="Violet"
+                                                         StrokeWidth="5"
+                                                         TextColor="DarkBlue" />
+                </telerik:RadAutoComplete.TokenStyle>
+                <telerik:RadAutoComplete.SelectedTokenStyle>
+                    <autoComplete:AutoCompleteTokenStyle BackgroundColor="Violet"
+                                                         CornerRadius="15"
+                                                         StrokeColor="LightBlue"
+                                                         StrokeWidth="10"
+                                                         TextColor="WhiteSmoke" />
+                </telerik:RadAutoComplete.SelectedTokenStyle>
+            </telerik:RadAutoComplete>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage> 

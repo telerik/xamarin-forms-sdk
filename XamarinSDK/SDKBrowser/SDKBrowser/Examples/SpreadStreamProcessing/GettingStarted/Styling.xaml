@@ -1,29 +1,41 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-        xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
-        xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls"
-        xmlns:common="clr-namespace:SDKBrowser.Common"
-        BackgroundColor="White"
-		x:Class="SDKBrowser.Examples.SpreadStreamProcessing.Styling">
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="SDKBrowser.Examples.SpreadStreamProcessing.Styling"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:common="clr-namespace:SDKBrowser.Common"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls"
+             BackgroundColor="White">
     <Grid Margin="16">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <telerikDataControls:RadListView ItemsSource="{Binding Source}" >
+        <telerikDataControls:RadListView x:Name="listView" ItemsSource="{Binding Source}">
             <telerikDataControls:RadListView.ItemTemplate>
                 <DataTemplate>
                     <telerikListView:ListViewTemplateCell>
                         <telerikListView:ListViewTemplateCell.View>
                             <Grid>
-                                <StackLayout Orientation="Horizontal" Margin="10, 10, 10, 0">
-                                    <Label Text="{Binding Title}" FontSize="16" FontAttributes="Bold" TextColor="Black" VerticalOptions="Center" />
+                                <StackLayout Margin="10,10,10,0" Orientation="Horizontal">
+                                    <Label FontAttributes="Bold"
+                                           FontSize="16"
+                                           Text="{Binding Title}"
+                                           TextColor="Black"
+                                           VerticalOptions="Center" />
                                 </StackLayout>
-                                <StackLayout Orientation="Horizontal" Grid.Row="1" Margin="10, 0, 10, 10">
-                                    <Label Text="by" FontSize="13" FontAttributes="Italic" TextColor="Gray" />
-                                    <Label Text="{Binding Author}" FontSize="13" FontAttributes="Italic" TextColor="Gray" />
+                                <StackLayout Grid.Row="1"
+                                             Margin="10,0,10,10"
+                                             Orientation="Horizontal">
+                                    <Label FontAttributes="Italic"
+                                           FontSize="13"
+                                           Text="by"
+                                           TextColor="Gray" />
+                                    <Label FontAttributes="Italic"
+                                           FontSize="13"
+                                           Text="{Binding Author}"
+                                           TextColor="Gray" />
                                 </StackLayout>
                             </Grid>
                         </telerikListView:ListViewTemplateCell.View>
@@ -32,7 +44,11 @@
             </telerikDataControls:RadListView.ItemTemplate>
         </telerikDataControls:RadListView>
 
-        <Button Text="Generate XLSX document" Command="{Binding Path=GenerateDocumentCommand}" BackgroundColor="Gray" TextColor="Black" Grid.Row="1" />
+        <Button Grid.Row="1"
+                BackgroundColor="Gray"
+                Command="{Binding Path=GenerateDocumentCommand}"
+                Text="Generate XLSX document"
+                TextColor="Black" />
 
     </Grid>
 </ContentPage>

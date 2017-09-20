@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SDKBrowser.Examples.DataForm.CustomDataFormEditor"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.DataForm.Editors.CustomEditor">
+    <Grid>
+        <Label FontSize="26" Margin="15, 0, 0 ,0" Text="Select option:"></Label>
+        <local:CustomEditorDataForm Margin="0, 0, 0, 0" x:Name="dataForm" Source="{Binding}"/>
+    </Grid>
+</ContentPage>
