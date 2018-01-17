@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:common="clr-namespace:SDKBrowser.Common;assembly=SDKBrowser"
+             xmlns:telerik="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+             x:Class="SDKBrowser.App">
+    <Application.Resources>
+        <telerikCommon:RadResourceDictionary>
+            <telerikCommon:RadResourceDictionary.MergedDictionaries>
+                <ResourceDictionary MergedWith="telerikCommon:BlueResources"></ResourceDictionary>
+                <ResourceDictionary MergedWith="telerikInput:TelerikThemeStyles"></ResourceDictionary>
+                <ResourceDictionary MergedWith="telerikPrimitives:TelerikThemeStyles"></ResourceDictionary>
+                <ResourceDictionary MergedWith="telerikDataControls:TelerikThemeStyles"></ResourceDictionary>
+            </telerikCommon:RadResourceDictionary.MergedDictionaries>
+
+      <OnPlatform x:TypeArguments="Thickness" 
+                  x:Key="listViewItemMargin" 
+                  WinPhone="10, 5, 10, 5" />
+      <common:ControlNameConverter x:Key="controlNameConverter" />
+      <common:ExampleNameConverter x:Key="exampleNameConverter" />
+      <DataTemplate x:Key="controlItemTemplateUwp">
+        <ViewCell>
+          <Grid>
+            <Label Text="{Binding Converter={StaticResource controlNameConverter}}"
+                   Margin="{StaticResource listViewItemMargin}"  />
+          </Grid>
+        </ViewCell>
+      </DataTemplate>
+      <DataTemplate x:Key="controlItemTemplateGeneral">
+        <TextCell Text="{Binding Converter={StaticResource controlNameConverter}}" />
+      </DataTemplate>
+      <OnPlatform x:TypeArguments="DataTemplate" 
+                  x:Key="controlItemTemplate" 
+                  iOS="{StaticResource controlItemTemplateGeneral}"
+                  Android="{StaticResource controlItemTemplateGeneral}"
+                  WinPhone="{StaticResource controlItemTemplateUwp}" />
+
+      <DataTemplate x:Key="exampleGroupItemTemplateUwp">
+        <ViewCell>
+          <Grid>
+            <Label Text="{Binding Name}"
+                   Margin="{StaticResource listViewItemMargin}" />
+          </Grid>
+        </ViewCell>
+      </DataTemplate>
+      <DataTemplate x:Key="exampleGroupItemTemplateGeneral">
+        <TextCell Text="{Binding Name}" />
+      </DataTemplate>
+      <OnPlatform x:TypeArguments="DataTemplate" 
+                  x:Key="exampleGroupItemTemplate" 
+                  iOS="{StaticResource exampleGroupItemTemplateGeneral}"
+                  Android="{StaticResource exampleGroupItemTemplateGeneral}"
+                  WinPhone="{StaticResource exampleGroupItemTemplateUwp}" />
+
+      <DataTemplate x:Key="exampleItemTemplateUwp">
+        <ViewCell>
+          <Grid>
+            <Label Text="{Binding Converter={StaticResource exampleNameConverter}}"
+                   Margin="{StaticResource listViewItemMargin}" />
+          </Grid>
+        </ViewCell>
+      </DataTemplate>
+      <DataTemplate x:Key="exampleItemTemplateGeneral">
+        <TextCell Text="{Binding Converter={StaticResource exampleNameConverter}}" />
+      </DataTemplate>
+      <OnPlatform x:TypeArguments="DataTemplate" 
+                  x:Key="exampleItemTemplate" 
+                  iOS="{StaticResource exampleItemTemplateGeneral}"
+                  Android="{StaticResource exampleItemTemplateGeneral}"
+                  WinPhone="{StaticResource exampleItemTemplateUwp}" />
+
+        </telerikCommon:RadResourceDictionary>
+    </Application.Resources>
+</Application>

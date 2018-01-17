@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.DataForm.DataAnnotations.DataSourceKey"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.DataForm.DataFormDataAnnotationsDataSourceKeyXaml">
+    <ContentPage.BindingContext>
+        <local:LocationData />
+    </ContentPage.BindingContext>
+    <ScrollView>
+        <telerikInput:RadDataForm  x:Name="dataForm" Source="{Binding}">
+            <telerikInput:RadDataForm.PropertyDataSourceProvider>
+                <local:LocationProvider />
+            </telerikInput:RadDataForm.PropertyDataSourceProvider>
+        </telerikInput:RadDataForm>
+    </ScrollView>
+</ContentPage>

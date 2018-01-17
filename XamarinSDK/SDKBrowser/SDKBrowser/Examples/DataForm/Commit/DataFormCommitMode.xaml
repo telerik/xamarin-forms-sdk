@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SDKBrowser.Examples.DataForm.DataFormCommitMode" xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<StackLayout>
+			<Label Text="Select commit mode" />
+			<Picker x:Name="commitModePicker" />
+		</StackLayout>
+		<telerikInput:RadDataForm x:Name="dataForm" Source="{Binding}" Grid.Row="1" />
+		<StackLayout Grid.Row="2">
+			<Button Clicked="CommitButtonClicked" Text="Commit" x:Name="commitButton" />
+			<Label Text="Source object:" FontAttributes="Bold" />
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Name: " />
+				<Label Text="{Binding Name}" />
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Price: " />
+				<Label Text="{Binding Price}" />
+			</StackLayout>
+		</StackLayout>
+	</Grid>
+</ContentPage>

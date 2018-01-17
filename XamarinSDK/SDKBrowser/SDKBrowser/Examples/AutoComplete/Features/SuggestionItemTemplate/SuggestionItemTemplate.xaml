@@ -4,10 +4,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:SDKBrowser.Examples.AutoComplete.Features.SuggestionItemTemplate"
              xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input">
-    <StackLayout BackgroundColor="Silver">
+    <StackLayout>
         <!--  >> autocomplete-features-suggestion-item-template  -->
         <telerikInput:RadAutoComplete x:Name="AutoComplete"
-                                      BackgroundColor="White"
                                       ItemsSource="{Binding Source}"
                                       TextSearchPath="Name"
                                       VerticalOptions="Start"

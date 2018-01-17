@@ -131,7 +131,9 @@
     </Content>
     <Content Include="available32.png" />
     <Content Include="away32.png" />
+    <Content Include="button_backgroundImage.png" />
     <Content Include="busy32.png" />
+    <Content Include="image.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -196,6 +198,10 @@
     </Reference>
     <Reference Include="Telerik.XamarinForms.DataControls">
       <HintPath>..\..\..\..\Binaries\UWP\Telerik.XamarinForms.DataControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.DataGrid, Version=2017.3.1213.240, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Binaries\UWP\Telerik.XamarinForms.DataGrid.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.DataVisualization">
       <HintPath>..\..\..\..\Binaries\UWP\Telerik.XamarinForms.DataVisualization.dll</HintPath>

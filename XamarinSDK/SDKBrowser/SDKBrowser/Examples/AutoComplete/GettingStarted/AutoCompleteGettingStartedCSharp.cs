@@ -9,7 +9,7 @@ namespace SDKBrowser.Examples.AutoComplete
         public AutoCompleteGettingStartedCSharp()
         {
             // >> autocomplete-getting-started-csharp
-            var autoComplete = new RadAutoComplete { BackgroundColor = Color.White };
+            var autoComplete = new RadAutoComplete { Watermark = "Search here..." };
             // << autocomplete-getting-started-csharp
 
             autoComplete.ItemsSource = new List<string>()
@@ -30,7 +30,7 @@ namespace SDKBrowser.Examples.AutoComplete
                 "Harry Douglas"
             };
 
-            var panel = new StackLayout { BackgroundColor = Color.Silver };
+            var panel = new StackLayout();
             panel.Children.Add(autoComplete);
             this.Content = panel;
         }

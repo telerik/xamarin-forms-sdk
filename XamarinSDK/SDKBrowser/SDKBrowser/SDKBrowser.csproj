@@ -42,21 +42,32 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="App.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Common\ExampleGroup.cs" />
     <Compile Include="Common\ExampleGroupPage.xaml.cs">
       <DependentUpon>ExampleGroupPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Common\ControlNameConverter.cs" />
     <Compile Include="Common\ExampleNameConverter.cs" />
     <Compile Include="Common\ExtendedDevice.cs" />
     <Compile Include="Common\IDevice.cs" />
     <Compile Include="Common\Usings.cs" />
     <Compile Include="Common\XFControl.cs" />
+    <Compile Include="Examples\AutoComplete\Features\ClearButtonVisibility\ClearButtonVisibility.xaml.cs">
+      <DependentUpon>ClearButtonVisibility.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\AutoComplete\Features\ClearButtonVisibility\ViewModel.cs" />
     <Compile Include="Examples\AutoComplete\Features\CustomizeTokens\BusinessObject.cs" />
     <Compile Include="Examples\AutoComplete\Features\CustomizeTokens\CustomizeTokens.xaml.cs">
       <DependentUpon>CustomizeTokens.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\AutoComplete\Features\CustomizeTokens\CustomizeTokensViewModel.cs" />
+    <Compile Include="Examples\AutoComplete\Features\CustomNoResultsMessage\CustomNoResultsMessage.xaml.cs">
+      <DependentUpon>CustomNoResultsMessage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\AutoComplete\Features\CustomNoResultsMessage\ViewModel.cs" />
     <Compile Include="Examples\AutoComplete\GettingStarted\AutoCompleteGettingStartedCSharp.cs" />
     <Compile Include="Examples\AutoComplete\GettingStarted\AutoCompleteGettingStartedXaml.xaml.cs">
       <DependentUpon>AutoCompleteGettingStartedXaml.xaml</DependentUpon>
@@ -69,14 +80,26 @@
     <Compile Include="Examples\BusyIndicator\GettingStarted\BusyIndicatorGettingStartedXaml.xaml.cs">
       <DependentUpon>BusyIndicatorGettingStartedXaml.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Examples\ButtonExamples\Features\BackgroundImage.xaml.cs">
+      <DependentUpon>BackgroundImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ButtonExamples\Features\BorderThickness.xaml.cs">
+      <DependentUpon>BorderThickness.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ButtonExamples\Features\ContentAlignment.xaml.cs">
+      <DependentUpon>ContentAlignment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ButtonExamples\GettingStarted\ButtonGettingStartedXaml.xaml.cs">
+      <DependentUpon>ButtonGettingStartedXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ButtonExamples\Features\KeyFeatures.xaml.cs">
+      <DependentUpon>KeyFeatures.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Examples\Calendar\Styling\CustomRenderer\CalendarCustomRendererExample.cs" />
     <Compile Include="Examples\Calendar\Styling\CellStyling.cs" />
     <Compile Include="Examples\Calendar\Styling\CustomRenderer\CustomCalendar.cs" />
     <Compile Include="Examples\Calendar\Styling\DayViewStyling.xaml.cs">
       <DependentUpon>DayViewStyling.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Examples\Chart\ChartGridLinesPage.xaml.cs">
-      <DependentUpon>ChartGridLinesPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Common\Example.cs" />
     <Compile Include="Common\ExamplesLoader.cs" />
@@ -87,8 +110,32 @@
     <Compile Include="Examples\Calendar\Styling\Appointments.xaml.cs">
       <DependentUpon>Appointments.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Examples\Chart\Customization\PaletteMode\PaletteModePage.xaml.cs">
-      <DependentUpon>PaletteModePage.xaml</DependentUpon>
+    <Compile Include="Examples\Chart\Annotations\GridLineAnnotations\GridLineAnnotationsCSharp.cs" />
+    <Compile Include="Examples\Chart\Annotations\GridLineAnnotations\GridLineAnnotationsXaml.xaml.cs">
+      <DependentUpon>GridLineAnnotationsXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Chart\Annotations\GridLineAnnotations\ViewModel.cs" />
+    <Compile Include="Examples\Chart\Annotations\PlotBandAnnotations\PlotBandAnnotationsCSharp.cs" />
+    <Compile Include="Examples\Chart\Annotations\PlotBandAnnotations\PlotBandAnnotationsXaml.xaml.cs">
+      <DependentUpon>PlotBandAnnotationsXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Chart\Annotations\PlotBandAnnotations\ViewModel.cs" />
+    <Compile Include="Examples\Chart\Customization\ChartGridLines\ChartGridLinesCSharp.cs" />
+    <Compile Include="Examples\Chart\Customization\ChartGridLines\ChartGridLinesXaml.xaml.cs">
+      <DependentUpon>ChartGridLinesXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Chart\Customization\ChartGridLines\ViewModel.cs" />
+    <Compile Include="Examples\Chart\Customization\CustomPalette\CustomPaletteXaml.xaml.cs">
+      <DependentUpon>CustomPaletteXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Chart\Customization\CustomPalette\ViewModel.cs" />
+    <Compile Include="Examples\Chart\Customization\FormatAxisLabels\FormatAxisLabelsXaml.xaml.cs">
+      <DependentUpon>FormatAxisLabelsXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Chart\Customization\FormatAxisLabels\ViewModel.cs" />
+    <Compile Include="Examples\Chart\Customization\PaletteMode\PaletteModeCSharp.cs" />
+    <Compile Include="Examples\Chart\Customization\PaletteMode\PaletteModeXaml.xaml.cs">
+      <DependentUpon>PaletteModeXaml.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\Chart\Customization\PaletteMode\ViewModel.cs" />
     <Compile Include="Examples\Chart\GettingStarted\ChartGettingStartedXaml.xaml.cs">
@@ -96,43 +143,133 @@
     </Compile>
     <Compile Include="Examples\Chart\GettingStarted\ChartGettingStartedCSharp.cs" />
     <Compile Include="Examples\Chart\GettingStarted\ViewModel.cs" />
-    <Compile Include="Examples\Chart\Legend\CartesianChartRadLegendCSharp.cs" />
-    <Compile Include="Examples\Chart\Legend\CartesianChartRadLegendXaml.xaml.cs">
+    <Compile Include="Examples\Chart\Interactivity\PanZoom\PanZoomCSharp.cs" />
+    <Compile Include="Examples\Chart\Interactivity\PanZoom\PanZoomXaml.xaml.cs">
+      <DependentUpon>PanZoomXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Chart\Interactivity\PanZoom\ViewModel.cs" />
+    <Compile Include="Examples\Chart\Interactivity\SelectionSeries\SelectionSeriesCSharp.cs" />
+    <Compile Include="Examples\Chart\Interactivity\SelectionSeries\SelectionSeriesXaml.xaml.cs">
+      <DependentUpon>SelectionSeriesXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Chart\Interactivity\SelectionSeries\ViewModel.cs" />
+    <Compile Include="Examples\Chart\Interactivity\TrackballSeries\TrackballSeriesCSharp.cs" />
+    <Compile Include="Examples\Chart\Interactivity\TrackballSeries\TrackballSeriesXaml.xaml.cs">
+      <DependentUpon>TrackballSeriesXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Chart\Interactivity\TrackballSeries\ViewModel.cs" />
+    <Compile Include="Examples\Chart\Legend\CartesianChartRadLegend\CartesianChartRadLegendCSharp.cs" />
+    <Compile Include="Examples\Chart\Legend\CartesianChartRadLegend\CartesianChartRadLegendXaml.xaml.cs">
       <DependentUpon>CartesianChartRadLegendXaml.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Examples\Chart\Legend\PieChartRadLegendCSharp.cs" />
-    <Compile Include="Examples\Chart\Legend\PieChartRadLegendXaml.xaml.cs">
+    <Compile Include="Examples\Chart\Legend\PieChartRadLegend\PieChartRadLegendCSharp.cs" />
+    <Compile Include="Examples\Chart\Legend\PieChartRadLegend\PieChartRadLegendXaml.xaml.cs">
       <DependentUpon>PieChartRadLegendXaml.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\Chart\Legend\ViewModel.cs" />
-    <Compile Include="Examples\Chart\PieChartPercentage\PercentageLabelFormatter.cs" />
-    <Compile Include="Examples\Chart\PieChartPercentage\PieChartPercentagePage.xaml.cs">
-      <DependentUpon>PieChartPercentagePage.xaml</DependentUpon>
+    <Compile Include="Examples\Chart\PieChart\PieChartCSharp.cs" />
+    <Compile Include="Examples\Chart\PieChart\PieChartPercentage\PercentageLabelFormatter.cs" />
+    <Compile Include="Examples\Chart\PieChart\PieChartPercentage\PieChartPercentageCSharp.cs" />
+    <Compile Include="Examples\Chart\PieChart\PieChartPercentage\PieChartPercentageXaml.xaml.cs">
+      <DependentUpon>PieChartPercentageXaml.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Examples\Chart\PieChartPercentage\PieChartPercentageViewModel.cs" />
-    <Compile Include="Examples\Chart\PlotBandAnnotationsPage.xaml.cs">
-      <DependentUpon>PlotBandAnnotationsPage.xaml</DependentUpon>
+    <Compile Include="Examples\Chart\PieChart\PieChartPercentage\ViewModel.cs" />
+    <Compile Include="Examples\Chart\PieChart\PieChartXaml.xaml.cs">
+      <DependentUpon>PieChartXaml.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Examples\Chart\Series\AreaSeriesPage.xaml.cs">
-      <DependentUpon>AreaSeriesPage.xaml</DependentUpon>
+    <Compile Include="Examples\Chart\PieChart\ViewModel.cs" />
+    <Compile Include="Examples\Chart\Series\AreaSeries\AreaSeriesCSharp.cs" />
+    <Compile Include="Examples\Chart\Series\AreaSeries\AreaSeriesXaml.xaml.cs">
+      <DependentUpon>AreaSeriesXaml.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Examples\Chart\Series\BarSeriesHorizontal.xaml.cs">
-      <DependentUpon>BarSeriesHorizontal.xaml</DependentUpon>
+    <Compile Include="Examples\Chart\Series\AreaSeries\ViewModel.cs" />
+    <Compile Include="Examples\Chart\Series\BarSeriesHorizontal\BarSeriesHorizontalXaml.xaml.cs">
+      <DependentUpon>BarSeriesHorizontalXaml.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Examples\Chart\Series\BarSeriesPage.xaml.cs">
-      <DependentUpon>BarSeriesPage.xaml</DependentUpon>
+    <Compile Include="Examples\Chart\Series\BarSeriesHorizontal\BarSeriesHorizontalCSharp.cs" />
+    <Compile Include="Examples\Chart\Series\BarSeriesHorizontal\ViewModel.cs" />
+    <Compile Include="Examples\Chart\Series\BarSeriesVertical\BarSeriesVerticalCSharp.cs" />
+    <Compile Include="Examples\Chart\Series\BarSeriesVertical\BarSeriesVerticalXaml.xaml.cs">
+      <DependentUpon>BarSeriesVerticalXaml.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Examples\Chart\GridLineAnnotationsPage.xaml.cs">
-      <DependentUpon>GridLineAnnotationsPage.xaml</DependentUpon>
+    <Compile Include="Examples\Chart\Series\BarSeriesVertical\ViewModel.cs" />
+    <Compile Include="Examples\Chart\Series\LineSeries\LineSeriesCSharp.cs" />
+    <Compile Include="Examples\Chart\Series\LineSeries\LineSeriesXaml.xaml.cs">
+      <DependentUpon>LineSeriesXaml.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Examples\Chart\Series\LineSeriesPage.xaml.cs">
-      <DependentUpon>LineSeriesPage.xaml</DependentUpon>
+    <Compile Include="Examples\Chart\Series\LineSeries\ViewModel.cs" />
+    <Compile Include="Examples\Chart\Series\ScatterAreaSeries\ScatterAreaSeriesCSharp.cs" />
+    <Compile Include="Examples\Chart\Series\ScatterAreaSeries\ScatterAreaSeriesXaml.xaml.cs">
+      <DependentUpon>ScatterAreaSeriesXaml.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Examples\Chart\PanZoomPage.xaml.cs">
-      <DependentUpon>PanZoomPage.xaml</DependentUpon>
+    <Compile Include="Examples\Chart\Series\ScatterAreaSeries\ViewModel.cs" />
+    <Compile Include="Examples\Chart\Series\ScatterLineSeries\ScatterLineSeriesCSharp.cs" />
+    <Compile Include="Examples\Chart\Series\ScatterLineSeries\ScatterLineSeriesXaml.xaml.cs">
+      <DependentUpon>ScatterLineSeriesXaml.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Examples\Chart\PieChartPage.xaml.cs">
-      <DependentUpon>PieChartPage.xaml</DependentUpon>
+    <Compile Include="Examples\Chart\Series\ScatterLineSeries\ViewModel.cs" />
+    <Compile Include="Examples\Chart\Series\ScatterPointSeries\ScatterPointSeriesCSharp.cs" />
+    <Compile Include="Examples\Chart\Series\ScatterPointSeries\ScatterPointSeriesXaml.xaml.cs">
+      <DependentUpon>ScatterPointSeriesXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Chart\Series\ScatterPointSeries\ViewModel.cs" />
+    <Compile Include="Examples\Chart\Series\ScatterSplineAreaSeries\ScatterSplineAreaSeriesCSharp.cs" />
+    <Compile Include="Examples\Chart\Series\ScatterSplineAreaSeries\ScatterSplineAreaSeriesXaml.xaml.cs">
+      <DependentUpon>ScatterSplineAreaSeriesXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Chart\Series\ScatterSplineAreaSeries\ViewModel.cs" />
+    <Compile Include="Examples\Chart\Series\ScatterSplineSeries\ScatterSplineSeriesCSharp.cs" />
+    <Compile Include="Examples\Chart\Series\ScatterSplineSeries\ScatterSplineSeriesXaml.xaml.cs">
+      <DependentUpon>ScatterSplineSeriesXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Chart\Series\ScatterSplineSeries\ViewModel.cs" />
+    <Compile Include="Examples\Chart\Series\SplineAreaSeries\SplineAreaSeriesXaml.xaml.cs">
+      <DependentUpon>SplineAreaSeriesXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Chart\Series\SplineAreaSeries\SplineAreaSeriesCSharp.cs" />
+    <Compile Include="Examples\Chart\Series\SplineAreaSeries\ViewModel.cs" />
+    <Compile Include="Examples\Chart\Series\SplineSeries\SplineSeriesCSharp.cs" />
+    <Compile Include="Examples\Chart\Series\SplineSeries\SplineSeriesXaml.xaml.cs">
+      <DependentUpon>SplineSeriesXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Chart\Series\SplineSeries\ViewModel.cs" />
+    <Compile Include="Examples\Chart\Series\StackAreaSeries\StackAreaSeriesCSharp.cs" />
+    <Compile Include="Examples\Chart\Series\StackAreaSeries\StackAreaSeriesXaml.xaml.cs">
+      <DependentUpon>StackAreaSeriesXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Chart\Series\StackAreaSeries\ViewModel.cs" />
+    <Compile Include="Examples\Chart\Series\StackBarSeriesHorizontal\StackBarSeriesHorizontalCSharp.cs" />
+    <Compile Include="Examples\Chart\Series\StackBarSeriesHorizontal\StackBarSeriesHorizontalXaml.xaml.cs">
+      <DependentUpon>StackBarSeriesHorizontalXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Chart\Series\StackBarSeriesHorizontal\ViewModel.cs" />
+    <Compile Include="Examples\Chart\Series\StackBarSeriesVertical\StackBarSeriesVerticalCSharp.cs" />
+    <Compile Include="Examples\Chart\Series\StackBarSeriesVertical\StackBarSeriesVerticalXaml.xaml.cs">
+      <DependentUpon>StackBarSeriesVerticalXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Chart\Series\StackBarSeriesVertical\ViewModel.cs" />
+    <Compile Include="Examples\Chart\Series\StackSplineAreaSeries\StackSplineAreaSeriesCSharp.cs" />
+    <Compile Include="Examples\Chart\Series\StackSplineAreaSeries\StackSplineAreaSeriesXaml.xaml.cs">
+      <DependentUpon>StackSplineAreaSeriesXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Chart\Series\StackSplineAreaSeries\ViewModel.cs" />
+    <Compile Include="Examples\DataForm\DataAnnotations\Converter\DataFormDataAnnotationsConverterXaml.xaml.cs">
+      <DependentUpon>DataFormDataAnnotationsConverterXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataForm\DataAnnotations\DataSourceKey\DataFormDataAnnotationsDataSourceKeyXaml.xaml.cs">
+      <DependentUpon>DataFormDataAnnotationsDataSourceKeyXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataForm\DataAnnotations\DisplayOptions\DataFormDataAnnotationsDisplayOptionsXaml.xaml.cs">
+      <DependentUpon>DataFormDataAnnotationsDisplayOptionsXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataForm\DataAnnotations\DisplayValueFormat\DataFormDataAnnotationsDisplayValueFormatXaml.xaml.cs">
+      <DependentUpon>DataFormDataAnnotationsDisplayValueFormatXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataForm\DataAnnotations\Ignore\DataFormDataAnnotationsIgnoreXaml.xaml.cs">
+      <DependentUpon>DataFormDataAnnotationsIgnoreXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataForm\DataAnnotations\Readonly\DataFormDataAnnotationsReadonlyXaml.xaml.cs">
+      <DependentUpon>DataFormDataAnnotationsReadonlyXaml.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\DataForm\Editors\CustomEditor\CustomDataFormEditor.xaml.cs">
       <DependentUpon>CustomDataFormEditor.xaml</DependentUpon>
@@ -140,12 +277,12 @@
     <Compile Include="Examples\DataForm\Editors\CustomEditor\CustomEditorDataForm.cs" />
     <Compile Include="Examples\DataForm\Editors\CustomEditor\Options.cs" />
     <Compile Include="Examples\DataForm\Editors\CustomEditor\SourceItem.cs" />
-    <Compile Include="Examples\DataForm\Editors\DataFormEditors.xaml.cs">
+    <Compile Include="Examples\DataForm\Editors\DataFormEditors\DataFormEditors.xaml.cs">
       <DependentUpon>DataFormEditors.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Examples\DataForm\Editors\TargetAudience.cs" />
-    <Compile Include="Examples\DataForm\Editors\Book.cs" />
-    <Compile Include="Examples\DataForm\Editors\UserPropertyDataSourceProvider.cs" />
+    <Compile Include="Examples\DataForm\Editors\DataFormEditors\TargetAudience.cs" />
+    <Compile Include="Examples\DataForm\Editors\DataFormEditors\Book.cs" />
+    <Compile Include="Examples\DataForm\Editors\DataFormEditors\UserPropertyDataSourceProvider.cs" />
     <Compile Include="Examples\DataForm\Groups\Customer.cs" />
     <Compile Include="Examples\DataForm\Groups\DataFormGroups.xaml.cs">
       <DependentUpon>DataFormGroups.xaml</DependentUpon>
@@ -156,8 +293,59 @@
       <DependentUpon>DataFormCustomDecimalEditorFormatterXaml.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\DataForm\Styling\Editors\CustomDecimalEditorFormatter\SourceItem.cs" />
+    <Compile Include="Examples\DataForm\Styling\Editors\DataFormStylingEditors\DataFormStylingEditorsCSharp.cs" />
+    <Compile Include="Examples\DataForm\Styling\Editors\DataFormStylingEditors\DataFormStylingEditorsXaml.xaml.cs">
+      <DependentUpon>DataFormStylingEditorsXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataGrid\Localization\MyCity.cs" />
+    <Compile Include="Examples\DataGrid\Localization\CustomLocalizationManager\CustomLocalization.xaml.cs">
+      <DependentUpon>CustomLocalization.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataGrid\Localization\CustomResourceManager\CustomResourceManager.xaml.cs">
+      <DependentUpon>CustomResourceManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataGrid\Localization\LocalizationViewModel.cs" />
+    <Compile Include="Examples\DataGrid\FilteringUI\CustomFilteringUI.xaml.cs">
+      <DependentUpon>CustomFilteringUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataGrid\FilteringUI\CustomOptionsTapCommand.cs" />
+    <Compile Include="Examples\DataGrid\FilteringUI\Player.cs" />
+    <Compile Include="Examples\DataGrid\FilteringUI\TemplateColumnFilteringUI.xaml.cs">
+      <DependentUpon>TemplateColumnFilteringUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataGrid\FilteringUI\ViewModel.cs" />
     <Compile Include="Examples\DataGrid\Filtering\City.cs" />
     <Compile Include="Examples\DataGrid\Filtering\ViewModel.cs" />
+    <Compile Include="Examples\DataGrid\LoadOnDemand\LoadMoreDataCommand\CustomLoadMoreDataCommand.cs" />
+    <Compile Include="Examples\DataGrid\LoadOnDemand\LoadMoreDataCommand\LoadMoreDataCommand.xaml.cs">
+      <DependentUpon>LoadMoreDataCommand.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataGrid\LoadOnDemand\LoadMoreDataCommand\LoadMoreDataCommandViewModel.cs" />
+    <Compile Include="Examples\DataGrid\LoadOnDemand\LoadOnDemandCollection\LoadOnDemand.xaml.cs">
+      <DependentUpon>LoadOnDemand.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataGrid\LoadOnDemand\LoadOnDemandEvent\LoadOnDemandEvent.xaml.cs">
+      <DependentUpon>LoadOnDemandEvent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataGrid\LoadOnDemand\LoadOnDemandCollection\LoadOnDemandViewModel.cs" />
+    <Compile Include="Examples\DataGrid\LoadOnDemand\LoadOnDemandEvent\LoadOnDemandEventViewModel.cs" />
+    <Compile Include="Examples\DataGrid\LoadOnDemand\Styling\LoadOnDemandAutoTemplate\LoadOnDemandAutoTemplate.xaml.cs">
+      <DependentUpon>LoadOnDemandAutoTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataGrid\LoadOnDemand\Styling\LoadOnDemandAutoTemplate\LoadOnDemandAutoTemplateViewModel.cs" />
+    <Compile Include="Examples\DataGrid\LoadOnDemand\Styling\LoadOnDemandRowStyle\LoadOnDemandRowStyle.xaml.cs">
+      <DependentUpon>LoadOnDemandRowStyle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataGrid\LoadOnDemand\Styling\LoadOnDemandRowStyle\LoadOnDemandRowStyleViewModel.cs" />
+    <Compile Include="Examples\DataGrid\LoadOnDemand\Styling\LoadOnDemandRowTemplate\LoadOnDemandRowTemplate.xaml.cs">
+      <DependentUpon>LoadOnDemandRowTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataGrid\LoadOnDemand\Styling\LoadOnDemandRowTemplate\LoadOnDemandRowTemplateViewModel.cs" />
+    <Compile Include="Examples\DataGrid\Localization\Resources\DataGridResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataGridResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="Examples\DataGrid\Selection\ViewModel.cs" />
     <Compile Include="Examples\DataGrid\Sorting\Country.cs" />
     <Compile Include="Examples\DataGrid\Decorations\StringToColorConverter.cs" />
@@ -182,6 +370,21 @@
       <DependentUpon>ProgrammaticSorting.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\DataGrid\Decorations\ViewModel.cs" />
+    <Compile Include="Examples\EntryExamples\Features\Events.xaml.cs">
+      <DependentUpon>Events.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\EntryExamples\Features\FontCustomization.xaml.cs">
+      <DependentUpon>FontCustomization.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\EntryExamples\Features\KeyFeatures.xaml.cs">
+      <DependentUpon>KeyFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\EntryExamples\GettingStarted\EntryGettingStartedXaml.xaml.cs">
+      <DependentUpon>EntryGettingStartedXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\EntryExamples\Features\Theme.xaml.cs">
+      <DependentUpon>Theme.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Examples\Gauge\Features\BarIndicators.xaml.cs">
       <DependentUpon>BarIndicators.xaml</DependentUpon>
     </Compile>
@@ -312,6 +515,29 @@
     <Compile Include="Examples\MaskedInput\GettingStarted\MaskedInputGettingStartedXaml.xaml.cs">
       <DependentUpon>MaskedInputGettingStartedXaml.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Examples\MaskedInput\Features\Theme.xaml.cs">
+      <DependentUpon>Theme.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\NumericInput\Features\Bindings.xaml.cs">
+      <DependentUpon>Bindings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\NumericInput\Features\Commands.xaml.cs">
+      <DependentUpon>Commands.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\NumericInput\Features\CommandsViewModel.cs" />
+    <Compile Include="Examples\NumericInput\Features\CustomStyles.xaml.cs">
+      <DependentUpon>CustomStyles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\NumericInput\Features\KeyFeatures.xaml.cs">
+      <DependentUpon>KeyFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\NumericInput\Features\ViewModel.cs" />
+    <Compile Include="Examples\NumericInput\GettingStarted\NumericInputGettingStartedXaml.xaml.cs">
+      <DependentUpon>NumericInputGettingStartedXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Path\GettingStarted\MultiPath.xaml.cs">
+      <DependentUpon>MultiPath.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Examples\Path\GettingStarted\PathGettingStartedXaml.xaml.cs">
       <DependentUpon>PathGettingStartedXaml.xaml</DependentUpon>
     </Compile>
@@ -384,55 +610,16 @@
     <Compile Include="Common\RootPage.xaml.cs">
       <DependentUpon>RootPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Examples\Chart\SelectionSeriesPage.xaml.cs">
-      <DependentUpon>SelectionSeriesPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Examples\Chart\Series\SplineArea.xaml.cs">
-      <DependentUpon>SplineArea.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Examples\Chart\Series\SplineSeriesPage.xaml.cs">
-      <DependentUpon>SplineSeriesPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Examples\Chart\Series\StackBarHorizontal.xaml.cs">
-      <DependentUpon>StackBarHorizontal.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Examples\Chart\Series\StackBarVertical.xaml.cs">
-      <DependentUpon>StackBarVertical.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Examples\Chart\Series\StackedArea.xaml.cs">
-      <DependentUpon>StackedArea.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Examples\Chart\Series\StackSplineArea.xaml.cs">
-      <DependentUpon>StackSplineArea.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Examples\Chart\Series\Scatter\ScatterAreaSeriesPage.xaml.cs">
-      <DependentUpon>ScatterAreaSeriesPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Examples\Chart\Series\Scatter\ScatterLineSeriesPage.xaml.cs">
-      <DependentUpon>ScatterLineSeriesPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Examples\Chart\Series\Scatter\ScatterPointSeriesPage.xaml.cs">
-      <DependentUpon>ScatterPointSeriesPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Examples\Chart\Series\Scatter\ScatterSplineAreaSeriesPage.xaml.cs">
-      <DependentUpon>ScatterSplineAreaSeriesPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Examples\Chart\Series\Scatter\ScatterSplineSeriesPage.xaml.cs">
-      <DependentUpon>ScatterSplineSeriesPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ViewModels\CategoricalData.cs" />
-    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\DataProvider.cs" />
     <Compile Include="ViewModels\MenuItem.cs" />
     <Compile Include="ViewModels\NumericalData.cs" />
     <Compile Include="ViewModels\SimpleData.cs" />
-    <Compile Include="Examples\Chart\TrackballSeriesPage.xaml.cs">
-      <DependentUpon>TrackballSeriesPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ViewModels\TemporalData.cs" />
-    <Compile Include="Examples\DataForm\DataFormCommitMode.xaml.cs">
+    <Compile Include="Examples\DataForm\Commit\DataFormCommitMode.xaml.cs">
       <DependentUpon>DataFormCommitMode.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Examples\DataForm\DataFormValidation.xaml.cs">
+    <Compile Include="Examples\DataForm\Validate\DataFormValidation.xaml.cs">
       <DependentUpon>DataFormValidation.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\DataForm\GroupLayouts\GridLayout\DataFormGridLayoutXaml.xaml.cs">
@@ -454,9 +641,6 @@
     <Compile Include="Examples\DataForm\Styling\Groups\DataFormStylingGroupsXaml.xaml.cs">
       <DependentUpon>DataFormStylingGroupsXaml.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Examples\DataForm\Styling\Editors\DataFormStylingEditors.cs">
-      <DependentUpon>DataFormStylingEditors.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Examples\DataForm\Styling\Groups\Customer.cs" />
     <Compile Include="Examples\DataForm\Styling\Groups\DataFormStylingGroupsCSharp.cs" />
     <Compile Include="Examples\DataForm\Source\DataFormCustomSource.xaml.cs">
@@ -466,23 +650,23 @@
     <Compile Include="Examples\DataForm\Source\CustomMetadataProvider.cs" />
     <Compile Include="Examples\DataForm\Source\DataSource.cs" />
     <Compile Include="Examples\DataForm\Source\DataFormSourceDataClass.cs" />
-    <Compile Include="Examples\DataForm\Styling\Editors\Customer.cs" />
+    <Compile Include="Examples\DataForm\Styling\Editors\DataFormStylingEditors\Customer.cs" />
     <Compile Include="Examples\DataForm\DataAnnotations\DisplayOptions\Person.cs" />
-    <Compile Include="Examples\DataForm\DataAnnotations\DisplayOptions\DataFormDataAnnotationsDisplayOptions.cs" />
+    <Compile Include="Examples\DataForm\DataAnnotations\DisplayOptions\DataFormDataAnnotationsDisplayOptionsCSharp.cs" />
     <Compile Include="Examples\DataForm\DataAnnotations\Ignore\Person.cs" />
-    <Compile Include="Examples\DataForm\DataAnnotations\Ignore\DataFormDataAnnotationsIgnore.cs" />
-    <Compile Include="Examples\DataForm\DataAnnotations\Readonly\DataFormDataAnnotationsReadonly.cs" />
+    <Compile Include="Examples\DataForm\DataAnnotations\Ignore\DataFormDataAnnotationsIgnoreCSharp.cs" />
+    <Compile Include="Examples\DataForm\DataAnnotations\Readonly\DataFormDataAnnotationsReadonlyCSharp.cs" />
     <Compile Include="Examples\DataForm\DataAnnotations\Readonly\Employee.cs" />
     <Compile Include="Examples\DataForm\DataAnnotations\DataSourceKey\LocationProvider.cs" />
     <Compile Include="Examples\DataForm\DataAnnotations\DataSourceKey\Source.cs" />
-    <Compile Include="Examples\DataForm\DataAnnotations\DataSourceKey\DataFormDataAnnotationsDataSourceKey.cs" />
+    <Compile Include="Examples\DataForm\DataAnnotations\DataSourceKey\DataFormDataAnnotationsDataSourceKeyCSharp.cs" />
     <Compile Include="Examples\DataForm\DataAnnotations\Validation\Person.cs" />
     <Compile Include="Examples\DataForm\DataAnnotations\Validation\OccupationValidatorAttribute.cs" />
-    <Compile Include="Examples\DataForm\DataAnnotations\Converter\DataFormDataAnnotationsConverter.cs" />
+    <Compile Include="Examples\DataForm\DataAnnotations\Converter\DataFormDataAnnotationsConverterCSharp.cs" />
     <Compile Include="Examples\DataForm\DataAnnotations\Converter\DecimalToDoublePropertyConverter.cs" />
     <Compile Include="Examples\DataForm\DataAnnotations\Converter\Item.cs" />
-    <Compile Include="Examples\DataForm\DataAnnotations\DIsplayValueFormat\VoteResults.cs" />
-    <Compile Include="Examples\DataForm\DataAnnotations\DIsplayValueFormat\DataFormDataAnnotationsDisplayValueFormat.cs" />
+    <Compile Include="Examples\DataForm\DataAnnotations\DisplayValueFormat\VoteResults.cs" />
+    <Compile Include="Examples\DataForm\DataAnnotations\DisplayValueFormat\DataFormDataAnnotationsDisplayValueFormatCSharp.cs" />
     <Compile Include="Examples\DataForm\DataAnnotations\Validation\DataFormDataAnnotationsValidation.xaml.cs">
       <DependentUpon>DataFormDataAnnotationsValidation.xaml</DependentUpon>
     </Compile>
@@ -570,10 +754,9 @@
     <Compile Include="Examples\AutoComplete\Features\SuggestionItemTemplate\SuggestionItemTemplate.xaml.cs">
       <DependentUpon>SuggestionItemTemplate.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Examples\Chart\Customization\CustomPalettePage.cs" />
+    <Compile Include="Examples\Chart\Customization\CustomPalette\CustomPaletteCSharp.cs" />
     <Compile Include="Examples\Chart\Customization\FormatAxisLabels\DateLabelFormatter.cs" />
-    <Compile Include="Examples\Chart\Customization\FormatAxisLabels\FormatAxisLabels.cs" />
-    <Compile Include="Examples\Chart\Customization\FormatAxisLabels\DataItem.cs" />
+    <Compile Include="Examples\Chart\Customization\FormatAxisLabels\FormatAxisLabelsCSharp.cs" />
     <Compile Include="Examples\DataForm\DataAnnotations\NativeConversionContext\SourceItem.cs" />
     <Compile Include="Examples\DataForm\DataAnnotations\NativeConversionContext\DataFormDataAnnotationsConversionContext.xaml.cs">
       <DependentUpon>DataFormDataAnnotationsConversionContext.xaml</DependentUpon>
@@ -622,13 +805,13 @@
       <HintPath>..\..\$(BinariesPath)\Portable\Telerik.Zip.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.270\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.2.4.0.282\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.270\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Platform.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.2.4.0.282\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Platform.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.270\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.2.4.0.282\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -636,14 +819,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Examples\Chart\TrackballSeriesPage.xaml">
-      <SubType>Designer</SubType>
+    <EmbeddedResource Include="Examples\DataForm\Commit\DataFormCommitMode.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Examples\DataForm\DataFormCommitMode.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Examples\DataForm\DataFormValidation.xaml">
+    <EmbeddedResource Include="Examples\DataForm\Validate\DataFormValidation.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Examples\DataForm\GroupLayouts\GridLayout\DataFormGridLayoutXaml.xaml">
@@ -661,10 +840,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Examples\DataForm\Styling\Editors\DataFormStylingEditors.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Examples\DataForm\Source\DataFormCustomSource.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
@@ -677,6 +852,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Examples\DataForm\GettingStarted\DataFormGettingStartedXaml.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examples\DataGrid\Localization\Resources\DataGridResource.de.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DataGridResource.de.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examples\DataGrid\Localization\Resources\DataGridResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DataGridResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Examples\SideDrawer\GettingStarted\SideDrawerGettingStartedXaml.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -746,126 +929,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Examples\Chart\Series\BarSeriesPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Examples\Chart\Series\BarSeriesHorizontal.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Examples\Chart\Series\StackBarHorizontal.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Examples\Chart\Series\StackBarVertical.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Examples\Chart\Series\LineSeriesPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Examples\Chart\Series\SplineSeriesPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Examples\Chart\Series\AreaSeriesPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Examples\Chart\Series\StackedArea.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Examples\Chart\Series\SplineArea.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Examples\Chart\Series\StackSplineArea.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Examples\Chart\PieChartPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Examples\Chart\SelectionSeriesPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Examples\Chart\PanZoomPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Examples\Chart\GridLineAnnotationsPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Examples\Chart\Series\Scatter\ScatterPointSeriesPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Examples\Chart\Series\Scatter\ScatterLineSeriesPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Examples\Chart\Series\Scatter\ScatterAreaSeriesPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Examples\Chart\Series\Scatter\ScatterSplineAreaSeriesPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Examples\Chart\Series\Scatter\ScatterSplineSeriesPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Examples\Chart\ChartGridLinesPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Examples\Calendar\Styling\Appointments.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -901,12 +964,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Examples\Chart\PlotBandAnnotationsPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Examples\ListView\ItemSpacing.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
@@ -925,7 +982,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Examples\DataForm\Editors\DataFormEditors.xaml">
+    <EmbeddedResource Include="Examples\DataForm\Editors\DataFormEditors\DataFormEditors.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -1188,10 +1245,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Examples\Chart\PieChartPercentage\PieChartPercentagePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Examples\AutoComplete\Features\CustomizeTokens\CustomizeTokens.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
@@ -1240,7 +1293,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Examples\Chart\Customization\PaletteMode\PaletteModePage.xaml">
+    <EmbeddedResource Include="Examples\Chart\Customization\PaletteMode\PaletteModeXaml.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -1258,13 +1311,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Examples\Chart\Legend\PieChartRadLegendXaml.xaml">
+    <EmbeddedResource Include="Examples\Chart\Legend\PieChartRadLegend\PieChartRadLegendXaml.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Examples\Chart\Legend\CartesianChartRadLegendXaml.xaml">
+    <EmbeddedResource Include="Examples\Chart\Legend\CartesianChartRadLegend\CartesianChartRadLegendXaml.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -1333,13 +1386,381 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\AutoComplete\Features\ClearButtonVisibility\ClearButtonVisibility.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\AutoComplete\Features\CustomNoResultsMessage\CustomNoResultsMessage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\DataGrid\LoadOnDemand\LoadOnDemandCollection\LoadOnDemand.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\NumericInput\GettingStarted\NumericInputGettingStartedXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\NumericInput\Features\Bindings.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\NumericInput\Features\CustomStyles.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\DataGrid\FilteringUI\CustomFilteringUI.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\DataGrid\FilteringUI\TemplateColumnFilteringUI.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ButtonExamples\GettingStarted\ButtonGettingStartedXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ButtonExamples\Features\ContentAlignment.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ButtonExamples\Features\BorderThickness.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ButtonExamples\Features\BackgroundImage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ButtonExamples\Features\KeyFeatures.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\EntryExamples\GettingStarted\EntryGettingStartedXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\EntryExamples\Features\Events.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\Customization\FormatAxisLabels\FormatAxisLabelsXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\Customization\CustomPalette\CustomPaletteXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\Customization\ChartGridLines\ChartGridLinesXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\Series\AreaSeries\AreaSeriesXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\Series\BarSeriesVertical\BarSeriesVerticalXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\Series\BarSeriesHorizontal\BarSeriesHorizontalXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\Series\LineSeries\LineSeriesXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\Series\SplineSeries\SplineSeriesXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\Series\SplineAreaSeries\SplineAreaSeriesXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\Series\StackBarSeriesHorizontal\StackBarSeriesHorizontalXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\Series\StackBarSeriesVertical\StackBarSeriesVerticalXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\Series\StackAreaSeries\StackAreaSeriesXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\Series\StackSplineAreaSeries\StackSplineAreaSeriesXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\Series\ScatterAreaSeries\ScatterAreaSeriesXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\Series\ScatterLineSeries\ScatterLineSeriesXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\Series\ScatterSplineSeries\ScatterSplineSeriesXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\Series\ScatterSplineAreaSeries\ScatterSplineAreaSeriesXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\Series\ScatterPointSeries\ScatterPointSeriesXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\Annotations\GridLineAnnotations\GridLineAnnotationsXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\Annotations\PlotBandAnnotations\PlotBandAnnotationsXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\Interactivity\SelectionSeries\SelectionSeriesXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\PieChart\PieChartPercentage\PieChartPercentageXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\Interactivity\TrackballSeries\TrackballSeriesXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\Interactivity\PanZoom\PanZoomXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Chart\PieChart\PieChartXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\EntryExamples\Features\Theme.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\EntryExamples\Features\FontCustomization.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\DataForm\DataAnnotations\Converter\DataFormDataAnnotationsConverterXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\DataForm\DataAnnotations\DataSourceKey\DataFormDataAnnotationsDataSourceKeyXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\DataForm\DataAnnotations\DisplayOptions\DataFormDataAnnotationsDisplayOptionsXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\DataForm\DataAnnotations\DisplayValueFormat\DataFormDataAnnotationsDisplayValueFormatXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\DataForm\DataAnnotations\Ignore\DataFormDataAnnotationsIgnoreXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\DataForm\DataAnnotations\Readonly\DataFormDataAnnotationsReadonlyXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\DataForm\Styling\Editors\DataFormStylingEditors\DataFormStylingEditorsXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\Path\GettingStarted\MultiPath.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\EntryExamples\Features\KeyFeatures.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\DataGrid\LoadOnDemand\LoadOnDemandEvent\LoadOnDemandEvent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\DataGrid\LoadOnDemand\Styling\LoadOnDemandRowStyle\LoadOnDemandRowStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examples\DataGrid\LoadOnDemand\Styling\LoadOnDemandRowTemplate\LoadOnDemandRowTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\DataGrid\LoadOnDemand\LoadMoreDataCommand\LoadMoreDataCommand.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\DataGrid\LoadOnDemand\Styling\LoadOnDemandAutoTemplate\LoadOnDemandAutoTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\DataGrid\Localization\CustomLocalizationManager\CustomLocalization.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examples\DataGrid\Localization\CustomResourceManager\CustomResourceManager.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\NumericInput\Features\KeyFeatures.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\NumericInput\Features\Commands.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\MaskedInput\Features\Theme.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
-  <Import Project="..\..\packages\Xamarin.Forms.2.3.4.270\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.270\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+  <Import Project="..\..\packages\Xamarin.Forms.2.4.0.282\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.4.0.282\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.3.4.270\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.3.4.270\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.4.0.282\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.4.0.282\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

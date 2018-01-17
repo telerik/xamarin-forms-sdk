@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:grid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             xmlns:data="clr-namespace:Telerik.XamarinForms.Common.Data;assembly=Telerik.XamarinForms.Common"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.DataGrid.FilteringUI"
+             x:Class="SDKBrowser.Examples.DataGrid.CustomFilteringUI">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Text="This example demonstrates how to create custom filtering UI for a specific column. The custom filtering UI could be observed in the 'Country' column."
+               FontSize="16"
+               Margin="10"
+               HorizontalOptions="CenterAndExpand"/>
+        <grid:RadDataGrid x:Name="grid" Grid.Row="1" ItemsSource="{Binding Players}"
+                          AutoGenerateColumns="False">
+            <grid:RadDataGrid.Columns>
+                <grid:DataGridTextColumn PropertyName="Name"/>
+                <grid:DataGridNumericalColumn PropertyName="Number"/>
+                <grid:DataGridTemplateColumn HeaderText="Country">
+                    <grid:DataGridTemplateColumn.CellContentTemplate>
+                        <DataTemplate>
+                            <Label Text="{Binding Country}"/>
+                        </DataTemplate>
+                    </grid:DataGridTemplateColumn.CellContentTemplate>
+                </grid:DataGridTemplateColumn>
+            </grid:RadDataGrid.Columns>
+        </grid:RadDataGrid>
+    </Grid>
+</ContentPage>

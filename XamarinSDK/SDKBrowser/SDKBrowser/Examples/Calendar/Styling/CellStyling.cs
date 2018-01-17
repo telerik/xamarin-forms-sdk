@@ -38,7 +38,7 @@ namespace SDKBrowser.Examples.Calendar
                     FontSize = dayNamesFontSize,
                     FontWeight = FontWeight.Bold,
                     ForegroundColor = Color.FromRgb(0, 122, 255)
-                };
+                }; 
             }
 
             var defaultStyle = new CalendarCellStyle

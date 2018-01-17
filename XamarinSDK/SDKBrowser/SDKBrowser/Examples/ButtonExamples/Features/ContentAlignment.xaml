@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.ButtonExamples.ContentAlignment">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Text="Horizontal - Left" Clicked="Horizontal_Left"/>
+        <Button Grid.Column="1" Text="Horizontal - Center" Clicked="Horizontal_Center"/>
+        <Button Grid.Column="2" Text="Horizontal - Right" Clicked="Horizontal_Right"/>
+
+        <Button Grid.Row="1" Text="Vertical - Top" Clicked="Vertical_Top"/>
+        <Button Grid.Row="1" Grid.Column="1" Text="Vertical - Center" Clicked="Vertical_Center"/>
+        <Button Grid.Row="1" Grid.Column="2" Text="Vertical - Botom" Clicked="Vertical_Bottom"/>
+
+        <telerikInput:RadButton x:Name="rb" Text="Text" Grid.Row="2" Grid.ColumnSpan="3"/>
+    </Grid>
+</ContentPage>

@@ -1,5 +1,4 @@
-﻿using SDKBrowser.Examples.DataForm.Editors.CustomEditor;
-using Telerik.XamarinForms.Input;
+﻿using Telerik.XamarinForms.Input;
 using Xamarin.Forms;
 
 namespace SDKBrowser.Examples.DataForm
@@ -9,9 +8,6 @@ namespace SDKBrowser.Examples.DataForm
         public CustomDataFormEditor()
         {
             InitializeComponent();
-            this.BindingContext = new SourceItem();
-            this.dataForm.CommitMode = CommitMode.Immediate;
-            this.dataForm.ValidationMode = ValidationMode.Manual;
 
             this.dataForm.RegisterEditor("Option", EditorType.Custom);
         }

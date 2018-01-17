@@ -4,6 +4,16 @@
     <Name>AutoComplete</Name>
     <Examples>
       <Example>
+        <PageName>CustomNoResultsMessage</PageName>
+        <Title>CustomNoResultsMessage</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <PageName>ClearButtonVisibility</PageName>
+        <Title>ClearButtonVisibility</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
         <PageName>AutoCompleteGettingStartedXaml</PageName>
         <Title>Getting Started - Xaml</Title>
         <GroupName>Getting Started</GroupName>
@@ -29,9 +39,9 @@
         <GroupName>Features</GroupName>
       </Example>
       <Example>
-         <PageName>CustomizeTokens</PageName>
-         <Title>Customized Tokens</Title>
-         <GroupName>Features</GroupName>
+        <PageName>CustomizeTokens</PageName>
+        <Title>Customized Tokens</Title>
+        <GroupName>Features</GroupName>
       </Example>
     </Examples>
   </XFControl>
@@ -56,6 +66,36 @@
       <Example>
         <PageName>AnimationsCSharp</PageName>
         <Title>Animations - Code</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+    </Examples>
+  </XFControl>
+  <XFControl>
+    <Name>ButtonExamples</Name>
+    <Examples>
+      <Example>
+        <PageName>ButtonGettingStartedXaml</PageName>
+        <Title>Getting Started - Xaml</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <PageName>BackgroundImage</PageName>
+        <Title>BackgroundImage</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <PageName>BorderThickness</PageName>
+        <Title>BorderThickness</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <PageName>ContentAlignment</PageName>
+        <Title>ContentAlignment</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <PageName>KeyFeatures</PageName>
+        <Title>KeyFeatures</Title>
         <GroupName>Features</GroupName>
       </Example>
     </Examples>
@@ -95,6 +135,7 @@
         <PageName>DayViewStyling</PageName>
         <Title>Calendar Dayview Styling</Title>
         <GroupName>Styling</GroupName>
+        <ExcludeFrom>Windows10</ExcludeFrom>
       </Example>
       <Example>
         <PageName>CalendarViewModesExample</PageName>
@@ -105,6 +146,7 @@
         <PageName>CalendarAppointmentTapped</PageName>
         <Title>DayView AppointmentTapped</Title>
         <GroupName>Features</GroupName>
+        <ExcludeFrom>Windows10</ExcludeFrom>
       </Example>
     </Examples>
   </XFControl>
@@ -122,123 +164,248 @@
         <GroupName>Getting Started</GroupName>
       </Example>
       <Example>
-        <PageName>LineSeriesPage</PageName>
-        <Title>Line</Title>
+        <PageName>LineSeriesXaml</PageName>
+        <Title>Line - Xaml</Title>
         <GroupName>Series</GroupName>
       </Example>
       <Example>
-        <PageName>AreaSeriesPage</PageName>
-        <Title>Area</Title>
+        <PageName>LineSeriesCSharp</PageName>
+        <Title>Line - Code</Title>
         <GroupName>Series</GroupName>
       </Example>
       <Example>
-        <PageName>BarSeriesHorizontal</PageName>
-        <Title>Horizontal Bar</Title>
+        <PageName>AreaSeriesXaml</PageName>
+        <Title>Area - Xaml</Title>
         <GroupName>Series</GroupName>
       </Example>
       <Example>
-        <PageName>BarSeriesPage</PageName>
-        <Title>Vertical Bar</Title>
+        <PageName>AreaSeriesCSharp</PageName>
+        <Title>Area - Code</Title>
         <GroupName>Series</GroupName>
       </Example>
       <Example>
-        <PageName>FormatAxisLabels</PageName>
-        <Title>Format Axis Labels</Title>
+        <PageName>BarSeriesHorizontalXaml</PageName>
+        <Title>Horizontal Bar - Xaml</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>BarSeriesHorizontalCSharp</PageName>
+        <Title>Horizontal Bar - Code</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>BarSeriesVerticalXaml</PageName>
+        <Title>Vertical Bar - Xaml</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>BarSeriesVerticalCSharp</PageName>
+        <Title>Vertical Bar - Code</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>FormatAxisLabelsXaml</PageName>
+        <Title>Format Axis Labels - Xaml</Title>
         <GroupName>Customization</GroupName>
       </Example>
       <Example>
-        <PageName>ChartGridLinesPage</PageName>
-        <Title>Grid lines</Title>
+        <PageName>FormatAxisLabelsCSharp</PageName>
+        <Title>Format Axis Labels - Code</Title>
         <GroupName>Customization</GroupName>
       </Example>
       <Example>
-        <PageName>CustomPalettePage</PageName>
-        <Title>Custom Palette</Title>
+        <PageName>ChartGridLinesXaml</PageName>
+        <Title>Grid Lines - Xaml</Title>
         <GroupName>Customization</GroupName>
       </Example>
       <Example>
-        <PageName>PaletteModePage</PageName>
-        <Title>Palette Mode</Title>
+        <PageName>ChartGridLinesCSharp</PageName>
+        <Title>Grid Lines - Code</Title>
         <GroupName>Customization</GroupName>
       </Example>
       <Example>
-        <PageName>GridLineAnnotationsPage</PageName>
-        <Title>Gridline</Title>
+        <PageName>CustomPaletteXaml</PageName>
+        <Title>Custom Palette - Xaml</Title>
+        <GroupName>Customization</GroupName>
+      </Example>
+      <Example>
+        <PageName>CustomPaletteCSharp</PageName>
+        <Title>Custom Palette - Code</Title>
+        <GroupName>Customization</GroupName>
+      </Example>
+      <Example>
+        <PageName>PaletteModeXaml</PageName>
+        <Title>Palette Mode - Xaml</Title>
+        <GroupName>Customization</GroupName>
+      </Example>
+      <Example>
+        <PageName>PaletteModeCSharp</PageName>
+        <Title>Palette Mode - Code</Title>
+        <GroupName>Customization</GroupName>
+      </Example>
+      <Example>
+        <PageName>GridLineAnnotationsXaml</PageName>
+        <Title>Gridline - Xaml</Title>
         <GroupName>Annotations</GroupName>
       </Example>
       <Example>
-        <PageName>PlotBandAnnotationsPage</PageName>
-        <Title>Plotband</Title>
+        <PageName>GridLineAnnotationsCSharp</PageName>
+        <Title>Gridline - Code</Title>
         <GroupName>Annotations</GroupName>
       </Example>
       <Example>
-        <PageName>ScatterAreaSeriesPage</PageName>
-        <Title>Scatter Area</Title>
+        <PageName>PlotBandAnnotationsXaml</PageName>
+        <Title>Plotband - Xaml</Title>
+        <GroupName>Annotations</GroupName>
+      </Example>
+      <Example>
+        <PageName>PlotBandAnnotationsCSharp</PageName>
+        <Title>Plotband - Code</Title>
+        <GroupName>Annotations</GroupName>
+      </Example>
+      <Example>
+        <PageName>ScatterAreaSeriesXaml</PageName>
+        <Title>Scatter Area - Xaml</Title>
         <GroupName>Series</GroupName>
       </Example>
       <Example>
-        <PageName>ScatterLineSeriesPage</PageName>
-        <Title>Scatter Line</Title>
+        <PageName>ScatterAreaSeriesCSharp</PageName>
+        <Title>Scatter Area - Code</Title>
         <GroupName>Series</GroupName>
       </Example>
       <Example>
-        <PageName>ScatterPointSeriesPage</PageName>
-        <Title>Scatter Point</Title>
+        <PageName>ScatterLineSeriesXaml</PageName>
+        <Title>Scatter Line - Xaml</Title>
         <GroupName>Series</GroupName>
       </Example>
       <Example>
-        <PageName>ScatterSplineAreaSeriesPage</PageName>
-        <Title>Scatter Spline Area</Title>
+        <PageName>ScatterLineSeriesCSharp</PageName>
+        <Title>Scatter Line - Code</Title>
         <GroupName>Series</GroupName>
       </Example>
       <Example>
-        <PageName>ScatterSplineSeriesPage</PageName>
-        <Title>Scatter Spline</Title>
+        <PageName>ScatterPointSeriesXaml</PageName>
+        <Title>Scatter Point - Xaml</Title>
         <GroupName>Series</GroupName>
       </Example>
       <Example>
-        <PageName>SplineArea</PageName>
-        <Title>Spline Area</Title>
+        <PageName>ScatterPointSeriesCSharp</PageName>
+        <Title>Scatter Point - Code</Title>
         <GroupName>Series</GroupName>
       </Example>
       <Example>
-        <PageName>SplineSeriesPage</PageName>
-        <Title>Spline</Title>
+        <PageName>ScatterSplineAreaSeriesXaml</PageName>
+        <Title>Scatter Spline Area - Xaml</Title>
         <GroupName>Series</GroupName>
       </Example>
       <Example>
-        <PageName>StackBarHorizontal</PageName>
-        <Title>Horizontal Stacked Bar</Title>
+        <PageName>ScatterSplineAreaSeriesCSharp</PageName>
+        <Title>Scatter Spline Area - Code</Title>
         <GroupName>Series</GroupName>
       </Example>
       <Example>
-        <PageName>StackBarVertical</PageName>
-        <Title>Vertical Stacked Bar</Title>
+        <PageName>ScatterSplineSeriesXaml</PageName>
+        <Title>Scatter Spline - Xaml</Title>
         <GroupName>Series</GroupName>
       </Example>
       <Example>
-        <PageName>StackedArea</PageName>
-        <Title>Stacked Area</Title>
+        <PageName>ScatterSplineSeriesCSharp</PageName>
+        <Title>Scatter Spline - Code</Title>
         <GroupName>Series</GroupName>
       </Example>
       <Example>
-        <PageName>StackSplineArea</PageName>
-        <Title>Stack Spline Area</Title>
+        <PageName>SplineAreaSeriesXaml</PageName>
+        <Title>Spline Area - Xaml</Title>
         <GroupName>Series</GroupName>
       </Example>
       <Example>
-        <PageName>SelectionSeriesPage</PageName>
-        <Title>Selection</Title>
+        <PageName>SplineAreaSeriesCSharp</PageName>
+        <Title>Spline Area - Code</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>SplineSeriesXaml</PageName>
+        <Title>Spline - Xaml</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>SplineSeriesCSharp</PageName>
+        <Title>Spline - Code</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>StackBarSeriesHorizontalXaml</PageName>
+        <Title>Horizontal Stacked Bar - Xaml</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>StackBarSeriesHorizontalCSharp</PageName>
+        <Title>Horizontal Stacked Bar - Code</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>StackBarSeriesVerticalXaml</PageName>
+        <Title>Vertical Stacked Bar - Xaml</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>StackBarSeriesVerticalCSharp</PageName>
+        <Title>Vertical Stacked Bar - Code</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>StackAreaSeriesXaml</PageName>
+        <Title>Stacked Area - Xaml</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>StackAreaSeriesCSharp</PageName>
+        <Title>Stacked Area - Code</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>StackSplineAreaSeriesXaml</PageName>
+        <Title>Stack Spline Area - Xaml</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>StackSplineAreaSeriesCSharp</PageName>
+        <Title>Stack Spline Area - Code</Title>
+        <GroupName>Series</GroupName>
+      </Example>
+      <Example>
+        <PageName>SelectionSeriesXaml</PageName>
+        <Title>Selection - Xaml</Title>
         <GroupName>Interactivity</GroupName>
       </Example>
       <Example>
-        <PageName>PanZoomPage</PageName>
-        <Title><![CDATA[Pan & Zoom]]></Title>
+        <PageName>SelectionSeriesCSharp</PageName>
+        <Title>Selection - Code</Title>
+        <GroupName>Interactivity</GroupName>
+      </Example>
+      <Example>
+        <PageName>TrackballSeriesXaml</PageName>
+        <Title>Trackball - Xaml</Title>
+        <GroupName>Interactivity</GroupName>
+      </Example>
+      <Example>
+        <PageName>TrackballSeriesCSharp</PageName>
+        <Title>Trackball - Code</Title>
+        <GroupName>Interactivity</GroupName>
+      </Example>
+      <Example>
+        <PageName>PanZoomXaml</PageName>
+        <Title>Pan &amp; Zoom - Xaml</Title>
+        <GroupName>Interactivity</GroupName>
+      </Example>
+      <Example>
+        <PageName>PanZoomCSharp</PageName>
+        <Title>Pan &amp; Zoom - Code</Title>
         <GroupName>Interactivity</GroupName>
       </Example>
       <Example>
         <PageName>CartesianChartRadLegendXaml</PageName>
-        <Title>CartesianChart RadLegend - Xml</Title>
+        <Title>CartesianChart RadLegend - Xaml</Title>
         <GroupName>Legend</GroupName>
       </Example>
       <Example>
@@ -248,7 +415,7 @@
       </Example>
       <Example>
         <PageName>PieChartRadLegendXaml</PageName>
-        <Title>PieChart RadLegend - Xml</Title>
+        <Title>PieChart RadLegend - Xaml</Title>
         <GroupName>Legend</GroupName>
       </Example>
       <Example>
@@ -257,19 +424,317 @@
         <GroupName>Legend</GroupName>
       </Example>
       <Example>
-        <PageName>PieChartPage</PageName>
-        <Title>Pie Chart</Title>
+        <PageName>PieChartXaml</PageName>
+        <Title>Pie Chart - Xaml</Title>
         <GroupName>Pie Chart</GroupName>
       </Example>
       <Example>
-        <PageName>PieChartPercentagePage</PageName>
-        <Title>Pie Chart Percentage</Title>
+        <PageName>PieChartCSharp</PageName>
+        <Title>Pie Chart - Code</Title>
         <GroupName>Pie Chart</GroupName>
       </Example>
       <Example>
-        <PageName>TrackballSeriesPage</PageName>
-        <Title>Trackball</Title>
-        <GroupName>Interactivity</GroupName>
+        <PageName>PieChartPercentageXaml</PageName>
+        <Title>Pie Chart Percentage - Xaml</Title>
+        <GroupName>Pie Chart</GroupName>
+      </Example>
+      <Example>
+        <PageName>PieChartPercentageCSharp</PageName>
+        <Title>Pie Chart Percentage - Code</Title>
+        <GroupName>Pie Chart</GroupName>
+      </Example>
+    </Examples>
+  </XFControl>
+  <XFControl>
+    <Name>DataForm</Name>
+    <Examples>
+      <Example>
+        <Title>Getting Started - Xaml</Title>
+        <PageName>DataFormGettingStartedXaml</PageName>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <Title>Getting Started - Code</Title>
+        <PageName>DataFormGettingStartedCSharp</PageName>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <Title>Converter - Xaml</Title>
+        <PageName>DataFormDataAnnotationsConverterXaml</PageName>
+        <GroupName>Data Annotations</GroupName>
+      </Example>
+      <Example>
+        <Title>Converter - Code</Title>
+        <PageName>DataFormDataAnnotationsConverterCSharp</PageName>
+        <GroupName>Data Annotations</GroupName>
+      </Example>
+      <Example>
+        <Title>NativeConversionContext</Title>
+        <PageName>DataFormDataAnnotationsConversionContext</PageName>
+        <GroupName>Data Annotations</GroupName>
+      </Example>
+      <Example>
+        <Title>DataSourceKey - Xaml</Title>
+        <PageName>DataFormDataAnnotationsDataSourceKeyXaml</PageName>
+        <GroupName>Data Annotations</GroupName>
+      </Example>
+      <Example>
+        <Title>DataSourceKey - Code</Title>
+        <PageName>DataFormDataAnnotationsDataSourceKeyCSharp</PageName>
+        <GroupName>Data Annotations</GroupName>
+      </Example>
+      <Example>
+        <Title>DisplayOptions - Xaml</Title>
+        <PageName>DataFormDataAnnotationsDisplayOptionsXaml</PageName>
+        <GroupName>Data Annotations</GroupName>
+      </Example>
+      <Example>
+        <Title>DisplayOptions - Code</Title>
+        <PageName>DataFormDataAnnotationsDisplayOptionsCSharp</PageName>
+        <GroupName>Data Annotations</GroupName>
+      </Example>
+      <Example>
+        <Title>DisplayValueFormat - Xaml</Title>
+        <PageName>DataFormDataAnnotationsDisplayValueFormatXaml</PageName>
+        <GroupName>Data Annotations</GroupName>
+      </Example>
+      <Example>
+        <Title>DisplayValueFormat - Code</Title>
+        <PageName>DataFormDataAnnotationsDisplayValueFormatCSharp</PageName>
+        <GroupName>Data Annotations</GroupName>
+      </Example>
+      <Example>
+        <Title>Ignore - Xaml</Title>
+        <PageName>DataFormDataAnnotationsIgnoreXaml</PageName>
+        <GroupName>Data Annotations</GroupName>
+      </Example>
+      <Example>
+        <Title>Ignore - Code</Title>
+        <PageName>DataFormDataAnnotationsIgnoreCSharp</PageName>
+        <GroupName>Data Annotations</GroupName>
+      </Example>
+      <Example>
+        <Title>Read only - Xaml</Title>
+        <PageName>DataFormDataAnnotationsReadonlyXaml</PageName>
+        <GroupName>Data Annotations</GroupName>
+      </Example>
+      <Example>
+        <Title>Read only - Code</Title>
+        <PageName>DataFormDataAnnotationsReadonlyCSharp</PageName>
+        <GroupName>Data Annotations</GroupName>
+      </Example>
+      <Example>
+        <Title>Validation</Title>
+        <PageName>DataFormDataAnnotationsValidation</PageName>
+        <GroupName>Data Annotations</GroupName>
+      </Example>
+      <Example>
+        <Title>Editors</Title>
+        <PageName>DataFormEditors</PageName>
+        <GroupName>Editors</GroupName>
+      </Example>
+      <Example>
+        <ExcludeFrom>Windows10,IOS</ExcludeFrom>
+        <Title>DataForm Custom Editor</Title>
+        <PageName>CustomDataFormEditor</PageName>
+        <GroupName>Editors</GroupName>
+      </Example>
+      <Example>
+        <Title>Groups</Title>
+        <PageName>DataFormGroups</PageName>
+        <GroupName>Groups</GroupName>
+      </Example>
+      <Example>
+        <Title>Groups Styling - Xaml</Title>
+        <PageName>DataFormStylingGroupsXaml</PageName>
+        <GroupName>Styling</GroupName>
+      </Example>
+      <Example>
+        <Title>Groups Styling - Code</Title>
+        <PageName>DataFormStylingGroupsCSharp</PageName>
+        <GroupName>Styling</GroupName>
+      </Example>
+      <Example>
+        <ExcludeFrom>Windows10,IOS</ExcludeFrom>
+        <Title>Custom DecimalEditor Formatter - Code</Title>
+        <PageName>Styling.Editors.CustomDecimalEditorFormatter.DataFormCustomDecimalEditorFormatterCSharp</PageName>
+        <GroupName>Styling</GroupName>
+      </Example>
+      <Example>
+        <ExcludeFrom>Windows10,IOS</ExcludeFrom>
+        <Title>Custom DecimalEditor Formatter - Xaml</Title>
+        <PageName>Styling.Editors.CustomDecimalEditorFormatter.DataFormCustomDecimalEditorFormatterXaml</PageName>
+        <GroupName>Styling</GroupName>
+      </Example>
+      <Example>
+        <Title>Editors Styling - Xaml</Title>
+        <PageName>DataFormStylingEditorsXaml</PageName>
+        <GroupName>Styling</GroupName>
+      </Example>
+      <Example>
+        <Title>Editors Styling - Code</Title>
+        <PageName>DataFormStylingEditorsCSharp</PageName>
+        <GroupName>Styling</GroupName>
+      </Example>
+      <Example>
+        <Title>GridLayout - Xaml</Title>
+        <PageName>DataFormGridLayoutXaml</PageName>
+        <GroupName>Layouts</GroupName>
+      </Example>
+      <Example>
+        <Title>GridLayout - Code</Title>
+        <PageName>DataFormGridLayoutCSharp</PageName>
+        <GroupName>Layouts</GroupName>
+      </Example>
+      <Example>
+        <Title>StackLayout - Xaml</Title>
+        <PageName>DataFormStackLayoutXaml</PageName>
+        <GroupName>Layouts</GroupName>
+      </Example>
+      <Example>
+        <Title>StackLayout - Code</Title>
+        <PageName>DataFormStackLayoutCSharp</PageName>
+        <GroupName>Layouts</GroupName>
+      </Example>
+      <Example>
+        <Title>Group Layout Selector - Xaml</Title>
+        <PageName>DataFormLayoutSelectorXaml</PageName>
+        <GroupName>Layouts</GroupName>
+      </Example>
+      <Example>
+        <Title>Group Layout Selector - Code</Title>
+        <PageName>DataFormLayoutSelectorCSharp</PageName>
+        <GroupName>Layouts</GroupName>
+      </Example>
+      <Example>
+        <Title>Custom Source</Title>
+        <PageName>DataFormCustomSource</PageName>
+        <GroupName>Source</GroupName>
+      </Example>
+      <Example>
+        <Title>Data Class</Title>
+        <PageName>DataFormSourceDataClass</PageName>
+        <GroupName>Source</GroupName>
+      </Example>
+      <Example>
+        <Title>CommitModes</Title>
+        <PageName>DataFormCommitMode</PageName>
+        <GroupName>Commit/Validate</GroupName>
+      </Example>
+      <Example>
+        <Title>Validation</Title>
+        <PageName>DataFormValidation</PageName>
+        <GroupName>Commit/Validate</GroupName>
+      </Example>
+    </Examples>
+  </XFControl>
+  <XFControl>
+    <Name>DataGrid</Name>
+    <Examples>
+      <Example>
+        <Title>UI Selection</Title>
+        <PageName>GridUISelection</PageName>
+        <GroupName>Selection</GroupName>
+      </Example>
+      <Example>
+        <Title>Programmatic Selection</Title>
+        <PageName>ProgrammaticSelection</PageName>
+        <GroupName>Selection</GroupName>
+      </Example>
+      <Example>
+        <Title>Programmatic Filtering</Title>
+        <PageName>ProgrammaticFiltering</PageName>
+        <GroupName>Filtering</GroupName>
+      </Example>
+      <Example>
+        <Title>Programmatic Grouping</Title>
+        <PageName>ProgrammaticGrouping</PageName>
+        <GroupName>Grouping</GroupName>
+      </Example>
+      <Example>
+        <Title>Programmatic Sorting</Title>
+        <PageName>ProgrammaticSorting</PageName>
+        <GroupName>Sorting</GroupName>
+      </Example>
+      <Example>
+        <Title>Grid Lines</Title>
+        <PageName>GridLines</PageName>
+        <GroupName>Decorations</GroupName>
+      </Example>
+      <Example>
+        <Title>LoadOnDemand</Title>
+        <PageName>LoadOnDemand</PageName>
+        <GroupName>LoadOnDemand</GroupName>
+      </Example>
+      <Example>
+        <Title>LoadOnDemand Event</Title>
+        <PageName>LoadOnDemandEvent</PageName>
+        <GroupName>LoadOnDemand</GroupName>
+      </Example>
+      <Example>
+        <Title>LoadMoreData Command</Title>
+        <PageName>LoadMoreDataCommand</PageName>
+        <GroupName>LoadOnDemand</GroupName>
+      </Example>
+      <Example>
+        <Title>Styling - LoadOnDemandAutoTemplate</Title>
+        <PageName>LoadOnDemandAutoTemplate</PageName>
+        <GroupName>LoadOnDemand</GroupName>
+      </Example>
+      <Example>
+        <Title>Styling - LoadOnDemandRowTemplate</Title>
+        <PageName>LoadOnDemandRowTemplate</PageName>
+        <GroupName>LoadOnDemand</GroupName>
+      </Example>
+      <Example>
+        <Title>Styling - LoadOnDemandRowStyle</Title>
+        <PageName>LoadOnDemandRowStyle</PageName>
+        <GroupName>LoadOnDemand</GroupName>
+      </Example>
+      <Example>
+        <Title>Custom Localization Manager</Title>
+        <PageName>CustomLocalization</PageName>
+        <GroupName>Localization</GroupName>
+      </Example>
+      <Example>
+        <Title>Custom Resource Manager</Title>
+        <PageName>CustomResourceManager</PageName>
+        <GroupName>Localization</GroupName>
+      </Example>
+      <Example>
+        <Title>Custom FilteringUI</Title>
+        <PageName>CustomFilteringUI</PageName>
+        <GroupName>FilteringUI</GroupName>
+      </Example>
+    </Examples>
+  </XFControl>
+  <XFControl>
+    <Name>EntryExamples</Name>
+    <Examples>
+      <Example>
+        <PageName>EntryGettingStartedXaml</PageName>
+        <Title>Getting Started - Xaml</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <PageName>KeyFeatures</PageName>
+        <Title>KeyFeatures</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <PageName>Events</PageName>
+        <Title>Events</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <PageName>FontCustomization</PageName>
+        <Title>FontCustomization</Title>
+        <GroupName>Features</GroupName>
+      </Example>
+      <Example>
+        <PageName>Theme</PageName>
+        <Title>Theme</Title>
+        <GroupName>Features</GroupName>
       </Example>
     </Examples>
   </XFControl>
@@ -514,188 +979,89 @@
     </Examples>
   </XFControl>
   <XFControl>
-    <Name>DataForm</Name>
+    <Name>MaskedInput</Name>
     <Examples>
       <Example>
-        <Title>Getting Started - Xaml</Title>
-        <PageName>DataFormGettingStartedXaml</PageName>
+        <Title>Getting Started</Title>
+        <PageName>MaskedInputGettingStartedXaml</PageName>
         <GroupName>Getting Started</GroupName>
       </Example>
       <Example>
-        <Title>Getting Started - Code</Title>
-        <PageName>DataFormGettingStartedCSharp</PageName>
-        <GroupName>Getting Started</GroupName>
-      </Example>
-      <Example>
-        <Title>Converter</Title>
-        <PageName>DataFormDataAnnotationsConverter</PageName>
-        <GroupName>Data Annotations</GroupName>
-      </Example>
-      <Example>
-        <Title>NativeConversionContext</Title>
-        <PageName>DataFormDataAnnotationsConversionContext</PageName>
-        <GroupName>Data Annotations</GroupName>
-      </Example>
-      <Example>
-        <Title>DataSourceKey</Title>
-        <PageName>DataFormDataAnnotationsDataSourceKey</PageName>
-        <GroupName>Data Annotations</GroupName>
-      </Example>
-      <Example>
-        <Title>DisplayOptions</Title>
-        <PageName>DataFormDataAnnotationsDisplayOptions</PageName>
-        <GroupName>Data Annotations</GroupName>
-      </Example>
-      <Example>
-        <Title>DisplayValueFormat</Title>
-        <PageName>DataFormDataAnnotationsDisplayValueFormat</PageName>
-        <GroupName>Data Annotations</GroupName>
-      </Example>
-      <Example>
-        <Title>Ignore</Title>
-        <PageName>DataFormDataAnnotationsIgnore</PageName>
-        <GroupName>Data Annotations</GroupName>
-      </Example>
-      <Example>
-        <Title>Read only</Title>
-        <PageName>DataFormDataAnnotationsReadonly</PageName>
-        <GroupName>Data Annotations</GroupName>
-      </Example>
-      <Example>
         <Title>Validation</Title>
-        <PageName>DataFormDataAnnotationsValidation</PageName>
-        <GroupName>Data Annotations</GroupName>
+        <PageName>Validation</PageName>
+        <GroupName>Features</GroupName>
       </Example>
       <Example>
-        <Title>Editors</Title>
-        <PageName>DataFormEditors</PageName>
-        <GroupName>Editors</GroupName>
+        <Title>Configurator</Title>
+        <PageName>Configurator</PageName>
+        <GroupName>Features</GroupName>
       </Example>
       <Example>
-        <ExcludeFrom>Windows10,IOS</ExcludeFrom>
-        <Title>DataForm Custom Editor</Title>
-        <PageName>CustomDataFormEditor</PageName>
-        <GroupName>Editors</GroupName>
+        <Title>RegexMask</Title>
+        <PageName>RegexMask</PageName>
+        <GroupName>Features</GroupName>
       </Example>
       <Example>
-        <Title>Groups</Title>
-        <PageName>DataFormGroups</PageName>
-        <GroupName>Groups</GroupName>
+        <Title>Commands</Title>
+        <PageName>Commands</PageName>
+        <GroupName>Features</GroupName>
       </Example>
       <Example>
-        <Title>Groups Styling - Code</Title>
-        <PageName>DataFormStylingGroupsCSharp</PageName>
-        <GroupName>Styling</GroupName>
+        <Title>Events</Title>
+        <PageName>Events</PageName>
+        <GroupName>Features</GroupName>
       </Example>
       <Example>
-        <Title>Groups Styling - Xaml</Title>
-        <PageName>DataFormStylingGroupsXaml</PageName>
-        <GroupName>Styling</GroupName>
-      </Example>
-      <Example>
-        <ExcludeFrom>Windows10,IOS</ExcludeFrom>
-        <Title>Custom DecimalEditor Formatter - Code</Title>
-        <PageName>Styling.Editors.CustomDecimalEditorFormatter.DataFormCustomDecimalEditorFormatterCSharp</PageName>
-        <GroupName>Styling</GroupName>
-      </Example>
-      <Example>
-        <ExcludeFrom>Windows10,IOS</ExcludeFrom>
-        <Title>Custom DecimalEditor Formatter - Xaml</Title>
-        <PageName>Styling.Editors.CustomDecimalEditorFormatter.DataFormCustomDecimalEditorFormatterXaml</PageName>
-        <GroupName>Styling</GroupName>
-      </Example>
-      <Example>
-        <Title>Editors Styling</Title>
-        <PageName>DataFormStylingEditors</PageName>
-        <GroupName>Styling</GroupName>
-      </Example>
-      <Example>
-        <Title>GridLayout - Xaml</Title>
-        <PageName>DataFormGridLayoutXaml</PageName>
-        <GroupName>Layouts</GroupName>
-      </Example>
-      <Example>
-        <Title>GridLayout - Code</Title>
-        <PageName>DataFormGridLayoutCSharp</PageName>
-        <GroupName>Layouts</GroupName>
-      </Example>
-      <Example>
-        <Title>StackLayout - Xaml</Title>
-        <PageName>DataFormStackLayoutXaml</PageName>
-        <GroupName>Layouts</GroupName>
-      </Example>
-      <Example>
-        <Title>StackLayout - Code</Title>
-        <PageName>DataFormStackLayoutCSharp</PageName>
-        <GroupName>Layouts</GroupName>
-      </Example>
-      <Example>
-        <Title>Group Layout Selector - Xaml</Title>
-        <PageName>DataFormLayoutSelectorXaml</PageName>
-        <GroupName>Layouts</GroupName>
-      </Example>
-      <Example>
-        <Title>Group Layout Selector - Code</Title>
-        <PageName>DataFormLayoutSelectorCSharp</PageName>
-        <GroupName>Layouts</GroupName>
-      </Example>
-      <Example>
-        <Title>Custom Source</Title>
-        <PageName>DataFormCustomSource</PageName>
-        <GroupName>Source</GroupName>
-      </Example>
-      <Example>
-        <Title>Data Class</Title>
-        <PageName>DataFormSourceDataClass</PageName>
-        <GroupName>Source</GroupName>
-      </Example>
-      <Example>
-        <Title>CommitModes</Title>
-        <PageName>DataFormCommitMode</PageName>
-        <GroupName>Commit/Validate</GroupName>
-      </Example>
-      <Example>
-        <Title>Validation</Title>
-        <PageName>DataFormValidation</PageName>
-        <GroupName>Commit/Validate</GroupName>
+        <Title>Theme</Title>
+        <PageName>Theme</PageName>
+        <GroupName>Features</GroupName>
       </Example>
     </Examples>
   </XFControl>
   <XFControl>
-    <Name>DataGrid</Name>
+    <Name>NumericInput</Name>
     <Examples>
       <Example>
-        <Title>UI Selection</Title>
-        <PageName>GridUISelection</PageName>
-        <GroupName>Selection</GroupName>
+        <PageName>NumericInputGettingStartedXaml</PageName>
+        <Title>Getting Started - Xaml</Title>
+        <GroupName>Getting Started</GroupName>
       </Example>
       <Example>
-        <Title>Programmatic Selection</Title>
-        <PageName>ProgrammaticSelection</PageName>
-        <GroupName>Selection</GroupName>
+        <PageName>KeyFeatures</PageName>
+        <Title>KeyFeatures</Title>
+        <GroupName>Features</GroupName>
       </Example>
       <Example>
-        <Title>Programmatic Filtering</Title>
-        <PageName>ProgrammaticFiltering</PageName>
-        <GroupName>Filtering</GroupName>
+        <PageName>Bindings</PageName>
+        <Title>Bindings</Title>
+        <GroupName>Features</GroupName>
       </Example>
       <Example>
-        <Title>Programmatic Grouping</Title>
-        <PageName>ProgrammaticGrouping</PageName>
-        <GroupName>Grouping</GroupName>
+        <PageName>Commands</PageName>
+        <Title>Commands</Title>
+        <GroupName>Features</GroupName>
       </Example>
       <Example>
-        <Title>Programmatic Sorting</Title>
-        <PageName>ProgrammaticSorting</PageName>
-        <GroupName>Sorting</GroupName>
-      </Example>
-      <Example>
-        <Title>Grid Lines</Title>
-        <PageName>GridLines</PageName>
-        <GroupName>Decorations</GroupName>
+        <PageName>CustomStyles</PageName>
+        <Title>CustomStyles</Title>
+        <GroupName>Features</GroupName>
       </Example>
     </Examples>
-    
+  </XFControl>
+  <XFControl>
+    <Name>Path</Name>
+    <Examples>
+      <Example>
+        <PageName>PathGettingStartedXaml</PageName>
+        <Title>Getting Started</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <PageName>MultiPath</PageName>
+        <Title>MultiPath</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+    </Examples>
   </XFControl>
   <XFControl>
     <Name>Rating</Name>
@@ -723,41 +1089,6 @@
       <Example>
         <Title>Configurator</Title>
         <PageName>Configurator</PageName>
-        <GroupName>Features</GroupName>
-      </Example>
-    </Examples>
-  </XFControl>
-  <XFControl>
-    <Name>MaskedInput</Name>
-    <Examples>
-	<Example>
-        <Title>Getting Started</Title>
-        <PageName>MaskedInputGettingStartedXaml</PageName>
-        <GroupName>Getting Started</GroupName>
-      </Example>
-	   <Example>
-        <Title>Validation</Title>
-        <PageName>Validation</PageName>
-        <GroupName>Features</GroupName>
-      </Example>
-      <Example>
-        <Title>Configurator</Title>
-        <PageName>Configurator</PageName>
-        <GroupName>Features</GroupName>
-      </Example>
-      <Example>
-        <Title>RegexMask</Title>
-        <PageName>RegexMask</PageName>
-        <GroupName>Features</GroupName>
-      </Example>
-      <Example>
-        <Title>Commands</Title>
-        <PageName>Commands</PageName>
-        <GroupName>Features</GroupName>
-      </Example>
-      <Example>
-        <Title>Events</Title>
-        <PageName>Events</PageName>
         <GroupName>Features</GroupName>
       </Example>
     </Examples>
@@ -816,6 +1147,26 @@
     </Examples>
   </XFControl>
   <XFControl>
+    <Name>SpreadStreamProcessing</Name>
+    <Examples>
+      <Example>
+        <PageName>SpreadStreamProcessingGettingStartedXaml</PageName>
+        <Title>Getting Started - Xaml</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <PageName>SpreadStreamProcessingGettingStartedCSharp</PageName>
+        <Title>Getting Started - Code</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+      <Example>
+        <PageName>Styling</PageName>
+        <Title>Styling</Title>
+        <GroupName>Getting Started</GroupName>
+      </Example>
+    </Examples>
+  </XFControl>
+  <XFControl>
     <Name>TabView</Name>
     <Examples>
       <Example>
@@ -853,7 +1204,7 @@
         <Title>ItemsSource</Title>
         <GroupName>Features</GroupName>
       </Example>
-    </Examples>    
+    </Examples>
   </XFControl>
   <XFControl>
     <Name>ZipLibrary</Name>
@@ -877,36 +1228,6 @@
         <PageName>ZipLibraryEncryptionCSharp</PageName>
         <Title>Encryption - Code</Title>
         <GroupName>Encryption</GroupName>
-      </Example>
-    </Examples>
-  </XFControl>
-  <XFControl>
-    <Name>SpreadStreamProcessing</Name>
-    <Examples>
-      <Example>
-        <PageName>SpreadStreamProcessingGettingStartedXaml</PageName>
-        <Title>Getting Started - Xaml</Title>
-        <GroupName>Getting Started</GroupName>
-      </Example>
-      <Example>
-        <PageName>SpreadStreamProcessingGettingStartedCSharp</PageName>
-        <Title>Getting Started - Code</Title>
-        <GroupName>Getting Started</GroupName>
-      </Example>
-      <Example>
-        <PageName>Styling</PageName>
-        <Title>Styling</Title>
-        <GroupName>Getting Started</GroupName>
-      </Example>
-    </Examples>
-  </XFControl>
-   <XFControl>
-    <Name>Path</Name>
-    <Examples>
-      <Example>
-        <PageName>PathGettingStartedXaml</PageName>
-        <Title>Getting Started</Title>
-        <GroupName>Getting Started</GroupName>
       </Example>
     </Examples>
   </XFControl>

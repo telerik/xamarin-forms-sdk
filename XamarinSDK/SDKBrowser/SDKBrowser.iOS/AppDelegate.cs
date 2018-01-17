@@ -17,7 +17,9 @@ namespace SDKBrowser.iOS
             Forms.Init();
             
             this.LoadApplication(new App());
+#if TESTS
             Xamarin.Calabash.Start();
+#endif
 
             return base.FinishedLaunching(app, options);
         }

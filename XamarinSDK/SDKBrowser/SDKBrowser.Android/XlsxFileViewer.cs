@@ -10,51 +10,60 @@ using Xamarin.Forms;
 [assembly: Xamarin.Forms.Dependency(typeof(XlsxFileViewer))]
 namespace SDKBrowser.Droid
 {
-	public class XlsxFileViewer : IXlsxFileViewer
-	{
-		public Task View(Stream stream, string filename)
-		{
-			string root = null;
+    public class XlsxFileViewer : IXlsxFileViewer
+    {
+        public async Task View(Stream stream, string filename)
+        {
+            if ((int)Android.OS.Build.VERSION.SdkInt >= 23)
+            {
+                bool result = await PermissionsHelper.RequestStorrageAccess();
+                if (!result)
+                {
+                    return;
+                }
+            }
 
-			if (Android.OS.Environment.IsExternalStorageEmulated)
-			{
-				root = Android.OS.Environment.ExternalStorageDirectory.ToString();
-			}
-			else
-			{
-				root = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-			}
+            string root = null;
 
-			Java.IO.File myDir = new Java.IO.File(root + "/Telerik");
-			myDir.Mkdir();
-			Java.IO.File file = new Java.IO.File(myDir, filename);
+            if (Android.OS.Environment.IsExternalStorageEmulated)
+            {
+                root = Android.OS.Environment.ExternalStorageDirectory.ToString();
+            }
+            else
+            {
+                root = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            }
 
-			if (file.Exists())
-			{
-				file.Delete();
-			}
+            Java.IO.File myDir = new Java.IO.File(root + "/Telerik");
+            myDir.Mkdir();
+            Java.IO.File file = new Java.IO.File(myDir, filename);
 
-			using (FileOutputStream outs = new FileOutputStream(file))
-			{
-				stream.Seek(0, SeekOrigin.Begin);
-				byte[] buffer = new byte[stream.Length];
-				stream.Read(buffer, 0, buffer.Length);
-				outs.Write(buffer);
-			}
+            if (file.Exists())
+            {
+                file.Delete();
+            }
 
-			if (file.Exists())
-			{
-				Android.Net.Uri path = Android.Net.Uri.FromFile(file);
+            using (FileOutputStream outs = new FileOutputStream(file))
+            {
+                stream.Seek(0, SeekOrigin.Begin);
+                byte[] buffer = new byte[stream.Length];
+                stream.Read(buffer, 0, buffer.Length);
+                outs.Write(buffer);
+            }
 
-				string extension = Android.Webkit.MimeTypeMap.GetFileExtensionFromUrl(Android.Net.Uri.FromFile(file).ToString());
-				string mimeType = Android.Webkit.MimeTypeMap.Singleton.GetMimeTypeFromExtension(extension);
-				Intent intent = new Intent(Intent.ActionView);
-				intent.SetDataAndType(path, mimeType);
+            if (file.Exists())
+            {
+                Android.Net.Uri path = Android.Net.Uri.FromFile(file);
 
-				Forms.Context.StartActivity(Intent.CreateChooser(intent, "Choose App"));
-			}
+                string extension = Android.Webkit.MimeTypeMap.GetFileExtensionFromUrl(Android.Net.Uri.FromFile(file).ToString());
+                string mimeType = Android.Webkit.MimeTypeMap.Singleton.GetMimeTypeFromExtension(extension);
+                Intent intent = new Intent(Intent.ActionView);
+                intent.SetDataAndType(path, mimeType);
 
-			return Task.CompletedTask;
-		}
-	}
+                Forms.Context.StartActivity(Intent.CreateChooser(intent, "Choose App"));
+            }
+
+            return;
+        }
+    }
 }

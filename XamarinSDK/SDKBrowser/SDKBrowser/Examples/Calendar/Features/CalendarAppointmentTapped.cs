@@ -9,6 +9,7 @@ namespace SDKBrowser.Examples.Calendar
     {
         public CalendarAppointmentTapped()
         {
+            // >> calendar-gettingstarted-appointmentssource-csharp
             var date = new DateTime(2017, 4, 12);
 
             var calendar = new RadCalendar
@@ -33,24 +34,36 @@ namespace SDKBrowser.Examples.Calendar
                         Title = "Birthday",
                         StartDate = date.AddHours(2).AddMinutes(30),
                         EndDate = date.AddHours(3),
-                        IsAllDay = true
+                        IsAllDay = true,
+                        Color = Color.Orange
+                    },
+                     new Appointment {
+                        Title = "Football Game",
+                        StartDate = date.AddDays(1).AddHours(2).AddMinutes(30),
+                        EndDate = date.AddDays(1).AddHours(3),
+                        Color = Color.Green
                     }
                 }
             };
+            // << calendar-gettingstarted-appointmentssource-csharp
 
+            // >> calendar-features-setviewmode-csharp
             calendar.NativeControlLoaded += (sender, e) =>
             {
                 calendar.TrySetViewMode(CalendarViewMode.Day);
             };
+            // << calendar-features-setviewmode-csharp
 
+            // >> calendar-features-appointmenttapped-csharp
             calendar.AppointmentTapped += (sender, e) =>
             {
                 DisplayAlert(e.Appointment.Title, e.Appointment.Detail, "OK");
             };
-
+            // << calendar-features-appointmenttapped-csharp
             this.Content = calendar;
         }
 
+        // >> calendar-getting-started-appointment-class
         public class Appointment : IAppointment
         {
             public DateTime StartDate { get; set; }
@@ -65,5 +78,6 @@ namespace SDKBrowser.Examples.Calendar
 
             public string Detail { get; set; }
         }
+        // << calendar-getting-started-appointment-class
     }
 }

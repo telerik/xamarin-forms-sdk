@@ -1,9 +1,5 @@
 ﻿using SDKBrowser.Common;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace SDKBrowser
@@ -11,17 +7,13 @@ namespace SDKBrowser
     public partial class RootPage : ContentPage
     {
         private ExamplesLoader examplesLoader;
-        private ListView listView;
 
         public RootPage(ExamplesLoader loader)
             : this()
         {
             this.examplesLoader = loader;
             this.Title = "Examples";
-            this.listView = new ListView();
             this.listView.ItemsSource = examplesLoader.GetAvailableControls();
-            this.Content = listView;
-            this.listView.ItemTapped += listView_ItemTapped;
         }
 
         public RootPage()

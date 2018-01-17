@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="SDKBrowser.Examples.AutoComplete.ClearButtonVisibility"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.AutoComplete.Features.ClearButtonVisibility"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input">
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Is clear button visible"/>
+            <Switch x:Name="toggle" IsToggled="True"/>
+        </StackLayout>
+        <telerikInput:RadAutoComplete x:Name="autoComplete"
+                                      Watermark="Search Here..."
+                                      ItemsSource="{Binding Source}"
+                                      TextSearchPath="Name"
+                                      IsClearButtonVisible="{Binding Source={x:Reference toggle}, Path=IsToggled}"/>
+    </StackLayout>
+</ContentPage>

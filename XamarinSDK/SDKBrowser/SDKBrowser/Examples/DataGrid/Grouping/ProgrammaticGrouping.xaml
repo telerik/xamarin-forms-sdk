@@ -22,6 +22,7 @@
                 Grid.Column="2" />
         <grid:RadDataGrid Grid.Row="1"
                           Grid.ColumnSpan="3" 
+                          BackgroundColor="White"
                           x:Name="grid"
                           ItemsSource="{Binding}"/>
     </Grid>

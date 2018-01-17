@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="SDKBrowser.Examples.AutoComplete.CustomNoResultsMessage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.AutoComplete.Features.CustomNoResultsMessage"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input">
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <Label Text="Enter custom NoResultsMessage"/>
+        <Entry x:Name="text"/>
+        <telerikInput:RadAutoComplete x:Name="autoComplete"
+                                      Watermark="Search Here..."
+                                      ItemsSource="{Binding Source}"
+                                      TextSearchPath="Name"
+                                      NoResultsMessage="{Binding Source={x:Reference text}, Path=Text}"/>
+    </StackLayout>
+</ContentPage>

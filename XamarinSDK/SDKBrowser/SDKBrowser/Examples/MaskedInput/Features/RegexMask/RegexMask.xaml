@@ -6,25 +6,27 @@
              x:Class="SDKBrowser.Examples.MaskedInput.RegexMask">
     <StackLayout>
         <Label Text="E-mail :"/>
+        <!--  >> maskedinput-features-regex-extensions-validation-xaml  -->
         <telerik:RadMaskedInput MaskType="Regex"
                                 InvalidInputErrorText="Invalid E-Mail format!"
                                 ErrorColor="Red"
                                 WatermarkText="Enter E-mail"
                                 Mask="{x:Static extensions:MaskExtensions.Email}"/>
+        <!--  << maskedinput-features-regex-extensions-validation-xaml  -->
         <Label Text="IP :"/>
         <telerik:RadMaskedInput MaskType="Regex"
                                 InvalidInputErrorText="Invalid IP!"
                                 ErrorColor="Red"
                                 WatermarkText="Enter IP"
                                 Mask="{x:Static extensions:MaskExtensions.IP}"/>
-        
         <Label Text="Date (yyyy/dd/mm) :"/>
+        <!--  >> maskedinput-features-regex-custom-validation-xaml  -->
         <telerik:RadMaskedInput MaskType="Regex"
                                 InvalidInputErrorText="Invalid date format!"
                                 ErrorColor="Red"
                                 WatermarkText="Enter Date"
                                 Mask="^[0-9]{4}\/(30|31|[0-2]{0,1}[0-9]{1})\/(10|11|12|[0-9]{1})$"/>
-
+        <!--  << maskedinput-features-regex-custom-validation-xaml  -->
         <Label Text="Time (HH:MM) :"/>
         <telerik:RadMaskedInput MaskType="Regex"
                                 InvalidInputErrorText="Invalid time format!"

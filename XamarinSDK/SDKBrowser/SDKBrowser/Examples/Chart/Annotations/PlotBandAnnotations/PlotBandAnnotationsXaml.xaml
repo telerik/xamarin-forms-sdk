@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.Chart.Series.PlotBandAnnotations"
+             xmlns:telerikChart="clr-namespace:Telerik.XamarinForms.Chart;assembly=Telerik.XamarinForms.Chart"
+             x:Class="SDKBrowser.Examples.Chart.PlotBandAnnotationsXaml">
+    <!-- >> chart-annotations-plotband-xaml -->
+    <telerikChart:RadCartesianChart>
+        <telerikChart:RadCartesianChart.BindingContext>
+            <local:ViewModel />
+        </telerikChart:RadCartesianChart.BindingContext>
+        <telerikChart:RadCartesianChart.HorizontalAxis>
+            <telerikChart:CategoricalAxis LabelFitMode="MultiLine"
+                                          PlotMode="OnTicks" />
+        </telerikChart:RadCartesianChart.HorizontalAxis>
+        <telerikChart:RadCartesianChart.VerticalAxis>
+            <telerikChart:NumericalAxis x:Name="verticalAxis" />
+        </telerikChart:RadCartesianChart.VerticalAxis>
+        <telerikChart:RadCartesianChart.Series>
+            <telerikChart:AreaSeries ValueBinding="Value"
+                                     CategoryBinding="Category"
+                                     ItemsSource="{Binding Data}" />
+        </telerikChart:RadCartesianChart.Series>
+        <telerikChart:RadCartesianChart.Annotations>
+            <telerikChart:CartesianPlotBandAnnotation StrokeThickness="2"
+                                                      Stroke="Green"
+                                                      Fill="#2F66FF33"
+                                                      Axis="{x:Reference verticalAxis}"
+                                                      From="{Binding StartThreshold}"
+                                                      To="{Binding EndThreshold}" />
+        </telerikChart:RadCartesianChart.Annotations>
+    </telerikChart:RadCartesianChart>
+    <!-- << chart-annotations-plotband-xaml -->
+</ContentPage>

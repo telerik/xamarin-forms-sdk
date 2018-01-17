@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.EntryExamples.KeyFeatures">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- >> entry-features-borderstyledefinition -->
+            <telerikInput:BorderStyle x:Key="EntryBorderStyle" BorderThickness="1" BorderColor="#4488F6" CornerRadius="8" />
+            <!-- << entry-features-borderstyledefinition -->
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+        <Label Text="Entry with default watermark" />
+        <!-- >> entry-features-watermark -->
+        <telerikInput:RadEntry WatermarkText="First Name" />
+        <!-- << entry-features-watermark -->
+        <Label Text="Entry with custom watermark" />
+        <!-- >> entry-features-customwatermark -->
+        <telerikInput:RadEntry WatermarkText="First Name" WatermarkTextColor="#6EA3FF" />
+        <!-- << entry-features-customwatermark -->
+        <Label Text="Password entry" />
+        <!-- >> entry-features-password -->
+        <telerikInput:RadEntry IsPassword="True" />
+        <!-- << entry-features-password -->
+        <Label Text="Entry with border style" />
+        <!-- >> entry-features-borderstyle -->
+        <telerikInput:RadEntry x:Name="entry" WatermarkText="First Name" BorderStyle="{StaticResource EntryBorderStyle}"/>
+        <!-- << entry-features-borderstyle -->
+    </StackLayout>
+</ContentPage>

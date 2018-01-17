@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.Chart.Customization.CustomPalette"
+             xmlns:telerikChart="clr-namespace:Telerik.XamarinForms.Chart;assembly=Telerik.XamarinForms.Chart"
+             x:Class="SDKBrowser.Examples.Chart.CustomPaletteXaml">
+    <!-- >> chart-customization-custompalette-xaml -->
+    <telerikChart:RadCartesianChart>
+        <telerikChart:RadCartesianChart.BindingContext>
+            <local:ViewModel />
+        </telerikChart:RadCartesianChart.BindingContext>
+        <telerikChart:RadCartesianChart.VerticalAxis>
+            <telerikChart:NumericalAxis />
+        </telerikChart:RadCartesianChart.VerticalAxis>
+        <telerikChart:RadCartesianChart.HorizontalAxis>
+            <telerikChart:CategoricalAxis LabelFitMode="MultiLine" />
+        </telerikChart:RadCartesianChart.HorizontalAxis>
+        <telerikChart:RadCartesianChart.Series>
+            <telerikChart:BarSeries ValueBinding="Value"
+                                    CategoryBinding="Category"
+                                    CombineMode="Stack"
+                                    ItemsSource="{Binding Data1}" />
+            <telerikChart:BarSeries ValueBinding="Value"
+                                    CategoryBinding="Category"
+                                    CombineMode="Stack"
+                                    ItemsSource="{Binding Data2}" />
+            <telerikChart:BarSeries ValueBinding="Value"
+                                    CategoryBinding="Category"
+                                    CombineMode="Stack"
+                                    ItemsSource="{Binding Data3}" />
+        </telerikChart:RadCartesianChart.Series>
+        <telerikChart:RadCartesianChart.Palette>
+            <telerikChart:ChartPalette>
+                <telerikChart:ChartPalette.Entries>
+                    <telerikChart:PaletteEntry FillColor="Blue"
+                                               StrokeColor="Red" />
+                    <telerikChart:PaletteEntry FillColor="Gray"
+                                               StrokeColor="Yellow" />
+                </telerikChart:ChartPalette.Entries>
+            </telerikChart:ChartPalette>
+        </telerikChart:RadCartesianChart.Palette>
+    </telerikChart:RadCartesianChart>
+    <!-- << chart-customization-custompalette-xaml -->
+</ContentPage>

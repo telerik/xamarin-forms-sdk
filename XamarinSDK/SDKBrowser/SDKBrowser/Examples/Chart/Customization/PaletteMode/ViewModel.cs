@@ -1,19 +1,37 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.Generic;
+using SDKBrowser.Common;
+using Telerik.XamarinForms.Chart;
 
 namespace SDKBrowser.Examples.Chart.Customization.PaletteMode
 {
-    public class ViewModel
+    public class ViewModel : ViewModelBase
     {
-        public ViewModel()
+        private SeriesPaletteMode selectedMode;
+
+        public IEnumerable<CategoricalData> Data { get; private set; }
+        public IEnumerable<SeriesPaletteMode> Modes { get; private set; }
+
+        public SeriesPaletteMode SelectedMode
         {
-            this.Data = GetCategoricalData();
+            get
+            {
+                return this.selectedMode;
+            }
+            set
+            {
+                if (this.selectedMode != value)
+                {
+                    this.selectedMode = value;
+                    this.OnPropertyChanged();
+                }
+            }
         }
 
-        public ObservableCollection<CategoricalData> Data { get; set; }
-
-        private static ObservableCollection<CategoricalData> GetCategoricalData()
+        public ViewModel()
         {
-            var data = new ObservableCollection<CategoricalData>  {
+            this.Data = new[]
+            {
                 new CategoricalData { Category = "A", Value = 0.69 },
                 new CategoricalData { Category = "B", Value = 0.85 },
                 new CategoricalData { Category = "C", Value = 1.05 },
@@ -21,7 +39,9 @@ namespace SDKBrowser.Examples.Chart.Customization.PaletteMode
                 new CategoricalData { Category = "E", Value = 0.78 },
             };
 
-            return data;
+            this.Modes = (IEnumerable<SeriesPaletteMode>)
+                Enum.GetValues(typeof(SeriesPaletteMode));
+            this.SelectedMode = SeriesPaletteMode.DataPoint;
         }
     }
 }

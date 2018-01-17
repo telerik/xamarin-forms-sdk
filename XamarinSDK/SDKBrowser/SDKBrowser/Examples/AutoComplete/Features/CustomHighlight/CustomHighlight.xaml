@@ -4,9 +4,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:SDKBrowser.Examples.AutoComplete.Features.CustomHighlight"
              xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input">
-    <Grid BackgroundColor="Silver">
+    <Grid>
         <telerikInput:RadAutoComplete x:Name="AutoComplete"
-                                      BackgroundColor="White"
                                       CompletionMode="Contains"
                                       ItemsSource="{Binding Source}"
                                       TextSearchPath="Name"

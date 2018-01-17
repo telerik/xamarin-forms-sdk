@@ -4,10 +4,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:SDKBrowser.Examples.AutoComplete.Features.DataBinding"
              xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input">
-    <StackLayout BackgroundColor="Silver">
+    <StackLayout>
         <!--  >> autocomplete-features-data-binding  -->
         <telerikInput:RadAutoComplete x:Name="AutoComplete"
-                                      BackgroundColor="White"
                                       ImagePath="ImageSource"
                                       ItemsSource="{Binding Source}"
                                       TextSearchPath="Name"

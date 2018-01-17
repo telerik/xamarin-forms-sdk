@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.ButtonExamples.ButtonGettingStartedXaml">
+    <StackLayout WidthRequest="200" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+        <!-- >> button-getting-started-xaml -->
+        <telerikInput:RadButton x:Name="button" 
+                                Text="Click me!"  
+                                BorderThickness="2" 
+                                BorderColor="#4488F6" 
+                                Clicked="button_Clicked"/>
+        <!-- << button-getting-started-xaml -->
+    </StackLayout>
+</ContentPage>

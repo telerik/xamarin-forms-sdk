@@ -15,6 +15,8 @@ namespace SDKBrowser.Droid
             base.OnCreate(bundle);
             Forms.Init(this, bundle);
 
+            PermissionsHelper.Activity = this;
+
             this.LoadApplication(new App());
         }
 
