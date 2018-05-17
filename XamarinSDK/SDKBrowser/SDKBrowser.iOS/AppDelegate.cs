@@ -1,6 +1,5 @@
 ﻿using Foundation;
-using SDKBrowser.Common;
-using Telerik.XamarinForms.Common.iOS;
+using SDKBrowser.Services;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
@@ -27,12 +26,14 @@ namespace SDKBrowser.iOS
         [Export("NavigateTo:")]
         public NSString NavigateTo(NSString allParams)
         {
-            string[] parts = allParams.ToString().Split(',');
-            string pageName = parts[0];
-            string pageTitle = parts[1];
-            Xamarin.Forms.Application.Current.MainPage.Navigation.PushAsync(PageFactory.GetPage(pageName, pageTitle, true));
+            var parts = allParams.ToString().Split(',');
+            var controlName = parts[0];
+            var exampleName = parts[1];
 
-            return new NSString("done");
+            var backdoorService = DependencyService.Get<IBackdoorService>();
+            var exampleTitle = backdoorService.NavigateToExample(controlName, exampleName);
+
+            return new NSString(exampleTitle);
         }
     }
 }

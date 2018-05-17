@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--  >> datagrid-customfiltering-control-xaml  -->
+<grid:DataGridFilterControlBase xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:grid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             x:Class="SDKBrowser.Examples.DataGridControl.FilteringUICategory.CustomFilteringUIExample.TemplateColumnFilteringUI">
+    <StackLayout Margin="10">
+        <Picker x:Name="descriptorOperatorPicker" 
+                TextColor="Black"/>
+        <Entry x:Name="textEntry"/>
+    </StackLayout>
+</grid:DataGridFilterControlBase>
+<!--  << datagrid-customfiltering-control-xaml  -->

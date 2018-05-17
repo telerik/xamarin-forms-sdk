@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SDKBrowser.Examples.AutoCompleteControl.FeaturesCategory.KeyFeaturesExample.KeyFeatures"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input">
+    <StackLayout>
+        <Label Text="Tokens Support" />
+        <!-- >> autocomplete-features-tokenssupport -->
+       <telerikInput:RadAutoComplete x:Name="autoCompleteTokens"
+                                ItemsSource="{Binding Source}"
+                                TextSearchPath="Name" 
+                                DisplayMode="Tokens" />
+        <!-- << autocomplete-features-tokenssupport -->
+        <Label Text="Filtering behavior" />
+        <!-- >> autocomplete-features-filter -->
+        <telerikInput:RadAutoComplete x:Name="autoCompleteFilter" 
+                                ItemsSource="{Binding Source}" 
+                                TextSearchPath="Name" 
+                                CompletionMode="Contains" />
+        <!-- << autocomplete-features-filter -->
+        <Label Text="Watermark" />
+        <!-- >> autocomplete-features-watermark -->
+       <telerikInput:RadAutoComplete x:Name="autoCompleteWatermark" 
+                                ItemsSource="{Binding Source}" 
+                                TextSearchPath="Name" 
+                                Watermark="Enter name..." />
+        <!-- << autocomplete-features-watermark -->
+        <Label Text="NoResults Message" />
+        <!-- >> autocomplete-features-noresultsmessage -->
+        <telerikInput:RadAutoComplete x:Name="autoCompleteNoResults" 
+                                ItemsSource="{Binding Source}" 
+                                TextSearchPath="Name"  
+                                NoResultsMessage="there are no matching items..." />
+        <!-- << autocomplete-features-noresultsmessage -->
+        <Label Text="Search Threshold" />
+        <!-- >> autocomplete-features-searchthreshold -->
+       <telerikInput:RadAutoComplete x:Name="autoCompleteSearchTreshold"
+                                ItemsSource="{Binding Source}" 
+                                TextSearchPath="Name" 
+                                SearchThreshold="3" />
+        <!-- << autocomplete-features-searchthreshold -->
+        <Label Text="Show/Hide Suggestion View" />
+        <!-- >> autocomplete-features-suggestionview -->
+        <telerikInput:RadAutoComplete x:Name="autoCompleteSuggestionView" 
+                                ItemsSource="{Binding Source}" 
+                                TextSearchPath="Name"  
+                                ShowSuggestionView="False" />
+        <!-- << autocomplete-features-suggestionview -->
+        <Label Text="ListView with the search results" />
+        <ListView ItemsSource="{Binding FilteredItems, Source={x:Reference autoCompleteSuggestionView}}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentView>

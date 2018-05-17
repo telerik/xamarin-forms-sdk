@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView x:Class="SDKBrowser.Examples.AutoCompleteControl.FeaturesCategory.DataBindingExample.DataBinding"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.AutoCompleteControl.FeaturesCategory.DataBindingExample"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input">
+    <StackLayout>
+        <!--  >> autocomplete-features-data-binding  -->
+        <telerikInput:RadAutoComplete x:Name="AutoComplete"
+                                      ImagePath="ImageSource"
+                                      ItemsSource="{Binding Source}"
+                                      TextSearchPath="Name"
+                                      Watermark="Search here...">
+            <telerikInput:RadAutoComplete.SuggestionViewHeight>
+                <OnPlatform x:TypeArguments="x:Double"
+                            Android="200"
+                            WinPhone="400"
+                            iOS="400" />
+            </telerikInput:RadAutoComplete.SuggestionViewHeight>
+            <telerikInput:RadAutoComplete.BindingContext>
+                <local:ViewModel />
+            </telerikInput:RadAutoComplete.BindingContext>
+        </telerikInput:RadAutoComplete>
+        <!--  << autocomplete-features-data-binding  -->
+    </StackLayout>
+</ContentView>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.NumericInputControl.FeaturesCategory.KeyFeaturesExample.KeyFeatures">
+    <StackLayout VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+        <Label Text="NumericInput with defined Value" />
+        <!-- >> numericinput-features-value -->
+        <telerikInput:RadNumericInput x:Name="numericInput" Value="12" />
+        <!-- << numericinput-features-value -->
+        <Label Text="NumericInput with Minimum=0 and Maximum=15" />
+        <!-- >> numericinput-features-minmax -->
+        <telerikInput:RadNumericInput x:Name="numericMinMax" Minimum="0" Maximum="15" />
+        <!-- << numericinput-features-minmax -->
+        <Label Text="NumericInput with Step=10" />
+        <!-- >> numericinput-features-step -->
+        <telerikInput:RadNumericInput x:Name="numericStep" Step="10" />
+        <!-- << numericinput-features-step -->
+        <Label Text="NumericInput with Buttons Text applied" />
+        <!-- >> numericinput-features-btntext -->
+        <telerikInput:RadNumericInput x:Name="numericBtnText" IncreaseButtonText=" &gt;" DecreaseButtonText=" &lt;" />
+        <!-- << numericinput-features-btntext -->
+        <Label Text="NumericInput in read-only mode" />
+        <!-- >> numericinput-features-readonly -->
+        <telerikInput:RadNumericInput x:Name="numericReadOnly" IsReadOnly="True" />
+        <!-- << numericinput-features-readonly -->
+        <Label Text="NumericInput with StringFormat" />
+        <!-- >> numericinput-features-strformat -->
+        <telerikInput:RadNumericInput x:Name="numericStrFormat" StringFormat="{}{0:C2}" />
+        <!-- << numericinput-features-strformat -->
+    </StackLayout>
+</ContentView>

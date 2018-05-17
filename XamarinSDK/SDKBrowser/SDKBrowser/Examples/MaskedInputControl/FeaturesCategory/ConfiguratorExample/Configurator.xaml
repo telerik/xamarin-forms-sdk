@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerik="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.MaskedInputControl.FeaturesCategory.ConfiguratorExample.Configurator">
+    <StackLayout Margin="50">
+        <telerik:RadMaskedInput x:Name="input" WatermarkText="Watermark" WatermarkTextColor="LightGreen" Mask="\\\0a" Placeholder="#" />
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Value - "/>
+            <Entry Text="{Binding Source={x:Reference input}, Path=InputValue, Mode=TwoWay}" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Text - "/>
+            <Label Text="{Binding Source={x:Reference input}, Path=DisplayedText}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Mask - "/>
+            <Entry Text="{Binding Source={x:Reference input}, Path=Mask, Mode=TwoWay}" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="MaskType - "/>
+            <Label Text="{Binding Source={x:Reference input}, Path=MaskType}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Placeholder - "/>
+            <Label Text="{Binding Source={x:Reference input}, Path=Placeholder}"/>
+        </StackLayout>
+    </StackLayout>
+</ContentView>

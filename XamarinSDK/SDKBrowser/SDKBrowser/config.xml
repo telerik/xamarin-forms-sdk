@@ -1,0 +1,1799 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <HeaderTitle>Telerik UI for Xamarin</HeaderTitle>
+  <HeaderIcon>Logo.png</HeaderIcon>
+  <SplashTitle>Developer Focused Examples</SplashTitle>
+  <SplashIcon>Splash.png</SplashIcon>
+  <SplashInfo>This application contains variety of scenarios demonstrating different capabilities and customizations of the Telerik UI for Xamarin component suite</SplashInfo>
+  <SourceUrl>https://github.com/telerik/xamarin-forms-sdk/tree/master/XamarinSDK/SDKBrowser/SDKBrowser</SourceUrl>
+  <Controls>
+    <Control>
+      <Name>AutoComplete</Name>
+      <Title>AutoComplete</Title>
+      <Icon>AutoComplete.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>AutoCompleteGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>AutoCompleteGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>KeyFeatures</Page>
+              <Name>KeyFeatures</Name>
+              <Title>Key Features</Title>
+            </Example>
+            <Example>
+              <Page>CustomNoResultsMessage</Page>
+              <Name>CustomNoResultsMessage</Name>
+              <Title>Custom No Results Message</Title>
+            </Example>
+            <Example>
+              <Page>ClearButtonVisibility</Page>
+              <Name>ClearButtonVisibility</Name>
+              <Title>Clear Button Visibility</Title>
+            </Example>
+            <Example>
+              <Page>DataBinding</Page>
+              <Name>DataBinding</Name>
+              <Title>Data Binding</Title>
+            </Example>
+            <Example>
+              <Page>SuggestionItemTemplate</Page>
+              <Name>SuggestionItemTemplate</Name>
+              <Title>Suggestion Item Template</Title>
+            </Example>
+            <Example>
+              <Page>CustomHighlight</Page>
+              <Name>CustomHighlight</Name>
+              <Title>Custom Text Highlight</Title>
+            </Example>
+            <Example>
+              <Page>CustomizedTokens</Page>
+              <Name>CustomizedTokens</Name>
+              <Title>Customized Tokens</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>Barcode</Name>
+      <Title>Barcode</Title>
+      <Icon>Barcode.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>BarcodeGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>KeyFeatures</Page>
+              <Name>KeyFeatures</Name>
+              <Title>Key Features</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>BusyIndicator</Name>
+      <Title>BusyIndicator</Title>
+      <Icon>BusyIndicator.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>BusyIndicatorGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>BusyIndicatorGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>AnimationsXaml</Page>
+              <Name>Animations</Name>
+              <Title>Animations - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>AnimationsCSharp</Page>
+              <Name>Animations</Name>
+              <Title>Animations - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>Button</Name>
+      <Title>Button</Title>
+      <Icon>Button.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>ButtonGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>KeyFeatures</Page>
+              <Name>KeyFeatures</Name>
+              <Title>Key Features</Title>
+            </Example>
+            <Example>
+              <Page>BackgroundImage</Page>
+              <Name>BackgroundImage</Name>
+              <Title>Background Image</Title>
+            </Example>
+            <Example>
+              <Page>BorderThickness</Page>
+              <Name>BorderThickness</Name>
+              <Title>Border Thickness</Title>
+            </Example>
+            <Example>
+              <Page>ContentAlignment</Page>
+              <Name>ContentAlignment</Name>
+              <Title>Content Alignment</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>HowTo</Name>
+          <Title>How To</Title>
+          <Examples>
+            <Example>
+              <Page>ButtonCircular</Page>
+              <Name>ButtonCircular</Name>
+              <Title>Circular Button</Title>
+            </Example>
+            <Example>
+              <Page>ButtonDisabledTextColor</Page>
+              <Name>ButtonDisabledTextColor</Name>
+              <Title>Disabled Button Text Color</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>Calendar</Name>
+      <Title>Calendar</Title>
+      <Icon>Calendar.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>CalendarGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>CalendarGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Styling</Name>
+          <Title>Styling</Title>
+          <Examples>
+            <Example>
+              <Page>Appointments</Page>
+              <Name>Appointments</Name>
+              <Title>Appointments</Title>
+            </Example>
+            <Example>
+              <Page>CellStyling</Page>
+              <Name>CellStyling</Name>
+              <Title>Cell Styling</Title>
+            </Example>
+            <Example>
+              <Page>CalendarCustomRenderer</Page>
+              <Name>CustomRenderer</Name>
+              <Title>Custom Renderer</Title>
+            </Example>
+            <Example>
+              <Page>ElementsDisplayMode</Page>
+              <Name>ElementsDisplayMode</Name>
+              <Title>Elements Display Mode</Title>
+            </Example>
+            <Example>
+              <Page>DayViewStyling</Page>
+              <Name>DayViewStyling</Name>
+              <Title>Day View Styling</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>CalendarViewModes</Page>
+              <Name>CalendarViewModes</Name>
+              <Title>View Modes</Title>
+            </Example>
+            <Example>
+              <Page>CalendarAppointmentTapped</Page>
+              <Name>CalendarAppointmentTapped</Name>
+              <Title>Day View Appointment Tapped</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>Chart</Name>
+      <Title>Chart</Title>
+      <Icon>Chart.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>ChartGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>ChartGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Series</Name>
+          <Title>Series</Title>
+          <Examples>
+            <Example>
+              <Page>LineSeriesXaml</Page>
+              <Name>LineSeries</Name>
+              <Title>Line - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>LineSeriesCSharp</Page>
+              <Name>LineSeries</Name>
+              <Title>Line - Code</Title>
+            </Example>
+            <Example>
+              <Page>AreaSeriesXaml</Page>
+              <Name>AreaSeries</Name>
+              <Title>Area - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>AreaSeriesCSharp</Page>
+              <Name>AreaSeries</Name>
+              <Title>Area - Code</Title>
+            </Example>
+            <Example>
+              <Page>BarSeriesHorizontalXaml</Page>
+              <Name>BarSeriesHorizontal</Name>
+              <Title>Horizontal Bar - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>BarSeriesHorizontalCSharp</Page>
+              <Name>BarSeriesHorizontal</Name>
+              <Title>Horizontal Bar - Code</Title>
+            </Example>
+            <Example>
+              <Page>BarSeriesVerticalXaml</Page>
+              <Name>BarSeriesVertical</Name>
+              <Title>Vertical Bar - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>BarSeriesVerticalCSharp</Page>
+              <Name>BarSeriesVertical</Name>
+              <Title>Vertical Bar - Code</Title>
+            </Example>
+            <Example>
+              <Page>ScatterAreaSeriesXaml</Page>
+              <Name>ScatterAreaSeries</Name>
+              <Title>Scatter Area - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>ScatterAreaSeriesCSharp</Page>
+              <Name>ScatterAreaSeries</Name>
+              <Title>Scatter Area - Code</Title>
+            </Example>
+            <Example>
+              <Page>ScatterLineSeriesXaml</Page>
+              <Name>ScatterLineSeries</Name>
+              <Title>Scatter Line - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>ScatterLineSeriesCSharp</Page>
+              <Name>ScatterLineSeries</Name>
+              <Title>Scatter Line - Code</Title>
+            </Example>
+            <Example>
+              <Page>ScatterPointSeriesXaml</Page>
+              <Name>ScatterPointSeries</Name>
+              <Title>Scatter Point - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>ScatterPointSeriesCSharp</Page>
+              <Name>ScatterPointSeries</Name>
+              <Title>Scatter Point - Code</Title>
+            </Example>
+            <Example>
+              <Page>ScatterSplineAreaSeriesXaml</Page>
+              <Name>ScatterSplineAreaSeries</Name>
+              <Title>Scatter Spline Area - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>ScatterSplineAreaSeriesCSharp</Page>
+              <Name>ScatterSplineAreaSeries</Name>
+              <Title>Scatter Spline Area - Code</Title>
+            </Example>
+            <Example>
+              <Page>ScatterSplineSeriesXaml</Page>
+              <Name>ScatterSplineSeries</Name>
+              <Title>Scatter Spline - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>ScatterSplineSeriesCSharp</Page>
+              <Name>ScatterSplineSeries</Name>
+              <Title>Scatter Spline - Code</Title>
+            </Example>
+            <Example>
+              <Page>SplineAreaSeriesXaml</Page>
+              <Name>SplineAreaSeries</Name>
+              <Title>Spline Area - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>SplineAreaSeriesCSharp</Page>
+              <Name>SplineAreaSeries</Name>
+              <Title>Spline Area - Code</Title>
+            </Example>
+            <Example>
+              <Page>SplineSeriesXaml</Page>
+              <Name>SplineSeries</Name>
+              <Title>Spline - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>SplineSeriesCSharp</Page>
+              <Name>SplineSeries</Name>
+              <Title>Spline - Code</Title>
+            </Example>
+            <Example>
+              <Page>StackBarSeriesHorizontalXaml</Page>
+              <Name>StackBarSeriesHorizontal</Name>
+              <Title>Horizontal Stacked Bar - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>StackBarSeriesHorizontalCSharp</Page>
+              <Name>StackBarSeriesHorizontal</Name>
+              <Title>Horizontal Stacked Bar - Code</Title>
+            </Example>
+            <Example>
+              <Page>StackBarSeriesVerticalXaml</Page>
+              <Name>StackBarSeriesVertical</Name>
+              <Title>Vertical Stacked Bar - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>StackBarSeriesVerticalCSharp</Page>
+              <Name>StackBarSeriesVertical</Name>
+              <Title>Vertical Stacked Bar - Code</Title>
+            </Example>
+            <Example>
+              <Page>StackAreaSeriesXaml</Page>
+              <Name>StackAreaSeries</Name>
+              <Title>Stacked Area - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>StackAreaSeriesCSharp</Page>
+              <Name>StackAreaSeries</Name>
+              <Title>Stacked Area - Code</Title>
+            </Example>
+            <Example>
+              <Page>StackSplineAreaSeriesXaml</Page>
+              <Name>StackSplineAreaSeries</Name>
+              <Title>Stack Spline Area - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>StackSplineAreaSeriesCSharp</Page>
+              <Name>StackSplineAreaSeries</Name>
+              <Title>Stack Spline Area - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Customization</Name>
+          <Title>Customization</Title>
+          <Examples>
+            <Example>
+              <Page>FormatAxisLabelsXaml</Page>
+              <Name>FormatAxisLabels</Name>
+              <Title>Format Axis Labels - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>FormatAxisLabelsCSharp</Page>
+              <Name>FormatAxisLabels</Name>
+              <Title>Format Axis Labels - Code</Title>
+            </Example>
+            <Example>
+              <Page>ChartGridLinesXaml</Page>
+              <Name>ChartGridLines</Name>
+              <Title>Grid Lines - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>ChartGridLinesCSharp</Page>
+              <Name>ChartGridLines</Name>
+              <Title>Grid Lines - Code</Title>
+            </Example>
+            <Example>
+              <Page>CustomPaletteXaml</Page>
+              <Name>CustomPalette</Name>
+              <Title>Custom Palette - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>CustomPaletteCSharp</Page>
+              <Name>CustomPalette</Name>
+              <Title>Custom Palette - Code</Title>
+            </Example>
+            <Example>
+              <Page>PaletteModeXaml</Page>
+              <Name>PaletteMode</Name>
+              <Title>Palette Mode - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>PaletteModeCSharp</Page>
+              <Name>PaletteMode</Name>
+              <Title>Palette Mode - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Annotations</Name>
+          <Title>Annotations</Title>
+          <Examples>
+            <Example>
+              <Page>GridLineAnnotationsXaml</Page>
+              <Name>GridLineAnnotations</Name>
+              <Title>Gridline - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>GridLineAnnotationsCSharp</Page>
+              <Name>GridLineAnnotations</Name>
+              <Title>Gridline - Code</Title>
+            </Example>
+            <Example>
+              <Page>PlotBandAnnotationsXaml</Page>
+              <Name>PlotBandAnnotations</Name>
+              <Title>Plotband - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>PlotBandAnnotationsCSharp</Page>
+              <Name>PlotBandAnnotations</Name>
+              <Title>Plotband - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Interactivity</Name>
+          <Title>Interactivity</Title>
+          <Examples>
+            <Example>
+              <Page>SelectionSeriesXaml</Page>
+              <Name>SelectionSeries</Name>
+              <Title>Selection - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>SelectionSeriesCSharp</Page>
+              <Name>SelectionSeries</Name>
+              <Title>Selection - Code</Title>
+            </Example>
+            <Example>
+              <Page>TrackballSeriesXaml</Page>
+              <Name>TrackballSeries</Name>
+              <Title>Trackball - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>TrackballSeriesCSharp</Page>
+              <Name>TrackballSeries</Name>
+              <Title>Trackball - Code</Title>
+            </Example>
+            <Example>
+              <Page>PanZoomXaml</Page>
+              <Name>PanZoom</Name>
+              <Title>Pan &amp; Zoom - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>PanZoomCSharp</Page>
+              <Name>PanZoom</Name>
+              <Title>Pan &amp; Zoom - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Legend</Name>
+          <Title>Legend</Title>
+          <Examples>
+            <Example>
+              <Page>CartesianChartRadLegendXaml</Page>
+              <Name>CartesianChartRadLegend</Name>
+              <Title>Cartesian Chart Legend - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>CartesianChartRadLegendCSharp</Page>
+              <Name>CartesianChartRadLegend</Name>
+              <Title>Cartesian Chart Legend - Code</Title>
+            </Example>
+            <Example>
+              <Page>PieChartRadLegendXaml</Page>
+              <Name>PieChartRadLegend</Name>
+              <Title>Pie Chart Legend - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>PieChartRadLegendCSharp</Page>
+              <Name>PieChartRadLegend</Name>
+              <Title>Pie Chart Legend - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>PieChart</Name>
+          <Title>Pie Chart</Title>
+          <Examples>
+            <Example>
+              <Page>PieChartXaml</Page>
+              <Name>PieChart</Name>
+              <Title>Pie Chart - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>PieChartCSharp</Page>
+              <Name>PieChart</Name>
+              <Title>Pie Chart - Code</Title>
+            </Example>
+            <Example>
+              <Page>PieChartPercentageXaml</Page>
+              <Name>PieChartPercentage</Name>
+              <Title>Pie Chart Percentage - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>PieChartPercentageCSharp</Page>
+              <Name>PieChartPercentage</Name>
+              <Title>Pie Chart Percentage - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>Chat</Name>
+      <Title>ConversationalUI</Title>
+      <Icon>ChatUI.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>ChatGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>MVVMSupport</Page>
+              <Name>MVVMSupport</Name>
+              <Title>MVVM Support</Title>
+            </Example>
+            <Example>
+              <Page>ItemTemplateSelector</Page>
+              <Name>ItemTemplateSelector</Name>
+              <Title>ItemTemplateSelector</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control> 
+    <Control>
+      <Name>DataForm</Name>
+      <Title>DataForm</Title>
+      <Icon>DataForm.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>DataFormGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>DataFormGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>DataAnnotations</Name>
+          <Title>Data Annotations</Title>
+          <Examples>
+            <Example>
+              <Page>DataFormDataAnnotationsConverterXaml</Page>
+              <Name>Converter</Name>
+              <Title>Converter - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>DataFormDataAnnotationsConverterCSharp</Page>
+              <Name>Converter</Name>
+              <Title>Converter - Code</Title>
+            </Example>
+            <Example>
+              <Page>DataFormDataAnnotationsConversionContext</Page>
+              <Name>ConversionContext</Name>
+              <Title>Native Conversion Context</Title>
+            </Example>
+            <Example>
+              <Page>DataFormDataAnnotationsDataSourceKeyXaml</Page>
+              <Name>DataSourceKey</Name>
+              <Title>Data Source Key - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>DataFormDataAnnotationsDataSourceKeyCSharp</Page>
+              <Name>DataSourceKey</Name>
+              <Title>Data Source Key - Code</Title>
+            </Example>
+            <Example>
+              <Page>DataFormDataAnnotationsDisplayOptionsXaml</Page>
+              <Name>DisplayOptions</Name>
+              <Title>Display Options - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>DataFormDataAnnotationsDisplayOptionsCSharp</Page>
+              <Name>DisplayOptions</Name>
+              <Title>Display Options - Code</Title>
+            </Example>
+            <Example>
+              <Page>DataFormDataAnnotationsDisplayValueFormatXaml</Page>
+              <Name>DisplayValueFormat</Name>
+              <Title>Display Value Format - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>DataFormDataAnnotationsDisplayValueFormatCSharp</Page>
+              <Name>DisplayValueFormat</Name>
+              <Title>Display Value Format - Code</Title>
+            </Example>
+            <Example>
+              <Page>DataFormDataAnnotationsIgnoreXaml</Page>
+              <Name>Ignore</Name>
+              <Title>Ignore - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>DataFormDataAnnotationsIgnoreCSharp</Page>
+              <Name>Ignore</Name>
+              <Title>Ignore - Code</Title>
+            </Example>
+            <Example>
+              <Page>DataFormDataAnnotationsReadonlyXaml</Page>
+              <Name>Readonly</Name>
+              <Title>Read Only - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>DataFormDataAnnotationsReadonlyCSharp</Page>
+              <Name>Readonly</Name>
+              <Title>Read Only - Code</Title>
+            </Example>
+            <Example>
+              <Page>DataFormDataAnnotationsValidation</Page>
+              <Name>Validation</Name>
+              <Title>Validation</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Editors</Name>
+          <Title>Editors</Title>
+          <Examples>
+            <Example>
+              <Page>DataFormEditors</Page>
+              <Name>Editors</Name>
+              <Title>Editors</Title>
+            </Example>
+            <Example>
+              <Page>CustomDataFormEditor</Page>
+              <Name>CustomEditor</Name>
+              <Title>Custom Editor</Title>
+              <ExcludeFrom>UWP,iOS</ExcludeFrom>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Groups</Name>
+          <Title>Groups</Title>
+          <Examples>
+            <Example>
+              <Page>DataFormGroups</Page>
+              <Name>Groups</Name>
+              <Title>Groups</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Styling</Name>
+          <Title>Styling</Title>
+          <Examples>
+            <Example>
+              <Page>DataFormStylingGroupsXaml</Page>
+              <Name>StylingGroups</Name>
+              <Title>Groups Styling - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>DataFormStylingGroupsCSharp</Page>
+              <Name>StylingGroups</Name>
+              <Title>Groups Styling - Code</Title>
+            </Example>
+            <Example>
+              <Page>DataFormCustomDecimalEditorFormatterCSharp</Page>
+              <Name>CustomDecimalEditorFormatter</Name>
+              <Title>Custom Decimal Editor Formatter - Code</Title>
+              <ExcludeFrom>UWP,iOS</ExcludeFrom>
+            </Example>
+            <Example>
+              <Page>DataFormCustomDecimalEditorFormatterXaml</Page>
+              <Name>CustomDecimalEditorFormatter</Name>
+              <Title>Custom Decimal Editor Formatter - Xaml</Title>
+              <ExcludeFrom>UWP,iOS</ExcludeFrom>
+            </Example>
+            <Example>
+              <Page>DataFormStylingEditorsXaml</Page>
+              <Name>StylingEditors</Name>
+              <Title>Editors Styling - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>DataFormStylingEditorsCSharp</Page>
+              <Name>StylingEditors</Name>
+              <Title>Editors Styling - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Layouts</Name>
+          <Title>Layouts</Title>
+          <Examples>
+            <Example>
+              <Page>DataFormGridLayoutXaml</Page>
+              <Name>GridLayout</Name>
+              <Title>Grid Layout - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>DataFormGridLayoutCSharp</Page>
+              <Name>GridLayout</Name>
+              <Title>Grid Layout - Code</Title>
+            </Example>
+            <Example>
+              <Page>DataFormStackLayoutXaml</Page>
+              <Name>StackLayout</Name>
+              <Title>Stack Layout - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>DataFormStackLayoutCSharp</Page>
+              <Name>StackLayout</Name>
+              <Title>Stack Layout - Code</Title>
+            </Example>
+            <Example>
+              <Page>DataFormLayoutSelectorXaml</Page>
+              <Name>LayoutSelector</Name>
+              <Title>Group Layout Selector - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>DataFormLayoutSelectorCSharp</Page>
+              <Name>LayoutSelector</Name>
+              <Title>Group Layout Selector - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Source</Name>
+          <Title>Source</Title>
+          <Examples>
+            <Example>
+              <Page>DataFormCustomSource</Page>
+              <Name>CustomSource</Name>
+              <Title>Custom Source</Title>
+            </Example>
+            <Example>
+              <Page>DataFormSourceDataClass</Page>
+              <Name>DataClass</Name>
+              <Title>Data Class</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Validate</Name>
+          <Title>Commit/Validate</Title>
+          <Examples>
+            <Example>
+              <Page>DataFormCommitMode</Page>
+              <Name>CommitMode</Name>
+              <Title>Commit Modes</Title>
+            </Example>
+            <Example>
+              <Page>DataFormValidation</Page>
+              <Name>Validation</Name>
+              <Title>Validation</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>HowTo</Name>
+          <Title>How To</Title>
+          <Examples>
+            <Example>
+              <Page>DataFormAutoCompleteEditor</Page>
+              <Name>AutoCompleteEditor</Name>
+              <Title>Auto Complete Editor</Title>
+              <ExcludeFrom>UWP,iOS</ExcludeFrom>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>DataGrid</Name>
+      <Title>DataGrid</Title>
+      <Icon>DataGrid.png</Icon>
+      <Categories>
+        <Category>
+          <Name>Selection</Name>
+          <Title>Selection</Title>
+          <Examples>
+            <Example>
+              <Page>GridUISelection</Page>
+              <Name>UISelection</Name>
+              <Title>UI Selection</Title>
+            </Example>
+            <Example>
+              <Page>ProgrammaticSelection</Page>
+              <Name>ProgrammaticSelection</Name>
+              <Title>Programmatic Selection</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Filtering</Name>
+          <Title>Filtering</Title>
+          <Examples>
+            <Example>
+              <Page>ProgrammaticFiltering</Page>
+              <Name>ProgrammaticFiltering</Name>
+              <Title>Programmatic Filtering</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Grouping</Name>
+          <Title>Grouping</Title>
+          <Examples>
+            <Example>
+              <Page>ProgrammaticGrouping</Page>
+              <Name>ProgrammaticGrouping</Name>
+              <Title>Programmatic Grouping</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Sorting</Name>
+          <Title>Sorting</Title>
+          <Examples>
+            <Example>
+              <Page>ProgrammaticSorting</Page>
+              <Name>ProgrammaticSorting</Name>
+              <Title>Programmatic Sorting</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Decorations</Name>
+          <Title>Decorations</Title>
+          <Examples>
+            <Example>
+              <Page>GridLines</Page>
+              <Name>GridLines</Name>
+              <Title>Grid Lines</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>LoadOnDemand</Name>
+          <Title>Load on Demand</Title>
+          <Examples>
+            <Example>
+              <Page>LoadOnDemand</Page>
+              <Name>LoadOnDemand</Name>
+              <Title>Load on Demand</Title>
+            </Example>
+            <Example>
+              <Page>LoadOnDemandEvent</Page>
+              <Name>LoadOnDemandEvent</Name>
+              <Title>Load on Demand Event</Title>
+            </Example>
+            <Example>
+              <Page>LoadMoreDataCommand</Page>
+              <Name>LoadMoreDataCommand</Name>
+              <Title>Load More Data Command</Title>
+            </Example>
+            <Example>
+              <Page>LoadOnDemandAutoTemplate</Page>
+              <Name>LoadOnDemandAutoTemplate</Name>
+              <Title>Load on Demand Auto Template</Title>
+            </Example>
+            <Example>
+              <Page>LoadOnDemandRowTemplate</Page>
+              <Name>LoadOnDemandRowTemplate</Name>
+              <Title>Load on Demand Row Template</Title>
+            </Example>
+            <Example>
+              <Page>LoadOnDemandRowStyle</Page>
+              <Name>LoadOnDemandRowStyle</Name>
+              <Title>Load on Demand Row Style</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Localization</Name>
+          <Title>Localization</Title>
+          <Examples>
+            <Example>
+              <Page>CustomLocalization</Page>
+              <Name>CustomLocalization</Name>
+              <Title>Custom Localization Manager</Title>
+            </Example>
+            <Example>
+              <Page>CustomResourceManager</Page>
+              <Name>CustomResourceManager</Name>
+              <Title>Custom Resource Manager</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>FilteringUI</Name>
+          <Title>Filtering UI</Title>
+          <Examples>
+            <Example>
+              <Page>CustomFilteringUI</Page>
+              <Name>CustomFilteringUI</Name>
+              <Title>Custom Filtering UI</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>Entry</Name>
+      <Title>Entry</Title>
+      <Icon>Entry.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>EntryGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>KeyFeatures</Page>
+              <Name>KeyFeatures</Name>
+              <Title>Key Features</Title>
+            </Example>
+            <Example>
+              <Page>Events</Page>
+              <Name>Events</Name>
+              <Title>Events</Title>
+            </Example>
+            <Example>
+              <Page>FontCustomization</Page>
+              <Name>FontCustomization</Name>
+              <Title>Font Customization</Title>
+            </Example>
+            <Example>
+              <Page>Theme</Page>
+              <Name>Theme</Name>
+              <Title>Theme</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>Gauge</Name>
+      <Title>Gauge</Title>
+      <Icon>Gauge.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>GaugeGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>GaugeGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>GaugeTypes</Name>
+          <Title>Gauge Types</Title>
+          <Examples>
+            <Example>
+              <Page>VerticalGauge</Page>
+              <Name>VerticalGauge</Name>
+              <Title>Vertical Gauge</Title>
+            </Example>
+            <Example>
+              <Page>HorizontalGauge</Page>
+              <Name>HorizontalGauge</Name>
+              <Title>Horizontal Gauge</Title>
+            </Example>
+            <Example>
+              <Page>RadialGauge</Page>
+              <Name>RadialGauge</Name>
+              <Title>Radial Gauge</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Customizations</Name>
+          <Title>Customizations</Title>
+          <Examples>
+            <Example>
+              <Page>SpeedometerXaml</Page>
+              <Name>Speedometer</Name>
+              <Title>Speedometer - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>SpeedometerCSharp</Page>
+              <Name>Speedometer</Name>
+              <Title>Speedometer - Code</Title>
+            </Example>
+            <Example>
+              <Page>CustomNeedlesXaml</Page>
+              <Name>CustomNeedles</Name>
+              <Title>Custom Needles</Title>
+            </Example>
+            <Example>
+              <Page>CustomShapes</Page>
+              <Name>CustomShapes</Name>
+              <Title>Custom Shapes</Title>
+            </Example>
+            <Example>
+              <Page>GaugeAxisCustomization</Page>
+              <Name>AxisCustomization</Name>
+              <Title>Axis Customization</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>Animations</Page>
+              <Name>Animations</Name>
+              <Title>Animations</Title>
+            </Example>
+            <Example>
+              <Page>BarIndicators</Page>
+              <Name>BarIndicators</Name>
+              <Title>Bar Indicators</Title>
+            </Example>
+            <Example>
+              <Page>TextIndicators</Page>
+              <Name>TextIndicators</Name>
+              <Title>Text Indicators</Title>
+            </Example>
+            <Example>
+              <Page>Positioning</Page>
+              <Name>Positioning</Name>
+              <Title>Positioning</Title>
+            </Example>
+            <Example>
+              <Page>Ranges</Page>
+              <Name>Ranges</Name>
+              <Title>Ranges</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>ListView</Name>
+      <Title>ListView</Title>
+      <Icon>ListView.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>ListViewGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>ListViewGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>FirstLook</Page>
+              <Name>FirstLook</Name>
+              <Title>First Look</Title>
+            </Example>
+            <Example>
+              <Page>DataOperations</Page>
+              <Name>DataOperations</Name>
+              <Title>Data Operations</Title>
+            </Example>
+            <Example>
+              <Page>Selection</Page>
+              <Name>Selection</Name>
+              <Title>Selection</Title>
+            </Example>
+            <Example>
+              <Page>ItemSpacing</Page>
+              <Name>ItemSpacing</Name>
+              <Title>Item Spacing</Title>
+            </Example>
+            <Example>
+              <Page>ListViewCommands</Page>
+              <Name>Commands</Name>
+              <Title>Commands</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>CellTypes</Name>
+          <Title>Cell Types</Title>
+          <Examples>
+            <Example>
+              <Page>ListViewTextCellXaml</Page>
+              <Name>TextCell</Name>
+              <Title>Text Cell - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>ListViewTextCellCSharp</Page>
+              <Name>TextCell</Name>
+              <Title>Text Cell - Code</Title>
+            </Example>
+            <Example>
+              <Page>ListViewTemplateCellXaml</Page>
+              <Name>TemplateCell</Name>
+              <Title>Template Cell - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>ListViewTemplateCellCSharp</Page>
+              <Name>TemplateCell</Name>
+              <Title>Template Cell - Code</Title>
+            </Example>
+            <Example>
+              <Page>ListViewItemTemplateSelectorXaml</Page>
+              <Name>TemplateCellSelector</Name>
+              <Title>Template Cell Selector - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>ListViewItemTemplateSelectorCSharp</Page>
+              <Name>TemplateCellSelector</Name>
+              <Title>Template Cell Selector - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Layouts</Name>
+          <Title>Layouts</Title>
+          <Examples>
+            <Example>
+              <Page>LinearLayout</Page>
+              <Name>LinearLayout</Name>
+              <Title>Linear Layout</Title>
+            </Example>
+            <Example>
+              <Page>GridLayout</Page>
+              <Name>GridLayout</Name>
+              <Title>Grid Layout</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Gestures</Name>
+          <Title>Gestures</Title>
+          <Examples>
+            <Example>
+              <Page>ListViewCellSwipeInteractiveContent</Page>
+              <Name>CellSwipeInteractiveContent</Name>
+              <Title>Cell Swipe - Interactive Content</Title>
+            </Example>
+            <Example>
+              <Page>ListViewCellSwipeSwipeEvents</Page>
+              <Name>CellSwipeSwipeEvents</Name>
+              <Title>Cell Swipe - Swipe Events</Title>
+            </Example>
+            <Example>
+              <Page>ReorderItems</Page>
+              <Name>ReorderItems</Name>
+              <Title>Reorder Items</Title>
+            </Example>
+            <Example>
+              <Page>PullToRefresh</Page>
+              <Name>PullToRefresh</Name>
+              <Title>Pull to Refresh</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>LoadOnDemand</Name>
+          <Title>Load on Demand</Title>
+          <Examples>
+            <Example>
+              <Page>LoadOnDemandEventAuto</Page>
+              <Name>LoadOnDemandEventAuto</Name>
+              <Title>Load on Demand - Auto</Title>
+            </Example>
+            <Example>
+              <Page>LoadOnDemandEventManual</Page>
+              <Name>LoadOnDemandEventManual</Name>
+              <Title>Load on Demand - Manual</Title>
+            </Example>
+            <Example>
+              <Page>LoadOnDemandCollection</Page>
+              <Name>LoadOnDemandCollection</Name>
+              <Title>Load on Demand - Collection</Title>
+            </Example>
+            <Example>
+              <Page>LoadOnDemandCustomizations</Page>
+              <Name>LoadOnDemandCustomizations</Name>
+              <Title>Load on Demand - Customizations</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Styling</Name>
+          <Title>Styling</Title>
+          <Examples>
+            <Example>
+              <Page>ListViewItemStylesXaml</Page>
+              <Name>ItemStyles</Name>
+              <Title>Item Styles - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>ListViewItemStylesCSharp</Page>
+              <Name>ItemStyles</Name>
+              <Title>Item Styles - Code</Title>
+            </Example>
+            <Example>
+              <Page>ListViewItemStyleSelectorXaml</Page>
+              <Name>StyleSelector</Name>
+              <Title>Conditional Styling - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>ListViewItemStyleSelectorCSharp</Page>
+              <Name>StyleSelector</Name>
+              <Title>Conditional Styling - Code</Title>
+            </Example>
+            <Example>
+              <Page>BindableListViewItemStyles</Page>
+              <Name>BindableItemStyle</Name>
+              <Title>Bindable Item Styles</Title>
+            </Example>
+            <Example>
+              <Page>BindablePressedItemStyle</Page>
+              <Name>BindablePressedItemStyle</Name>
+              <Title>Bindable Pressed Item Styles</Title>
+            </Example>
+            <Example>
+              <Page>BindableSelectedItemStyle</Page>
+              <Name>BindableSelectedItemStyle</Name>
+              <Title>Bindable Selected Item Styles</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>BindableCollections</Name>
+          <Title>Bindable Collections</Title>
+          <Examples>
+            <Example>
+              <Page>SortDescriptors</Page>
+              <Name>SortDescriptors</Name>
+              <Title>Bindable Sort Descriptors</Title>
+            </Example>
+            <Example>
+              <Page>FilterDescriptors</Page>
+              <Name>FilterDescriptors</Name>
+              <Title>Bindable Filter Descriptors</Title>
+            </Example>
+            <Example>
+              <Page>GroupDescriptors</Page>
+              <Name>GroupDescriptors</Name>
+              <Title>Bindable Group Descriptors</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>MaskedInput</Name>
+      <Title>MaskedInput</Title>
+      <Icon>MaskedInput.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>MaskedInputGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>Validation</Page>
+              <Name>Validation</Name>
+              <Title>Validation</Title>
+            </Example>
+            <Example>
+              <Page>Configurator</Page>
+              <Name>Configurator</Name>
+              <Title>Configurator</Title>
+            </Example>
+            <Example>
+              <Page>RegexMask</Page>
+              <Name>RegexMask</Name>
+              <Title>Regex Mask</Title>
+            </Example>
+            <Example>
+              <Page>Commands</Page>
+              <Name>Commands</Name>
+              <Title>Commands</Title>
+            </Example>
+            <Example>
+              <Page>Events</Page>
+              <Name>Events</Name>
+              <Title>Events</Title>
+            </Example>
+            <Example>
+              <Page>Theme</Page>
+              <Name>Theme</Name>
+              <Title>Theme</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>NumericInput</Name>
+      <Title>NumericInput</Title>
+      <Icon>NumericInput.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>NumericInputGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>KeyFeatures</Page>
+              <Name>KeyFeatures</Name>
+              <Title>Key Features</Title>
+            </Example>
+            <Example>
+              <Page>Bindings</Page>
+              <Name>Bindings</Name>
+              <Title>Bindings</Title>
+            </Example>
+            <Example>
+              <Page>Commands</Page>
+              <Name>Commands</Name>
+              <Title>Commands</Title>
+            </Example>
+            <Example>
+              <Page>CustomStyles</Page>
+              <Name>CustomStyles</Name>
+              <Title>Custom Styles</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>Path</Name>
+      <Title>Path</Title>
+      <Icon>Path.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>PathGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started</Title>
+            </Example>
+            <Example>
+              <Page>MultiPath</Page>
+              <Name>MultiPath</Name>
+              <Title>Multi Path</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>Rating</Name>
+      <Title>Rating</Title>
+      <Icon>Rating.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>RatingGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>RatingGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - CSharp</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>Geometries</Page>
+              <Name>Geometries</Name>
+              <Title>Geometries</Title>
+            </Example>
+            <Example>
+              <Page>Templates</Page>
+              <Name>Templates</Name>
+              <Title>Templates</Title>
+            </Example>
+            <Example>
+              <Page>Configurator</Page>
+              <Name>Configurator</Name>
+              <Title>Configurator</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>Segment</Name>
+      <Title>SegmentControl</Title>
+      <Icon>Segmented.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>SegmentControlGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>SegmentControlGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>DisableSegment</Page>
+              <Name>DisableSegment</Name>
+              <Title>Disable Segment</Title>
+            </Example>
+            <Example>
+              <Page>Selection</Page>
+              <Name>Selection</Name>
+              <Title>Selection</Title>
+            </Example>
+            <Example>
+              <Page>CustomizeColors</Page>
+              <Name>CustomizeColors</Name>
+              <Title>Customize Colors</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>SideDrawer</Name>
+      <Title>SideDrawer</Title>
+      <Icon>SideDrawer.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>SideDrawerGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>SideDrawerGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>Transitions</Page>
+              <Name>Transitions</Name>
+              <Title>Transitions</Title>
+            </Example>
+            <Example>
+              <Page>Location</Page>
+              <Name>Location</Name>
+              <Title>Location</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>SpreadStreamProcessing</Name>
+      <Title>SpreadStreamProcessing</Title>
+      <Icon>Spreadsheet.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>SpreadStreamProcessingGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>SpreadStreamProcessingGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+            <Example>
+              <Page>Styling</Page>
+              <Name>Styling</Name>
+              <Title>Styling</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>TabView</Name>
+      <Title>TabView</Title>
+      <Icon>TabView.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>TabViewGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>TabViewGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>TabViewItem</Page>
+              <Name>Item</Name>
+              <Title>Tab View Item</Title>
+            </Example>
+            <Example>
+              <Page>TabViewHeader</Page>
+              <Name>Header</Name>
+              <Title>Tab View Header</Title>
+            </Example>
+            <Example>
+              <Page>TabViewHeaderCustomTemplate</Page>
+              <Name>HeaderCustomTemplate</Name>
+              <Title>Header - Custom Template</Title>
+            </Example>
+            <Example>
+              <Page>Selection</Page>
+              <Name>Selection</Name>
+              <Title>Selection</Title>
+            </Example>
+            <Example>
+              <Page>TabViewItemsSource</Page>
+              <Name>ItemsSource</Name>
+              <Title>Items Source</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>TreeView</Name>
+      <Title>TreeView</Title>
+      <Icon>TreeView.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>TreeViewGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>TreeViewCommands</Page>
+              <Name>Commands</Name>
+              <Title>Commands</Title>
+            </Example>
+            <Example>
+              <Page>TreeViewExpandCollapse</Page>
+              <Name>ExpandCollapse</Name>
+              <Title>Expand/Collapse</Title>
+            </Example>		
+            <Example>
+              <Page>TreeViewCheckboxes</Page>
+              <Name>CheckBoxes</Name>
+              <Title>Checkboxes</Title>
+            </Example>					
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>ZipLibrary</Name>
+      <Title>ZipLibrary</Title>
+      <Icon>Zip.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>ZipLibraryGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>ZipLibraryGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Encryption</Name>
+          <Title>Encryption</Title>
+          <Examples>
+            <Example>
+              <Page>ZipLibraryEncryptionXaml</Page>
+              <Name>Encryption</Name>
+              <Title>Encryption - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>ZipLibraryEncryptionCSharp</Page>
+              <Name>Encryption</Name>
+              <Title>Encryption - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+  </Controls>
+</Configuration>

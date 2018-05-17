@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.EntryControl.FeaturesCategory.ThemeExample.Theme">
+    <StackLayout>
+        <telerikInput:RadEntry WatermarkText="Normal Control" x:Name="entry"/>
+        <telerikInput:RadEntry WatermarkText="Themed Control" StyleClass="TelerikTheme"/>
+    </StackLayout>
+</ContentView>

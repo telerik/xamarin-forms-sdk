@@ -90,17 +90,40 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="Assets\Barcode.scale-100.png" />
+    <Content Include="Assets\Barcode.scale-150.png" />
+    <Content Include="Assets\Barcode.scale-200.png" />
+    <Content Include="Assets\Barcode.scale-300.png" />
+    <Content Include="Assets\ChatUI.scale-100.png" />
+    <Content Include="Assets\ChatUI.scale-125.png" />
+    <Content Include="Assets\ChatUI.scale-150.png" />
+    <Content Include="Assets\ChatUI.scale-200.png" />
+    <Content Include="Assets\ChatUI.scale-400.png" />
+    <Content Include="Assets\sampleBot.png" />
+    <Content Include="Assets\Fonts\fontello.ttf" />
+    <Content Include="Assets\Fonts\segoeui.ttf" />
+    <Content Include="Assets\Fonts\segoeuib.ttf" />
+    <Content Include="Assets\Fonts\segoeuii.ttf" />
+    <Content Include="Assets\Fonts\segoeuil.ttf" />
+    <Content Include="Assets\Fonts\segoeuisl.ttf" />
+    <Content Include="Assets\Fonts\segoeuiz.ttf" />
+    <Content Include="Assets\Fonts\seguibl.ttf" />
+    <Content Include="Assets\Fonts\seguibli.ttf" />
+    <Content Include="Assets\Fonts\seguili.ttf" />
+    <Content Include="Assets\Fonts\seguisb.ttf" />
+    <Content Include="Assets\Fonts\seguisbi.ttf" />
+    <Content Include="Assets\Fonts\seguisli.ttf" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Calendar\Styling\CustomRenderer\CustomCalendarRenderer.cs" />
+    <Compile Include="Examples\ButtonControl\HowToCategory\ButtonDisabledTextColorExample\CustomButtonRenderer.cs" />
+    <Compile Include="Examples\CalendarControl\StylingCategory\CustomRendererExample\CustomCalendarRenderer.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="NativeDevice.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XlsxFileViewer.cs" />
   </ItemGroup>
@@ -126,9 +149,196 @@
     <Content Include="..\SDKBrowser\Images\unread.png">
       <Link>unread.png</Link>
     </Content>
-    <Content Include="Assets\hamburgerButtonIcon.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Assets\AutoComplete.scale-100.png" />
+    <Content Include="Assets\AutoComplete.scale-125.png" />
+    <Content Include="Assets\AutoComplete.scale-150.png" />
+    <Content Include="Assets\AutoComplete.scale-200.png" />
+    <Content Include="Assets\AutoComplete.scale-300.png" />
+    <Content Include="Assets\AutoComplete.scale-400.png" />
+    <Content Include="Assets\Bullet.scale-100.png" />
+    <Content Include="Assets\Bullet.scale-125.png" />
+    <Content Include="Assets\Bullet.scale-150.png" />
+    <Content Include="Assets\Bullet.scale-200.png" />
+    <Content Include="Assets\Bullet.scale-300.png" />
+    <Content Include="Assets\Bullet.scale-400.png" />
+    <Content Include="Assets\BusyIndicator.scale-100.png" />
+    <Content Include="Assets\BusyIndicator.scale-125.png" />
+    <Content Include="Assets\BusyIndicator.scale-150.png" />
+    <Content Include="Assets\BusyIndicator.scale-200.png" />
+    <Content Include="Assets\BusyIndicator.scale-300.png" />
+    <Content Include="Assets\BusyIndicator.scale-400.png" />
+    <Content Include="Assets\Button.scale-100.png" />
+    <Content Include="Assets\Button.scale-125.png" />
+    <Content Include="Assets\Button.scale-150.png" />
+    <Content Include="Assets\Button.scale-200.png" />
+    <Content Include="Assets\Button.scale-300.png" />
+    <Content Include="Assets\Button.scale-400.png" />
+    <Content Include="Assets\Calendar.scale-100.png" />
+    <Content Include="Assets\Calendar.scale-125.png" />
+    <Content Include="Assets\Calendar.scale-150.png" />
+    <Content Include="Assets\Calendar.scale-200.png" />
+    <Content Include="Assets\Calendar.scale-300.png" />
+    <Content Include="Assets\Calendar.scale-400.png" />
+    <Content Include="Assets\Chart.scale-100.png" />
+    <Content Include="Assets\Chart.scale-125.png" />
+    <Content Include="Assets\Chart.scale-150.png" />
+    <Content Include="Assets\Chart.scale-200.png" />
+    <Content Include="Assets\Chart.scale-300.png" />
+    <Content Include="Assets\Chart.scale-400.png" />
+    <Content Include="Assets\DataForm.scale-100.png" />
+    <Content Include="Assets\DataForm.scale-125.png" />
+    <Content Include="Assets\DataForm.scale-150.png" />
+    <Content Include="Assets\DataForm.scale-200.png" />
+    <Content Include="Assets\DataForm.scale-300.png" />
+    <Content Include="Assets\DataForm.scale-400.png" />
+    <Content Include="Assets\DataGrid.scale-100.png" />
+    <Content Include="Assets\DataGrid.scale-125.png" />
+    <Content Include="Assets\DataGrid.scale-150.png" />
+    <Content Include="Assets\DataGrid.scale-200.png" />
+    <Content Include="Assets\DataGrid.scale-300.png" />
+    <Content Include="Assets\DataGrid.scale-400.png" />
+    <Content Include="Assets\Entry.scale-100.png" />
+    <Content Include="Assets\Entry.scale-125.png" />
+    <Content Include="Assets\Entry.scale-150.png" />
+    <Content Include="Assets\Entry.scale-200.png" />
+    <Content Include="Assets\Entry.scale-300.png" />
+    <Content Include="Assets\Entry.scale-400.png" />
+    <Content Include="Assets\Gauge.scale-100.png" />
+    <Content Include="Assets\Gauge.scale-125.png" />
+    <Content Include="Assets\Gauge.scale-150.png" />
+    <Content Include="Assets\Gauge.scale-200.png" />
+    <Content Include="Assets\Gauge.scale-300.png" />
+    <Content Include="Assets\Gauge.scale-400.png" />
+    <Content Include="Assets\HamburgerMenu.scale-100.png" />
+    <Content Include="Assets\HamburgerMenu.scale-125.png" />
+    <Content Include="Assets\HamburgerMenu.scale-150.png" />
+    <Content Include="Assets\HamburgerMenu.scale-200.png" />
+    <Content Include="Assets\HamburgerMenu.scale-300.png" />
+    <Content Include="Assets\HamburgerMenu.scale-400.png" />
+    <Content Include="Assets\ListView.scale-100.png" />
+    <Content Include="Assets\ListView.scale-125.png" />
+    <Content Include="Assets\ListView.scale-150.png" />
+    <Content Include="Assets\ListView.scale-200.png" />
+    <Content Include="Assets\ListView.scale-300.png" />
+    <Content Include="Assets\ListView.scale-400.png" />
+    <Content Include="Assets\Logo.scale-100.png" />
+    <Content Include="Assets\Logo.scale-125.png" />
+    <Content Include="Assets\Logo.scale-150.png" />
+    <Content Include="Assets\Logo.scale-200.png" />
+    <Content Include="Assets\Logo.scale-300.png" />
+    <Content Include="Assets\Logo.scale-400.png" />
+    <Content Include="Assets\MaskedInput.scale-100.png" />
+    <Content Include="Assets\MaskedInput.scale-125.png" />
+    <Content Include="Assets\MaskedInput.scale-150.png" />
+    <Content Include="Assets\MaskedInput.scale-200.png" />
+    <Content Include="Assets\MaskedInput.scale-300.png" />
+    <Content Include="Assets\MaskedInput.scale-400.png" />
+    <Content Include="Assets\NumericInput.scale-100.png" />
+    <Content Include="Assets\NumericInput.scale-125.png" />
+    <Content Include="Assets\NumericInput.scale-150.png" />
+    <Content Include="Assets\NumericInput.scale-200.png" />
+    <Content Include="Assets\NumericInput.scale-300.png" />
+    <Content Include="Assets\NumericInput.scale-400.png" />
+    <Content Include="Assets\Path.scale-100.png" />
+    <Content Include="Assets\Path.scale-125.png" />
+    <Content Include="Assets\Path.scale-150.png" />
+    <Content Include="Assets\Path.scale-200.png" />
+    <Content Include="Assets\Path.scale-300.png" />
+    <Content Include="Assets\Path.scale-400.png" />
+    <Content Include="Assets\Rating.scale-100.png" />
+    <Content Include="Assets\Rating.scale-125.png" />
+    <Content Include="Assets\Rating.scale-150.png" />
+    <Content Include="Assets\Rating.scale-200.png" />
+    <Content Include="Assets\Rating.scale-300.png" />
+    <Content Include="Assets\Rating.scale-400.png" />
+    <Content Include="Assets\sampleAvatar.png" />
+    <Content Include="Assets\Segmented.scale-100.png" />
+    <Content Include="Assets\Segmented.scale-125.png" />
+    <Content Include="Assets\Segmented.scale-150.png" />
+    <Content Include="Assets\Segmented.scale-200.png" />
+    <Content Include="Assets\Segmented.scale-300.png" />
+    <Content Include="Assets\Segmented.scale-400.png" />
+    <Content Include="Assets\SideDrawer.scale-100.png" />
+    <Content Include="Assets\SideDrawer.scale-125.png" />
+    <Content Include="Assets\SideDrawer.scale-150.png" />
+    <Content Include="Assets\SideDrawer.scale-200.png" />
+    <Content Include="Assets\SideDrawer.scale-300.png" />
+    <Content Include="Assets\SideDrawer.scale-400.png" />
+    <Content Include="Assets\SlideView.scale-100.png" />
+    <Content Include="Assets\SlideView.scale-125.png" />
+    <Content Include="Assets\SlideView.scale-150.png" />
+    <Content Include="Assets\SlideView.scale-200.png" />
+    <Content Include="Assets\SlideView.scale-300.png" />
+    <Content Include="Assets\SlideView.scale-400.png" />
+    <Content Include="Assets\Splash.scale-100.png" />
+    <Content Include="Assets\Splash.scale-125.png" />
+    <Content Include="Assets\Splash.scale-150.png" />
+    <Content Include="Assets\Splash.scale-200.png" />
+    <Content Include="Assets\Splash.scale-300.png" />
+    <Content Include="Assets\Splash.scale-400.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-125.png" />
+    <Content Include="Assets\SplashScreen.scale-150.png" />
+    <Content Include="Assets\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Spreadsheet.scale-100.png" />
+    <Content Include="Assets\Spreadsheet.scale-125.png" />
+    <Content Include="Assets\Spreadsheet.scale-150.png" />
+    <Content Include="Assets\Spreadsheet.scale-200.png" />
+    <Content Include="Assets\Spreadsheet.scale-300.png" />
+    <Content Include="Assets\Spreadsheet.scale-400.png" />
+    <Content Include="Assets\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Square150x150Logo.scale-125.png" />
+    <Content Include="Assets\Square150x150Logo.scale-150.png" />
+    <Content Include="Assets\Square150x150Logo.scale-400.png" />
+    <Content Include="Assets\Square310x310Logo.scale-100.png" />
+    <Content Include="Assets\Square310x310Logo.scale-125.png" />
+    <Content Include="Assets\Square310x310Logo.scale-150.png" />
+    <Content Include="Assets\Square310x310Logo.scale-200.png" />
+    <Content Include="Assets\Square310x310Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\Square44x44Logo.scale-125.png" />
+    <Content Include="Assets\Square44x44Logo.scale-150.png" />
+    <Content Include="Assets\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-16_altform-unplated.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-256_altform-unplated.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-32_altform-unplated.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-48.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-48_altform-unplated.png" />
+    <Content Include="Assets\Square71x71Logo.scale-100.png" />
+    <Content Include="Assets\Square71x71Logo.scale-125.png" />
+    <Content Include="Assets\Square71x71Logo.scale-150.png" />
+    <Content Include="Assets\Square71x71Logo.scale-200.png" />
+    <Content Include="Assets\Square71x71Logo.scale-400.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-125.png" />
+    <Content Include="Assets\StoreLogo.scale-150.png" />
+    <Content Include="Assets\StoreLogo.scale-200.png" />
+    <Content Include="Assets\StoreLogo.scale-400.png" />
+    <Content Include="Assets\TabView.scale-100.png" />
+    <Content Include="Assets\TabView.scale-125.png" />
+    <Content Include="Assets\TabView.scale-150.png" />
+    <Content Include="Assets\TabView.scale-200.png" />
+    <Content Include="Assets\TabView.scale-300.png" />
+    <Content Include="Assets\TabView.scale-400.png" />
+    <Content Include="Assets\TreeView.scale-100.png" />
+    <Content Include="Assets\TreeView.scale-125.png" />
+    <Content Include="Assets\TreeView.scale-150.png" />
+    <Content Include="Assets\TreeView.scale-200.png" />
+    <Content Include="Assets\TreeView.scale-400.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-125.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-150.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="Assets\Zip.scale-100.png" />
+    <Content Include="Assets\Zip.scale-125.png" />
+    <Content Include="Assets\Zip.scale-150.png" />
+    <Content Include="Assets\Zip.scale-200.png" />
+    <Content Include="Assets\Zip.scale-300.png" />
+    <Content Include="Assets\Zip.scale-400.png" />
     <Content Include="available32.png" />
     <Content Include="away32.png" />
     <Content Include="button_backgroundImage.png" />
@@ -140,14 +350,13 @@
     <Content Include="Assets\Square150x150Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
-    <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Calendar\Styling\CustomRenderer\CalendarCustomRenderersResources.xaml">
+    <Page Include="Examples\CalendarControl\StylingCategory\CustomRendererExample\CalendarCustomRenderersResources.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -190,11 +399,17 @@
     <Reference Include="Telerik.UI.Xaml.Primitives.UWP">
       <HintPath>..\..\..\..\Binaries\UWP\Telerik.UI.Xaml.Primitives.UWP.dll</HintPath>
     </Reference>
+    <Reference Include="Telerik.XamarinForms.Barcode">
+      <HintPath>..\..\..\..\Binaries\UWP\Telerik.XamarinForms.Barcode.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.XamarinForms.Chart">
       <HintPath>..\..\..\..\Binaries\UWP\Telerik.XamarinForms.Chart.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.Common">
       <HintPath>..\..\..\..\Binaries\UWP\Telerik.XamarinForms.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.ConversationalUI">
+      <HintPath>..\..\..\..\Binaries\UWP\Telerik.XamarinForms.ConversationalUI.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.DataControls">
       <HintPath>..\..\..\..\Binaries\UWP\Telerik.XamarinForms.DataControls.dll</HintPath>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView x:Class="SDKBrowser.Examples.DataFormControl.DataAnnotationsCategory.ValidationExample.DataFormDataAnnotationsValidation"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <telerikInput:RadDataForm x:Name="dataForm"
+                                  CommitMode="Manual"
+                                  ValidationMode="Manual" />
+        <Button Grid.Row="1"
+                Clicked="ValidationClicked"
+                Text="Validate" />
+    </Grid>
+</ContentView>

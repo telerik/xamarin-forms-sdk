@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikListViewCommands="clr-namespace:Telerik.XamarinForms.DataControls.ListView.Commands;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.ListViewControl.FeaturesCategory.CommandsExample"
+             x:Class="SDKBrowser.Examples.ListViewControl.FeaturesCategory.CommandsExample.ListViewCommands">
+    <StackLayout Margin="5">
+        <Label Text="Inheriting from ListViewCommand" />
+        <telerikDataControls:RadListView x:Name="listView1" ItemsSource="{Binding Source}">
+            <telerikDataControls:RadListView.BindingContext>
+                <local:ViewModel />
+            </telerikDataControls:RadListView.BindingContext>
+        </telerikDataControls:RadListView>
+        <Label Text="Binding ListViewUserCommand" />
+        <!-- >> listview-commands-listviewusercommand-xaml -->
+        <telerikDataControls:RadListView x:Name="listView2" ItemsSource="{Binding Source}">
+            <telerikDataControls:RadListView.BindingContext>
+                <local:ViewModel />
+            </telerikDataControls:RadListView.BindingContext>
+            <telerikDataControls:RadListView.Commands>
+                <telerikListViewCommands:ListViewUserCommand Id="ItemTap" Command="{Binding ItemTapCommand}" />
+            </telerikDataControls:RadListView.Commands>
+        </telerikDataControls:RadListView>
+        <!-- << listview-commands-listviewusercommand-xaml -->
+    </StackLayout>
+</ContentView>

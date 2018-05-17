@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.DataFormControl.StylingCategory.CustomDecimalEditorFormatterExample"
+             x:Class="SDKBrowser.Examples.DataFormControl.StylingCategory.CustomDecimalEditorFormatterExample.DataFormCustomDecimalEditorFormatterXaml">
+
+    <local:CustomRadDataForm x:Name="dataForm">
+        <local:CustomRadDataForm.Source>
+            <local:SourceItem />
+        </local:CustomRadDataForm.Source>
+    </local:CustomRadDataForm>
+
+</ContentView>

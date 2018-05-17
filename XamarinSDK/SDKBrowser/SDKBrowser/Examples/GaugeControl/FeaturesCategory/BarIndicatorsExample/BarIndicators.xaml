@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView x:Class="SDKBrowser.Examples.GaugeControl.FeaturesCategory.BarIndicatorsExample.BarIndicators"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+             xmlns:telerikGauges="clr-namespace:Telerik.XamarinForms.DataVisualization.Gauges;assembly=Telerik.XamarinForms.DataVisualization">
+
+    <telerikGauges:RadRadialGauge x:Name="gauge">
+        <telerikGauges:RadRadialGauge.Axis>
+            <telerikGauges:GaugeLinearAxis Maximum="100"
+                                           Minimum="-100"
+                                           Step="25"
+                                           StrokeThickness="0"
+                                           TickThickness="1" />
+        </telerikGauges:RadRadialGauge.Axis>
+        <telerikGauges:RadRadialGauge.Ranges>
+            <telerikGauges:GaugeRangesDefinition EndThickness="3"
+                                                 StartThickness="3"
+                                                 Offset="0">
+                <telerikGauges:GaugeRange Color="Gray"
+                                          From="-100"
+                                          To="-50" />
+                <telerikGauges:GaugeRange Color="Red"
+                                          From="-50"
+                                          To="0" />
+                <telerikGauges:GaugeRange Color="Yellow"
+                                          From="0"
+                                          To="50" />
+                <telerikGauges:GaugeRange Color="Green"
+                                          From="50"
+                                          To="100" />
+            </telerikGauges:GaugeRangesDefinition>
+        </telerikGauges:RadRadialGauge.Ranges>
+        <telerikGauges:RadRadialGauge.Indicators>
+
+            <!--  >> gauge-bar-indicator  -->
+            <telerikGauges:GaugeBarIndicator Fill="Green"
+                                             StartThickness="0"
+                                             Offset="15"
+                                             Value="75" />
+            <!--  << gauge-bar-indicator  -->
+
+            <telerikGauges:GaugeBarIndicator EndCap="Oval"
+                                             Fill="Gray"
+                                             Offset="40"
+                                             Value="-75" />
+
+            <!--  >> gauge-range-bar-indicator  -->
+            <telerikGauges:GaugeRangeBarIndicator FromCap="Oval"
+                                                  ToCap="Oval"
+                                                  Offset="65"
+                                                  From="-75"
+                                                  To="75">
+                <telerikGauges:GaugeRangeBarIndicator.GradientStops>
+                    <telerikCommon:RadGradientStop Offset="-75" Color="Gray" />
+                    <telerikCommon:RadGradientStop Offset="-25" Color="Red" />
+                    <telerikCommon:RadGradientStop Offset="25" Color="Yellow" />
+                    <telerikCommon:RadGradientStop Offset="75" Color="Green" />
+                </telerikGauges:GaugeRangeBarIndicator.GradientStops>
+            </telerikGauges:GaugeRangeBarIndicator>
+            <!--  << gauge-range-bar-indicator  -->
+
+            <telerikGauges:GaugeRangeBarIndicator Fill="Orange"
+                                                  FromCap="ConcaveOval"
+                                                  ToCap="Oval"
+                                                  Offset="65"
+                                                  From="75"
+                                                  To="100" />
+        </telerikGauges:RadRadialGauge.Indicators>
+    </telerikGauges:RadRadialGauge>
+
+</ContentView>

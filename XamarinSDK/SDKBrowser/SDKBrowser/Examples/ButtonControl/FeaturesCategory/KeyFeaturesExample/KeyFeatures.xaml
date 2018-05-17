@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SDKBrowser.Examples.ButtonControl.FeaturesCategory.KeyFeaturesExample.KeyFeatures"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input">  
+        <StackLayout VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+        <Label Text="Button with content alignment" />
+        <!-- >> button-features-contentalignment -->
+        <telerikInput:RadButton x:Name="buttonAlignment"
+                                Text="Click me!"  
+                                BorderColor="#4488F6" 
+                                BorderThickness="1" 
+                                HorizontalContentAlignment="End" 
+                                VerticalContentAlignment="Start" 
+                                WidthRequest="200" 
+                                HeightRequest="60" />
+        <!-- << button-features-contentalignment -->
+        <Label Text="Button with border thickness" />
+        <!-- >> button-features-borderthickness -->
+        <telerikInput:RadButton x:Name="buttonThickness"
+                                Text="Click me!"  
+                                BorderThickness="6, 2, 2, 6" 
+                                BorderColor="#4488F6" />
+        <!-- << button-features-borderthickness -->
+        <Label Text="Button with background image" />
+        <!-- >> button-features-backgroundimage -->
+        <telerikInput:RadButton x:Name="buttonBackground"
+                                Text="Click me!"  
+                                BackgroundImage="button_backgroundImage.png"  />
+        <!-- << button-features-backgroundimage -->
+    </StackLayout>   
+</ContentView>

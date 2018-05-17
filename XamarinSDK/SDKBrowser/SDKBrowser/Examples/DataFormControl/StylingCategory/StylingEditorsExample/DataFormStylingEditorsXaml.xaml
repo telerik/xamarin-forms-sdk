@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.DataFormControl.StylingCategory.StylingEditorsExample"
+             xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:telerikDataForm="clr-namespace:Telerik.XamarinForms.Input.DataForm;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.DataFormControl.StylingCategory.StylingEditorsExample.DataFormStylingEditorsXaml">
+    <ContentView.BindingContext>
+        <local:Customer />
+    </ContentView.BindingContext>
+    <ScrollView>
+        <telerikInput:RadDataForm  x:Name="dataForm" BackgroundColor="#2D66B9" Source="{Binding}">
+            <telerikInput:RadDataForm.EditorStyle>
+                <telerikDataForm:DataFormEditorStyle Height="70"
+                                                     HeaderFontSize="17"
+                                                     HeaderForeground="Black"
+                                                     FeedbackFontSize="13"
+                                                     PositiveFeedbackImage="success.png"
+                                                     NegativeFeedbackImage="fail.png"
+                                                     NegativeFeedbackForeground="#FF004C">
+                    <telerikDataForm:DataFormEditorStyle.FeedbackImageSize>
+                        <Size Width="10" Height="10" />
+                    </telerikDataForm:DataFormEditorStyle.FeedbackImageSize>
+                    <telerikDataForm:DataFormEditorStyle.Background>
+                        <telerikCommon:Background Fill="#90C9E9"
+                                                  StrokeColor="#B2DFF4"
+                                                  StrokeWidth="2"
+                                                  StrokeLocation="Bottom" />
+                    </telerikDataForm:DataFormEditorStyle.Background>
+                    <telerikDataForm:DataFormEditorStyle.NegativeFeedbackBackground>
+                        <telerikCommon:Background Fill="#30FF004C"
+                                                  StrokeColor="#FF004C"
+                                                  StrokeWidth="2"
+                                                  StrokeLocation="All" />
+                    </telerikDataForm:DataFormEditorStyle.NegativeFeedbackBackground>
+                </telerikDataForm:DataFormEditorStyle>
+            </telerikInput:RadDataForm.EditorStyle>
+        </telerikInput:RadDataForm>
+    </ScrollView>
+</ContentView>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:grid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             x:Class="SDKBrowser.Examples.DataGridControl.LoadOnDemandCategory.LoadOnDemandRowTemplateExample.LoadOnDemandRowTemplate">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <!-- >> datagrid-loadondemandrowtemplate-xaml -->
+            <DataTemplate x:Key="CustomLoadOnDemandRowTemplate">
+                <Label Text="Load more from Template"
+                       Margin="0,30,0,30"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       IsEnabled="{Binding IsDataLoading}">
+                    <Label.Triggers>
+                        <Trigger TargetType="Label"
+                                 Property="IsEnabled" Value="False">
+                            <Setter Property="BackgroundColor" Value="LightBlue" />
+                        </Trigger>
+                    </Label.Triggers>
+                </Label>
+            </DataTemplate>
+            <!-- << datagrid-loadondemandrowtemplate-xaml -->
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <Grid>
+        <!-- >> datagrid-setting-loadondemandrowtemplate-xaml -->
+        <grid:RadDataGrid x:Name="dataGrid" ItemsSource="{Binding Items}"
+                                     LoadOnDemand="dataGrid_LoadOnDemand"
+                                     LoadOnDemandMode="Manual"
+                                     LoadOnDemandRowTemplate="{StaticResource CustomLoadOnDemandRowTemplate}"/>
+        <!-- << datagrid-setting-loadondemandrowtemplate-xaml -->
+    </Grid>
+</ContentView>

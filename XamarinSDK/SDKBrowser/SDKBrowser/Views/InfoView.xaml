@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SDKBrowser.Views.InfoView"
+             Style="{StaticResource ContentPageStyle}">
+    <StackLayout Orientation="Vertical"
+                 Margin="30"
+                 Spacing="30">
+        <Label Style="{StaticResource TitleTextStyle}"
+               Text="{Binding ExampleTitle}" />
+        <Label Style="{StaticResource RegularTextStyle}"
+               Text="{Binding ExampleInfo}" />
+        <StackLayout Orientation="Horizontal" Spacing="10">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding OpenCommand}" />
+            </StackLayout.GestureRecognizers>
+            <Label VerticalOptions="Center"
+                   Style="{StaticResource HyperlinkTextStyle}"
+                   Text="Go to Repository" />
+            <Label VerticalOptions="Center"
+                   Style="{StaticResource HyperlinkIconStyle}"
+                   Text="{StaticResource HyperlinkIconText}" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

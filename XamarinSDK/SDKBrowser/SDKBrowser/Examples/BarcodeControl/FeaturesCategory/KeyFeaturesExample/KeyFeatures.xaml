@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SDKBrowser.Examples.BarcodeControl.FeaturesCategory.KeyFeaturesExample.KeyFeatures"
+             xmlns:telerikBarcode="clr-namespace:Telerik.XamarinForms.Barcode;assembly=Telerik.XamarinForms.Barcode">
+    <StackLayout>
+        <Label Text="Setting the symbology" />
+        <!-- >> barcode-features-symbology -->
+        <telerikBarcode:RadBarcode WidthRequest="200" HeightRequest="100" 
+                HorizontalOptions="Center" VerticalOptions="Center"
+                Value="58000106">
+            <telerikBarcode:RadBarcode.Symbology>
+                <telerikBarcode:Code39 HorizontalTextAlignment="Center"
+                                  SizingMode="Stretch" 
+                                  ShowText="True"  
+                                  CodeTextSpacing="10"/>
+            </telerikBarcode:RadBarcode.Symbology>
+        </telerikBarcode:RadBarcode>
+        <!-- << barcode-features-symbology -->
+        <Label Text="Defining the sizing mode" />
+        <!-- >> barcode-features-sizingmode -->
+        <telerikBarcode:RadBarcode WidthRequest="300" HeightRequest="100" 
+                HorizontalOptions="Center" VerticalOptions="Center"
+                Value="58000106">
+            <telerikBarcode:RadBarcode.Symbology>
+                <telerikBarcode:Code39 HorizontalTextAlignment="Center" 
+                                  SizingMode="Manual"
+                                  Module="2" 
+                                  ShowText="True"  
+                                  CodeTextSpacing="10"/>
+            </telerikBarcode:RadBarcode.Symbology>
+        </telerikBarcode:RadBarcode>
+        <!-- << barcode-features-sizingmode -->
+        <Label Text="Changing the colors" />
+        <!-- >> barcode-features-colors -->
+        <telerikBarcode:RadBarcode WidthRequest="200" HeightRequest="100" 
+                HorizontalOptions="Center" VerticalOptions="Center" 
+                ForegroundColor="DarkBlue"
+                BackgroundColor="Beige"
+                Value="58000106">
+            <telerikBarcode:RadBarcode.Symbology>
+                <telerikBarcode:Code39 SizingMode="Stretch" />
+            </telerikBarcode:RadBarcode.Symbology>
+        </telerikBarcode:RadBarcode>
+        <!-- << barcode-features-colors -->
+    </StackLayout>
+</ContentView>

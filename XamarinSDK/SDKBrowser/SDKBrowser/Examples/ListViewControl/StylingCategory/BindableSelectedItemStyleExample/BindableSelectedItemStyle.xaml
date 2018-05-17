@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SDKBrowser.Examples.ListViewControl.StylingCategory.BindableSelectedItemStyleExample.BindableSelectedItemStyle"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.ListViewControl.StylingCategory.BindableSelectedItemStyleExample"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <local:StringToColorConverter x:Key="stringToColorConverter"/>
+            <local:StringToBorderLocationConverter x:Key="stringToBorderLocationConverter"/>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.BindingContext>
+        <local:ViewModel/>
+    </ContentView.BindingContext>
+    <ContentView.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <StackLayout Spacing="4">
+                <Button Text="Reset ListView BindingContext" Clicked="Button_Clicked_2" />
+                <StackLayout Orientation="Horizontal">
+                    <Label VerticalOptions="Center" Text="BackgroundColor"/>
+                    <Picker x:Name="BackgroundColorPicker" SelectedItem="{Binding Background, Converter={StaticResource stringToColorConverter}, Mode=OneWayToSource}"
+                            HorizontalOptions="FillAndExpand" AutomationId="BackgroundColorPicker">
+                        <Picker.Items>
+                            <x:String>Lime</x:String>
+                            <x:String>Violet</x:String>
+                            <x:String>Purple</x:String>
+                            <x:String>Blue</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label VerticalOptions="Center" Text="BorderColor"/>
+                    <Picker x:Name="BorderColorPicker" SelectedItem="{Binding BorderColor, Converter={StaticResource stringToColorConverter}, Mode=OneWayToSource}"
+                            HorizontalOptions="FillAndExpand" AutomationId="BorderColorPicker">
+                        <Picker.Items>
+                            <x:String>Lime</x:String>
+                            <x:String>Violet</x:String>
+                            <x:String>Purple</x:String>
+                            <x:String>Blue</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label VerticalOptions="Center" Text="BorderLocation"/>
+                    <Picker x:Name="BorderLocationPicker" SelectedItem="{Binding BorderLocation, Converter={StaticResource stringToBorderLocationConverter}, Mode=OneWayToSource}"
+                            HorizontalOptions="FillAndExpand" AutomationId="BorderLocationPicker">
+                        <Picker.Items>
+                            <x:String>All</x:String>
+                            <x:String>Top</x:String>
+                            <x:String>Bottom</x:String>
+                            <x:String>None</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label VerticalOptions="Center" Text="BorderWidth"/>
+                    <Picker x:Name="BorderWidthPicker" SelectedItem="{Binding BorderWidth, Mode=OneWayToSource}" HorizontalOptions="FillAndExpand" AutomationId="BorderWidthPicker">
+                        <Picker.Items>
+                            <x:String>0</x:String>
+                            <x:String>5</x:String>
+                            <x:String>10</x:String>
+                            <x:String>15</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+            </StackLayout>
+            <telerikDataControls:RadListView x:Name="listView" ItemsSource="{Binding Source}" Grid.Row="1" SelectionMode="Multiple">
+                <telerikDataControls:RadListView.ItemTemplate>
+                    <DataTemplate>
+                        <telerikListView:ListViewTemplateCell>
+                            <telerikListView:ListViewTemplateCell.View>
+                                <Grid>
+                                    <Label Margin="10" Text="{Binding Name}" />
+                                </Grid>
+                            </telerikListView:ListViewTemplateCell.View>
+                        </telerikListView:ListViewTemplateCell>
+                    </DataTemplate>
+                </telerikDataControls:RadListView.ItemTemplate>
+                <telerikDataControls:RadListView.SelectedItemStyle>
+                    <telerikListView:ListViewItemStyle BackgroundColor="{Binding Background}"
+                                                       BorderColor="{Binding BorderColor}"
+                                                       BorderLocation="{Binding BorderLocation}"
+                                                       BorderWidth="{Binding BorderWidth}" />
+                </telerikDataControls:RadListView.SelectedItemStyle>
+            </telerikDataControls:RadListView>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

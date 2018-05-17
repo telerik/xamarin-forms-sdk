@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:grid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             x:Class="SDKBrowser.Examples.DataGridControl.GroupingCategory.ProgrammaticGroupingExample.ProgrammaticGrouping">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Picker x:Name="columnPicker" />
+        <Button Clicked="GroupClicked" 
+                Text="Group"
+                Grid.Column="1" />
+        <Button Clicked="UngroupClicked"
+                Text="Ungroup"
+                Grid.Column="2" />
+        <grid:RadDataGrid Grid.Row="1"
+                          Grid.ColumnSpan="3" 
+                          x:Name="grid"
+                          ItemsSource="{Binding}"/>
+    </Grid>
+</ContentView>

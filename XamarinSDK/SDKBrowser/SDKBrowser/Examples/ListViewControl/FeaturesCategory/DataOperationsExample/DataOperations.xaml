@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView x:Class="SDKBrowser.Examples.ListViewControl.FeaturesCategory.DataOperationsExample.DataOperations"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.ListViewControl.FeaturesCategory.DataOperationsExample"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <Style x:Key="LabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+            <local:GroupConverter x:Key="groupConverter" />
+        </ResourceDictionary>
+    </ContentView.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Label Style="{StaticResource LabelStyle}" Text="Group by age" />
+            <Switch x:Name="groupSwitch"
+                    Grid.Column="1"
+                    VerticalOptions="Center"
+                    AutomationId="GroupByAgeSwitch"/>
+
+            <Label Grid.Row="1"
+                   Style="{StaticResource LabelStyle}"
+                   Text="Sort groups desc" />
+            <Switch x:Name="sortGroupSwitch"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    VerticalOptions="Center"
+                    AutomationId="SortGroupSwitch"/>
+
+            <Label Grid.Row="2"
+                   Style="{StaticResource LabelStyle}"
+                   Text="Filter by age (25 - 35)" />
+            <Switch x:Name="filterSwitch"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    VerticalOptions="Center"
+                    AutomationId="FilterByAgeSwitch"/>
+            <Grid Grid.Row="3" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label Style="{StaticResource LabelStyle}" Text="Sort direction:" />
+                <Picker x:Name="sortDirectionPicker" Grid.Column="1" AutomationId="SortDirectionPicker" />
+            </Grid>
+        </Grid>
+
+        <telerikDataControls:RadListView x:Name="listView"
+                                         Grid.Row="1"
+                                         ItemsSource="{Binding Items}">
+            <telerikDataControls:RadListView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <Grid BackgroundColor="#1188FF"
+                          HeightRequest="40">
+                        <Label FontAttributes="Bold"
+                               FontSize="Medium"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               Text="{Binding Converter={StaticResource groupConverter}}"
+                               TextColor="#FFFFFF" />
+                    </Grid>
+                </DataTemplate>
+            </telerikDataControls:RadListView.GroupHeaderTemplate>
+            <telerikDataControls:RadListView.ItemTemplate>
+                <DataTemplate>
+                    <telerikListView:ListViewTemplateCell>
+                        <telerikListView:ListViewTemplateCell.View>
+                            <StackLayout Padding="10"
+                                         BackgroundColor="White">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Name:" TextColor="Black" />
+                                    <Label Text="{Binding Name}" />
+                                </StackLayout>
+                                <StackLayout Grid.Row="1" Orientation="Horizontal">
+                                    <Label Text="Age:" TextColor="Black" />
+                                    <Label Text="{Binding Age}" />
+                                </StackLayout>
+                            </StackLayout>
+                        </telerikListView:ListViewTemplateCell.View>
+                    </telerikListView:ListViewTemplateCell>
+                </DataTemplate>
+            </telerikDataControls:RadListView.ItemTemplate>
+            <telerikDataControls:RadListView.LayoutDefinition>
+                <telerikListView:ListViewLinearLayout ItemLength="70" Orientation="Vertical" />
+            </telerikDataControls:RadListView.LayoutDefinition>
+        </telerikDataControls:RadListView>
+    </Grid>
+</ContentView>

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Threading.Tasks;
-using SDKBrowser.Examples.SpreadStreamProcessing;
+using SDKBrowser.Examples.SpreadStreamProcessingControl;
 using SDKBrowser.UWP;
 using Windows.Storage;
 

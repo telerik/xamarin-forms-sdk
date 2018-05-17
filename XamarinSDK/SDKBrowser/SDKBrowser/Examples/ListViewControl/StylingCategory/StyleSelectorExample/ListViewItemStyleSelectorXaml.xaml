@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView x:Class="SDKBrowser.Examples.ListViewControl.StylingCategory.StyleSelectorExample.ListViewItemStyleSelectorXaml"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.ListViewControl.StylingCategory.StyleSelectorExample"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls">
+    <!--  >> listview-gettingstarted-listview-xaml  -->
+    <telerikDataControls:RadListView x:Name="listView" ItemsSource="{Binding Source}">
+        <telerikDataControls:RadListView.BindingContext>
+            <local:ViewModel />
+        </telerikDataControls:RadListView.BindingContext>
+        <telerikDataControls:RadListView.ItemTemplate>
+            <DataTemplate>
+                <telerikListView:ListViewTemplateCell>
+                    <telerikListView:ListViewTemplateCell.View>
+                        <StackLayout>
+                            <Label Margin="10" Text="{Binding Name}" />
+                            <Label Margin="10"
+                                   FontSize="10"
+                                   Text="{Binding Age}" />
+                        </StackLayout>
+                    </telerikListView:ListViewTemplateCell.View>
+                </telerikListView:ListViewTemplateCell>
+            </DataTemplate>
+        </telerikDataControls:RadListView.ItemTemplate>
+
+        <telerikDataControls:RadListView.ItemStyleSelector>
+            <local:ExampleListViewStyleSelector />
+        </telerikDataControls:RadListView.ItemStyleSelector>
+    </telerikDataControls:RadListView>
+    <!--  << listview-gettingstarted-listview-xaml  -->
+</ContentView>

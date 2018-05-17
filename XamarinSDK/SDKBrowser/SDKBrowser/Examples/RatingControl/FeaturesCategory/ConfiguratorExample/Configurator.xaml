@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView x:Class="SDKBrowser.Examples.RatingControl.FeaturesCategory.ConfiguratorExample.Configurator"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:rating="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input">
+    <StackLayout>
+        <rating:RadShapeRating x:Name="rating" ValueChanged="rating_ValueChanged"/>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="ItemFill" />
+            <Picker x:Name="itemFillPicker"
+                    HorizontalOptions="FillAndExpand"
+                    SelectedIndex="0"
+                    SelectedIndexChanged="ItemFillPicker_SelectedIndexChanged">
+                <Picker.Items>
+                    <x:String>Red</x:String>
+                    <x:String>Orange</x:String>
+                    <x:String>Lime</x:String>
+                    <x:String>Purple</x:String>
+                </Picker.Items>
+            </Picker>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="ItemStroke" />
+            <Picker x:Name="itemStrokePicker"
+                    HorizontalOptions="FillAndExpand"
+                    SelectedIndex="0"
+                    SelectedIndexChanged="ItemStrokePicker_SelectedIndexChanged">
+                <Picker.Items>
+                    <x:String>Red</x:String>
+                    <x:String>Orange</x:String>
+                    <x:String>Lime</x:String>
+                    <x:String>Purple</x:String>
+                </Picker.Items>
+            </Picker>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="StrokeThickness" />
+            <Slider HorizontalOptions="FillAndExpand"
+                    Maximum="5"
+                    Minimum="1"
+                    ValueChanged="Slider_ValueChanged"
+                    Value="3" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="SelectedItemFill" />
+            <Picker x:Name="selectedItemFillPicker"
+                    HorizontalOptions="FillAndExpand"
+                    SelectedIndex="0"
+                    SelectedIndexChanged="SelectedItemFillSelectedPicker_SelectedIndexChanged">
+                <Picker.Items>
+                    <x:String>Red</x:String>
+                    <x:String>Orange</x:String>
+                    <x:String>Lime</x:String>
+                    <x:String>Purple</x:String>
+                </Picker.Items>
+            </Picker>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="SelectedItemStroke" />
+            <Picker x:Name="selectedItemStrokePicker"
+                    HorizontalOptions="FillAndExpand"
+                    SelectedIndex="0"
+                    SelectedIndexChanged="SelectedItemStrokeSelectedPicker_SelectedIndexChanged">
+                <Picker.Items>
+                    <x:String>Red</x:String>
+                    <x:String>Orange</x:String>
+                    <x:String>Lime</x:String>
+                    <x:String>Purple</x:String>
+                </Picker.Items>
+            </Picker>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="SelectedItemStrokeThickness" />
+            <Slider HorizontalOptions="FillAndExpand"
+                    Maximum="5"
+                    Minimum="1"
+                    ValueChanged="Slider_ValueChanged_1"
+                    Value="3" />
+        </StackLayout>
+        <Label x:Name="label"/>
+    </StackLayout>
+</ContentView>

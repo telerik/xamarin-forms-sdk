@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Android.Content;
 using Java.IO;
 using SDKBrowser.Droid;
-using SDKBrowser.Examples.SpreadStreamProcessing;
+using SDKBrowser.Examples.SpreadStreamProcessingControl;
 using Xamarin.Forms;
 
 [assembly: Xamarin.Forms.Dependency(typeof(XlsxFileViewer))]

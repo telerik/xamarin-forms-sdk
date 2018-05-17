@@ -3,14 +3,14 @@ using System.IO;
 using System.Threading.Tasks;
 using Foundation;
 using QuickLook;
-using SDKBrowser.Examples.SpreadStreamProcessing;
+using SDKBrowser.Examples.SpreadStreamProcessingControl;
 using SDKBrowser.iOS;
 using UIKit;
 
 [assembly: Xamarin.Forms.Dependency(typeof(XlsxFileViewer))]
 namespace SDKBrowser.iOS
 {
-	public class XlsxFileViewer : IXlsxFileViewer
+    public class XlsxFileViewer : IXlsxFileViewer
 	{
 		public Task View(Stream stream, string filename)
 		{

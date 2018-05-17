@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using SDKBrowser.Common;
+using SDKBrowser.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
@@ -12,8 +12,13 @@ namespace SDKBrowser.Droid
     {
         protected override void OnCreate(Bundle bundle)
         {
+            StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+            StrictMode.SetVmPolicy(builder.Build());
+
             base.OnCreate(bundle);
             Forms.Init(this, bundle);
+
+            this.SetTheme(Resource.Style.Theme_Design_Light);
 
             PermissionsHelper.Activity = this;
 
@@ -21,9 +26,11 @@ namespace SDKBrowser.Droid
         }
 
         [Java.Interop.Export("NavigateTo")]
-        public void NavigateTo(string pageName, string pageTitle)
+        public string NavigateTo(string controlName, string exampleName)
         {
-            Xamarin.Forms.Application.Current.MainPage.Navigation.PushAsync(PageFactory.GetPage(pageName, pageTitle, true));
+            var backdoorService = DependencyService.Get<IBackdoorService>();
+
+            return backdoorService.NavigateToExample(controlName, exampleName);
         }
     }
 }

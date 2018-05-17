@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SDKBrowser.Examples.ChartControl.LegendCategory.CartesianChartRadLegendExample.CartesianChartRadLegendXaml"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.ChartControl.LegendCategory"
+             xmlns:telerikChart="clr-namespace:Telerik.XamarinForms.Chart;assembly=Telerik.XamarinForms.Chart">
+  
+  <StackLayout>
+    <!-- >> chart-features-cartesianchart-legend-definition-xaml -->
+    <telerikChart:RadCartesianChart x:Name="chart" HeightRequest="300">
+      <telerikChart:RadCartesianChart.BindingContext>
+        <local:ViewModel />
+      </telerikChart:RadCartesianChart.BindingContext>
+      <telerikChart:RadCartesianChart.HorizontalAxis>
+        <telerikChart:CategoricalAxis />
+      </telerikChart:RadCartesianChart.HorizontalAxis>
+      <telerikChart:RadCartesianChart.VerticalAxis>
+        <telerikChart:NumericalAxis />
+      </telerikChart:RadCartesianChart.VerticalAxis>
+      <telerikChart:RadCartesianChart.Series>
+        <telerikChart:LineSeries CategoryBinding="Category" 
+                                ValueBinding="Value" 
+                                DisplayName=" Data1"
+                                ItemsSource="{Binding Data1}" />
+        <telerikChart:LineSeries CategoryBinding="Category" 
+                                 ValueBinding="Value" 
+                                 DisplayName=" Data2"
+                                 ItemsSource="{Binding Data2}" />
+        <telerikChart:LineSeries CategoryBinding="Category" 
+                                 ValueBinding="Value" 
+                                 DisplayName=" Data3"
+                                 ItemsSource="{Binding Data3}" />
+      </telerikChart:RadCartesianChart.Series>
+    </telerikChart:RadCartesianChart>
+        <telerikChart:RadLegend LegendProvider="{x:Reference Name=chart}" 
+                                LegendItemFontColor="DarkGreen"
+                                HeightRequest="200"/>
+        <!-- << chart-features-cartesianchart-legend-definition-xaml -->
+    </StackLayout>
+</ContentView>

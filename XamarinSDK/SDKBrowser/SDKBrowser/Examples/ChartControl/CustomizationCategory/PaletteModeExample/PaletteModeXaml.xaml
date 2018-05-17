@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SDKBrowser.Examples.ChartControl.CustomizationCategory.PaletteModeExample.PaletteModeXaml"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.ChartControl.CustomizationCategory.PaletteModeExample"
+             xmlns:telerikChart="clr-namespace:Telerik.XamarinForms.Chart;assembly=Telerik.XamarinForms.Chart">
+    <ContentView.BindingContext>
+        <local:ViewModel />
+    </ContentView.BindingContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <!-- >> chart-customization-palettemode-xaml -->
+        <telerikChart:RadCartesianChart>
+            <telerikChart:RadCartesianChart.HorizontalAxis>
+                <telerikChart:CategoricalAxis />
+            </telerikChart:RadCartesianChart.HorizontalAxis>
+            <telerikChart:RadCartesianChart.VerticalAxis>
+                <telerikChart:NumericalAxis />
+            </telerikChart:RadCartesianChart.VerticalAxis>
+            <telerikChart:RadCartesianChart.Series>
+                <telerikChart:BarSeries CategoryBinding="Category"
+                                        ValueBinding="Value" 
+                                        ItemsSource="{Binding Data}"
+                                        PaletteMode="{Binding SelectedMode}" />
+            </telerikChart:RadCartesianChart.Series>
+            <telerikChart:RadCartesianChart.Palette>
+                <telerikChart:ChartPalette>
+                    <telerikChart:ChartPalette.Entries>
+                        <telerikChart:PaletteEntry FillColor="Green" />
+                        <telerikChart:PaletteEntry FillColor="HotPink" />
+                        <telerikChart:PaletteEntry FillColor="Red" />
+                        <telerikChart:PaletteEntry FillColor="Yellow" />
+                        <telerikChart:PaletteEntry FillColor="Orange" />
+                    </telerikChart:ChartPalette.Entries>
+                </telerikChart:ChartPalette>
+            </telerikChart:RadCartesianChart.Palette>
+        </telerikChart:RadCartesianChart>
+        <!-- << chart-customization-palettemode-xaml -->
+        <Label Grid.Row="1"
+               Text="Select PaletteMode:"
+               TextColor="Black" />
+        <Picker Grid.Row="2"
+                TextColor="Black"
+                ItemsSource="{Binding Modes}"
+                SelectedItem="{Binding SelectedMode, Mode=TwoWay}"/>
+    </Grid>
+</ContentView>

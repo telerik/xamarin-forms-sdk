@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("SDKBrowser.UWP")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Telerik AD")]
+[assembly: AssemblyCompany("Telerik EAD")]
 [assembly: AssemblyProduct("SDKBrowser.UWP")]
-[assembly: AssemblyCopyright("Copyright © 2016 Telerik AD. All rights reserved.")]
+[assembly: AssemblyCopyright("Copyright © 2016-2018 Telerik EAD. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Views.SplashView"
+             Style="{StaticResource ContentPageStyle}">
+    <Grid Padding="30"
+          RowSpacing="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0"
+               HorizontalOptions="Center"
+               Style="{StaticResource TitleTextStyle}"
+               Text="{Binding SplashTitle}" />
+        <Image Grid.Row="1"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Source="{Binding SplashIcon, Converter={StaticResource ImageSourceConverter}}" />
+        <Label Grid.Row="2"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               HorizontalTextAlignment="Center"
+               Style="{StaticResource RegularTextStyle}"
+               Text="{Binding SplashInfo}" />
+        <telerikInput:RadButton Grid.Row="3"
+                                WidthRequest="160"
+                                HorizontalOptions="Center"
+                                Style="{StaticResource RoundButtonStyle}"
+                                Command="{Binding NextCommand}"
+                                Text="Get Started" />
+    </Grid>
+</ContentPage>

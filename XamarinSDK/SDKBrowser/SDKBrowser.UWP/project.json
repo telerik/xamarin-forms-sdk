@@ -1,10 +1,11 @@
-{
+﻿{
   "dependencies": {
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0",
     "SkiaSharp": "1.59.1",
     "SkiaSharp.Views": "1.59.1",
     "SkiaSharp.Views.Forms": "1.59.1",
-    "Xamarin.Forms": "2.4.0.282"
+    "Xam.Plugins.Settings": "3.1.1",
+    "Xamarin.Forms": "2.5.0.121934"
   },
   "frameworks": {
     "uap10.0": {}

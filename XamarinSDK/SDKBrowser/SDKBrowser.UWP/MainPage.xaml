@@ -10,7 +10,7 @@
     <forms:WindowsPage.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Calendar/Styling/CustomRenderer/CalendarCustomRenderersResources.xaml" />
+                <ResourceDictionary Source="Examples/CalendarControl/StylingCategory/CustomRendererExample/CalendarCustomRenderersResources.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </forms:WindowsPage.Resources>

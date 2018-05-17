@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView x:Class="SDKBrowser.Examples.SideDrawerControl.GettingStartedCategory.GettingStartedExample.SideDrawerGettingStartedXaml"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackLayout Orientation="Horizontal" Spacing="10">
+            <Button WidthRequest="32" HeightRequest="32" BorderWidth="0" BorderRadius="0"
+                    BorderColor="Transparent" BackgroundColor="Transparent" Clicked="OnButtonClicked">
+                <Button.Image>
+                    <OnPlatform x:TypeArguments="FileImageSource">
+                        <On Platform="iOS,Android">HamburgerMenu.png</On>
+                        <On Platform="UWP">Assets\HamburgerMenu.png</On>
+                    </OnPlatform>
+                </Button.Image>
+            </Button>
+            <Label VerticalOptions="Center" Text="SideDrawer" />
+        </StackLayout>
+        <Grid Grid.Row="1">
+            <!--  >> sidedrawer-gettingstarted-xaml  -->
+            <telerikPrimitives:RadSideDrawer x:Name="drawer" DrawerLength="200">
+                <telerikPrimitives:RadSideDrawer.MainContent>
+                    <Label Text="Main content" />
+                </telerikPrimitives:RadSideDrawer.MainContent>
+                <telerikPrimitives:RadSideDrawer.DrawerContent>
+                    <StackLayout>
+                        <Button Text="Mail" />
+                        <Button Text="Calendar" />
+                        <Button Text="People" />
+                        <Button Text="Tasks" />
+                    </StackLayout>
+                </telerikPrimitives:RadSideDrawer.DrawerContent>
+            </telerikPrimitives:RadSideDrawer>
+            <!--  << sidedrawer-gettingstarted-xaml  -->
+        </Grid>
+    </Grid>
+</ContentView>

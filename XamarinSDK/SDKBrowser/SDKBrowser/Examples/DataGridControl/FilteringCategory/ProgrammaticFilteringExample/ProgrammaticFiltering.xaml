@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:grid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             x:Class="SDKBrowser.Examples.DataGridControl.FilteringCategory.ProgrammaticFilteringExample.ProgrammaticFiltering">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Entry Placeholder="Name"
+               TextChanged="NameFilterValueChanged" 
+               x:Name="textFilterEntry" />
+        <Picker x:Name="textOperatorPicker"
+                ItemsSource="{Binding TextOperatorSource}" 
+                SelectedIndexChanged="TextOperatorChanged"
+                Grid.Column="1" />
+        <Button Text="Clear" 
+                Clicked="ClearNameFilter" 
+                Grid.Column="2" />
+        <Entry Placeholder="Population"
+               TextChanged="PopulationFilterValueChanged" 
+               Grid.Row="1" x:Name="populationEntry"/>
+        <Picker x:Name="numericalOperatorPicker" 
+                ItemsSource="{Binding NumericalOperatorSource}" 
+                SelectedIndexChanged="NumericalOperatorChanged" 
+                Grid.Row="1"
+                Grid.Column="1"/>
+        <Button Text="Clear" 
+                Clicked="ClearPopulationFilter"
+                Grid.Row="1" 
+                Grid.Column="2" />
+        <grid:RadDataGrid Grid.ColumnSpan="3" 
+                          Grid.Row="2" 
+                          ItemsSource="{Binding GridSource}"
+                          x:Name="grid"/>
+    </Grid>
+</ContentView>

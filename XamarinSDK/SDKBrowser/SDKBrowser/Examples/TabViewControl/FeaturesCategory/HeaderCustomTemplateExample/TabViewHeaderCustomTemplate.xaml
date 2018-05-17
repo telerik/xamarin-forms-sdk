@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             x:Class="SDKBrowser.Examples.TabViewControl.FeaturesCategory.HeaderCustomTemplateExample.TabViewHeaderCustomTemplate">
+    <!--  >> tabview-features-tabviewheader-custom-template-xaml  -->
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <ControlTemplate x:Key="HeaderControlTemplate">
+                <Grid BackgroundColor="Transparent">
+                    <BoxView IsVisible="{TemplateBinding IsSelected}"
+                             BackgroundColor="Orange"
+                             VerticalOptions="End"
+                             HeightRequest="5"/>
+                    <StackLayout Orientation="Horizontal" 
+                                 Margin="0, 0, 0, 8">
+                        <Label Text="{TemplateBinding Text}"
+                               FontSize="15"
+                               TextColor="Orange"
+                               HorizontalTextAlignment="Start"/>
+                        <Label Text="Description of the header"
+                               TextColor="LightBlue"
+                               IsVisible="{TemplateBinding IsSelected}"
+                               VerticalTextAlignment="Center"
+                               FontSize="12"/>
+                    </StackLayout>
+                </Grid>
+            </ControlTemplate>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <!--  << tabview-features-header-position  -->
+    <telerikPrimitives:RadTabView x:Name="tabView"
+                                  HeaderPosition="Top">
+    <!--  << tabview-features-header-position  -->
+        <telerikPrimitives:RadTabView.Items>
+            <telerikPrimitives:TabViewItem>
+                <telerikPrimitives:TabViewItem.Header>
+                    <telerikPrimitives:TabViewHeaderItem Text="Tab 1" 
+                                                         ControlTemplate="{StaticResource HeaderControlTemplate}" />
+                </telerikPrimitives:TabViewItem.Header>
+            </telerikPrimitives:TabViewItem>
+            <telerikPrimitives:TabViewItem HeaderText="Tab 2"/>
+            <telerikPrimitives:TabViewItem HeaderText="Tab 3"/>
+        </telerikPrimitives:RadTabView.Items>
+    </telerikPrimitives:RadTabView>
+    <!--  << tabview-features-tabviewheader-custom-template-xaml  -->
+</ContentView>

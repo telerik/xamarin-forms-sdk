@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerik="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.MaskedInputControl.FeaturesCategory.CommandsExample.Commands">
+    <StackLayout Margin="16">
+        <Label Text="The default C token allows x to be input. Using custom command we reject x from input."/>
+        <telerik:RadMaskedInput x:Name="input" Mask="CC (00)" Placeholder="#" />
+    </StackLayout>
+</ContentView>

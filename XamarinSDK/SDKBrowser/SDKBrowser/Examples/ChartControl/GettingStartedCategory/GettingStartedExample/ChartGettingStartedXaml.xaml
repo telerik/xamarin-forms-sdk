@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SDKBrowser.Examples.ChartControl.GettingStartedCategory.GettingStartedExample.ChartGettingStartedXaml"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.ChartControl.GettingStartedCategory.GettingStartedExample"
+             xmlns:telerikChart="clr-namespace:Telerik.XamarinForms.Chart;assembly=Telerik.XamarinForms.Chart">
+
+  <!-- >> chart-getting-started-xaml-chart -->
+  <telerikChart:RadCartesianChart x:Name="chart">
+    <telerikChart:RadCartesianChart.BindingContext>
+      <local:ViewModel />
+    </telerikChart:RadCartesianChart.BindingContext>
+    <telerikChart:RadCartesianChart.HorizontalAxis>
+      <telerikChart:CategoricalAxis />
+    </telerikChart:RadCartesianChart.HorizontalAxis>
+    <telerikChart:RadCartesianChart.VerticalAxis>
+      <telerikChart:NumericalAxis />
+    </telerikChart:RadCartesianChart.VerticalAxis>
+    <telerikChart:RadCartesianChart.Series>
+      <telerikChart:BarSeries CategoryBinding="Category" 
+                              ValueBinding="Value" 
+                              ItemsSource="{Binding Data}" />
+    </telerikChart:RadCartesianChart.Series>
+  </telerikChart:RadCartesianChart>
+  <!-- << chart-getting-started-xaml-chart -->
+</ContentView>

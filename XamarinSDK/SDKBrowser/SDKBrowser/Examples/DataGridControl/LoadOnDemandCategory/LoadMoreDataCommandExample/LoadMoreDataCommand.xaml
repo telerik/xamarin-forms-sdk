@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:grid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             x:Class="SDKBrowser.Examples.DataGridControl.LoadOnDemandCategory.LoadMoreDataCommandExample.LoadMoreDataCommand">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <grid:RadDataGrid x:Name="dataGrid" ItemsSource="{Binding Items}"
+                                     LoadOnDemandMode="Automatic"
+                                     LoadOnDemandBufferItemsCount="{Binding Source={x:Reference slider}, Path=Value}"/>
+        <StackLayout Grid.Row="1">
+            <Label Text="LoadOnDemandBufferItemsCount"/>
+            <Slider x:Name="slider" Minimum="0" Maximum="10"/>
+        </StackLayout>
+    </Grid>
+</ContentView>

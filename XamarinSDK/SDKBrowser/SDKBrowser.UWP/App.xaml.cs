@@ -66,9 +66,6 @@ namespace SDKBrowser.WinRT
                 // TODO: change this value to a cache size that is appropriate for your application
                 rootFrame.CacheSize = 1;
                 Xamarin.Forms.Forms.Init(e);
-#if WINDOWS_UWP
-                Xamarin.Forms.DependencyService.Register<SDKBrowser.UWP.NativeDevice>();
-#endif
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {

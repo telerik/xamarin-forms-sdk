@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView x:Class="SDKBrowser.Examples.TabViewControl.FeaturesCategory.ItemsSourceExample.TabViewItemsSource"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.TabViewControl.FeaturesCategory.ItemsSourceExample">
+
+    <VisualElement.Resources>
+        <ResourceDictionary>
+            <ControlTemplate x:Key="navHeaderTemplate">
+                <Grid BackgroundColor="Transparent" Margin="5">
+                    <BoxView IsVisible="{TemplateBinding IsSelected}" BackgroundColor="LightGray" />
+                    <Label Text="{Binding HeaderTitle}" HorizontalTextAlignment="Center" />
+                </Grid>
+            </ControlTemplate>
+            <ControlTemplate x:Key="navContentTemplate">
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Title: " />
+                        <Label Text="{Binding HeaderTitle}" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Badges: " />
+                        <Label Text="{Binding BadgeCount}" />
+                    </StackLayout>
+                    <Label Text="{Binding Text}" />
+                </StackLayout>
+            </ControlTemplate>
+        </ResourceDictionary>
+    </VisualElement.Resources>
+
+    <Grid>
+        <telerikPrimitives:RadTabView x:Name="tabView"
+                                      local:TabViewUtilities.ItemHeaderTemplate="{StaticResource navHeaderTemplate}"
+                                      local:TabViewUtilities.ItemContentTemplate="{StaticResource navContentTemplate}"
+                                      local:TabViewUtilities.ItemsSource="{Binding}" />
+    </Grid>
+</ContentView>

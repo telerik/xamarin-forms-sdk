@@ -40,4 +40,12 @@
     <!-- >> xmlns-telerikrating  -->
     xmlns:rating="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
     <!-- << xmlns-telerikrating  --></rating>
+  <coversationalui>
+    <!-- >> xmlns-telerikchat -->
+    xmlns:telerikConversationalUI="clr-namespace:Telerik.XamarinForms.ConversationalUI;assembly=Telerik.XamarinForms.ConversationalUI"
+    <!-- << xmlns-telerikchat --></coversationalui>
+  <barcode>
+    <!-- >> xmlns-telerikbarcode -->
+    xmlns:telerikBarcode="clr-namespace:Telerik.XamarinForms.Barcode;assembly=Telerik.XamarinForms.Barcode"
+    <!-- << xmlns-telerikbarcode --></barcode>
 </namespaces>

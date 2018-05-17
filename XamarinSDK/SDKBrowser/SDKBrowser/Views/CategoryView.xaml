@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikCommands="clr-namespace:Telerik.XamarinForms.DataControls.ListView.Commands;assembly=Telerik.XamarinForms.DataControls"
+             x:Class="SDKBrowser.Views.CategoryView"
+             Style="{StaticResource SearchPageStyle}">
+    <Grid>
+        <telerikDataControls:RadListView Style="{StaticResource BrowseListStyle}"
+                                         ItemsSource="{Binding Examples}">
+            <telerikDataControls:RadListView.Commands>
+                <telerikCommands:ListViewUserCommand Id="ItemTap"
+                                                     Command="{Binding NextCommand}" />
+            </telerikDataControls:RadListView.Commands>
+            <telerikDataControls:RadListView.ItemTemplate>
+                <DataTemplate>
+                    <telerikListView:ListViewTemplateCell>
+                        <Grid Margin="12"
+                              ColumnSpacing="12">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0"
+                                   VerticalOptions="Center">
+                                <Image.Source>
+                                    <OnPlatform x:TypeArguments="ImageSource">
+                                        <On Platform="iOS,Android">Bullet.png</On>
+                                        <On Platform="UWP">Assets\Bullet.png</On>
+                                    </OnPlatform>
+                                </Image.Source>
+                            </Image>
+                            <Label Grid.Column="1"
+                                   VerticalOptions="Center"
+                                   Style="{StaticResource RegularTextStyle}"
+                                   Text="{Binding Title}" />
+                        </Grid>
+                    </telerikListView:ListViewTemplateCell>
+                </DataTemplate>
+            </telerikDataControls:RadListView.ItemTemplate>
+            <telerikDataControls:RadListView.FilterDescriptors>
+                <telerikListView:DelegateFilterDescriptor Filter="{Binding SearchFilter}" />
+            </telerikDataControls:RadListView.FilterDescriptors>
+        </telerikDataControls:RadListView>
+    </Grid>
+</ContentPage>

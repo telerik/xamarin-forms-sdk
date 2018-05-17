@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView x:Class="SDKBrowser.Examples.ListViewControl.LayoutsCategory.LinearLayoutExample.LinearLayout"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls">
+    <!--  >> listview-layouts-linearlayout-listview  -->
+    <telerikDataControls:RadListView x:Name="listView">
+        <telerikDataControls:RadListView.ItemTemplate>
+            <DataTemplate>
+                <telerikListView:ListViewTemplateCell>
+                    <telerikListView:ListViewTemplateCell.View>
+                        <Grid BackgroundColor="{Binding Color}" />
+                    </telerikListView:ListViewTemplateCell.View>
+                </telerikListView:ListViewTemplateCell>
+            </DataTemplate>
+        </telerikDataControls:RadListView.ItemTemplate>
+        <telerikDataControls:RadListView.LayoutDefinition>
+            <telerikListView:ListViewLinearLayout ItemLength="40" VerticalItemSpacing="2" />
+        </telerikDataControls:RadListView.LayoutDefinition>
+    </telerikDataControls:RadListView>
+    <!--  << listview-layouts-linearlayout-listview  -->
+</ContentView>

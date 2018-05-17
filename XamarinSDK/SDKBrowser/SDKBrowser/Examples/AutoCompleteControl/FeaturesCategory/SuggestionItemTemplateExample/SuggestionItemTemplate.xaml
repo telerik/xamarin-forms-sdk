@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView x:Class="SDKBrowser.Examples.AutoCompleteControl.FeaturesCategory.SuggestionItemTemplateExample.SuggestionItemTemplate"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.AutoCompleteControl.FeaturesCategory.SuggestionItemTemplateExample"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input">
+    <StackLayout>
+        <!--  >> autocomplete-features-suggestion-item-template  -->
+        <telerikInput:RadAutoComplete x:Name="AutoComplete"
+                                      ItemsSource="{Binding Source}"
+                                      TextSearchPath="Name"
+                                      VerticalOptions="Start"
+                                      Watermark="Search here...">
+            <telerikInput:RadAutoComplete.BindingContext>
+                <local:ViewModel />
+            </telerikInput:RadAutoComplete.BindingContext>
+            <telerikInput:RadAutoComplete.SuggestionViewHeight>
+                <OnPlatform x:TypeArguments="x:Double"
+                            Android="200"
+                            WinPhone="400"
+                            iOS="400" />
+            </telerikInput:RadAutoComplete.SuggestionViewHeight>
+            <telerikInput:RadAutoComplete.SuggestionItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label Margin="5"
+                               FontSize="24"
+                               Text="{Binding Item.Name}"
+                               TextColor="Black" />
+                        <Image Grid.Column="1"
+                               Margin="5"
+                               HeightRequest="20"
+                               Source="{Binding Item.ImageSource}"
+                               WidthRequest="20" />
+                    </Grid>
+                </DataTemplate>
+            </telerikInput:RadAutoComplete.SuggestionItemTemplate>
+        </telerikInput:RadAutoComplete>
+        <!--  << autocomplete-features-suggestion-item-template  -->
+    </StackLayout>
+</ContentView>
