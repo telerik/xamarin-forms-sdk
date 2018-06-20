@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls"
+             x:Class="SDKBrowser.Examples.ListViewControl.GroupingCategory.PropertyGroupDescriptorExample.PropertyGroupDescriptor">
+    <ContentView.Resources>
+        <!-- >> listview-grouping-templates -->
+        <ResourceDictionary>
+            <DataTemplate x:Key="ListViewItemTemplate">
+                <telerikListView:ListViewTemplateCell>
+                    <telerikListView:ListViewTemplateCell.View>
+                        <Grid Padding="16, 0, 0, 0" BackgroundColor="#F1F2F5">
+                            <Label Text="{Binding Name}" TextColor="#6F6F70" FontSize="Small" />
+                        </Grid>
+                    </telerikListView:ListViewTemplateCell.View>
+                </telerikListView:ListViewTemplateCell>
+            </DataTemplate>
+            <DataTemplate x:Key="ListViewGroupHeaderTemplate">
+                <Grid BackgroundColor="#f1f2f5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="&#x25B8;" Margin="8, 12, 0, 6" TextColor="DarkGray" FontSize="Medium">
+                        <Label.Triggers>
+                            <DataTrigger TargetType="Label" Binding="{Binding IsExpanded}" Value="True">
+                                <Setter Property="Text" Value="&#x25BE;" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+                    <Label Margin="0, 12, 0, 6" Text="{Binding }" Grid.Column="1" TextColor="DarkGray" FontSize="Medium" HorizontalOptions="Start" />
+                </Grid>
+            </DataTemplate>
+        </ResourceDictionary>
+        <!-- << listview-grouping-templates -->
+    </ContentView.Resources>
+    <!-- >> listview-grouping-propertygroupdescriptor -->
+    <telerikDataControls:RadListView x:Name="listView" ItemsSource="{Binding Cities}"
+                         ItemTemplate="{StaticResource ListViewItemTemplate}"
+                         GroupHeaderTemplate="{StaticResource ListViewGroupHeaderTemplate}">
+        <telerikDataControls:RadListView.GroupDescriptors>
+            <telerikListView:PropertyGroupDescriptor PropertyName="Country"/>
+        </telerikDataControls:RadListView.GroupDescriptors>
+    </telerikDataControls:RadListView>
+    <!-- << listview-grouping-propertygroupdescriptor -->
+</ContentView>

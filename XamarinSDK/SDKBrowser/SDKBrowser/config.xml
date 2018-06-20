@@ -101,6 +101,35 @@
       </Categories>
     </Control>
     <Control>
+      <Name>Border</Name>
+      <Title>Border</Title>
+      <Icon>Border.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>BorderGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>KeyFeatures</Page>
+              <Name>KeyFeatures</Name>
+              <Title>Key Features</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
       <Name>BusyIndicator</Name>
       <Title>BusyIndicator</Title>
       <Icon>BusyIndicator.png</Icon>
@@ -490,6 +519,11 @@
               <Name>PaletteMode</Name>
               <Title>Palette Mode - Code</Title>
             </Example>
+            <Example>
+              <Page>GradientBars</Page>
+              <Name>GradientBars</Name>
+              <Title>Gradient Bars</Title>
+            </Example>
           </Examples>
         </Category>
         <Category>
@@ -641,7 +675,46 @@
           </Examples>
         </Category>
       </Categories>
-    </Control> 
+    </Control>
+    <Control>
+      <Name>CheckBox</Name>
+      <Title>CheckBox</Title>
+      <Icon>Checkbox.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>CheckBoxGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>CheckBoxGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>ColorChanging</Page>
+              <Name>ColorChanging</Name>
+              <Title>Color Changing</Title>
+            </Example>
+            <Example>
+              <Page>KeyFeatures</Page>
+              <Name>KeyFeatures</Name>
+              <Title>Key Features</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
     <Control>
       <Name>DataForm</Name>
       <Title>DataForm</Title>
@@ -1252,6 +1325,27 @@
               <Page>ListViewItemTemplateSelectorCSharp</Page>
               <Name>TemplateCellSelector</Name>
               <Title>Template Cell Selector - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Grouping</Name>
+          <Title>Grouping</Title>
+          <Examples>
+            <Example>
+              <Page>PropertyGroupDescriptor</Page>
+              <Name>PropertyGroupDescriptor</Name>
+              <Title>PropertyGroupDescriptor</Title>
+            </Example>
+            <Example>
+              <Page>DelegateGroupDescriptorGroups</Page>
+              <Name>DelegateGroupDescriptor</Name>
+              <Title>DelegateGroupDescriptor</Title>
+            </Example>
+            <Example>
+              <Page>MultiLevelGroups</Page>
+              <Name>MultiLevelGrouping</Name>
+              <Title>Multi-Level Grouping</Title>
             </Example>
           </Examples>
         </Category>

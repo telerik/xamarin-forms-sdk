@@ -26,9 +26,9 @@
                                      DisplayName="Sales"
                                      ItemsSource="{Binding Data}" />
         </telerikChart:RadCartesianChart.Series>
-        <telerikChart:RadCartesianChart.Behaviors>
+        <telerikChart:RadCartesianChart.ChartBehaviors>
             <telerikChart:ChartPanAndZoomBehavior />
-        </telerikChart:RadCartesianChart.Behaviors>
+        </telerikChart:RadCartesianChart.ChartBehaviors>
     </telerikChart:RadCartesianChart>
     <!-- << chart-interactivity-panzoom-xaml -->
 </ContentView>

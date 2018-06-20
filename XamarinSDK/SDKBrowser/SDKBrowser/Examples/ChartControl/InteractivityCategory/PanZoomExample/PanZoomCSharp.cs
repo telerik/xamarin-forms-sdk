@@ -31,7 +31,7 @@ namespace SDKBrowser.Examples.ChartControl.InteractivityCategory.PanZoomExample
                         DisplayName = "Sales"
                     }
                 },
-                Behaviors =
+                ChartBehaviors =
                 {
                     new ChartPanAndZoomBehavior()
                 }

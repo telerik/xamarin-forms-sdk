@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             x:Class="SDKBrowser.Examples.BorderControl.FeaturesCategory.KeyFeaturesExample.KeyFeatures">
+  <ContentView.Content>
+        <StackLayout Margin="5,20,5,5">
+            <Label Text="Setting BorderColor and BorderThickness" />
+            <!-- >> border-features-thickness -->
+            <telerikPrimitives:RadBorder BorderColor="#4488F6" BorderThickness="1, 2, 1, 2">
+                <Label Text="Hello there" Margin="2" />
+            </telerikPrimitives:RadBorder>
+            <!-- << border-features-thickness -->
+            <Label Text="Defining Different Corners" />
+            <!-- >> border-features-cornerradius -->
+            <telerikPrimitives:RadBorder BorderColor="#4488F6" BorderThickness="1" 
+                     CornerRadius="15, 5, 15, 5">
+                <Label Text="Hello there" Margin="2" />
+            </telerikPrimitives:RadBorder>
+            <!-- << border-features-cornerradius -->
+            <Label Text="Creating Circular Image" />
+            <!-- >> border-features-circularimage -->
+            <telerikPrimitives:RadBorder HorizontalOptions="Start" CornerRadius="25" BorderThickness="2" BorderColor="Red">
+                <Image Source="XamarinIcon.png" WidthRequest="50" HeightRequest="50" />
+            </telerikPrimitives:RadBorder>
+            <!-- << border-features-circularimage -->
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

@@ -32,7 +32,7 @@ namespace SDKBrowser.Examples.ChartControl.InteractivityCategory.TrackballSeries
                         DisplayName = "Sales 2"
                     }
                 },
-                Behaviors =
+                ChartBehaviors =
                 {
                     new ChartTrackBallBehavior
                     {

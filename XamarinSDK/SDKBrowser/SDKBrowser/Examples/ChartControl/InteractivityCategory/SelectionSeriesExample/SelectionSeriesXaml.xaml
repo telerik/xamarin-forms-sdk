@@ -29,10 +29,10 @@
                                     AllowSelect="True"
                                     ItemsSource="{Binding Data2}" />
         </telerikChart:RadCartesianChart.Series>
-        <telerikChart:RadCartesianChart.Behaviors>
+        <telerikChart:RadCartesianChart.ChartBehaviors>
             <telerikChart:ChartSelectionBehavior DataPointSelectionMode="Single"
                                                  SeriesSelectionMode="None" />
-        </telerikChart:RadCartesianChart.Behaviors>
+        </telerikChart:RadCartesianChart.ChartBehaviors>
         <telerikChart:RadCartesianChart.Grid>
             <telerikChart:CartesianChartGrid StripLinesVisibility="Y"
                                              YStripeColor="Transparent"

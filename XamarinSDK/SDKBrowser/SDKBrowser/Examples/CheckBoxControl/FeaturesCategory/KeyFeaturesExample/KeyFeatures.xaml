@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cb="clr-namespace:Telerik.XamarinForms.Primitives.CheckBox.Commands;assembly=Telerik.XamarinForms.Primitives"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             x:Class="SDKBrowser.Examples.CheckBoxControl.FeaturesCategory.KeyFeaturesExample.KeyFeatures">
+
+    <StackLayout>
+
+        <Label Text="Setting IsChecked to null" />
+        <!-- >> checkbox-key-features-ischeckednull-xaml -->
+        <telerikPrimitives:RadCheckBox x:Name="checkboxIsChecked" IsChecked="{x:Null}"  />
+        <!-- << checkbox-key-features-ischeckednull-xaml -->
+        
+        <Label Text="Setting StrokeWidth property" />
+        <!-- >> checkbox-key-features-strokewidth-xaml -->
+        <telerikPrimitives:RadCheckBox x:Name="checkboxStrokeWidth" StrokeWidth="5"/>
+        <!-- << checkbox-key-features-strokewidth-xaml -->
+
+        <Label Text="Setting Length property" />
+        <!-- >> checkbox-key-features-length-xaml -->
+        <telerikPrimitives:RadCheckBox x:Name="checkboxLength" Length="40" StrokeWidth="5"/>
+        <!-- << checkbox-key-features-length-xaml -->
+
+    </StackLayout>
+
+</ContentView>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls" 
+             xmlns:local="clr-namespace:SDKBrowser.Examples.ListViewControl.GroupingCategory.MultiLevelGroupingExample"
+             x:Class="SDKBrowser.Examples.ListViewControl.GroupingCategory.MultiLevelGroupingExample.MultiLevelGroups">
+    <ContentView.Resources>
+        <!-- >> listview-grouping-multilevel-templates -->
+        <ResourceDictionary>
+            <local:LevelToMarginConverter x:Key="LevelToMarginConverter" />
+            <DataTemplate x:Key="ListViewItemTemplate">
+                <telerikListView:ListViewTemplateCell>
+                    <telerikListView:ListViewTemplateCell.View>
+                        <Grid Padding="50, 0, 0, 0" BackgroundColor="#F1F2F5">
+                            <Label Text="{Binding Name}" TextColor="#6F6F70" FontSize="Small" />
+                        </Grid>
+                    </telerikListView:ListViewTemplateCell.View>
+                </telerikListView:ListViewTemplateCell>
+            </DataTemplate>
+            <DataTemplate x:Key="ListViewMultiLevelGroupHeaderTemplate">
+                <Grid BackgroundColor="#F1F2F5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="&#x25B8;" Margin="{Binding Level, Converter={StaticResource LevelToMarginConverter}}" 
+                           TextColor="DarkGray" FontSize="Medium">
+                        <Label.Triggers>
+                            <DataTrigger TargetType="Label" Binding="{Binding IsExpanded}" Value="True">
+                                <Setter Property="Text" Value="&#x25BE;" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+                    <Label Margin="0, 12, 0, 6" Text="{Binding }" Grid.Column="1" TextColor="DarkGray" FontSize="Medium" HorizontalOptions="Start" />
+                </Grid>
+            </DataTemplate>
+        </ResourceDictionary>
+        <!-- << listview-grouping-multilevel-templates -->
+    </ContentView.Resources>
+    <!-- >> listview-grouping-multilevel-definition -->
+    <telerikDataControls:RadListView x:Name="listView" ItemsSource="{Binding Cities}"
+                                     ItemTemplate="{StaticResource ListViewItemTemplate}"
+                                     GroupHeaderTemplate="{StaticResource ListViewMultiLevelGroupHeaderTemplate}">
+        <telerikDataControls:RadListView.GroupDescriptors>
+            <telerikListView:PropertyGroupDescriptor PropertyName="Continent"/>
+            <telerikListView:PropertyGroupDescriptor PropertyName="Country"/>
+        </telerikDataControls:RadListView.GroupDescriptors>      
+    </telerikDataControls:RadListView>
+    <!-- << listview-grouping-multilevel-definition -->
+</ContentView>

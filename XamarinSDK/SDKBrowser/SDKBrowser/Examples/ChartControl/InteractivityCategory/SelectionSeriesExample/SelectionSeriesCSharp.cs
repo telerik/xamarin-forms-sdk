@@ -37,7 +37,7 @@ namespace SDKBrowser.Examples.ChartControl.InteractivityCategory.SelectionSeries
                         AllowSelect = true
                     }
                 },
-                Behaviors =
+                ChartBehaviors =
                 {
                     new ChartSelectionBehavior
                     {

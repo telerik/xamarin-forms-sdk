@@ -3,6 +3,7 @@ using Xamarin.Forms;
 
 namespace SDKBrowser.Examples.ChatControl.FeaturesCategory.ItemTemplateSelectorExample
 {
+    // >> chat-features-itemtemplate-templateselector
     public class CustomChatItemTemplateSelector : ChatItemTemplateSelector
     {
         public DataTemplate ImportantMessageTemplate { get; set; }
@@ -18,4 +19,5 @@ namespace SDKBrowser.Examples.ChatControl.FeaturesCategory.ItemTemplateSelectorE
             return base.OnSelectTemplate(item, container);
         }
     }
+    // << chat-features-itemtemplate-templateselector
 }

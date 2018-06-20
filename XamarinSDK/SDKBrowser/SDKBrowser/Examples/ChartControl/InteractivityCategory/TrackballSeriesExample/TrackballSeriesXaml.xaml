@@ -26,10 +26,10 @@
                                      DisplayName="Sales 2"
                                      ItemsSource="{Binding Data2}" />
         </telerikChart:RadCartesianChart.Series>
-        <telerikChart:RadCartesianChart.Behaviors>
+        <telerikChart:RadCartesianChart.ChartBehaviors>
             <telerikChart:ChartTrackBallBehavior ShowIntersectionPoints="True"
                                                  ShowTrackInfo="True" />
-        </telerikChart:RadCartesianChart.Behaviors>
+        </telerikChart:RadCartesianChart.ChartBehaviors>
         <telerikChart:RadCartesianChart.Grid>
             <telerikChart:CartesianChartGrid MajorLinesVisibility = "XY"
                                              MajorLineColor="#D3D3D3"

@@ -94,11 +94,21 @@
     <Content Include="Assets\Barcode.scale-150.png" />
     <Content Include="Assets\Barcode.scale-200.png" />
     <Content Include="Assets\Barcode.scale-300.png" />
+    <Content Include="Assets\Border.scale-100.png" />
+    <Content Include="Assets\Border.scale-125.png" />
+    <Content Include="Assets\Border.scale-150.png" />
+    <Content Include="Assets\Border.scale-200.png" />
+    <Content Include="Assets\Border.scale-400.png" />
     <Content Include="Assets\ChatUI.scale-100.png" />
     <Content Include="Assets\ChatUI.scale-125.png" />
     <Content Include="Assets\ChatUI.scale-150.png" />
     <Content Include="Assets\ChatUI.scale-200.png" />
     <Content Include="Assets\ChatUI.scale-400.png" />
+    <Content Include="Assets\Checkbox.scale-100.png" />
+    <Content Include="Assets\Checkbox.scale-125.png" />
+    <Content Include="Assets\Checkbox.scale-150.png" />
+    <Content Include="Assets\Checkbox.scale-200.png" />
+    <Content Include="Assets\Checkbox.scale-400.png" />
     <Content Include="Assets\sampleBot.png" />
     <Content Include="Assets\Fonts\fontello.ttf" />
     <Content Include="Assets\Fonts\segoeui.ttf" />
@@ -113,6 +123,7 @@
     <Content Include="Assets\Fonts\seguisb.ttf" />
     <Content Include="Assets\Fonts\seguisbi.ttf" />
     <Content Include="Assets\Fonts\seguisli.ttf" />
+    <Content Include="XamarinIcon.png" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
@@ -121,6 +132,7 @@
     </Compile>
     <Compile Include="Examples\ButtonControl\HowToCategory\ButtonDisabledTextColorExample\CustomButtonRenderer.cs" />
     <Compile Include="Examples\CalendarControl\StylingCategory\CustomRendererExample\CustomCalendarRenderer.cs" />
+    <Compile Include="Examples\ChartControl\CustomizationCategory\GradientBarsEffect.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

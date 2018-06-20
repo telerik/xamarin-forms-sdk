@@ -45,6 +45,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Common\Constants.cs" />
     <Compile Include="Common\Category.cs" />
     <Compile Include="Common\Usings.cs" />
     <Compile Include="Common\Configuration.cs" />
@@ -76,6 +77,12 @@
     </Compile>
     <Compile Include="Examples\BarcodeControl\GettingStartedCategory\GettingStartedExample\BarcodeGettingStartedXaml.xaml.cs">
       <DependentUpon>BarcodeGettingStartedXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\BorderControl\FeaturesCategory\KeyFeaturesExample\KeyFeatures.xaml.cs">
+      <DependentUpon>KeyFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\BorderControl\GettingStartedCategory\GettingStartedExample\BorderGettingStartedXaml.xaml.cs">
+      <DependentUpon>BorderGettingStartedXaml.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\BusyIndicatorControl\FeaturesCategory\AnimationsExample\AnimationsXaml.xaml.cs">
       <DependentUpon>AnimationsXaml.xaml</DependentUpon>
@@ -140,6 +147,11 @@
       <DependentUpon>FormatAxisLabelsXaml.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\ChartControl\CustomizationCategory\FormatAxisLabelsExample\ViewModel.cs" />
+    <Compile Include="Examples\ChartControl\CustomizationCategory\GradientBarsExample\GradientBars.xaml.cs">
+      <DependentUpon>GradientBars.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ChartControl\CustomizationCategory\GradientBarsExample\ChartItem.cs" />
+    <Compile Include="Examples\ChartControl\CustomizationCategory\GradientBarsExample\GradientBarsEffect.cs" />
     <Compile Include="Examples\ChartControl\CustomizationCategory\PaletteModeExample\PaletteModeCSharp.cs" />
     <Compile Include="Examples\ChartControl\CustomizationCategory\PaletteModeExample\PaletteModeXaml.xaml.cs">
       <DependentUpon>PaletteModeXaml.xaml</DependentUpon>
@@ -277,6 +289,16 @@
       <DependentUpon>ChatGettingStartedXaml.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\ChatControl\GettingStartedCategory\GettingStartedExample\RepeatBotService.cs" />
+    <Compile Include="Examples\CheckBoxControl\FeaturesCategory\ColorChangingExample\ColorChanging.xaml.cs">
+      <DependentUpon>ColorChanging.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\CheckBoxControl\FeaturesCategory\KeyFeaturesExample\KeyFeatures.xaml.cs">
+      <DependentUpon>KeyFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\CheckBoxControl\GettingStartedCategory\GettingStartedExample\CheckBoxGettingStartedCSharp.cs" />
+    <Compile Include="Examples\CheckBoxControl\GettingStartedCategory\GettingStartedExample\CheckBoxGettingStartedXaml.xaml.cs">
+      <DependentUpon>CheckBoxGettingStartedXaml.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Examples\DataFormControl\DataAnnotationsCategory\ConverterExample\DataFormDataAnnotationsConverterXaml.xaml.cs">
       <DependentUpon>DataFormDataAnnotationsConverterXaml.xaml</DependentUpon>
     </Compile>
@@ -488,6 +510,22 @@
     <Compile Include="Examples\ListViewControl\FeaturesCategory\ItemSpacingExample\ItemSpacing.xaml.cs">
       <DependentUpon>ItemSpacing.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Examples\ListViewControl\GroupingCategory\DelegateGroupDescriptorExample\City.cs" />
+    <Compile Include="Examples\ListViewControl\GroupingCategory\DelegateGroupDescriptorExample\DelegateGroupDescriptorGroups.xaml.cs">
+      <DependentUpon>DelegateGroupDescriptorGroups.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ListViewControl\GroupingCategory\DelegateGroupDescriptorExample\ViewModel.cs" />
+    <Compile Include="Examples\ListViewControl\GroupingCategory\MultiLevelGroupingExample\City.cs" />
+    <Compile Include="Examples\ListViewControl\GroupingCategory\MultiLevelGroupingExample\LevelToMarginConverter.cs" />
+    <Compile Include="Examples\ListViewControl\GroupingCategory\MultiLevelGroupingExample\MultiLevelGroups.xaml.cs">
+      <DependentUpon>MultiLevelGroups.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ListViewControl\GroupingCategory\MultiLevelGroupingExample\ViewModel.cs" />
+    <Compile Include="Examples\ListViewControl\GroupingCategory\PropertyGroupDescriptorExample\City.cs" />
+    <Compile Include="Examples\ListViewControl\GroupingCategory\PropertyGroupDescriptorExample\PropertyGroupDescriptor.xaml.cs">
+      <DependentUpon>PropertyGroupDescriptor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ListViewControl\GroupingCategory\PropertyGroupDescriptorExample\ViewModel.cs" />
     <Compile Include="Examples\ListViewControl\LoadOnDemandCategory\LoadOnDemandCollectionExample\LoadOnDemandCollection.xaml.cs">
       <DependentUpon>LoadOnDemandCollection.xaml</DependentUpon>
     </Compile>
@@ -902,13 +940,13 @@
       <HintPath>..\..\$(BinariesPath)\Portable\Telerik.Zip.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.2.5.0.121934\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Core.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.2.5.0.280555\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.2.5.0.121934\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Platform.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.2.5.0.280555\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Platform.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.2.5.0.121934\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Xaml.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.2.5.0.280555\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -1953,13 +1991,67 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ListViewControl\GroupingCategory\PropertyGroupDescriptorExample\PropertyGroupDescriptor.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ListViewControl\GroupingCategory\MultiLevelGroupingExample\MultiLevelGroups.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ListViewControl\GroupingCategory\DelegateGroupDescriptorExample\DelegateGroupDescriptorGroups.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\BorderControl\GettingStartedCategory\GettingStartedExample\BorderGettingStartedXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\BorderControl\FeaturesCategory\KeyFeaturesExample\KeyFeatures.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+   <EmbeddedResource Include="Examples\CheckBoxControl\FeaturesCategory\KeyFeaturesExample\KeyFeatures.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\CheckBoxControl\GettingStartedCategory\GettingStartedExample\CheckBoxGettingStartedXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\CheckBoxControl\FeaturesCategory\ColorChangingExample\ColorChanging.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ChartControl\CustomizationCategory\GradientBarsExample\GradientBars.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
-  <Import Project="..\..\packages\Xamarin.Forms.2.5.0.121934\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.5.0.121934\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />
+  <Import Project="..\..\packages\Xamarin.Forms.2.5.0.280555\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.5.0.280555\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.5.0.121934\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.5.0.121934\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.5.0.280555\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.5.0.280555\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

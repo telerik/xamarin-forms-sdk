@@ -1,0 +1,25 @@
+﻿using System;
+using System.Globalization;
+using Xamarin.Forms;
+
+namespace SDKBrowser.Examples.ListViewControl.GroupingCategory.MultiLevelGroupingExample
+{
+    // >> listview-grouping-multilevel-converter
+    public class LevelToMarginConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (value != null)
+            {
+                var level = (int)value;
+                return new Thickness(((level - 1) * 20) + 8, 12, 0, 6);
+            }
+            else return value;
+        }
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return value;
+        }
+    }
+    // << listview-grouping-multilevel-converter
+}

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             x:Class="SDKBrowser.Examples.CheckBoxControl.FeaturesCategory.ColorChangingExample.ColorChanging">
+
+    <ScrollView>
+        <StackLayout>
+            <Label Text="CheckedColor" />
+            <!-- >> checkbox-color-changing-checkedcolor-xaml -->
+            <telerikPrimitives:RadCheckBox CheckedColor="Aqua" />
+            <!-- << checkbox-color-changing-checkedcolor-xaml -->
+
+            <Label Text="CheckedSymbolColor" />
+            <!-- >> checkbox-color-changing-checkedsymbolcolor-xaml -->
+            <telerikPrimitives:RadCheckBox CheckedSymbolColor="Black" />
+            <!-- << checkbox-color-changing-checkedsymbolcolor-xaml -->
+            
+            <Label Text="IndeterminateColor and IndeterminateSymbolColor" />
+            <!-- >> checkbox-color-changing-inderetminatecolorsymbolcolor-xaml -->
+            <telerikPrimitives:RadCheckBox x:Name="checkbox" IsChecked="{x:Null}" IndeterminateColor="Brown" IndeterminateSymbolColor="Coral" />
+            <!-- << checkbox-color-changing-inderetminatecolorsymbolcolor-xaml -->
+
+            <Label Text="UncheckedColor" />
+            <!-- >> checkbox-color-changing-uncheckedcolor-xaml -->
+            <telerikPrimitives:RadCheckBox UncheckedColor="DarkBlue" />
+            <!-- << checkbox-color-changing-uncheckedcolor-xaml -->
+
+        </StackLayout>
+    </ScrollView>
+    
+</ContentView>
