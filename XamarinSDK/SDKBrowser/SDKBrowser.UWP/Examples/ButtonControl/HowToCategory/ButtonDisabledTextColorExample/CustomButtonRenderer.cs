@@ -17,7 +17,10 @@ namespace SDKBrowser.UWP.Examples.ButtonControl.HowToCategory.ButtonDisabledText
         protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Button> e)
         {
             base.OnElementChanged(e);
-            this.ModifyTextColor();
+            if (e.NewElement != null)
+            {
+                this.ModifyTextColor();
+            }
         }
         
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)

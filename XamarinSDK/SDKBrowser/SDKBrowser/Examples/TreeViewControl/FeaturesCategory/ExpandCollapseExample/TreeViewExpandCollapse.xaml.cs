@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SDKBrowser.Examples.TreeViewControl.GettingStartedCategory.GettingStartedExample;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -18,7 +14,6 @@ namespace SDKBrowser.Examples.TreeViewControl.FeaturesCategory.ExpandCollapseExa
 		{
 			InitializeComponent ();
             this.InitSources();
-            this.tv.HierarchyAdapter = new TreeViewDemoAdapter();
             this.tv.ItemsSource = this.Source;
         }
         private void InitSources()
@@ -121,12 +116,12 @@ namespace SDKBrowser.Examples.TreeViewControl.FeaturesCategory.ExpandCollapseExa
             this.tv.Collapse(Source[1].Children[1]);
         }
 
-        private void Button_Clicked_2(object sender, EventArgs e)
+        private void ExpandAll(object sender, EventArgs e)
         {
             this.tv.ExpandAll();
         }
 
-        private void Button_Clicked_3(object sender, EventArgs e)
+        private void CollapseAll(object sender, EventArgs e)
         {
             this.tv.CollapseAll();
         }

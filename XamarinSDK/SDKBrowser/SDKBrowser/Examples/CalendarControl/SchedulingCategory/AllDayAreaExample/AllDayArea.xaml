@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.CalendarControl.SchedulingCategory.AllDayAreaExample.AllDayArea">
+    <Grid>
+        <!-- >> calendar-scheduling-alldaystyling -->
+        <telerikInput:RadCalendar x:Name="calendar" NativeControlLoaded="CalendarLoaded">
+            <telerikInput:RadCalendar.MultiDayViewSettings>
+                <telerikInput:MultiDayViewSettings VisibleDays="3"
+                                               IsWeekendVisible="true" />
+            </telerikInput:RadCalendar.MultiDayViewSettings>
+            <telerikInput:RadCalendar.MultiDayViewStyle>
+                <telerikInput:MultiDayViewStyle AllDayAreaBackgroundColor="Beige"
+                                                AllDayAppointmentBackgroundColor="Blue"
+                                                AllDayLabelTextColor="Black"
+                                                AllDayLabelFontSize="11"
+                                                AllDayAppointmentTextColor="White"
+                                                AllDayAppointmentFontSize="12" />
+            </telerikInput:RadCalendar.MultiDayViewStyle>
+        </telerikInput:RadCalendar>
+        <!-- << calendar-scheduling-alldaystyling -->
+    </Grid>
+</ContentView>

@@ -31,7 +31,9 @@ namespace SDKBrowser.Services
 
         private async void NavigateToExample(Example example)
         {
-            await this.navigationService.NavigateToRootAsync();
+            // This cause crash in XF 3.x so comment out till they fix it.
+            // https://github.com/xamarin/Xamarin.Forms/issues/2004
+            //await this.navigationService.NavigateToRootAsync();
             await this.navigationService.NavigateToAsync<ExampleViewModel>(example);
         }
     }

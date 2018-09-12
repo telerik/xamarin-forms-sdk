@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.TreeViewControl.StylingCategory.ItemStyleSelectorExample"
+             x:Class="SDKBrowser.Examples.TreeViewControl.StylingCategory.ItemStyleSelectorExample.TreeViewStyleSelector">
+    <ContentView.Content>
+        <Grid>
+            <Grid.BindingContext>
+                <local:ViewModel/>
+            </Grid.BindingContext>
+            <dataControls:RadTreeView ItemsSource="{Binding SmallSource}">
+                <dataControls:TreeViewDescriptor DisplayMemberPath="Name"
+                                                ItemsSourcePath="Children"
+                                                TargetType="{x:Type local:Item}"/>
+                <dataControls:RadTreeView.ItemStyleSelector>
+                    <local:ExampleStyleSelector/>
+                </dataControls:RadTreeView.ItemStyleSelector>
+            </dataControls:RadTreeView>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

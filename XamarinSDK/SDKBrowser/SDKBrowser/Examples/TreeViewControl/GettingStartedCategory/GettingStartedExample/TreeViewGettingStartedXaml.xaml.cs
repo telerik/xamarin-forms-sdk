@@ -21,7 +21,6 @@ namespace SDKBrowser.Examples.TreeViewControl.GettingStartedCategory.GettingStar
             InitializeComponent();
             InitSources();
             this.tv.BindingContext = this;
-            this.tv.HierarchyAdapter = new TreeViewDemoAdapter();
         }
 
         private void InitSources()

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             x:Class="SDKBrowser.Examples.ExpanderControl.GettingStartedCategory.GettingStartedExample.ExpanderGettingStartedXaml">
+    <StackLayout Margin="10,20,10,0">
+        <!-- >> expander-getting-started-xaml -->
+        <telerikPrimitives:RadExpander x:Name="expander" HeaderText="More Options">            
+            <telerikPrimitives:RadExpander.Content>
+                <StackLayout Margin="10, 20, 10, 20">
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <telerikPrimitives:RadCheckBox  />
+                        <Label Text="Make my profile private" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <telerikPrimitives:RadCheckBox  />
+                        <Label Text="Only show my posts to people who follow me" />
+                    </StackLayout>
+                </StackLayout>
+                </telerikPrimitives:RadExpander.Content>
+        </telerikPrimitives:RadExpander>
+        <!-- << expander-getting-started-xaml -->
+    </StackLayout>
+</ContentView>

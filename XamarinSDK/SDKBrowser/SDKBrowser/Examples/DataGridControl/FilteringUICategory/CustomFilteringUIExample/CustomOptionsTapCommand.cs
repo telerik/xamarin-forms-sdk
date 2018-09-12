@@ -18,18 +18,15 @@ namespace SDKBrowser.Examples.DataGridControl.FilteringUICategory.CustomFilterin
             var optionsTapContext = parameter as OptionsTapContext;
             if (optionsTapContext != null)
             {
-                var column = optionsTapContext.Column as DataGridTemplateColumn;
-                if (column != null)
+                if (this.filterControl == null)
                 {
-                    if (this.filterControl == null)
-                    {
-                        this.filterControl = new TemplateColumnFilteringUI();
-                    }
-
-                    this.filterControl.PropertyName = nameof(Player.Country);
-                    this.filterControl.FilterDescriptor = optionsTapContext.AssociatedDescriptor;
-                    optionsTapContext.FilterControl = filterControl;
+                    this.filterControl = new TemplateColumnFilteringUI();
                 }
+
+                DataGridTypedColumn column = (DataGridTypedColumn)optionsTapContext.Column;
+                this.filterControl.PropertyName = column.PropertyName;
+                this.filterControl.FilterDescriptor = optionsTapContext.AssociatedDescriptor;
+                optionsTapContext.FilterControl = filterControl;
             }
 
             this.Owner.CommandService.ExecuteDefaultCommand(DataGridCommandId.OptionsTap, optionsTapContext);

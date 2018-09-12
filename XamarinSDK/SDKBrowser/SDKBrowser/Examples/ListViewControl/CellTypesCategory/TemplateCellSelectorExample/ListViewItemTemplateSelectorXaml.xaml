@@ -6,11 +6,12 @@
              xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
              xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls">
 
+  
+    <!-- >> listview-itemtemplateselector-setting-itemtemplateselector -->
     <telerikDataControls:RadListView x:Name="listView" ItemsSource="{Binding Source}" >
         <telerikDataControls:RadListView.BindingContext>
             <local:ViewModel />
         </telerikDataControls:RadListView.BindingContext>
-        <!-- >> listview-itemtemplateselector-setting-itemtemplateselector -->
         <telerikDataControls:RadListView.ItemTemplateSelector>
             <local:CustomItemTemplateSelector>
                 <local:CustomItemTemplateSelector.Template1>
@@ -18,8 +19,12 @@
                         <telerikListView:ListViewTemplateCell>
                             <telerikListView:ListViewTemplateCell.View>
                                 <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
                                     <Label Grid.Column="0" Margin="10" Text="{Binding Name}" />
-                                    <Button HeightRequest="10" Grid.Column="1" WidthRequest="10" Text="Mark as Special" Clicked="Button_Clicked"></Button>
+                                    <Button Grid.Column="1" Text="Mark as Special" Clicked="Button_Clicked"/>
                                 </Grid>
                             </telerikListView:ListViewTemplateCell.View>
                         </telerikListView:ListViewTemplateCell>
@@ -30,12 +35,12 @@
                         <telerikListView:ListViewTemplateCell>
                             <telerikListView:ListViewTemplateCell.View>
                                 <Grid BackgroundColor="Orange">
-                                    <StackLayout Orientation="Horizontal" Margin="10, 10, 10, 0">
-                                        <Label Text="{Binding Name}" FontSize="16" FontAttributes="Bold" VerticalOptions="Center" />
-                                    </StackLayout>
-                                    <StackLayout Orientation="Horizontal" Grid.Row="1" Margin="10, 0, 10, 10">
-                                        <Label Text="Special Item " FontSize="13" FontAttributes="Italic" TextColor="Gray" />
-                                    </StackLayout>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <Label Text="{Binding Name}" FontSize="16" FontAttributes="Bold" VerticalOptions="Center" Margin="10, 10, 10, 0"/>
+                                    <Label Text="Special Item" FontSize="13" FontAttributes="Italic" TextColor="Gray" Grid.Row="1" Margin="10, 0, 10, 10" />
                                 </Grid>
                             </telerikListView:ListViewTemplateCell.View>
                         </telerikListView:ListViewTemplateCell>
@@ -43,6 +48,6 @@
                 </local:CustomItemTemplateSelector.Template2>
             </local:CustomItemTemplateSelector>
         </telerikDataControls:RadListView.ItemTemplateSelector>
-        <!-- << listview-itemtemplateselector-setting-itemtemplateselector -->
     </telerikDataControls:RadListView>
+    <!-- << listview-itemtemplateselector-setting-itemtemplateselector -->
 </ContentView>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             x:Class="SDKBrowser.Examples.AutoCompleteViewControl.FeaturesCategory.RemoteSearchExample.RemoteSearch">
+    <StackLayout>
+        <!-- >> autocompleteview-features-remote-search -->
+        <telerikInput:RadAutoCompleteView x:Name="autoCompleteView"
+                                          TextChanged="OnTextChanged"
+                                          TextSearchPath="Name"
+                                          Watermark="Remote Search..."
+                                          SuggestionViewHeight="200">
+            <telerikInput:RadAutoCompleteView.LoadingTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal"
+                                 HorizontalOptions="Center"
+                                 Margin="0, 20, 0, 20">
+                        <Label Text="Searching... " FontSize="16" TextColor="#8E8E93"/>
+                        <telerikPrimitives:RadBusyIndicator x:Name="busyIndicator" 
+                                                            HeightRequest="24" 
+                                                            WidthRequest="24"
+                                                            IsBusy="True"
+                                                            VerticalOptions="Start"
+                                                            AnimationContentColor="Accent"
+                                                            AnimationType="Animation9"/>
+                    </StackLayout>
+                </DataTemplate>
+            </telerikInput:RadAutoCompleteView.LoadingTemplate>
+            <telerikInput:RadAutoCompleteView.NoResultsTemplate>
+                <DataTemplate>
+                    <Label Text="No match was found for the specific search. Please try again."
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+                </DataTemplate>
+            </telerikInput:RadAutoCompleteView.NoResultsTemplate>
+        </telerikInput:RadAutoCompleteView>
+        <!-- << autocompleteview-features-remote-search -->
+    </StackLayout>
+</ContentView>

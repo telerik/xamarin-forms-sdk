@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikConversationalUI="clr-namespace:Telerik.XamarinForms.ConversationalUI;assembly=Telerik.XamarinForms.ConversationalUI"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.ChatControl.FeaturesCategory.TypingIndicatorExample"
+             x:Class="SDKBrowser.Examples.ChatControl.FeaturesCategory.TypingIndicatorExample.TypingIndicatorItemsSource">
+    <!-- >> chat-typingindicator-itemssource-xaml -->
+    <ContentView.Resources>
+        <local:ChatParticipantConverter x:Key="ChatParticipantConverter" />
+    </ContentView.Resources>
+    <telerikConversationalUI:RadChat x:Name="chat">
+        <telerikConversationalUI:RadChat.TypingIndicator>
+            <telerikConversationalUI:TypingIndicator x:Name="typingIndicator" 
+                                                     ItemsSource="{Binding TypingParticipants}"
+                                                     ItemConverter="{StaticResource ChatParticipantConverter}"/>
+        </telerikConversationalUI:RadChat.TypingIndicator>
+    </telerikConversationalUI:RadChat>
+    <!-- << chat-typingindicator-itemssource-xaml -->
+</ContentView>

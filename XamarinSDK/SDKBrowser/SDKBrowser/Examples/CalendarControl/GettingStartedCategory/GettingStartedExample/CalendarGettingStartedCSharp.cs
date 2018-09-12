@@ -11,7 +11,6 @@ namespace SDKBrowser.Examples.CalendarControl.GettingStartedCategory.GettingStar
             var calendar = new RadCalendar();
             // << calendar-gettingstarted-csharp
 
-            calendar.DisplayDate = new System.DateTime(1990, 1, 1);
             this.Content = calendar;
         }
     }

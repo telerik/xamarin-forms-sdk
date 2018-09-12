@@ -24,7 +24,6 @@ namespace SDKBrowser.Examples.ListViewControl.GettingStartedCategory.GettingStar
                         View = content
                     };
                 })
-
             };
             // << listview-gettingstarted-listview-csharp
 

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.AutoCompleteViewControl.FeaturesCategory.KeyFeaturesExample.KeyFeatures">
+    <StackLayout>
+        <Label Text="Tokens Support" />
+        <!-- >> autocompleteview-features-tokenssupport -->
+        <telerikInput:RadAutoCompleteView x:Name="autoCompleteViewTokens"
+                                          ItemsSource="{Binding Source}"
+                                          TextSearchPath="Name" 
+                                          BackgroundColor="White"
+                                          DisplayMode="Tokens"/>
+        <!-- << autocompleteview-features-tokenssupport -->
+        
+        <Label Text="Filtering behavior" />
+        <!-- >> autocompleteview-features-filter -->
+        <telerikInput:RadAutoCompleteView x:Name="autoCompleteViewFilter"
+                                          ItemsSource="{Binding Source}" 
+                                          TextSearchPath="Name" 
+                                          CompletionMode="Contains"/>
+        <!-- << autocompleteview-features-filter -->
+
+        <Label Text="Watermark" />
+        <!-- >> autocompleteview-features-watermark -->
+        <telerikInput:RadAutoCompleteView x:Name="autoCompleteViewWatermark" 
+                                          ItemsSource="{Binding Source}" 
+                                          TextSearchPath="Name" 
+                                          Watermark="Enter name..."
+                                          WatermarkTextColor="LightBlue"/>
+        <!-- << autocompleteview-features-watermark -->
+
+        <Label Text="Clear Button Visibility" />
+        <!-- >> autocompleteview-clearbutton-visibility -->
+          <telerikInput:RadAutoCompleteView x:Name="autoCompleteViewClearButtonVisibility" 
+                                          ItemsSource="{Binding Source}" 
+                                          TextSearchPath="Name" 
+                                          IsClearButtonVisible="True"/>
+        <!-- << autocompleteview-clearbutton-visibility -->
+        
+        <Label Text="NoResults Message" />
+        <!-- >> autocompleteview-features-noresultsmessage -->
+        <telerikInput:RadAutoCompleteView x:Name="autoCompleteViewNoResults" 
+                                          ItemsSource="{Binding Source}" 
+                                          TextSearchPath="Name"  
+                                          NoResultsMessage="there are no matching items..."/>
+        <!-- << autocompleteview-features-noresultsmessage -->
+        
+        <Label Text="Search Threshold" />
+        <!-- >> autocompleteview-features-searchthreshold -->
+        <telerikInput:RadAutoCompleteView x:Name="autoCompleteViewSearchTreshold"
+                                          ItemsSource="{Binding Source}"
+                                          TextSearchPath="Name" 
+                                          SearchThreshold="3" />
+        <!-- << autocompleteview-features-searchthreshold -->
+        
+        <Label Text="Show/Hide Suggestion View" />
+        <!-- >> autocompleteview-features-suggestionview -->
+        <telerikInput:RadAutoCompleteView x:Name="autoCompleteViewSuggestionView" 
+                                          ItemsSource="{Binding Source}" 
+                                          TextSearchPath="Name"  
+                                          ShowSuggestionView="True" 
+                                          SuggestionViewHeight="100" 
+                                          SuggestionViewBackgroundColor="LightBlue"/>
+        <!-- << autocompleteview-features-suggestionview -->        
+    </StackLayout>
+</ContentView>

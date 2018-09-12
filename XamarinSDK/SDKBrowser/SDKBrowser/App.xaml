@@ -47,9 +47,9 @@
             <converters:ImageSourceConverter x:Key="ImageSourceConverter" />
 
             <OnPlatform x:Key="IconsFontFamily" x:TypeArguments="x:String">
-                <On Platform="iOS">fontello</On>
-                <On Platform="Android">Fonts/fontello.ttf#fontello</On>
-                <On Platform="UWP">/Assets/Fonts/fontello.ttf#fontello</On>
+                <On Platform="iOS">telerikfontexamples</On>
+                <On Platform="Android">Fonts/telerikfontexamples.ttf#telerikfontexamples</On>
+                <On Platform="UWP">/Assets/Fonts/telerikfontexamples.ttf#telerikfontexamples</On>
             </OnPlatform>
 
             <OnPlatform x:Key="RegularFontFamily" x:TypeArguments="x:String">

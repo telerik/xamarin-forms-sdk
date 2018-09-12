@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.TreeViewControl.FeaturesCategory.LoadingItemsExample"
+             xmlns:treeView="clr-namespace:Telerik.XamarinForms.DataControls.TreeView.Commands;assembly=Telerik.XamarinForms.DataControls"
+             x:Class="SDKBrowser.Examples.TreeViewControl.FeaturesCategory.LoadingItemsExample.TreeViewLoadOnDemand">
+    <Grid>
+        <!-- >> treeview-loadondemand-xaml -->
+        <telerikDataControls:RadTreeView x:Name="treeView" ItemsSource="{Binding Source}" >
+            <telerikDataControls:RadTreeView.Commands>
+                <treeView:TreeViewUserCommand Id="LoadOnDemand" Command="{Binding LoadOnDemandCommand}" />
+            </telerikDataControls:RadTreeView.Commands>
+            <telerikDataControls:TreeViewDescriptor DisplayMemberPath="Name"
+                                                    ItemsSourcePath="Children"
+                                                    TargetType="{x:Type local:Category}"/>
+            <telerikDataControls:TreeViewDescriptor TargetType="{x:Type x:String}" />
+        </telerikDataControls:RadTreeView>
+        <!-- << treeview-loadondemand-xaml -->
+    </Grid>
+</ContentView>

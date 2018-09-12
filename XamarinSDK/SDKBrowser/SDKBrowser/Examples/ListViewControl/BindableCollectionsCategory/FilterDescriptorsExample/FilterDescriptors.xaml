@@ -21,8 +21,12 @@
             </StackLayout>
             <Switch IsToggled="{Binding IsFilterSwitchToggled, Mode=OneWayToSource}" AutomationId="FilterCategorySwitch"/>
         </StackLayout>
-
-        <telerikDataControls:RadListView x:Name="listView" Grid.Row="1" FilterDescriptors="{Binding FilterDescriptors, Mode=OneWayToSource}" ItemsSource="{Binding Items}">
+        <!-- >> listview-features-bindable-filterdescriptor-xaml -->
+        <telerikDataControls:RadListView x:Name="listView" Grid.Row="1" 
+                                         FilterDescriptors="{Binding FilterDescriptors, 
+                                         Mode=OneWayToSource}" 
+                                         ItemsSource="{Binding Items}">
+        <!-- << listview-features-bindable-filterdescriptor-xaml -->
             <telerikDataControls:RadListView.ItemTemplate>
                 <DataTemplate>
                     <telerikListView:ListViewTemplateCell>

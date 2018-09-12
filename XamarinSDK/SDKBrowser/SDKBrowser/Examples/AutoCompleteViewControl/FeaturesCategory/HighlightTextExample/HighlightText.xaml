@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:autoCompleteView="clr-namespace:Telerik.XamarinForms.Input.AutoCompleteView;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.AutoCompleteViewControl.FeaturesCategory.HighlightTextExample.HighlightText">
+    <StackLayout>
+        <!-- >> autocompleteview-features-highlight-text -->
+        <telerikInput:RadAutoCompleteView x:Name="autoCompleteView1"
+                                            ItemsSource="{Binding Source}"
+                                            TextSearchPath="Name"
+                                            Watermark="Search Here..."
+                                            SuggestionItemTextColor="BlueViolet"
+                                            SuggestionViewHeight="100"
+                                            SuggestionViewBackgroundColor="#DBDBDB" />
+        <!-- << autocompleteview-features-highlight-text -->
+
+        <!-- >> autocompleteview-features-highlight-text-behavior -->
+        <telerikInput:RadAutoCompleteView x:Name="autoCompleteView2"
+                                          ItemsSource="{Binding Source}"
+                                          TextSearchPath="Name"
+                                          Watermark="Search Here..."
+                                          SuggestionViewHeight="100"
+                                          SuggestionViewBackgroundColor="#DBDBDB">
+            <telerikInput:RadAutoCompleteView.SuggestionItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <autoCompleteView:SuggestionItemLabel TextColor="Black"
+                                                              HighlightTextColor="BlueViolet"
+                                                              UnformattedText="{Binding Name}"
+                                                              HighlightText="{Binding Source={x:Reference autoCompleteView2}, Path=Text}"/>
+                    </ViewCell>
+                </DataTemplate>
+            </telerikInput:RadAutoCompleteView.SuggestionItemTemplate>
+        </telerikInput:RadAutoCompleteView>
+        <!-- << autocompleteview-features-highlight-text-behavior -->
+    </StackLayout>
+</ContentView>

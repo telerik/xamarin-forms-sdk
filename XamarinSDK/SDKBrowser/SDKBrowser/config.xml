@@ -8,6 +8,40 @@
   <SourceUrl>https://github.com/telerik/xamarin-forms-sdk/tree/master/XamarinSDK/SDKBrowser/SDKBrowser</SourceUrl>
   <Controls>
     <Control>
+      <Name>Accordion</Name>
+      <Title>Accordion</Title>
+      <Icon>Accordion.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>AccordionGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+           <Example>
+              <Page>AccordionGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>AccordionItem</Page>
+              <Name>AccordionItem</Name>
+              <Title>Custom AccordionItem</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
       <Name>AutoComplete</Name>
       <Title>AutoComplete</Title>
       <Icon>AutoComplete.png</Icon>
@@ -66,6 +100,75 @@
               <Page>CustomizedTokens</Page>
               <Name>CustomizedTokens</Name>
               <Title>Customized Tokens</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>AutoCompleteView</Name>
+      <Title>AutoCompleteView</Title>
+      <Icon>AutoCompleteView.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>AutoCompleteViewGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>AutoCompleteViewGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>KeyFeatures</Page>
+              <Name>KeyFeatures</Name>
+              <Title>Key Features</Title>
+            </Example>
+            <Example>
+              <Page>Tokens</Page>
+              <Name>Tokens</Name>
+              <Title>Tokens</Title>
+            </Example>
+            <Example>
+              <Page>DataBinding</Page>
+              <Name>DataBinding</Name>
+              <Title>Data Binding</Title>
+            </Example>
+            <Example>
+              <Page>CustomSuggestionItem</Page>
+              <Name>CustomSuggestionItem</Name>
+              <Title>Custom SuggestionItemTemplate</Title>
+            </Example>
+            <Example>
+              <Page>HighlightText</Page>
+              <Name>HighlightText</Name>
+              <Title>Highlight Text</Title>
+            </Example>
+            <Example>
+              <Page>RemoteSearch</Page>
+              <Name>RemoteSearch</Name>
+              <Title>Remote Search</Title>
+            </Example>
+            <Example>
+              <Page>CustomFiltering</Page>
+              <Name>CustomFiltering</Name>
+              <Title>Custom Filtering</Title>
+            </Example>
+            <Example>
+              <Page>NestedProperty</Page>
+              <Name>NestedProperty</Name>
+              <Title>Nested Property</Title>
             </Example>
           </Examples>
         </Category>
@@ -164,6 +267,11 @@
               <Name>Animations</Name>
               <Title>Animations - Code</Title>
             </Example>
+            <Example>
+              <Page>CustomBusyContent</Page>
+              <Name>CustomBusyContent</Name>
+              <Title>Custom Busy Content</Title>
+            </Example>
           </Examples>
         </Category>
       </Categories>
@@ -250,6 +358,48 @@
           </Examples>
         </Category>
         <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>CalendarViewModes</Page>
+              <Name>CalendarViewModes</Name>
+              <Title>View Modes</Title>
+            </Example>
+            <Example>
+              <Page>CalendarAppointmentTapped</Page>
+              <Name>CalendarAppointmentTapped</Name>
+              <Title>Day View Appointment Tapped</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Scheduling</Name>
+          <Title>Scheduling</Title>
+          <Examples>
+            <Example>
+              <Page>KeyFeatures</Page>
+              <Name>KeyFeatures</Name>
+              <Title>MultiDay KeyFeatures</Title>
+            </Example>
+            <Example>
+              <Page>CurrentTimeIndicator</Page>
+              <Name>CurrentTimeIndicator</Name>
+              <Title>CurrentTimeIndicator Styling</Title>
+            </Example>
+            <Example>
+              <Page>AllDayArea</Page>
+              <Name>AllDayArea</Name>
+              <Title>AllDayArea Styling</Title>
+            </Example>
+            <Example>
+              <Page>TimelineStyling</Page>
+              <Name>TimelineStyling</Name>
+              <Title>Timeline Styling</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
           <Name>Styling</Name>
           <Title>Styling</Title>
           <Examples>
@@ -257,6 +407,16 @@
               <Page>Appointments</Page>
               <Name>Appointments</Name>
               <Title>Appointments</Title>
+            </Example>
+            <Example>
+              <Page>AppointmentsStyleXaml</Page>
+              <Name>AppointmentsStyle</Name>
+              <Title>AppointmentsStyle - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>AppointmentsStyleCSharp</Page>
+              <Name>AppointmentsStyle</Name>
+              <Title>AppointmentsStyle - Code</Title>
             </Example>
             <Example>
               <Page>CellStyling</Page>
@@ -279,23 +439,7 @@
               <Title>Day View Styling</Title>
             </Example>
           </Examples>
-        </Category>
-        <Category>
-          <Name>Features</Name>
-          <Title>Features</Title>
-          <Examples>
-            <Example>
-              <Page>CalendarViewModes</Page>
-              <Name>CalendarViewModes</Name>
-              <Title>View Modes</Title>
-            </Example>
-            <Example>
-              <Page>CalendarAppointmentTapped</Page>
-              <Name>CalendarAppointmentTapped</Name>
-              <Title>Day View Appointment Tapped</Title>
-            </Example>
-          </Examples>
-        </Category>
+        </Category>      
       </Categories>
     </Control>
     <Control>
@@ -473,6 +617,36 @@
               <Name>StackSplineAreaSeries</Name>
               <Title>Stack Spline Area - Code</Title>
             </Example>
+            <Example>
+              <Page>CandlestickSeriesExampleXaml</Page>
+              <Name>CandlestickSeries</Name>
+              <Title>Candlestick Series - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>CandlestickSeriesExampleCSharp</Page>
+              <Name>CandlestickSeries</Name>
+              <Title>Candlestick Series - Code</Title>
+            </Example>
+            <Example>
+              <Page>OhlcSeriesExampleXaml</Page>
+              <Name>OhlcSeries</Name>
+              <Title>Ohlc Series - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>OhlcSeriesExampleCSharp</Page>
+              <Name>OhlcSeries</Name>
+              <Title>Ohlc Series - Code</Title>
+            </Example>
+            <Example>
+              <Page>FinancialIndicatorsExampleXaml</Page>
+              <Name>FinancialIndicators</Name>
+              <Title>Financial Indicators - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>FinancialIndicatorsExampleCSharp</Page>
+              <Name>FinancialIndicators</Name>
+              <Title>Financial Indicators - Code</Title>
+            </Example>
           </Examples>
         </Category>
         <Category>
@@ -483,11 +657,16 @@
               <Page>FormatAxisLabelsXaml</Page>
               <Name>FormatAxisLabels</Name>
               <Title>Format Axis Labels - Xaml</Title>
-            </Example>
+            </Example>           
             <Example>
               <Page>FormatAxisLabelsCSharp</Page>
               <Name>FormatAxisLabels</Name>
               <Title>Format Axis Labels - Code</Title>
+            </Example>
+            <Example>
+              <Page>FormatSeriesLabelsXaml</Page>
+              <Name>FormatSeriesLabels</Name>
+              <Title>Format Series Labels - Xaml</Title>
             </Example>
             <Example>
               <Page>ChartGridLinesXaml</Page>
@@ -638,6 +817,11 @@
               <Name>PieChartPercentage</Name>
               <Title>Pie Chart Percentage - Code</Title>
             </Example>
+            <Example>
+              <Page>DonutSeriesXAML</Page>
+              <Name>DonutSeries</Name>
+              <Title>Donut Series</Title>
+            </Example>
           </Examples>
         </Category>
       </Categories>
@@ -663,6 +847,21 @@
           <Title>Features</Title>
           <Examples>
             <Example>
+              <Page>ChatItems</Page>
+              <Name>ChatItems</Name>
+              <Title>Chat Items</Title>
+            </Example>
+            <Example>
+              <Page>TypingIndicatorAuthors</Page>
+              <Name>TypingIndicator</Name>
+              <Title>TypingIndicator - Authors</Title>
+            </Example>
+            <Example>
+              <Page>TypingIndicatorItemsSource</Page>
+              <Name>TypingIndicator</Name>
+              <Title>TypingIndicator - ItemsSource</Title>
+            </Example>
+            <Example>
               <Page>MVVMSupport</Page>
               <Name>MVVMSupport</Name>
               <Title>MVVM Support</Title>
@@ -671,6 +870,11 @@
               <Page>ItemTemplateSelector</Page>
               <Name>ItemTemplateSelector</Name>
               <Title>ItemTemplateSelector</Title>
+            </Example>
+            <Example>
+              <Page>Customization</Page>
+              <Name>Customization</Name>
+              <Title>Customization</Title>
             </Example>
           </Examples>
         </Category>
@@ -710,6 +914,17 @@
               <Page>KeyFeatures</Page>
               <Name>KeyFeatures</Name>
               <Title>Key Features</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Commands</Name>
+          <Title>Commands</Title>
+          <Examples>
+            <Example>
+              <Page>CheckBoxCommand</Page>
+              <Name>CheckBoxCommand</Name>
+              <Title>CheckBox Command</Title>
             </Example>
           </Examples>
         </Category>
@@ -966,6 +1181,17 @@
       <Icon>DataGrid.png</Icon>
       <Categories>
         <Category>
+          <Name>Columns</Name>
+          <Title>Columns</Title>
+          <Examples>
+            <Example>
+              <Page>Columns</Page>
+              <Name>Columns</Name>
+              <Title>Columns</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
           <Name>Selection</Name>
           <Title>Selection</Title>
           <Examples>
@@ -1088,6 +1314,49 @@
             </Example>
           </Examples>
         </Category>
+        <Category>
+          <Name>Commands</Name>
+          <Title>Commands</Title>
+          <Examples>
+            <Example>
+              <Page>Commands</Page>
+              <Name>Commands</Name>
+              <Title>Commands</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Styling</Name>
+          <Title>Styling</Title>
+          <Examples>
+            <Example>
+              <Page>ColumnsStyling</Page>
+              <Name>ColumnsStyling</Name>
+              <Title>Columns Styling</Title>
+            </Example>
+            <Example>
+              <Page>DataGridStyling</Page>
+              <Name>DataGridStyling</Name>
+              <Title>DataGrid Styling</Title>
+            </Example>
+            <Example>
+              <Page>StyleSelector</Page>
+              <Name>StyleSelector</Name>
+              <Title>Style Selector</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>NestedProperty</Name>
+          <Title>NestedProperty</Title>
+          <Examples>
+            <Example>
+              <Page>NestedProperty</Page>
+              <Name>NestedProperty</Name>
+              <Title>Nested Properties</Title>
+            </Example>
+          </Examples>
+        </Category>
       </Categories>
     </Control>
     <Control>
@@ -1129,6 +1398,50 @@
               <Page>Theme</Page>
               <Name>Theme</Name>
               <Title>Theme</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>Expander</Name>
+      <Title>Expander</Title>
+      <Icon>Expander.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>ExpanderGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - XAML</Title>
+            </Example>
+            <Example>
+              <Page>ExpanderGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>ExpanderHeaderLocation</Page>
+              <Name>ExpanderLocation</Name>
+              <Title>ExpanderHeader Location</Title>
+            </Example>
+            <Example>
+              <Page>BorderStyling</Page>
+              <Name>BorderStyling</Name>
+              <Title>Border Styles</Title>
+            </Example>
+            <Example>
+              <Page>CustomExpanderHeader</Page>
+              <Name>CustomExpanderHeader</Name>
+              <Title>Custom ExpanderHeader</Title>
             </Example>
           </Examples>
         </Category>
@@ -1271,6 +1584,16 @@
               <Title>First Look</Title>
             </Example>
             <Example>
+              <Page>Filtering</Page>
+              <Name>Filtering</Name>
+              <Title>Filtering</Title>
+            </Example>
+            <Example>
+              <Page>Sorting</Page>
+              <Name>Sorting</Name>
+              <Title>Sorting</Title>
+            </Example>
+            <Example>
               <Page>DataOperations</Page>
               <Name>DataOperations</Name>
               <Title>Data Operations</Title>
@@ -1279,6 +1602,11 @@
               <Page>Selection</Page>
               <Name>Selection</Name>
               <Title>Selection</Title>
+            </Example>
+            <Example>
+              <Page>ProgrammaticScrolling</Page>
+              <Name>ProgrammaticScrolling</Name>
+              <Title>Programmatic Scrolling</Title>
             </Example>
             <Example>
               <Page>ItemSpacing</Page>
@@ -1730,6 +2058,50 @@
       </Categories>
     </Control>
     <Control>
+      <Name>SlideView</Name>
+      <Title>SlideView</Title>
+      <Icon>SlideView.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>SlideViewGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>         
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>CustomIndicators</Page>
+              <Name>CustomIndicators</Name>
+              <Title>Custom Indicators</Title>
+            </Example>
+            <Example>
+              <Page>ItemTemplate</Page>
+              <Name>ItemTemplate</Name>
+              <Title>ItemTemplate</Title>
+            </Example>
+            <Example>
+              <Page>ItemTemplateSelector</Page>
+              <Name>ItemTemplateSelector</Name>
+              <Title>ItemTemplateSelector</Title>
+            </Example>
+            <Example>
+              <Page>Commands</Page>
+              <Name>Commands</Name>
+              <Title>Commands</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
       <Name>SpreadStreamProcessing</Name>
       <Title>SpreadStreamProcessing</Title>
       <Icon>Spreadsheet.png</Icon>
@@ -1840,12 +2212,38 @@
               <Page>TreeViewExpandCollapse</Page>
               <Name>ExpandCollapse</Name>
               <Title>Expand/Collapse</Title>
-            </Example>		
+            </Example>
             <Example>
               <Page>TreeViewCheckboxes</Page>
               <Name>CheckBoxes</Name>
               <Title>Checkboxes</Title>
-            </Example>					
+            </Example>
+            <Example>
+              <Page>TreeViewLoadOnDemand</Page>
+              <Name>LoadingItems</Name>
+              <Title>Load Items On Demand</Title>
+            </Example>
+            <Example>
+              <Page>ProgrammaticScrolling</Page>
+              <Name>ProgrammaticScrolling</Name>
+              <Title>Programmatic Scrolling</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Styling</Name>
+          <Title>Styling</Title>
+          <Examples>
+            <Example>
+              <Page>TreeViewItemStyle</Page>
+              <Name>ItemStyle</Name>
+              <Title>ItemStyle</Title>
+            </Example>
+            <Example>
+              <Page>TreeViewStyleSelector</Page>
+              <Name>ItemStyleSelector</Name>
+              <Title>StyleSelector</Title>
+            </Example>
           </Examples>
         </Category>
       </Categories>

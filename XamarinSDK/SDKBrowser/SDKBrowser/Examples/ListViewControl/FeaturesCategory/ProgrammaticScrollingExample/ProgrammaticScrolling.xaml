@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             x:Class="SDKBrowser.Examples.ListViewControl.FeaturesCategory.ProgrammaticScrollingExample.ProgrammaticScrolling">
+    <!-- >> listview-features-programmatic-scrolling-xaml -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackLayout>
+            <Button Clicked="ScrollItemIntoViewClicked" Text="ScrollItemIntoView"/>
+            <Label x:Name="label"/>
+        </StackLayout>
+        <telerikDataControls:RadListView x:Name="listView" Grid.Row="1" ItemsSource="{Binding Items}"/>
+    </Grid>
+    <!-- << listview-features-programmatic-scrolling-xaml -->
+</ContentView>

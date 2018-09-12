@@ -4,7 +4,7 @@
              x:Class="SDKBrowser.Examples.ListViewControl.FeaturesCategory.SelectionExample.Selection"
              xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
              xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls">
-
+    <!-- >> listview-features-selection-xaml -->
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -24,4 +24,5 @@
             </telerikDataControls:RadListView.SelectedItemStyle>
         </telerikDataControls:RadListView>
     </Grid>
+    <!-- << listview-features-selection-xaml -->
 </ContentView>

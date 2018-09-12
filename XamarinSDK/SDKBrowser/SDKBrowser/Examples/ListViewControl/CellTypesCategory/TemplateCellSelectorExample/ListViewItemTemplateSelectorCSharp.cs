@@ -36,8 +36,6 @@ namespace SDKBrowser.Examples.ListViewControl.CellTypesCategory.TemplateCellSele
 
                 var button = new Button
                 {
-                    HeightRequest = 10,
-                    WidthRequest = 10,
                     Text = "Mark as Special"
                 };
                 Grid.SetColumn(button, 1);
@@ -82,7 +80,7 @@ namespace SDKBrowser.Examples.ListViewControl.CellTypesCategory.TemplateCellSele
 
                 content.Children.Add(main, 0, 0);
                 content.Children.Add(detail, 0, 1);
-                content.BackgroundColor = Color.DarkOrange;
+                content.BackgroundColor = Color.Orange;
 
                 return new ListViewTemplateCell { View = content };
             });

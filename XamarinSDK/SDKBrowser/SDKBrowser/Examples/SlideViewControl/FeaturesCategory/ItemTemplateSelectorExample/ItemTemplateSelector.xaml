@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.SlideViewControl.FeaturesCategory.ItemTemplateSelectorExample"
+             x:Class="SDKBrowser.Examples.SlideViewControl.FeaturesCategory.ItemTemplateSelectorExample.ItemTemplateSelector">
+    <ContentView.Resources>
+        <!-- >> slideview-itemtemplateselector-resources -->
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="Label.TextColor" Value="#404040"/>
+            </Style>
+            <local:SlideViewItemTemplateSelector x:Key="SlideViewItemTemplateSelector">
+                <local:SlideViewItemTemplateSelector.InStockTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="50, 30">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Name: " />
+                                <Label Text="{Binding Name}" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Price: " />
+                                <Label Text="{Binding Price}" />
+                            </StackLayout>
+                            <Label Text="In Stock" FontAttributes="Italic" TextColor="#007ACC" />
+                        </StackLayout>
+                    </DataTemplate>
+                </local:SlideViewItemTemplateSelector.InStockTemplate>
+                <local:SlideViewItemTemplateSelector.NotAvailableTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="50, 30">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Name: " />
+                                <Label Text="{Binding Name}" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Price: " />
+                                <Label Text="{Binding Price}" />
+                            </StackLayout>
+                            <Label Text="This item is currently not available" FontAttributes="Italic" TextColor="Red" />
+                        </StackLayout>                      
+                    </DataTemplate>
+                </local:SlideViewItemTemplateSelector.NotAvailableTemplate>
+            </local:SlideViewItemTemplateSelector>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <!-- << slideview-itemtemplateselector-resources -->
+    <StackLayout>
+    <!-- >> slideview-itemtemplateselector-xaml -->
+    <telerikPrimitives:RadSlideView x:Name="slideView" 
+                                    ItemsSource="{Binding Products}"
+                                    ItemTemplateSelector="{StaticResource SlideViewItemTemplateSelector}">
+    </telerikPrimitives:RadSlideView>
+    <!-- << slideview-itemtemplateselector-xaml -->
+    </StackLayout>
+</ContentView>

@@ -8,10 +8,11 @@ namespace SDKBrowser.Examples.ListViewControl.FeaturesCategory.SelectionExample
 {
     public partial class Selection : ContentView
     {
+        // >> listview-features-selection-csharp
         public Selection()
         {
             this.InitializeComponent();
-            listView.ItemsSource = new List<string> { "dog", "cat", "horse", "cow" };
+            listView.ItemsSource = new List<string> { "Tom", "Anna", "Peter", "Teodor", "Lorenzo", "Andrea", "Martin" };
             this.InitializePickers();
         }
 
@@ -28,7 +29,9 @@ namespace SDKBrowser.Examples.ListViewControl.FeaturesCategory.SelectionExample
             selectionGesturePicker.SelectedIndexChanged += this.OnSelectionGestureChanged;
             selectionGesturePicker.SelectedIndex = 0;
         }
+        // << listview-features-selection-csharp
 
+        // >> listview-features-onselectionchanged-csharp
         private void OnSelectionGestureChanged(object sender, EventArgs e)
         {
             switch ((sender as Picker).SelectedIndex)
@@ -57,7 +60,7 @@ namespace SDKBrowser.Examples.ListViewControl.FeaturesCategory.SelectionExample
                     break;
             }
         }
-
+        // << listview-features-onselectionchanged-csharp
         private void ListViewSelectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
             if (e.NewItems != null)

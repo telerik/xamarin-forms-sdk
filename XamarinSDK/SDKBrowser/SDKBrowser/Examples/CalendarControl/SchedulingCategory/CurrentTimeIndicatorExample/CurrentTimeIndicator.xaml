@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.CalendarControl.SchedulingCategory.CurrentTimeIndicatorExample.CurrentTimeIndicator">
+    <Grid>
+        <!-- >> calendar-scheduling-currenttimeindicator -->
+        <telerikInput:RadCalendar x:Name="calendar" NativeControlLoaded="CalendarLoaded">
+            <telerikInput:RadCalendar.MultiDayViewSettings>             
+                <telerikInput:MultiDayViewSettings VisibleDays="1"
+                                                   DayStartTime="9:00:00"
+                                                   DayEndTime="18:00:00"                                                                                              
+                                                   IsCurrentTimeIndicatorVisible="true"/>
+            </telerikInput:RadCalendar.MultiDayViewSettings>
+            <telerikInput:RadCalendar.MultiDayViewStyle>
+                <telerikInput:MultiDayViewStyle CurrentTimeIndicatorColor="Red"
+                                                CurrentTimeIndicatorWidth="5"
+                                                CurrentTimeIndicatorRadius="10" />
+            </telerikInput:RadCalendar.MultiDayViewStyle>         
+        </telerikInput:RadCalendar>
+        <!-- << calendar-scheduling-currenttimeindicator -->
+    </Grid>
+</ContentView>

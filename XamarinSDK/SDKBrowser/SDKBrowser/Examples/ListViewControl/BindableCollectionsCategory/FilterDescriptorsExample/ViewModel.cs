@@ -21,7 +21,7 @@ namespace SDKBrowser.Examples.ListViewControl.BindableCollectionsCategory.Filter
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
-
+        // >> listview-features-bindable-filterdescriptor-viewmodel
         public ObservableCollection<FilterDescriptorBase> FilterDescriptors
         {
             get
@@ -37,7 +37,7 @@ namespace SDKBrowser.Examples.ListViewControl.BindableCollectionsCategory.Filter
                 }
             }
         }
-
+        // << listview-features-bindable-filterdescriptor-viewmodel
         public bool IsFilterSwitchToggled
         {
             get
