@@ -9,28 +9,28 @@
        <telerikInput:RadAutoComplete x:Name="autoCompleteTokens"
                                 ItemsSource="{Binding Source}"
                                 TextSearchPath="Name" 
-                                DisplayMode="Tokens" />
+                                DisplayMode="Tokens"/>
         <!-- << autocomplete-features-tokenssupport -->
         <Label Text="Filtering behavior" />
         <!-- >> autocomplete-features-filter -->
-        <telerikInput:RadAutoComplete x:Name="autoCompleteFilter" 
+        <telerikInput:RadAutoComplete x:Name="autoCompleteFilter"
                                 ItemsSource="{Binding Source}" 
                                 TextSearchPath="Name" 
-                                CompletionMode="Contains" />
+                                CompletionMode="Contains"/>
         <!-- << autocomplete-features-filter -->
         <Label Text="Watermark" />
         <!-- >> autocomplete-features-watermark -->
        <telerikInput:RadAutoComplete x:Name="autoCompleteWatermark" 
                                 ItemsSource="{Binding Source}" 
                                 TextSearchPath="Name" 
-                                Watermark="Enter name..." />
+                                Watermark="Enter name..."/>
         <!-- << autocomplete-features-watermark -->
         <Label Text="NoResults Message" />
         <!-- >> autocomplete-features-noresultsmessage -->
         <telerikInput:RadAutoComplete x:Name="autoCompleteNoResults" 
                                 ItemsSource="{Binding Source}" 
                                 TextSearchPath="Name"  
-                                NoResultsMessage="there are no matching items..." />
+                                NoResultsMessage="there are no matching items..."/>
         <!-- << autocomplete-features-noresultsmessage -->
         <Label Text="Search Threshold" />
         <!-- >> autocomplete-features-searchthreshold -->

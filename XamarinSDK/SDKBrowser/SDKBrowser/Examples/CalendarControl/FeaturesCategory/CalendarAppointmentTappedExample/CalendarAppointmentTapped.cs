@@ -10,7 +10,7 @@ namespace SDKBrowser.Examples.CalendarControl.FeaturesCategory.CalendarAppointme
         public CalendarAppointmentTapped()
         {
             // >> calendar-gettingstarted-appointmentssource-csharp
-            var date = new DateTime(2017, 4, 12);
+            var date = new DateTime(2017, 12, 12, 0, 25, 0);
 
             var calendar = new RadCalendar
             {

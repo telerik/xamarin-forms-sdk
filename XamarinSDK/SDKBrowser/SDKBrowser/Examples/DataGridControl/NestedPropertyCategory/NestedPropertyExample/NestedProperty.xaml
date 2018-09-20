@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikDataGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             x:Class="SDKBrowser.Examples.DataGridControl.NestedPropertyCategory.NestedPropertyExample.NestedProperty">
+    <!-- >> datagrid-nested-property-xaml -->
+    <telerikDataGrid:RadDataGrid Grid.Row="1" x:Name="grid"
+                                             ItemsSource="{Binding Persons}"
+                                             AutoGenerateColumns="False"
+                                             UserEditMode="Cell">
+        <telerikDataGrid:RadDataGrid.Columns>
+            <telerikDataGrid:DataGridTextColumn x:Name="nameColumn" PropertyName="Name"/>
+            <telerikDataGrid:DataGridNumericalColumn PropertyName="Age"/>
+            <telerikDataGrid:DataGridTextColumn PropertyName="Address.City" HeaderText="City"/>
+        </telerikDataGrid:RadDataGrid.Columns>
+    </telerikDataGrid:RadDataGrid>
+    <!-- << datagrid-nested-property-xaml -->
+</ContentView>

@@ -30,8 +30,12 @@
             </StackLayout>
             <Switch IsToggled="{Binding IsPropertyNameSortSwitchToggled, Mode=OneWayToSource}" AutomationId="SortSwitch"/>
         </StackLayout>
-
-        <telerikDataControls:RadListView x:Name="listView" Grid.Row="2" ItemsSource="{Binding Items}" SortDescriptors="{Binding SortDescriptors, Mode=OneWayToSource}">
+        <!-- >> listview-features-bindable-sortdescriptor-xaml -->
+        <telerikDataControls:RadListView x:Name="listView" 
+                                         Grid.Row="2" ItemsSource="{Binding Items}" 
+                                         SortDescriptors="{Binding SortDescriptors, 
+                                         Mode=OneWayToSource}">
+        <!-- << listview-features-bindable-sortdescriptor-xaml -->
             <telerikDataControls:RadListView.ItemTemplate>
                 <DataTemplate>
                     <telerikListView:ListViewTemplateCell>

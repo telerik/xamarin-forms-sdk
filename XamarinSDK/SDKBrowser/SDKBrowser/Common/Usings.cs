@@ -25,3 +25,7 @@ using Telerik.XamarinForms.Primitives;
 // >> ns-telerikrating
 using Telerik.XamarinForms.Input;
 // << ns-telerikrating
+// >> ns-telerikdatacontrols
+using Telerik.XamarinForms.DataControls;
+// << ns-telerikdatacontrols
+

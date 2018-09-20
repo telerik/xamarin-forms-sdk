@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             x:Class="SDKBrowser.Examples.ExpanderControl.FeaturesCategory.ExpanderLocationExample.ExpanderHeaderLocation">
+    <StackLayout Margin="10,20,10,0">
+        <!-- >> expander-features-headerlocation -->
+        <telerikPrimitives:RadExpander x:Name="expander"
+	         HeaderText="Read more"
+                HeaderLocation="Bottom">
+            <telerikPrimitives:RadExpander.Content>
+                <StackLayout Margin="10, 20, 10, 20">
+                    <Label Text="You could place the Header at the top or at the bottom of the expandable container." />
+                </StackLayout>
+            </telerikPrimitives:RadExpander.Content>
+        </telerikPrimitives:RadExpander>
+        <!-- << expander-features-headerlocation -->
+    </StackLayout>
+</ContentView>

@@ -11,8 +11,7 @@ namespace SDKBrowser.Examples.CalendarControl.StylingCategory.DayViewStylingExam
         {
             this.InitializeComponent();
 
-            var date = new DateTime(2017, 8, 18);
-            var date2 = new DateTime(2017, 8, 19);
+            var date = new DateTime(2017, 12, 12, 0, 25, 0);
 
             this.calendar.AppointmentsSource = new List<Appointment>()
             {

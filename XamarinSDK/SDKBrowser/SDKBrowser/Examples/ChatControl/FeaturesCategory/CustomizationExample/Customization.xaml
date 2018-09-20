@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikConversationalUI="clr-namespace:Telerik.XamarinForms.ConversationalUI;assembly=Telerik.XamarinForms.ConversationalUI"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             x:Class="SDKBrowser.Examples.ChatControl.FeaturesCategory.CustomizationExample.Customization">
+
+    <VisualElement.Resources>
+        <OnPlatform x:Key="ChatBackground" x:TypeArguments="FileImageSource">
+            <On Platform="iOS,Android">ChatBackground.jpg</On>
+            <On Platform="UWP">Assets\ChatBackground.jpg</On>
+        </OnPlatform>
+        <OnPlatform x:Key="SampleAvatar" x:TypeArguments="x:String">
+            <On Platform="iOS,Android">sampleAvatar.png</On>
+            <On Platform="UWP">Assets\sampleAvatar.png</On>
+        </OnPlatform>
+        <Color x:Key="TextColor">White</Color>
+        <Color x:Key="IncomingBackgroundColor">#FFC732CB</Color>
+        <Color x:Key="OutgoingBackgroundColor">#FF28B3AF</Color>
+        <Style x:Key="LabelStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="{StaticResource TextColor}" />
+        </Style>
+        <Style x:Key="IncomingBorderStyle" TargetType="telerikPrimitives:RadBorder">
+            <Setter Property="BackgroundColor" Value="{StaticResource IncomingBackgroundColor}" />
+        </Style>
+        <Style x:Key="OutgoingBorderStyle" TargetType="telerikPrimitives:RadBorder">
+            <Setter Property="BackgroundColor" Value="{StaticResource OutgoingBackgroundColor}" />
+        </Style>
+
+        <!--Use implicit styles to target inner Chat elements.-->
+        <Style TargetType="telerikConversationalUI:ChatEntry">
+            <Setter Property="WatermarkTextColor" Value="{StaticResource TextColor}" />
+            <Setter Property="TextColor" Value="{StaticResource TextColor}" />
+        </Style>
+        <Style TargetType="telerikConversationalUI:IncomingTextMessageView" ApplyToDerivedTypes="True">
+            <Setter Property="LabelStyle" Value="{StaticResource LabelStyle}" />
+            <Setter Property="BorderStyle" Value="{StaticResource IncomingBorderStyle}" />
+        </Style>
+        <Style TargetType="telerikConversationalUI:OutgoingTextMessageView" ApplyToDerivedTypes="True">
+            <Setter Property="LabelStyle" Value="{StaticResource LabelStyle}" />
+            <Setter Property="BorderStyle" Value="{StaticResource OutgoingBorderStyle}" />
+        </Style>
+    </VisualElement.Resources>
+
+    <Grid>
+        <Image Aspect="Fill" Source="{StaticResource ChatBackground}" />
+        <telerikConversationalUI:RadChat x:Name="chat1"
+                                         BackgroundColor="Transparent"
+                                         InputAreaBackgroundColor="{StaticResource OutgoingBackgroundColor}"
+                                         SendMessageButtonImage="available32.png">
+            <telerikConversationalUI:RadChat.Author>
+                <telerikConversationalUI:Author Name="You" 
+                                                Avatar="{StaticResource SampleAvatar}" />
+            </telerikConversationalUI:RadChat.Author>
+        </telerikConversationalUI:RadChat>
+    </Grid>
+</ContentView>

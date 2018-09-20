@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             x:Class="SDKBrowser.Examples.SlideViewControl.FeaturesCategory.CustomIndicatorsExample.CustomIndicators">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="Label.TextColor" Value="#007ACC"/>
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            </Style>
+
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <StackLayout>
+        <!-- >> slideview-custom-indicators-xaml -->
+        <telerikPrimitives:RadSlideView x:Name="slideView"
+                                        IndicatorText="&#9830;" 
+                                        SelectedIndicatorText="&#9830;"
+                                        SelectedIndicatorFontSize="32"
+                                        SelectedIndicatorColor="Red">
+            <telerikPrimitives:RadSlideView.ItemsSource>
+                <x:Array Type="{x:Type ContentView}">
+                    <ContentView>
+                        <Grid HeightRequest="100">
+                            <Label Text="View 1" />
+                        </Grid>
+                    </ContentView>
+                    <ContentView>
+                        <Label Text="View 2" />
+                    </ContentView>
+                    <ContentView >
+                        <Label Text="View 3" />
+                    </ContentView>
+                </x:Array>
+            </telerikPrimitives:RadSlideView.ItemsSource>
+        </telerikPrimitives:RadSlideView>
+        <!-- << slideview-custom-indicators-xaml -->
+    </StackLayout>
+</ContentView>

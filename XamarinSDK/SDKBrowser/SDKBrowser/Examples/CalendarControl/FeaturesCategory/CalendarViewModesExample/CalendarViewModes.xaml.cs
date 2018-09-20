@@ -10,7 +10,7 @@ namespace SDKBrowser.Examples.CalendarControl.FeaturesCategory.CalendarViewModes
         {
             this.InitializeComponent();
 
-            calendar.DisplayDate = new DateTime(2017, 4, 12);
+            calendar.DisplayDate = new DateTime(2017, 12, 12, 0, 25, 0);
 
             viewModePicker.ItemsSource = Enum.GetValues(typeof(CalendarViewMode));
             viewModePicker.SelectedItem = CalendarViewMode.Day;

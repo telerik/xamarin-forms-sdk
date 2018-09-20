@@ -22,7 +22,7 @@ namespace SDKBrowser.Examples.ListViewControl.BindableCollectionsCategory.GroupD
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
-
+        // >> listview-features-bindable-groupdescriptor-viewmodel
         public ObservableCollection<GroupDescriptorBase> GroupDescriptors
         {
             get
@@ -38,7 +38,7 @@ namespace SDKBrowser.Examples.ListViewControl.BindableCollectionsCategory.GroupD
                 }
             }
         }
-
+        // << listview-features-bindable-groupdescriptor-viewmodel
         public bool IsPropertyNameGroupSwitchToggled
         {
             get

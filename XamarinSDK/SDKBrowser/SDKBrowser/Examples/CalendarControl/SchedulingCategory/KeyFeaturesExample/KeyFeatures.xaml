@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.CalendarControl.SchedulingCategory.KeyFeaturesExample.KeyFeatures">
+    <Grid>
+        <!-- >> calendar-scheduling-keyfeatures -->
+        <telerikInput:RadCalendar x:Name="calendar" NativeControlLoaded="CalendarLoaded">
+            <telerikInput:RadCalendar.MultiDayViewSettings>
+                <telerikInput:MultiDayViewSettings VisibleDays="10"
+                                                    DayStartTime="9:00:00"
+                                                    DayEndTime="18:00:00"
+                                                    TimelineInterval="2:00"
+                                                    IsWeekendVisible="false"
+                                                    IsCurrentTimeIndicatorVisible="true"/>
+            </telerikInput:RadCalendar.MultiDayViewSettings>         
+        </telerikInput:RadCalendar>
+        <!-- << calendar-scheduling-keyfeatures -->
+    </Grid>
+</ContentView>

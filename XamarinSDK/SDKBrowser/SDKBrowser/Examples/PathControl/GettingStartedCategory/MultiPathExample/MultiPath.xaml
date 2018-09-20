@@ -9,9 +9,9 @@
     <ResourceDictionary>
       <OnPlatform x:Key="strokeThickness"
                   x:TypeArguments="x:Double"
-                  Android="100"
-                  WinPhone="40"
-                  iOS="40" />
+                  Android="30"
+                  WinPhone="20"
+                  iOS="15" />
     </ResourceDictionary>
   </VisualElement.Resources>
 

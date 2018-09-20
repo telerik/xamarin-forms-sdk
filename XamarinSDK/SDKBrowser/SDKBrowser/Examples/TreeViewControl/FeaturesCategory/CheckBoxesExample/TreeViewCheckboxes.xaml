@@ -2,6 +2,7 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:dataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:treeViewExamples="clr-namespace:SDKBrowser.Examples.TreeViewControl.FeaturesCategory"
              x:Class="SDKBrowser.Examples.TreeViewControl.FeaturesCategory.CheckBoxesExample.TreeViewCheckboxes">
   <ContentView.Content>
         <Grid>
@@ -12,6 +13,9 @@
             <dataControls:RadTreeView ItemsSource="{Binding SmallSource}"
                                       CheckBoxMode="Propagate"
                                       x:Name="tv">
+                <dataControls:TreeViewDescriptor DisplayMemberPath="Name"
+                                                    ItemsSourcePath="Children"
+                                                    TargetType="{x:Type treeViewExamples:Item}"/>
             </dataControls:RadTreeView>
             <StackLayout Grid.Row="1" Orientation="Vertical">
                 <StackLayout Orientation="Horizontal">

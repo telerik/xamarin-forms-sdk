@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             x:Class="SDKBrowser.Examples.ExpanderControl.FeaturesCategory.CustomExpanderHeaderExample.CustomExpanderHeader">
+    <StackLayout Margin="10,20,10,0">
+        <!-- >> expander-features-expanderheader -->
+        <telerikPrimitives:RadExpander x:Name="expander"
+                                    BorderColor="LightBlue"
+                                    BorderThickness="2">
+            <telerikPrimitives:RadExpander.Header>
+                <telerikPrimitives:ExpanderHeader
+                    IndicatorText="&#x203A;"                   
+                    IndicatorColor="Blue"
+                    IndicatorFontFamily="Arial"
+                    IndicatorFontSize="16"
+                    IndicatorLocation="End"
+                    IndicatorAnimationDuration="1000"
+                    BorderColor="LightBlue"
+                    BorderThickness="2">
+                    <Label Text="More Options"  />
+                </telerikPrimitives:ExpanderHeader>
+            </telerikPrimitives:RadExpander.Header>
+            <telerikPrimitives:RadExpander.Content>
+                <StackLayout Margin="10, 20, 10, 20">
+                    <Label Text="RadExpander for Xamarin is a flexible content control that helps you save screen space." />
+                </StackLayout>
+            </telerikPrimitives:RadExpander.Content>
+        </telerikPrimitives:RadExpander>
+        <!-- << expander-features-expanderheader -->
+    </StackLayout>
+</ContentView>

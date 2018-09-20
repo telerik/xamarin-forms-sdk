@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             x:Class="SDKBrowser.Examples.DataGridControl.StylingCategory.StyleSelectorExample.StyleSelector"
+             xmlns:local ="clr-namespace:SDKBrowser.Examples.DataGridControl.StylingCategory.StyleSelectorExample">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <!-- >> datagrid-styleselectors -->
+            <local:MyGroupSelector x:Key="MyGroupSelector">
+                <local:MyGroupSelector.CountryTemplate1>
+                    <telerikGrid:DataGridGroupHeaderStyle  BackgroundColor="LightYellow" TextColor="Black"/>
+                </local:MyGroupSelector.CountryTemplate1>
+                <local:MyGroupSelector.CountryTemplate2>
+                    <telerikGrid:DataGridGroupHeaderStyle  BackgroundColor="LightSkyBlue" TextColor="Red"/>
+                </local:MyGroupSelector.CountryTemplate2>
+            </local:MyGroupSelector>
+            
+            <local:MyCellContentSelector x:Key="MyCellContentStyleSelector">
+                <local:MyCellContentSelector.CellTemplate1>
+                    <telerikGrid:DataGridTextCellStyle  TextColor="DarkOliveGreen"/>
+                </local:MyCellContentSelector.CellTemplate1>
+                <local:MyCellContentSelector.CellTemplate2>
+                    <telerikGrid:DataGridTextCellStyle  TextColor="DarkRed"/>
+                </local:MyCellContentSelector.CellTemplate2>
+            </local:MyCellContentSelector>
+            
+            <local:MyCellDecorationSelector x:Key="MyCellDecorationSelector">
+                <local:MyCellDecorationSelector.CellTemplate1>
+                    <telerikGrid:DataGridBorderStyle  BackgroundColor="LightBlue"/>
+                </local:MyCellDecorationSelector.CellTemplate1>
+                <local:MyCellDecorationSelector.CellTemplate2>
+                    <telerikGrid:DataGridBorderStyle  BackgroundColor="CadetBlue"/>
+                </local:MyCellDecorationSelector.CellTemplate2>
+            </local:MyCellDecorationSelector>
+            <!-- << datagrid-styleselectors -->
+        </ResourceDictionary>
+    </ContentView.Resources>
+
+    <!-- >> datagrid-styleselector-example -->
+    <telerikGrid:RadDataGrid x:Name="datagrid"
+                             AutoGenerateColumns="False"
+                             IsVisible="True"
+                             GroupHeaderStyleSelector="{StaticResource MyGroupSelector}" 
+                             UserEditMode="Cell">
+        <telerikGrid:RadDataGrid.Columns>
+            <telerikGrid:DataGridTextColumn PropertyName="Country" />
+            <telerikGrid:DataGridTextColumn PropertyName="Capital" 
+                                            CellContentStyleSelector="{StaticResource MyCellContentStyleSelector}" 
+                                            CellDecorationStyleSelector="{StaticResource MyCellDecorationSelector}">
+            </telerikGrid:DataGridTextColumn>
+        </telerikGrid:RadDataGrid.Columns>
+    </telerikGrid:RadDataGrid>
+    <!-- << datagrid-styleselector-example -->
+</ContentView>

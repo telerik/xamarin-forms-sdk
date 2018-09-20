@@ -2,10 +2,15 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:dataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:treeViewExamples="clr-namespace:SDKBrowser.Examples.TreeViewControl.GettingStartedCategory.GettingStartedExample"
              x:Class="SDKBrowser.Examples.TreeViewControl.GettingStartedCategory.GettingStartedExample.TreeViewGettingStartedXaml">
     <ContentView.Content>
         <Grid>
-            <dataControls:RadTreeView x:Name="tv" ItemsSource="{Binding SourceCollection}"/>
+            <dataControls:RadTreeView x:Name="tv" ItemsSource="{Binding SourceCollection}">
+                <dataControls:TreeViewDescriptor DisplayMemberPath="Name"
+                                                    ItemsSourcePath="Children"
+                                                    TargetType="{x:Type treeViewExamples:Item}"/>
+            </dataControls:RadTreeView>
         </Grid>
     </ContentView.Content>
 </ContentView>

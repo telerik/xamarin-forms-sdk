@@ -9,7 +9,7 @@
     </ContentView.BindingContext>
     <StackLayout>
         <Label Text="Enter custom NoResultsMessage"/>
-        <Entry x:Name="text"/>
+        <Entry x:Name="text" Placeholder="Enter custom NoResultsMessage Here..."/>
         <telerikInput:RadAutoComplete x:Name="autoComplete"
                                       Watermark="Search Here..."
                                       ItemsSource="{Binding Source}"

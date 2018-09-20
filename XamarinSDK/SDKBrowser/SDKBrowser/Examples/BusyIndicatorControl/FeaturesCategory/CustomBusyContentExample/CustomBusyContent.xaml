@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             x:Class="SDKBrowser.Examples.BusyIndicatorControl.FeaturesCategory.CustomBusyContentExample.CustomBusyContent">
+    <Grid Margin="10">
+        <!--  >> busyindicator-custombusycontent-xaml  -->
+        <telerikPrimitives:RadBusyIndicator x:Name="BusyIndicator"
+                                       AnimationContentHeightRequest="100"
+                                       AnimationContentWidthRequest="100"  
+                                       AnimationType="Animation6"                                            
+                                       IsBusy="True">           
+            <telerikPrimitives:RadBusyIndicator.BusyContent>
+                <Label Text="Working on it, just a moment, please..." />
+            </telerikPrimitives:RadBusyIndicator.BusyContent>
+            <telerikPrimitives:RadBusyIndicator.BusyContentTemplate>
+                <ControlTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <ContentPresenter Content="{TemplateBinding Path=AnimationContent}" />
+                        <ContentPresenter Grid.Row="1"
+                                          Content="{TemplateBinding Path=BusyContent}"
+                                          HorizontalOptions="Center" />
+                    </Grid>
+                </ControlTemplate>
+            </telerikPrimitives:RadBusyIndicator.BusyContentTemplate>
+        </telerikPrimitives:RadBusyIndicator>
+        <!--  << busyindicator-custombusycontent-xaml  -->
+    </Grid>
+</ContentView>

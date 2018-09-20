@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             x:Class="SDKBrowser.Examples.DataGridControl.StylingCategory.DataGridStylingExample.DataGridStyling">
+    <telerikGrid:RadDataGrid x:Name="DataGrid"
+                             IsVisible="True"
+                             UserEditMode="Cell">
+
+        <!-- >> datagrid-styling-alternaterowbackgroundstyle -->
+        <telerikGrid:RadDataGrid.AlternateRowBackgroundStyle>
+            <telerikGrid:DataGridBorderStyle BackgroundColor="LightBlue" 
+                                             BorderThickness="1"
+                                             BorderColor="BlanchedAlmond"/>
+        </telerikGrid:RadDataGrid.AlternateRowBackgroundStyle>
+        <!-- << datagrid-styling-alternaterowbackgroundstyle -->
+
+        <!-- >> datagrid-styling-groupheaderstyle -->
+        <telerikGrid:RadDataGrid.GroupHeaderStyle>
+            <telerikGrid:DataGridGroupHeaderStyle BorderThickness="1"
+                                                  TextColor="DarkTurquoise"
+                                                  BorderColor="Brown"/>
+        </telerikGrid:RadDataGrid.GroupHeaderStyle>
+        <!-- << datagrid-styling-groupheaderstyle -->
+
+        <!-- >> datagrid-styling-rowbackgroundstyle -->
+        <telerikGrid:RadDataGrid.RowBackgroundStyle>
+            <telerikGrid:DataGridBorderStyle BackgroundColor="CadetBlue" 
+                                             BorderColor="DarkOrchid" 
+                                             BorderThickness="1"/>
+        </telerikGrid:RadDataGrid.RowBackgroundStyle>
+        <!-- << datagrid-styling-rowbackgroundstyle -->
+
+        <!-- >> datagrid-styling-selectionstyle -->
+        <telerikGrid:RadDataGrid.SelectionStyle>
+            <telerikGrid:DataGridBorderStyle BackgroundColor="SeaGreen" 
+                                             BorderColor="Wheat" 
+                                             BorderThickness="2"/>
+        </telerikGrid:RadDataGrid.SelectionStyle>
+        <!-- << datagrid-styling-selectionstyle -->
+    </telerikGrid:RadDataGrid>
+</ContentView>

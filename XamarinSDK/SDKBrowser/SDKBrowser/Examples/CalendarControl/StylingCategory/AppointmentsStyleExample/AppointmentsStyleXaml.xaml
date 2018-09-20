@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.CalendarControl.StylingCategory.AppointmentsStyleExample.AppointmentsStyleXaml">
+    <Grid Padding="0,20,0,0">
+        <!-- >> calendar-appointmentsstyle-xaml -->
+        <telerikInput:RadCalendar x:Name="calendar">
+            <telerikInput:RadCalendar.AppointmentsStyle>
+                <telerikInput:CalendarAppointmentsStyle  
+                            DisplayMode="Shape"     
+                            Padding="5, 25, 5, 5"
+                            MaxCount="10"
+                            Spacing="1"                          
+                            ShapeType="Rectangle"
+                            ShapesHorizontalLocation = "Right"
+                            ShapesVerticalLocation = "Bottom"
+                            ShapesOrientation = "Vertical"
+                            AllDayShapesDisplayMode="Indicator"
+                            AllDayIndicatorLocation="Top"
+                            AllDayIndicatorPadding="5, 2"
+                            AllDayIndicatorWidth="2">
+                    <telerikInput:CalendarAppointmentsStyle.ShapeSize>
+                        <Size Width="8" Height="6" />
+                    </telerikInput:CalendarAppointmentsStyle.ShapeSize>
+                </telerikInput:CalendarAppointmentsStyle>
+            </telerikInput:RadCalendar.AppointmentsStyle>
+        </telerikInput:RadCalendar>
+        <!-- << calendar-appointmentsstyle-xaml -->
+    </Grid>
+</ContentView>

@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard1.0\Xamarin.Forms.props" Condition="Exists('..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard1.0\Xamarin.Forms.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <Import Project="..\..\config.targets" />
   <PropertyGroup>
@@ -51,6 +52,14 @@
     <Compile Include="Common\Configuration.cs" />
     <Compile Include="Common\Control.cs" />
     <Compile Include="Converters\ImageSourceConverter.cs" />
+    <Compile Include="Data\OhlcDataPoint.cs" />
+    <Compile Include="Examples\AccordionControl\FeaturesCategory\AccordionItemExample\AccordionItem.xaml.cs">
+      <DependentUpon>AccordionItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\AccordionControl\GettingStartedCategory\GettingStartedExample\AccordionGettingStartedCSharp.cs" />
+    <Compile Include="Examples\AccordionControl\GettingStartedCategory\GettingStartedExample\AccordionGettingStartedXaml.xaml.cs">
+      <DependentUpon>AccordionGettingStartedXaml.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Examples\AutoCompleteControl\FeaturesCategory\ClearButtonVisibilityExample\ClearButtonVisibility.xaml.cs">
       <DependentUpon>ClearButtonVisibility.xaml</DependentUpon>
     </Compile>
@@ -72,6 +81,45 @@
     <Compile Include="Examples\AutoCompleteControl\GettingStartedCategory\GettingStartedExample\AutoCompleteGettingStartedXaml.xaml.cs">
       <DependentUpon>AutoCompleteGettingStartedXaml.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Examples\AutoCompleteViewControl\FeaturesCategory\Client.cs" />
+    <Compile Include="Examples\AutoCompleteViewControl\FeaturesCategory\CustomFilteringExample\CustomFiltering.xaml.cs">
+      <DependentUpon>CustomFiltering.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\AutoCompleteViewControl\FeaturesCategory\CustomFilteringExample\CustomFilteringViewModel.cs" />
+    <Compile Include="Examples\AutoCompleteViewControl\FeaturesCategory\CustomFilteringExample\CustomAutoCompleteViewFilter.cs" />
+    <Compile Include="Examples\AutoCompleteViewControl\FeaturesCategory\CustomFilteringExample\Person.cs" />
+    <Compile Include="Examples\AutoCompleteViewControl\FeaturesCategory\NestedPropertyExample\BusinessObject.cs" />
+    <Compile Include="Examples\AutoCompleteViewControl\FeaturesCategory\NestedPropertyExample\NestedProperty.xaml.cs">
+      <DependentUpon>NestedProperty.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\AutoCompleteViewControl\FeaturesCategory\NestedPropertyExample\NestedPropertyViewModel.cs" />
+    <Compile Include="Examples\AutoCompleteViewControl\FeaturesCategory\NestedPropertyExample\Person.cs" />
+    <Compile Include="Examples\AutoCompleteViewControl\FeaturesCategory\CustomSuggestionItemExample\CustomSuggestionItem.xaml.cs">
+      <DependentUpon>CustomSuggestionItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\AutoCompleteViewControl\FeaturesCategory\DataBindingExample\DataBinding.xaml.cs">
+      <DependentUpon>DataBinding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\AutoCompleteViewControl\FeaturesCategory\HighlightTextExample\HighlightText.xaml.cs">
+      <DependentUpon>HighlightText.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\AutoCompleteViewControl\FeaturesCategory\KeyFeaturesExample\KeyFeatures.xaml.cs">
+      <DependentUpon>KeyFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\AutoCompleteViewControl\FeaturesCategory\KeyFeaturesExample\ViewModel.cs" />
+    <Compile Include="Examples\AutoCompleteViewControl\FeaturesCategory\RemoteSearchExample\RemoteSearch.xaml.cs">
+      <DependentUpon>RemoteSearch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\AutoCompleteViewControl\FeaturesCategory\TokensExample\City.cs" />
+    <Compile Include="Examples\AutoCompleteViewControl\FeaturesCategory\TokensExample\Tokens.xaml.cs">
+      <DependentUpon>Tokens.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\AutoCompleteViewControl\FeaturesCategory\TokensExample\TokensViewModel.cs" />
+    <Compile Include="Examples\AutoCompleteViewControl\FeaturesCategory\ViewModel.cs" />
+    <Compile Include="Examples\AutoCompleteViewControl\GettingStartedCategory\GettingStartedExample\AutoCompleteViewGettingStartedCSharp.cs" />
+    <Compile Include="Examples\AutoCompleteViewControl\GettingStartedCategory\GettingStartedExample\AutoCompleteViewGettingStartedXaml.xaml.cs">
+      <DependentUpon>AutoCompleteViewGettingStartedXaml.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Examples\BarcodeControl\FeaturesCategory\KeyFeaturesExample\KeyFeatures.xaml.cs">
       <DependentUpon>KeyFeatures.xaml</DependentUpon>
     </Compile>
@@ -88,6 +136,9 @@
       <DependentUpon>AnimationsXaml.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\BusyIndicatorControl\FeaturesCategory\AnimationsExample\AnimationsCSharp.cs" />
+    <Compile Include="Examples\BusyIndicatorControl\FeaturesCategory\CustomBusyContentExample\CustomBusyContent.xaml.cs">
+      <DependentUpon>CustomBusyContent.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Examples\BusyIndicatorControl\GettingStartedCategory\GettingStartedExample\BusyIndicatorGettingStartedCSharp.cs" />
     <Compile Include="Examples\BusyIndicatorControl\GettingStartedCategory\GettingStartedExample\BusyIndicatorGettingStartedXaml.xaml.cs">
       <DependentUpon>BusyIndicatorGettingStartedXaml.xaml</DependentUpon>
@@ -114,6 +165,24 @@
       <DependentUpon>ButtonDisabledTextColor.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\ButtonControl\HowToCategory\ButtonDisabledTextColorExample\MyRadButton.cs" />
+    <Compile Include="Examples\CalendarControl\SchedulingCategory\AllDayAreaExample\AllDayArea.xaml.cs">
+      <DependentUpon>AllDayArea.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\CalendarControl\SchedulingCategory\Appointment.cs" />
+    <Compile Include="Examples\CalendarControl\SchedulingCategory\CurrentTimeIndicatorExample\CurrentTimeIndicator.xaml.cs">
+      <DependentUpon>CurrentTimeIndicator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\CalendarControl\SchedulingCategory\KeyFeaturesExample\KeyFeatures.xaml.cs">
+      <DependentUpon>KeyFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\CalendarControl\SchedulingCategory\TimelineStylingExample\TimelineStyling.xaml.cs">
+      <DependentUpon>TimelineStyling.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\CalendarControl\StylingCategory\AppointmentsStyleExample\Appointment.cs" />
+    <Compile Include="Examples\CalendarControl\StylingCategory\AppointmentsStyleExample\AppointmentsStyleCSharp.cs" />
+    <Compile Include="Examples\CalendarControl\StylingCategory\AppointmentsStyleExample\AppointmentsStyleXaml.xaml.cs">
+      <DependentUpon>AppointmentsStyleXaml.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Examples\CalendarControl\StylingCategory\CustomRendererExample\CalendarCustomRenderer.cs" />
     <Compile Include="Examples\CalendarControl\StylingCategory\CellStylingExample\CellStyling.cs" />
     <Compile Include="Examples\CalendarControl\StylingCategory\CustomRendererExample\CustomCalendar.cs" />
@@ -147,6 +216,10 @@
       <DependentUpon>FormatAxisLabelsXaml.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\ChartControl\CustomizationCategory\FormatAxisLabelsExample\ViewModel.cs" />
+    <Compile Include="Examples\ChartControl\CustomizationCategory\FormatSeriesLabelsExample\FormatSeriesLabelsXaml.xaml.cs">
+      <DependentUpon>FormatSeriesLabelsXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ChartControl\CustomizationCategory\FormatSeriesLabelsExample\ViewModel.cs" />
     <Compile Include="Examples\ChartControl\CustomizationCategory\GradientBarsExample\GradientBars.xaml.cs">
       <DependentUpon>GradientBars.xaml</DependentUpon>
     </Compile>
@@ -186,6 +259,9 @@
       <DependentUpon>PieChartRadLegendXaml.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\ChartControl\LegendCategory\ViewModel.cs" />
+    <Compile Include="Examples\ChartControl\PieChartCategory\DonutSeries\DonutSeriesExample.xaml.cs">
+      <DependentUpon>DonutSeriesExample.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Examples\ChartControl\PieChartCategory\PieChartExample\PieChartCSharp.cs" />
     <Compile Include="Examples\ChartControl\PieChartCategory\PieChartPercentage\PercentageLabelFormatter.cs" />
     <Compile Include="Examples\ChartControl\PieChartCategory\PieChartPercentage\PieChartPercentageCSharp.cs" />
@@ -212,11 +288,26 @@
       <DependentUpon>BarSeriesVerticalXaml.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\ChartControl\SeriesCategory\BarSeriesVerticalExample\ViewModel.cs" />
+    <Compile Include="Examples\ChartControl\SeriesCategory\CandlestickSeriesExample\CandlestickSeriesExampleXaml.xaml.cs">
+      <DependentUpon>CandlestickSeriesExampleXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ChartControl\SeriesCategory\CandlestickSeriesExample\CandlestickSeriesExampleCSharp.cs" />
+    <Compile Include="Examples\ChartControl\SeriesCategory\CandlestickSeriesExample\ViewModel.cs" />
+    <Compile Include="Examples\ChartControl\SeriesCategory\FinancialIndicatorsExample\FinancialIndicatorsExampleCSharp.cs" />
+    <Compile Include="Examples\ChartControl\SeriesCategory\FinancialIndicatorsExample\FinancialIndicatorsExampleXaml.xaml.cs">
+      <DependentUpon>FinancialIndicatorsExampleXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ChartControl\SeriesCategory\FinancialIndicatorsExample\ViewModel.cs" />
     <Compile Include="Examples\ChartControl\SeriesCategory\LineSeriesExample\LineSeriesCSharp.cs" />
     <Compile Include="Examples\ChartControl\SeriesCategory\LineSeriesExample\LineSeriesXaml.xaml.cs">
       <DependentUpon>LineSeriesXaml.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\ChartControl\SeriesCategory\LineSeriesExample\ViewModel.cs" />
+    <Compile Include="Examples\ChartControl\SeriesCategory\OhlcSeriesExample\OhlcSeriesExampleCSharp.cs" />
+    <Compile Include="Examples\ChartControl\SeriesCategory\OhlcSeriesExample\OhlcSeriesExampleXaml.xaml.cs">
+      <DependentUpon>OhlcSeriesExampleXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ChartControl\SeriesCategory\OhlcSeriesExample\ViewModel.cs" />
     <Compile Include="Examples\ChartControl\SeriesCategory\ScatterAreaSeriesExample\ScatterAreaSeriesCSharp.cs" />
     <Compile Include="Examples\ChartControl\SeriesCategory\ScatterAreaSeriesExample\ScatterAreaSeriesXaml.xaml.cs">
       <DependentUpon>ScatterAreaSeriesXaml.xaml</DependentUpon>
@@ -272,6 +363,12 @@
       <DependentUpon>StackSplineAreaSeriesXaml.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\ChartControl\SeriesCategory\StackSplineAreaSeriesExample\ViewModel.cs" />
+    <Compile Include="Examples\ChatControl\FeaturesCategory\ChatItemsExample\ChatItems.xaml.cs">
+      <DependentUpon>ChatItems.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ChatControl\FeaturesCategory\CustomizationExample\Customization.xaml.cs">
+      <DependentUpon>Customization.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Examples\ChatControl\FeaturesCategory\ItemTemplateSelectorExample\CustomChatItemTemplateSelector.cs" />
     <Compile Include="Examples\ChatControl\FeaturesCategory\ItemTemplateSelectorExample\ItemTemplateSelector.xaml.cs">
       <DependentUpon>ItemTemplateSelector.xaml</DependentUpon>
@@ -285,10 +382,22 @@
     <Compile Include="Examples\ChatControl\FeaturesCategory\MVVMSupportExample\SimpleChatItem.cs" />
     <Compile Include="Examples\ChatControl\FeaturesCategory\MVVMSupportExample\SimpleChatItemConverter.cs" />
     <Compile Include="Examples\ChatControl\FeaturesCategory\MVVMSupportExample\ViewModel.cs" />
+    <Compile Include="Examples\ChatControl\FeaturesCategory\TypingIndicatorExample\ChatParticipantConverter.cs" />
+    <Compile Include="Examples\ChatControl\FeaturesCategory\TypingIndicatorExample\Participant.cs" />
+    <Compile Include="Examples\ChatControl\FeaturesCategory\TypingIndicatorExample\TypingIndicatorAuthors.xaml.cs">
+      <DependentUpon>TypingIndicatorAuthors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ChatControl\FeaturesCategory\TypingIndicatorExample\TypingIndicatorItemsSource.xaml.cs">
+      <DependentUpon>TypingIndicatorItemsSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ChatControl\FeaturesCategory\TypingIndicatorExample\ViewModel.cs" />
     <Compile Include="Examples\ChatControl\GettingStartedCategory\GettingStartedExample\ChatGettingStartedXaml.xaml.cs">
       <DependentUpon>ChatGettingStartedXaml.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\ChatControl\GettingStartedCategory\GettingStartedExample\RepeatBotService.cs" />
+    <Compile Include="Examples\CheckBoxControl\CommandsCategory\CheckBoxCommandExample\CheckBoxCommand.xaml.cs">
+      <DependentUpon>CheckBoxCommand.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Examples\CheckBoxControl\FeaturesCategory\ColorChangingExample\ColorChanging.xaml.cs">
       <DependentUpon>ColorChanging.xaml</DependentUpon>
     </Compile>
@@ -348,6 +457,16 @@
     <Compile Include="Examples\DataFormControl\StylingCategory\StylingEditorsExample\DataFormStylingEditorsXaml.xaml.cs">
       <DependentUpon>DataFormStylingEditorsXaml.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Examples\DataGridControl\ColumnsCategory\ColumnsExample\Clubs.cs" />
+    <Compile Include="Examples\DataGridControl\ColumnsCategory\ColumnsExample\Columns.xaml.cs">
+      <DependentUpon>Columns.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataGridControl\ColumnsCategory\ColumnsExample\ViewModel.cs" />
+    <Compile Include="Examples\DataGridControl\CommandsCategory\CommandsExample\CellTapUserCommand.cs" />
+    <Compile Include="Examples\DataGridControl\CommandsCategory\CommandsExample\Commands.xaml.cs">
+      <DependentUpon>Commands.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataGridControl\CommandsCategory\CommandsExample\Country.cs" />
     <Compile Include="Examples\DataGridControl\LocalizationCategory\City.cs" />
     <Compile Include="Examples\DataGridControl\LocalizationCategory\CustomLocalizationExample\CustomLocalization.xaml.cs">
       <DependentUpon>CustomLocalization.xaml</DependentUpon>
@@ -402,6 +521,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataGridResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="Examples\DataGridControl\NestedPropertyCategory\NestedPropertyExample\Address.cs" />
+    <Compile Include="Examples\DataGridControl\NestedPropertyCategory\NestedPropertyExample\Person.cs" />
+    <Compile Include="Examples\DataGridControl\NestedPropertyCategory\NestedPropertyExample\NestedProperty.xaml.cs">
+      <DependentUpon>NestedProperty.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataGridControl\NestedPropertyCategory\NestedPropertyExample\ViewModel.cs" />
     <Compile Include="Examples\DataGridControl\SelectionCategory\ViewModel.cs" />
     <Compile Include="Examples\DataGridControl\SortingCategory\ProgrammaticSortingExample\Country.cs" />
     <Compile Include="Examples\DataGridControl\DecorationsCategory\GridLinesExample\StringToColorConverter.cs" />
@@ -426,6 +551,21 @@
       <DependentUpon>ProgrammaticSorting.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\DataGridControl\DecorationsCategory\GridLinesExample\ViewModel.cs" />
+    <Compile Include="Examples\DataGridControl\StylingCategory\ColumnsStylingExample\ColumnsStyling.xaml.cs">
+      <DependentUpon>ColumnsStyling.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataGridControl\StylingCategory\ColumnsStylingExample\Data.cs" />
+    <Compile Include="Examples\DataGridControl\StylingCategory\DataGridStylingExample\Data.cs" />
+    <Compile Include="Examples\DataGridControl\StylingCategory\DataGridStylingExample\DataGridStyling.xaml.cs">
+      <DependentUpon>DataGridStyling.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\DataGridControl\StylingCategory\StyleSelectorExample\Data.cs" />
+    <Compile Include="Examples\DataGridControl\StylingCategory\StyleSelectorExample\MyCellContentSelector.cs" />
+    <Compile Include="Examples\DataGridControl\StylingCategory\StyleSelectorExample\MyCellDecorationSelector.cs" />
+    <Compile Include="Examples\DataGridControl\StylingCategory\StyleSelectorExample\MyGroupSelector.cs" />
+    <Compile Include="Examples\DataGridControl\StylingCategory\StyleSelectorExample\StyleSelector.xaml.cs">
+      <DependentUpon>StyleSelector.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Examples\EntryControl\FeaturesCategory\EventsExample\Events.xaml.cs">
       <DependentUpon>Events.xaml</DependentUpon>
     </Compile>
@@ -440,6 +580,19 @@
     </Compile>
     <Compile Include="Examples\EntryControl\FeaturesCategory\ThemeExample\Theme.xaml.cs">
       <DependentUpon>Theme.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ExpanderControl\FeaturesCategory\ExpanderLocationExample\ExpanderHeaderLocation.xaml.cs">
+      <DependentUpon>ExpanderHeaderLocation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ExpanderControl\FeaturesCategory\BorderStylingExample\BorderStyling.xaml.cs">
+      <DependentUpon>BorderStyling.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ExpanderControl\FeaturesCategory\CustomExpanderHeaderExample\CustomExpanderHeader.xaml.cs">
+      <DependentUpon>CustomExpanderHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ExpanderControl\GettingStartedCategory\GettingStartedExample\ExpanderGettingStartedCSharp.cs" />
+    <Compile Include="Examples\ExpanderControl\GettingStartedCategory\GettingStartedExample\ExpanderGettingStartedXaml.xaml.cs">
+      <DependentUpon>ExpanderGettingStartedXaml.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\GaugeControl\FeaturesCategory\BarIndicatorsExample\BarIndicators.xaml.cs">
       <DependentUpon>BarIndicators.xaml</DependentUpon>
@@ -499,6 +652,11 @@
     <Compile Include="Examples\ListViewControl\BindableCollectionsCategory\FilterDescriptorsExample\ViewModel.cs" />
     <Compile Include="Examples\ListViewControl\FeaturesCategory\DataOperationsExample\DataOperationsViewModel.cs" />
     <Compile Include="Examples\ListViewControl\FeaturesCategory\DataOperationsExample\GroupConverter.cs" />
+    <Compile Include="Examples\ListViewControl\FeaturesCategory\FilteringExample\Filtering.xaml.cs">
+      <DependentUpon>Filtering.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ListViewControl\FeaturesCategory\FilteringExample\Person.cs" />
+    <Compile Include="Examples\ListViewControl\FeaturesCategory\FilteringExample\ViewModel.cs" />
     <Compile Include="Examples\ListViewControl\FeaturesCategory\Item.cs" />
     <Compile Include="Examples\ListViewControl\FeaturesCategory\DataOperationsExample\DataOperations.xaml.cs">
       <DependentUpon>DataOperations.xaml</DependentUpon>
@@ -510,6 +668,14 @@
     <Compile Include="Examples\ListViewControl\FeaturesCategory\ItemSpacingExample\ItemSpacing.xaml.cs">
       <DependentUpon>ItemSpacing.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Examples\ListViewControl\FeaturesCategory\ProgrammaticScrollingExample\ProgrammaticScrolling.xaml.cs">
+      <DependentUpon>ProgrammaticScrolling.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ListViewControl\FeaturesCategory\SortingExample\Person.cs" />
+    <Compile Include="Examples\ListViewControl\FeaturesCategory\SortingExample\Sorting.xaml.cs">
+      <DependentUpon>Sorting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ListViewControl\FeaturesCategory\SortingExample\ViewModel.cs" />
     <Compile Include="Examples\ListViewControl\GroupingCategory\DelegateGroupDescriptorExample\City.cs" />
     <Compile Include="Examples\ListViewControl\GroupingCategory\DelegateGroupDescriptorExample\DelegateGroupDescriptorGroups.xaml.cs">
       <DependentUpon>DelegateGroupDescriptorGroups.xaml</DependentUpon>
@@ -661,6 +827,27 @@
     <Compile Include="Examples\SideDrawerControl\FeaturesCategory\TransitionsExample\Transitions.xaml.cs">
       <DependentUpon>Transitions.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Examples\SlideViewControl\FeaturesCategory\CommandsExample\Commands.xaml.cs">
+      <DependentUpon>Commands.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\SlideViewControl\FeaturesCategory\CommandsExample\CustomSlideViewCommand.cs" />
+    <Compile Include="Examples\SlideViewControl\FeaturesCategory\CustomIndicatorsExample\CustomIndicators.xaml.cs">
+      <DependentUpon>CustomIndicators.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\SlideViewControl\FeaturesCategory\ItemTemplateExample\ItemTemplate.xaml.cs">
+      <DependentUpon>ItemTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\SlideViewControl\FeaturesCategory\ItemTemplateExample\MyItem.cs" />
+    <Compile Include="Examples\SlideViewControl\FeaturesCategory\ItemTemplateExample\ViewModel.cs" />
+    <Compile Include="Examples\SlideViewControl\FeaturesCategory\ItemTemplateSelectorExample\SlideViewItemTemplateSelector.cs" />
+    <Compile Include="Examples\SlideViewControl\FeaturesCategory\ItemTemplateSelectorExample\ItemTemplateSelector.xaml.cs">
+      <DependentUpon>ItemTemplateSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\SlideViewControl\FeaturesCategory\ItemTemplateSelectorExample\Product.cs" />
+    <Compile Include="Examples\SlideViewControl\FeaturesCategory\ItemTemplateSelectorExample\ViewModel.cs" />
+    <Compile Include="Examples\SlideViewControl\GettingStartedCategory\GettingStartedExample\SlideViewGettingStartedXaml.xaml.cs">
+      <DependentUpon>SlideViewGettingStartedXaml.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Examples\SpreadStreamProcessingControl\GettingStartedCategory\StylingExample\StylingViewModel.cs" />
     <Compile Include="Examples\SpreadStreamProcessingControl\GettingStartedCategory\Book.cs" />
     <Compile Include="Examples\SpreadStreamProcessingControl\GettingStartedCategory\PredefinedColors.cs" />
@@ -692,11 +879,33 @@
     <Compile Include="Examples\TreeViewControl\FeaturesCategory\ExpandCollapseExample\TreeViewExpandCollapse.xaml.cs">
       <DependentUpon>TreeViewExpandCollapse.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Examples\TreeViewControl\FeaturesCategory\Item.cs" />
+    <Compile Include="Examples\TreeViewControl\FeaturesCategory\LoadingItemsExample\Category.cs" />
+    <Compile Include="Examples\TreeViewControl\FeaturesCategory\LoadingItemsExample\TreeViewLoadOnDemand.xaml.cs">
+      <DependentUpon>TreeViewLoadOnDemand.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\TreeViewControl\FeaturesCategory\LoadingItemsExample\ViewModel.cs" />
+    <Compile Include="Examples\TreeViewControl\FeaturesCategory\ProgrammaticScrollingExample\ProgrammaticScrolling.xaml.cs">
+      <DependentUpon>ProgrammaticScrolling.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\TreeViewControl\FeaturesCategory\ViewModel.cs" />
     <Compile Include="Examples\TreeViewControl\GettingStartedCategory\GettingStartedExample\Item.cs" />
-    <Compile Include="Examples\TreeViewControl\GettingStartedCategory\GettingStartedExample\TreeViewDemoAdapter.cs" />
     <Compile Include="Examples\TreeViewControl\GettingStartedCategory\GettingStartedExample\TreeViewGettingStartedXaml.xaml.cs">
       <DependentUpon>TreeViewGettingStartedXaml.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Examples\TreeViewControl\StylingCategory\ItemStyleExample\Item.cs" />
+    <Compile Include="Examples\TreeViewControl\StylingCategory\ItemStyleExample\StringToBorderLocationConverter.cs" />
+    <Compile Include="Examples\TreeViewControl\StylingCategory\ItemStyleExample\StringToColorConverter.cs" />
+    <Compile Include="Examples\TreeViewControl\StylingCategory\ItemStyleExample\TreeViewItemStyle.xaml.cs">
+      <DependentUpon>TreeViewItemStyle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\TreeViewControl\StylingCategory\ItemStyleExample\ViewModel.cs" />
+    <Compile Include="Examples\TreeViewControl\StylingCategory\ItemStyleSelectorExample\ExampleStyleSelector.cs" />
+    <Compile Include="Examples\TreeViewControl\StylingCategory\ItemStyleSelectorExample\Item.cs" />
+    <Compile Include="Examples\TreeViewControl\StylingCategory\ItemStyleSelectorExample\TreeViewStyleSelector.xaml.cs">
+      <DependentUpon>TreeViewStyleSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\TreeViewControl\StylingCategory\ItemStyleSelectorExample\ViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Data\CategoricalData.cs" />
     <Compile Include="Data\DataProvider.cs" />
@@ -898,10 +1107,10 @@
       <HintPath>..\..\packages\Xam.Plugins.Settings.3.1.1\lib\netstandard1.0\Plugin.Settings.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="SkiaSharp, Version=1.59.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SkiaSharp.1.59.1\lib\portable-net45+win8+wpa81+wp8\SkiaSharp.dll</HintPath>
+      <HintPath>..\..\packages\SkiaSharp.1.59.3\lib\portable-net45+win8+wpa81+wp8\SkiaSharp.dll</HintPath>
     </Reference>
     <Reference Include="SkiaSharp.Views.Forms, Version=1.59.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SkiaSharp.Views.Forms.1.59.1\lib\portable-net45+win8+wpa81+wp8\SkiaSharp.Views.Forms.dll</HintPath>
+      <HintPath>..\..\packages\SkiaSharp.Views.Forms.1.59.3\lib\portable-net45+win8+wpa81+wp8\SkiaSharp.Views.Forms.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Documents.SpreadsheetStreaming">
       <HintPath>..\..\..\..\Binaries\Portable\Telerik.Documents.SpreadsheetStreaming.dll</HintPath>
@@ -940,13 +1149,13 @@
       <HintPath>..\..\$(BinariesPath)\Portable\Telerik.Zip.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.2.5.0.280555\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Core.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.3.1.0.697729\lib\netstandard1.0\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.2.5.0.280555\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Platform.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.3.1.0.697729\lib\netstandard1.0\Xamarin.Forms.Platform.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.2.5.0.280555\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Xaml.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.3.1.0.697729\lib\netstandard1.0\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -1023,6 +1232,10 @@
     <EmbeddedResource Include="Examples\ListViewControl\GesturesCategory\PullToRefreshExample\PullToRefresh.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examples\TreeViewControl\StylingCategory\ItemStyleExample\TreeViewItemStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Examples\ZipLibraryControl\GettingStartedCategory\GettingStartedExample\ZipLibraryGettingStartedXaml.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -1819,39 +2032,39 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Examples\DataGridControl\LoadOnDemandCategory\LoadOnDemandEventExample\LoadOnDemandEvent.xaml">
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Examples\DataGridControl\LoadOnDemandCategory\LoadOnDemandRowStyleExample\LoadOnDemandRowStyle.xaml">
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Examples\DataGridControl\LoadOnDemandCategory\LoadOnDemandRowTemplateExample\LoadOnDemandRowTemplate.xaml">
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Examples\DataGridControl\LoadOnDemandCategory\LoadMoreDataCommandExample\LoadMoreDataCommand.xaml">
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Examples\DataGridControl\LoadOnDemandCategory\LoadOnDemandAutoTemplateExample\LoadOnDemandAutoTemplate.xaml">
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Examples\DataGridControl\LocalizationCategory\CustomLocalizationExample\CustomLocalization.xaml">
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Examples\DataGridControl\LocalizationCategory\CustomResourceManagerExample\CustomResourceManager.xaml">
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
@@ -1876,11 +2089,11 @@
   <ItemGroup>
     <EmbeddedResource Include="Examples\ButtonControl\HowToCategory\ButtonCircularExample\ButtonCircular.xaml">
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Examples\ButtonControl\HowToCategory\ButtonDisabledTextColorExample\ButtonDisabledTextColor.xaml">
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -1927,13 +2140,13 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Examples\DataFormControl\HowToCategory\AutoCompleteEditorExample\DataFormAutoCompleteEditor.xaml">
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Examples\ListViewControl\FeaturesCategory\CommandsExample\Commands.xaml">
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
@@ -2022,7 +2235,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-   <EmbeddedResource Include="Examples\CheckBoxControl\FeaturesCategory\KeyFeaturesExample\KeyFeatures.xaml">
+    <EmbeddedResource Include="Examples\CheckBoxControl\FeaturesCategory\KeyFeaturesExample\KeyFeatures.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -2045,14 +2258,304 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\TreeViewControl\FeaturesCategory\LoadingItemsExample\TreeViewLoadOnDemand.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\SlideViewControl\GettingStartedCategory\GettingStartedExample\SlideViewGettingStartedXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\TreeViewControl\StylingCategory\ItemStyleSelectorExample\TreeViewStyleSelector.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\SlideViewControl\FeaturesCategory\ItemTemplateSelectorExample\ItemTemplateSelector.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\SlideViewControl\FeaturesCategory\ItemTemplateExample\ItemTemplate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\SlideViewControl\FeaturesCategory\CommandsExample\Commands.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ChartControl\CustomizationCategory\FormatSeriesLabelsExample\FormatSeriesLabelsXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ChartControl\PieChartCategory\DonutSeries\DonutSeriesExample.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\SlideViewControl\FeaturesCategory\CustomIndicatorsExample\CustomIndicators.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\DataGridControl\CommandsCategory\CommandsExample\Commands.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ListViewControl\FeaturesCategory\FilteringExample\Filtering.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ListViewControl\FeaturesCategory\SortingExample\Sorting.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\CheckBoxControl\CommandsCategory\CheckBoxCommandExample\CheckBoxCommand.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ListViewControl\FeaturesCategory\ProgrammaticScrollingExample\ProgrammaticScrolling.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\DataGridControl\ColumnsCategory\ColumnsExample\Columns.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\DataGridControl\StylingCategory\ColumnsStylingExample\ColumnsStyling.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\DataGridControl\StylingCategory\DataGridStylingExample\DataGridStyling.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\DataGridControl\StylingCategory\StyleSelectorExample\StyleSelector.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\BusyIndicatorControl\FeaturesCategory\CustomBusyContentExample\CustomBusyContent.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\CalendarControl\StylingCategory\AppointmentsStyleExample\AppointmentsStyleXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ChatControl\FeaturesCategory\CustomizationExample\Customization.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ChatControl\FeaturesCategory\ChatItemsExample\ChatItems.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ChatControl\FeaturesCategory\TypingIndicatorExample\TypingIndicatorItemsSource.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ChatControl\FeaturesCategory\TypingIndicatorExample\TypingIndicatorAuthors.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ExpanderControl\GettingStartedCategory\GettingStartedExample\ExpanderGettingStartedXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ExpanderControl\FeaturesCategory\CustomExpanderHeaderExample\CustomExpanderHeader.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ExpanderControl\FeaturesCategory\ExpanderLocationExample\ExpanderHeaderLocation.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ExpanderControl\FeaturesCategory\BorderStylingExample\BorderStyling.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\AccordionControl\GettingStartedCategory\GettingStartedExample\AccordionGettingStartedXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\AccordionControl\FeaturesCategory\AccordionItemExample\AccordionItem.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\DataGridControl\NestedPropertyCategory\NestedPropertyExample\NestedProperty.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\AutoCompleteViewControl\FeaturesCategory\KeyFeaturesExample\KeyFeatures.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\AutoCompleteViewControl\GettingStartedCategory\GettingStartedExample\AutoCompleteViewGettingStartedXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\AutoCompleteViewControl\FeaturesCategory\TokensExample\Tokens.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\AutoCompleteViewControl\FeaturesCategory\RemoteSearchExample\RemoteSearch.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\AutoCompleteViewControl\FeaturesCategory\DataBindingExample\DataBinding.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\AutoCompleteViewControl\FeaturesCategory\CustomSuggestionItemExample\CustomSuggestionItem.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\CalendarControl\SchedulingCategory\AllDayAreaExample\AllDayArea.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\CalendarControl\SchedulingCategory\CurrentTimeIndicatorExample\CurrentTimeIndicator.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\CalendarControl\SchedulingCategory\KeyFeaturesExample\KeyFeatures.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\TreeViewControl\FeaturesCategory\ProgrammaticScrollingExample\ProgrammaticScrolling.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\CalendarControl\SchedulingCategory\TimelineStylingExample\TimelineStyling.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\AutoCompleteViewControl\FeaturesCategory\HighlightTextExample\HighlightText.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\AutoCompleteViewControl\FeaturesCategory\NestedPropertyExample\NestedProperty.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\AutoCompleteViewControl\FeaturesCategory\CustomFilteringExample\CustomFiltering.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ChartControl\SeriesCategory\CandlestickSeriesExample\CandlestickSeriesExampleXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ChartControl\SeriesCategory\OhlcSeriesExample\OhlcSeriesExampleXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ChartControl\SeriesCategory\FinancialIndicatorsExample\FinancialIndicatorsExampleXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
-  <Import Project="..\..\packages\Xamarin.Forms.2.5.0.280555\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.5.0.280555\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.5.0.280555\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.5.0.280555\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard1.0\Xamarin.Forms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard1.0\Xamarin.Forms.props'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard1.0\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard1.0\Xamarin.Forms.targets'))" />
   </Target>
+  <Import Project="..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard1.0\Xamarin.Forms.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

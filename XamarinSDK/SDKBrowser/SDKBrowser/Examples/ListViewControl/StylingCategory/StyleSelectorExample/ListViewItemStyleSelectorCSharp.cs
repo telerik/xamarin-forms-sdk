@@ -31,7 +31,9 @@ namespace SDKBrowser.Examples.ListViewControl.StylingCategory.StyleSelectorExamp
             };
             // << listview-gettingstarted-listview-csharp
 
+            // >> listview-features-set-custom-styleselector
             listView.ItemStyleSelector = new ExampleListViewStyleSelector();
+            // << listview-features-set-custom-styleselector
 
             Content = listView;
         }

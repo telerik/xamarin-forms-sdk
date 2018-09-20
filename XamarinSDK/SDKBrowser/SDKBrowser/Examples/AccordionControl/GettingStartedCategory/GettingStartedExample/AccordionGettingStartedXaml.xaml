@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives" 
+             x:Class="SDKBrowser.Examples.AccordionControl.GettingStartedCategory.GettingStartedExample.AccordionGettingStartedXaml">
+    <Grid Margin="10">
+        <!-- >> accordion-getting-started-xaml -->
+        <telerikPrimitives:RadAccordion x:Name="accordion">
+            <telerikPrimitives:AccordionItem HeaderText="Attachments">
+                <telerikPrimitives:AccordionItem.Content>
+                    <Label Text="Attach files"  Margin="30" />
+                </telerikPrimitives:AccordionItem.Content>
+            </telerikPrimitives:AccordionItem>
+            <telerikPrimitives:AccordionItem HeaderText="Comments">
+                <telerikPrimitives:AccordionItem.Content>
+                    <Label Text="Add your comment here" Margin="30" />
+                </telerikPrimitives:AccordionItem.Content>
+            </telerikPrimitives:AccordionItem>
+            <telerikPrimitives:AccordionItem HeaderText="Rating" IsExpanded="True">
+                <telerikPrimitives:AccordionItem.Content>
+                    <telerikInput:RadShapeRating x:Name="rating" Margin="20"/>
+                </telerikPrimitives:AccordionItem.Content>
+            </telerikPrimitives:AccordionItem>
+        </telerikPrimitives:RadAccordion>
+        <!-- << accordion-getting-started-xaml -->
+    </Grid>
+</ContentView>

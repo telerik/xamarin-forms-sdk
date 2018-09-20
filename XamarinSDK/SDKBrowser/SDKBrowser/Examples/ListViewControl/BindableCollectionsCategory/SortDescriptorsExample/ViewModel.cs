@@ -70,7 +70,7 @@ namespace SDKBrowser.Examples.ListViewControl.BindableCollectionsCategory.SortDe
                 }
             }
         }
-
+        // >> listview-features-bindable-sortdescriptor-viewmodel
         public ObservableCollection<SortDescriptorBase> SortDescriptors
         {
             get
@@ -86,7 +86,7 @@ namespace SDKBrowser.Examples.ListViewControl.BindableCollectionsCategory.SortDe
                 }
             }
         }
-
+        // << listview-features-bindable-sortdescriptor-viewmodel
         private List<Event> GetItems()
         {
             var results = new List<Event>();

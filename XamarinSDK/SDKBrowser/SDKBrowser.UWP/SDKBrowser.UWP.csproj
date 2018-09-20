@@ -12,12 +12,13 @@
     <AssemblyName>SDKBrowser.UWP</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <TargetPlatformVersion>10.0.16299.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <PackageCertificateKeyFile>SDKBrowser.UWP_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <RuntimeIdentifiers>win10-arm;win10-arm-aot;win10-x86;win10-x86-aot;win10-x64;win10-x64-aot</RuntimeIdentifiers>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -90,6 +91,16 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="Assets\Accordion.scale-100.png" />
+    <Content Include="Assets\Accordion.scale-125.png" />
+    <Content Include="Assets\Accordion.scale-150.png" />
+    <Content Include="Assets\Accordion.scale-200.png" />
+    <Content Include="Assets\Accordion.scale-400.png" />
+    <Content Include="Assets\AutoCompleteView.scale-100.png" />
+    <Content Include="Assets\AutoCompleteView.scale-125.png" />
+    <Content Include="Assets\AutoCompleteView.scale-150.png" />
+    <Content Include="Assets\AutoCompleteView.scale-200.png" />
+    <Content Include="Assets\AutoCompleteView.scale-400.png" />
     <Content Include="Assets\Barcode.scale-100.png" />
     <Content Include="Assets\Barcode.scale-150.png" />
     <Content Include="Assets\Barcode.scale-200.png" />
@@ -104,13 +115,18 @@
     <Content Include="Assets\ChatUI.scale-150.png" />
     <Content Include="Assets\ChatUI.scale-200.png" />
     <Content Include="Assets\ChatUI.scale-400.png" />
+    <Content Include="Assets\ChatBackground.jpg" />
     <Content Include="Assets\Checkbox.scale-100.png" />
     <Content Include="Assets\Checkbox.scale-125.png" />
     <Content Include="Assets\Checkbox.scale-150.png" />
     <Content Include="Assets\Checkbox.scale-200.png" />
     <Content Include="Assets\Checkbox.scale-400.png" />
+    <Content Include="Assets\Expander.scale-100.png" />
+    <Content Include="Assets\Expander.scale-125.png" />
+    <Content Include="Assets\Expander.scale-150.png" />
+    <Content Include="Assets\Expander.scale-200.png" />
+    <Content Include="Assets\Expander.scale-400.png" />
     <Content Include="Assets\sampleBot.png" />
-    <Content Include="Assets\Fonts\fontello.ttf" />
     <Content Include="Assets\Fonts\segoeui.ttf" />
     <Content Include="Assets\Fonts\segoeuib.ttf" />
     <Content Include="Assets\Fonts\segoeuii.ttf" />
@@ -124,7 +140,6 @@
     <Content Include="Assets\Fonts\seguisbi.ttf" />
     <Content Include="Assets\Fonts\seguisli.ttf" />
     <Content Include="XamarinIcon.png" />
-    <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -143,6 +158,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="Assets\Fonts\telerikfontexamples.ttf" />
     <None Include="SDKBrowser.UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -445,6 +461,29 @@
     <Reference Include="Telerik.Zip">
       <HintPath>..\..\..\..\Binaries\Portable\Telerik.Zip.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.1.5</Version>
+    </PackageReference>
+    <PackageReference Include="NETStandard.Library">
+      <Version>2.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="SkiaSharp">
+      <Version>1.59.3</Version>
+    </PackageReference>
+    <PackageReference Include="SkiaSharp.Views">
+      <Version>1.59.3</Version>
+    </PackageReference>
+    <PackageReference Include="SkiaSharp.Views.Forms">
+      <Version>1.59.3</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugins.Settings">
+      <Version>3.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms">
+      <Version>3.1.0.697729</Version>
+    </PackageReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

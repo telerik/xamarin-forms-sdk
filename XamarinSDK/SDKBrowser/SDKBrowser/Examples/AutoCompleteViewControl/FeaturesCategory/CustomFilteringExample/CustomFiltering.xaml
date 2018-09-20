@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.AutoCompleteViewControl.FeaturesCategory.CustomFilteringExample.CustomFiltering">
+    <StackLayout>
+        <!-- >> autocompleteview-features-customfiltering -->
+        <telerikInput:RadAutoCompleteView x:Name="аutoCompleteView"
+                                          Filter="{Binding Filter}"
+                                          TextSearchPath="FirstName"
+                                          ItemsSource="{Binding Source}"
+                                          Watermark="Search here..."
+                                          SuggestionViewHeight="300">
+            <telerikInput:RadAutoCompleteView.SuggestionItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding FirstName}"/>
+                            <Label Text="{Binding LastName}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </telerikInput:RadAutoCompleteView.SuggestionItemTemplate>
+        </telerikInput:RadAutoCompleteView>
+        <!-- << autocompleteview-features-customfiltering -->
+    </StackLayout>
+</ContentView>

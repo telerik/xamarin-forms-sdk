@@ -11,7 +11,6 @@ namespace SDKBrowser.Examples.DataGridControl.FilteringUICategory.CustomFilterin
             this.InitializeComponent();
 
             this.BindingContext = new ViewModel();
-            this.grid.Commands.Add(new CustomOptionsTapCommand());
         }
     }
 }

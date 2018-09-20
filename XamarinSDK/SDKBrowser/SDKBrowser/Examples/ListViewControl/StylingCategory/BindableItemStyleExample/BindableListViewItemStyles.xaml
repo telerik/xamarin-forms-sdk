@@ -82,12 +82,14 @@
                         </telerikListView:ListViewTemplateCell>
                     </DataTemplate>
                 </telerikDataControls:RadListView.ItemTemplate>
+                <!-- >> listview-features-styling-bindable-itemstyle-xaml -->
                 <telerikDataControls:RadListView.ItemStyle>
                     <telerikListView:ListViewItemStyle BackgroundColor="{Binding Background}"
                                                        BorderColor="{Binding BorderColor}"
                                                        BorderLocation="{Binding BorderLocation}"
                                                        BorderWidth="{Binding BorderWidth}" />
                 </telerikDataControls:RadListView.ItemStyle>
+                <!-- << listview-features-styling-bindable-itemstyle-xaml -->
             </telerikDataControls:RadListView>
         </Grid>
     </ContentView.Content>

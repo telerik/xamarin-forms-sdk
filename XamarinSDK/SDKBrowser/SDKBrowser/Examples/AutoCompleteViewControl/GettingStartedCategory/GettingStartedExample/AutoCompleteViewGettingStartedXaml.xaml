@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.AutoCompleteViewControl.GettingStartedCategory.GettingStartedExample.AutoCompleteViewGettingStartedXaml">
+    <StackLayout>
+        <!-- >> autocompleteview-getting-started-xaml -->
+        <telerikInput:RadAutoCompleteView x:Name="autoCompleteView" Watermark="Search here..." />
+        <!-- << autocompleteview-getting-started-xaml -->
+    </StackLayout>
+</ContentView>

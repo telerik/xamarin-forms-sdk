@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
-using SDKBrowser.Examples.TreeViewControl.GettingStartedCategory.GettingStartedExample;
 using Telerik.XamarinForms.DataControls.TreeView.Commands;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -28,8 +23,6 @@ namespace SDKBrowser.Examples.TreeViewControl.FeaturesCategory.CommandsExample
             this.MyHoldCommand = new Command((p) => OnItemHold(p));
 
             InitializeComponent ();
-
-            this.tv.HierarchyAdapter = new TreeViewDemoAdapter();
         }
 
         private void OnItemHold(object p)

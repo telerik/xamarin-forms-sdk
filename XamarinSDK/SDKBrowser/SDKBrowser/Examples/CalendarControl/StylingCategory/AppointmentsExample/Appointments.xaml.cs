@@ -9,7 +9,7 @@ namespace SDKBrowser.Examples.CalendarControl.StylingCategory.AppointmentsExampl
         {
             this.InitializeComponent();
 
-            DateTime dateInThePast = new DateTime(1990, 1, 1);
+            DateTime dateInThePast = new DateTime(2017, 12, 12, 0, 25, 0);
 
             cal.AppointmentsSource = new List<Appointment>()
             {

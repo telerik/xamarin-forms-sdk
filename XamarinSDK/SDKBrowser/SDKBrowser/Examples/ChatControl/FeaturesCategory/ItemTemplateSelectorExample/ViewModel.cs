@@ -15,10 +15,10 @@ namespace SDKBrowser.Examples.ChatControl.FeaturesCategory.ItemTemplateSelectorE
         private Author me;
         public ViewModel()
         {          
-           string suffix = Device.RuntimePlatform == Device.UWP ? "Assets/" : null;
+           string prefix = Device.RuntimePlatform == Device.UWP ? "Assets/" : null;
 
-            this.Me = new Author() { Name = "human", Avatar = suffix + "sampleAvatar.png" };
-            this.Bot = new Author() { Name = "Bot", Avatar = suffix + "sampleBot.png" };
+            this.Me = new Author() { Name = "human", Avatar = prefix + "sampleAvatar.png" };
+            this.Bot = new Author() { Name = "Bot", Avatar = prefix + "sampleBot.png" };
 
             // >> chat-features-itemtemplate-items
             this.Items = new ObservableCollection<SimpleChatItem>();

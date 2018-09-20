@@ -3,7 +3,7 @@
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SDKBrowser.Examples.CalendarControl.GettingStartedCategory.GettingStartedExample.CalendarGettingStartedXaml">
-   <!-- >> calendar-gettingstarted-xaml -->
-	<telerikInput:RadCalendar x:Name="calendar" DisplayDate="1/1/1990"/>
-   <!-- << calendar-gettingstarted-xaml -->
+    <!-- >> calendar-gettingstarted-xaml -->
+    <telerikInput:RadCalendar x:Name="calendar"/>
+    <!-- << calendar-gettingstarted-xaml -->
 </ContentView>

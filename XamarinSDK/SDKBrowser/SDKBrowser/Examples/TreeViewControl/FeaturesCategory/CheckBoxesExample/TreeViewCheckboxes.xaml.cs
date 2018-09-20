@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SDKBrowser.Examples.TreeViewControl.GettingStartedCategory.GettingStartedExample;
 using Telerik.XamarinForms.DataControls.TreeView;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -21,7 +17,6 @@ namespace SDKBrowser.Examples.TreeViewControl.FeaturesCategory.CheckBoxesExample
             this.InitSources();
             this.BindingContext = this;
             InitializeComponent ();
-            this.tv.HierarchyAdapter = new TreeViewDemoAdapter();
             tv.CheckedItems.CollectionChanged += CheckedItems_CollectionChanged;
         }
         private void CheckedItems_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)

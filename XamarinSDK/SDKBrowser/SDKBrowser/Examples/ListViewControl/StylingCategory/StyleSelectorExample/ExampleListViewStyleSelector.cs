@@ -3,6 +3,7 @@ using Xamarin.Forms;
 
 namespace SDKBrowser.Examples.ListViewControl.StylingCategory.StyleSelectorExample
 {
+    // >> listview-features-onselectstyle
     public class ExampleListViewStyleSelector : ListViewStyleSelector
     {
         protected override void OnSelectStyle(object item, ListViewStyleContext styleContext)
@@ -27,4 +28,6 @@ namespace SDKBrowser.Examples.ListViewControl.StylingCategory.StyleSelectorExamp
             }
         }
     }
+
+    // << listview-features-onselectstyle
 }
