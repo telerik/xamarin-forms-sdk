@@ -33,8 +33,7 @@ namespace SDKBrowser.Examples.CalendarControl.SchedulingCategory.AllDayAreaExamp
                         Title = "Elle Birthday",
                         StartDate = date.AddDays(1),
                         EndDate = date.AddDays(1).AddHours(12),
-                        IsAllDay = true,
-                        Color = Color.Orange
+                        IsAllDay = true
                     },
                      new Appointment {
                         Title = "Football Game",

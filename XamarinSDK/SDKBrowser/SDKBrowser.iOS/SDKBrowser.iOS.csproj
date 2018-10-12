@@ -89,6 +89,7 @@
     <ConsolePause>False</ConsolePause>
     <CodesignKey>iPhone Distribution</CodesignKey>
     <BuildIpa>True</BuildIpa>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
     <DebugType>none</DebugType>
@@ -98,6 +99,7 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>False</ConsolePause>
     <CodesignKey>iPhone Distribution</CodesignKey>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhoneSimulator'">
     <BuildIpa>True</BuildIpa>
@@ -283,9 +285,9 @@
     <BundleResource Include="Resources\image%402x.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Info.plist">
+    <None Include="Info.plist">
       <SubType>Designer</SubType>
-    </Content>
+    </None>
     <BundleResource Include="Resources\busy32.png" />
     <BundleResource Include="Resources\available32.png" />
     <BundleResource Include="Resources\away32.png" />

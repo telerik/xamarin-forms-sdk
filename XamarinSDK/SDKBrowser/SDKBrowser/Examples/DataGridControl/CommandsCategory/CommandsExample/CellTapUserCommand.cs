@@ -24,8 +24,8 @@ namespace SDKBrowser.Examples.DataGridControl.CommandsCategory.CommandsExample
         {
             var context = parameter as DataGridCellInfo;
             var cellTap =  $"CellTap Command on cell {context.Value} inside {context.Column.HeaderText} \n";
-            //add your logic here
             Application.Current.MainPage.DisplayAlert("", "You've selected " + cellTap, "OK");
+            this.Owner.CommandService.ExecuteDefaultCommand(DataGridCommandId.CellTap, parameter);
         }
         // << datagrid-commands-celltap
     }

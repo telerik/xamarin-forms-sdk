@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikDataGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             x:Class="SDKBrowser.Examples.DataGridControl.CommandsCategory.ValidationExample.Validation">
+    
+    <!-- >> datagrid-commands-validation -->
+    <Grid Margin="0,20,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="errorContainer" 
+              IsVisible="false">
+            <BoxView BackgroundColor="DarkRed" />
+            <Label Text="country name length must be less than 15 symbols" 
+                   FontSize="15"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalTextAlignment="Center"
+                   TextColor="White"/>
+        </Grid>
+
+        <telerikDataGrid:RadDataGrid x:Name="dataGrid"
+                                     Grid.Row="1"
+                                     UserEditMode="Cell"
+                                     AutoGenerateColumns="True"
+                                     ItemsSource="{Binding Items}">
+        </telerikDataGrid:RadDataGrid>
+    </Grid>
+    <!-- << datagrid-commands-validation -->
+</ContentView>

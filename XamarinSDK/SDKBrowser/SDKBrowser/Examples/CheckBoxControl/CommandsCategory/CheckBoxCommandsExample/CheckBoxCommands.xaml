@@ -3,8 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
              xmlns:checkBoxComamnds="clr-namespace:Telerik.XamarinForms.Primitives.CheckBox.Commands;assembly=Telerik.XamarinForms.Primitives"
-             x:Class="SDKBrowser.Examples.CheckBoxControl.CommandsCategory.CheckBoxCommandExample.CheckBoxCommand">
+             x:Class="SDKBrowser.Examples.CheckBoxControl.CommandsCategory.CheckBoxCommandsExample.CheckBoxCommands">
     <StackLayout>
+        <Label Text="Custom command"/> 
         <!-- >> checkbox-commands-xaml -->
         <telerikPrimitives:RadCheckBox x:Name="checkbox">
             <telerikPrimitives:RadCheckBox.Commands>

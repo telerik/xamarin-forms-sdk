@@ -7,7 +7,7 @@ using Xamarin.Forms.Platform.Android;
 
 namespace SDKBrowser.Droid
 {
-    [Activity(Theme = "@style/Theme.AppCompat.NoActionBar", Label = "Progress Telerik UI For Xamarin", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Theme = "@style/Theme.AppCompat.NoActionBar", Label = "Telerik UI For Xamarin", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)

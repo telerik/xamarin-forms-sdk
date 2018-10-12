@@ -922,8 +922,8 @@
           <Title>Commands</Title>
           <Examples>
             <Example>
-              <Page>CheckBoxCommand</Page>
-              <Name>CheckBoxCommand</Name>
+              <Page>CheckBoxCommands</Page>
+              <Name>CheckBoxCommands</Name>
               <Title>CheckBox Command</Title>
             </Example>
           </Examples>
@@ -1322,6 +1322,16 @@
               <Page>Commands</Page>
               <Name>Commands</Name>
               <Title>Commands</Title>
+            </Example>
+            <Example>
+              <Page>Editing</Page>
+              <Name>Editing</Name>
+              <Title>Editing</Title>
+            </Example>
+            <Example>
+              <Page>Validation</Page>
+              <Name>Validation</Name>
+              <Title>Validation</Title>
             </Example>
           </Examples>
         </Category>
@@ -1876,6 +1886,11 @@
               <Page>NumericInputGettingStartedXaml</Page>
               <Name>GettingStarted</Name>
               <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>NumericInputGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - CSharp</Title>
             </Example>
           </Examples>
         </Category>
