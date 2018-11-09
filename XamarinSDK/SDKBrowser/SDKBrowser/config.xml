@@ -312,6 +312,11 @@
               <Title>Border Thickness</Title>
             </Example>
             <Example>
+              <Page>BorderRadius</Page>
+              <Name>BorderRadius</Name>
+              <Title>Border Radius</Title>
+            </Example>
+            <Example>
               <Page>ContentAlignment</Page>
               <Name>ContentAlignment</Name>
               <Title>Content Alignment</Title>
@@ -821,6 +826,17 @@
               <Page>DonutSeriesXAML</Page>
               <Name>DonutSeries</Name>
               <Title>Donut Series</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>NullValuesSupport</Page>
+              <Name>NullValues</Name>
+              <Title>Null Values Support</Title>
             </Example>
           </Examples>
         </Category>

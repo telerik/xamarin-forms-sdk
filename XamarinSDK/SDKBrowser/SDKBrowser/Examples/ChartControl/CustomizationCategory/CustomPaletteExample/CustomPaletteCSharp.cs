@@ -20,19 +20,19 @@ namespace SDKBrowser.Examples.ChartControl.CustomizationCategory.CustomPaletteEx
                 {
                     new BarSeries
                     {
-                        CombineMode = ChartSeriesCombineMode.Stack,
+                        CombineMode = ChartSeriesCombineMode.Cluster,
                         ValueBinding = new PropertyNameDataPointBinding("Value"),
                         CategoryBinding = new PropertyNameDataPointBinding("Category")
                     },
                     new BarSeries
                     {
-                        CombineMode = ChartSeriesCombineMode.Stack,
+                        CombineMode = ChartSeriesCombineMode.Cluster,
                         ValueBinding = new PropertyNameDataPointBinding("Value"),
                         CategoryBinding = new PropertyNameDataPointBinding("Category")
                     },
                     new BarSeries
                     {
-                        CombineMode = ChartSeriesCombineMode.Stack,
+                        CombineMode = ChartSeriesCombineMode.Cluster,
                         ValueBinding = new PropertyNameDataPointBinding("Value"),
                         CategoryBinding = new PropertyNameDataPointBinding("Category")
                     },
@@ -41,8 +41,9 @@ namespace SDKBrowser.Examples.ChartControl.CustomizationCategory.CustomPaletteEx
                 {
                     Entries =
                     {
-                        new PaletteEntry(Color.Blue, Color.Red),
-                        new PaletteEntry(Color.Gray, Color.Yellow)
+                        new PaletteEntry(Color.Red, Color.Blue),
+                        new PaletteEntry(Color.Green, Color.Black),
+                        new PaletteEntry(Color.Blue, Color.Yellow)
                     }
                 }
             };

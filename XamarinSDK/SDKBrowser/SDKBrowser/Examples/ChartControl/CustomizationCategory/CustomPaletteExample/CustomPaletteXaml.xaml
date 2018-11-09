@@ -18,24 +18,23 @@
         <telerikChart:RadCartesianChart.Series>
             <telerikChart:BarSeries ValueBinding="Value"
                                     CategoryBinding="Category"
-                                    CombineMode="Stack"
+                                    CombineMode="Cluster"
                                     ItemsSource="{Binding Data1}" />
             <telerikChart:BarSeries ValueBinding="Value"
                                     CategoryBinding="Category"
-                                    CombineMode="Stack"
+                                    CombineMode="Cluster"
                                     ItemsSource="{Binding Data2}" />
             <telerikChart:BarSeries ValueBinding="Value"
                                     CategoryBinding="Category"
-                                    CombineMode="Stack"
+                                    CombineMode="Cluster"
                                     ItemsSource="{Binding Data3}" />
         </telerikChart:RadCartesianChart.Series>
         <telerikChart:RadCartesianChart.Palette>
             <telerikChart:ChartPalette>
                 <telerikChart:ChartPalette.Entries>
-                    <telerikChart:PaletteEntry FillColor="Blue"
-                                               StrokeColor="Red" />
-                    <telerikChart:PaletteEntry FillColor="Gray"
-                                               StrokeColor="Yellow" />
+                    <telerikChart:PaletteEntry FillColor="Red" StrokeColor="Blue" />
+                    <telerikChart:PaletteEntry FillColor="Green" StrokeColor="Black" />
+                    <telerikChart:PaletteEntry FillColor="Blue" StrokeColor="Yellow" />
                 </telerikChart:ChartPalette.Entries>
             </telerikChart:ChartPalette>
         </telerikChart:RadCartesianChart.Palette>

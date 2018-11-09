@@ -27,5 +27,12 @@
         <!-- >> entry-features-borderstyle -->
         <telerikInput:RadEntry x:Name="entry" WatermarkText="First Name" BorderStyle="{StaticResource EntryBorderStyle}"/>
         <!-- << entry-features-borderstyle -->
+        <Label Text="Text selection" />
+        <!-- >> entry-features-textselection -->
+        <StackLayout Orientation="Horizontal">
+            <telerikInput:RadEntry x:Name="selectEntry" Text="select some text" />
+            <telerikInput:RadButton Text="Focus" Clicked="FocusButtonClicked" />
+        </StackLayout>
+        <!-- << entry-features-textselection -->
     </StackLayout>
 </ContentView>

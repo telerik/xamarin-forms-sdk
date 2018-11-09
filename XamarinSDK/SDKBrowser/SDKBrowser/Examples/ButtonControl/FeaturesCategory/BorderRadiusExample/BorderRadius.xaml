@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.ButtonControl.FeaturesCategory.BorderRadiusExample.BorderRadius">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <!-- >> button-features-borderradius1 -->
+        <telerikInput:RadButton Text="Click me!" 
+                                BackgroundImage="image.png"
+                                BorderColor="Black" 
+                                BorderRadius="10" 
+                                BorderWidth="44"/>
+        <!-- << button-features-borderradius1 -->
+        <!-- >> button-features-borderradius2 -->
+        <telerikInput:RadButton Grid.Row="1" Text="Click me!" 
+                                BorderColor="Black"
+                                BackgroundImage="image.png"
+                                BorderRadius="10" 
+                                BorderWidth="4"/>
+        <!-- << button-features-borderradius2 -->
+        <!-- >> button-features-borderradius3 -->
+        <telerikInput:RadButton Grid.Row="2" Text="Click me!" 
+                                BorderColor="Transparent" 
+                                BackgroundImage="image.png"
+                                BorderRadius="30" 
+                                BorderWidth="0"/>
+        <!-- << button-features-borderradius3 -->
+    </Grid>
+</ContentView>

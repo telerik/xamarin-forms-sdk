@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.ChartControl.FeaturesCategory.NullValuesExample"
+             xmlns:telerikChart="clr-namespace:Telerik.XamarinForms.Chart;assembly=Telerik.XamarinForms.Chart"
+             x:Class="SDKBrowser.Examples.ChartControl.FeaturesCategory.NullValuesExample.NullValuesSupport">
+    <!-- >> chart-nullvalues-xaml -->
+    <telerikChart:RadCartesianChart>
+        <telerikChart:RadCartesianChart.BindingContext>
+            <local:ViewModel />
+        </telerikChart:RadCartesianChart.BindingContext>
+        <telerikChart:RadCartesianChart.HorizontalAxis>
+            <telerikChart:CategoricalAxis />
+        </telerikChart:RadCartesianChart.HorizontalAxis>
+        <telerikChart:RadCartesianChart.VerticalAxis>
+            <telerikChart:NumericalAxis Minimum="0" Maximum="100" />
+        </telerikChart:RadCartesianChart.VerticalAxis>
+        <telerikChart:RadCartesianChart.Series>
+            <telerikChart:SplineAreaSeries ValueBinding="Value"
+                                           CategoryBinding="Category"
+                                           ItemsSource="{Binding Data}" />
+        </telerikChart:RadCartesianChart.Series>
+    </telerikChart:RadCartesianChart>
+    <!-- << chart-nullvalues-xaml -->
+</ContentView>

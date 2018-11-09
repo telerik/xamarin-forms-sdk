@@ -146,6 +146,9 @@
     <Compile Include="Examples\ButtonControl\FeaturesCategory\BackgroundImageExample\BackgroundImage.xaml.cs">
       <DependentUpon>BackgroundImage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Examples\ButtonControl\FeaturesCategory\BorderRadiusExample\BorderRadius.xaml.cs">
+      <DependentUpon>BorderRadius.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Examples\ButtonControl\FeaturesCategory\BorderThicknessExample\BorderThickness.xaml.cs">
       <DependentUpon>BorderThickness.xaml</DependentUpon>
     </Compile>
@@ -230,6 +233,10 @@
       <DependentUpon>PaletteModeXaml.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\ChartControl\CustomizationCategory\PaletteModeExample\ViewModel.cs" />
+    <Compile Include="Examples\ChartControl\FeaturesCategory\NullValuesExample\NullValuesSupport.xaml.cs">
+      <DependentUpon>NullValuesSupport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ChartControl\FeaturesCategory\NullValuesExample\ViewModel.cs" />
     <Compile Include="Examples\ChartControl\GettingStartedCategory\GettingStartedExample\ChartGettingStartedXaml.xaml.cs">
       <DependentUpon>ChartGettingStartedXaml.xaml</DependentUpon>
     </Compile>
@@ -259,16 +266,16 @@
       <DependentUpon>PieChartRadLegendXaml.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\ChartControl\LegendCategory\ViewModel.cs" />
-    <Compile Include="Examples\ChartControl\PieChartCategory\DonutSeries\DonutSeriesExample.xaml.cs">
-      <DependentUpon>DonutSeriesExample.xaml</DependentUpon>
+    <Compile Include="Examples\ChartControl\PieChartCategory\DonutSeriesExample\DonutSeriesXAML.xaml.cs">
+      <DependentUpon>DonutSeriesXAML.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\ChartControl\PieChartCategory\PieChartExample\PieChartCSharp.cs" />
-    <Compile Include="Examples\ChartControl\PieChartCategory\PieChartPercentage\PercentageLabelFormatter.cs" />
-    <Compile Include="Examples\ChartControl\PieChartCategory\PieChartPercentage\PieChartPercentageCSharp.cs" />
-    <Compile Include="Examples\ChartControl\PieChartCategory\PieChartPercentage\PieChartPercentageXaml.xaml.cs">
+    <Compile Include="Examples\ChartControl\PieChartCategory\PieChartPercentageExample\PercentageLabelFormatter.cs" />
+    <Compile Include="Examples\ChartControl\PieChartCategory\PieChartPercentageExample\PieChartPercentageCSharp.cs" />
+    <Compile Include="Examples\ChartControl\PieChartCategory\PieChartPercentageExample\PieChartPercentageXaml.xaml.cs">
       <DependentUpon>PieChartPercentageXaml.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Examples\ChartControl\PieChartCategory\PieChartPercentage\ViewModel.cs" />
+    <Compile Include="Examples\ChartControl\PieChartCategory\PieChartPercentageExample\ViewModel.cs" />
     <Compile Include="Examples\ChartControl\PieChartCategory\PieChartExample\PieChartXaml.xaml.cs">
       <DependentUpon>PieChartXaml.xaml</DependentUpon>
     </Compile>
@@ -1955,7 +1962,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Examples\ChartControl\PieChartCategory\PieChartPercentage\PieChartPercentageXaml.xaml">
+    <EmbeddedResource Include="Examples\ChartControl\PieChartCategory\PieChartPercentageExample\PieChartPercentageXaml.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -2315,7 +2322,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Examples\ChartControl\PieChartCategory\DonutSeries\DonutSeriesExample.xaml">
+    <EmbeddedResource Include="Examples\ChartControl\PieChartCategory\DonutSeriesExample\DonutSeriesXAML.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -2568,6 +2575,19 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Examples\DataGridControl\CommandsCategory\ValidationExample\Validation.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ButtonControl\FeaturesCategory\BorderRadiusExample\BorderRadius.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ChartControl\FeaturesCategory\NullValuesExample\NullValuesSupport.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
