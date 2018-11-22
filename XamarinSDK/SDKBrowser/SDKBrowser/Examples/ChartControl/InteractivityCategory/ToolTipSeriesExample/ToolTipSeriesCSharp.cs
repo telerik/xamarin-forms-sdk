@@ -1,13 +1,13 @@
 ﻿using Telerik.XamarinForms.Chart;
 using Xamarin.Forms;
 
-namespace SDKBrowser.Examples.ChartControl.InteractivityCategory.TrackballSeriesExample
+namespace SDKBrowser.Examples.ChartControl.InteractivityCategory.ToolTipSeriesExample
 {
-    public class TrackballSeriesCSharp : ContentView
+    public class ToolTipSeriesCSharp : ContentView
     {
-        public TrackballSeriesCSharp()
+        public ToolTipSeriesCSharp()
         {
-            // >> chart-interactivity-trackballseries-csharp
+            // >> chart-interactivity-tooltipseries-csharp
             var chart = new RadCartesianChart
             {
                 BindingContext = new ViewModel(),
@@ -25,26 +25,18 @@ namespace SDKBrowser.Examples.ChartControl.InteractivityCategory.TrackballSeries
                         CategoryBinding = new PropertyNameDataPointBinding("Category"),
                         DisplayName = "Sales 1"
                     },
-                    new LineSeries
-                    {
-                        ValueBinding = new PropertyNameDataPointBinding("Value"),
-                        CategoryBinding = new PropertyNameDataPointBinding("Category"),
-                        DisplayName = "Sales 2"
-                    }
                 },
                 ChartBehaviors =
                 {
-                    new ChartTrackBallBehavior
+                    new ChartTooltipBehavior
                     {
-                        ShowIntersectionPoints = true,
-                        ShowTrackInfo = true
+                        TriggerMode = ToolTipTriggerMode.Tap
                     }
                 }
             };
 
-            chart.Series[0].SetBinding(ChartSeries.ItemsSourceProperty, "Data1");
-            chart.Series[1].SetBinding(ChartSeries.ItemsSourceProperty, "Data2");
-            // << chart-interactivity-trackballseries-csharp
+            chart.Series[0].SetBinding(ChartSeries.ItemsSourceProperty, "Data");
+            // << chart-interactivity-tooltipseries-csharp
 
             this.Content = chart;
         }

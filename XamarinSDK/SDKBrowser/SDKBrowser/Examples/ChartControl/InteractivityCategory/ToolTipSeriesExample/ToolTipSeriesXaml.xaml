@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:SDKBrowser.Examples.ChartControl.InteractivityCategory.TrackballSeriesExample"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.ChartControl.InteractivityCategory.ToolTipSeriesExample"
              xmlns:telerikChart="clr-namespace:Telerik.XamarinForms.Chart;assembly=Telerik.XamarinForms.Chart"
-             x:Class="SDKBrowser.Examples.ChartControl.InteractivityCategory.TrackballSeriesExample.TrackballSeriesXaml">
-    <!-- >> chart-interactivity-trackballseries-xaml -->
+             x:Class="SDKBrowser.Examples.ChartControl.InteractivityCategory.ToolTipSeriesExample.ToolTipSeriesXaml">
+    <!-- >> chart-interactivity-tooltipseries-xaml -->
     <telerikChart:RadCartesianChart>
         <telerikChart:RadCartesianChart.BindingContext>
             <local:ViewModel />
@@ -20,16 +20,11 @@
             <telerikChart:LineSeries ValueBinding="Value"
                                      CategoryBinding="Category"
                                      DisplayName="Sales 1"
-                                     ItemsSource="{Binding Data1}" />
-            <telerikChart:LineSeries ValueBinding="Value"
-                                     CategoryBinding="Category"
-                                     DisplayName="Sales 2"
-                                     ItemsSource="{Binding Data2}" />
+                                     ItemsSource="{Binding Data}" />
         </telerikChart:RadCartesianChart.Series>
         <telerikChart:RadCartesianChart.ChartBehaviors>
-            <telerikChart:ChartTrackBallBehavior ShowIntersectionPoints="True"
-                                                 ShowTrackInfo="True" />
+            <telerikChart:ChartTooltipBehavior TriggerMode="Tap" />
         </telerikChart:RadCartesianChart.ChartBehaviors>
     </telerikChart:RadCartesianChart>
-    <!-- << chart-interactivity-trackballseries-xaml -->
+    <!-- << chart-interactivity-tooltipseries-xaml -->
 </ContentView>

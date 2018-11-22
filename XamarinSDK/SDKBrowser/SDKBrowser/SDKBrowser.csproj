@@ -110,6 +110,9 @@
     <Compile Include="Examples\AutoCompleteViewControl\FeaturesCategory\RemoteSearchExample\RemoteSearch.xaml.cs">
       <DependentUpon>RemoteSearch.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Examples\AutoCompleteViewControl\FeaturesCategory\SuggestModeExample\SuggestMode.xaml.cs">
+      <DependentUpon>SuggestMode.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Examples\AutoCompleteViewControl\FeaturesCategory\TokensExample\City.cs" />
     <Compile Include="Examples\AutoCompleteViewControl\FeaturesCategory\TokensExample\Tokens.xaml.cs">
       <DependentUpon>Tokens.xaml</DependentUpon>
@@ -168,6 +171,10 @@
       <DependentUpon>ButtonDisabledTextColor.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\ButtonControl\HowToCategory\ButtonDisabledTextColorExample\MyRadButton.cs" />
+    <Compile Include="Examples\CalendarControl\FeaturesCategory\DatePropertiesExample\DatePropertiesCSharp.cs" />
+    <Compile Include="Examples\CalendarControl\FeaturesCategory\DatePropertiesExample\DatePropertiesXaml.xaml.cs">
+      <DependentUpon>DatePropertiesXaml.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Examples\CalendarControl\SchedulingCategory\AllDayAreaExample\AllDayArea.xaml.cs">
       <DependentUpon>AllDayArea.xaml</DependentUpon>
     </Compile>
@@ -252,6 +259,11 @@
       <DependentUpon>SelectionSeriesXaml.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\ChartControl\InteractivityCategory\SelectionSeriesExample\ViewModel.cs" />
+    <Compile Include="Examples\ChartControl\InteractivityCategory\ToolTipSeriesExample\ToolTipSeriesCSharp.cs" />
+    <Compile Include="Examples\ChartControl\InteractivityCategory\ToolTipSeriesExample\ToolTipSeriesXaml.xaml.cs">
+      <DependentUpon>ToolTipSeriesXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ChartControl\InteractivityCategory\ToolTipSeriesExample\ViewModel.cs" />
     <Compile Include="Examples\ChartControl\InteractivityCategory\TrackballSeriesExample\TrackballSeriesCSharp.cs" />
     <Compile Include="Examples\ChartControl\InteractivityCategory\TrackballSeriesExample\TrackballSeriesXaml.xaml.cs">
       <DependentUpon>TrackballSeriesXaml.xaml</DependentUpon>
@@ -2585,9 +2597,26 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\CalendarControl\FeaturesCategory\DatePropertiesExample\DatePropertiesXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Examples\ChartControl\FeaturesCategory\NullValuesExample\NullValuesSupport.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\AutoCompleteViewControl\FeaturesCategory\SuggestModeExample\SuggestMode.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\ChartControl\InteractivityCategory\ToolTipSeriesExample\ToolTipSeriesXaml.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

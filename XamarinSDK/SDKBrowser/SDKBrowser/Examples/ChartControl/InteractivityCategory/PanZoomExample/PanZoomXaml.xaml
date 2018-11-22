@@ -7,7 +7,7 @@
     <!-- >> chart-interactivity-panzoom-xaml -->
     <telerikChart:RadCartesianChart PaletteName="Light">
         <telerikChart:RadCartesianChart.BindingContext>
-            <local:ViewModel />
+            <local:ViewModel/>
         </telerikChart:RadCartesianChart.BindingContext>
         <telerikChart:RadCartesianChart.HorizontalAxis>
             <telerikChart:DateTimeContinuousAxis LabelFitMode="Rotate"
@@ -15,7 +15,7 @@
                                                  PlotMode="OnTicks"
                                                  LabelFormat="dd MMM"
                                                  MajorStep="20"
-                                                 ShowLabels="True" />
+                                                 ShowLabels="True"/>
         </telerikChart:RadCartesianChart.HorizontalAxis>
         <telerikChart:RadCartesianChart.VerticalAxis>
             <telerikChart:NumericalAxis />
@@ -24,10 +24,12 @@
             <telerikChart:LineSeries ValueBinding="Value"
                                      CategoryBinding="Date"
                                      DisplayName="Sales"
-                                     ItemsSource="{Binding Data}" />
+                                     ItemsSource="{Binding Data}"/>
         </telerikChart:RadCartesianChart.Series>
         <telerikChart:RadCartesianChart.ChartBehaviors>
-            <telerikChart:ChartPanAndZoomBehavior />
+            <telerikChart:ChartPanAndZoomBehavior ZoomMode="Horizontal" 
+                                                  PanMode="Horizontal" 
+                                                  HandleDoubleTap="True"/>
         </telerikChart:RadCartesianChart.ChartBehaviors>
     </telerikChart:RadCartesianChart>
     <!-- << chart-interactivity-panzoom-xaml -->

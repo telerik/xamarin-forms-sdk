@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.AutoCompleteViewControl.FeaturesCategory.SuggestModeExample.SuggestMode">
+    <StackLayout>
+        <Label Text="SuggestMode - Suggest"/>
+        <!-- >> autocompleteview-suggestmode-suggest -->
+        <telerikInput:RadAutoCompleteView x:Name="autoCompleteViewSuggest"
+                                          SuggestMode="Suggest"
+                                          ItemsSource="{Binding Source}"
+                                          TextSearchPath="Name"
+                                          Watermark="AutoCompleteView Suggest"
+                                          SuggestionViewHeight="150"/>
+        <!-- << autocompleteview-suggestmode-suggest -->
+        
+        <Label Text="SuggestMode - Append"/>
+        <!-- >> autocompleteview-suggestmode-append -->
+        <telerikInput:RadAutoCompleteView x:Name="autoCompleteViewAppend"
+                                          SuggestMode="Append"
+                                          ItemsSource="{Binding Source}"
+                                          TextSearchPath="Name"
+                                          Watermark="AutoCompleteView Append"
+                                          SuggestionViewHeight="150"/>
+        <!-- << autocompleteview-suggestmode-append -->
+
+        <Label Text="SuggestMoide - SuggestAppend"/>
+        <!-- >> autocompleteview-suggestmode-suggest-append -->
+        <telerikInput:RadAutoCompleteView x:Name="autoCompleteViewSuggestAppend"
+                                          SuggestMode="SuggestAppend"
+                                          ItemsSource="{Binding Source}"
+                                          TextSearchPath="Name"
+                                          Watermark="AutoCompleteView SuggestAppend"
+                                          SuggestionViewHeight="100"/>
+        <!-- << autocompleteview-suggestmode-suggest-append -->
+    </StackLayout>
+</ContentView>

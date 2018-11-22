@@ -136,6 +136,11 @@
               <Title>Key Features</Title>
             </Example>
             <Example>
+              <Page>SuggestMode</Page>
+              <Name>SuggestMode</Name>
+              <Title>Suggest Mode</Title>
+            </Example>
+            <Example>
               <Page>Tokens</Page>
               <Name>Tokens</Name>
               <Title>Tokens</Title>
@@ -366,6 +371,16 @@
           <Name>Features</Name>
           <Title>Features</Title>
           <Examples>
+            <Example>
+              <Page>DatePropertiesXaml</Page>
+              <Name>DateProperties</Name>
+              <Title>Date Properties - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>DatePropertiesCSharp</Page>
+              <Name>DateProperties</Name>
+              <Title>Date Properties - Code</Title>
+            </Example>
             <Example>
               <Page>CalendarViewModes</Page>
               <Name>CalendarViewModes</Name>
@@ -759,6 +774,16 @@
               <Page>TrackballSeriesCSharp</Page>
               <Name>TrackballSeries</Name>
               <Title>Trackball - Code</Title>
+            </Example>
+            <Example>
+              <Page>ToolTipSeriesXaml</Page>
+              <Name>ToolTipSeries</Name>
+              <Title>ToolTip - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>ToolTipSeriesCSharp</Page>
+              <Name>ToolTipSeries</Name>
+              <Title>ToolTip - Code</Title>
             </Example>
             <Example>
               <Page>PanZoomXaml</Page>

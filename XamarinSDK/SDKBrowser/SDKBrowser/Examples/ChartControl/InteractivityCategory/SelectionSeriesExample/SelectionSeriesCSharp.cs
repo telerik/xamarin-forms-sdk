@@ -44,16 +44,6 @@ namespace SDKBrowser.Examples.ChartControl.InteractivityCategory.SelectionSeries
                         DataPointSelectionMode = ChartSelectionMode.Single,
                         SeriesSelectionMode = ChartSelectionMode.None
                     }
-                },
-                Grid = new CartesianChartGrid
-                {
-                    StripLinesVisibility = GridLineVisibility.Y,
-                    YStripeColor = Color.Transparent,
-                    YStripeAlternativeColor = Color.FromHex("1FA9A9A9"),
-                    MajorLinesVisibility = GridLineVisibility.Y,
-                    MajorYLineDashArray = new[] { 4.0, 2.0 },
-                    MajorLineColor = Color.FromHex("D3D3D3"),
-                    MajorLineThickness = 2
                 }
             };
 

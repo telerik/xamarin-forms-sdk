@@ -33,7 +33,12 @@ namespace SDKBrowser.Examples.ChartControl.InteractivityCategory.PanZoomExample
                 },
                 ChartBehaviors =
                 {
-                    new ChartPanAndZoomBehavior()
+                    new ChartPanAndZoomBehavior
+                    {
+                        ZoomMode = ChartPanZoomMode.Horizontal,
+                        PanMode = ChartPanZoomMode.Horizontal,
+                        HandleDoubleTap = true
+                    }
                 }
             };
 

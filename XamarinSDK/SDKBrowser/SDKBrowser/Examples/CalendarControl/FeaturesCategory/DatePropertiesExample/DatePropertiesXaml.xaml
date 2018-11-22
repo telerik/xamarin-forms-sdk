@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.CalendarControl.FeaturesCategory.DatePropertiesExample.DatePropertiesXaml">
+    <Grid>
+        <!-- >> calendar-dateproperties-xaml -->
+        <telerikInput:RadCalendar x:Name="calendar" 
+                                  DisplayDate="2018/10/18"
+                                  MinDate="2018/10/15"
+                                  MaxDate="2018/12/31"
+                                  SelectedDate="2018/10/24" />
+        <!-- << calendar-dateproperties-xaml -->
+    </Grid>
+</ContentView>
