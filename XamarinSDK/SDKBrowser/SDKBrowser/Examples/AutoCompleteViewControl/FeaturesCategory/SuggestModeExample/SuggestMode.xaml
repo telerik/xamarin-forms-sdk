@@ -24,7 +24,7 @@
                                           SuggestionViewHeight="150"/>
         <!-- << autocompleteview-suggestmode-append -->
 
-        <Label Text="SuggestMoide - SuggestAppend"/>
+        <Label Text="SuggestMode - SuggestAppend"/>
         <!-- >> autocompleteview-suggestmode-suggest-append -->
         <telerikInput:RadAutoCompleteView x:Name="autoCompleteViewSuggestAppend"
                                           SuggestMode="SuggestAppend"

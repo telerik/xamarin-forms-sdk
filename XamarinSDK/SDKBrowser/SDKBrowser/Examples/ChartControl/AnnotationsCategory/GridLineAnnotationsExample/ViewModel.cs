@@ -3,19 +3,30 @@ using System.Linq;
 
 namespace SDKBrowser.Examples.ChartControl.AnnotationsCategory.GridLineAnnotationsExample
 {
+    // >> chart-annotations-grid-line-view-model
     public class ViewModel
     {
-        public ObservableCollection<CategoricalData> Data { get; private set; }
-        public double Threshold { get; private set; }
-        public double StartThreshold { get; private set; }
-        public double EndThreshold { get; private set; }
+        public ObservableCollection<CategoricalData> Data { get; set; }
+        public double Threshold { get; set; }
 
         public ViewModel()
         {
-            this.Data = new ObservableCollection<CategoricalData>(DataProvider.GetCategoricalData());
+            this.Data = GetCategoricalData();
             this.Threshold = this.Data.Average(data => data.Value);
-            this.StartThreshold = this.Threshold * 0.95;
-            this.EndThreshold = this.Threshold * 1.05;
+        }
+
+        private static ObservableCollection<CategoricalData> GetCategoricalData()
+        {
+            var data = new ObservableCollection<CategoricalData>
+            {
+                new CategoricalData { Category = "Greenings", Value = 21 },
+                new CategoricalData { Category = "Perfecto", Value = 18 },
+                new CategoricalData { Category = "NearBy", Value = 44 },
+                new CategoricalData { Category = "Family", Value = 77 },
+                new CategoricalData { Category = "Fresh", Value = 34 },
+            };
+            return data;
         }
     }
+    // << chart-annotations-grid-line-view-model
 }

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls" 
+             xmlns:telerikTreeView="clr-namespace:Telerik.XamarinForms.DataControls.TreeView;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.TreeViewControl.FeaturesCategory.ItemTemplateExample"
+             x:Class="SDKBrowser.Examples.TreeViewControl.FeaturesCategory.ItemTemplateExample.ItemTemplate">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <local:ImageSourceConverter x:Key="ImageSourceConverter" />
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <Grid>
+        <!-- >> treeview-itemtemplate-xaml -->
+        <telerikDataControls:RadTreeView  x:Name="treeView"
+                                          ItemsSource="{Binding Source}">
+            <telerikDataControls:TreeViewDescriptor DisplayMemberPath="Name"
+                                                    ItemsSourcePath="Cities"
+                                                    TargetType="{x:Type local:Country}">
+                <telerikDataControls:TreeViewDescriptor.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="40,0,0,0"
+                              HeightRequest="40">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <telerikTreeView:ExpandCollapseIndicator WidthRequest="40"
+                                                              VerticalOptions="Center"
+                                                              FontSize="Medium"
+                                                              IsLoading="{Binding Path=IsLoading}"
+                                                              IsLoadOnDemandEnabled="{Binding Path=IsLoadOnDemandEnabled}"
+                                                              IsExpanded="{Binding Path=IsExpanded}"
+                                                              IsLeaf="{Binding Path=IsLeaf}"
+                                                              BackgroundColor="Transparent" />
+                            <Image Grid.Column="1"
+                                   VerticalOptions="Center"
+                                   Source="{Binding Item.Icon, Converter={StaticResource ImageSourceConverter}}" />
+                            <telerikTreeView:ItemText Grid.Column="2"
+                                               Margin="8,0,0,0"
+                                               VerticalOptions="Center"
+                                               Text="{Binding Item.Name}" />
+                        </Grid>
+                    </DataTemplate>
+                </telerikDataControls:TreeViewDescriptor.ItemTemplate>
+            </telerikDataControls:TreeViewDescriptor>
+            <telerikDataControls:TreeViewDescriptor DisplayMemberPath="Name" 
+                                                    TargetType="{x:Type local:City}" />
+        </telerikDataControls:RadTreeView>
+        <!-- << treeview-itemtemplate-xaml -->
+    </Grid>
+</ContentView>

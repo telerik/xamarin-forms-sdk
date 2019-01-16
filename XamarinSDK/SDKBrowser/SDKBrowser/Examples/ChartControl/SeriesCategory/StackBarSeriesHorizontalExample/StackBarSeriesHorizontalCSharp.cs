@@ -10,7 +10,7 @@ namespace SDKBrowser.Examples.ChartControl.SeriesCategory.StackBarSeriesHorizont
             // >> chart-series-stackbarhorizontal-csharp
             var chart = new RadCartesianChart
             {
-                BindingContext = new ViewModel(),
+                BindingContext = new SeriesCategoricalViewModel(),
                 VerticalAxis = new CategoricalAxis()
                 {
                     LabelFitMode = AxisLabelFitMode.MultiLine,
@@ -33,16 +33,6 @@ namespace SDKBrowser.Examples.ChartControl.SeriesCategory.StackBarSeriesHorizont
                         CategoryBinding = new PropertyNameDataPointBinding("Category"),
                         CombineMode = ChartSeriesCombineMode.Stack
                     }
-                },
-                Grid = new CartesianChartGrid
-                {
-                    StripLinesVisibility = GridLineVisibility.X,
-                    XStripeColor = Color.Transparent,
-                    XStripeAlternativeColor = Color.FromHex("1FA9A9A9"),
-                    MajorLinesVisibility = GridLineVisibility.X,
-                    MajorXLineDashArray = new[] { 4.0, 2.0 },
-                    MajorLineColor = Color.FromHex("D3D3D3"),
-                    MajorLineThickness = 2
                 }
             };
 

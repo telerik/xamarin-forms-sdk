@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.CalendarControl.FeaturesCategory.DayViewSettingsExample.DayViewSettingsAndStyle">
+    <Grid>
+        <!-- >> calendar-dayview-settings -->
+    <telerikInput:RadCalendar x:Name="calendar" ViewMode="Day">
+        <telerikInput:RadCalendar.DayViewSettings>
+            <telerikInput:DayViewSettings DayStartTime="9:00:00"
+                                          DayEndTime="18:00:00"
+                                          TimelineInterval="2:00" />
+        </telerikInput:RadCalendar.DayViewSettings>
+            <telerikInput:RadCalendar.DayViewStyle>
+                <telerikInput:DayViewStyle AllDayAppointmentBackgroundColor="Blue"
+                                           AllDayAppointmentTextColor="White"
+                                           AllDayAppointmentFontSize="12"
+                                           TimelineLabelsTextColor="DarkGray"
+                                           TimelineLabelsFontSize="10"
+                                           AppointmentFontSize="12"
+                                           AppointmentDetailsFontSize="10"/>
+            </telerikInput:RadCalendar.DayViewStyle>
+    </telerikInput:RadCalendar>
+        <!-- << calendar-dayview-settings -->
+    </Grid>
+</ContentView>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikListViewCommands="clr-namespace:Telerik.XamarinForms.DataControls.ListView.Commands;assembly=Telerik.XamarinForms.DataControls"
+             x:Class="SDKBrowser.Examples.ListViewControl.GroupingCategory.ReorderInGroupedListViewExample.ReorderItemsInGroupedListView">
+    <!-- >> listview-grouping-reorderitems-xaml -->
+    <telerikDataControls:RadListView x:Name="listView"
+                                     ItemsSource="{Binding Events}" 
+                                     IsItemsReorderEnabled="True">
+        <telerikDataControls:RadListView.ItemTemplate>
+            <DataTemplate>
+                <telerikListView:ListViewTemplateCell>
+                    <telerikListView:ListViewTemplateCell.View>
+                        <StackLayout Orientation="Horizontal" Padding="16, 0, 0, 0">
+                            <Label Margin="0,2,0,0" Text="&#xf138;" FontFamily="{StaticResource IconsFontFamily}" />
+                            <Label Text="{Binding Content}" TextColor="#6F6F70" FontSize="Small" />
+                        </StackLayout>
+                    </telerikListView:ListViewTemplateCell.View>
+                </telerikListView:ListViewTemplateCell>
+            </DataTemplate>
+        </telerikDataControls:RadListView.ItemTemplate>
+        <telerikDataControls:RadListView.GroupDescriptors>
+            <telerikListView:PropertyGroupDescriptor PropertyName="Day"/>
+        </telerikDataControls:RadListView.GroupDescriptors>
+        <telerikDataControls:RadListView.Commands>
+            <telerikListViewCommands:ListViewUserCommand Id="ReorderEnded"
+                                                         Command="{Binding ReorderCommand}" />
+        </telerikDataControls:RadListView.Commands>
+    </telerikDataControls:RadListView>
+    <!-- << listview-grouping-reorderitems-xaml -->
+</ContentView>

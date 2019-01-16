@@ -30,7 +30,7 @@ namespace SDKBrowser.Examples.ChartControl.SeriesCategory.FinancialIndicatorsExa
                 },
                 Series =
                 {
-                    new CandlestickSeries
+                    new OhlcSeries
                     {
                        CategoryBinding = new PropertyNameDataPointBinding("Category"),
                        OpenBinding = new PropertyNameDataPointBinding("Open"),

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.CalendarControl.SchedulingCategory.RecurrentAppointmentsExample.RecurrentAppointments">
+    <Grid>
+        <telerikInput:RadCalendar x:Name="calendar" 
+                                  ViewMode="MultiDay"
+                                  SchedulingUiEnabled="True">
+            <telerikInput:RadCalendar.MultiDayViewSettings>
+                <telerikInput:MultiDayViewSettings DayStartTime="8:00:00" />
+            </telerikInput:RadCalendar.MultiDayViewSettings>
+        </telerikInput:RadCalendar>
+    </Grid>
+</ContentView>

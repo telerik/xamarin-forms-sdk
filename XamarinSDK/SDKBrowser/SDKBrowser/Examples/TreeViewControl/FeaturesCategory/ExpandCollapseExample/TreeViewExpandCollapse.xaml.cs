@@ -1,129 +1,49 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace SDKBrowser.Examples.TreeViewControl.FeaturesCategory.ExpandCollapseExample
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TreeViewExpandCollapse : ContentView
-	{
-        public ObservableCollection<Item> Source { get; set; }
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class TreeViewExpandCollapse : ContentView
+    {
         public TreeViewExpandCollapse ()
-		{
-			InitializeComponent ();
-            this.InitSources();
-            this.tv.ItemsSource = this.Source;
-        }
-        private void InitSources()
         {
-            this.Source = new ObservableCollection<Item>();
-            this.Source.Add(new Item()
-            {
-                Name = "Item 1",
-                Children = new List<Item>()
-                    {
-                        new Item()
-                        {
-                            Name = "Item 11",
-                            Children = new List<Item>()
-                            {
-                                new Item()
-                                {
-                                    Name = "Item 111",
-                                },
-                                new Item()
-                                {
-                                    Name = "Item 112"
-                                },
-                                new Item()
-                                {
-                                    Name = "Item 113"
-                                }
-                            }
-                        },
-                        new Item()
-                        {
-                            Name = "Item 12"
-                        }
-                    }
-            });
-            this.Source.Add(new Item()
-            {
-                Name = "Item 2",
-                Children = new List<Item>()
-                    {
-                        new Item()
-                        {
-                            Name = "Item 21",
-                            Children = new List<Item>()
-                            {
-                                new Item()
-                                {
-                                    Name = "Item 211",
-                                },
-                                new Item()
-                                {
-                                    Name = "Item 212"
-                                },
-                                new Item()
-                                {
-                                    Name = "Item 213"
-                                }
-                            }
-                        },
-                        new Item()
-                        {
-                            Name = "Item 22",
-                            Children = new List<Item>()
-                            {
-                                new Item()
-                                {
-                                    Name = "Item 221",
-                                },
-                                new Item()
-                                {
-                                    Name = "Item 222"
-                                },
-                                new Item()
-                                {
-                                    Name = "Item 223"
-                                }
-                            }
-                        }
-                    }
-            });
+            InitializeComponent();
+            this.BindingContext = new ViewModel();
         }
-
+        // >> treeview-expandcollapse-item
         private void ExpandItem2(object sender, EventArgs e)
         {
-            this.tv.Expand(Source[1]);
-        }
-
-        private void ExpandItem211(object sender, EventArgs e)
-        {
-            this.tv.Expand(Source[1].Children[1]);
-        }
-
+            var item2 = (treeView.ItemsSource as IList<Item>)[1];
+            treeView.Expand(item2);
+        }      
         private void CollapseItem2(object sender, EventArgs e)
         {
-            this.tv.Collapse(Source[1]);
+            var item2 = (treeView.ItemsSource as IList<Item>)[1];
+            treeView.Collapse(item2);
         }
-
-        private void CollapseItem211(object sender, EventArgs e)
+        // << treeview-expandcollapse-item
+        private void ExpandItem22(object sender, EventArgs e)
         {
-            this.tv.Collapse(Source[1].Children[1]);
+            var item22 = ((treeView.ItemsSource as IList<Item>)[1].Children as IList<Item>)[1];
+            treeView.Expand(item22);
         }
-
+        private void CollapseItem22(object sender, EventArgs e)
+        {
+            var item22 = ((treeView.ItemsSource as IList<Item>)[1].Children as IList<Item>)[1];
+            treeView.Collapse(item22);
+        }
+        // >> treeview-expandcollapse-all
         private void ExpandAll(object sender, EventArgs e)
         {
-            this.tv.ExpandAll();
+            treeView.ExpandAll();
         }
-
         private void CollapseAll(object sender, EventArgs e)
         {
-            this.tv.CollapseAll();
+            treeView.CollapseAll();
         }
+        // << treeview-expandcollapse-all
     }
 }

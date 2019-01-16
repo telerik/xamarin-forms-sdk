@@ -21,7 +21,7 @@
                                     ItemsSource="{Binding Data}" />
         </telerikChart:RadCartesianChart.Series>
         <telerikChart:RadCartesianChart.Annotations>
-            <telerikChart:CartesianGridLineAnnotation Stroke="#0E72F6"
+            <telerikChart:CartesianGridLineAnnotation Stroke="#0E72F6" 
                                                       StrokeThickness="2"
                                                       Axis="{x:Reference verticalAxis}"
                                                       Value="{Binding Threshold}">
@@ -32,11 +32,6 @@
                     </x:Array>
                 </telerikChart:CartesianGridLineAnnotation.DashArray>
             </telerikChart:CartesianGridLineAnnotation>
-            <telerikChart:CartesianPlotBandAnnotation Stroke="Transparent"
-                                                      Fill="#33A9A9A9"
-                                                      Axis="{x:Reference verticalAxis}"
-                                                      From="{Binding StartThreshold}"
-                                                      To="{Binding EndThreshold}" />
         </telerikChart:RadCartesianChart.Annotations>
     </telerikChart:RadCartesianChart>
     <!-- << chart-annotations-gridline-xaml -->

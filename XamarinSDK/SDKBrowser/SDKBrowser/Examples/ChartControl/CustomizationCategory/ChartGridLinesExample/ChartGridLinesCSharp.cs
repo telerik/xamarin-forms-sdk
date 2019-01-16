@@ -26,10 +26,10 @@ namespace SDKBrowser.Examples.ChartControl.CustomizationCategory.ChartGridLinesE
                 },
                 Grid = new CartesianChartGrid
                 {
-                    StripLinesVisibility = GridLineVisibility.None,
+                    StripLinesVisibility = GridLineVisibility.Y,
                     MajorLinesVisibility = GridLineVisibility.XY,
-                    MajorLineColor = Color.Gray,
-                    MajorLineThickness = 1
+                    MajorLineColor = Color.LightGreen,
+                    MajorLineThickness = 3
                 }
             };
 

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.PopupControl.GettingStartedCategory.GettingStartedExample.PopupGettingStartedXaml">
+    <Grid Margin="10">
+        <!-- >> popup-getting-started-xaml -->
+        <Button HorizontalOptions="Center" 
+                VerticalOptions="Start" 
+                Text="Click here to rate" 
+                Clicked="ShowPopup">
+            <telerikPrimitives:RadPopup.Popup>
+                <telerikPrimitives:RadPopup x:Name="popup"
+                                            IsModal="True"
+                                            OutsideBackgroundColor="#6F000000">
+                    <telerikPrimitives:RadBorder CornerRadius="8" 
+                                                 BackgroundColor="Wheat">
+                        <Grid Padding="20">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30" />
+                                <RowDefinition Height="20" />
+                                <RowDefinition Height="40" />
+                            </Grid.RowDefinitions>
+                            <Label Text="Please rate your experience" />
+                            <telerikInput:RadShapeRating Grid.Row="1" />
+                            <Button Grid.Row="2"
+                                    Padding="2"
+                                    HorizontalOptions="End" 
+                                    Text="Send" 
+                                    Clicked="ClosePopup" />
+                        </Grid>
+                    </telerikPrimitives:RadBorder>
+                </telerikPrimitives:RadPopup>
+            </telerikPrimitives:RadPopup.Popup>
+        </Button>
+        <!-- << popup-getting-started-xaml -->
+    </Grid>
+</ContentView>

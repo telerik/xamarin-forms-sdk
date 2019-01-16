@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="And" xml:space="preserve">
+    <value>And</value>
+  </data>
+  <data name="Calendar_DeleteButton" xml:space="preserve">
+    <value>Delete Event</value>
+  </data>
+  <data name="Calendar_EditButton" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Calendar_EndRepeatLabel" xml:space="preserve">
+    <value>End Repeat Date</value>
+  </data>
+  <data name="Calendar_EndRepeatTitle" xml:space="preserve">
+    <value>End Repeat</value>
+  </data>
+  <data name="Calendar_MonthAbbreviationApril" xml:space="preserve">
+    <value>Apr</value>
+  </data>
+  <data name="Calendar_MonthAbbreviationAugust" xml:space="preserve">
+    <value>Aug</value>
+  </data>
+  <data name="Calendar_MonthAbbreviationDecember" xml:space="preserve">
+    <value>Dec</value>
+  </data>
+  <data name="Calendar_MonthAbbreviationFebruary" xml:space="preserve">
+    <value>Feb</value>
+  </data>
+  <data name="Calendar_MonthAbbreviationJanuary" xml:space="preserve">
+    <value>Jan</value>
+  </data>
+  <data name="Calendar_MonthAbbreviationJuly" xml:space="preserve">
+    <value>Jul</value>
+  </data>
+  <data name="Calendar_MonthAbbreviationJune" xml:space="preserve">
+    <value>Jun</value>
+  </data>
+  <data name="Calendar_MonthAbbreviationMarch" xml:space="preserve">
+    <value>Mar</value>
+  </data>
+  <data name="Calendar_MonthAbbreviationMay" xml:space="preserve">
+    <value>May</value>
+  </data>
+  <data name="Calendar_MonthAbbreviationNovember" xml:space="preserve">
+    <value>Nov</value>
+  </data>
+  <data name="Calendar_MonthAbbreviationOctober" xml:space="preserve">
+    <value>Oct</value>
+  </data>
+  <data name="Calendar_MonthAbbreviationSeptember" xml:space="preserve">
+    <value>Sep</value>
+  </data>
+  <data name="Calendar_OccurencesLabel" xml:space="preserve">
+    <value>Number of occurences</value>
+  </data>
+  <data name="Calendar_WeekDayAbbreviationFriday" xml:space="preserve">
+    <value>F</value>
+  </data>
+  <data name="Calendar_WeekDayAbbreviationMonday" xml:space="preserve">
+    <value>M</value>
+  </data>
+  <data name="Calendar_WeekDayAbbreviationSaturday" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="Calendar_WeekDayAbbreviationSunday" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="Calendar_WeekDayAbbreviationThursday" xml:space="preserve">
+    <value>T</value>
+  </data>
+  <data name="Calendar_WeekDayAbbreviationTuesday" xml:space="preserve">
+    <value>T</value>
+  </data>
+  <data name="Calendar_WeekDayAbbreviationWednesday" xml:space="preserve">
+    <value>W</value>
+  </data>
+  <data name="AutoComplete_NoResultsMessage" xml:space="preserve">
+    <value>No Results Found.</value>
+  </data>
+  <data name="Contains" xml:space="preserve">
+    <value>Contains</value>
+  </data>
+  <data name="ConversationalUI_EntryWatermark" xml:space="preserve">
+    <value>Type a message...</value>
+  </data>
+  <data name="DoesNotContain" xml:space="preserve">
+    <value>Does not contain</value>
+  </data>
+  <data name="DoesNotEqualTo" xml:space="preserve">
+    <value>Is not equal to</value>
+  </data>
+  <data name="EndsWith" xml:space="preserve">
+    <value>Ends with</value>
+  </data>
+  <data name="EqualsTo" xml:space="preserve">
+    <value>Is equal to</value>
+  </data>
+  <data name="FilterText" xml:space="preserve">
+    <value>FILTER</value>
+  </data>
+  <data name="FilterUISectionText" xml:space="preserve">
+    <value>Filter by:</value>
+  </data>
+  <data name="FilterWatermarkText" xml:space="preserve">
+    <value>Enter Filter Criteria</value>
+  </data>
+  <data name="GroupText" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="GroupUISectionText" xml:space="preserve">
+    <value>Group by:</value>
+  </data>
+  <data name="IsGreaterThan" xml:space="preserve">
+    <value>Is greater than</value>
+  </data>
+  <data name="IsGreaterThanOrEqualTo" xml:space="preserve">
+    <value>Is greater than or equal to</value>
+  </data>
+  <data name="IsLessThan" xml:space="preserve">
+    <value>Is less than</value>
+  </data>
+  <data name="IsLessThanOrEqualTo" xml:space="preserve">
+    <value>Is less than or equal to</value>
+  </data>
+  <data name="LoadOnDemandButtonText" xml:space="preserve">
+    <value>LOAD MORE</value>
+  </data>
+  <data name="MoreText" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="OptionsSectionText" xml:space="preserve">
+    <value>Options:</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>Or</value>
+  </data>
+  <data name="ReorderColumnsUISectionText" xml:space="preserve">
+    <value>Visible Columns:</value>
+  </data>
+  <data name="ResetText" xml:space="preserve">
+    <value>RESET</value>
+  </data>
+  <data name="StartsWith" xml:space="preserve">
+    <value>Starts with</value>
+  </data>
+  <data name="UngroupText" xml:space="preserve">
+    <value>Ungroup</value>
+  </data>
+  <data name="Calendar_AppointmentAllDay" xml:space="preserve">
+    <value>All-day</value>
+  </data>
+  <data name="Calendar_AppointmentCancelButton" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Calendar_AppointmentColor" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="Calendar_AppointmentEnds" xml:space="preserve">
+    <value>Ends</value>
+  </data>
+  <data name="Calendar_AppointmentEventTitle" xml:space="preserve">
+    <value>Event</value>
+  </data>
+  <data name="Calendar_AppointmentOKButton" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Calendar_AppointmentRepeatOptionsCustom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="Calendar_AppointmentRepeatOptionsEvery2Weeks" xml:space="preserve">
+    <value>Every 2 Weeks</value>
+  </data>
+  <data name="Calendar_AppointmentRepeatOptionsEveryDay" xml:space="preserve">
+    <value>Every Day</value>
+  </data>
+  <data name="Calendar_AppointmentRepeatOptionsEveryMonth" xml:space="preserve">
+    <value>Every Month</value>
+  </data>
+  <data name="Calendar_AppointmentRepeatOptionsEveryWeek" xml:space="preserve">
+    <value>Every Week</value>
+  </data>
+  <data name="Calendar_AppointmentRepeatOptionsEveryYear" xml:space="preserve">
+    <value>Every Year</value>
+  </data>
+  <data name="Calendar_AppointmentRepeatOptionsNever" xml:space="preserve">
+    <value>Never</value>
+  </data>
+  <data name="Calendar_AppointmentRepeats" xml:space="preserve">
+    <value>Repeats</value>
+  </data>
+  <data name="Calendar_AppointmentStarts" xml:space="preserve">
+    <value>Starts</value>
+  </data>
+  <data name="Calendar_DeleteSingleEventAndroid" xml:space="preserve">
+    <value>Delete this event?</value>
+  </data>
+  <data name="Calendar_Android_DeleteRecurringEventTitle" xml:space="preserve">
+    <value>Delete recurring event?</value>
+  </data>
+  <data name="Calendar_Android_DeleteSeries" xml:space="preserve">
+    <value>All events in the series</value>
+  </data>
+  <data name="Calendar_Android_DeleteSingleEvent" xml:space="preserve">
+    <value>Delete this event?</value>
+  </data>
+  <data name="Calendar_Android_DeleteSingleRecurringEvent" xml:space="preserve">
+    <value>This event</value>
+  </data>
+  <data name="Calendar_iOS_DeleteSeries" xml:space="preserve">
+    <value>Delete All Events in the Series</value>
+  </data>
+  <data name="Calendar_iOS_DeleteSingleEvent" xml:space="preserve">
+    <value>Delete event</value>
+  </data>
+  <data name="Calendar_iOS_DeleteSingleRecurringEvent" xml:space="preserve">
+    <value>Delete This Event Only</value>
+  </data>
+  <data name="Calendar_CustomRecurrenceEvery" xml:space="preserve">
+    <value>Every</value>
+  </data>
+  <data name="Calendar_CustomRecurrenceFrequency" xml:space="preserve">
+    <value>Frequency</value>
+  </data>
+  <data name="Calendar_CustomRecurrenceTitle" xml:space="preserve">
+    <value>Custom Recurrence</value>
+  </data>
+  <data name="Calendar_EndRepeatOptionsAfter" xml:space="preserve">
+    <value>After number of occurrences</value>
+  </data>
+  <data name="Calendar_EndRepeatOptionsNever" xml:space="preserve">
+    <value>Never</value>
+  </data>
+  <data name="Calendar_EndRepeatOptionsOnDate" xml:space="preserve">
+    <value>On Date</value>
+  </data>
+  <data name="Calendar_FrequencyOptionsDaily" xml:space="preserve">
+    <value>Daily</value>
+  </data>
+  <data name="Calendar_FrequencyOptionsMonthly" xml:space="preserve">
+    <value>Monthly</value>
+  </data>
+  <data name="Calendar_FrequencyOptionsWeekly" xml:space="preserve">
+    <value>Weekly</value>
+  </data>
+  <data name="Calendar_FrequencyOptionsYearly" xml:space="preserve">
+    <value>Yearly</value>
+  </data>
+  <data name="Calendar_AdditionalInfoMonthDay" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="Calendar_AdditionalInfoMonthFriday" xml:space="preserve">
+    <value>Friday</value>
+  </data>
+  <data name="Calendar_AdditionalInfoMonthMonday" xml:space="preserve">
+    <value>Monday</value>
+  </data>
+  <data name="Calendar_AdditionalInfoMonthSaturday" xml:space="preserve">
+    <value>Saturday</value>
+  </data>
+  <data name="Calendar_AdditionalInfoMonthSunday" xml:space="preserve">
+    <value>Sunday</value>
+  </data>
+  <data name="Calendar_AdditionalInfoMonthThursday" xml:space="preserve">
+    <value>Thursday</value>
+  </data>
+  <data name="Calendar_AdditionalInfoMonthTuesday" xml:space="preserve">
+    <value>Tuesday</value>
+  </data>
+  <data name="Calendar_AdditionalInfoMonthWednesday" xml:space="preserve">
+    <value>Wednesday</value>
+  </data>
+  <data name="Calendar_AdditionalInfoMonthWeekday" xml:space="preserve">
+    <value>Weekday</value>
+  </data>
+  <data name="Calendar_AdditionalInfoMonthWeekendDay" xml:space="preserve">
+    <value>Weekend Day</value>
+  </data>
+  <data name="Calendar_EditEventTitle" xml:space="preserve">
+    <value>Event Title</value>
+  </data>
+  <data name="Calendar_MonthFrequencyFifth" xml:space="preserve">
+    <value>Fifth</value>
+  </data>
+  <data name="Calendar_MonthFrequencyFirst" xml:space="preserve">
+    <value>First</value>
+  </data>
+  <data name="Calendar_MonthFrequencyFourth" xml:space="preserve">
+    <value>Fourth</value>
+  </data>
+  <data name="Calendar_MonthFrequencyLast" xml:space="preserve">
+    <value>Last</value>
+  </data>
+  <data name="Calendar_MonthFrequencySecond" xml:space="preserve">
+    <value>Second</value>
+  </data>
+  <data name="Calendar_MonthFrequencyThird" xml:space="preserve">
+    <value>Third</value>
+  </data>
+  <data name="Calendar_RepeatTitle" xml:space="preserve">
+    <value>Repeat</value>
+  </data>
+  <data name="Calendar_CustomReccurenceAdditionalOptions_Each" xml:space="preserve">
+    <value>Each</value>
+  </data>
+  <data name="Calendar_CustomReccurenceAdditionalOptions_OnThe" xml:space="preserve">
+    <value>On the...</value>
+  </data>
+  <data name="Calendar_CustomReccurenceMessage_DotCharacter" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="Calendar_CustomReccurenceMessage_First" xml:space="preserve">
+    <value>Event will occur every</value>
+  </data>
+  <data name="Calendar_CustomReccurenceMessage_In" xml:space="preserve">
+    <value>in</value>
+  </data>
+  <data name="Calendar_CustomReccurenceMessage_MonthIndexFifth" xml:space="preserve">
+    <value>5th</value>
+  </data>
+  <data name="Calendar_CustomReccurenceMessage_MonthIndexFirst" xml:space="preserve">
+    <value>1st</value>
+  </data>
+  <data name="Calendar_CustomReccurenceMessage_MonthIndexFourth" xml:space="preserve">
+    <value>4th</value>
+  </data>
+  <data name="Calendar_CustomReccurenceMessage_MonthIndexLast" xml:space="preserve">
+    <value>last</value>
+  </data>
+  <data name="Calendar_CustomReccurenceMessage_MonthIndexSecond" xml:space="preserve">
+    <value>2nd</value>
+  </data>
+  <data name="Calendar_CustomReccurenceMessage_MonthIndexThird" xml:space="preserve">
+    <value>3rd</value>
+  </data>
+  <data name="Calendar_CustomReccurenceMessage_On" xml:space="preserve">
+    <value>on</value>
+  </data>
+  <data name="Calendar_CustomReccurenceMessage_Prefix" xml:space="preserve">
+    <value>on the</value>
+  </data>
+  <data name="Calendar_CustomReccurenceMessage_Suffix" xml:space="preserve">
+    <value>s</value>
+  </data>
+  <data name="Calendar_CustomReccurence_FrequencyPickerTitle_Day" xml:space="preserve">
+    <value>day</value>
+  </data>
+  <data name="Calendar_CustomReccurence_FrequencyPickerTitle_Month" xml:space="preserve">
+    <value>month</value>
+  </data>
+  <data name="Calendar_CustomReccurence_FrequencyPickerTitle_Week" xml:space="preserve">
+    <value>week</value>
+  </data>
+  <data name="Calendar_CustomReccurence_FrequencyPickerTitle_Year" xml:space="preserve">
+    <value>year</value>
+  </data>
+  <data name="Calendar_AppointmentEndRepeats" xml:space="preserve">
+    <value>End Repeat</value>
+  </data>
+  <data name="Calendar_Android_SaveRecurringEventTitle" xml:space="preserve">
+    <value>Save recurring event?</value>
+  </data>
+  <data name="Calendar_Android_SaveSeries" xml:space="preserve">
+    <value>All events in the series</value>
+  </data>
+  <data name="Calendar_Android_SaveSingleRecurringEvent" xml:space="preserve">
+    <value>This event</value>
+  </data>
+  <data name="Calendar_iOS_SaveSeries" xml:space="preserve">
+    <value>Save All Events in the Series</value>
+  </data>
+  <data name="Calendar_iOS_SaveSingleRecurringEvent" xml:space="preserve">
+    <value>Save This Event Only</value>
+  </data>
+  <data name="Calendar_ColorPickerTitle" xml:space="preserve">
+    <value>Color</value>
+  </data>
+</root>

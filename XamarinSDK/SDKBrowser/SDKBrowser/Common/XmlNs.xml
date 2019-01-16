@@ -48,4 +48,13 @@
     <!-- >> xmlns-telerikbarcode -->
     xmlns:telerikBarcode="clr-namespace:Telerik.XamarinForms.Barcode;assembly=Telerik.XamarinForms.Barcode"
     <!-- << xmlns-telerikbarcode --></barcode>
+  <treeview>
+    <!-- >> xmlns-teleriktreeview -->
+    xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+    xmlns:telerikTreeView="clr-namespace:Telerik.XamarinForms.DataControls.TreeView;assembly=Telerik.XamarinForms.DataControls"
+    <!-- << xmlns-teleriktreeview --></treeview>
+  <common>
+    <!-- >> xmlns-telericommon -->
+    xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+    <!-- << xmlns-telericommon --></common>
 </namespaces>

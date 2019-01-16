@@ -1,29 +1,23 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:dataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
-             xmlns:treeViewExamples="clr-namespace:SDKBrowser.Examples.TreeViewControl.FeaturesCategory"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.TreeViewControl.FeaturesCategory"
              xmlns:treeView="clr-namespace:Telerik.XamarinForms.DataControls.TreeView.Commands;assembly=Telerik.XamarinForms.DataControls"
              x:Class="SDKBrowser.Examples.TreeViewControl.FeaturesCategory.CommandsExample.TreeViewCommands">
-  <ContentView.Content>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-            </Grid.RowDefinitions>
-            <Label Text="Hold expands, Tap collapses"/>
-            <dataControls:RadTreeView Grid.Row="1"
-                                  ItemsSource="{Binding SmallSource}"
-                                  BackgroundColor="LightBlue"
-                                  x:Name="tv">
-                <dataControls:RadTreeView.Commands>
-                    <treeView:TreeViewUserCommand Id="ItemTap" SuppressDefaultCommand="True" Command="{Binding MyTapCommand}"/>
-                    <treeView:TreeViewUserCommand Id="ItemHold" SuppressDefaultCommand="True" Command="{Binding MyHoldCommand}"/>
-                </dataControls:RadTreeView.Commands>
-                <dataControls:TreeViewDescriptor DisplayMemberPath="Name"
-                                                 ItemsSourcePath="Children"
-                                                 TargetType="{x:Type treeViewExamples:Item}"/>
-            </dataControls:RadTreeView>
-        </Grid>
-    </ContentView.Content>
+    <Grid>
+        <!-- >> treeview-commands-xaml -->
+        <telerikDataControls:RadTreeView x:Name="treeView"
+                                         ItemsSource="{Binding Source}">
+            <telerikDataControls:RadTreeView.Commands>
+                <treeView:TreeViewUserCommand Id="ItemTap" 
+                                              SuppressDefaultCommand="False" 
+                                              Command="{Binding MyTapCommand}"/>
+            </telerikDataControls:RadTreeView.Commands>
+            <telerikDataControls:TreeViewDescriptor DisplayMemberPath="Name"
+                                                    ItemsSourcePath="Children"
+                                                    TargetType="{x:Type local:Item}"/>
+        </telerikDataControls:RadTreeView>
+        <!-- << treeview-commands-xaml -->
+    </Grid>
 </ContentView>

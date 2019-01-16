@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:SDKBrowser.Examples.ChartControl.CustomizationCategory.FormatSeriesLabelsExample"
              xmlns:telerikChart="clr-namespace:Telerik.XamarinForms.Chart;assembly=Telerik.XamarinForms.Chart"
-             x:Class="SDKBrowser.Examples.ChartControl.CustomizationCategory.FormatSeriesLabelsExample.FormatSeriesLabelsXaml">   
+             x:Class="SDKBrowser.Examples.ChartControl.CustomizationCategory.FormatSeriesLabelsExample.FormatSeriesLabelsXaml">
+    <!-- >> chart-customization-formatserieslabels-xaml -->
     <telerikChart:RadCartesianChart x:Name="chart">
         <telerikChart:RadCartesianChart.BindingContext>
             <local:ViewModel />
@@ -11,13 +12,11 @@
         <telerikChart:RadCartesianChart.HorizontalAxis>
             <telerikChart:DateTimeContinuousAxis LabelFitMode="Rotate"
                                                  MajorStepUnit="Day" />
-
         </telerikChart:RadCartesianChart.HorizontalAxis>
         <telerikChart:RadCartesianChart.VerticalAxis>
             <telerikChart:NumericalAxis Minimum="-1.5"
                                         Maximum="1.5" />
         </telerikChart:RadCartesianChart.VerticalAxis>
-        <!-- >> chart-customization-formatserieslabels-xaml -->
         <telerikChart:RadCartesianChart.Series>            
             <telerikChart:LineSeries ValueBinding="Value"
                                      CategoryBinding="Date"

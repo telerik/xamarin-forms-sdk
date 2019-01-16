@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Telerik.XamarinForms.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

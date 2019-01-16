@@ -151,14 +151,14 @@
               <Title>Data Binding</Title>
             </Example>
             <Example>
-              <Page>CustomSuggestionItem</Page>
-              <Name>CustomSuggestionItem</Name>
-              <Title>Custom SuggestionItemTemplate</Title>
-            </Example>
-            <Example>
               <Page>HighlightText</Page>
               <Name>HighlightText</Name>
               <Title>Highlight Text</Title>
+            </Example>
+            <Example>
+              <Page>DisplayText</Page>
+              <Name>DisplayText</Name>
+              <Title>DisplayText Formatter</Title>
             </Example>
             <Example>
               <Page>RemoteSearch</Page>
@@ -174,6 +174,27 @@
               <Page>NestedProperty</Page>
               <Name>NestedProperty</Name>
               <Title>Nested Property</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Templates</Name>
+          <Title>Templates</Title>
+          <Examples>
+            <Example>
+              <Page>TokensTemplate</Page>
+              <Name>TokensTemplate</Name>
+              <Title>Tokens Template</Title>
+            </Example>
+            <Example>
+              <Page>SuggestionItemTemplate</Page>
+              <Name>SuggestionItemTemplate</Name>
+              <Title>SuggestionItem Template</Title>
+            </Example>
+            <Example>
+              <Page>SuggestionViewTemplate</Page>
+              <Name>SuggestionViewTemplate</Name>
+              <Title>SuggestionView Template</Title>
             </Example>
           </Examples>
         </Category>
@@ -348,7 +369,7 @@
     </Control>
     <Control>
       <Name>Calendar</Name>
-      <Title>Calendar</Title>
+      <Title>Calendar &amp; Scheduling</Title>
       <Icon>Calendar.png</Icon>
       <Categories>
         <Category>
@@ -387,6 +408,11 @@
               <Title>View Modes</Title>
             </Example>
             <Example>
+              <Page>DayViewSettingsAndStyle</Page>
+              <Name>DayViewSettings</Name>
+              <Title>Day View Settings</Title>
+            </Example>
+            <Example>
               <Page>CalendarAppointmentTapped</Page>
               <Name>CalendarAppointmentTapped</Name>
               <Title>Day View Appointment Tapped</Title>
@@ -397,6 +423,16 @@
           <Name>Scheduling</Name>
           <Title>Scheduling</Title>
           <Examples>
+            <Example>
+              <Page>SchedulingUI</Page>
+              <Name>SchedulingUI</Name>
+              <Title>Scheduling UI</Title>
+            </Example>
+            <Example>
+              <Page>RecurrentAppointments</Page>
+              <Name>RecurrentAppointments</Name>
+              <Title>Recurrent Appointments</Title>
+            </Example>
             <Example>
               <Page>KeyFeatures</Page>
               <Name>KeyFeatures</Name>
@@ -416,6 +452,11 @@
               <Page>TimelineStyling</Page>
               <Name>TimelineStyling</Name>
               <Title>Timeline Styling</Title>
+            </Example>
+             <Example>
+              <Page>CustomSchedulingUi</Page>
+              <Name>CustomSchedulingUi</Name>
+              <Title>Custom Scheduling UI</Title>
             </Example>
           </Examples>
         </Category>
@@ -689,6 +730,11 @@
               <Title>Format Series Labels - Xaml</Title>
             </Example>
             <Example>
+              <Page>FormatSeriesLabelsCSharp</Page>
+              <Name>FormatSeriesLabels</Name>
+              <Title>Format Series Labels - Code</Title>
+            </Example>
+            <Example>
               <Page>ChartGridLinesXaml</Page>
               <Name>ChartGridLines</Name>
               <Title>Grid Lines - Xaml</Title>
@@ -722,6 +768,11 @@
               <Page>GradientBars</Page>
               <Name>GradientBars</Name>
               <Title>Gradient Bars</Title>
+            </Example>
+            <Example>
+              <Page>PointMarks</Page>
+              <Name>PointMarks</Name>
+              <Title>Point Marks</Title>
             </Example>
           </Examples>
         </Category>
@@ -856,7 +907,7 @@
         </Category>
         <Category>
           <Name>Features</Name>
-          <Title>Features</Title>
+          <Title>Null Values Support</Title>
           <Examples>
             <Example>
               <Page>NullValuesSupport</Page>
@@ -989,6 +1040,17 @@
               <Page>DataFormGettingStartedCSharp</Page>
               <Name>GettingStarted</Name>
               <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Globalization</Name>
+          <Title>Globalization</Title>
+          <Examples>
+            <Example>
+              <Page>DataFormGlobalization</Page>
+              <Name>Globalization</Name>
+              <Title>Globalization</Title>
             </Example>
           </Examples>
         </Category>
@@ -1207,9 +1269,15 @@
           <Title>How To</Title>
           <Examples>
             <Example>
+              <Page>DataFormRadAutoCompleteEditor</Page>
+              <Name>RadAutoCompleteEditorTokens</Name>
+              <Title>RadAutoComplete with Tokens Editor</Title>
+              <ExcludeFrom>UWP</ExcludeFrom>
+            </Example>
+            <Example>
               <Page>DataFormAutoCompleteEditor</Page>
               <Name>AutoCompleteEditor</Name>
-              <Title>Auto Complete Editor</Title>
+              <Title>AutoComplete Editor</Title>
               <ExcludeFrom>UWP,iOS</ExcludeFrom>
             </Example>
           </Examples>
@@ -1405,6 +1473,50 @@
               <Page>NestedProperty</Page>
               <Name>NestedProperty</Name>
               <Title>Nested Properties</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>DockLayout</Name>
+      <Title>DockLayout</Title>
+      <Icon>DockLayout.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>DockLayoutGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>DockLayoutGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>DockingFeature</Page>
+              <Name>DockingFunctionality</Name>
+              <Title>Docking Functionality</Title>
+            </Example>
+            <Example>
+              <Page>PositionLastElement</Page>
+              <Name>PositionLastElement</Name>
+              <Title>Set last element not to stretch</Title>
+            </Example>
+            <Example>
+              <Page>PositionElementsOneSide</Page>
+              <Name>PositionElementsOneSide</Name>
+              <Title>Position multiple elements on one side</Title>
             </Example>
           </Examples>
         </Category>
@@ -1635,6 +1747,11 @@
               <Title>First Look</Title>
             </Example>
             <Example>
+              <Page>HeaderAndFooter</Page>
+              <Name>HeaderAndFooter</Name>
+              <Title>Header and Footer</Title>
+            </Example>
+            <Example>
               <Page>Filtering</Page>
               <Name>Filtering</Name>
               <Title>Filtering</Title>
@@ -1725,6 +1842,11 @@
               <Page>MultiLevelGroups</Page>
               <Name>MultiLevelGrouping</Name>
               <Title>Multi-Level Grouping</Title>
+            </Example>
+            <Example>
+              <Page>ReorderItemsInGroupedListView</Page>
+              <Name>ReorderInGroupedListView</Name>
+              <Title>Reorder Items in Grouped ListView</Title>
             </Example>
           </Examples>
         </Category>
@@ -1987,6 +2109,94 @@
       </Categories>
     </Control>
     <Control>
+      <Name>Popup</Name>
+      <Title>Popup</Title>
+      <Icon>Popup.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>PopupGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>PopupGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>ContentTemplate</Page>
+              <Name>ContentTemplate</Name>
+              <Title>Setting ContentTemplate</Title>
+            </Example>
+            <Example>
+              <Page>ModalPopup</Page>
+              <Name>ModalPopup</Name>
+              <Title>Modal Popup</Title>
+            </Example>
+            <Example>
+              <Page>PopupPlacement</Page>
+              <Name>PopupPlacement</Name>
+              <Title>Popup Placement</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>PdfViewer</Name>
+      <Title>PdfViewer</Title>
+      <Icon>PdfViewer.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>PdfViewerGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>PdfViewer Getting Started - Xaml</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>KeyFeatures</Page>
+              <Name>KeyFeatures</Name>
+              <Title>Key Features</Title>
+            </Example>
+            <Example>
+              <Page>Commands</Page>
+              <Name>Commands</Name>
+              <Title>Commands</Title>
+            </Example>
+            <Example>
+              <Page>PdfToolbar</Page>
+              <Name>PdfToolbar</Name>
+              <Title>Pdf Toolbar</Title>
+            </Example>
+            <Example>
+              <Page>BusyIndicatorTemplate</Page>
+              <Name>BusyIndicatorTemplate</Name>
+              <Title>BusyIndicator Template</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
       <Name>Rating</Name>
       <Title>Rating</Title>
       <Icon>Rating.png</Icon>
@@ -2032,7 +2242,7 @@
     </Control>
     <Control>
       <Name>Segment</Name>
-      <Title>SegmentControl</Title>
+      <Title>SegmentedControl</Title>
       <Icon>Segmented.png</Icon>
       <Categories>
         <Category>
@@ -2260,11 +2470,6 @@
           <Title>Features</Title>
           <Examples>
             <Example>
-              <Page>TreeViewCommands</Page>
-              <Name>Commands</Name>
-              <Title>Commands</Title>
-            </Example>
-            <Example>
               <Page>TreeViewExpandCollapse</Page>
               <Name>ExpandCollapse</Name>
               <Title>Expand/Collapse</Title>
@@ -2275,14 +2480,29 @@
               <Title>Checkboxes</Title>
             </Example>
             <Example>
+              <Page>ItemTemplate</Page>
+              <Name>ItemTemplate</Name>
+              <Title>Item Template</Title>
+            </Example>
+            <Example>
               <Page>TreeViewLoadOnDemand</Page>
               <Name>LoadingItems</Name>
               <Title>Load Items On Demand</Title>
             </Example>
             <Example>
+              <Page>TreeViewPrecheckedItems</Page>
+              <Name>PrecheckedItems</Name>
+              <Title>Prechecked Items</Title>
+            </Example>
+            <Example>
               <Page>ProgrammaticScrolling</Page>
               <Name>ProgrammaticScrolling</Name>
               <Title>Programmatic Scrolling</Title>
+            </Example>
+            <Example>
+              <Page>TreeViewCommands</Page>
+              <Name>Commands</Name>
+              <Title>Commands</Title>
             </Example>
           </Examples>
         </Category>
@@ -2296,9 +2516,14 @@
               <Title>ItemStyle</Title>
             </Example>
             <Example>
-              <Page>TreeViewStyleSelector</Page>
+              <Page>TreeViewItemStyleSelector</Page>
               <Name>ItemStyleSelector</Name>
               <Title>StyleSelector</Title>
+            </Example>
+            <Example>
+              <Page>TreeViewTheming</Page>
+              <Name>Theming</Name>
+              <Title>Theming</Title>
             </Example>
           </Examples>
         </Category>

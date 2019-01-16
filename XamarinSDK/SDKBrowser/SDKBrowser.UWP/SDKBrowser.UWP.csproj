@@ -122,11 +122,26 @@
     <Content Include="Assets\Checkbox.scale-150.png" />
     <Content Include="Assets\Checkbox.scale-200.png" />
     <Content Include="Assets\Checkbox.scale-400.png" />
+    <Content Include="Assets\DockLayout.scale-100.png" />
+    <Content Include="Assets\DockLayout.scale-125.png" />
+    <Content Include="Assets\DockLayout.scale-150.png" />
+    <Content Include="Assets\DockLayout.scale-200.png" />
+    <Content Include="Assets\DockLayout.scale-400.png" />
     <Content Include="Assets\Expander.scale-100.png" />
     <Content Include="Assets\Expander.scale-125.png" />
     <Content Include="Assets\Expander.scale-150.png" />
     <Content Include="Assets\Expander.scale-200.png" />
     <Content Include="Assets\Expander.scale-400.png" />
+    <Content Include="Assets\PdfViewer.scale-100.png" />
+    <Content Include="Assets\PdfViewer.scale-125.png" />
+    <Content Include="Assets\PdfViewer.scale-150.png" />
+    <Content Include="Assets\PdfViewer.scale-200.png" />
+    <Content Include="Assets\PdfViewer.scale-400.png" />
+    <Content Include="Assets\Popup.scale-100.png" />
+    <Content Include="Assets\Popup.scale-125.png" />
+    <Content Include="Assets\Popup.scale-150.png" />
+    <Content Include="Assets\Popup.scale-200.png" />
+    <Content Include="Assets\Popup.scale-400.png" />
     <Content Include="Assets\sampleBot.png" />
     <Content Include="Assets\Fonts\segoeui.ttf" />
     <Content Include="Assets\Fonts\segoeuib.ttf" />
@@ -140,6 +155,12 @@
     <Content Include="Assets\Fonts\seguisb.ttf" />
     <Content Include="Assets\Fonts\seguisbi.ttf" />
     <Content Include="Assets\Fonts\seguisli.ttf" />
+    <Content Include="Assets\TreeView_Flag_Argentina.png" />
+    <Content Include="Assets\TreeView_Flag_China.png" />
+    <Content Include="Assets\TreeView_Flag_Germany.png" />
+    <Content Include="Assets\TreeView_Flag_India.png" />
+    <Content Include="Assets\TreeView_Flag_Italy.png" />
+    <Content Include="Assets\TreeView_Flag_USA.png" />
     <Content Include="XamarinIcon.png" />
   </ItemGroup>
   <ItemGroup>
@@ -149,6 +170,7 @@
     <Compile Include="Examples\ButtonControl\HowToCategory\ButtonDisabledTextColorExample\CustomButtonRenderer.cs" />
     <Compile Include="Examples\CalendarControl\StylingCategory\CustomRendererExample\CustomCalendarRenderer.cs" />
     <Compile Include="Examples\ChartControl\CustomizationCategory\GradientBarsEffect.cs" />
+    <Compile Include="Examples\ChartControl\CustomizationCategory\PointMarksEffect.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -413,6 +435,12 @@
     <Reference Include="Telerik.Data">
       <HintPath>..\..\..\..\Binaries\UWP\Telerik.Data.dll</HintPath>
     </Reference>
+    <Reference Include="Telerik.Documents.Core">
+      <HintPath>..\..\..\..\Binaries\Portable\Telerik.Documents.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Documents.Fixed">
+      <HintPath>..\..\..\..\Binaries\Portable\Telerik.Documents.Fixed.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.Documents.SpreadsheetStreaming">
       <HintPath>..\..\..\..\Binaries\Portable\Telerik.Documents.SpreadsheetStreaming.dll</HintPath>
     </Reference>
@@ -453,6 +481,9 @@
     <Reference Include="Telerik.XamarinForms.Input">
       <HintPath>..\..\..\..\Binaries\UWP\Telerik.XamarinForms.Input.dll</HintPath>
     </Reference>
+    <Reference Include="Telerik.XamarinForms.PdfViewer">
+      <HintPath>..\..\..\..\Binaries\UWP\Telerik.XamarinForms.PdfViewer.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.XamarinForms.Primitives">
       <HintPath>..\..\..\..\Binaries\UWP\Telerik.XamarinForms.Primitives.dll</HintPath>
     </Reference>
@@ -473,9 +504,6 @@
     <PackageReference Include="SkiaSharp">
       <Version>1.59.3</Version>
     </PackageReference>
-    <PackageReference Include="SkiaSharp.Views">
-      <Version>1.59.3</Version>
-    </PackageReference>
     <PackageReference Include="SkiaSharp.Views.Forms">
       <Version>1.59.3</Version>
     </PackageReference>
@@ -483,7 +511,7 @@
       <Version>3.1.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
-      <Version>3.1.0.697729</Version>
+      <Version>3.4.0.1008975</Version>
     </PackageReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

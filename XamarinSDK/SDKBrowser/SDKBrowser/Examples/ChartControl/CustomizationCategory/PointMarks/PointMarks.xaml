@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SDKBrowser.Examples.ChartControl.CustomizationCategory.PointMarksExample.PointMarks"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.ChartControl.CustomizationCategory.PointMarksExample"
+             xmlns:telerikChart="clr-namespace:Telerik.XamarinForms.Chart;assembly=Telerik.XamarinForms.Chart">
+
+    <VisualElement.Resources>
+        <ResourceDictionary>
+            <Color x:Key="color1">#FFF3DCD4</Color>
+            <Color x:Key="color2">#FFCDCDC0</Color>
+            <Color x:Key="color3">#FFD9E3DA</Color>
+        </ResourceDictionary>
+    </VisualElement.Resources>
+    
+    <telerikChart:RadCartesianChart>
+        <Element.Effects>
+            <local:PointMarksEffect />
+        </Element.Effects>
+        <telerikChart:RadCartesianChart.Palette>
+            <telerikChart:ChartPalette>
+                <telerikChart:ChartPalette.Entries>
+                    <telerikChart:PaletteEntry FillColor="{StaticResource color1}" StrokeColor="{StaticResource color1}" />
+                    <telerikChart:PaletteEntry FillColor="{StaticResource color2}" StrokeColor="{StaticResource color2}" />
+                    <telerikChart:PaletteEntry FillColor="{StaticResource color3}" StrokeColor="{StaticResource color3}" />
+                </telerikChart:ChartPalette.Entries>
+            </telerikChart:ChartPalette>
+        </telerikChart:RadCartesianChart.Palette>
+        <telerikChart:RadCartesianChart.HorizontalAxis>
+            <telerikChart:CategoricalAxis />
+        </telerikChart:RadCartesianChart.HorizontalAxis>
+        <telerikChart:RadCartesianChart.VerticalAxis>
+            <telerikChart:NumericalAxis />
+        </telerikChart:RadCartesianChart.VerticalAxis>
+        <telerikChart:RadCartesianChart.Series>
+            <telerikChart:LineSeries CategoryBinding="XCat" 
+                                     ValueBinding="YVal" 
+                                     ItemsSource="{Binding}"
+                                     local:PointMarksEffect.Color="{StaticResource color1}" />
+        </telerikChart:RadCartesianChart.Series>
+    </telerikChart:RadCartesianChart>
+    
+</ContentView>

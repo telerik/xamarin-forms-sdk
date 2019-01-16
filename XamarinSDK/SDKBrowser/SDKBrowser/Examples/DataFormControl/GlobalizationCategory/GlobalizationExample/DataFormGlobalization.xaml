@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.DataFormControl.GlobalizationCategory.GlobalizationExample"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:dataform="clr-namespace:Telerik.XamarinForms.Input.DataForm;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.DataFormControl.GlobalizationCategory.GlobalizationExample.DataFormGlobalization">
+    <ContentView.BindingContext>
+        <local:Person />
+    </ContentView.BindingContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Text="Changing the device's culture/language to German/Spanish will automatically apply the respective translated strings from the DE/ES resource files"
+               Margin="15,10,0,10"
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center"/>
+        <telerikInput:RadDataForm  x:Name="dataForm" 
+                                   Grid.Row="1"
+                                   Source="{Binding}" >
+            <telerikInput:RadDataForm.EditorStyle>
+                <dataform:DataFormEditorStyle  HeaderFontSize="12" 
+                                               HeaderForeground="Black"/>
+            </telerikInput:RadDataForm.EditorStyle>
+            <telerikInput:RadDataForm.GroupHeaderStyle>
+                <dataform:DataFormGroupHeaderStyle Background="#B5B5B8" 
+                                                   Padding="5"/>
+            </telerikInput:RadDataForm.GroupHeaderStyle>
+        </telerikInput:RadDataForm>
+    </Grid>
+</ContentView>

@@ -21,10 +21,10 @@
                                     ItemsSource="{Binding Data}" />
         </telerikChart:RadCartesianChart.Series>
         <telerikChart:RadCartesianChart.Grid>
-            <telerikChart:CartesianChartGrid StripLinesVisibility="None"
+            <telerikChart:CartesianChartGrid StripLinesVisibility="Y"
                                              MajorLinesVisibility="XY"
-                                             MajorLineColor="Gray"
-                                             MajorLineThickness="1" />
+                                             MajorLineColor="LightGreen"
+                                             MajorLineThickness="3" />
         </telerikChart:RadCartesianChart.Grid>
     </telerikChart:RadCartesianChart>
     <!-- << chart-customization-gridlines-xaml -->

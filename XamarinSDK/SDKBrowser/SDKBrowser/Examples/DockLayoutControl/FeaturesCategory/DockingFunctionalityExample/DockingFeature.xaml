@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+             x:Class="SDKBrowser.Examples.DockLayoutControl.FeaturesCategory.DockingFunctionalityExample.DockingFeature">
+    <Grid>
+        <!-- >> docklayout-docking-feature -->
+        <telerikCommon:RadDockLayout x:Name="dockLayout">
+            <Label Text="Left" telerikCommon:RadDockLayout.Dock="Left" WidthRequest="60" BackgroundColor="LightPink" />
+            <Label Text="Top" telerikCommon:RadDockLayout.Dock="Top" HeightRequest="60" BackgroundColor="LightGreen" />
+            <Label Text="Right" telerikCommon:RadDockLayout.Dock="Right" WidthRequest="60" BackgroundColor="LightBlue" />
+            <Label Text="Bottom" telerikCommon:RadDockLayout.Dock="Bottom" HeightRequest="60" BackgroundColor="LightYellow" />
+        </telerikCommon:RadDockLayout>
+        <!-- << docklayout-docking-feature -->
+    </Grid>
+</ContentView>

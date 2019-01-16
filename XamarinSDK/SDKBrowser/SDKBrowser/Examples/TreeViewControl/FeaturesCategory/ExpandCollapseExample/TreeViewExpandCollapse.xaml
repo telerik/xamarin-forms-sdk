@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:dataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
-             xmlns:treeViewExamples="clr-namespace:SDKBrowser.Examples.TreeViewControl.FeaturesCategory"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.TreeViewControl.FeaturesCategory"
              x:Class="SDKBrowser.Examples.TreeViewControl.FeaturesCategory.ExpandCollapseExample.TreeViewExpandCollapse">
   <ContentView.Content>
         <Grid>
@@ -10,30 +10,30 @@
                 <RowDefinition Height="3*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
-            <dataControls:RadTreeView  x:Name="tv">
-                <dataControls:TreeViewDescriptor DisplayMemberPath="Name"
-                                                    ItemsSourcePath="Children"
-                                                    TargetType="{x:Type treeViewExamples:Item}"/>
-            </dataControls:RadTreeView>
+            <telerikDataControls:RadTreeView x:Name="treeView" ItemsSource="{Binding Source}">
+                <telerikDataControls:TreeViewDescriptor DisplayMemberPath="Name"
+                                                        ItemsSourcePath="Children"
+                                                        TargetType="{x:Type local:Item}"/>
+            </telerikDataControls:RadTreeView>
             <ScrollView Grid.Row="1">
                 <StackLayout>
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition/>
-                            <RowDefinition/>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <Button Text="Expand item 2" Clicked="ExpandItem2"/>
-                        <Button Text="Expand item 211" Clicked="ExpandItem211" Grid.Row="1"/>
+                        <Button Text="Expand item 22" Clicked="ExpandItem22" Grid.Row="1"/>
                         <Button Text="Collapse item 2" Clicked="CollapseItem2" Grid.Column="1"/>
-                        <Button Text="Collapse item 211" Clicked="CollapseItem211" Grid.Row="1" Grid.Column="1"/>
+                        <Button Text="Collapse item 22" Clicked="CollapseItem22" Grid.Row="1" Grid.Column="1"/>
+                        <Button Text="ExpandAll"  Clicked="ExpandAll" Grid.Row="2" />
+                        <Button Text="Collapse All" Clicked="CollapseAll" Grid.Row="2" Grid.Column="1" />
                     </Grid>
-                    
-                    <Button Text="ExpandAll"  Clicked="ExpandAll" ></Button>
-                    <Button Text="Collapse All" Clicked="CollapseAll"></Button>
                 </StackLayout>
             </ScrollView>
         </Grid>

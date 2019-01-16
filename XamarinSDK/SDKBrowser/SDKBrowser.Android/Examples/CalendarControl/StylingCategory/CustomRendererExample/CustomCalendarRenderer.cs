@@ -1,3 +1,4 @@
+using Android.Content;
 using SDKBrowser.Droid.Examples.CalendarControl.StylingCategory.CustomRendererExample;
 using SDKBrowser.Examples.CalendarControl.StylingCategory.CustomRendererExample;
 using Telerik.XamarinForms.Input;
@@ -11,6 +12,10 @@ namespace SDKBrowser.Droid.Examples.CalendarControl.StylingCategory.CustomRender
 {
     public class CustomCalendarRenderer : CalendarRenderer
     {
+        public CustomCalendarRenderer(Context context) : base(context)
+        {
+        }
+
         protected override void OnElementChanged(ElementChangedEventArgs<RadCalendar> e)
         {
             base.OnElementChanged(e);

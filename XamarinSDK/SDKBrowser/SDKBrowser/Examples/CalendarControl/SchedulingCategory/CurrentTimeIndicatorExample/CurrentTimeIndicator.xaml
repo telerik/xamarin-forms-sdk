@@ -5,7 +5,7 @@
              x:Class="SDKBrowser.Examples.CalendarControl.SchedulingCategory.CurrentTimeIndicatorExample.CurrentTimeIndicator">
     <Grid>
         <!-- >> calendar-scheduling-currenttimeindicator -->
-        <telerikInput:RadCalendar x:Name="calendar" NativeControlLoaded="CalendarLoaded">
+        <telerikInput:RadCalendar x:Name="calendar" ViewMode="MultiDay">
             <telerikInput:RadCalendar.MultiDayViewSettings>             
                 <telerikInput:MultiDayViewSettings VisibleDays="1"
                                                    DayStartTime="9:00:00"

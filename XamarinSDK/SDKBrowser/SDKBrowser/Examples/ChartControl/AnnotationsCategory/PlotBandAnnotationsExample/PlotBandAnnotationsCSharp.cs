@@ -20,7 +20,7 @@ namespace SDKBrowser.Examples.ChartControl.AnnotationsCategory.PlotBandAnnotatio
                 VerticalAxis = verticalAxis,
                 Series =
                 {
-                    new AreaSeries
+                    new LineSeries
                     {
                         ValueBinding = new PropertyNameDataPointBinding("Value"),
                         CategoryBinding = new PropertyNameDataPointBinding("Category")

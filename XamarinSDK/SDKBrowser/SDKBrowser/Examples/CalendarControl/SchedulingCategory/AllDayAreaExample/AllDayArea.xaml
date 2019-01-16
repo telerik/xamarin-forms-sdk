@@ -5,7 +5,7 @@
              x:Class="SDKBrowser.Examples.CalendarControl.SchedulingCategory.AllDayAreaExample.AllDayArea">
     <Grid>
         <!-- >> calendar-scheduling-alldaystyling -->
-        <telerikInput:RadCalendar x:Name="calendar" NativeControlLoaded="CalendarLoaded">
+        <telerikInput:RadCalendar x:Name="calendar" ViewMode="MultiDay">
             <telerikInput:RadCalendar.MultiDayViewSettings>
                 <telerikInput:MultiDayViewSettings VisibleDays="3"
                                                IsWeekendVisible="true" />

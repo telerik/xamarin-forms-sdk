@@ -5,7 +5,7 @@
              x:Class="SDKBrowser.Examples.CalendarControl.SchedulingCategory.KeyFeaturesExample.KeyFeatures">
     <Grid>
         <!-- >> calendar-scheduling-keyfeatures -->
-        <telerikInput:RadCalendar x:Name="calendar" NativeControlLoaded="CalendarLoaded">
+        <telerikInput:RadCalendar x:Name="calendar" ViewMode="MultiDay">
             <telerikInput:RadCalendar.MultiDayViewSettings>
                 <telerikInput:MultiDayViewSettings VisibleDays="10"
                                                     DayStartTime="9:00:00"

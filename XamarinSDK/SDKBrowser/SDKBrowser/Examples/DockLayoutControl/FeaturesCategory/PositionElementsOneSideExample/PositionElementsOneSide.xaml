@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+             x:Class="SDKBrowser.Examples.DockLayoutControl.FeaturesCategory.PositionElementsOneSideExample.PositionElementsOneSide">
+    <Grid>
+        <!-- >> docklayout-position-elementsoneside -->
+        <telerikCommon:RadDockLayout x:Name="dockLayout">
+            <Label Text="Left 1" telerikCommon:RadDockLayout.Dock="Left" WidthRequest="60" BackgroundColor="LightPink" />
+            <Label Text="Left 2" telerikCommon:RadDockLayout.Dock="Left" WidthRequest="60" BackgroundColor="LightGreen" />
+            <Label Text="Left 3" telerikCommon:RadDockLayout.Dock="Left" WidthRequest="60" BackgroundColor="LightBlue" />
+            <Label Text="Last Child" telerikCommon:RadDockLayout.Dock="Left" WidthRequest="60" BackgroundColor="LightYellow" />
+        </telerikCommon:RadDockLayout>
+        <!-- << docklayout-position-elementsoneside -->
+    </Grid>
+</ContentView>

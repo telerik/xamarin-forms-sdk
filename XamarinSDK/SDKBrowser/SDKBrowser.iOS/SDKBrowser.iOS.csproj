@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard2.0\Xamarin.Forms.props" Condition="Exists('..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard2.0\Xamarin.Forms.props')" />
+  <Import Project="..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.props" Condition="Exists('..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.props')" />
   <Import Project="..\..\config.targets" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -130,7 +130,9 @@
     <Compile Include="Examples\ButtonControl\HowToCategory\ButtonDisabledTextColorExample\CustomButtonRenderer.cs" />
     <Compile Include="Examples\CalendarControl\FeaturesCategory\CustomRendererExample\CustomCalendarDelegate.cs" />
     <Compile Include="CustomNavigationRenderer.cs" />
+    <Compile Include="Examples\ChartControl\CustomizationCategory\PointMarksEffect.cs" />
     <Compile Include="Examples\ChartControl\CustomizationCategory\GradientBarsEffect.cs" />
+    <Compile Include="Examples\DataFormControl\HowToCategory\RadAutoCompleteEditorTokensExample\RadAutoCompleteEditorRenderer.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -194,6 +196,12 @@
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
+    <Reference Include="Telerik.Documents.Core">
+      <HintPath>..\..\..\..\Binaries\Portable\Telerik.Documents.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Documents.Fixed">
+      <HintPath>..\..\..\..\Binaries\Portable\Telerik.Documents.Fixed.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.Documents.SpreadsheetStreaming, Version=2017.1.10421.234, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Binaries\Portable\Telerik.Documents.SpreadsheetStreaming.dll</HintPath>
@@ -232,6 +240,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Binaries\iOS\Telerik.XamarinForms.Input.dll</HintPath>
     </Reference>
+    <Reference Include="Telerik.XamarinForms.PdfViewer">
+      <HintPath>..\..\..\..\Binaries\iOS\Telerik.XamarinForms.PdfViewer.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.XamarinForms.Primitives, Version=2017.1.10421.234, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Binaries\iOS\Telerik.XamarinForms.Primitives.dll</HintPath>
@@ -245,16 +256,16 @@
       <HintPath>..\..\..\..\Binaries\Portable\Telerik.Zip.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.3.1.0.697729\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.3.4.0.1008975\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.3.1.0.697729\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.3.4.0.1008975\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Platform.iOS, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.3.1.0.697729\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.3.4.0.1008975\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.3.1.0.697729\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.3.4.0.1008975\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.iOS" />
     <Reference Include="Xamarin.iOS" />
@@ -475,12 +486,66 @@
       <Visible>false</Visible>
     </ImageAsset>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TreeView_Flag_Germany.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TreeView_Flag_India.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TreeView_Flag_Italy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TreeView_Flag_USA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TreeView_Flag_Argentina.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TreeView_Flag_China.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\DockLayout%401,5x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\DockLayout%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\DockLayout%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\DockLayout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Popup%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Popup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Popup%401,5x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Popup%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\PdfViewer%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\PdfViewer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\PdfViewer%401,5x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\PdfViewer%402x.png" />
+  </ItemGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard2.0\Xamarin.Forms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard2.0\Xamarin.Forms.props'))" />
-    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard2.0\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard2.0\Xamarin.Forms.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.props'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.targets'))" />
   </Target>
-  <Import Project="..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard2.0\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard2.0\Xamarin.Forms.targets')" />
+  <Import Project="..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.targets')" />
 </Project>

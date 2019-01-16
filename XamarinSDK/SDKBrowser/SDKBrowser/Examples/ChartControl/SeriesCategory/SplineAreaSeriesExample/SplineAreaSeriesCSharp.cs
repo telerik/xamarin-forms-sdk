@@ -10,7 +10,7 @@ namespace SDKBrowser.Examples.ChartControl.SeriesCategory.SplineAreaSeriesExampl
             // >> chart-series-splinearea-csharp
             var chart = new RadCartesianChart
             {
-                BindingContext = new ViewModel(),
+                BindingContext = new CategoricalViewModel(),
                 HorizontalAxis = new CategoricalAxis()
                 {
                     LabelFitMode = AxisLabelFitMode.MultiLine,
@@ -24,13 +24,6 @@ namespace SDKBrowser.Examples.ChartControl.SeriesCategory.SplineAreaSeriesExampl
                         ValueBinding = new PropertyNameDataPointBinding("Value"),
                         CategoryBinding = new PropertyNameDataPointBinding("Category")
                     }
-                },
-                Grid = new CartesianChartGrid
-                {
-                    MajorLinesVisibility = GridLineVisibility.Y,
-                    MajorYLineDashArray = new[] { 4.0, 2.0 },
-                    MajorLineColor = Color.FromHex("D3D3D3"),
-                    MajorLineThickness = 2
                 }
             };
 

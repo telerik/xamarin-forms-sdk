@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerik="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             xmlns:common="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+             x:Class="SDKBrowser.Examples.AutoCompleteViewControl.TemplatesCategory.TokensTemplateExample.TokensTemplate">
+    <StackLayout>
+        <!-- >> autocompleteview-templates-token-template-xaml -->
+        <telerik:RadAutoCompleteView x:Name="autoCompleteViewTokensTemplate"
+                                     ItemsSource="{Binding Source}"
+                                     DisplayMode="Tokens" 
+                                     SuggestionViewHeight="150"
+                                     TextSearchPath="Name"
+                                     Watermark="Search Here..."
+                                     BackgroundColor="White">
+            <telerik:RadAutoCompleteView.TokenTemplate>
+                <DataTemplate>
+                    <telerikPrimitives:RadBorder BorderColor="Brown" 
+                                                 BorderThickness="2" 
+                                                 Margin="2">
+                        <StackLayout Orientation="Horizontal" 
+                                     BackgroundColor="LightGreen" 
+                                     Margin="2">
+                            <Label Text="{Binding Name}"
+                                   TextColor="Black"
+                                   VerticalTextAlignment="Center"
+                                   Margin="2" />
+                            <Label FontFamily="{StaticResource IconsFontFamily}"
+                                   Text="&#xE80A;" FontSize="Small"
+                                   VerticalTextAlignment="Center"
+                                   TextColor="Black"
+                                   Margin="2">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
+                    </telerikPrimitives:RadBorder>
+                </DataTemplate>
+            </telerik:RadAutoCompleteView.TokenTemplate>
+        </telerik:RadAutoCompleteView>
+        <!-- << autocompleteview-templates-token-template-xaml -->
+    </StackLayout>
+</ContentView>

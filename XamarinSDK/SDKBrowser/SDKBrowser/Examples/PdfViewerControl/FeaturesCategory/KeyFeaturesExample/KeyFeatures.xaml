@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPdfViewer="clr-namespace:Telerik.XamarinForms.PdfViewer;assembly=Telerik.XamarinForms.PdfViewer"
+             x:Class="SDKBrowser.Examples.PdfViewerControl.FeaturesCategory.KeyFeaturesExample.KeyFeatures">
+
+    <!-- >> pdfviewer-key-features-xaml -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <telerikPdfViewer:RadPdfViewerToolbar PdfViewer="{Binding Source={x:Reference pdfViewer}}">
+            <telerikPdfViewer:ZoomInToolbarItem />
+            <telerikPdfViewer:ZoomOutToolbarItem />
+            <telerikPdfViewer:ToggleLayoutModeToolbarItem />
+        </telerikPdfViewer:RadPdfViewerToolbar>
+        <telerikPdfViewer:RadPdfViewer x:Name="pdfViewer"
+                                       Grid.Row="1"
+                                       PageSpacing="15"
+                                       MinZoomLevel="0.2"
+                                       MaxZoomLevel="5" />
+    </Grid>
+    <!-- << pdfviewer-key-features-xaml -->
+</ContentView>

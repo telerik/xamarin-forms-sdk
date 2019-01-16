@@ -1,4 +1,4 @@
-﻿using Telerik.XamarinForms.DataGrid;
+﻿using Telerik.XamarinForms.Common;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +10,8 @@ namespace SDKBrowser.Examples.DataGridControl.LocalizationCategory.CustomLocaliz
         public CustomLocalization()
         {
             // >> datagrid-setting-the-custom-manager-csharp
-            DataGridLocalizationManager.Manager = new CustomDataGridLocalizationManager();
+            TelerikLocalizationManager.Manager = new CustomTelerikLocalizationManager();
+            
             this.InitializeComponent();
             // << datagrid-setting-the-custom-manager-csharp
             this.BindingContext = new LocalizationViewModel();
@@ -18,7 +19,7 @@ namespace SDKBrowser.Examples.DataGridControl.LocalizationCategory.CustomLocaliz
     }
  
     // >> datagrid-custom-localizationmanager-csharp
-    public class CustomDataGridLocalizationManager : DataGridLocalizationManager
+    public class CustomTelerikLocalizationManager : TelerikLocalizationManager
     {
         public override string GetString(string key)
         {

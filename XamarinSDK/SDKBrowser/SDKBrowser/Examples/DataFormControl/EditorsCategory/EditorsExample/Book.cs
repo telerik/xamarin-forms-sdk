@@ -13,10 +13,10 @@ namespace SDKBrowser.Examples.DataFormControl.EditorsCategory.EditorsExample
         private bool isPublished;
         private bool isDue;
         private float rating;
-        private DateTime lastReviewed = new DateTime(2010, 11, 3);
-        private DateTime borrowTime = new DateTime(2010, 11, 3, 8, 0, 0);
+        private DateTime lastReviewed = new DateTime(2015, 11, 3);
+        private DateTime borrowTime = new DateTime(2015, 11, 3, 8, 0, 0);
 
-        [DisplayOptions(Header = "Name", PlaceholderText = "Book Name")]
+        [DisplayOptions(Group= "Add a Book", Header = "Name", PlaceholderText = "Book Name", Position = 0, ColumnPosition = 0, ColumnSpan = 2)]
         [StringLengthValidator(2, int.MaxValue, "Name should be longer than 2 symbols.", null)]
         public string Name
         {
@@ -34,7 +34,7 @@ namespace SDKBrowser.Examples.DataFormControl.EditorsCategory.EditorsExample
             }
         }
 
-        [DisplayOptions(Header = "Genre", PlaceholderText = "Select Genre")]
+        [DisplayOptions(Group = "Add a Book", Header = "Genre", PlaceholderText = "Select Genre", Position = 1, ColumnPosition = 0, ColumnSpan = 2)]
         [DataSourceKey("Genre")]
         public string Genre
         {
@@ -52,7 +52,7 @@ namespace SDKBrowser.Examples.DataFormControl.EditorsCategory.EditorsExample
             }
         }
 
-        [DisplayOptions(Header = "Target Group")]
+        [DisplayOptions(Group = "Add a Book", Header = "Target Group", Position = 2, ColumnPosition = 0, ColumnSpan = 2)]
         public TargetAudience TargetGroup
         {
             get
@@ -69,7 +69,7 @@ namespace SDKBrowser.Examples.DataFormControl.EditorsCategory.EditorsExample
             }
         }
 
-        [DisplayOptions(Header = "Year")]
+        [DisplayOptions(Group = "Add a Book", Header = "Year", Position = 3, ColumnPosition = 0, ColumnSpan = 2)]
         [NumericalRangeValidator(1990, 2015, 1, "Value must be between 1990 and 2015.")]
         public double Year
         {
@@ -87,7 +87,7 @@ namespace SDKBrowser.Examples.DataFormControl.EditorsCategory.EditorsExample
             }
         }
 
-        [DisplayOptions(Header = "Last Reviewed")]
+        [DisplayOptions(Group = "Add a Book", Header = "Last Reviewed: Date", Position = 4, ColumnPosition = 0)]
         public DateTime LastReviewed
         {
             get
@@ -104,7 +104,7 @@ namespace SDKBrowser.Examples.DataFormControl.EditorsCategory.EditorsExample
             }
         }
 
-        [DisplayOptions(Header = "Last Reviewed")]
+        [DisplayOptions(Group = "Add a Book", Header = "Time", Position = 4, ColumnPosition = 1)]
         public DateTime BorrowTime
         {
             get
@@ -121,7 +121,7 @@ namespace SDKBrowser.Examples.DataFormControl.EditorsCategory.EditorsExample
             }
         }
 
-        [DisplayOptions(Header = "Published")]
+        [DisplayOptions(Group = "Add a Book", Header = "Published", Position = 5, ColumnPosition = 0)]
         public bool IsPublished
         {
             get
@@ -138,7 +138,7 @@ namespace SDKBrowser.Examples.DataFormControl.EditorsCategory.EditorsExample
             }
         }
 
-        [DisplayOptions(Header = "Due")]
+        [DisplayOptions(Group = "Add a Book", Header = "Due", Position = 5, ColumnPosition = 1)]
         public bool IsDue
         {
             get
@@ -155,7 +155,7 @@ namespace SDKBrowser.Examples.DataFormControl.EditorsCategory.EditorsExample
             }
         }
 
-        [DisplayOptions(Header = "Rating", Position = 5)]
+        [DisplayOptions(Group = "Add a Book", Header = "Rating", Position = 6, ColumnSpan = 2)]
         [NumericalRangeValidator(0, 5, 1, "Value must be between 0 and 5.")]
         public float Rating
         {

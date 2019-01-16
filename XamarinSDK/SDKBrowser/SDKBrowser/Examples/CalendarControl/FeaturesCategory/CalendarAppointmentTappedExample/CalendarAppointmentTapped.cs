@@ -10,37 +10,36 @@ namespace SDKBrowser.Examples.CalendarControl.FeaturesCategory.CalendarAppointme
         public CalendarAppointmentTapped()
         {
             // >> calendar-gettingstarted-appointmentssource-csharp
-            var date = new DateTime(2017, 12, 12, 0, 25, 0);
+            var date = DateTime.Today;
 
             var calendar = new RadCalendar
             {
-                DisplayDate = date,
-                AppointmentsSource = new List<Appointment>{
+                DisplayDate = date,  
+                AppointmentsSource = new List<Appointment> {
                     new Appointment {
                         Title = "Meeting with Tom",
                         Detail = "Sea Garden",
-                        StartDate = date.AddHours(1),
-                        EndDate = date.AddHours(2),
+                        StartDate = date.AddHours(10),
+                        EndDate = date.AddHours(11),
                         Color = Color.Tomato
                     },
                     new Appointment {
                         Title = "Lunch with Sara",
                         Detail = "Restaurant",
-                        StartDate = date.AddHours(2).AddMinutes(30),
-                        EndDate = date.AddHours(3),
+                        StartDate = date.AddHours(12).AddMinutes(30),
+                        EndDate = date.AddHours(14),
                         Color = Color.DarkTurquoise
                     },
                     new Appointment {
-                        Title = "Birthday",
-                        StartDate = date.AddHours(2).AddMinutes(30),
-                        EndDate = date.AddHours(3),
-                        IsAllDay = true,
-                        Color = Color.Orange
+                        Title = "Elle Birthday",
+                        StartDate = date.AddDays(1),
+                        EndDate = date.AddDays(1).AddHours(12),
+                        IsAllDay = true
                     },
                      new Appointment {
                         Title = "Football Game",
-                        StartDate = date.AddDays(1).AddHours(2).AddMinutes(30),
-                        EndDate = date.AddDays(1).AddHours(3),
+                        StartDate = date.AddDays(2).AddHours(15),
+                        EndDate = date.AddDays(2).AddHours(17),
                         Color = Color.Green
                     }
                 }
@@ -48,10 +47,7 @@ namespace SDKBrowser.Examples.CalendarControl.FeaturesCategory.CalendarAppointme
             // << calendar-gettingstarted-appointmentssource-csharp
 
             // >> calendar-features-setviewmode-csharp
-            calendar.NativeControlLoaded += (sender, e) =>
-            {
-                calendar.TrySetViewMode(CalendarViewMode.Day);
-            };
+            calendar.ViewMode = CalendarViewMode.Day;
             // << calendar-features-setviewmode-csharp
 
             // >> calendar-features-appointmenttapped-csharp
@@ -62,22 +58,5 @@ namespace SDKBrowser.Examples.CalendarControl.FeaturesCategory.CalendarAppointme
             // << calendar-features-appointmenttapped-csharp
             this.Content = calendar;
         }
-
-        // >> calendar-getting-started-appointment-class
-        public class Appointment : IAppointment
-        {
-            public DateTime StartDate { get; set; }
-
-            public Color Color { get; set; }
-
-            public DateTime EndDate { get; set; }
-
-            public string Title { get; set; }
-
-            public bool IsAllDay { get; set; }
-
-            public string Detail { get; set; }
-        }
-        // << calendar-getting-started-appointment-class
     }
 }

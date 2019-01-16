@@ -17,7 +17,7 @@
             <telerikChart:NumericalAxis x:Name="verticalAxis" />
         </telerikChart:RadCartesianChart.VerticalAxis>
         <telerikChart:RadCartesianChart.Series>
-            <telerikChart:AreaSeries ValueBinding="Value"
+            <telerikChart:LineSeries ValueBinding="Value"
                                      CategoryBinding="Category"
                                      ItemsSource="{Binding Data}" />
         </telerikChart:RadCartesianChart.Series>

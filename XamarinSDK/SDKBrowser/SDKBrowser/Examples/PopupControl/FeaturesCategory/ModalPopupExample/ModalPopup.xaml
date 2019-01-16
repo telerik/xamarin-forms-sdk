@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             x:Class="SDKBrowser.Examples.PopupControl.FeaturesCategory.ModalPopupExample.ModalPopup">
+    <Grid Margin="10">
+        <!-- >> popup-features-modal -->
+        <Button HorizontalOptions="Center"
+                VerticalOptions="Start"
+                BackgroundColor="#7A9BFF"
+                TextColor="White"
+                Text="Show modal popup"
+                Clicked="ShowPopup"
+                x:Name="button">
+            <telerikPrimitives:RadPopup.Popup>
+                <telerikPrimitives:RadPopup x:Name="popup"
+                                            IsModal="True"
+                                            OutsideBackgroundColor="#B3FFF493"> 
+                    <telerikPrimitives:RadBorder 
+                        CornerRadius="6" 
+                        BackgroundColor="#93D7FF"
+                        Padding="10">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="26" />
+                            </Grid.RowDefinitions>
+                            <Label Text="Telerik RadPopup for Xamarin" />
+                            <Button Grid.Row="1" 
+                                    Padding="2" 
+                                    HorizontalOptions="Center" 
+                                    Text="Close" 
+                                    Clicked="ClosePopup" 
+                                    CornerRadius="6"
+                                    BackgroundColor="#7A9BFF"
+                                    TextColor="White" />
+                        </Grid>
+                    </telerikPrimitives:RadBorder>
+                </telerikPrimitives:RadPopup>
+            </telerikPrimitives:RadPopup.Popup>
+        </Button>
+        <!-- << popup-features-modal -->
+    </Grid>
+</ContentView>

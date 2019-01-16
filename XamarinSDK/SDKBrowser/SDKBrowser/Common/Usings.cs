@@ -28,4 +28,6 @@ using Telerik.XamarinForms.Input;
 // >> ns-telerikdatacontrols
 using Telerik.XamarinForms.DataControls;
 // << ns-telerikdatacontrols
-
+// >> ns-telerikcommon
+using Telerik.XamarinForms.Common;
+// << ns-telerikcommon

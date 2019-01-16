@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Telerik.XamarinForms.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Telerik.XamarinForms.Input;
 
 namespace SDKBrowser.Examples.CalendarControl.SchedulingCategory.AllDayAreaExample
 {
@@ -13,7 +13,7 @@ namespace SDKBrowser.Examples.CalendarControl.SchedulingCategory.AllDayAreaExamp
         {
             InitializeComponent();
 
-            var date = DateTime.Today;           
+            var date = DateTime.Today; 
             calendar.AppointmentsSource = new List<Appointment> {
                     new Appointment {
                         Title = "Meeting with Tom",
@@ -42,11 +42,6 @@ namespace SDKBrowser.Examples.CalendarControl.SchedulingCategory.AllDayAreaExamp
                         Color = Color.Green
                     }
                 };
-        }
-        private void CalendarLoaded(object sender, EventArgs e)
-        {
-            var calendar = (RadCalendar)sender;
-            calendar.TrySetViewMode(CalendarViewMode.MultiDay);
         }
     }
 }

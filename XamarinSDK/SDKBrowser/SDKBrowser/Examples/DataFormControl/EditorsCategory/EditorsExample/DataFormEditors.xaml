@@ -3,22 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:SDKBrowser.Examples.DataFormControl.EditorsCategory.EditorsExample"
              xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:telerikInputDataForm="clr-namespace:Telerik.XamarinForms.Input.DataForm;assembly=Telerik.XamarinForms.Input"
              x:Class="SDKBrowser.Examples.DataFormControl.EditorsCategory.EditorsExample.DataFormEditors">
     <ContentView.BindingContext>
         <local:Book />
     </ContentView.BindingContext>
-  <Grid>
-    <Grid.RowDefinitions>
-      <RowDefinition/>
-      <RowDefinition Height="Auto"/>
-    </Grid.RowDefinitions>
-    <ScrollView>
-      <telerikInput:RadDataForm x:Name="dataForm" ValidationMode="OnLostFocus" CommitMode="Manual" Source="{Binding}">
-        <telerikInput:RadDataForm.PropertyDataSourceProvider>
-          <local:UserPropertyDataSourceProvider />
-        </telerikInput:RadDataForm.PropertyDataSourceProvider>
-      </telerikInput:RadDataForm>
-    </ScrollView>
-    <Button  Grid.Row="1" Clicked="CommitButtonButtonClicked" Text="Commit"/>
-  </Grid>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ScrollView>
+            <telerikInput:RadDataForm x:Name="dataForm" ValidationMode="OnLostFocus" CommitMode="Manual" Source="{Binding}">
+                <telerikInput:RadDataForm.PropertyDataSourceProvider>
+                    <local:UserPropertyDataSourceProvider />
+                </telerikInput:RadDataForm.PropertyDataSourceProvider>
+                <telerikInput:RadDataForm.GroupLayoutDefinition>
+                    <telerikInputDataForm:DataFormGroupGridLayoutDefinition />
+                </telerikInput:RadDataForm.GroupLayoutDefinition>
+            </telerikInput:RadDataForm>
+        </ScrollView>
+        <Button  Grid.Row="1" Clicked="CommitButtonButtonClicked" Text="Commit"/>
+    </Grid>
 </ContentView>

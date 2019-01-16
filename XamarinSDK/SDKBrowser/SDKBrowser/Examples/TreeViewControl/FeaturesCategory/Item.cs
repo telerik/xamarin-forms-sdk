@@ -1,44 +1,18 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 
 namespace SDKBrowser.Examples.TreeViewControl.FeaturesCategory
 {
-    public class Item : INotifyPropertyChanged
+    public class Item
     {
-        string name;
-        public string Name
+        public Item(string name)
         {
-            get
-            {
-                return this.name;
-            }
-            set
-            {
-                if (this.name != value)
-                {
-                    this.name = value;
-                    this.OnPropertyChanged();
-                }
-            }
-        }
-
-        public IList<Item> Children { get; set; }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public Item()
-        {
+            this.Name = name;
             this.Children = new ObservableCollection<Item>();
         }
 
-        public void OnPropertyChanged([CallerMemberName] string propertyName = "")
-        {
-            var eh = this.PropertyChanged;
-            if (eh != null)
-                eh.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        public string Name { get; set; }
+        public IList<Item> Children { get; set; }
 
         public override string ToString()
         {

@@ -2,6 +2,8 @@
 using Android.Content.PM;
 using Android.OS;
 using SDKBrowser.Services;
+using System.Collections.Generic;
+using Telerik.XamarinForms.Common.Android;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
@@ -22,6 +24,7 @@ namespace SDKBrowser.Droid
 
             PermissionsHelper.Activity = this;
 
+            TypeRegister.Register(typeof(List<string>), typeof(Android.Runtime.JavaList), new JavaToCSharpListConverter());
             this.LoadApplication(new App());
         }
 

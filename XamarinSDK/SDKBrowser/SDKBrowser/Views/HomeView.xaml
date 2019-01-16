@@ -9,7 +9,7 @@
     <Grid>
         <telerikDataControls:RadListView Style="{StaticResource BrowseListStyle}"
                                          ItemsSource="{Binding Controls}"
-                                         IsVisible="{Binding IsSearchVisible, Converter={StaticResource InvertedBooleanConverter}">
+                                         IsVisible="{Binding IsSearchVisible, Converter={StaticResource InvertedBooleanConverter}, FallbackValue=True}">
             <telerikDataControls:RadListView.Commands>
                 <telerikCommands:ListViewUserCommand Id="ItemTap"
                                                      Command="{Binding NextCommand}" />
@@ -37,7 +37,7 @@
         </telerikDataControls:RadListView>
         <telerikDataControls:RadListView Style="{StaticResource SearchListStyle}"
                                          ItemsSource="{Binding Examples}"
-                                         IsVisible="{Binding IsSearchVisible}">
+                                         IsVisible="{Binding IsSearchVisible, FallbackValue=False}">
             <telerikDataControls:RadListView.Commands>
                 <telerikCommands:ListViewUserCommand Id="ItemTap"
                                                      Command="{Binding NextCommand}" />

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.TreeViewControl.FeaturesCategory.PrecheckedItemsExample"
+             x:Class="SDKBrowser.Examples.TreeViewControl.FeaturesCategory.PrecheckedItemsExample.TreeViewPrecheckedItems">
+    <Grid Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Check Item 0" Command="{Binding CheckItem0Command}"/>
+            <Button Text="UnCheck Item 0" Command="{Binding UncheckItem0Command}"/>
+        </StackLayout>
+        <telerikDataControls:RadTreeView x:Name="rtv" ItemsSource="{Binding ItemsSource}" Grid.Row="1" CheckBoxMode="Propagate">
+            <telerikDataControls:RadTreeView.Behaviors>
+                <local:TreeViewBehavior/>
+            </telerikDataControls:RadTreeView.Behaviors>
+            <telerikDataControls:TreeViewDescriptor ItemsSourcePath="Children"
+                                                    DisplayMemberPath="Text"
+                                                    TargetType="{x:Type local:BusinessItem}"/>
+        </telerikDataControls:RadTreeView>
+        <Grid Grid.Row="2" BackgroundColor="LightSkyBlue" ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="TreeView CheckedItems:"
+                   Margin="16,0,0,0"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   BackgroundColor="LightGoldenrodYellow"/>
+            <Label Text="ViewModel CheckedItems:"
+                   Grid.Column="1"
+                   Margin="16,0"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   BackgroundColor="LightPink"/>
+            <ListView ItemsSource="{Binding Source={x:Reference rtv}, Path=CheckedItems}" 
+                      Grid.Row="1"
+                      Margin="16,0,0,0"
+                      BackgroundColor="LightGoldenrodYellow">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Label Text="{Binding Text}"
+                                       VerticalTextAlignment="Center"
+                                       HorizontalTextAlignment="Center"/>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ListView ItemsSource="{Binding CheckedItems}" 
+                      Grid.Row="1"
+                      Grid.Column="1"
+                      Margin="16,0"
+                      BackgroundColor="LightPink">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Label Text="{Binding Text}"
+                                       VerticalTextAlignment="Center"
+                                       HorizontalTextAlignment="Center"/>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </Grid>
+</ContentView>

@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:SDKBrowser.Examples.ChartControl.SeriesCategory.ScatterSplineAreaSeriesExample"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.ChartControl.SeriesCategory"
              xmlns:telerikChart="clr-namespace:Telerik.XamarinForms.Chart;assembly=Telerik.XamarinForms.Chart"
              x:Class="SDKBrowser.Examples.ChartControl.SeriesCategory.ScatterSplineAreaSeriesExample.ScatterSplineAreaSeriesXaml">
     <!-- >> chart-series-scattersplinearea-xaml -->
     <telerikChart:RadCartesianChart>
         <telerikChart:RadCartesianChart.BindingContext>
-            <local:ViewModel />
+            <local:NumericalViewModel />
         </telerikChart:RadCartesianChart.BindingContext>
         <telerikChart:RadCartesianChart.HorizontalAxis>
             <telerikChart:NumericalAxis LabelFitMode="MultiLine" />
@@ -20,18 +20,6 @@
                                                   YValueBinding="YData"
                                                   ItemsSource="{Binding Data}" />
         </telerikChart:RadCartesianChart.Series>
-        <telerikChart:RadCartesianChart.Grid>
-            <telerikChart:CartesianChartGrid MajorLinesVisibility = "Y"
-                                             MajorLineColor="#D3D3D3"
-                                             MajorLineThickness="2">
-                <telerikChart:CartesianChartGrid.MajorYLineDashArray>
-                    <x:Array Type="{x:Type x:Double}">
-                        <x:Double>4.0</x:Double>
-                        <x:Double>2.0</x:Double>
-                    </x:Array>
-                </telerikChart:CartesianChartGrid.MajorYLineDashArray>
-            </telerikChart:CartesianChartGrid>
-        </telerikChart:RadCartesianChart.Grid>
     </telerikChart:RadCartesianChart>
     <!-- << chart-series-scattersplinearea-xaml -->
 </ContentView>

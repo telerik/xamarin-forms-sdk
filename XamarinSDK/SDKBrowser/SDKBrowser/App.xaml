@@ -208,7 +208,7 @@
                                                 VerticalOptions="Center"
                                                 Style="{StaticResource HeaderButtonStyle}"
                                                 Text="{StaticResource BackIconText}"
-                                                IsVisible="{Binding IsBackVisible}"
+                                                IsVisible="{Binding IsBackVisible, FallbackValue=False}"
                                                 Command="{Binding BackCommand}" />
                         <StackLayout Spacing="10"
                                      Orientation="Horizontal"
@@ -250,14 +250,14 @@
                                                 VerticalOptions="Center"
                                                 Style="{StaticResource HeaderButtonStyle}"
                                                 Text="{StaticResource BackIconText}"
-                                                IsVisible="{Binding IsBackVisible}"
+                                                IsVisible="{Binding IsBackVisible, FallbackValue=False}"
                                                 Command="{Binding BackCommand}" />
                         <StackLayout Grid.Column="0"
                                      Grid.ColumnSpan="3"
                                      Spacing="10"
                                      Orientation="Horizontal"
                                      HorizontalOptions="Center"
-                                     IsVisible="{Binding IsSearchVisible, Converter={StaticResource InvertedBooleanConverter}}">
+                                     IsVisible="{Binding IsSearchVisible, Converter={StaticResource InvertedBooleanConverter}, FallbackValue=True}">
                             <Image VerticalOptions="Center"
                                    Source="{Binding HeaderIcon, Converter={StaticResource ImageSourceConverter}}" />
                             <Label VerticalOptions="Center"
@@ -266,7 +266,7 @@
                         </StackLayout>
                         <Grid Grid.Column="1"
                               ColumnSpacing="0"
-                              IsVisible="{Binding IsSearchVisible}" >
+                              IsVisible="{Binding IsSearchVisible, FallbackValue=False}" >
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition />
@@ -298,7 +298,7 @@
                                                 VerticalOptions="Center"
                                                 Style="{StaticResource HeaderButtonStyle}"
                                                 Text="{StaticResource SearchIconText}"
-                                                IsVisible="{Binding IsSearchVisible, Converter={StaticResource InvertedBooleanConverter}}"
+                                                IsVisible="{Binding IsSearchVisible, Converter={StaticResource InvertedBooleanConverter}, FallbackValue=True}"
                                                 Command="{Binding SearchCommand}" />
                     </Grid>
                     <Grid Grid.Row="1"
@@ -312,12 +312,12 @@
                                Margin="0,15"
                                Style="{StaticResource TitleTextStyle}"
                                Text="Examples"
-                               IsVisible="{Binding IsSearchVisible, Converter={StaticResource InvertedBooleanConverter}}" />
+                               IsVisible="{Binding IsSearchVisible, Converter={StaticResource InvertedBooleanConverter}, FallbackValue=True}" />
                         <Label Grid.Row="0"
                                Margin="0,15"
                                Style="{StaticResource TitleTextStyle}"
                                Text="Search Results"
-                               IsVisible="{Binding IsSearchVisible}" />
+                               IsVisible="{Binding IsSearchVisible, FallbackValue=False}" />
                         <Frame Grid.Row="1"
                                Padding="5"
                                CornerRadius="6"
@@ -347,7 +347,7 @@
                                                 VerticalOptions="Center"
                                                 Style="{StaticResource HeaderButtonStyle}"
                                                 Text="{StaticResource BackIconText}"
-                                                IsVisible="{Binding IsBackVisible}"
+                                                IsVisible="{Binding IsBackVisible, FallbackValue=False}"
                                                 Command="{Binding BackCommand}" />
                         <StackLayout Spacing="10"
                                      Orientation="Horizontal"
@@ -362,13 +362,13 @@
                                                 VerticalOptions="Center"
                                                 Style="{StaticResource HeaderButtonStyle}"
                                                 Text="{StaticResource InfoIconText}"
-                                                IsVisible="{Binding IsInfoAvailable}"
+                                                IsVisible="{Binding IsInfoAvailable, FallbackValue=False}"
                                                 Command="{Binding InfoCommand}" />
                         <telerikInput:RadButton HorizontalOptions="End"
                                                 VerticalOptions="Center"
                                                 Style="{StaticResource HeaderButtonStyle}"
                                                 Text="{StaticResource HyperlinkIconText}"
-                                                IsVisible="{Binding IsInfoAvailable, Converter={StaticResource InvertedBooleanConverter}}"
+                                                IsVisible="{Binding IsInfoAvailable, Converter={StaticResource InvertedBooleanConverter}, FallbackValue=True}"
                                                 Command="{Binding OpenCommand}" />
                     </Grid>
                     <ContentPresenter Grid.Row="1"

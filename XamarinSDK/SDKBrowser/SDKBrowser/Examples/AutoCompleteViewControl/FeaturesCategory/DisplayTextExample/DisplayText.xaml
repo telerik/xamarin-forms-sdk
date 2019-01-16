@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.AutoCompleteViewControl.FeaturesCategory.DisplayTextExample"
+             x:Class="SDKBrowser.Examples.AutoCompleteViewControl.FeaturesCategory.DisplayTextExample.DisplayText">
+
+    <StackLayout Orientation="Vertical">
+        <Label Text="Display Text Formatter when DisplayMode is Plain"/>
+        <!-- >> autocompleteview-features-textformatter-plain -->
+        <telerikInput:RadAutoCompleteView x:Name="autoCompleteView" 
+                                          ItemsSource="{Binding Source}"
+                                          TextSearchPath="Name" 
+                                          BackgroundColor="White"
+                                          DisplayMode="Plain" 
+                                          SuggestionViewHeight="150">
+            <telerikInput:RadAutoCompleteView.DisplayTextFormatter>
+                <local:MyTextFormatter/>
+            </telerikInput:RadAutoCompleteView.DisplayTextFormatter>
+        </telerikInput:RadAutoCompleteView>
+        <!-- << autocompleteview-features-textformatter-plain -->
+
+        <Label Text="Display Text Formatter when DisplayMode is Tokens"/>
+        <!-- >> autocompleteview-features-textformatter-tokens -->
+        <telerikInput:RadAutoCompleteView x:Name="radAutoCompleteView" 
+                                          ItemsSource="{Binding Source}"
+                                          TextSearchPath="Name" 
+                                          DisplayTextFormatter="Email"
+                                          BackgroundColor="White"
+                                          DisplayMode="Tokens" 
+                                          SuggestionViewHeight="150">
+        </telerikInput:RadAutoCompleteView>
+        <!-- << autocompleteview-features-textformatter-tokens -->
+    </StackLayout>
+</ContentView>

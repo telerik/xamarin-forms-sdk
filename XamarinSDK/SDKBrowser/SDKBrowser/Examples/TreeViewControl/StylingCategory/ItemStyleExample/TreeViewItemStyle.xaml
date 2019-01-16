@@ -1,89 +1,25 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:dataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
-             xmlns:treeView="clr-namespace:Telerik.XamarinForms.DataControls.TreeView;assembly=Telerik.XamarinForms.DataControls"
-             xmlns:treeViewExamples="clr-namespace:SDKBrowser.Examples.TreeViewControl.StylingCategory.ItemStyleExample"
-             xmlns:local="clr-namespace:SDKBrowser.Examples.TreeViewControl.StylingCategory.ItemStyleExample"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikTreeView="clr-namespace:Telerik.XamarinForms.DataControls.TreeView;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.TreeViewControl.StylingCategory"
              x:Class="SDKBrowser.Examples.TreeViewControl.StylingCategory.ItemStyleExample.TreeViewItemStyle">
-    <ContentView.Resources>
-        <ResourceDictionary>
-            <local:StringToColorConverter x:Key="stringToColorConverter"/>
-            <local:StringToBorderLocationConverter x:Key="stringToBorderLocationConverter"/>
-        </ResourceDictionary>
-    </ContentView.Resources>
-    <ContentView.BindingContext>
-        <local:ViewModel/>
-    </ContentView.BindingContext>
-    <ContentView.Content>
         <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition />
-            </Grid.RowDefinitions>
-            <StackLayout Spacing="4">
-                <Button Text="Reset ListView BindingContext" Clicked="Button_Clicked_2" />
-                <StackLayout Orientation="Horizontal">
-                    <Label VerticalOptions="Center" Text="BackgroundColor"/>
-                    <Picker x:Name="BackgroundColorPicker" SelectedItem="{Binding Background, Converter={StaticResource stringToColorConverter}, Mode=OneWayToSource}"
-                            HorizontalOptions="FillAndExpand" AutomationId="BackgroundColorPicker">
-                        <Picker.Items>
-                            <x:String>Lime</x:String>
-                            <x:String>Violet</x:String>
-                            <x:String>Purple</x:String>
-                            <x:String>Blue</x:String>
-                        </Picker.Items>
-                    </Picker>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Label VerticalOptions="Center" Text="BorderColor"/>
-                    <Picker x:Name="BorderColorPicker" SelectedItem="{Binding BorderColor, Converter={StaticResource stringToColorConverter}, Mode=OneWayToSource}"
-                            HorizontalOptions="FillAndExpand" AutomationId="BorderColorPicker">
-                        <Picker.Items>
-                            <x:String>Lime</x:String>
-                            <x:String>Violet</x:String>
-                            <x:String>Purple</x:String>
-                            <x:String>Blue</x:String>
-                        </Picker.Items>
-                    </Picker>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Label VerticalOptions="Center" Text="BorderLocation"/>
-                    <Picker x:Name="BorderLocationPicker" SelectedItem="{Binding BorderLocation, Converter={StaticResource stringToBorderLocationConverter}, Mode=OneWayToSource}"
-                            HorizontalOptions="FillAndExpand" AutomationId="BorderLocationPicker">
-                        <Picker.Items>
-                            <x:String>All</x:String>
-                            <x:String>Top</x:String>
-                            <x:String>Bottom</x:String>
-                            <x:String>None</x:String>
-                        </Picker.Items>
-                    </Picker>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Label VerticalOptions="Center" Text="BorderWidth"/>
-                    <Picker x:Name="BorderWidthPicker" SelectedItem="{Binding BorderWidth, Mode=OneWayToSource}" HorizontalOptions="FillAndExpand" AutomationId="BorderWidthPicker">
-                        <Picker.Items>
-                            <x:String>0</x:String>
-                            <x:String>5</x:String>
-                            <x:String>10</x:String>
-                            <x:String>15</x:String>
-                        </Picker.Items>
-                    </Picker>
-                </StackLayout>
-            </StackLayout>
-            <dataControls:RadTreeView ItemsSource="{Binding SmallSource}"
-                                      Grid.Row="1"
-                                      x:Name="tv">
-                <dataControls:RadTreeView.ItemStyle>
-                    <treeView:TreeViewItemStyle BackgroundColor="{Binding Background}"
-                                                BorderColor="{Binding BorderColor}"
-                                                BorderLocation="{Binding BorderLocation}"
-                                                BorderWidth="{Binding BorderWidth}" />
-                </dataControls:RadTreeView.ItemStyle>
-                <dataControls:TreeViewDescriptor DisplayMemberPath="Name"
-                                                    ItemsSourcePath="Children"
-                                                    TargetType="{x:Type treeViewExamples:Item}"/>
-            </dataControls:RadTreeView>
+          <!-- >> treeview-styling-itemstyle-xaml -->
+            <telerikDataControls:RadTreeView  x:Name="treeView"
+                                              ItemsSource="{Binding Source}">
+                <telerikDataControls:RadTreeView.ItemStyle>
+                  <telerikTreeView:TreeViewItemStyle BackgroundColor="#96CCFF"
+                                                TextCellTextColor="#AAC7F6"
+                                                BorderColor="#0A3A82"
+                                                BorderWidth="2"
+                                                BorderLocation="All" />
+                </telerikDataControls:RadTreeView.ItemStyle>
+                <telerikDataControls:TreeViewDescriptor DisplayMemberPath="Name"
+                                                        ItemsSourcePath="Children"
+                                                        TargetType="{x:Type local:Item}"/>
+            </telerikDataControls:RadTreeView>
+          <!-- << treeview-styling-itemstyle-xaml -->
         </Grid>
-    </ContentView.Content>
 </ContentView>

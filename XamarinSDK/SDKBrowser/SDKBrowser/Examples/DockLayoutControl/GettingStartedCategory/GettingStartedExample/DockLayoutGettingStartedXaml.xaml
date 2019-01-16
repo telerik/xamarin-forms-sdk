@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+             x:Class="SDKBrowser.Examples.DockLayoutControl.GettingStartedCategory.GettingStartedExample.DockLayoutGettingStartedXaml">
+    <Grid>
+        <!-- >> docklayout-getting-started-xaml -->
+        <telerikCommon:RadDockLayout x:Name="dockLayout">
+            <Grid HeightRequest="60"
+                  BackgroundColor="#009688"
+                  telerikCommon:RadDockLayout.Dock="Top">
+                <Label Margin="20" Text="Title"/>
+            </Grid>
+            <Grid HeightRequest="60"
+                  BackgroundColor="#659BFC"
+                  telerikCommon:RadDockLayout.Dock="Left">
+                <Label Margin="20" Text="Navigation" />
+            </Grid>
+            <Grid WidthRequest="120"
+                  BackgroundColor="#1455C9"
+                  telerikCommon:RadDockLayout.Dock="Bottom">
+                <Label Margin="20" Text="Bottom" />
+            </Grid>
+            <Grid HeightRequest="60" 
+                  BackgroundColor="#FCCFB0">
+                <Label Margin="20" Text="Content" />
+            </Grid>
+        </telerikCommon:RadDockLayout>
+        <!-- << docklayout-getting-started-xaml -->
+    </Grid>
+</ContentView>
