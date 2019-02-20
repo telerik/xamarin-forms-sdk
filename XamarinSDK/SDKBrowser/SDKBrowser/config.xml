@@ -2192,6 +2192,11 @@
               <Name>BusyIndicatorTemplate</Name>
               <Title>BusyIndicator Template</Title>
             </Example>
+            <Example>
+              <Page>Mvvm</Page>
+              <Name>Mvvm</Name>
+              <Title>Mvvm</Title>
+            </Example>
           </Examples>
         </Category>
       </Categories>

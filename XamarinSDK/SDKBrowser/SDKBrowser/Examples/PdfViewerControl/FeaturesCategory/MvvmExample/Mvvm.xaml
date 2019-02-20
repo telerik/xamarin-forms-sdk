@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPdfViewer="clr-namespace:Telerik.XamarinForms.PdfViewer;assembly=Telerik.XamarinForms.PdfViewer"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.PdfViewerControl.FeaturesCategory.MvvmExample"
+             xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+             x:Class="SDKBrowser.Examples.PdfViewerControl.FeaturesCategory.MvvmExample.Mvvm">
+
+    <BindableObject.BindingContext>
+        <local:MvvmViewModel />
+    </BindableObject.BindingContext>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <telerikCommon:RadUniformGrid>
+            <Button Text="Zoom in" Command="{Binding ZoomInCommand}" />
+            <Button Text="Zoom out" Command="{Binding ZoomOutCommand}" />
+            <Button Text="Zoom to 100%" Command="{Binding ResetZoomCommand}" />
+        </telerikCommon:RadUniformGrid>
+        <telerikPdfViewer:RadPdfViewer x:Name="pdfViewer" 
+                                       Grid.Row="1"
+                                       Source="{Binding Stream}"
+                                       ZoomInCommand="{Binding ZoomInCommand, Mode=OneWayToSource}"
+                                       ZoomOutCommand="{Binding ZoomOutCommand, Mode=OneWayToSource}" />
+    </Grid>
+
+</ContentView>

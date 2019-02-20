@@ -2,7 +2,7 @@
 
 namespace SDKBrowser.Examples.ChartControl.SeriesCategory
 {
-    // >> chart-series-view-model-3
+    // >> chart-series-series-categorical-view-model
     public class SeriesCategoricalViewModel
     {
         public ObservableCollection<CategoricalData> Data1 { get; set; }
@@ -40,5 +40,5 @@ namespace SDKBrowser.Examples.ChartControl.SeriesCategory
             return data;
         }
     }
-    // << chart-series-view-model-3
+    // << chart-series-series-categorical-view-model
 }

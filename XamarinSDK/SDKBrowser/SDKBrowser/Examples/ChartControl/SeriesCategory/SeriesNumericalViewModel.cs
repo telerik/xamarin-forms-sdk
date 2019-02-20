@@ -2,7 +2,7 @@
 
 namespace SDKBrowser.Examples.ChartControl.SeriesCategory
 {
-    // >> chart-series-view-model-5
+    // >> chart-series-series-numerical-view-model
     public class SeriesNumericalViewModel
     {
         public ObservableCollection<NumericalData> Data1 { get; set; }
@@ -47,5 +47,5 @@ namespace SDKBrowser.Examples.ChartControl.SeriesCategory
             return data;
         }
     }
-    // << chart-series-view-model-5
+    // << chart-series-series-numerical-view-model
 }

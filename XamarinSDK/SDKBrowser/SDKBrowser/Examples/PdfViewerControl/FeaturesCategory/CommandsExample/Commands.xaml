@@ -1,42 +1,29 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
              xmlns:telerikPdfViewer="clr-namespace:Telerik.XamarinForms.PdfViewer;assembly=Telerik.XamarinForms.PdfViewer"
-             xmlns:commandsexample="clr-namespace:SDKBrowser.Examples.PdfViewerControl.FeaturesCategory.CommandsExample"
              x:Class="SDKBrowser.Examples.PdfViewerControl.FeaturesCategory.CommandsExample.Commands">
     <!-- >> pdfviewer-commands-xaml -->
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <Button Text="Zoom In"
-                Grid.Column="0"
-                Command="{Binding Source={x:Reference pdfViewer}, Path=ZoomInCommand}"/>
-        <Button Text="Zoom Out"
-                Grid.Column="1"
-                Command="{Binding Source={x:Reference pdfViewer}, Path=ZoomOutCommand}"/>
-        <Button Text="Fit To Width"
-                Grid.Column="2"
-                Command="{Binding Source={x:Reference pdfViewer}, Path=FitToWidthCommand}"/>
-        <Button Text="Previous Page"
-                Grid.Row="1" 
-                Grid.Column="0" 
-                Command="{Binding Source={x:Reference pdfViewer}, Path=NavigateToPreviousPageCommand}"/>
-        <Button Text="Next Page"
-                Grid.Row="1"
-                Grid.Column="1"
-                Command="{Binding Source={x:Reference pdfViewer}, Path=NavigateToNextPageCommand}"/>
+        <telerikCommon:RadUniformGrid>
+            <Button Text="Zoom In"
+                    Command="{Binding Source={x:Reference pdfViewer}, Path=ZoomInCommand}" />
+            <Button Text="Zoom Out"
+                    Command="{Binding Source={x:Reference pdfViewer}, Path=ZoomOutCommand}" />
+            <Button Text="Fit To Width"
+                    Command="{Binding Source={x:Reference pdfViewer}, Path=FitToWidthCommand}" />
+            <Button Text="Previous Page"
+                    Command="{Binding Source={x:Reference pdfViewer}, Path=NavigateToPreviousPageCommand}" />
+            <Button Text="Next Page"
+                    Command="{Binding Source={x:Reference pdfViewer}, Path=NavigateToNextPageCommand}" />
+        </telerikCommon:RadUniformGrid>
         <telerikPdfViewer:RadPdfViewer x:Name="pdfViewer"
-                                       Grid.ColumnSpan="4"
-                                       Grid.Row="2"
+                                       Grid.Row="1"
                                        MinZoomLevel="0.3"
                                        MaxZoomLevel="4"/>
     </Grid>

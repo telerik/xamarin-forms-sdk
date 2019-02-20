@@ -2,17 +2,16 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:telerikPdfViewer="clr-namespace:Telerik.XamarinForms.PdfViewer;assembly=Telerik.XamarinForms.PdfViewer"
-             xmlns:telerikBusyIndicator="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
              x:Class="SDKBrowser.Examples.PdfViewerControl.FeaturesCategory.BusyIndicatorTemplateExample.BusyIndicatorTemplate">
     <!-- >> pdfviewer-busy-indicator-template-xaml -->
     <telerikPdfViewer:RadPdfViewer x:Name="pdfViewer">
         <telerikPdfViewer:RadPdfViewer.BusyIndicatorTemplate>
             <DataTemplate>
-                <telerikBusyIndicator:RadBusyIndicator x:Name="BusyIndicator"
-                                                       AnimationType="Animation10"
-                                                       AnimationContentHeightRequest="100"
-                                                       AnimationContentWidthRequest="100"
-                                                       IsBusy="True"/>
+                <telerikPrimitives:RadBusyIndicator AnimationType="Animation10"
+                                                    AnimationContentHeightRequest="100"
+                                                    AnimationContentWidthRequest="100"
+                                                    IsBusy="True" />
             </DataTemplate>
         </telerikPdfViewer:RadPdfViewer.BusyIndicatorTemplate>
     </telerikPdfViewer:RadPdfViewer>
