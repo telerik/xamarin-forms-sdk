@@ -40,7 +40,7 @@ namespace SDKBrowser.Examples.CalendarControl.StylingCategory.CellStylingExample
                     break;
                 case "Android":
                     background = Color.White;
-                    selectedCellForegroundColor = Color.FromRgb(139, 209, 0);
+                    selectedCellForegroundColor = Color.FromHex("FF0066CC");
                     fontSize = 15;
                     dayNamesFontSize = 15;
                     todayBorderThickness = new Thickness(1);

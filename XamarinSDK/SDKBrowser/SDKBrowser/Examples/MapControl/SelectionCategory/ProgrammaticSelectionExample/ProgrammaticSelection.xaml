@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikMap="clr-namespace:Telerik.XamarinForms.Map;assembly=Telerik.XamarinForms.Map"
+             x:Class="SDKBrowser.Examples.MapControl.SelectionCategory.ProgrammaticSelectionExample.ProgrammaticSelection">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Selection Mode:"/>
+            <Picker x:Name="smPicker" SelectedIndexChanged="SelectedModeChanged" WidthRequest="100" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Grid.Row="1">
+            <Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="Select country:" />
+            <Entry x:Name="cntrSelectEntry" HorizontalOptions="StartAndExpand" WidthRequest="100"/>
+            <Button Text="Select" Clicked="SelectClicked" HorizontalOptions="End"/>
+        </StackLayout>
+        <StackLayout Grid.Row="2" Orientation="Horizontal">           
+            <Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="Deselect country:" />
+            <Entry x:Name="cntrDeselectEntry" HorizontalOptions="StartAndExpand" WidthRequest="100"/>
+            <Button Text="Deselect" Clicked="DeselectClicked" HorizontalOptions="End"/>
+        </StackLayout>
+        <StackLayout Grid.Row="3" Orientation="Horizontal">
+            <!-- >> map-selectshapes-xaml -->
+            <Button Text="Select France" Clicked="SelectFranceClicked" />
+            <Button Text="Deselect France" Clicked="DeselectFranceClicked" />
+            <!-- << map-selectshapes-xaml -->
+            <Button Text="Deselect All" Clicked="DeselectAllClicked" />
+        </StackLayout>        
+        <Grid Grid.Row="5">
+            <!-- >> map-selection-mode-xaml -->
+            <telerikMap:RadMap x:Name="map">
+                <telerikMap:RadMap.Layers>
+                    <telerikMap:ShapefileLayer x:Name="mapShapeLayer" SelectionMode="Multiple">
+                        <telerikMap:ShapefileLayer.Reader>
+                            <telerikMap:MapShapeReader x:Name="reader"/>
+                        </telerikMap:ShapefileLayer.Reader>
+                    </telerikMap:ShapefileLayer>
+                </telerikMap:RadMap.Layers>
+            </telerikMap:RadMap>
+            <!-- << map-selection-mode-xaml -->
+        </Grid>
+    </Grid>
+</ContentView>

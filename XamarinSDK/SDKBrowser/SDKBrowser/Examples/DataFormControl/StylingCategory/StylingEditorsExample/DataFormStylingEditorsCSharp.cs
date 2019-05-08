@@ -14,26 +14,25 @@ namespace SDKBrowser.Examples.DataFormControl.StylingCategory.StylingEditorsExam
             dataForm.Source = new Customer();
 
             // >> dataform-styling-editors
-            var negative = "FF004C";
+            var negative = "F8082D";
 
             var style = new DataFormEditorStyle
             {
                 Background = new Background
                 {
-                    Fill = Color.FromHex("90C9E9"),
+                    Fill = Color.FromHex("EBF4FF"),
                     StrokeColor = Color.FromHex("B2DFF4"),
                     StrokeWidth = 2,
                     StrokeLocation = Location.Bottom
                 },
                 HeaderFontSize = 17,
-                HeaderForeground = Color.Black,
+                HeaderForeground = Color.FromHex("505050"),
                 FeedbackFontSize = 13,
                 PositiveFeedbackImage = ImageSource.FromFile("success.png"),
                 NegativeFeedbackImage = ImageSource.FromFile("fail.png"),
                 NegativeFeedbackForeground = Color.FromHex(negative),
                 NegativeFeedbackBackground = new Background
-                {
-                    Fill = Color.FromHex(30 + negative),
+                {                  
                     StrokeColor = Color.FromHex(negative),
                     StrokeWidth = 2,
                     StrokeLocation = Location.All
@@ -44,7 +43,7 @@ namespace SDKBrowser.Examples.DataFormControl.StylingCategory.StylingEditorsExam
             };
 
             dataForm.EditorStyle = style;
-            dataForm.BackgroundColor = Color.FromHex("2D66B9");
+            dataForm.BackgroundColor = Color.FromHex("B7D8FF");
             // << dataform-styling-editors
 
             this.Content = dataForm;

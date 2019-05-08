@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikMap="clr-namespace:Telerik.XamarinForms.Map;assembly=Telerik.XamarinForms.Map"
+             x:Class="SDKBrowser.Examples.MapControl.FeaturesCategory.SetBestViewExample.SetBestView">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <telerikMap:RadMap x:Name="map">
+            <telerikMap:RadMap.Layers>
+                <telerikMap:ShapefileLayer x:Name="mapShapeLayer">
+                    <telerikMap:ShapefileLayer.Reader>
+                        <telerikMap:MapShapeReader x:Name="reader"/>
+                    </telerikMap:ShapefileLayer.Reader>
+                </telerikMap:ShapefileLayer>
+            </telerikMap:RadMap.Layers>
+        </telerikMap:RadMap>
+        <StackLayout Grid.Row="1" Orientation="Horizontal">
+            <Button Text="Set view to Italy" Clicked="OnSetViewItalyClicked" />
+            <Button Text="Set best view" Clicked="OnSetBestViewClicked"/>
+        </StackLayout>       
+    </Grid>
+</ContentView>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using Telerik.XamarinForms.DataControls.ListView;
 using Xamarin.Forms;
+using SelectionMode = Telerik.XamarinForms.DataControls.ListView.SelectionMode;
 
 namespace SDKBrowser.Examples.ListViewControl.FeaturesCategory.SelectionExample
 {

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikMap="clr-namespace:Telerik.XamarinForms.Map;assembly=Telerik.XamarinForms.Map"
+             x:Class="SDKBrowser.Examples.MapControl.FeaturesCategory.InteractionModeExample.InteractionMode">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <!-- >> map-interaction-mode-xaml -->
+        <telerikMap:RadMap x:Name="map" InteractionMode="Zoom">
+            <telerikMap:RadMap.Layers>
+                <telerikMap:ShapefileLayer>
+                    <telerikMap:ShapefileLayer.Reader>
+                        <telerikMap:MapShapeReader x:Name="reader"/>
+                    </telerikMap:ShapefileLayer.Reader>
+                </telerikMap:ShapefileLayer>
+            </telerikMap:RadMap.Layers>
+        </telerikMap:RadMap>
+        <!-- << map-interaction-mode-xaml -->
+        <Picker x:Name="interactionModePicker" Grid.Row="1" SelectedIndex="0" SelectedIndexChanged="InteractionModeChanged"/>
+    </Grid>
+</ContentView>

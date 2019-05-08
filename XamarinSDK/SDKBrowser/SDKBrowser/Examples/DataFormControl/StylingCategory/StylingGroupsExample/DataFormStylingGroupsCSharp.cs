@@ -11,7 +11,7 @@ namespace SDKBrowser.Examples.DataFormControl.StylingCategory.StylingGroupsExamp
             // >> dataform-styling-groups-csharp
             var groupHeaderStyle = new DataFormGroupHeaderStyle
             {
-                Background = Color.FromHex("#FFC300"),
+                Background = Color.FromHex("#90C9E9"),
                 Foreground = Color.Black,
                 Height = 60,
                 Padding = new Thickness(20),

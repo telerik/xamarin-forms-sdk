@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikMap="clr-namespace:Telerik.XamarinForms.Map;assembly=Telerik.XamarinForms.Map"
+             x:Class="SDKBrowser.Examples.MapControl.GettingStartedCategory.GettingStartedExample.MapGettingStartedXaml">
+    <!-- >> map-getting-started-xaml -->
+    <telerikMap:RadMap x:Name="map">
+        <telerikMap:RadMap.Layers>
+            <telerikMap:ShapefileLayer>
+                <telerikMap:ShapefileLayer.Reader>
+                    <telerikMap:MapShapeReader x:Name="reader"/>
+                </telerikMap:ShapefileLayer.Reader>
+            </telerikMap:ShapefileLayer>
+        </telerikMap:RadMap.Layers>
+    </telerikMap:RadMap>
+    <!-- << map-getting-started-xaml -->
+</ContentView>

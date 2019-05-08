@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikImageEditor="clr-namespace:Telerik.XamarinForms.ImageEditor;assembly=Telerik.XamarinForms.ImageEditor"
+             x:Class="SDKBrowser.Examples.ImageEditorControl.FeaturesCategory.ImageEditorCustomToolbarExample.ImageEditorCustomToolbar">
+    <!-- >> imageeditor-custom-toolbar -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <telerikImageEditor:RadImageEditor x:Name="imageEditor">
+            <telerikImageEditor:RadImageEditor.Source>
+                <OnPlatform x:TypeArguments="ImageSource" Default="cat4.jpeg">
+                    <On Platform="UWP">Assets\cat4.jpeg</On>
+                </OnPlatform>
+            </telerikImageEditor:RadImageEditor.Source>
+        </telerikImageEditor:RadImageEditor>
+        <telerikImageEditor:RadImageEditorToolbar Grid.Row="1" ImageEditor="{x:Reference imageEditor}" AutoGenerateItems="False">
+            <telerikImageEditor:EffectsToolbarItem AutoGenerateItems="False">
+                <telerikImageEditor:ContrastToolbarItem AutoGenerateItems="False">
+                    <telerikImageEditor:CancelToolbarItem HorizontalOptions="Start" />
+                    <telerikImageEditor:TemplateToolbarItem>
+                        <telerikImageEditor:TemplateToolbarItem.Template>
+                            <DataTemplate>
+                                <Slider Maximum="2" Minimum="0" Value="{Binding Value}" />
+                            </DataTemplate>
+                        </telerikImageEditor:TemplateToolbarItem.Template>
+                    </telerikImageEditor:TemplateToolbarItem>
+                    <telerikImageEditor:ApplyToolbarItem HorizontalOptions="End" />
+                </telerikImageEditor:ContrastToolbarItem>
+            </telerikImageEditor:EffectsToolbarItem>
+            <telerikImageEditor:CropToolbarItem/>
+            <telerikImageEditor:RotateLeftToolbarItem/>
+            <telerikImageEditor:RotateRightToolbarItem/>
+            <telerikImageEditor:UndoToolbarItem/>
+            <telerikImageEditor:RedoToolbarItem/>
+        </telerikImageEditor:RadImageEditorToolbar>
+    </Grid>
+    <!-- << imageeditor-custom-toolbar -->
+</ContentView>

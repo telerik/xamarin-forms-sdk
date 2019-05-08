@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.props" Condition="Exists('..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.props')" />
+  <Import Project="..\..\packages\Xamarin.Forms.3.6.0.264807\build\Xamarin.Forms.props" Condition="Exists('..\..\packages\Xamarin.Forms.3.6.0.264807\build\Xamarin.Forms.props')" />
   <Import Project="..\..\config.targets" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -132,6 +132,7 @@
     <Compile Include="CustomNavigationRenderer.cs" />
     <Compile Include="Examples\ChartControl\CustomizationCategory\PointMarksEffect.cs" />
     <Compile Include="Examples\ChartControl\CustomizationCategory\GradientBarsEffect.cs" />
+    <Compile Include="Examples\DataFormControl\HowToCategory\EmailPasswordEditorsExample\EmailPasswordEditorsRenderer.cs" />
     <Compile Include="Examples\DataFormControl\HowToCategory\RadAutoCompleteEditorTokensExample\RadAutoCompleteEditorRenderer.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
@@ -175,8 +176,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Condition="'$(Configuration)|$(Platform)' == 'Tests|iPhoneSimulator' Or '$(Configuration)|$(Platform)' == 'Tests|iPhone'" Include="Calabash, Version=21.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.TestCloud.Agent.0.21.3\lib\Xamarin.iOS\Calabash.dll</HintPath>
+    <Reference Condition="'$(Configuration)|$(Platform)' == 'Tests|iPhoneSimulator' Or '$(Configuration)|$(Platform)' == 'Tests|iPhone'" Include="Calabash, Version=21.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.TestCloud.Agent.0.21.7\lib\Xamarin.iOS\Calabash.dll</HintPath>
     </Reference>
     <Reference Include="Plugin.Settings, Version=3.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xam.Plugins.Settings.3.1.1\lib\Xamarin.iOS10\Plugin.Settings.dll</HintPath>
@@ -184,88 +185,94 @@
     <Reference Include="Plugin.Settings.Abstractions, Version=3.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xam.Plugins.Settings.3.1.1\lib\Xamarin.iOS10\Plugin.Settings.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="SkiaSharp, Version=1.59.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SkiaSharp.1.59.3\lib\XamariniOS\SkiaSharp.dll</HintPath>
+    <Reference Include="SkiaSharp, Version=1.68.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SkiaSharp.1.68.0\lib\Xamarin.iOS\SkiaSharp.dll</HintPath>
     </Reference>
-    <Reference Include="SkiaSharp.Views.Forms, Version=1.59.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SkiaSharp.Views.Forms.1.59.3\lib\XamariniOS\SkiaSharp.Views.Forms.dll</HintPath>
+    <Reference Include="SkiaSharp.Views.Forms, Version=1.68.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SkiaSharp.Views.Forms.1.68.0\lib\Xamarin.iOS\SkiaSharp.Views.Forms.dll</HintPath>
     </Reference>
-    <Reference Include="SkiaSharp.Views.iOS, Version=1.59.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SkiaSharp.Views.1.59.3\lib\XamariniOS\SkiaSharp.Views.iOS.dll</HintPath>
+    <Reference Include="SkiaSharp.Views.iOS, Version=1.68.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SkiaSharp.Views.1.68.0\lib\Xamarin.iOS\SkiaSharp.Views.iOS.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Telerik.Documents.Core">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.220.1\lib\portable-net45+win8+wpa81+wp8\Telerik.Documents.Core.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.318.1\lib\portable-net45+win8+wpa81+wp8\Telerik.Documents.Core.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Documents.Fixed">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.220.1\lib\portable-net45+win8+wpa81+wp8\Telerik.Documents.Fixed.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.318.1\lib\portable-net45+win8+wpa81+wp8\Telerik.Documents.Fixed.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Documents.SpreadsheetStreaming, Version=2017.1.10421.234, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.220.1\lib\portable-net45+win8+wpa81+wp8\Telerik.Documents.SpreadsheetStreaming.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.318.1\lib\portable-net45+win8+wpa81+wp8\Telerik.Documents.SpreadsheetStreaming.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Xamarin.iOS, Version=2017.1.421.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.220.1\lib\xamarinios10\Telerik.Xamarin.iOS.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.318.1\lib\xamarinios10\Telerik.Xamarin.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.Barcode">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.220.1\lib\xamarinios10\Telerik.XamarinForms.Barcode.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.318.1\lib\xamarinios10\Telerik.XamarinForms.Barcode.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.Chart, Version=2017.1.10421.234, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.220.1\lib\xamarinios10\Telerik.XamarinForms.Chart.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.318.1\lib\xamarinios10\Telerik.XamarinForms.Chart.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.Common, Version=2017.1.10421.234, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.220.1\lib\xamarinios10\Telerik.XamarinForms.Common.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.318.1\lib\xamarinios10\Telerik.XamarinForms.Common.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.ConversationalUI">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.220.1\lib\xamarinios10\Telerik.XamarinForms.ConversationalUI.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.318.1\lib\xamarinios10\Telerik.XamarinForms.ConversationalUI.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.DataControls, Version=2017.1.10421.234, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.220.1\lib\xamarinios10\Telerik.XamarinForms.DataControls.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.318.1\lib\xamarinios10\Telerik.XamarinForms.DataControls.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.DataGrid, Version=2017.3.1219.240, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.220.1\lib\xamarinios10\Telerik.XamarinForms.DataGrid.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.318.1\lib\xamarinios10\Telerik.XamarinForms.DataGrid.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.DataVisualization, Version=2017.1.10421.234, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.220.1\lib\xamarinios10\Telerik.XamarinForms.DataVisualization.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.318.1\lib\xamarinios10\Telerik.XamarinForms.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.ImageEditor">
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.318.1\lib\xamarinios10\Telerik.XamarinForms.ImageEditor.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.Input, Version=2017.1.10421.234, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.220.1\lib\xamarinios10\Telerik.XamarinForms.Input.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.318.1\lib\xamarinios10\Telerik.XamarinForms.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.Map">
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.318.1\lib\xamarinios10\Telerik.XamarinForms.Map.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.PdfViewer">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.220.1\lib\xamarinios10\Telerik.XamarinForms.PdfViewer.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.318.1\lib\xamarinios10\Telerik.XamarinForms.PdfViewer.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.Primitives, Version=2017.1.10421.234, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.220.1\lib\xamarinios10\Telerik.XamarinForms.Primitives.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.318.1\lib\xamarinios10\Telerik.XamarinForms.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.SkiaSharp, Version=2017.1.10421.234, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.220.1\lib\xamarinios10\Telerik.XamarinForms.SkiaSharp.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.318.1\lib\xamarinios10\Telerik.XamarinForms.SkiaSharp.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Zip, Version=2017.1.10421.234, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.220.1\lib\portable-net45+win8+wpa81+wp8\Telerik.Zip.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.1.318.1\lib\portable-net45+win8+wpa81+wp8\Telerik.Zip.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.3.4.0.1008975\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.3.6.0.264807\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.3.4.0.1008975\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.3.6.0.264807\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Platform.iOS, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.3.4.0.1008975\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.3.6.0.264807\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.3.4.0.1008975\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.3.6.0.264807\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.iOS" />
     <Reference Include="Xamarin.iOS" />
@@ -540,12 +547,39 @@
   <ItemGroup>
     <BundleResource Include="Resources\PdfViewer%402x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Map%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Map%401,5x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Map%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cat4.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ImageEditor%401,5x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ImageEditor%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ImageEditor%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ImageEditor.png" />
+  </ItemGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.props'))" />
-    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.3.6.0.264807\build\Xamarin.Forms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.3.6.0.264807\build\Xamarin.Forms.props'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.3.6.0.264807\build\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.3.6.0.264807\build\Xamarin.Forms.targets'))" />
   </Target>
-  <Import Project="..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.targets')" />
+  <Import Project="..\..\packages\Xamarin.Forms.3.6.0.264807\build\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.3.6.0.264807\build\Xamarin.Forms.targets')" />
 </Project>

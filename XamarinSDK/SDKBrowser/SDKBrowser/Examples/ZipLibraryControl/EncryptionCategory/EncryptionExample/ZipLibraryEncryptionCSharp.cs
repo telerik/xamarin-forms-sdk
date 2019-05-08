@@ -38,7 +38,7 @@ namespace SDKBrowser.Examples.ZipLibraryControl.EncryptionCategory.EncryptionExa
 				Content = new StackLayout
 				{
 					Children = {
-						new Label { Text = "Wite some text:" },
+						new Label { Text = "Write some text:" },
 						new Frame { Content = inputEditor, OutlineColor = Color.Gray, BackgroundColor = Color.Transparent, Padding = new Thickness(0), HasShadow = false },
 						encryptionPassword,
 						encryptButton,

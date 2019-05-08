@@ -57,4 +57,12 @@
     <!-- >> xmlns-telericommon -->
     xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
     <!-- << xmlns-telericommon --></common>
+  <imageeditor>
+    <!-- >> xmlns-telerikimageeditor -->
+    xmlns:telerikImageEditor="clr-namespace:Telerik.XamarinForms.ImageEditor;assembly=Telerik.XamarinForms.ImageEditor"
+    <!-- << xmlns-telerikimageeditor --></imageeditor>
+  <map>
+    <!-- >> xmlns-telerikmap -->
+    xmlns:telerikMap="clr-namespace:Telerik.XamarinForms.Map;assembly=Telerik.XamarinForms.Map"
+    <!-- << xmlns-telerikmap --></map>
 </namespaces>

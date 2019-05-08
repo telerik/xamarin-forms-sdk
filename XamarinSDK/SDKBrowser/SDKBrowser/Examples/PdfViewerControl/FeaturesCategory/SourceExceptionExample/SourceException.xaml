@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPdfViewer="clr-namespace:Telerik.XamarinForms.PdfViewer;assembly=Telerik.XamarinForms.PdfViewer"
+             x:Class="SDKBrowser.Examples.PdfViewerControl.FeaturesCategory.SourceExceptionExample.SourceException">
+    <!-- >> pdfviewer-source-exception-xaml -->
+    <telerikPdfViewer:RadPdfViewer x:Name="pdfViewer" SourceException="PdfViewerSourceException">
+        <telerikPdfViewer:RadPdfViewer.SourceExceptionTemplate>
+            <DataTemplate>
+                <Label Text="Sorry, something with loading the pdf document went wrong." 
+                       TextColor="#404040"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       LineBreakMode="WordWrap" />
+            </DataTemplate>
+        </telerikPdfViewer:RadPdfViewer.SourceExceptionTemplate>
+    </telerikPdfViewer:RadPdfViewer>
+    <!-- << pdfviewer-source-exception-xaml -->
+</ContentView>

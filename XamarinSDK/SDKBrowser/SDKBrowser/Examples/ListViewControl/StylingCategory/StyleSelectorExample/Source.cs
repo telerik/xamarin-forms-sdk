@@ -2,7 +2,7 @@
 
 namespace SDKBrowser.Examples.ListViewControl.StylingCategory.StyleSelectorExample
 {
-    // >> listview-gettingstarted-source
+    // >> listview-styleselector-source
     public class SourceItem
     {
         public SourceItem(string name, int age)
@@ -32,6 +32,6 @@ namespace SDKBrowser.Examples.ListViewControl.StylingCategory.StyleSelectorExamp
 
         public List<SourceItem> Source { get; set; }
     }
-    // << listview-gettingstarted-source
+    // << listview-styleselector-source
 }
 

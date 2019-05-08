@@ -31,3 +31,9 @@ using Telerik.XamarinForms.DataControls;
 // >> ns-telerikcommon
 using Telerik.XamarinForms.Common;
 // << ns-telerikcommon
+// >> ns-telerikimageeditor
+using Telerik.XamarinForms.ImageEditor;
+// << ns-telerikimageeditor
+// >> ns-telerikmap
+using Telerik.XamarinForms.Map;
+// << ns-telerikmap

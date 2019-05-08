@@ -14,7 +14,7 @@
         <telerikGauges:RadRadialGauge.Indicators>
             <telerikGauges:GaugeShapeIndicator Fill="#FFDD789B" Value="5" />
             <telerikGauges:GaugeTextIndicator HorizontalTextPlacement="Left"
-                                              Text="text indicator at 5"
+                                              Text="indicator at 5"
                                               TextColor="#FFDD789B"
                                               VerticalTextPlacement="Bottom"
                                               Offset="15"
@@ -25,21 +25,23 @@
             <telerikGauges:GaugeTextIndicator FontAttributes="Italic, Bold"
                                               HorizontalTextPlacement="Right"
                                               Position="Start"
-                                              Text="text indicator at 35"
+                                              Text="indicator at 35"
                                               TextColor="#FFAAC271"
                                               VerticalTextPlacement="Bottom"
                                               Offset="15"
                                               Value="35" />
             <telerikGauges:GaugeShapeIndicator Fill="#FF4062AD" Value="65" />
+            <!-- >> gauge-text-indicator -->
             <telerikGauges:GaugeTextIndicator HorizontalTextPlacement="Right"
                                               Stroke="#FF4062AD"
                                               StrokeThickness="1"
-                                              Text="text indicator at 65"
+                                              Text="indicator at 65"
                                               TextColor="#FF4062AD"
                                               TextMargin="4"
                                               VerticalTextPlacement="Top"
                                               Offset="15"
                                               Value="65" />
+            <!-- << gauge-text-indicator -->
         </telerikGauges:RadRadialGauge.Indicators>
     </telerikGauges:RadRadialGauge>
 

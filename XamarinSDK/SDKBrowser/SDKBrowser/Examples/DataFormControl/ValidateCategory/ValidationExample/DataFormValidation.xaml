@@ -5,20 +5,18 @@
              xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition />
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
-        <StackLayout Grid.ColumnSpan="2">
-            <Label Text="Select validation mode" />
-            <Picker x:Name="validationModePicker" SelectedIndexChanged="ValidationModeChanged" />
+        <!-- >> dataform-validate-xaml -->
+        <telerikInput:RadDataForm x:Name="dataForm" 
+                                  Source="{Binding}"
+                                  ValidationMode="Manual"
+                                  FormValidationCompleted="DataFormValidationCompleted" />
+        <!-- << dataform-validate-xaml -->
+        <StackLayout Orientation="Horizontal" Grid.Row="1">
+            <Button Text="validate changes" Clicked="ValidateClicked" />
+            <Button Text="reload source" Clicked="ReloadFormClicked" />            
         </StackLayout>
-        <telerikInput:RadDataForm x:Name="dataForm" Source="{Binding}" Grid.Row="1" Grid.ColumnSpan="2" FormValidationCompleted="DataFormValidationCompleted" />
-        <Button Text="commit changes" Clicked="CommitClicked" Grid.Row="2" />
-        <Button Text="reload source" Clicked="ReloadFormClicked" Grid.Row="2" Grid.Column="1" />
     </Grid>
 </ContentView>

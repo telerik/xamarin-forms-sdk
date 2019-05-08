@@ -8,7 +8,11 @@
     <!-- >> dataform-styling-groups-xaml -->
     <telerikInput:RadDataForm Source="{Binding}">
         <telerikInput:RadDataForm.GroupHeaderStyle>
-            <telerikDataForm:DataFormGroupHeaderStyle Background="#FFC300" Foreground="Black" Height="60" Padding="20" TextAlignment="Center" />
+            <telerikDataForm:DataFormGroupHeaderStyle Background="#90C9E9" 
+                                                      Foreground="Black" 
+                                                      Height="60" 
+                                                      Padding="20" 
+                                                      TextAlignment="Center" />
         </telerikInput:RadDataForm.GroupHeaderStyle>
     </telerikInput:RadDataForm>
     <!-- << dataform-styling-groups-xaml -->

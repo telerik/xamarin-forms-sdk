@@ -3,22 +3,24 @@ using Telerik.XamarinForms.Common.DataAnnotations;
 
 namespace SDKBrowser.Examples.DataFormControl.HowToCategory.AutoCompleteEditorExample
 {
+    // >> dataform-howto-autocompleteeditor-source
     public class SourceItem : NotifyPropertyChangedBase
     {
-        private string animal;
+        private string city;
 
-        [DisplayOptions(Header = "Animal")]
-        public string Animal
+        [DisplayOptions(Header = "City")]
+        public string City
         {
-            get { return this.animal; }
+            get { return this.city; }
             set
             {
-                if (this.animal != value)
+                if (this.city != value)
                 {
-                    this.animal = value;
+                    this.city = value;
                     this.OnPropertyChanged();
                 }
             }
         }
     }
+    // << dataform-howto-autocompleteeditor-source
 }

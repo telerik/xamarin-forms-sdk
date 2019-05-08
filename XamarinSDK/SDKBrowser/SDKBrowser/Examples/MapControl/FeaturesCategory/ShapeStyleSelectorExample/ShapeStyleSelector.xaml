@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikMap="clr-namespace:Telerik.XamarinForms.Map;assembly=Telerik.XamarinForms.Map"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.MapControl.FeaturesCategory.ShapeStyleSelectorExample"
+             x:Class="SDKBrowser.Examples.MapControl.FeaturesCategory.ShapeStyleSelectorExample.ShapeStyleSelector">
+    <ContentView.Resources>
+        <!-- >> map-styling-shapeslstyleselector-styles -->
+        <ResourceDictionary>
+            <local:PopulationShapeStyleSelector x:Key="PopulationShapeStyleSelector">
+                <local:PopulationShapeStyleSelector.HighPopulationShapeStyle>
+                    <telerikMap:MapShapeStyle FillColor="DarkGreen" StrokeColor="LightGray"/>
+                </local:PopulationShapeStyleSelector.HighPopulationShapeStyle>
+                <local:PopulationShapeStyleSelector.MediumPopulationShapeStyle>
+                    <telerikMap:MapShapeStyle FillColor="Green" StrokeColor="LightGray"/>
+                </local:PopulationShapeStyleSelector.MediumPopulationShapeStyle>
+                <local:PopulationShapeStyleSelector.LowPopulationShapeStyle>
+                    <telerikMap:MapShapeStyle FillColor="LightGreen" StrokeColor="LightGray"/>
+                </local:PopulationShapeStyleSelector.LowPopulationShapeStyle>
+            </local:PopulationShapeStyleSelector>
+        </ResourceDictionary>
+        <!-- << map-styling-shapeslstyleselector-styles -->
+    </ContentView.Resources>
+    <!-- >> map-styling-shapeslstyleselector-xaml -->
+    <telerikMap:RadMap x:Name="map">
+        <telerikMap:RadMap.Layers>
+            <telerikMap:ShapefileLayer ShapeStyleSelector="{StaticResource PopulationShapeStyleSelector}">
+                <telerikMap:ShapefileLayer.Reader>
+                    <telerikMap:MapShapeReader x:Name="reader"/>
+                </telerikMap:ShapefileLayer.Reader>
+            </telerikMap:ShapefileLayer>
+        </telerikMap:RadMap.Layers>
+    </telerikMap:RadMap>
+    <!-- << map-styling-shapeslstyleselector-xaml -->
+</ContentView>

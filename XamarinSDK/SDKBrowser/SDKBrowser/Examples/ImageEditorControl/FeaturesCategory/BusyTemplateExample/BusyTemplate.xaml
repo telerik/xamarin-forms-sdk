@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikImageEditor="clr-namespace:Telerik.XamarinForms.ImageEditor;assembly=Telerik.XamarinForms.ImageEditor"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             x:Class="SDKBrowser.Examples.ImageEditorControl.FeaturesCategory.BusyTemplateExample.BusyTemplate">
+    
+    <!-- >> imageeditor-busy-template -->
+    <telerikImageEditor:RadImageEditor x:Name="imageEditor" >
+        <telerikImageEditor:RadImageEditor.Source>
+            <OnPlatform x:TypeArguments="ImageSource" Default="cat4.jpeg">
+                <On Platform="UWP">Assets\cat4.jpeg</On>
+            </OnPlatform>
+        </telerikImageEditor:RadImageEditor.Source>
+        <telerikImageEditor:RadImageEditor.BusyIndicatorTemplate>
+            <DataTemplate>
+                <telerikPrimitives:RadBusyIndicator AnimationType="Animation10"
+                                                    AnimationContentHeightRequest="100"
+                                                    AnimationContentWidthRequest="100"
+                                                    IsBusy="True" />
+            </DataTemplate>
+        </telerikImageEditor:RadImageEditor.BusyIndicatorTemplate>
+    </telerikImageEditor:RadImageEditor>
+    <!-- << imageeditor-busy-template -->
+</ContentView>

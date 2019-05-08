@@ -12,7 +12,7 @@ namespace SDKBrowser.Examples.DataFormControl.HowToCategory.AutoCompleteEditorEx
             this.InitializeComponent();
 
             // >> dataform-howto-autocompleteeditor-csharp
-            this.dataForm.RegisterEditor("Animal", EditorType.Custom);
+            this.dataForm.RegisterEditor("City", EditorType.Custom);
             // << dataform-howto-autocompleteeditor-csharp
         }
     }

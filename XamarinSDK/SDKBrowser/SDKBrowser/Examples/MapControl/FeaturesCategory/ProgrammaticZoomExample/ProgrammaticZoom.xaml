@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikMap="clr-namespace:Telerik.XamarinForms.Map;assembly=Telerik.XamarinForms.Map"
+             x:Class="SDKBrowser.Examples.MapControl.FeaturesCategory.ProgrammaticZoomExample.ProgrammaticZoom">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <!-- >> map-zoom-level-xaml -->
+        <telerikMap:RadMap x:Name="map" MinZoomLevel="2" MaxZoomLevel="5">
+            <telerikMap:RadMap.Layers>
+                <telerikMap:ShapefileLayer>
+                    <telerikMap:ShapefileLayer.Reader>
+                        <telerikMap:MapShapeReader x:Name="reader"/>
+                    </telerikMap:ShapefileLayer.Reader>
+                </telerikMap:ShapefileLayer>
+            </telerikMap:RadMap.Layers>
+        </telerikMap:RadMap>
+        <!-- << map-zoom-level-xaml -->
+        <StackLayout Grid.Row="1">
+            <Button Text="Zoom In" Command="{Binding Source={x:Reference map}, Path=ZoomInCommand}"/>
+            <Button Text="Zoom Out" Command="{Binding Source={x:Reference map}, Path=ZoomOutCommand}"/>
+            <StackLayout Orientation="Horizontal">
+                <Label VerticalTextAlignment="Center" Text="Zoom to level: "/>
+                <Entry x:Name="zoomLevelEntry" Completed="OnEntryCompleted" WidthRequest="50"/>
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentView>

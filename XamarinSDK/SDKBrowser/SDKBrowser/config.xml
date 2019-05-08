@@ -33,73 +33,14 @@
           <Title>Features</Title>
           <Examples>
             <Example>
-              <Page>AccordionItem</Page>
-              <Name>AccordionItem</Name>
-              <Title>Custom AccordionItem</Title>
-            </Example>
-          </Examples>
-        </Category>
-      </Categories>
-    </Control>
-    <Control>
-      <Name>AutoComplete</Name>
-      <Title>AutoComplete</Title>
-      <Icon>AutoComplete.png</Icon>
-      <Categories>
-        <Category>
-          <Name>GettingStarted</Name>
-          <Title>Getting Started</Title>
-          <Examples>
-            <Example>
-              <Page>AutoCompleteGettingStartedXaml</Page>
-              <Name>GettingStarted</Name>
-              <Title>Getting Started - Xaml</Title>
-            </Example>
-            <Example>
-              <Page>AutoCompleteGettingStartedCSharp</Page>
-              <Name>GettingStarted</Name>
-              <Title>Getting Started - Code</Title>
-            </Example>
-          </Examples>
-        </Category>
-        <Category>
-          <Name>Features</Name>
-          <Title>Features</Title>
-          <Examples>
-            <Example>
               <Page>KeyFeatures</Page>
               <Name>KeyFeatures</Name>
               <Title>Key Features</Title>
             </Example>
             <Example>
-              <Page>CustomNoResultsMessage</Page>
-              <Name>CustomNoResultsMessage</Name>
-              <Title>Custom No Results Message</Title>
-            </Example>
-            <Example>
-              <Page>ClearButtonVisibility</Page>
-              <Name>ClearButtonVisibility</Name>
-              <Title>Clear Button Visibility</Title>
-            </Example>
-            <Example>
-              <Page>DataBinding</Page>
-              <Name>DataBinding</Name>
-              <Title>Data Binding</Title>
-            </Example>
-            <Example>
-              <Page>SuggestionItemTemplate</Page>
-              <Name>SuggestionItemTemplate</Name>
-              <Title>Suggestion Item Template</Title>
-            </Example>
-            <Example>
-              <Page>CustomHighlight</Page>
-              <Name>CustomHighlight</Name>
-              <Title>Custom Text Highlight</Title>
-            </Example>
-            <Example>
-              <Page>CustomizedTokens</Page>
-              <Name>CustomizedTokens</Name>
-              <Title>Customized Tokens</Title>
+              <Page>AccordionItem</Page>
+              <Name>AccordionItem</Name>
+              <Title>Custom AccordionItem</Title>
             </Example>
           </Examples>
         </Category>
@@ -406,6 +347,12 @@
               <Page>CalendarViewModes</Page>
               <Name>CalendarViewModes</Name>
               <Title>View Modes</Title>
+            </Example>
+            <Example>
+              <Page>CalendarSelection</Page>
+              <Name>Selection</Name>
+              <Title>Selection Modes</Title>
+              <ExcludeFrom>UWP</ExcludeFrom>
             </Example>
             <Example>
               <Page>DayViewSettingsAndStyle</Page>
@@ -1255,7 +1202,7 @@
             <Example>
               <Page>DataFormCommitMode</Page>
               <Name>CommitMode</Name>
-              <Title>Commit Modes</Title>
+              <Title>Manual Commit</Title>
             </Example>
             <Example>
               <Page>DataFormValidation</Page>
@@ -1279,6 +1226,12 @@
               <Name>AutoCompleteEditor</Name>
               <Title>AutoComplete Editor</Title>
               <ExcludeFrom>UWP,iOS</ExcludeFrom>
+            </Example>
+            <Example>
+              <Page>DataFormEmailPasswordEditors</Page>
+              <Name>EmailPasswordEditors</Name>
+              <Title>Email and Password Editors</Title>
+              <ExcludeFrom>UWP,Android</ExcludeFrom>
             </Example>
           </Examples>
         </Category>
@@ -1717,6 +1670,55 @@
       </Categories>
     </Control>
     <Control>
+      <Name>ImageEditor</Name>
+      <Title>ImageEditor</Title>
+      <Icon>ImageEditor.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>ImageEditorGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>ImageEditorGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>ZoomLevel</Page>
+              <Name>ZoomLevel</Name>
+              <Title>Zoom Level</Title>
+            </Example>
+            <Example>
+              <Page>ImageEditorCustomToolbar</Page>
+              <Name>ImageEditorCustomToolbar</Name>
+              <Title>Custom Toolbar</Title>
+            </Example>
+            <Example>
+              <Page>CustomCommands</Page>
+              <Name>CustomCommands</Name>
+              <Title>Custom Command</Title>
+            </Example>
+            <Example>
+              <Page>BusyTemplate</Page>
+              <Name>BusyTemplate</Name>
+              <Title>Busy Template</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
       <Name>ListView</Name>
       <Title>ListView</Title>
       <Icon>ListView.png</Icon>
@@ -1983,6 +1985,81 @@
       </Categories>
     </Control>
     <Control>
+      <Name>Map</Name>
+      <Title>Map</Title>
+      <Icon>Map.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>MapGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Map Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>MapGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Map Getting Started - CSharp</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>ShapeStyle</Page>
+              <Name>ShapeStyle</Name>
+              <Title>Map Shape Style - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>ShapeStyleSelector</Page>
+              <Name>ShapeStyleSelector</Name>
+              <Title>Map Shape Style Selector - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>LabelAttributeName</Page>
+              <Name>LabelAttributeName</Name>
+              <Title>Map LabelAttributeName</Title>
+            </Example>
+            <Example>
+              <Page>ShapeLabelStyle</Page>
+              <Name>ShapeLabelStyle</Name>
+              <Title>Map Shape Label Style - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>InteractionMode</Page>
+              <Name>InteractionMode</Name>
+              <Title>Map Interaction Mode</Title>
+            </Example>
+            <Example>
+              <Page>ProgrammaticZoom</Page>
+              <Name>ProgrammaticZoom</Name>
+              <Title>Map Programmatic Zoom</Title>
+            </Example>
+            <Example>
+              <Page>SetBestView</Page>
+              <Name>SetBestView</Name>
+              <Title>Map Set Best View</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Selection</Name>
+          <Title>Selection</Title>
+          <Examples>
+            <Example>
+              <Page>ProgrammaticSelection</Page>
+              <Name>ProgrammaticSelection</Name>
+              <Title>Map Programmatic Selection</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
       <Name>MaskedInput</Name>
       <Title>MaskedInput</Title>
       <Icon>MaskedInput.png</Icon>
@@ -2196,6 +2273,11 @@
               <Page>Mvvm</Page>
               <Name>Mvvm</Name>
               <Title>Mvvm</Title>
+            </Example>
+            <Example>
+              <Page>SourceException</Page>
+              <Name>SourceException</Name>
+              <Title>Source Exception Template</Title>
             </Example>
           </Examples>
         </Category>

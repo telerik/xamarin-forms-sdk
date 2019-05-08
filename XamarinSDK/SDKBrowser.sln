@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDKBrowser.iOS", "SDKBrowse
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDKBrowser.Android", "SDKBrowser\SDKBrowser.Android\SDKBrowser.Android.csproj", "{D0229CD7-0786-4462-B449-9B336A92E23E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDKBrowser", "SDKBrowser\SDKBrowser\SDKBrowser.csproj", "{416D6BEF-4271-4D65-9B99-6FAF2B3A55A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SDKBrowser", "SDKBrowser\SDKBrowser\SDKBrowser.csproj", "{416D6BEF-4271-4D65-9B99-6FAF2B3A55A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -76,8 +76,6 @@ Global
 		{1F12E361-2F76-4E96-B36A-96C03D6AFD6E}.AppStore|ARM.Build.0 = Release|ARM
 		{1F12E361-2F76-4E96-B36A-96C03D6AFD6E}.AppStore|ARM.Deploy.0 = Release|ARM
 		{1F12E361-2F76-4E96-B36A-96C03D6AFD6E}.AppStore|iPhone.ActiveCfg = Release|x64
-		{1F12E361-2F76-4E96-B36A-96C03D6AFD6E}.AppStore|iPhone.Build.0 = Release|x64
-		{1F12E361-2F76-4E96-B36A-96C03D6AFD6E}.AppStore|iPhone.Deploy.0 = Release|x64
 		{1F12E361-2F76-4E96-B36A-96C03D6AFD6E}.AppStore|iPhoneSimulator.ActiveCfg = Release|x64
 		{1F12E361-2F76-4E96-B36A-96C03D6AFD6E}.AppStore|iPhoneSimulator.Build.0 = Release|x64
 		{1F12E361-2F76-4E96-B36A-96C03D6AFD6E}.AppStore|iPhoneSimulator.Deploy.0 = Release|x64
@@ -280,6 +278,7 @@ Global
 		{416D6BEF-4271-4D65-9B99-6FAF2B3A55A0}.AppStore|Any CPU.Build.0 = Release|Any CPU
 		{416D6BEF-4271-4D65-9B99-6FAF2B3A55A0}.AppStore|ARM.ActiveCfg = Release|Any CPU
 		{416D6BEF-4271-4D65-9B99-6FAF2B3A55A0}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{416D6BEF-4271-4D65-9B99-6FAF2B3A55A0}.AppStore|iPhone.Build.0 = Release|Any CPU
 		{416D6BEF-4271-4D65-9B99-6FAF2B3A55A0}.AppStore|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{416D6BEF-4271-4D65-9B99-6FAF2B3A55A0}.AppStore|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{416D6BEF-4271-4D65-9B99-6FAF2B3A55A0}.AppStore|Mixed Platforms.Build.0 = Release|Any CPU

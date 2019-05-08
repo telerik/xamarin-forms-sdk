@@ -4,8 +4,8 @@
              xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
              xmlns:local="clr-namespace:SDKBrowser.Examples.DataFormControl.HowToCategory.AutoCompleteEditorExample"
              x:Class="SDKBrowser.Examples.DataFormControl.HowToCategory.AutoCompleteEditorExample.DataFormAutoCompleteEditor">
-    <ContentPage.BindingContext>
+    <ContentView.BindingContext>
         <local:SourceItem />
-    </ContentPage.BindingContext>
+    </ContentView.BindingContext>
     <local:CustomAutoCompleteDataForm x:Name="dataForm" Source="{Binding}" />
 </ContentView>

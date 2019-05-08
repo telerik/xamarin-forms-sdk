@@ -57,7 +57,7 @@ namespace SDKBrowser.Examples.ChartControl.LegendCategory.CartesianChartRadLegen
                 LegendProvider = chart,
                 HeightRequest = 200,
                 LegendItemFontColor = Color.DarkGreen,
-                Orientation = LegendOrientation.Horizontal
+                Orientation = LegendOrientation.Vertical
             };
             // << chart-features-cartesianchart-legend-definition-cs
             container.Children.Add(chart);

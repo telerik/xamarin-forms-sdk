@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikImageEditor="clr-namespace:Telerik.XamarinForms.ImageEditor;assembly=Telerik.XamarinForms.ImageEditor"
+             x:Class="SDKBrowser.Examples.ImageEditorControl.FeaturesCategory.ZoomLevelExample.ZoomLevel">
+    <!-- >> imageeditor-zoom-level -->
+    <telerikImageEditor:RadImageEditor x:Name="imageEditor" 
+                                       MinZoomLevel="0.5" 
+                                       MaxZoomLevel="20">
+        <telerikImageEditor:RadImageEditor.Source>
+            <OnPlatform x:TypeArguments="ImageSource" Default="cat4.jpeg">
+                <On Platform="UWP">Assets\cat4.jpeg</On>
+            </OnPlatform>
+        </telerikImageEditor:RadImageEditor.Source>
+    </telerikImageEditor:RadImageEditor>
+    <!-- << imageeditor-zoom-level -->
+</ContentView>

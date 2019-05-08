@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikMap="clr-namespace:Telerik.XamarinForms.Map;assembly=Telerik.XamarinForms.Map"
+             x:Class="SDKBrowser.Examples.MapControl.FeaturesCategory.ShapeLabelStyleExample.ShapeLabelStyle">
+    <!-- >> map-styling-shapelabelstyle -->
+    <telerikMap:RadMap x:Name="map">
+        <telerikMap:RadMap.Layers>
+            <telerikMap:ShapefileLayer LabelAttributeName="CNTRY_NAME">
+                <telerikMap:ShapefileLayer.Reader>
+                    <telerikMap:MapShapeReader x:Name="reader"/>
+                </telerikMap:ShapefileLayer.Reader>
+                <telerikMap:ShapefileLayer.ShapeLabelStyle>
+                    <telerikMap:MapShapeLabelStyle TextColor="DarkRed"
+                                                   FontAttributes="Bold"
+                                                   FontSize="12"
+                                                   FontFamily="Arial"/>
+                </telerikMap:ShapefileLayer.ShapeLabelStyle>
+            </telerikMap:ShapefileLayer>
+        </telerikMap:RadMap.Layers>
+    </telerikMap:RadMap>
+    <!-- << map-styling-shapelabelstyle -->
+</ContentView>
