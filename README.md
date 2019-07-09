@@ -22,3 +22,11 @@ The solution features the following controls.
 |                                                                    | OHLC Chart                                                                           |[Conversational UI](https://www.telerik.com/xamarin-ui/conversational-ui) |                                                                      | 
 |                                                                    | Candlestick Chart                                                                    |                                                                          | 
 |||     
+
+## How to build the solution
+In order to build the solution you will need an active trial of [Telerik UI for Xamarin)(https://www.telerik.com/xamarin-ui). Once you get it, simply open the solution and add the Telerik Nuget server as described in [this artilce](https://docs.telerik.com/devtools/xamarin/installation-and-deployment/telerik-nuget-server). 
+
+If you already have dev version of Telerik UI for Xamarin, you can change the referenced trial nuget package to the dev one. Simply Uninstall **Telerik.UI.For.Xamarin.Trial** and install **Telerik.UI.For.Xamarin** from the Telerik Nuget Server. 
+
+## Documentation
+The documentation for Telerik UI for Xamarin can be found at the following address: https://docs.telerik.com/devtools/xamarin/introduction
