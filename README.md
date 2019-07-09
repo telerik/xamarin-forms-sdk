@@ -34,3 +34,9 @@ If you already have dev version of Telerik UI for Xamarin, you can change the re
 
 ## Documentation
 The documentation for Telerik UI for Xamarin can be found at the following address: https://docs.telerik.com/devtools/xamarin/introduction
+
+License
+-------
+
+See the [license file](LICENSE.md) and any additional license information attached to each sample.
+
