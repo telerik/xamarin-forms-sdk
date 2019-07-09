@@ -1,3 +1,5 @@
+![](../master/XamarinSDK/Telerik-UI-For-Xamarin-SDK-Image.png)
+
 # Telerik UI for Xamarin Forms Developer Focused Examples
 The Xamarin.Forms SDK is an easy-to-use infrastructure with many developer focused examples for the UI for Xamarin controls. This repository contains solution full with examples how to achieve different scenarios when working with the controls of [Telerik UI for Xamarin](https://www.telerik.com/xamarin-ui). While the [Demo Application](https://github.com/telerik/telerik-xamarin-forms-samples) repository features all controls of Telerik UI for Xamarin and their features, here you will find more of a quick, how-to-achieve certain use case pieces of code. 
 
