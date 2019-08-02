@@ -2,7 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace SDKBrowser.Examples.PathControl.GettingStartedCategory.MultiPathExample
+namespace SDKBrowser.Examples.PathControl.FeaturesCategory.MultiPathExample
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MultiPath : ContentView
@@ -17,8 +17,8 @@ namespace SDKBrowser.Examples.PathControl.GettingStartedCategory.MultiPathExampl
         private void Root_SizeChanged(object sender, System.EventArgs e)
         {
             double size = Math.Min(this.root.Width, this.root.Height / 2);
-            this.path1.WidthRequest = size;
-            this.path1.HeightRequest = size;
+            this.multiPath.WidthRequest = size;
+            this.multiPath.HeightRequest = size;
             this.path2.WidthRequest = size;
             this.path2.HeightRequest = size;
         }

@@ -15,7 +15,6 @@ namespace SDKBrowser.Examples.TreeViewControl.StylingCategory.ItemStyleSelectorE
                 var style = new TreeViewItemStyle();
                 if (dataItem.IsLeaf == true)
                 {
-                    style.TextCellTextColor = Color.FromHex("#AAC7F6");
                     style.BackgroundColor = Color.FromHex("#96CCFF");
                     style.BorderColor = Color.FromHex("#0A3A82");
                     style.BorderLocation = Telerik.XamarinForms.Common.Location.All;
@@ -23,7 +22,6 @@ namespace SDKBrowser.Examples.TreeViewControl.StylingCategory.ItemStyleSelectorE
                 }
                 else
                 {
-                    style.TextCellTextColor = Color.White;
                     style.BackgroundColor = Color.FromHex("#356BFF");
                     style.BorderColor = Color.FromHex("#96CCFF");
                     style.BorderLocation = Telerik.XamarinForms.Common.Location.All;

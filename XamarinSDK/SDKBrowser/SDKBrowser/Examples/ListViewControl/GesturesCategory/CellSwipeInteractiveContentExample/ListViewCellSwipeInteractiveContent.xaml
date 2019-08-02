@@ -37,6 +37,9 @@
                 </telerikListView:ListViewTemplateCell>
             </DataTemplate>
         </telerikDataControls:RadListView.ItemTemplate>
+        <telerikDataControls:RadListView.ItemStyle>
+            <telerikListView:ListViewItemStyle BackgroundColor="White" />
+        </telerikDataControls:RadListView.ItemStyle>
         <telerikDataControls:RadListView.ItemSwipeContentTemplate>
             <DataTemplate>
                 <Grid Margin="0"

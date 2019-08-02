@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.PathControl.FeaturesCategory.StylingExample.Styling">
+    <Grid>      
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="230" />
+        </Grid.RowDefinitions>
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <!--  >> path-styling-gradientbrush-xaml  -->
+            <telerikPrimitives:RadPath x:Name="gradientPath"
+                                       StrokeThickness="1"
+                                       Stroke="White"                                        
+                                       Geometry="{x:Static telerikInput:Geometries.Diamond}">
+                <telerikPrimitives:RadPath.Fill>
+                    <telerikCommon:RadSweepGradientBrush>
+                        <x:Arguments>
+                            <Point>0.5, 0.5</Point>
+                        </x:Arguments>
+                        <telerikCommon:RadSweepGradientStop>
+                            <x:Arguments>
+                                <Color>#1481FF</Color>
+                                <x:Double>180</x:Double>
+                            </x:Arguments>
+                        </telerikCommon:RadSweepGradientStop>                     
+                        <telerikCommon:RadSweepGradientStop>
+                            <x:Arguments>
+                                <Color>#BCE1FF</Color>
+                                <x:Double>360</x:Double>
+                            </x:Arguments>
+                        </telerikCommon:RadSweepGradientStop>
+                    </telerikCommon:RadSweepGradientBrush>
+                </telerikPrimitives:RadPath.Fill>
+            </telerikPrimitives:RadPath>
+            <!--  << path-styling-gradientbrush-xaml  -->
+            <Label Text="Path with SweepGradientBrush" 
+                   FontSize="11"
+                   TextColor="Black"
+                   HorizontalOptions="Center"
+                   Grid.Row="1"/>
+        </Grid>
+
+        <Grid Grid.Column="1" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <!--  >> path-styling-solidbrush-xaml  -->
+            <telerikPrimitives:RadPath x:Name="solidPath"
+                                       Grid.Row="0"
+                                       StrokeThickness="2" 
+                                       Stroke="#1481FF"
+                                       Fill="#BCE1FF">
+                <telerikCommon:RadPathGeometry>
+                    <telerikCommon:RadPathFigure StartPoint="0, 1">
+                        <telerikCommon:RadLineSegment Point="1, 1" />
+                        <telerikCommon:RadLineSegment Point="0.5, 0" />
+                        <telerikCommon:RadLineSegment Point="0, 1" />
+                    </telerikCommon:RadPathFigure>
+                </telerikCommon:RadPathGeometry>
+            </telerikPrimitives:RadPath>
+            <!--  << path-styling-solidbrush-xaml  -->
+            <Label Text="Path with SolidColorBrush" 
+                       FontSize="11"
+                       TextColor="Black"
+                       HorizontalOptions="Center"
+                       Grid.Row="1"/>
+        </Grid>
+    </Grid>
+</ContentView>

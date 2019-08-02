@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Telerik.XamarinForms.Primitives;
 using Xamarin.Forms;
 
@@ -10,14 +11,14 @@ namespace SDKBrowser.Examples.SideDrawerControl.FeaturesCategory.TransitionsExam
         {
             this.InitializeComponent();
 
-            this.drawerList.ItemsSource = new []
+            this.drawerList.ItemsSource = new[]
             {
                 "Inbox",
                 "Drafts",
                 "Sent Items"
             };
 
-            this.picker.ItemsSource = Enum.GetValues(typeof(SideDrawerTransitionType));
+            this.picker.ItemsSource = Enum.GetValues(typeof(SideDrawerTransitionType)).OfType<SideDrawerTransitionType>().Where(item => item != SideDrawerTransitionType.Custom).ToList();
             this.picker.SelectedItem = SideDrawerTransitionType.Push;
         }
 

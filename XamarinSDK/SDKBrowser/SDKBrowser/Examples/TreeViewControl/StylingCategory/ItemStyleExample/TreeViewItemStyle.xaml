@@ -5,21 +5,30 @@
              xmlns:telerikTreeView="clr-namespace:Telerik.XamarinForms.DataControls.TreeView;assembly=Telerik.XamarinForms.DataControls"
              xmlns:local="clr-namespace:SDKBrowser.Examples.TreeViewControl.StylingCategory"
              x:Class="SDKBrowser.Examples.TreeViewControl.StylingCategory.ItemStyleExample.TreeViewItemStyle">
-        <Grid>
-          <!-- >> treeview-styling-itemstyle-xaml -->
-            <telerikDataControls:RadTreeView  x:Name="treeView"
-                                              ItemsSource="{Binding Source}">
-                <telerikDataControls:RadTreeView.ItemStyle>
-                  <telerikTreeView:TreeViewItemStyle BackgroundColor="#96CCFF"
-                                                TextCellTextColor="#AAC7F6"
-                                                BorderColor="#0A3A82"
-                                                BorderWidth="2"
-                                                BorderLocation="All" />
-                </telerikDataControls:RadTreeView.ItemStyle>
-                <telerikDataControls:TreeViewDescriptor DisplayMemberPath="Name"
-                                                        ItemsSourcePath="Children"
-                                                        TargetType="{x:Type local:Item}"/>
-            </telerikDataControls:RadTreeView>
-          <!-- << treeview-styling-itemstyle-xaml -->
-        </Grid>
+    <Grid>
+        <!-- >> treeview-styling-itemstyle-xaml -->
+        <telerikDataControls:RadTreeView  x:Name="treeView"
+                                            ItemsSource="{Binding Source}">
+        <telerikDataControls:RadTreeView.Resources>
+            <ResourceDictionary>
+                <Style TargetType="telerikTreeView:ItemText">
+                    <Setter Property="TextColor" Value="#0A3A82"/>
+                </Style>
+                <Style TargetType="telerikTreeView:ExpandCollapseIndicator">
+                    <Setter Property="TextColor" Value="#0A3A82"/>
+                </Style>
+            </ResourceDictionary>
+        </telerikDataControls:RadTreeView.Resources>
+            <telerikDataControls:RadTreeView.ItemStyle>
+                <telerikTreeView:TreeViewItemStyle BackgroundColor="#96CCFF"
+                                            BorderColor="#0A3A82"
+                                            BorderWidth="2"
+                                            BorderLocation="All" />
+            </telerikDataControls:RadTreeView.ItemStyle>
+            <telerikDataControls:TreeViewDescriptor DisplayMemberPath="Name"
+                                                    ItemsSourcePath="Children"
+                                                    TargetType="{x:Type local:Item}"/>
+        </telerikDataControls:RadTreeView>
+        <!-- << treeview-styling-itemstyle-xaml -->
+    </Grid>
 </ContentView>

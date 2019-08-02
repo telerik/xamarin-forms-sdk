@@ -6,12 +6,11 @@
              x:Class="SDKBrowser.Examples.CheckBoxControl.FeaturesCategory.KeyFeaturesExample.KeyFeatures">
 
     <StackLayout>
-
         <Label Text="Setting IsChecked to null" />
         <!-- >> checkbox-key-features-ischeckednull-xaml -->
-        <telerikPrimitives:RadCheckBox x:Name="checkboxIsChecked" IsChecked="{x:Null}"  />
+        <telerikPrimitives:RadCheckBox x:Name="checkboxIsChecked" IsChecked="{Binding IsChecked}" IsThreeState="True" />
         <!-- << checkbox-key-features-ischeckednull-xaml -->
-        
+
         <Label Text="Setting StrokeWidth property" />
         <!-- >> checkbox-key-features-strokewidth-xaml -->
         <telerikPrimitives:RadCheckBox x:Name="checkboxStrokeWidth" StrokeWidth="5"/>
@@ -21,7 +20,5 @@
         <!-- >> checkbox-key-features-length-xaml -->
         <telerikPrimitives:RadCheckBox x:Name="checkboxLength" Length="40" StrokeWidth="5"/>
         <!-- << checkbox-key-features-length-xaml -->
-
     </StackLayout>
-
 </ContentView>

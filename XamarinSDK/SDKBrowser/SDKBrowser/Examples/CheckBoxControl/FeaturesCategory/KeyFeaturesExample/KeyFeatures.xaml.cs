@@ -9,12 +9,13 @@ using Xamarin.Forms.Xaml;
 
 namespace SDKBrowser.Examples.CheckBoxControl.FeaturesCategory.KeyFeaturesExample
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class KeyFeatures : ContentView
-	{
-		public KeyFeatures ()
-		{
-			InitializeComponent ();
-		}
-	}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class KeyFeatures : ContentView
+    {
+        public KeyFeatures ()
+        {
+            InitializeComponent ();
+            this.BindingContext = new ViewModel();
+        }
+    }
 }
