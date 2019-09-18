@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerikImageEditor="clr-namespace:Telerik.XamarinForms.ImageEditor;assembly=Telerik.XamarinForms.ImageEditor"
+             xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.ImageEditorControl.FeaturesCategory.CustomCropToolbarItemExample.CustomCropToolbarItem">
+    <!-- >> imageeditor-custom-crop-toolbar -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <telerikImageEditor:RadImageEditor x:Name="imageEditor">
+            <telerikImageEditor:RadImageEditor.Source>
+                <OnPlatform x:TypeArguments="ImageSource" Default="custom_toolbar.png">
+                    <On Platform="UWP">Assets\custom_toolbar.png</On>
+                </OnPlatform>
+            </telerikImageEditor:RadImageEditor.Source>
+        </telerikImageEditor:RadImageEditor>
+        <telerikImageEditor:RadImageEditorToolbar Grid.Row="1" ImageEditor="{x:Reference imageEditor}" AutoGenerateItems="False">
+            <telerikImageEditor:CropToolbarItem>
+                <telerikImageEditor:CropToolbarItem.CropDefinitions>
+                    <telerikImageEditor:CropDefinition AspectRatio="Free" Text="Free"/>
+                    <telerikImageEditor:CropDefinition AspectRatio="Original" Text="Original"/>
+                    <telerikImageEditor:CropDefinition Text="Circle" AspectRatio="1:1">
+                        <telerikImageEditor:CropDefinition.Geometry>
+                            <telerikCommon:RadEllipseGeometry Center="0.5,0.5" Radius="0.5,0.5"/>
+                        </telerikImageEditor:CropDefinition.Geometry>
+                    </telerikImageEditor:CropDefinition>
+                    <telerikImageEditor:CropDefinition Text="Rhombus">
+                        <telerikImageEditor:CropDefinition.Geometry>
+                            <telerikCommon:RadPathGeometry>
+                                <telerikCommon:RadPathFigure StartPoint="0.5, 0.0">
+                                    <telerikCommon:RadLineSegment Point="1.0, 0.5" />
+                                    <telerikCommon:RadLineSegment Point="0.5, 1.0" />
+                                    <telerikCommon:RadLineSegment Point="0.0, 0.5" />
+                                    <telerikCommon:RadLineSegment Point="0.5, 0.0" />
+                                </telerikCommon:RadPathFigure>
+                            </telerikCommon:RadPathGeometry>
+                        </telerikImageEditor:CropDefinition.Geometry>
+                    </telerikImageEditor:CropDefinition>
+                </telerikImageEditor:CropToolbarItem.CropDefinitions>
+            </telerikImageEditor:CropToolbarItem>
+        </telerikImageEditor:RadImageEditorToolbar>
+    </Grid>
+    <!-- << imageeditor-custom-crop-toolbar -->
+</ContentView>

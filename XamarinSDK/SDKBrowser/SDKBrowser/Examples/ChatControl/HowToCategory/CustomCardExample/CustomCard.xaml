@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:example="clr-namespace:SDKBrowser.Examples.ChatControl.HowToCategory.CustomCardExample"
+             xmlns:telerikConversationalUI="clr-namespace:Telerik.XamarinForms.ConversationalUI;assembly=Telerik.XamarinForms.ConversationalUI"
+             xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+             x:Class="SDKBrowser.Examples.ChatControl.HowToCategory.CustomCardExample.CustomCard">
+    <ContentView.Resources>
+        <telerikCommon:StringToBoolConverter x:Key="StringToBoolConverter" />
+
+        <DataTemplate x:Key="MyCardViewTemplate">
+            <example:MyCardView x:Name="view"
+                              Date="{Binding Date}"
+                              ContactDetails="{Binding ContactDetails}"                              
+                              Actions="{Binding Actions}" />
+        </DataTemplate>
+        <example:MyCardPickerTemplateSelector x:Key="MyCardPickerTemplateSelector" 
+                                            MyCardTemplate="{StaticResource MyCardViewTemplate}" />
+        <Style TargetType="telerikConversationalUI:CardPickerView">
+            <Setter Property="ItemTemplate" Value="{StaticResource MyCardPickerTemplateSelector}" />
+        </Style>
+    </ContentView.Resources>
+    <telerikConversationalUI:RadChat x:Name="chat" />
+</ContentView>

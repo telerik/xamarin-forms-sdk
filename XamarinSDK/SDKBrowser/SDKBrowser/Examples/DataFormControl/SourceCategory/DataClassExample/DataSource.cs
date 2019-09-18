@@ -10,7 +10,7 @@ namespace SDKBrowser.Examples.DataFormControl.SourceCategory.DataClassExample
         public string FirstName { get; set; }
 
         [DisplayOptions(Group = "Basic Info", PlaceholderText = "Last Name", Header = "Last Name")]
-        [NonEmptyValidator("Please fill the first name", "OK")]
+        [NonEmptyValidator("Please fill the last name", "OK")]
         public string LastName { get; set; }
 
         [DisplayOptions(Group = "Additional Info", Header = "Age")]

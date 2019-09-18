@@ -1,28 +1,28 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:telerik="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
              xmlns:primitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
              xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
              x:Class="SDKBrowser.Examples.AutoCompleteViewControl.FeaturesCategory.TokensExample.Tokens">
     <StackLayout>
         <!-- >> autocompleteview-tokentemplate-xaml -->
-        <telerik:RadAutoCompleteView DisplayMode="Tokens"
+        <telerikInput:RadAutoCompleteView DisplayMode="Tokens"
                                      ItemsSource="{Binding Source}"
                                      TextSearchPath="Name"
                                      Watermark="Search Here..."
                                      BackgroundColor="White">
-            <telerik:RadAutoCompleteView.ShowMoreTemplate>
+            <telerikInput:RadAutoCompleteView.ShowMoreTemplate>
                 <DataTemplate>
                     <Label Text="{Binding Path=., StringFormat='+{0} more'}" VerticalTextAlignment="Center" />
                 </DataTemplate>
-            </telerik:RadAutoCompleteView.ShowMoreTemplate>
-            <telerik:RadAutoCompleteView.NoResultsTemplate>
+            </telerikInput:RadAutoCompleteView.ShowMoreTemplate>
+            <telerikInput:RadAutoCompleteView.NoResultsTemplate>
                 <DataTemplate>
                     <Label Text="No match was found for the specific search. Please try again."/>
                 </DataTemplate>
-            </telerik:RadAutoCompleteView.NoResultsTemplate>
-        </telerik:RadAutoCompleteView>
+            </telerikInput:RadAutoCompleteView.NoResultsTemplate>
+        </telerikInput:RadAutoCompleteView>
         <!-- << autocompleteview-tokentemplate-xaml -->
     </StackLayout>
 </ContentView>

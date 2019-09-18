@@ -3,14 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
              xmlns:local="clr-namespace:SDKBrowser.Examples.TreeViewControl.FeaturesCategory"
-             xmlns:treeView="clr-namespace:Telerik.XamarinForms.DataControls.TreeView.Commands;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikTreeView="clr-namespace:Telerik.XamarinForms.DataControls.TreeView.Commands;assembly=Telerik.XamarinForms.DataControls"
              x:Class="SDKBrowser.Examples.TreeViewControl.FeaturesCategory.CommandsExample.TreeViewCommands">
     <Grid>
         <!-- >> treeview-commands-xaml -->
         <telerikDataControls:RadTreeView x:Name="treeView"
                                          ItemsSource="{Binding Source}">
             <telerikDataControls:RadTreeView.Commands>
-                <treeView:TreeViewUserCommand Id="ItemTap" 
+                <telerikTreeView:TreeViewUserCommand Id="ItemTap" 
                                               SuppressDefaultCommand="False" 
                                               Command="{Binding MyTapCommand}"/>
             </telerikDataControls:RadTreeView.Commands>

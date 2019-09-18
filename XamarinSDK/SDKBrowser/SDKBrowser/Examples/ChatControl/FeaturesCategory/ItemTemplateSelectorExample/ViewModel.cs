@@ -10,6 +10,7 @@ using Xamarin.Forms;
 
 namespace SDKBrowser.Examples.ChatControl.FeaturesCategory.ItemTemplateSelectorExample
 {
+    // >> chat-features-itemtemplate-items
     public class ViewModel : NotifyPropertyChangedBase
     {
         private Author me;
@@ -19,8 +20,6 @@ namespace SDKBrowser.Examples.ChatControl.FeaturesCategory.ItemTemplateSelectorE
 
             this.Me = new Author() { Name = "human", Avatar = prefix + "sampleAvatar.png" };
             this.Bot = new Author() { Name = "Bot", Avatar = prefix + "sampleBot.png" };
-
-            // >> chat-features-itemtemplate-items
             this.Items = new ObservableCollection<SimpleChatItem>();
 
             // Simulate async data loading
@@ -30,8 +29,8 @@ namespace SDKBrowser.Examples.ChatControl.FeaturesCategory.ItemTemplateSelectorE
                 this.Items.Add(new SimpleChatItem { Author = this.Bot, Text = "Please check our new privacy policy here:...", Category = MessageCategory.Important });
                 return false;
             });
-            // << chat-features-itemtemplate-items
         }
+        
         public Author Me
         {
             get
@@ -50,4 +49,5 @@ namespace SDKBrowser.Examples.ChatControl.FeaturesCategory.ItemTemplateSelectorE
         public Author Bot { get; set; }
         public IList<SimpleChatItem> Items { get; set; }
     }
+    // << chat-features-itemtemplate-items
 }

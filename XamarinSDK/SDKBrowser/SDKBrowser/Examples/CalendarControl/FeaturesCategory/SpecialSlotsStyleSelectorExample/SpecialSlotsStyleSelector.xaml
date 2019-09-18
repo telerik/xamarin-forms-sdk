@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.CalendarControl.FeaturesCategory.SpecialSlotsStyleSelectorExample"
+             x:Class="SDKBrowser.Examples.CalendarControl.FeaturesCategory.SpecialSlotsStyleSelectorExample.SpecialSlotsStyleSelector">
+    <ContentView.Resources>
+        <!-- >> calendar-specialslotsselector-resources -->
+        <ResourceDictionary>
+            <local:RestHoursStyleSelector x:Key="RestHoursStyleSelector">
+                <local:RestHoursStyleSelector.LunchBreakStyle>
+                    <telerikInput:CalendarSpecialSlotStyle BackgroundColor="#FFD09E"/>
+                </local:RestHoursStyleSelector.LunchBreakStyle>
+                <local:RestHoursStyleSelector.ShortBreakStyle>
+                    <telerikInput:CalendarSpecialSlotStyle BackgroundColor="#FFEAC6"/>
+                </local:RestHoursStyleSelector.ShortBreakStyle>
+            </local:RestHoursStyleSelector>
+        </ResourceDictionary>
+        <!-- << calendar-specialslotsselector-resources -->
+    </ContentView.Resources>
+    <!-- >> calendar-specialslotsselector-xaml -->
+    <telerikInput:RadCalendar x:Name="calendar"
+                              ViewMode="MultiDay"
+                              SchedulingUiEnabled="True">
+        <telerikInput:RadCalendar.MultiDayViewSettings>
+            <telerikInput:MultiDayViewSettings VisibleDays="7"                                             
+                                               SpecialSlotsSource="{Binding RestHours}"
+                                               SpecialSlotStyleSelector="{StaticResource RestHoursStyleSelector}"/>
+        </telerikInput:RadCalendar.MultiDayViewSettings>
+    </telerikInput:RadCalendar>
+    <!-- << calendar-specialslotsselector-xaml -->
+</ContentView>

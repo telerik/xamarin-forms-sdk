@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.CalendarControl.FeaturesCategory.CustomSlotsExample.CustomSlots">
+    <ContentView.Resources>
+        <!-- >> calendar-customslots-resources -->
+        <DataTemplate x:Key="RestHoursTemplate">
+            <Label Text="{Binding Title}" 
+                   Margin="5"
+                   TextColor="#29398D"
+                   FontSize="10" />
+        </DataTemplate>
+        <!-- << calendar-customslots-resources -->
+    </ContentView.Resources>
+    <!-- >> calendar-customslots-xaml -->
+    <telerikInput:RadCalendar x:Name="calendar"
+                              ViewMode="MultiDay"
+                              SchedulingUiEnabled="True">
+        <telerikInput:RadCalendar.MultiDayViewSettings>
+            <telerikInput:MultiDayViewSettings VisibleDays="7"                                             
+                                               SpecialSlotsSource="{Binding RestHours}"
+                                               SpecialSlotContentTemplate="{StaticResource RestHoursTemplate}"/>
+        </telerikInput:RadCalendar.MultiDayViewSettings>
+    </telerikInput:RadCalendar>
+    <!-- << calendar-customslots-xaml -->
+</ContentView>

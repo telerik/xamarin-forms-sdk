@@ -6,9 +6,12 @@
              xmlns:local="clr-namespace:SDKBrowser.Examples.TreeViewControl.FeaturesCategory.ItemTemplateExample"
              x:Class="SDKBrowser.Examples.TreeViewControl.FeaturesCategory.ItemTemplateExample.ItemTemplate">
     <ContentView.Resources>
+        <!-- >> treeview-itemtemplate-converters -->
         <ResourceDictionary>
             <local:ImageSourceConverter x:Key="ImageSourceConverter" />
+            <telerikTreeView:LevelToMarginConverter x:Key="levelToMarginConverter" />
         </ResourceDictionary>
+        <!-- << treeview-itemtemplate-converters -->
     </ContentView.Resources>
     <Grid>
         <!-- >> treeview-itemtemplate-xaml -->
@@ -19,21 +22,21 @@
                                                     TargetType="{x:Type local:Country}">
                 <telerikDataControls:TreeViewDescriptor.ItemTemplate>
                     <DataTemplate>
-                        <Grid Margin="40,0,0,0"
+                        <Grid Margin="{Binding Path=Level, Converter={StaticResource levelToMarginConverter}}"
                               HeightRequest="40">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <telerikTreeView:ExpandCollapseIndicator WidthRequest="40"
-                                                              VerticalOptions="Center"
-                                                              FontSize="Medium"
-                                                              IsLoading="{Binding Path=IsLoading}"
-                                                              IsLoadOnDemandEnabled="{Binding Path=IsLoadOnDemandEnabled}"
-                                                              IsExpanded="{Binding Path=IsExpanded}"
-                                                              IsLeaf="{Binding Path=IsLeaf}"
-                                                              BackgroundColor="Transparent" />
+                            <telerikTreeView:ExpandCollapseIndicator FontSize="Medium"
+                                                                     WidthRequest="10"
+                                                                     Margin="15,0"
+                                                                     VerticalTextAlignment="Center"
+                                                                     IsLoading="{Binding Path=IsLoading}"
+                                                                     IsLoadOnDemandEnabled="{Binding Path=IsLoadOnDemandEnabled}"
+                                                                     IsExpanded="{Binding Path=IsExpanded}"
+                                                                     IsLeaf="{Binding Path=IsLeaf}" />        
                             <Image Grid.Column="1"
                                    VerticalOptions="Center"
                                    Source="{Binding Item.Icon, Converter={StaticResource ImageSourceConverter}}" />

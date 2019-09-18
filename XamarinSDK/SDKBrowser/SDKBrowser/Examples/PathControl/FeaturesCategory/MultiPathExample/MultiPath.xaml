@@ -15,41 +15,39 @@
   </VisualElement.Resources>
 
   <ContentView.Content>
-    <Grid x:Name="root">
-      <Grid.RowDefinitions>
-        <RowDefinition />
-        <RowDefinition />
-      </Grid.RowDefinitions>
-
-       <!--  >> path-multipath-xaml  -->
-      <telerikPrimitives:RadMultiPath x:Name="multiPath"
+        <!--  >> path-multipath-xaml  -->
+        <Grid x:Name="root">
+            <Grid.RowDefinitions>
+              <RowDefinition />
+              <RowDefinition />
+            </Grid.RowDefinitions>
+            <telerikPrimitives:RadMultiPath x:Name="multiPath"
                                       Grid.Row="0"
                                       HorizontalOptions="Center"
                                       VerticalOptions="Center">
-        <telerikPrimitives:RadPathDefinition Fill="#FF4285F4">
-          <telerikCommon:RadPathGeometry>
-            <telerikCommon:RadPathFigure>
-              <telerikCommon:RadArcSegment Center="0.5, 0.5" SweepAngle="360" Size="0.9, 0.9" />
-            </telerikCommon:RadPathFigure>
-          </telerikCommon:RadPathGeometry>
-        </telerikPrimitives:RadPathDefinition>
-        <telerikPrimitives:RadPathDefinition Fill="#FFEA4335">
-          <telerikCommon:RadPathGeometry>
-            <telerikCommon:RadPathFigure>
-              <telerikCommon:RadArcSegment Center="0.5, 0.5" SweepAngle="360" Size="0.6, 0.6" />
-            </telerikCommon:RadPathFigure>
-          </telerikCommon:RadPathGeometry>
-        </telerikPrimitives:RadPathDefinition>
-        <telerikPrimitives:RadPathDefinition Fill="#FFFBBC05">
-          <telerikCommon:RadPathGeometry>
-            <telerikCommon:RadPathFigure>
-              <telerikCommon:RadArcSegment Center="0.5, 0.5" SweepAngle="360" Size="0.3, 0.3" />
-            </telerikCommon:RadPathFigure>
-          </telerikCommon:RadPathGeometry>
-        </telerikPrimitives:RadPathDefinition>
-      </telerikPrimitives:RadMultiPath>
-      <!--  << path-multipath-xaml  -->
-      <telerikPrimitives:RadMultiPath x:Name="path2"
+                <telerikPrimitives:RadPathDefinition Fill="#FF4285F4">
+                    <telerikCommon:RadPathGeometry>
+                        <telerikCommon:RadPathFigure>
+                            <telerikCommon:RadArcSegment Center="0.5, 0.5" SweepAngle="360" Size="0.9, 0.9" />
+                        </telerikCommon:RadPathFigure>
+                    </telerikCommon:RadPathGeometry>
+                </telerikPrimitives:RadPathDefinition>
+                <telerikPrimitives:RadPathDefinition Fill="#FFEA4335">
+                    <telerikCommon:RadPathGeometry>
+                        <telerikCommon:RadPathFigure>
+                            <telerikCommon:RadArcSegment Center="0.5, 0.5" SweepAngle="360" Size="0.6, 0.6" />
+                        </telerikCommon:RadPathFigure>
+                    </telerikCommon:RadPathGeometry>
+                </telerikPrimitives:RadPathDefinition>
+                <telerikPrimitives:RadPathDefinition Fill="#FFFBBC05">
+                    <telerikCommon:RadPathGeometry>
+                        <telerikCommon:RadPathFigure>
+                            <telerikCommon:RadArcSegment Center="0.5, 0.5" SweepAngle="360" Size="0.3, 0.3" />
+                        </telerikCommon:RadPathFigure>
+                    </telerikCommon:RadPathGeometry>
+                </telerikPrimitives:RadPathDefinition>
+            </telerikPrimitives:RadMultiPath>
+            <telerikPrimitives:RadMultiPath x:Name="path2"
                                       Grid.Row="1"
                                       HorizontalOptions="Center"
                                       VerticalOptions="Center">
@@ -78,7 +76,7 @@
           </telerikCommon:RadPathGeometry>
         </telerikPrimitives:RadPathDefinition>
       </telerikPrimitives:RadMultiPath>
-
     </Grid>
-  </ContentView.Content>
+        <!--  << path-multipath-xaml  -->
+    </ContentView.Content>
 </ContentView>

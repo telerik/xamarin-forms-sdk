@@ -9,12 +9,12 @@ namespace SDKBrowser.Examples.PathControl.GettingStartedCategory.GettingStartedE
 	{
 		public PathGettingStartedCSharp ()
 		{
+            // >> path-gettingstarted-starpath-code
             var mainGrid = new Grid() { ColumnSpacing = 20, RowSpacing = 10};
             mainGrid.RowDefinitions.Add(new RowDefinition() { Height = 200 });
             mainGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Star });
             mainGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Star });
-
-            // >> path-gettingstarted-starpath-code
+            
             var starPath = new RadPath()
             {
                 Geometry = Geometries.Star,

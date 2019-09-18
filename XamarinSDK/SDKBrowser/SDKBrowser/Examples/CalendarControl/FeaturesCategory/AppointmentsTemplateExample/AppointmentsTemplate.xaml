@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.CalendarControl.FeaturesCategory.AppointmentsTemplateExample"
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.CalendarControl.FeaturesCategory.AppointmentsTemplateExample.AppointmentsTemplate">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <!-- >> calendar-appointments-template-selector -->
+            <local:DayViewAppointmentTemplateSelector x:Key="DayViewAppointmentTemplateSelector">
+                <local:DayViewAppointmentTemplateSelector.AllDay>
+                    <DataTemplate>
+                        <Grid>
+                            <Label Text="{Binding Title}" FontSize="16" TextColor="Black"/>
+                        </Grid>
+                    </DataTemplate>
+                </local:DayViewAppointmentTemplateSelector.AllDay>
+                <local:DayViewAppointmentTemplateSelector.NotAllDay>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout>
+                                <Label Text="{Binding Title}" FontSize="20" TextColor="Black"/>
+                                <Label Text="{Binding Detail}" FontSize="14" TextColor="Black"/>
+                            </StackLayout>
+                            <Image Source="favourite.png" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1"/>
+                        </Grid>
+                    </DataTemplate>
+                </local:DayViewAppointmentTemplateSelector.NotAllDay>
+            </local:DayViewAppointmentTemplateSelector>
+            <!-- << calendar-appointments-template-selector -->
+        </ResourceDictionary>
+    </ContentView.Resources>
+    
+    <!-- >> calendar-appointments-template-example -->
+    <telerikInput:RadCalendar x:Name="calendar"
+                              ViewMode="Day"
+                              AppointmentsSource="{Binding Appointments}"
+                              SchedulingUiEnabled="True">
+        <telerikInput:RadCalendar.BindingContext>
+            <local:AppointmentsTemplateViewModel/>
+        </telerikInput:RadCalendar.BindingContext>
+        <telerikInput:RadCalendar.DayViewSettings>
+            <telerikInput:DayViewSettings AppointmentContentTemplate="{StaticResource DayViewAppointmentTemplateSelector}"/>
+        </telerikInput:RadCalendar.DayViewSettings>
+    </telerikInput:RadCalendar>
+    <!-- << calendar-appointments-template-example -->
+</ContentView>

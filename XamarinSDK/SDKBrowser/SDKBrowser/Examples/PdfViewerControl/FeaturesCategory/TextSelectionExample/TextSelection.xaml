@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"   
+             xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+             xmlns:telerikPdfViewer="clr-namespace:Telerik.XamarinForms.PdfViewer;assembly=Telerik.XamarinForms.PdfViewer"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             x:Class="SDKBrowser.Examples.PdfViewerControl.FeaturesCategory.TextSelectionExample.TextSelection">
+    <ContentView.Resources>
+        <!-- >> pdfviewer-features-textselection-resources -->
+        <ResourceDictionary>
+            <Style TargetType="telerikPdfViewer:SelectionMenu">
+                <Setter Property="Fill" Value="#32CD32" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+
+            <telerikCommon:ColorToRadBrushConverter x:Key="colorToRadBrushConverter" />
+            <telerikPdfViewer:SelectionMenuArrowPositionToGridRowConverter x:Key="arrowPositionToRowConverter" />
+
+            <ControlTemplate x:Key="CustomSelectionMenuTemplate">
+                <Grid RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="7" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="7" />
+                    </Grid.RowDefinitions>
+                    <telerikPdfViewer:SelectionMenuArrow Position="{TemplateBinding ArrowPosition}"
+                                                         Grid.Row="{TemplateBinding ArrowPosition, Converter={StaticResource arrowPositionToRowConverter}}"
+                                                         Fill="{TemplateBinding Fill, Converter={StaticResource colorToRadBrushConverter}}"
+                                                         WidthRequest="9"
+                                                         HeightRequest="7"
+                                                         HorizontalOptions="Center" />
+                    <telerikPrimitives:RadBorder BackgroundColor="{TemplateBinding Fill}"
+                                                 Grid.Row="1"
+                                                 CornerRadius="2"
+                                                 BorderThickness="0">
+                        <telerikPdfViewer:SelectionMenuToolbar Margin="8, 5, 8, 5"
+                                                               OverflowButtonTextColor="{TemplateBinding TextColor}"
+                                                               OverflowPopupBackgroundColor="{TemplateBinding Fill}"
+                                                               MenuItems="{TemplateBinding MenuItems}" />
+                    </telerikPrimitives:RadBorder>
+                </Grid>
+            </ControlTemplate>
+        </ResourceDictionary>
+        <!-- << pdfviewer-features-textselection-resources -->
+    </ContentView.Resources>
+    <!-- >> pdfviewer-features-textselection-xaml -->
+    <telerikPdfViewer:RadPdfViewer x:Name="pdfViewer">
+        <telerikPdfViewer:RadPdfViewer.SelectionSettings>
+            <telerikPdfViewer:SelectionSettings SelectionFill="#3332CD32"
+                                                SelectionIndicatorColor="#32CD32"
+                                                SelectionMenuControlTemplate="{StaticResource CustomSelectionMenuTemplate}">
+                <telerikPdfViewer:SelectionSettings.MenuItems>
+                    <telerikPdfViewer:SelectionMenuItemCollection>
+                        <telerikPdfViewer:SelectionMenuItem Text="Get Text" Command="{Binding GetSelectedTextCommand}" />
+                    </telerikPdfViewer:SelectionMenuItemCollection>
+                </telerikPdfViewer:SelectionSettings.MenuItems>
+            </telerikPdfViewer:SelectionSettings>
+        </telerikPdfViewer:RadPdfViewer.SelectionSettings>
+    </telerikPdfViewer:RadPdfViewer>
+    <!-- << pdfviewer-features-textselection-xaml -->
+</ContentView>

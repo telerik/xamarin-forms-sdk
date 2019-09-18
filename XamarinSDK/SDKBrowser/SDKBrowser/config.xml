@@ -365,6 +365,26 @@
               <Title>Day View Appointment Tapped</Title>
             </Example>
             <Example>
+              <Page>AppointmentsTemplate</Page>
+              <Name>AppointmentsTemplate</Name>
+              <Title>Appointments Template</Title>
+            </Example>
+            <Example>
+              <Page>SpecialSlots</Page>
+              <Name>SpecialSlots</Name>
+              <Title>Special Slots</Title>
+            </Example>
+            <Example>
+              <Page>SpecialSlotsStyleSelector</Page>
+              <Name>SpecialSlotsStyleSelector</Name>
+              <Title>SpecialSlots StyleSelector</Title>
+            </Example>
+            <Example>
+              <Page>CustomSlots</Page>
+              <Name>CustomSlots</Name>
+              <Title>Custom Slots</Title>
+            </Example>
+            <Example>
               <Page>ProgrammaticScrolling</Page>
               <Name>ProgrammaticScrolling</Name>
               <Title>Programmatic Scrolling</Title>
@@ -916,9 +936,56 @@
               <Title>ItemTemplateSelector</Title>
             </Example>
             <Example>
+              <Page>Commands</Page>
+              <Name>Commands</Name>
+              <Title>Commands</Title>
+            </Example>
+            <Example>
               <Page>Customization</Page>
               <Name>Customization</Name>
               <Title>Customization</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>ChatPickers</Name>
+          <Title>Chat Pickers</Title>
+          <Examples>
+            <Example>
+              <Page>PickerInsideChat</Page>
+              <Name>PickerInsideChat</Name>
+              <Title>Picker inside Chat</Title>
+            </Example>
+            <Example>
+              <Page>ChooseDate</Page>
+              <Name>ChooseDate</Name>
+              <Title>Date Picker</Title>
+            </Example>
+            <Example>
+              <Page>ChooseTime</Page>
+              <Name>ChooseTime</Name>
+              <Title>Time Picker</Title>
+            </Example>
+            <Example>
+              <Page>ChooseItem</Page>
+              <Name>ChooseItem</Name>
+              <Title>Item Picker</Title>
+            </Example>
+            <Example>
+              <Page>ChooseCard</Page>
+              <Name>ChooseCard</Name>
+              <Title>Card Picker</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>HowTo</Name>
+          <Title>How To</Title>
+          <Examples>
+            <Example>
+              <Page>CustomCard</Page>
+              <Name>CustomCard</Name>
+              <Title>Custom Cards</Title>
             </Example>
           </Examples>
         </Category>
@@ -1710,9 +1777,14 @@
               <Title>Custom Toolbar</Title>
             </Example>
             <Example>
-              <Page>CustomCommands</Page>
-              <Name>CustomCommands</Name>
-              <Title>Custom Command</Title>
+              <Page>CustomCropToolbarItem</Page>
+              <Name>CustomCropToolbarItem</Name>
+              <Title>Custom CropToolbar Item</Title>
+            </Example>
+            <Example>
+              <Page>SaveImage</Page>
+              <Name>SaveImage</Name>
+              <Title>Save Image</Title>
             </Example>
             <Example>
               <Page>BusyTemplate</Page>
@@ -2301,6 +2373,16 @@
               <Title>Mvvm</Title>
             </Example>
             <Example>
+              <Page>LinkAnnotation</Page>
+              <Name>LinkAnnotation</Name>
+              <Title>Link Annotations</Title>
+            </Example>
+            <Example>
+              <Page>TextSelection</Page>
+              <Name>TextSelection</Name>
+              <Title>Text Selection</Title>
+            </Example>
+            <Example>
               <Page>SourceException</Page>
               <Name>SourceException</Name>
               <Title>Source Exception Template</Title>
@@ -2475,6 +2557,11 @@
               <Page>Commands</Page>
               <Name>Commands</Name>
               <Title>Commands</Title>
+            </Example>
+            <Example>
+              <Page>Events</Page>
+              <Name>Events</Name>
+              <Title>Events</Title>
             </Example>
           </Examples>
         </Category>

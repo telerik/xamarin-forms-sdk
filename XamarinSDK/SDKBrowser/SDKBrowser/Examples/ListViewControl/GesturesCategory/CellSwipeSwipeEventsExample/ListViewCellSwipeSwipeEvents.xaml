@@ -16,7 +16,7 @@
                                      ItemsSource="{Binding Source}"
                                      SelectionMode="None"
                                      SwipeOffset="70, 0, 70, 0"
-                                     SwipeThreshold="70">
+                                     SwipeThreshold="10">
         <telerikDataControls:RadListView.ItemTemplate>
             <DataTemplate>
                 <listView:ListViewTemplateCell>

@@ -1,9 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:telerikImageEditor="clr-namespace:Telerik.XamarinForms.ImageEditor;assembly=Telerik.XamarinForms.ImageEditor"
-             x:Class="SDKBrowser.Examples.ImageEditorControl.FeaturesCategory.CustomCommandsExample.CustomCommands">
-    <!-- >> imageeditor-custom-save-command -->
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.ImageEditorControl.FeaturesCategory.SaveImageExample.SaveImage">
+    <!-- >> imageeditor-save-image -->
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
@@ -16,10 +19,11 @@
                 </OnPlatform>
             </telerikImageEditor:RadImageEditor.Source>
         </telerikImageEditor:RadImageEditor>
-        <telerikImageEditor:RadImageEditorToolbar Grid.Row="1" ImageEditor="{x:Reference imageEditor}" AutoGenerateItems="False">
-            <telerikImageEditor:CropToolbarItem/>
-            <telerikImageEditor:CommandToolbarItem Text="Save" Tapped="OnSaveTapped" />
+        <telerikImageEditor:RadImageEditorToolbar Grid.Row="1" ImageEditor="{x:Reference imageEditor}" AutoGenerateItems="False" ItemSpacing="5">
+            <telerikImageEditor:CommandToolbarItem Text="Original Size" Tapped="OnSaveOriginalTapped" />
+            <telerikImageEditor:CommandToolbarItem Text="Specific Size" Tapped="OnSaveMaxSizeTapped" />
+            <telerikImageEditor:CommandToolbarItem Text="Downscaled" Tapped="OnSaveDownscaledTapped" />
         </telerikImageEditor:RadImageEditorToolbar>
     </Grid>
-    <!-- << imageeditor-custom-save-command -->
+    <!-- << imageeditor-save-image -->
 </ContentView>

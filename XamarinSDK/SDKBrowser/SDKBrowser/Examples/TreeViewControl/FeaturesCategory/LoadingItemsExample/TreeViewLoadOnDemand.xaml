@@ -3,13 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
              xmlns:local="clr-namespace:SDKBrowser.Examples.TreeViewControl.FeaturesCategory.LoadingItemsExample"
-             xmlns:treeView="clr-namespace:Telerik.XamarinForms.DataControls.TreeView.Commands;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikTreeView="clr-namespace:Telerik.XamarinForms.DataControls.TreeView.Commands;assembly=Telerik.XamarinForms.DataControls"
              x:Class="SDKBrowser.Examples.TreeViewControl.FeaturesCategory.LoadingItemsExample.TreeViewLoadOnDemand">
     <Grid>
         <!-- >> treeview-loadondemand-xaml -->
         <telerikDataControls:RadTreeView x:Name="treeView" ItemsSource="{Binding Source}" >
             <telerikDataControls:RadTreeView.Commands>
-                <treeView:TreeViewUserCommand Id="LoadOnDemand" Command="{Binding LoadOnDemandCommand}" />
+                <telerikTreeView:TreeViewUserCommand Id="LoadOnDemand" Command="{Binding LoadOnDemandCommand}" />
             </telerikDataControls:RadTreeView.Commands>
             <telerikDataControls:TreeViewDescriptor DisplayMemberPath="Name"
                                                     ItemsSourcePath="Children"

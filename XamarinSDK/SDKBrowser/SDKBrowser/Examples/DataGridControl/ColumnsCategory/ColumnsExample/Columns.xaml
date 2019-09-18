@@ -2,37 +2,37 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SDKBrowser.Examples.DataGridControl.ColumnsCategory.ColumnsExample.Columns"
-             xmlns:telerikGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid">
+             xmlns:telerikDataGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid">
     <!-- >> datagrid-columns-xaml -->
-    <telerikGrid:RadDataGrid x:Name="grid" 
+    <telerikDataGrid:RadDataGrid x:Name="grid" 
              ItemsSource="{Binding Clubs}" 
              AutoGenerateColumns="False" 
              UserEditMode="Cell">
-        <telerikGrid:RadDataGrid.Columns>
-            <telerikGrid:DataGridTextColumn PropertyName="Name" 
+        <telerikDataGrid:RadDataGrid.Columns>
+            <telerikDataGrid:DataGridTextColumn PropertyName="Name" 
                         HeaderText="Name">
-                <telerikGrid:DataGridTextColumn.CellContentStyle>
-                    <telerikGrid:DataGridTextCellStyle TextColor="Green" 
+                <telerikDataGrid:DataGridTextColumn.CellContentStyle>
+                    <telerikDataGrid:DataGridTextCellStyle TextColor="Green" 
                                    FontSize="15" 
                                    SelectedTextColor="Orange"  />
-                </telerikGrid:DataGridTextColumn.CellContentStyle>
-            </telerikGrid:DataGridTextColumn>
+                </telerikDataGrid:DataGridTextColumn.CellContentStyle>
+            </telerikDataGrid:DataGridTextColumn>
 
-            <telerikGrid:DataGridNumericalColumn PropertyName="StadiumCapacity" 
+            <telerikDataGrid:DataGridNumericalColumn PropertyName="StadiumCapacity" 
                              HeaderText="Stadium Capacity"/>
 
-            <telerikGrid:DataGridBooleanColumn PropertyName="IsChampion" 
+            <telerikDataGrid:DataGridBooleanColumn PropertyName="IsChampion" 
                            HeaderText="Champion?"/>
 
-            <telerikGrid:DataGridDateColumn PropertyName="Established" 
+            <telerikDataGrid:DataGridDateColumn PropertyName="Established" 
                         HeaderText="Date Established"/>
 
-            <telerikGrid:DataGridPickerColumn PropertyName="Country"
+            <telerikDataGrid:DataGridPickerColumn PropertyName="Country"
                           HeaderText="Country"
                           ItemsSourcePath="Countries"/>
 
-            <telerikGrid:DataGridTemplateColumn HeaderText="Template Column">
-                <telerikGrid:DataGridTemplateColumn.CellContentTemplate>
+            <telerikDataGrid:DataGridTemplateColumn HeaderText="Template Column">
+                <telerikDataGrid:DataGridTemplateColumn.CellContentTemplate>
                     <DataTemplate>
                         <StackLayout InputTransparent="True">
                             <Grid BackgroundColor="Orange"
@@ -47,12 +47,12 @@
                                FontSize="10"/>
                         </StackLayout>
                     </DataTemplate>
-                </telerikGrid:DataGridTemplateColumn.CellContentTemplate>
-            </telerikGrid:DataGridTemplateColumn>
+                </telerikDataGrid:DataGridTemplateColumn.CellContentTemplate>
+            </telerikDataGrid:DataGridTemplateColumn>
 
-            <telerikGrid:DataGridTimeColumn PropertyName="Time" 
+            <telerikDataGrid:DataGridTimeColumn PropertyName="Time" 
                         HeaderText="Time Column"/>
-        </telerikGrid:RadDataGrid.Columns>
-    </telerikGrid:RadDataGrid>
+        </telerikDataGrid:RadDataGrid.Columns>
+    </telerikDataGrid:RadDataGrid>
     <!-- << datagrid-columns-xaml -->
 </ContentView>

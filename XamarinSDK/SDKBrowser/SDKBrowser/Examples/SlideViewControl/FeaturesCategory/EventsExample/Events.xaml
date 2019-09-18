@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.SlideViewControl.FeaturesCategory.EventsExample.Events">
+    <StackLayout>
+        <!-- >> slideview-events-xaml -->
+        <telerikPrimitives:RadSlideView x:Name="slideView"
+                                        SlidingToIndex="GoingToNextSlide">
+            <telerikPrimitives:RadSlideView.ItemsSource>
+                <x:Array Type="{x:Type ContentView}">
+                    <ContentView>
+                        <telerikInput:RadCalendar Margin="50, 30" />
+                    </ContentView>
+                    <ContentView>
+                        <Label HorizontalOptions="Center" 
+                               VerticalOptions="CenterAndExpand" Text="Other View" TextColor="Blue" />
+                    </ContentView>
+                    <ContentView>
+                        <Label HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Text="Another View" TextColor="Red" />
+                    </ContentView>
+                </x:Array>
+            </telerikPrimitives:RadSlideView.ItemsSource>
+        </telerikPrimitives:RadSlideView>
+        <!-- << slideview-events-xaml -->
+    </StackLayout>
+</ContentView>

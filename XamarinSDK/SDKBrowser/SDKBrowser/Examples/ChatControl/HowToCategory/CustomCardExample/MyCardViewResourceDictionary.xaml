@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikConversationalUI="clr-namespace:Telerik.XamarinForms.ConversationalUI;assembly=Telerik.XamarinForms.ConversationalUI"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"        
+             x:Class="SDKBrowser.Examples.ChatControl.HowToCategory.CustomCardExample.MyCardViewResourceDictionary">
+    <DataTemplate x:Key="CardActionTemplate">
+        <telerikConversationalUI:CardActionView x:Name="view"
+                                                Text="{Binding Text}"
+                                                Command="{Binding Command}" />
+    </DataTemplate>
+
+    <ControlTemplate x:Key="MyCardView_ControlTemplate">
+        <telerikPrimitives:RadBorder Margin="10"
+                                     Padding="10"
+                                     BorderThickness="0"
+                                     CornerRadius="10"
+                                     WidthRequest="200">
+            <StackLayout>
+                <Label Text="{TemplateBinding Date, StringFormat='{0:MMMM dd}'}" />
+                <Label Text="{TemplateBinding ContactDetails}" />
+                <telerikConversationalUI:CardActionsListView ItemsSource="{TemplateBinding Actions}"
+                                                             ItemTemplate="{StaticResource CardActionTemplate}" />
+            </StackLayout>
+        </telerikPrimitives:RadBorder>
+    </ControlTemplate>
+</ResourceDictionary>
