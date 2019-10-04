@@ -6,30 +6,30 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
         <Picker x:Name="columnPicker" />
         <Button Clicked="SortAscButtonClicked" 
-                Text="Sort Asc"
+                Text="Sort Ascending"
                 Grid.Column="1" />
         <Button Clicked="SortDescButtonClicked"
-                Text="Sort Desc" 
-                Grid.Column="2" />
+                Text="Sort Descending" 
+                Grid.Row="1" />
         <Button Clicked="ClearSortClicked"
                 Text="Clear Sort"
-                Grid.Column="3" />
+                Grid.Row="1"
+                Grid.Column="1" />
 
         <grid:RadDataGrid x:Name="grid" 
                           ItemsSource="{Binding}"
-                          Grid.Row="1" 
-                          Grid.ColumnSpan="4"
+                          Grid.Row="2" 
+                          Grid.ColumnSpan="2"
                           AutoGenerateColumns="False">
             <grid:RadDataGrid.Columns>
                 <grid:DataGridTextColumn PropertyName="Name" />

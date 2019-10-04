@@ -8,15 +8,27 @@ namespace SDKBrowser.Examples.SegmentControl.GettingStartedCategory.GettingStart
     {
         public SegmentControlGettingStartedCSharp()
         {
+            var mainGrid = new Grid();
             // >> segmentcontrol-gettingstarted-csharp
-            RadSegmentedControl segmentControl = new RadSegmentedControl()
+            RadSegmentedControl segmentControlText = new RadSegmentedControl()
             {
                 VerticalOptions = LayoutOptions.Start, HeightRequest = 60,
                 ItemsSource = new List<string>() { "Popular", "Library", "Playlists", "Friends" },
             };
             // << segmentcontrol-gettingstarted-csharp
+            mainGrid.Children.Add(segmentControlText);
 
-            this.Content = segmentControl;
+            // >> segmentcontrol-gettingstarted-images-csharp
+            RadSegmentedControl segmentControlImages = new RadSegmentedControl()
+            {
+                VerticalOptions = LayoutOptions.Start,
+                HeightRequest = 60,
+                ItemsSource = new List<FileImageSource>() { "available.png", "away.png", "busy.png" },
+            };
+            // << segmentcontrol-gettingstarted-images-csharp
+            mainGrid.Children.Add(segmentControlImages, 0, 1);
+           
+            this.Content = mainGrid;
         }
     }
 }

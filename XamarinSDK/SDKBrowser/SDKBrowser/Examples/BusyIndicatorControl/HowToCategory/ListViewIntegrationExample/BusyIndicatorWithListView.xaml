@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             x:Class="SDKBrowser.Examples.BusyIndicatorControl.HowToCategory.ListViewIntegrationExample.BusyIndicatorWithListView">
+    <!--  >> busyindicator-withlistview-xaml  -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Button Text="Load Data" Command="{Binding LoadDataCommand}" />
+        <Grid  Grid.Row="1">
+            <telerikDataControls:RadListView ItemsSource="{Binding Source}">
+                <telerikDataControls:RadListView.ItemTemplate>
+                    <DataTemplate>
+                        <telerikListView:ListViewTextCell Text="{Binding Title}" Detail="{Binding Author}" />
+                    </DataTemplate>
+                </telerikDataControls:RadListView.ItemTemplate>
+                <telerikDataControls:RadListView.LayoutDefinition>
+                    <telerikListView:ListViewLinearLayout ItemLength="80" VerticalItemSpacing="2" />
+                </telerikDataControls:RadListView.LayoutDefinition>
+            </telerikDataControls:RadListView>
+            <telerikPrimitives:RadBusyIndicator x:Name="BusyIndicator"                             
+                                VerticalOptions="Center"
+                                AnimationContentHeightRequest="100"
+                                AnimationContentWidthRequest="100"
+                                HeightRequest="100"
+                                IsBusy="{Binding IsLoading}" />
+        </Grid>
+    </Grid>
+    <!--  << busyindicator-withlistview-xaml  -->
+</ContentView>

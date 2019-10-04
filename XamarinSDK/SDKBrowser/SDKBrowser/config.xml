@@ -241,6 +241,17 @@
             </Example>
           </Examples>
         </Category>
+        <Category>
+          <Name>HowTo</Name>
+          <Title>How To</Title>
+          <Examples>
+            <Example>
+              <Page>BusyIndicatorWithListView</Page>
+              <Name>ListViewIntegration</Name>
+              <Title>BusyIndicator with ListView</Title>
+            </Example>
+          </Examples>
+        </Category>
       </Categories>
     </Control>
     <Control>

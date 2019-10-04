@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using System;
+using System.Windows.Input;
 using Telerik.XamarinForms.Common;
 using Telerik.XamarinForms.PdfViewer.Selection;
 using Xamarin.Forms;
@@ -10,22 +11,34 @@ namespace SDKBrowser.Examples.PdfViewerControl.FeaturesCategory.TextSelectionExa
     {      
         public ViewModel()
         {
-            this.GetSelectedTextCommand = new Command(GetSelectedTextCommandExecuted);
+            this.GetSelectedTextCommand = new DisplaySelectedTextCommand();
         }
 
         public ICommand GetSelectedTextCommand { get; set; }
 
-        private void GetSelectedTextCommandExecuted(object obj)
+        class DisplaySelectedTextCommand : ICommand
         {
-            SelectionCommandContext context = (SelectionCommandContext)obj;
-            var selection = context.PdfViewer.Document.Selection;
-            Application.Current.MainPage.DisplayAlert("Selected Text", selection.GetSelectedText(), "OK");
+            public event EventHandler CanExecuteChanged;
 
-            lock (selection)
+            public bool CanExecute(object parameter)
             {
-                selection.Clear();
+                SelectionCommandContext context = parameter as SelectionCommandContext;
+                return context != null;
+            }
+
+            public void Execute(object parameter)
+            {
+                SelectionCommandContext context = (SelectionCommandContext)parameter;
+                var selection = context.PdfViewer.Document.Selection;
+                Application.Current.MainPage.DisplayAlert("Selected Text", selection.GetSelectedText(), "OK");
+
+                lock (selection)
+                {
+                    selection.Clear();
+                }
             }
         }
     }
+
     // << pdfviewer-textselection-viewmodel
 }

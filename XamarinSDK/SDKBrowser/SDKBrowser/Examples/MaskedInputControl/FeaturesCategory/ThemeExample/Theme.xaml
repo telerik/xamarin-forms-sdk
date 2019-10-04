@@ -5,6 +5,6 @@
              x:Class="SDKBrowser.Examples.MaskedInputControl.FeaturesCategory.ThemeExample.Theme">
     <StackLayout Margin="16">
         <Label Text="The default C token allows x to be input. Using event we reject x from input."/>
-        <telerikInput:RadMaskedInput x:Name="input" Mask="CC (00)" Placeholder="#" WatermarkText="Themed RadMasedkInput" StyleClass="TelerikTheme"/>
+        <telerikInput:RadMaskedInput x:Name="input" Mask="CC (00)" Placeholder="#" WatermarkText="Themed RadMaskedInput" StyleClass="TelerikTheme"/>
     </StackLayout>
 </ContentView>
