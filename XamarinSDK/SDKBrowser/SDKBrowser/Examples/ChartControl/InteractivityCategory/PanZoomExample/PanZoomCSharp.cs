@@ -42,6 +42,7 @@ namespace SDKBrowser.Examples.ChartControl.InteractivityCategory.PanZoomExample
                 }
             };
 
+            chart.Zoom = new Size(2, 1);
             chart.Series[0].SetBinding(ChartSeries.ItemsSourceProperty, "Data");
             // << chart-interactivity-panzoom-csharp
 

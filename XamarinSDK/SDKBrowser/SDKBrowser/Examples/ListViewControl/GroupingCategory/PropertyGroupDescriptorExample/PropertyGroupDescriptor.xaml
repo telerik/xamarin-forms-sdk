@@ -17,7 +17,7 @@
                 </telerikListView:ListViewTemplateCell>
             </DataTemplate>
             <DataTemplate x:Key="ListViewGroupHeaderTemplate">
-                <Grid BackgroundColor="#f1f2f5">
+                <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition />
@@ -32,13 +32,15 @@
                     <Label Margin="0, 12, 0, 6" Text="{Binding }" Grid.Column="1" TextColor="DarkGray" FontSize="Medium" HorizontalOptions="Start" />
                 </Grid>
             </DataTemplate>
+            <telerikListView:ListViewGroupStyle x:Key="ListViewGroupHeaderStyle" BackgroundColor="Transparent" />
         </ResourceDictionary>
         <!-- << listview-grouping-templates -->
     </ContentView.Resources>
     <!-- >> listview-grouping-propertygroupdescriptor -->
     <telerikDataControls:RadListView x:Name="listView" ItemsSource="{Binding Cities}"
-                         ItemTemplate="{StaticResource ListViewItemTemplate}"
-                         GroupHeaderTemplate="{StaticResource ListViewGroupHeaderTemplate}">
+                                     ItemTemplate="{StaticResource ListViewItemTemplate}"
+                                     GroupHeaderTemplate="{StaticResource ListViewGroupHeaderTemplate}"
+                                     GroupHeaderStyle="{StaticResource ListViewGroupHeaderStyle}">
         <telerikDataControls:RadListView.GroupDescriptors>
             <telerikListView:PropertyGroupDescriptor PropertyName="Country"/>
         </telerikDataControls:RadListView.GroupDescriptors>

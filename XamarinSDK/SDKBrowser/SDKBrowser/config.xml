@@ -2023,6 +2023,11 @@
               <Title>Item Styles - Code</Title>
             </Example>
             <Example>
+              <Page>ListViewGroupHeaderStyle</Page>
+              <Name>GroupHeaderStyle</Name>
+              <Title>GroupHeader Style</Title>
+            </Example>
+            <Example>
               <Page>ListViewItemStyleSelectorXaml</Page>
               <Name>StyleSelector</Name>
               <Title>Conditional Styling - Xaml</Title>

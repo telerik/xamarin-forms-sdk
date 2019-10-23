@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls"
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.ListViewControl.StylingCategory.GroupHeaderStyleExample.ListViewGroupHeaderStyle">
+    <!--  >> listview-groupstyle-listview-xaml  -->
+    <telerikDataControls:RadListView x:Name="listView"
+                                     ItemsSource="{Binding Cities}">
+        <telerikDataControls:RadListView.ItemTemplate>
+            <DataTemplate>
+                <telerikListView:ListViewTextCell Text="{Binding Name}"
+                                                  TextColor="#1263E5" />
+            </DataTemplate>
+        </telerikDataControls:RadListView.ItemTemplate>
+        <telerikDataControls:RadListView.GroupHeaderStyle>
+            <telerikListView:ListViewGroupStyle BackgroundColor="#1263E5"
+                                                TextColor="#AAC7F6"
+                                                BorderColor="#0A3A82"              
+                                                BorderWidth="1" />
+        </telerikDataControls:RadListView.GroupHeaderStyle>
+        <telerikDataControls:RadListView.GroupDescriptors>
+            <telerikListView:PropertyGroupDescriptor PropertyName="Country" />
+        </telerikDataControls:RadListView.GroupDescriptors>
+    </telerikDataControls:RadListView>
+    <!--  << listview-groupstyle-listview-xaml  -->
+</ContentView>
