@@ -396,6 +396,11 @@
               <Title>Custom Slots</Title>
             </Example>
             <Example>
+              <Page>NonWorkingHours</Page>
+              <Name>NonWorkingHours</Name>
+              <Title>Non-Working Hours</Title>
+            </Example>
+            <Example>
               <Page>ProgrammaticScrolling</Page>
               <Name>ProgrammaticScrolling</Name>
               <Title>Programmatic Scrolling</Title>
@@ -2237,6 +2242,11 @@
               <Title>Key Features</Title>
             </Example>
             <Example>
+              <Page>NumericControlTemplate</Page>
+              <Name>ControlTemplate</Name>
+              <Title>Control Template</Title>
+            </Example>
+            <Example>
               <Page>Bindings</Page>
               <Name>Bindings</Name>
               <Title>Bindings</Title>
@@ -2432,6 +2442,11 @@
           <Name>Features</Name>
           <Title>Features</Title>
           <Examples>
+            <Example>
+              <Page>KeyFeatures</Page>
+              <Name>KeyFeatures</Name>
+              <Title>Key Features</Title>
+            </Example>
             <Example>
               <Page>Geometries</Page>
               <Name>Geometries</Name>

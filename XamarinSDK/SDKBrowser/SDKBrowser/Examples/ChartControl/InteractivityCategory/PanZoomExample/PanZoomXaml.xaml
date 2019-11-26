@@ -5,7 +5,8 @@
              xmlns:telerikChart="clr-namespace:Telerik.XamarinForms.Chart;assembly=Telerik.XamarinForms.Chart"
              x:Class="SDKBrowser.Examples.ChartControl.InteractivityCategory.PanZoomExample.PanZoomXaml">
     <!-- >> chart-interactivity-panzoom-xaml -->
-    <telerikChart:RadCartesianChart PaletteName="Light">
+    <telerikChart:RadCartesianChart PaletteName="Light"
+                                    Zoom="2, 1">
         <telerikChart:RadCartesianChart.BindingContext>
             <local:ViewModel/>
         </telerikChart:RadCartesianChart.BindingContext>

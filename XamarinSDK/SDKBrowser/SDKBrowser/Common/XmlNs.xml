@@ -32,10 +32,6 @@
 		<!-- >> xmlns-telerikprimitives -->
     xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
     <!-- << xmlns-telerikprimitives --></primitives>
-  <rating>
-    <!-- >> xmlns-telerikrating  -->
-    xmlns:rating="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
-    <!-- << xmlns-telerikrating  --></rating>
   <coversationalui>
     <!-- >> xmlns-telerikchat -->
     xmlns:telerikConversationalUI="clr-namespace:Telerik.XamarinForms.ConversationalUI;assembly=Telerik.XamarinForms.ConversationalUI"

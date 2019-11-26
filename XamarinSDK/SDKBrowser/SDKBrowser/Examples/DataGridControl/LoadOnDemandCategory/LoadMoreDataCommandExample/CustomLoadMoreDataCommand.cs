@@ -18,6 +18,11 @@ namespace SDKBrowser.Examples.DataGridControl.LoadOnDemandCategory.LoadMoreDataC
 
         public async override void Execute(object parameter)
         {
+            if (parameter == null)
+            {
+                return;
+            }
+
             ((LoadOnDemandContext)parameter).ShowLoadOnDemandLoadingIndicator();
             
             await System.Threading.Tasks.Task.Delay(1500);

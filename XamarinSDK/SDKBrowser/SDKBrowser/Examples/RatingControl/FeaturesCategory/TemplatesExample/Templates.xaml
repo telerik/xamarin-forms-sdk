@@ -2,21 +2,21 @@
 <ContentView x:Class="SDKBrowser.Examples.RatingControl.FeaturesCategory.TemplatesExample.Templates"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:rating="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input">
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input">
     <StackLayout>
         <!--  >> rating-templates  -->
-        <rating:RadTemplatedRating ValueChanged="RadTemplatedRating_ValueChanged">
-            <rating:RadTemplatedRating.ItemTemplate>
+        <telerikInput:RadTemplatedRating ValueChanged="RadTemplatedRating_ValueChanged">
+            <telerikInput:RadTemplatedRating.ItemTemplate>
                 <DataTemplate>
                     <Image Source="unread.png" />
                 </DataTemplate>
-            </rating:RadTemplatedRating.ItemTemplate>
-            <rating:RadTemplatedRating.SelectedItemTemplate>
+            </telerikInput:RadTemplatedRating.ItemTemplate>
+            <telerikInput:RadTemplatedRating.SelectedItemTemplate>
                 <DataTemplate>
                     <Image Source="success.png" />
                 </DataTemplate>
-            </rating:RadTemplatedRating.SelectedItemTemplate>
-        </rating:RadTemplatedRating>
+            </telerikInput:RadTemplatedRating.SelectedItemTemplate>
+        </telerikInput:RadTemplatedRating>
         <!--  << rating-templates  -->
         <Label x:Name="label"/>
     </StackLayout>

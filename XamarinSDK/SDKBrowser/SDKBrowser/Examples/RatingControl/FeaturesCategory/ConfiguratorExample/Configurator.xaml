@@ -2,9 +2,9 @@
 <ContentView x:Class="SDKBrowser.Examples.RatingControl.FeaturesCategory.ConfiguratorExample.Configurator"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:rating="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input">
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input">
     <StackLayout>
-        <rating:RadShapeRating x:Name="rating" ValueChanged="rating_ValueChanged"/>
+        <telerikInput:RadShapeRating x:Name="rating" ValueChanged="rating_ValueChanged"/>
         <StackLayout Orientation="Horizontal">
             <Label Text="ItemFill" />
             <Picker x:Name="itemFillPicker"

@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:numericInput="clr-namespace:Telerik.XamarinForms.Input.NumericInput;assembly=Telerik.XamarinForms.Input"
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.NumericInputControl.FeaturesCategory.ControlTemplateExample.NumericControlTemplate">
+    <ContentView.Resources>
+        <!-- >> numericinput-resources-controltemplate -->
+        <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:Double" x:Key="Height" Default="32">
+                <On Platform="Android" Value="45"/>
+                <On Platform="iOS" Value="36"/>
+                <On Platform="UWP" Value="32"/>
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:Double" x:Key="MinimumHeight" Default="33">
+                <On Platform="Android" Value="28"/>
+                <On Platform="iOS" Value="28"/>
+                <On Platform="UWP" Value="33"/>
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:Double" x:Key="Spacing" Default="10">
+                <On Platform="Android" Value="10"/>
+                <On Platform="iOS" Value="10"/>
+                <On Platform="UWP" Value="10"/>
+            </OnPlatform>
+            <GridLength x:Key="ButtonWidth">58</GridLength>
+
+            <ControlTemplate x:Key="CustomRadNumericInput_ControlTemplate">
+                <Grid ColumnSpacing="{StaticResource Spacing}"
+                  HeightRequest="{StaticResource Height}"
+                  MinimumHeightRequest="{StaticResource MinimumHeight}">
+                    <Grid.Resources>
+                        <ResourceDictionary>
+                            <Style TargetType="numericInput:NumericInputButton" Class="DefaultNumericInputButtonStyle">
+                                <Setter Property="BorderRadius">
+                                    <Setter.Value>
+                                        <OnPlatform x:TypeArguments="x:Int32">
+                                            <On Platform="iOS" Value="10"/>
+                                            <On Platform="UWP" Value="0"/>
+                                        </OnPlatform>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="BorderColor" Value="Accent"/>
+                                <Setter Property="TextColor" Value="Accent"/>
+                                <Setter Property="BackgroundColor" Value="Transparent"/>
+                                <Setter Property="BorderThickness" Value="2"/>
+                                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                <Setter Property="Padding" Value="0,0,0,0"/>
+                            </Style>
+                            <Style TargetType="numericInput:NumericInputEntry" Class="DefaultNumericInputEntryStyle">
+                                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                                <Setter Property="Padding" Value="0,0,0,0"/>
+                                <Setter Property="Keyboard" Value="Numeric"/>
+                                <Setter Property="BorderStyle">
+                                    <Setter.Value>
+                                        <telerikInput:BorderStyle>
+                                            <telerikInput:BorderStyle.BorderThickness>
+                                                <OnPlatform x:TypeArguments="Thickness" Default="2">
+                                                    <On Platform="Android" Value="0,0,0,2"/>
+                                                    <On Platform="iOS" Value="2"/>
+                                                    <On Platform="UWP" Value="2"/>
+                                                </OnPlatform>
+                                            </telerikInput:BorderStyle.BorderThickness>
+                                        </telerikInput:BorderStyle>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </ResourceDictionary>
+                    </Grid.Resources>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="{StaticResource ButtonWidth}"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="{StaticResource ButtonWidth}"/>
+                    </Grid.ColumnDefinitions>
+                    <numericInput:NumericInputButton Text="{TemplateBinding DecreaseButtonText}"
+                                                     Command="{TemplateBinding DecreaseCommand}"
+                                                     StyleClass="DefaultNumericInputButtonStyle"
+                                                     AutomationId="NumericDecreaseButton"> 
+                        <AutomationProperties.HelpText>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="UWP" Value="NumericDecreaseButton"/>
+                                <On Platform="iOS" Value="NumericDecreaseButton"/>
+                            </OnPlatform>
+                        </AutomationProperties.HelpText>
+                    </numericInput:NumericInputButton>
+
+                    <numericInput:NumericInputEntry Grid.Column="1"
+                                                    x:Name="PART_Entry"
+                                                    StyleClass="DefaultNumericInputEntryStyle"
+                                                    Text="{TemplateBinding Value, Mode=OneWay}"
+                                                    InputTransparent="{TemplateBinding IsReadOnly}"
+                                                    AutomationId="NumericEntry"/>
+
+                    <numericInput:NumericInputButton Grid.Column="2"
+                                                     Text="{TemplateBinding IncreaseButtonText}"
+                                                     Command="{TemplateBinding IncreaseCommand}"
+                                                     StyleClass="DefaultNumericInputButtonStyle"
+                                                     AutomationId="NumericIncreaseButton">
+                        <AutomationProperties.HelpText>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="iOS" Value="NumericIncreaseButton"/>
+                                <On Platform="UWP" Value="NumericIncreaseButton"/>
+                            </OnPlatform>
+                        </AutomationProperties.HelpText>
+                    </numericInput:NumericInputButton>
+                </Grid>
+            </ControlTemplate>
+        </ResourceDictionary>
+        <!-- << numericinput-resources-controltemplate -->
+    </ContentView.Resources>
+    <StackLayout Margin="0, 50, 0, 0">
+        <!-- >> numericinput-control-controltemplate -->
+        <telerikInput:RadNumericInput x:Name="numericInput"
+                                      ControlTemplate="{StaticResource CustomRadNumericInput_ControlTemplate}" />
+        <!-- << numericinput-control-controltemplate -->
+    </StackLayout>
+</ContentView>

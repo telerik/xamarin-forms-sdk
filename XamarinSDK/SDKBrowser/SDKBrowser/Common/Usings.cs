@@ -22,9 +22,6 @@ using Telerik.XamarinForms.Primitives;
 // >> ns-telerikbusyindicator
 using Telerik.XamarinForms.Primitives;
 // << ns-telerikbusyindicator
-// >> ns-telerikrating
-using Telerik.XamarinForms.Input;
-// << ns-telerikrating
 // >> ns-telerikdatacontrols
 using Telerik.XamarinForms.DataControls;
 // << ns-telerikdatacontrols

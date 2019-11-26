@@ -2,19 +2,42 @@
 <ContentView x:Class="SDKBrowser.Examples.RatingControl.FeaturesCategory.GeometriesExample.Geometries"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:rating="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input">
-    <StackLayout>
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common">
+    <StackLayout Spacing="20">
+        <Label Text="Rating with predefined shapes" />
         <!--  >> rating-geometries-star  -->
-        <rating:RadShapeRating x:Name="rating1"/>
+        <telerikInput:RadShapeRating x:Name="rating1" />
         <!--  << rating-geometries-star  -->
         <!--  >> rating-geometries-circle  -->
-        <rating:RadShapeRating ItemShape="{x:Static rating:Geometries.Circle}" x:Name="rating2"/>
+        <telerikInput:RadShapeRating ItemShape="{x:Static telerikInput:Geometries.Circle}" x:Name="rating2" />
         <!--  << rating-geometries-circle  -->
         <!--  >> rating-geometries-diamond  -->
-        <rating:RadShapeRating ItemShape="{x:Static rating:Geometries.Diamond}" x:Name="rating3"/>
+        <telerikInput:RadShapeRating ItemShape="{x:Static telerikInput:Geometries.Diamond}" x:Name="rating3" />
         <!--  << rating-geometries-diamond  -->
         <!--  >> rating-geometries-heart  -->
-        <rating:RadShapeRating ItemShape="{x:Static rating:Geometries.Heart}" x:Name="rating4"/>
+        <telerikInput:RadShapeRating ItemShape="{x:Static telerikInput:Geometries.Heart}" x:Name="rating4" />
         <!--  << rating-geometries-heart  -->
+        <!--  >> rating-geometries-customgeometry  -->
+        <telerikInput:RadShapeRating x:Name="rating5">
+            <telerikInput:RadShapeRating.ItemShape>
+                <telerikCommon:RadPathGeometry>
+                    <telerikCommon:RadPathFigure StartPoint="0, 1">
+                        <telerikCommon:RadLineSegment Point="1, 1" />
+                        <telerikCommon:RadLineSegment Point="0.5, 0" />
+                        <telerikCommon:RadLineSegment Point="0, 1" />
+                    </telerikCommon:RadPathFigure>
+                </telerikCommon:RadPathGeometry>
+            </telerikInput:RadShapeRating.ItemShape>
+        </telerikInput:RadShapeRating>
+        <!--  << rating-geometries-customgeometry  -->
+        <Label Text="Rating with style properties applied:" />
+        <!--  >> rating-geometries-styling  -->
+        <telerikInput:RadShapeRating x:Name="rating" 
+                                     ItemFill="YellowGreen"
+                                     ItemStroke="YellowGreen"
+                                     SelectedItemFill="Pink"
+                                     SelectedItemStroke="Red" />
+        <!--  << rating-geometries-styling  -->
     </StackLayout>
 </ContentView>
