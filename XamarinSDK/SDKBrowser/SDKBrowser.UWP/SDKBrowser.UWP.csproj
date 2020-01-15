@@ -124,6 +124,11 @@
     <Content Include="Assets\Checkbox.scale-200.png" />
     <Content Include="Assets\Checkbox.scale-400.png" />
     <Content Include="Assets\custom_toolbar.png" />
+    <Content Include="Assets\DateTimePicker.scale-100.png" />
+    <Content Include="Assets\DateTimePicker.scale-125.png" />
+    <Content Include="Assets\DateTimePicker.scale-150.png" />
+    <Content Include="Assets\DateTimePicker.scale-200.png" />
+    <Content Include="Assets\DateTimePicker.scale-400.png" />
     <Content Include="Assets\DockLayout.scale-100.png" />
     <Content Include="Assets\DockLayout.scale-125.png" />
     <Content Include="Assets\DockLayout.scale-150.png" />
@@ -139,6 +144,11 @@
     <Content Include="Assets\ImageEditor.scale-150.png" />
     <Content Include="Assets\ImageEditor.scale-200.png" />
     <Content Include="Assets\ImageEditor.scale-400.png" />
+    <Content Include="Assets\ListPicker.scale-100.png" />
+    <Content Include="Assets\ListPicker.scale-125.png" />
+    <Content Include="Assets\ListPicker.scale-150.png" />
+    <Content Include="Assets\ListPicker.scale-200.png" />
+    <Content Include="Assets\ListPicker.scale-400.png" />
     <Content Include="Assets\Map.scale-100.png" />
     <Content Include="Assets\Map.scale-125.png" />
     <Content Include="Assets\Map.scale-150.png" />
@@ -167,6 +177,11 @@
     <Content Include="Assets\Fonts\seguisb.ttf" />
     <Content Include="Assets\Fonts\seguisbi.ttf" />
     <Content Include="Assets\Fonts\seguisli.ttf" />
+    <Content Include="Assets\TemplatedPicker.scale-100.png" />
+    <Content Include="Assets\TemplatedPicker.scale-125.png" />
+    <Content Include="Assets\TemplatedPicker.scale-150.png" />
+    <Content Include="Assets\TemplatedPicker.scale-200.png" />
+    <Content Include="Assets\TemplatedPicker.scale-400.png" />
     <Content Include="Assets\TreeView_Flag_Argentina.png" />
     <Content Include="Assets\TreeView_Flag_China.png" />
     <Content Include="Assets\TreeView_Flag_Germany.png" />

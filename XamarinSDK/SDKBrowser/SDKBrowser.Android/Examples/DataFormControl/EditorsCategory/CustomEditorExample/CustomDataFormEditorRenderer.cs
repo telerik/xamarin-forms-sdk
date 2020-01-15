@@ -13,6 +13,11 @@ namespace SDKBrowser.Droid.Examples.DataFormControl.EditorsCategory.CustomEditor
 {
     public class CustomDataFormEditorRenderer : DataFormRenderer
     {
+        public CustomDataFormEditorRenderer(Android.Content.Context context)
+            : base(context)
+        {
+        }
+
         protected override EntityPropertyEditor GetCustomEditorForProperty(RadDataForm form, IEntityProperty nativeProperty, Telerik.XamarinForms.Input.DataForm.IEntityProperty property)
         {
             if (property.PropertyName == "Option")

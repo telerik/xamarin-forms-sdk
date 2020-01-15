@@ -3,8 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
              x:Class="SDKBrowser.Examples.EntryControl.FeaturesCategory.EventsExample.Events">
+    <!-- >> entry-events-xaml -->
     <StackLayout>
-        <telerikInput:RadEntry WatermarkText="Default Watermark" x:Name="entry"/>
+        <telerikInput:RadEntry x:Name="entry"
+                               Keyboard="Numeric"
+                               WatermarkText="Watermark Text" 
+                               TextChanged="Entry_TextChanged"
+                               Completed="Entry_Completed"/>
         <Label x:Name="textChangedLabel"/>
     </StackLayout>
+    <!-- << entry-events-xaml -->
 </ContentView>

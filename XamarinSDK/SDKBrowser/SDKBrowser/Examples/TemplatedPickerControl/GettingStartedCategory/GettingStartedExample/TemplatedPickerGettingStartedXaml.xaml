@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.TemplatedPickerControl.GettingStartedCategory.GettingStartedExample.TemplatedPickerGettingStartedXaml">
+    <StackLayout>
+        <!-- >> templatedpicker-getting-started-xaml -->
+        <telerikInput:RadTemplatedPicker>
+            <telerikInput:RadTemplatedPicker.SelectorTemplate>
+                <ControlTemplate>
+                    <telerikInput:RadCalendar SelectedDate="{TemplateBinding SelectedValue, Mode=TwoWay}"/>
+                </ControlTemplate>
+            </telerikInput:RadTemplatedPicker.SelectorTemplate>
+        </telerikInput:RadTemplatedPicker>
+        <!-- << templatedpicker-getting-started-xaml -->
+    </StackLayout>
+</ContentView>

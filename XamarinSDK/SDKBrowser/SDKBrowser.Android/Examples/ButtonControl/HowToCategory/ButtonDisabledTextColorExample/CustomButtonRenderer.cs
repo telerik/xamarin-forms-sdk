@@ -9,7 +9,7 @@ namespace SDKBrowser.Droid.Examples.ButtonControl.HowToCategory.ButtonDisabledTe
 {
     public class CustomButtonRenderer : Telerik.XamarinForms.InputRenderer.Android.ButtonRenderer
     {
-        public CustomButtonRenderer() : base()
+        public CustomButtonRenderer(Android.Content.Context context) : base(context)
         {
         }
 

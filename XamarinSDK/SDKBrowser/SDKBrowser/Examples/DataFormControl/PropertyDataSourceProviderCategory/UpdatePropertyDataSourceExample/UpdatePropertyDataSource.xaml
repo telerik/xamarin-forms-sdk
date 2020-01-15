@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input" 
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.DataFormControl.PropertyDataSourceProviderCategory.UpdatePropertyDataSourceExample.UpdatePropertyDataSource">
+    <!-- >> dataform-propertydatasource-method-xaml -->
+    <telerikInput:RadDataForm x:Name="dataForm" 
+                              CommitMode="Manual"
+                              EditorValueChanged="DataForm_EditorValueChanged" />
+    <!-- << dataform-propertydatasource-method-xaml -->
+</ContentView>

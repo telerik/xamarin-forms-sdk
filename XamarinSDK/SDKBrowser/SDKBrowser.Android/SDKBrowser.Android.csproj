@@ -571,6 +571,16 @@
     <AndroidResource Include="Resources\drawable\away.png" />
     <AndroidResource Include="Resources\drawable\busy.png" />
     <AndroidResource Include="Resources\drawable\available.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\DateTimePicker.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\DateTimePicker.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\DateTimePicker.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ListPicker.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ListPicker.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ListPicker.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\TemplatedPicker.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\TemplatedPicker.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\TemplatedPicker.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\TemplatedPicker.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\image.png" />

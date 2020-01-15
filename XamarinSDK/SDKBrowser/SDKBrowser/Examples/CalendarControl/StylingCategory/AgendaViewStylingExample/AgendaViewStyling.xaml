@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.CalendarControl.StylingCategory.AgendaViewStylingExample"
+             x:Class="SDKBrowser.Examples.CalendarControl.StylingCategory.AgendaViewStylingExample.AgendaViewStyling">
+    <ContentView.Resources>
+        <!-- >> calendar-agendaview-styleselector-xaml -->
+        <ResourceDictionary>
+            <local:CustomAgendaViewItemStyleSelector x:Key="CustomAgendaViewItemStyleSelector">
+                <local:CustomAgendaViewItemStyleSelector.CurrentMonthStyle>
+                    <telerikInput:AgendaTextItemStyle TextColor="#EE6D4C"
+                                                      FontAttributes="Bold"
+                                                      FontSize="20"
+                                                      HorizontalTextAlignment="Start"/>
+                </local:CustomAgendaViewItemStyleSelector.CurrentMonthStyle>
+                <local:CustomAgendaViewItemStyleSelector.CurrentMonthWeeksStyle>
+                    <telerikInput:AgendaTextItemStyle TextColor="#218CFF"
+                                                      FontAttributes="Italic"
+                                                      FontSize="16"
+                                                      HorizontalTextAlignment="Center"/>
+                </local:CustomAgendaViewItemStyleSelector.CurrentMonthWeeksStyle>
+                <local:CustomAgendaViewItemStyleSelector.TodayStyle>
+                    <telerikInput:AgendaTextItemStyle TextColor="#5EB1FF"
+                                                      FontAttributes="Bold"
+                                                      FontSize="15"
+                                                      HorizontalTextAlignment="Center"/>
+                </local:CustomAgendaViewItemStyleSelector.TodayStyle>
+                <local:CustomAgendaViewItemStyleSelector.AllDayAppointmentStyle>
+                    <telerikInput:AgendaAppointmentItemStyle TitleTextColor="#4B5157"
+                                                             TitleFontAttributes="Bold"
+                                                             TitleFontSize="14"
+                                                             DaysDurationFontAttributes="Italic"
+                                                             DaysDurationFontSize="13"
+                                                             DaysDurationTextColor="#4B5157"
+                                                             TimeDurationFontAttributes="Bold"
+                                                             TimeDurationFontSize="12"
+                                                             TimeDurationTextColor="#929293"/>
+                </local:CustomAgendaViewItemStyleSelector.AllDayAppointmentStyle>
+            </local:CustomAgendaViewItemStyleSelector>
+        </ResourceDictionary>
+        <!-- << calendar-agendaview-styleselector-xaml -->
+    </ContentView.Resources>
+    <!-- >> calendar-agendaview-setstyle-xaml -->
+    <telerikInput:RadCalendar x:Name="calendar"
+                              ViewMode="Agenda">
+        <telerikInput:RadCalendar.AgendaViewSettings>
+            <telerikInput:AgendaViewSettings AgendaItemStyleSelector="{StaticResource CustomAgendaViewItemStyleSelector}"/>
+        </telerikInput:RadCalendar.AgendaViewSettings>
+    </telerikInput:RadCalendar>
+    <!-- << calendar-agendaview-setstyle-xaml -->
+</ContentView>

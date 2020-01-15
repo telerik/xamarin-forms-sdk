@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.CalendarControl.FeaturesCategory.CalendarAppointmentsExample"
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.CalendarControl.FeaturesCategory.CalendarAppointmentsExample.CalendarAppointments">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <!-- >> calendar-appointments-example -->
+        <telerikInput:RadCalendar x:Name="calendar"
+                                  AppointmentsSource="{Binding Appointments}"
+                                  SchedulingUiEnabled="True">
+            <telerikInput:RadCalendar.BindingContext>
+                <local:AppointmentsViewModel />
+            </telerikInput:RadCalendar.BindingContext>    
+        </telerikInput:RadCalendar>
+        <!-- << calendar-appointments-example -->
+        <telerikInput:RadSegmentedControl x:Name="segmentControl"  
+                                          Grid.Row="1"
+                                          SelectedSegmentTextColor="White"
+                                          SelectedSegmentBackgroundColor="CornflowerBlue"     
+                                          SegmentTextColor="CornflowerBlue"
+                                          SelectedIndex="1"
+                                          HeightRequest="40"
+                                          SelectionChanged="SelectedIndex_Chanded">
+        </telerikInput:RadSegmentedControl>
+    </Grid>
+</ContentView>

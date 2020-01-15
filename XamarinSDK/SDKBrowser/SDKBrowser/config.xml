@@ -366,6 +366,17 @@
               <ExcludeFrom>UWP</ExcludeFrom>
             </Example>
             <Example>
+              <Page>CalendarAppointments</Page>
+              <Name>CalendarAppointments</Name>
+              <Title>Calendar Appointments</Title>
+            </Example>
+            <Example>
+              <Page>AgendaViewSettings</Page>
+              <Name>AgendaViewSettings</Name>
+              <Title>Agenda View Settings</Title>
+              <ExcludeFrom>UWP</ExcludeFrom>
+            </Example>
+            <Example>
               <Page>DayViewSettingsAndStyle</Page>
               <Name>DayViewSettings</Name>
               <Title>Day View Settings</Title>
@@ -452,6 +463,12 @@
           <Name>Styling</Name>
           <Title>Styling</Title>
           <Examples>
+            <Example>
+              <Page>AgendaViewStyling</Page>
+              <Name>AgendaViewStyling</Name>
+              <Title>Agenda View Styling</Title>
+              <ExcludeFrom>UWP</ExcludeFrom>
+            </Example>
             <Example>
               <Page>Appointments</Page>
               <Name>Appointments</Name>
@@ -1269,7 +1286,7 @@
         </Category>
         <Category>
           <Name>Source</Name>
-          <Title>Source</Title>
+          <Title>Data Source</Title>
           <Examples>
             <Example>
               <Page>DataFormCustomSource</Page>
@@ -1280,6 +1297,22 @@
               <Page>DataFormSourceDataClass</Page>
               <Name>DataClass</Name>
               <Title>Data Class</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>PropertyDataSourceProvider</Name>
+          <Title>PropertyDataSourceProvider</Title>
+          <Examples>
+            <Example>
+              <Page>ObservableCollectionPropertySource</Page>
+              <Name>ObservableCollectionSource</Name>
+              <Title>Dynamic PropertyDataSource</Title>
+            </Example>
+            <Example>
+              <Page>UpdatePropertyDataSource</Page>
+              <Name>UpdatePropertyDataSource</Name>
+              <Title>UpdatePropertyDataSource Method</Title>
             </Example>
           </Examples>
         </Category>
@@ -1514,6 +1547,50 @@
               <Page>NestedProperty</Page>
               <Name>NestedProperty</Name>
               <Title>Nested Properties</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>DateTimePicker</Name>
+      <Title>DateTimePicker</Title>
+      <Icon>DateTimePicker.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>DateTimePickerGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>DateTimePickerGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>KeyFeatures</Page>
+              <Name>KeyFeatures</Name>
+              <Title>KeyFeatures</Title>
+            </Example>
+            <Example>
+              <Page>Style</Page>
+              <Name>Style</Name>
+              <Title>Style</Title>
+            </Example>
+            <Example>
+              <Page>CustomTemplate</Page>
+              <Name>CustomTemplate</Name>
+              <Title>Custom Templates</Title>
             </Example>
           </Examples>
         </Category>
@@ -1806,6 +1883,50 @@
               <Page>BusyTemplate</Page>
               <Name>BusyTemplate</Name>
               <Title>Busy Template</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>ListPicker</Name>
+      <Title>ListPicker</Title>
+      <Icon>ListPicker.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>ListPickerGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>ListPickerGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>Looping</Page>
+              <Name>Looping</Name>
+              <Title>Looping List</Title>
+            </Example>
+            <Example>
+              <Page>Styling</Page>
+              <Name>Styling</Name>
+              <Title>Styling</Title>
+            </Example>
+            <Example>
+              <Page>Templates</Page>
+              <Name>Templates</Name>
+              <Title>Item and SelectedItem Templates</Title>
             </Example>
           </Examples>
         </Category>
@@ -2675,6 +2796,45 @@
               <Page>TabViewItemsSource</Page>
               <Name>ItemsSource</Name>
               <Title>Items Source</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>TemplatedPicker</Name>
+      <Title>TemplatedPicker</Title>
+      <Icon>TemplatedPicker.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>TemplatedPickerGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>TemplatedPickerGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>KeyFeatures</Page>
+              <Name>KeyFeatures</Name>
+              <Title>KeyFeatures</Title>
+            </Example>
+            <Example>
+              <Page>Styling</Page>
+              <Name>Styling</Name>
+              <Title>Styling</Title>
             </Example>
           </Examples>
         </Category>

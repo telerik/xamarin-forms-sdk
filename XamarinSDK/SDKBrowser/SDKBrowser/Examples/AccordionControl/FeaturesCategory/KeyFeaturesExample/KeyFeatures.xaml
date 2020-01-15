@@ -6,10 +6,12 @@
              x:Class="SDKBrowser.Examples.AccordionControl.FeaturesCategory.KeyFeaturesExample.KeyFeatures">
     <Grid Margin="10">
         <!-- >> accordion-key-features-xaml -->
-        <telerikPrimitives:RadAccordion AnimationDuration="1500"
-                                        AnimationEasing="SpringOut"
+        <telerikPrimitives:RadAccordion CanCollapseAllItems="True"
+                                        AnimationDuration="1500"
+                                        AnimationEasing="SpringOut"                                       
                                         Spacing="5">
-            <telerikPrimitives:AccordionItem HeaderText="Attachments" IsEnabled="True">
+            <telerikPrimitives:AccordionItem HeaderText="Attachments" 
+                                             IsExpanded="True">
                 <telerikPrimitives:AccordionItem.Content>
                     <Button Text="Attach files" FontSize="20" Margin="10" />
                 </telerikPrimitives:AccordionItem.Content>

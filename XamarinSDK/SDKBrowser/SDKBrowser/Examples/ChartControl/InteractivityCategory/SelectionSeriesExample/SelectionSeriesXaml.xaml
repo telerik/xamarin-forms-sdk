@@ -5,34 +5,46 @@
              xmlns:telerikChart="clr-namespace:Telerik.XamarinForms.Chart;assembly=Telerik.XamarinForms.Chart"
              x:Class="SDKBrowser.Examples.ChartControl.InteractivityCategory.SelectionSeriesExample.SelectionSeriesXaml">
     <!-- >> chart-interactivity-selectionseries-xaml -->
-    <telerikChart:RadCartesianChart>
-        <telerikChart:RadCartesianChart.BindingContext>
-            <local:ViewModel />
-        </telerikChart:RadCartesianChart.BindingContext>
-        <telerikChart:RadCartesianChart.HorizontalAxis>
-            <telerikChart:CategoricalAxis LabelFitMode="MultiLine" />
-        </telerikChart:RadCartesianChart.HorizontalAxis>
-        <telerikChart:RadCartesianChart.VerticalAxis>
-            <telerikChart:NumericalAxis />
-        </telerikChart:RadCartesianChart.VerticalAxis>
-        <telerikChart:RadCartesianChart.Series>
-            <telerikChart:BarSeries ValueBinding="Value"
+    <ContentView.BindingContext>
+        <local:ViewModel/>
+    </ContentView.BindingContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="0.3*"/>
+        </Grid.RowDefinitions>
+
+        <telerikChart:RadCartesianChart Grid.Row="0">
+            <telerikChart:RadCartesianChart.HorizontalAxis>
+                <telerikChart:CategoricalAxis LabelFitMode="MultiLine" />
+            </telerikChart:RadCartesianChart.HorizontalAxis>
+            <telerikChart:RadCartesianChart.VerticalAxis>
+                <telerikChart:NumericalAxis />
+            </telerikChart:RadCartesianChart.VerticalAxis>
+            <telerikChart:RadCartesianChart.Series>
+                <telerikChart:BarSeries ValueBinding="Value"
                                     CategoryBinding="Category"
                                     CombineMode="Stack"
                                     StackGroupKey="1"
                                     AllowSelect="True"
                                     ItemsSource="{Binding Data1}" />
-            <telerikChart:BarSeries ValueBinding="Value"
+                <telerikChart:BarSeries ValueBinding="Value"
                                     CategoryBinding="Category"
                                     CombineMode="Stack"
                                     StackGroupKey="1"
                                     AllowSelect="True"
                                     ItemsSource="{Binding Data2}" />
-        </telerikChart:RadCartesianChart.Series>
-        <telerikChart:RadCartesianChart.ChartBehaviors>
-            <telerikChart:ChartSelectionBehavior DataPointSelectionMode="Single"
-                                                 SeriesSelectionMode="None" />
-        </telerikChart:RadCartesianChart.ChartBehaviors>
-    </telerikChart:RadCartesianChart>
+            </telerikChart:RadCartesianChart.Series>
+            <telerikChart:RadCartesianChart.ChartBehaviors>
+                <telerikChart:ChartSelectionBehavior DataPointSelectionMode="Single"
+                                                     Command="{Binding IsSelectionChangedCommand}"
+                                                     SeriesSelectionMode="None" />
+            </telerikChart:RadCartesianChart.ChartBehaviors>
+        </telerikChart:RadCartesianChart>
+
+        <Label Grid.Row="2" Text="{Binding DisplayCount}"/>
+    </Grid>
+    
     <!-- << chart-interactivity-selectionseries-xaml -->
 </ContentView>

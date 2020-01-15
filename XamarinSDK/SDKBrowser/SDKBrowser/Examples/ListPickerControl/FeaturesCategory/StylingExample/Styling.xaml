@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.ListPickerControl.FeaturesCategory"
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.ListPickerControl.FeaturesCategory.StylingExample.Styling">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <!-- >> listpicker-features-itemstyle -->
+            <Style TargetType="telerikDataControls:SpinnerItemView" x:Key="ItemStyle">
+                <Setter Property="BackgroundColor" Value="#F8F8F8"/>
+                <Setter Property="CornerRadius" Value="0"/>
+            </Style>
+            <!-- << listpicker-features-itemstyle -->
+
+            <!-- >> listpicker-features-selecteditemstyle -->
+            <Style TargetType="telerikDataControls:SpinnerItemView" x:Key="SelectedItemStyle">
+                <Setter Property="BackgroundColor" Value="LightGray"/>
+                <Setter Property="CornerRadius" Value="0"/>
+                <Setter Property="BorderThickness" Value="0"/>
+            </Style>
+            <!-- << listpicker-features-selecteditemstyle -->
+
+            <!-- >> listpicker-style-placeholder-label-style -->
+            <Style TargetType="Label" x:Key="placeholderLabelStyle">
+                <Setter Property="TextColor" Value="#4A4949"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="HeightRequest" Value="50"/>
+            </Style>
+            <!-- << listpicker-style-placeholder-label-style -->
+
+            <!-- >> listpicker-style-display-label-style -->
+            <Style TargetType="Label" x:Key="displayLabelStyle">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="HeightRequest" Value="50"/>
+            </Style>
+            <!-- << listpicker-style-display-label-style -->
+
+            <!-- >> listpicker-style-header-style -->
+            <Style TargetType="telerikInput:PickerPopupHeaderView" x:Key="headerStyle">
+                <Setter Property="BackgroundColor" Value="#00B5DC"/>
+                <Setter Property="HeightRequest" Value="60"/>
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+            </Style>
+            <!-- << listpicker-style-header-style -->
+
+            <!-- >> listpicker-style-header-label-style -->
+            <Style TargetType="Label" x:Key="headerLabelStyle">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="FontSize" Value="Title"/>
+            </Style>
+            <!-- << listpicker-style-header-label-style -->
+
+            <!-- >> listpicker-style-footer-style -->
+            <Style TargetType="telerikInput:PickerPopupFooterView" x:Key="footerStyle">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+            </Style>
+            <!-- << listpicker-style-footer-style -->
+
+            <!-- >> listpicker-style-popupview-style -->
+            <Style TargetType="telerikInput:PickerPopupContentView" x:Key="popupViewStyle">
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="WidthRequest" Value="270"/>
+            </Style>
+            <!-- << listpicker-style-popupview-style -->
+
+            <!-- >> listpicker-style-accept-button-style -->
+            <Style TargetType="Button" x:Key="acceptButtonStyle">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="Text" Value="OK"/>
+                <Setter Property="TextColor" Value="#00B5DC"/>
+            </Style>
+            <!-- << listpicker-style-accept-button-style -->
+
+            <!-- >> listpicker-style-cancel-button-style -->
+            <Style TargetType="Button" x:Key="cancelButtonStyle">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="Text" Value="CANCEL"/>
+                <Setter Property="TextColor" Value="#00B5DC"/>
+            </Style>
+            <!-- << listpicker-style-cancel-button-style -->
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <StackLayout>
+            <!-- >> listpicker-features-styling -->
+            <telerikInput:RadListPicker Placeholder="Pick a City Name!"
+                                        ItemsSource="{Binding Items}" 
+                                        DisplayMemberPath="Name"
+                                        IsLooping="True"
+                                        DisplayStringFormat="You have picked: {0}"
+                                        DisplayLabelStyle="{StaticResource displayLabelStyle}"
+                                        ItemStyle="{StaticResource ItemStyle}"
+                                        SelectedItemStyle="{StaticResource SelectedItemStyle}"
+                                        PlaceholderLabelStyle="{StaticResource placeholderLabelStyle}">
+                <telerikInput:RadListPicker.BindingContext>
+                    <local:ViewModel/>
+                </telerikInput:RadListPicker.BindingContext>
+                <telerikInput:RadListPicker.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding Name}" 
+                               TextColor="#4A4949"
+                               VerticalTextAlignment="Center" 
+                               HorizontalTextAlignment="Center"/>
+                    </DataTemplate>
+                </telerikInput:RadListPicker.ItemTemplate>
+                <telerikInput:RadListPicker.SelectorSettings>
+                    <telerikInput:PickerPopupSelectorSettings PopupOutsideBackgroundColor="#4A4949F"
+                                                              PopupViewStyle="{StaticResource popupViewStyle}"
+                                                              HeaderStyle="{StaticResource headerStyle}"
+                                                              HeaderLabelText="Select city"
+                                                              HeaderLabelStyle="{StaticResource headerLabelStyle}"
+                                                              FooterStyle="{StaticResource footerStyle}"
+                                                              AcceptButtonStyle="{StaticResource acceptButtonStyle}"
+                                                              CancelButtonStyle="{StaticResource cancelButtonStyle}"/>
+                </telerikInput:RadListPicker.SelectorSettings>
+            </telerikInput:RadListPicker>
+            <!-- << listpicker-features-styling -->
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

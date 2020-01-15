@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.DateTimePickerControl.FeaturesCategory.KeyFeaturesExample.KeyFeatures">
+
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <!-- >> datetimepicker-keyfeatures-labelstyle -->
+            <Style TargetType="Label" x:Key="labelStyle">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="Margin" Value="0,10,0,0"/>
+            </Style>
+            <!-- << datetimepicker-keyfeatures-labelstyle -->
+        </ResourceDictionary>
+    </ContentView.Resources>
+    
+    <StackLayout>
+        <Label Text="DateTime Picker with d date and time string format" Style="{StaticResource labelStyle}"/>
+        <!-- >> datetimepicker-keyfeatures-date -->
+        <telerikInput:RadDateTimePicker StartDate="2019,12,25" 
+                                        EndDate="2020,02,14"
+                                        SpinnerFormatString="d"/>
+        <!-- << datetimepicker-keyfeatures-date -->
+
+        <Label Text="DateTime Picker with T date and time string format" Style="{StaticResource labelStyle}"/>
+        <!-- >> datetimepicker-keyfeatures-time -->
+        <telerikInput:RadDateTimePicker StartDate="2019,12,25" 
+                                        EndDate="2020,02,14"
+                                        SpinnerFormatString="T"
+                                        DisplayStringFormat="HH:mm:ss"
+                                        Placeholder="Pick a time!"
+                                        AreSpinnerHeadersVisible="True"/>
+        <!-- << datetimepicker-keyfeatures-time -->
+
+
+        <Label Text="DateTime Picker with g date and time string format" Style="{StaticResource labelStyle}"/>
+        <!-- >> datetimepicker-keyfeatures-date-time -->
+        <telerikInput:RadDateTimePicker StartDate="2019,12,25" 
+                                        EndDate="2020,02,14"
+                                        Placeholder="Pick date and time!"
+                                        AreSpinnerHeadersVisible="True"/>
+        <!-- << datetimepicker-keyfeatures-date-time --> 
+    </StackLayout>
+</ContentView>

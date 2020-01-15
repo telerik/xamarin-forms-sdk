@@ -7,14 +7,14 @@
              x:Class="SDKBrowser.Examples.ListViewControl.FeaturesCategory.CommandsExample.ListViewCommands">
     <StackLayout Margin="5">
         <Label Text="Inheriting from ListViewCommand" />
-        <telerikDataControls:RadListView x:Name="listView1" ItemsSource="{Binding Source}">
+        <telerikDataControls:RadListView x:Name="listView1" ItemsSource="{Binding Source}" AutomationId="topListView">
             <telerikDataControls:RadListView.BindingContext>
                 <local:ViewModel />
             </telerikDataControls:RadListView.BindingContext>
         </telerikDataControls:RadListView>
         <Label Text="Binding ListViewUserCommand" />
         <!-- >> listview-commands-listviewusercommand-xaml -->
-        <telerikDataControls:RadListView x:Name="listView2" ItemsSource="{Binding Source}">
+        <telerikDataControls:RadListView x:Name="listView2" ItemsSource="{Binding Source}" AutomationId="bottomListView">
             <telerikDataControls:RadListView.BindingContext>
                 <local:ViewModel />
             </telerikDataControls:RadListView.BindingContext>

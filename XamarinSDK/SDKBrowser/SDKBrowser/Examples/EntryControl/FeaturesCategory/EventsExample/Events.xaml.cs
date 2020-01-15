@@ -10,18 +10,20 @@ namespace SDKBrowser.Examples.EntryControl.FeaturesCategory.EventsExample
         public Events()
         {
             this.InitializeComponent();
-            this.entry.TextChanged += Entry_TextChanged;
-            this.entry.Completed += Entry_Completed;
         }
 
+        // >> entry-completed-event
         private void Entry_Completed(object sender, EventArgs e)
         {
             this.textChangedLabel.Text = "User completed entering text";
         }
+        // << entry-completed-event 
 
+        // >> entry-textchanged-event 
         private void Entry_TextChanged(object sender, TextChangedEventArgs e)
         {
             this.textChangedLabel.Text = $"Text changed from {e.OldTextValue} to {e.NewTextValue}";
         }
+        // << entry-textchanged-event
     }
 }

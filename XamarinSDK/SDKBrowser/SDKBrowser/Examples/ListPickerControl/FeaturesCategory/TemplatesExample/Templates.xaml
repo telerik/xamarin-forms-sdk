@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.ListPickerControl.FeaturesCategory"
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.ListPickerControl.FeaturesCategory.TemplatesExample.Templates">
+
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <!-- >> listpicker-features-itemtemplate -->
+            <DataTemplate x:Key="itemTemplate">
+                <Label Text="{Binding Population}" 
+                       BackgroundColor="LightYellow"
+                       HorizontalTextAlignment="Center" 
+                       VerticalTextAlignment="Center"/>
+            </DataTemplate>
+            <!-- << listpicker-features-itemtemplate -->
+
+            <!-- >> listpicker-features-selecteditemtemplate -->
+            <DataTemplate x:Key="selectedItemTemplate">
+                <Label Text="{Binding Name}" 
+                       BackgroundColor="LightBlue"
+                       HorizontalTextAlignment="Center" 
+                       VerticalTextAlignment="Center"/>
+            </DataTemplate>
+            <!-- << listpicker-features-selecteditemtemplate -->
+
+            <!-- >> listpicker-features-placeholdertemplate -->
+            <ControlTemplate x:Key="placeholderTemplate">
+                <Label Text="Tap to open list picker" 
+                       FontAttributes="Bold" 
+                       TextColor="White"
+                       BackgroundColor="#B73562" 
+                       HeightRequest="50"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{TemplateBinding ToggleCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </ControlTemplate>
+            <!-- << listpicker-features-placeholdertemplate -->
+
+            <!-- >> listpicker-features-headertemplate -->
+            <ControlTemplate x:Key="headerTemplate">
+                <Label Text="Select city:" 
+                       TextColor="White"
+                       FontSize="16"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       BackgroundColor="#B73562"/>
+            </ControlTemplate>
+            <!-- << listpicker-features-headertemplate -->
+
+            <!-- >> listpicker-features-footertemplate -->
+            <ControlTemplate x:Key="footerTemplate">
+                <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="FillAndExpand" BackgroundColor="#B73562">
+                    <Button Text="Cancel" 
+                            TextColor="White"
+                            BackgroundColor="Transparent"
+                            Command="{TemplateBinding CancelCommand}" />
+                    <Button Text="OK" 
+                            TextColor="White"
+                            BackgroundColor="Transparent"
+                            Command="{TemplateBinding AcceptCommand}" />
+                </StackLayout>
+            </ControlTemplate>
+            <!-- << listpicker-features-footertemplate -->
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <StackLayout>
+        <!-- >> listpicker-features-templates -->
+        <telerikInput:RadListPicker PlaceholderTemplate="{StaticResource placeholderTemplate}"
+                                    ItemTemplate="{StaticResource itemTemplate}"
+                                    SelectedItemTemplate="{StaticResource selectedItemTemplate}"
+                                    ItemLength="40"
+                                    ItemSpacing="4"
+                                    ItemsSource="{Binding Items}" 
+                                    DisplayMemberPath="Name"
+                                    x:Name="listPicker">
+            <telerikInput:RadListPicker.BindingContext>
+                <local:ViewModel/>
+            </telerikInput:RadListPicker.BindingContext>
+            <telerikInput:RadListPicker.SelectorSettings>
+                <telerikInput:PickerPopupSelectorSettings HeaderTemplate="{StaticResource headerTemplate}"
+                                                          FooterTemplate="{StaticResource footerTemplate}"/>
+            </telerikInput:RadListPicker.SelectorSettings>
+        </telerikInput:RadListPicker>
+        <!-- << listpicker-features-templates -->
+    </StackLayout>
+</ContentView>

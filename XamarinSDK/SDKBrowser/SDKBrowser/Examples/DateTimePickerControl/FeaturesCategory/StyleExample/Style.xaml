@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.DateTimePickerControl.FeaturesCategory.StyleExample.Style">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <!-- >> datetimepicker-style-spinner-header-style -->
+            <Style TargetType="Label" x:Key="spinnerHeaderStyle">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+            </Style>
+            <!-- << datetimepicker-style-spinner-header-style -->
+
+            <!-- >> datetimepicker-style-spinner-style -->
+            <Style TargetType="telerikDataControls:RadSpinner" x:Key="spinnerStyle">
+                <Setter Property="ItemStyle">
+                    <Setter.Value>
+                        <Style TargetType="telerikDataControls:SpinnerItemView">
+                            <Setter Property="TextColor" Value="#4A4949"/>
+                        </Style>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="SelectedItemStyle">
+                    <Setter.Value>
+                        <Style TargetType="telerikDataControls:SpinnerItemView">
+                            <Setter Property="TextColor" Value="Black"/>
+                            <Setter Property="FontAttributes" Value="Bold"/>
+                        </Style>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <!-- << datetimepicker-style-spinner-style -->
+
+            <!-- >> datetimepicker-style-selection-highlight-style -->
+            <Style TargetType="telerikPrimitives:RadBorder" x:Key="selectionHighlightStyle">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="BorderColor" Value="#00B5DC"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="Padding" Value="0,6,0,6"/>
+                <Setter Property="HeightRequest" Value="40"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <!-- << datetimepicker-style-selection-highlight-style -->
+
+            <!-- >> datetimepicker-style-display-label-style -->
+            <Style TargetType="Label" x:Key="displayLabelStyle">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="HeightRequest" Value="50"/>
+            </Style>
+            <!-- << datetimepicker-style-display-label-style -->
+
+            <!-- >> datetimepicker-style-placeholder-label-style -->
+            <Style TargetType="Label" x:Key="placeholderLabelStyle">
+                <Setter Property="TextColor" Value="#4A4949"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="HeightRequest" Value="50"/>
+            </Style>
+            <!-- << datetimepicker-style-placeholder-label-style -->
+
+            <!-- >> datetimepicker-style-header-style -->
+            <Style TargetType="telerikInput:PickerPopupHeaderView" x:Key="headerStyle">
+                <Setter Property="BackgroundColor" Value="#00B5DC"/>
+                <Setter Property="HeightRequest" Value="60"/>
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+            </Style>
+            <!-- << datetimepicker-style-header-style -->
+
+            <!-- >> datetimepicker-style-header-label-style -->
+            <Style TargetType="Label" x:Key="headerLabelStyle">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="FontSize" Value="Title"/>
+            </Style>
+            <!-- << datetimepicker-style-header-label-style -->
+
+            <!-- >> datetimepicker-style-footer-style -->
+            <Style TargetType="telerikInput:PickerPopupFooterView" x:Key="footerStyle">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+            </Style>
+            <!-- << datetimepicker-style-footer-style -->
+
+            <!-- >> datetimepicker-style-popupview-style -->
+            <Style TargetType="telerikInput:PickerPopupContentView" x:Key="popupViewStyle">
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="WidthRequest" Value="270"/>
+            </Style>
+            <!-- << datetimepicker-style-popupview-style -->
+
+            <!-- >> datetimepicker-style-accept-button-style -->
+            <Style TargetType="Button" x:Key="acceptButtonStyle">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="Text" Value="OK"/>
+                <Setter Property="TextColor" Value="#00B5DC"/>
+            </Style>
+            <!-- << datetimepicker-style-accept-button-style -->
+            
+            <!-- >> datetimepicker-style-cancel-button-style -->
+            <Style TargetType="Button" x:Key="cancelButtonStyle">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="Text" Value="X"/>
+                <Setter Property="TextColor" Value="#00B5DC"/>
+            </Style>
+            <!-- << datetimepicker-style-cancel-button-style -->
+        </ResourceDictionary>
+    </ContentView.Resources>
+
+    <StackLayout>
+        <!-- >> datetimepicker-style -->
+        <telerikInput:RadDateTimePicker SpinnerHeadersStyle="{StaticResource spinnerHeaderStyle}"
+                                        SpinnerStyle="{StaticResource spinnerStyle}"
+                                        SelectionHighlightStyle="{StaticResource selectionHighlightStyle}"
+                                        SpinnerFormatString="d"
+                                        AreSpinnerHeadersVisible="True"
+                                        DisplayLabelStyle="{StaticResource displayLabelStyle}"
+                                        PlaceholderLabelStyle="{StaticResource placeholderLabelStyle}">
+            <telerikInput:RadDateTimePicker.SelectorSettings>
+                <telerikInput:PickerPopupSelectorSettings PopupOutsideBackgroundColor="#D9D9D9CC"
+                                                          PopupViewStyle="{StaticResource popupViewStyle}"
+                                                          HeaderStyle="{StaticResource headerStyle}"
+                                                          HeaderLabelText="Date Picker"
+                                                          HeaderLabelStyle="{StaticResource headerLabelStyle}"
+                                                          FooterStyle="{StaticResource footerStyle}"
+                                                          AcceptButtonStyle="{StaticResource acceptButtonStyle}"
+                                                          CancelButtonStyle="{StaticResource cancelButtonStyle}"/>
+            </telerikInput:RadDateTimePicker.SelectorSettings>
+        </telerikInput:RadDateTimePicker>
+        <!-- << datetimepicker-style -->
+    </StackLayout>
+</ContentView>

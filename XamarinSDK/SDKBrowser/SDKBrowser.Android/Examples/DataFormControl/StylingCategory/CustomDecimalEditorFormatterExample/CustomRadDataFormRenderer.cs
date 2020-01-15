@@ -14,7 +14,12 @@ namespace SDKBrowser.Droid.Examples.DataFormControl.StylingCategory.CustomDecima
 {
     public class CustomRadDataFormRenderer : DataFormRenderer
 	{
-		protected override void UpdateEditor(EntityPropertyEditor editor, IEntityProperty property)
+        public CustomRadDataFormRenderer(Android.Content.Context context)
+            : base(context)
+        {
+        }
+
+        protected override void UpdateEditor(EntityPropertyEditor editor, IEntityProperty property)
 		{
 			base.UpdateEditor(editor, property);
 

@@ -492,4 +492,61 @@
   <data name="Calendar_ColorPickerTitle" xml:space="preserve">
     <value>Color</value>
   </data>
+  <data name="Calendar_DetailsEditorPlaceholderText" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="PdfViewer_SourceExceptionMessage" xml:space="preserve">
+    <value>An error occurred while loading the document.</value>
+  </data>
+  <data name="Calendar_Android_SaveSeriesNotification" xml:space="preserve">
+    <value>The changes will be applied to all events in the series</value>
+  </data>
+  <data name="ImageEditor_Blur" xml:space="preserve">
+    <value>Blur</value>
+  </data>
+  <data name="ImageEditor_Brightness" xml:space="preserve">
+    <value>Brightness</value>
+  </data>
+  <data name="ImageEditor_Contrast" xml:space="preserve">
+    <value>Contrast</value>
+  </data>
+  <data name="ImageEditor_Crop" xml:space="preserve">
+    <value>Crop</value>
+  </data>
+  <data name="ImageEditor_Hue" xml:space="preserve">
+    <value>Hue</value>
+  </data>
+  <data name="ImageEditor_Resize" xml:space="preserve">
+    <value>Resize</value>
+  </data>
+  <data name="ImageEditor_Saturation" xml:space="preserve">
+    <value>Saturation</value>
+  </data>
+  <data name="ImageEditor_Sharpen" xml:space="preserve">
+    <value>Sharpen</value>
+  </data>
+  <data name="ImageEditor_CropCircle" xml:space="preserve">
+    <value>Circle</value>
+  </data>
+  <data name="ImageEditor_CropFree" xml:space="preserve">
+    <value>Free</value>
+  </data>
+  <data name="ImageEditor_CropOriginal" xml:space="preserve">
+    <value>Original</value>
+  </data>
+  <data name="ImageEditor_CropSquare" xml:space="preserve">
+    <value>Square</value>
+  </data>
+  <data name="PdfViewer_CopySelection" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="Calendar_AgendaAllDay" xml:space="preserve">
+    <value>All-Day</value>
+  </data>
+  <data name="Calendar_AgendaEndTimeText" xml:space="preserve">
+    <value>Ends</value>
+  </data>
+  <data name="Calendar_AgendaStartTimeText" xml:space="preserve">
+    <value>Starts</value>
+  </data>
 </root>
