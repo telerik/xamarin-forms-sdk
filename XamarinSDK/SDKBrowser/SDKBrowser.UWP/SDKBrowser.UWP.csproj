@@ -460,74 +460,74 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Telerik.Core">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.3.1119.1\lib\uap10.0\Telerik.Core.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2020.1.114.1\lib\uap10.0\Telerik.Core.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Data">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.3.1119.1\lib\uap10.0\Telerik.Data.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2020.1.114.1\lib\uap10.0\Telerik.Data.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Documents.Core">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.3.1119.1\lib\portable-net45+win8+wpa81+wp8\Telerik.Documents.Core.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2020.1.114.1\lib\portable-net45+win8+wpa81+wp8\Telerik.Documents.Core.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Documents.Fixed">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.3.1119.1\lib\portable-net45+win8+wpa81+wp8\Telerik.Documents.Fixed.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2020.1.114.1\lib\portable-net45+win8+wpa81+wp8\Telerik.Documents.Fixed.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Documents.SpreadsheetStreaming">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.3.1119.1\lib\portable-net45+win8+wpa81+wp8\Telerik.Documents.SpreadsheetStreaming.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2020.1.114.1\lib\portable-net45+win8+wpa81+wp8\Telerik.Documents.SpreadsheetStreaming.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.UI.Xaml.Chart.UWP">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.3.1119.1\lib\uap10.0\Telerik.UI.Xaml.Chart.UWP.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2020.1.114.1\lib\uap10.0\Telerik.UI.Xaml.Chart.UWP.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.UI.Xaml.Controls.Data.UWP">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.3.1119.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2020.1.114.1\lib\uap10.0\Telerik.UI.Xaml.Controls.Data.UWP.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.UI.Xaml.Input.UWP">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.3.1119.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2020.1.114.1\lib\uap10.0\Telerik.UI.Xaml.Input.UWP.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.UI.Xaml.Primitives.UWP">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.3.1119.1\lib\uap10.0\Telerik.UI.Xaml.Primitives.UWP.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2020.1.114.1\lib\uap10.0\Telerik.UI.Xaml.Primitives.UWP.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.Barcode">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.3.1119.1\lib\uap10.0\Telerik.XamarinForms.Barcode.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2020.1.114.1\lib\uap10.0\Telerik.XamarinForms.Barcode.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.Chart">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.3.1119.1\lib\uap10.0\Telerik.XamarinForms.Chart.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2020.1.114.1\lib\uap10.0\Telerik.XamarinForms.Chart.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.Common">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.3.1119.1\lib\uap10.0\Telerik.XamarinForms.Common.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2020.1.114.1\lib\uap10.0\Telerik.XamarinForms.Common.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.ConversationalUI">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.3.1119.1\lib\uap10.0\Telerik.XamarinForms.ConversationalUI.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2020.1.114.1\lib\uap10.0\Telerik.XamarinForms.ConversationalUI.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.DataControls">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.3.1119.1\lib\uap10.0\Telerik.XamarinForms.DataControls.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2020.1.114.1\lib\uap10.0\Telerik.XamarinForms.DataControls.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.DataGrid, Version=2017.3.1213.240, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.3.1119.1\lib\uap10.0\Telerik.XamarinForms.DataGrid.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2020.1.114.1\lib\uap10.0\Telerik.XamarinForms.DataGrid.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.DataVisualization">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.3.1119.1\lib\uap10.0\Telerik.XamarinForms.DataVisualization.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2020.1.114.1\lib\uap10.0\Telerik.XamarinForms.DataVisualization.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.ImageEditor">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.3.1119.1\lib\uap10.0\Telerik.XamarinForms.ImageEditor.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2020.1.114.1\lib\uap10.0\Telerik.XamarinForms.ImageEditor.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.Input">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.3.1119.1\lib\uap10.0\Telerik.XamarinForms.Input.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2020.1.114.1\lib\uap10.0\Telerik.XamarinForms.Input.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.Map">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.3.1119.1\lib\uap10.0\Telerik.XamarinForms.Map.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2020.1.114.1\lib\uap10.0\Telerik.XamarinForms.Map.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.PdfViewer">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.3.1119.1\lib\uap10.0\Telerik.XamarinForms.PdfViewer.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2020.1.114.1\lib\uap10.0\Telerik.XamarinForms.PdfViewer.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.Primitives">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.3.1119.1\lib\uap10.0\Telerik.XamarinForms.Primitives.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2020.1.114.1\lib\uap10.0\Telerik.XamarinForms.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.SkiaSharp">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.3.1119.1\lib\uap10.0\Telerik.XamarinForms.SkiaSharp.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2020.1.114.1\lib\uap10.0\Telerik.XamarinForms.SkiaSharp.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Zip">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2019.3.1119.1\lib\portable-net45+win8+wpa81+wp8\Telerik.Zip.dll</HintPath>
+      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.Trial.2020.1.114.1\lib\portable-net45+win8+wpa81+wp8\Telerik.Zip.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
