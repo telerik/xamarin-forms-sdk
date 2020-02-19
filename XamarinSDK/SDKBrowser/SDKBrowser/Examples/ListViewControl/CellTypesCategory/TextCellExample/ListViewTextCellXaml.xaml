@@ -15,7 +15,7 @@
             </DataTemplate>
         </telerikDataControls:RadListView.ItemTemplate>
         <telerikDataControls:RadListView.LayoutDefinition>
-            <telerikListView:ListViewLinearLayout ItemLength="70" />
+            <telerikListView:ListViewLinearLayout ItemLength="60" />
         </telerikDataControls:RadListView.LayoutDefinition>
     </telerikDataControls:RadListView>
     <!-- << listview-celltypes-textcell-listview-xaml -->

@@ -2,7 +2,7 @@
 using System.Collections.ObjectModel;
 using Telerik.XamarinForms.Input.DataForm;
 
-namespace SDKBrowser.Examples.DataFormControl.PropertyDataSourceProviderCategory.ObservableCollectionSourceExample
+namespace SDKBrowser.Examples.DataFormControl.PropertyDataSourceProviderCategory.ObservableCollectionExample
 {
     // >> dataform-propertydatasource-locationprovider
     public class LocationProvider : PropertyDataSourceProvider

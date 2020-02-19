@@ -25,7 +25,7 @@ namespace SDKBrowser.Examples.ListViewControl.CellTypesCategory.TextCellExample
 
                     return cell;
                 }),
-                LayoutDefinition = new ListViewLinearLayout { ItemLength = 70 },
+                LayoutDefinition = new ListViewLinearLayout { ItemLength = 60 },
             };
             // << listview-celltypes-textcell-listview-csharp
 

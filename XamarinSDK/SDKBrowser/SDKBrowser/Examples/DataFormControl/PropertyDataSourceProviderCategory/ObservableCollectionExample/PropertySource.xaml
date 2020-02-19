@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"         
              mc:Ignorable="d"
-             x:Class="SDKBrowser.Examples.DataFormControl.PropertyDataSourceProviderCategory.ObservableCollectionSourceExample.ObservableCollectionPropertySource">
+             x:Class="SDKBrowser.Examples.DataFormControl.PropertyDataSourceProviderCategory.ObservableCollectionExample.PropertySource">
     <!-- >> dataform-propertydatasource-observablecollection-xaml -->
     <telerikInput:RadDataForm x:Name="dataForm" 
                               CommitMode="Manual"

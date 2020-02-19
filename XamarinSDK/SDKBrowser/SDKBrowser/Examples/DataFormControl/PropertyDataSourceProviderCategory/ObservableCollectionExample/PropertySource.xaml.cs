@@ -3,13 +3,13 @@ using Telerik.XamarinForms.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace SDKBrowser.Examples.DataFormControl.PropertyDataSourceProviderCategory.ObservableCollectionSourceExample
+namespace SDKBrowser.Examples.DataFormControl.PropertyDataSourceProviderCategory.ObservableCollectionExample
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ObservableCollectionPropertySource : ContentView
+    public partial class PropertySource : ContentView
     {
         private LocationProvider locationProvider = new LocationProvider();
-        public ObservableCollectionPropertySource()
+        public PropertySource()
         {
             InitializeComponent();
 

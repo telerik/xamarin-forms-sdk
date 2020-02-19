@@ -460,7 +460,7 @@
     <value>s</value>
   </data>
   <data name="Calendar_CustomReccurence_FrequencyPickerTitle_Day" xml:space="preserve">
-    <value>day</value>
+    <value>Day</value>
   </data>
   <data name="Calendar_CustomReccurence_FrequencyPickerTitle_Month" xml:space="preserve">
     <value>month</value>
@@ -540,6 +540,36 @@
   <data name="PdfViewer_CopySelection" xml:space="preserve">
     <value>Copy</value>
   </data>
+  <data name="Pickers_Placeholder" xml:space="preserve">
+    <value>Pick a value</value>
+  </data>
+  <data name="Pickers_Popup_AcceptButtonText" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Pickers_Popup_RejectButtonText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="DateTimePicker_AmPmSpinnerHeaderString" xml:space="preserve">
+    <value>AM/PM</value>
+  </data>
+  <data name="DateTimePicker_DaySpinnerHeaderString" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="DateTimePicker_HourSpinnerHeaderString" xml:space="preserve">
+    <value>Hours</value>
+  </data>
+  <data name="DateTimePicker_MinuteSpinnerHeaderString" xml:space="preserve">
+    <value>Minutes</value>
+  </data>
+  <data name="DateTimePicker_MonthSpinnerHeaderString" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="DateTimePicker_SecondSpinnerHeaderString" xml:space="preserve">
+    <value>Seconds</value>
+  </data>
+  <data name="DateTimePicker_YearSpinnerHeaderString" xml:space="preserve">
+    <value>Year</value>
+  </data>
   <data name="Calendar_AgendaAllDay" xml:space="preserve">
     <value>All-Day</value>
   </data>
@@ -548,5 +578,8 @@
   </data>
   <data name="Calendar_AgendaStartTimeText" xml:space="preserve">
     <value>Starts</value>
+  </data>
+  <data name="ListPicker_Popup_HeaderLabelText" xml:space="preserve">
+    <value>Pick a value</value>
   </data>
 </root>

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
 using Telerik.XamarinForms.DataControls.ListView;
 using Xamarin.Forms;
 using SelectionMode = Telerik.XamarinForms.DataControls.ListView.SelectionMode;
@@ -8,13 +6,15 @@ using SelectionMode = Telerik.XamarinForms.DataControls.ListView.SelectionMode;
 namespace SDKBrowser.Examples.ListViewControl.FeaturesCategory.SelectionExample
 {
     public partial class Selection : ContentView
-    {
-        // >> listview-features-selection-csharp
+    {        
         public Selection()
         {
             this.InitializeComponent();
-            listView.ItemsSource = new List<string> { "Tom", "Anna", "Peter", "Teodor", "Lorenzo", "Andrea", "Martin" };
-            this.InitializePickers();
+
+            // >> listview-features-selection-setvm
+            this.BindingContext = new ViewModel();
+            // << listview-features-selection-setvm
+            this.InitializePickers();       
         }
 
         private void InitializePickers()
@@ -23,14 +23,13 @@ namespace SDKBrowser.Examples.ListViewControl.FeaturesCategory.SelectionExample
             selectionModePicker.Items.Add("Single");
             selectionModePicker.Items.Add("Multiple");
             selectionModePicker.SelectedIndexChanged += this.OnSelectionModeChanged;
-            selectionModePicker.SelectedIndex = 1;
+            selectionModePicker.SelectedIndex = 2;
 
             selectionGesturePicker.Items.Add("Tap");
             selectionGesturePicker.Items.Add("Hold");
             selectionGesturePicker.SelectedIndexChanged += this.OnSelectionGestureChanged;
             selectionGesturePicker.SelectedIndex = 0;
-        }
-        // << listview-features-selection-csharp
+        }        
 
         // >> listview-features-onselectionchanged-csharp
         private void OnSelectionGestureChanged(object sender, EventArgs e)
@@ -62,15 +61,5 @@ namespace SDKBrowser.Examples.ListViewControl.FeaturesCategory.SelectionExample
             }
         }
         // << listview-features-onselectionchanged-csharp
-        private void ListViewSelectionChanged(object sender, NotifyCollectionChangedEventArgs e)
-        {
-            if (e.NewItems != null)
-            {
-                foreach (var item in e.NewItems)
-                {
-                    Application.Current.MainPage.DisplayAlert("Selected item:", (string)item, "OK");
-                }
-            }
-        }
     }
 }

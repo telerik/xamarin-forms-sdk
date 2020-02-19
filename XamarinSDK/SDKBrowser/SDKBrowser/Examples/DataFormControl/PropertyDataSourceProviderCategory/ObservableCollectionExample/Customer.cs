@@ -1,6 +1,6 @@
 ﻿using Telerik.XamarinForms.Common.DataAnnotations;
 
-namespace SDKBrowser.Examples.DataFormControl.PropertyDataSourceProviderCategory.ObservableCollectionSourceExample
+namespace SDKBrowser.Examples.DataFormControl.PropertyDataSourceProviderCategory.ObservableCollectionExample
 {
     // >> dataform-propertydatasource-customer
     public class Customer

@@ -1305,8 +1305,8 @@
           <Title>PropertyDataSourceProvider</Title>
           <Examples>
             <Example>
-              <Page>ObservableCollectionPropertySource</Page>
-              <Name>ObservableCollectionSource</Name>
+              <Page>PropertySource</Page>
+              <Name>ObservableCollection</Name>
               <Title>Dynamic PropertyDataSource</Title>
             </Example>
             <Example>
