@@ -11,8 +11,9 @@ namespace SDKBrowser.Examples.MapControl.FeaturesCategory.ShapeStyleSelectorExam
         {
             InitializeComponent();
 
-            var source = MapSource.FromResource("SDKBrowser.Examples.MapControl.world.shp");
-            var dataSource = MapSource.FromResource("SDKBrowser.Examples.MapControl.world.dbf");
+            var assembly = this.GetType().Assembly;
+            var source = MapSource.FromResource("SDKBrowser.Examples.MapControl.world.shp", assembly);
+            var dataSource = MapSource.FromResource("SDKBrowser.Examples.MapControl.world.dbf", assembly);
             this.reader.Source = source;
             this.reader.DataSource = dataSource;
         }

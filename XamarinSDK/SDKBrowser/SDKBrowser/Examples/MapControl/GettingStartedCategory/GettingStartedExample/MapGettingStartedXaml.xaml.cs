@@ -12,7 +12,8 @@ namespace SDKBrowser.Examples.MapControl.GettingStartedCategory.GettingStartedEx
             InitializeComponent();
 
             // >> map-gettingstarted-setting-source
-            var source = MapSource.FromResource("SDKBrowser.Examples.MapControl.world.shp");
+            var assembly = this.GetType().Assembly;
+            var source = MapSource.FromResource("SDKBrowser.Examples.MapControl.world.shp", assembly);
             this.reader.Source = source;
             // << map-gettingstarted-setting-source
         }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
@@ -65,7 +66,14 @@ namespace SDKBrowser.WinRT
 
                 // TODO: change this value to a cache size that is appropriate for your application
                 rootFrame.CacheSize = 1;
-                Xamarin.Forms.Forms.Init(e);
+                var assembliesToInclude = new []
+                {
+                    typeof(Telerik.XamarinForms.Input.RadButton).GetTypeInfo().Assembly,
+                    typeof(Telerik.XamarinForms.InputRenderer.UWP.ButtonRenderer).GetTypeInfo().Assembly,
+                    typeof(Telerik.XamarinForms.Primitives.RadBorder).GetTypeInfo().Assembly,
+                    typeof(Telerik.XamarinForms.PrimitivesRenderer.UWP.BorderRenderer).GetTypeInfo().Assembly,
+                };
+                Xamarin.Forms.Forms.Init(e, assembliesToInclude);
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {

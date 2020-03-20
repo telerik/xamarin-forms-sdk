@@ -11,7 +11,8 @@ namespace SDKBrowser.Examples.MapControl.FeaturesCategory.ShapeStyleExample
         {
             InitializeComponent();
 
-            var source = MapSource.FromResource("SDKBrowser.Examples.MapControl.world.shp");
+            var assembly = this.GetType().Assembly;
+            var source = MapSource.FromResource("SDKBrowser.Examples.MapControl.world.shp", assembly);
             this.reader.Source = source;
         }
     }

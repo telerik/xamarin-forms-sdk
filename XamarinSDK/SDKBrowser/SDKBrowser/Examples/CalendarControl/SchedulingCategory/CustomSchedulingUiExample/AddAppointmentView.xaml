@@ -9,27 +9,10 @@
 
     <ContentView.Resources>
         <ResourceDictionary>
-            <Style x:Key="ColorPickerItemStyleBase" TargetType="telerikPrimitives:RadBorder">
-                <Setter Property="Margin" Value="5, 0, 5, 0" />
-                <Setter Property="HeightRequest" Value="36" />
-                <Setter Property="WidthRequest" Value="36" />
-                <Setter Property="CornerRadius" Value="18" />
-            </Style>
-
-            <Style x:Key="ColorPickerItemStyle" TargetType="telerikPrimitives:RadBorder" BasedOn="{StaticResource ColorPickerItemStyleBase}">
-                <Setter Property="BackgroundColor" Value="{Binding .}" />
-            </Style>
-
-            <Style x:Key="SelectedColorPickerItemStyle" TargetType="telerikPrimitives:RadBorder" BasedOn="{StaticResource ColorPickerItemStyleBase}">
-                <Setter Property="BorderColor" Value="{Binding .}" />
-                <Setter Property="BackgroundColor" Value="Transparent" />
-                <Setter Property="BorderThickness" Value="3" />
-            </Style>
-
             <Style x:Key="EntryStyle" TargetType="telerikInput:RadEntry">
                 <Setter Property="BorderStyle">
                     <Setter.Value>
-                         <OnPlatform x:TypeArguments="telerikInput:BorderStyle">
+                        <OnPlatform x:TypeArguments="telerikInput:BorderStyle">
                             <On Platform="iOS">
                                 <telerikInput:BorderStyle BorderColor="#C8C7CC" BorderThickness="1" CornerRadius="5" />
                             </On>
@@ -37,7 +20,50 @@
                     </Setter.Value>
                 </Setter>
             </Style>
+            
+            <DataTemplate x:Key="ItemTemplate">
+                <telerikPrimitives:RadBorder VerticalOptions="Center"
+                                                             HorizontalOptions="Center"
+                                                             Margin="12, 4, 12, 4"
+                                                             HeightRequest="26" 
+                                                             WidthRequest="26"
+                                                             CornerRadius="13"
+                                                             BackgroundColor="{Binding .}" />
+            </DataTemplate>
 
+            <DataTemplate x:Key="SelectedItemTemplate">
+                <telerikPrimitives:RadBorder VerticalOptions="Center"
+                                                             HorizontalOptions="Center"
+                                                             Margin="12, 4, 12, 4"
+                                                             HeightRequest="26" 
+                                                             WidthRequest="26"
+                                                             CornerRadius="13"
+                                                             BorderThickness="1"
+                                                             BackgroundColor="Transparent"
+                                                             BorderColor="{Binding .}">
+                    <telerikPrimitives:RadBorder VerticalOptions="Center"
+                                                                 HorizontalOptions="Center" 
+                                                                 HeightRequest="22"
+                                                                 WidthRequest="22"
+                                                                 BackgroundColor="{Binding .}"
+                                                                 CornerRadius="11" />
+                </telerikPrimitives:RadBorder>
+            </DataTemplate>
+
+            <Style TargetType="telerikPrimitives:RadBorder" x:Key="ItemStyle">
+                <Setter Property="VerticalOptions" Value="Center"></Setter>
+                <Setter Property="HorizontalOptions" Value="Center"></Setter>
+                <Setter Property="Margin" Value="12, 4, 12, 4"></Setter>
+                <Setter Property="HeightRequest" Value="26"></Setter>
+                <Setter Property="WidthRequest" Value="26"></Setter>
+                <Setter Property="CornerRadius" Value="13"></Setter>
+                <Setter Property="BackgroundColor" Value="{Binding .}"></Setter>
+            </Style>
+            
+            <Style TargetType="telerikPrimitives:RadBorder" x:Key="SelectedItemStyle">
+                <Setter Property="BackgroundColor" Value="Transparent"></Setter>
+            </Style>
+            
             <local:SaveButtonStringToColorConverter x:Key="saveButtonStringToColorConverter" />
         </ResourceDictionary>
     </ContentView.Resources>
@@ -52,7 +78,7 @@
                        FontSize="16"
                        VerticalOptions="Center">
                     <Label.GestureRecognizers>
-                         <TapGestureRecognizer Command="{Binding CancelCommand}" />
+                        <TapGestureRecognizer Command="{Binding CancelCommand}" />
                     </Label.GestureRecognizers>
                 </Label>
             </StackLayout>
@@ -72,7 +98,7 @@
                    HorizontalOptions="End"
                    VerticalOptions="Center">
                 <Label.GestureRecognizers>
-                     <TapGestureRecognizer Command="{Binding AddCommand}" />
+                    <TapGestureRecognizer Command="{Binding AddCommand}" />
                 </Label.GestureRecognizers>
             </Label>
         </Grid>
@@ -113,30 +139,20 @@
 
                     <telerikDataControls:NonVirtualizedItemsControl ItemsSource="{Binding AppointmentColors}"
                                                                     SelectedItem="{Binding Color, Mode=TwoWay}"
+                                                                    SelectedItemStyle="{StaticResource SelectedItemStyle}"
+                                                                    SelectedItemTemplate="{StaticResource SelectedItemTemplate}"
+                                                                    ItemTemplate="{StaticResource ItemTemplate}"
+                                                                    ItemStyle="{StaticResource ItemStyle}"
                                                                     HeightRequest="36"
                                                                     VerticalOptions="Center"
                                                                     HorizontalOptions="End"
                                                                     SelectionMode="Single"
-                                                                    ItemStyle="{StaticResource ColorPickerItemStyle}"
-                                                                    SelectedItemStyle="{StaticResource SelectedColorPickerItemStyle}"
                                                                     Orientation="Horizontal">
-                       
-                        <telerikDataControls:NonVirtualizedItemsControl.SelectedItemTemplate>
-                            <DataTemplate>
-                               <telerikPrimitives:RadBorder 
-                                        VerticalOptions="Center"
-                                        HorizontalOptions="Center"
-                                        HeightRequest="28" 
-                                        WidthRequest="28"
-                                        BackgroundColor="{Binding .}"
-                                        CornerRadius="14" />
-                            </DataTemplate>
-                        </telerikDataControls:NonVirtualizedItemsControl.SelectedItemTemplate>
                     </telerikDataControls:NonVirtualizedItemsControl>
 
                 </Grid>
             </telerikPrimitives:RadBorder>
         </StackLayout>
     </StackLayout>
-   
+
 </ContentView>

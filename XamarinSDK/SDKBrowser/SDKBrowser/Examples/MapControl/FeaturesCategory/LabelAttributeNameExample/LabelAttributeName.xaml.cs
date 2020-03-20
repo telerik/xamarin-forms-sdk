@@ -13,8 +13,9 @@ namespace SDKBrowser.Examples.MapControl.FeaturesCategory.LabelAttributeNameExam
             InitializeComponent();
 
             // >> map-labels-settintsource
-            var source = MapSource.FromResource("SDKBrowser.Examples.MapControl.world.shp");
-            var dataSource = MapSource.FromResource("SDKBrowser.Examples.MapControl.world.dbf");
+            var assembly = this.GetType().Assembly;
+            var source = MapSource.FromResource("SDKBrowser.Examples.MapControl.world.shp", assembly);
+            var dataSource = MapSource.FromResource("SDKBrowser.Examples.MapControl.world.dbf", assembly);
             this.reader.Source = source;
             this.reader.DataSource = dataSource;
             // << map-labels-settintsource

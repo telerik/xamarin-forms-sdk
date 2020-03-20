@@ -13,7 +13,8 @@ namespace SDKBrowser.Examples.MapControl.FeaturesCategory.InteractionModeExample
             InitializeComponent();
 
             // >> map-interactionmode-settintsource
-            var source = MapSource.FromResource("SDKBrowser.Examples.MapControl.world.shp");
+            var assembly = this.GetType().Assembly;
+            var source = MapSource.FromResource("SDKBrowser.Examples.MapControl.world.shp", assembly);
             this.reader.Source = source;
             // << map-interactionmode-settintsource
 
