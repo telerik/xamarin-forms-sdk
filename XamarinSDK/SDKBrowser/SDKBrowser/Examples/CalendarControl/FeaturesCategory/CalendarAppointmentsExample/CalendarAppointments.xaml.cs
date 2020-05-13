@@ -26,5 +26,12 @@ namespace SDKBrowser.Examples.CalendarControl.FeaturesCategory.CalendarAppointme
                 calendar.ViewMode = CalendarViewMode.Month;
             }
         }
+
+        // >> calendar-appointment-button-click-event
+        private void calendar_AddAppointmentButtonClicked(object sender, AddAppointmentButtonClickedEventArgs e)
+        {
+            // implement your logic here
+        }
+        // << calendar-appointment-button-click-event
     }
 }

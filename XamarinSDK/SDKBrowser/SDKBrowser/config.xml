@@ -470,6 +470,12 @@
               <ExcludeFrom>UWP</ExcludeFrom>
             </Example>
             <Example>
+              <Page>AgendaViewStickyHeadersStyle</Page>
+              <Name>AgendaViewStickyHeadersStyle</Name>
+              <Title>AgendaView StickyHeaders Styling</Title>
+              <ExcludeFrom>UWP</ExcludeFrom>
+            </Example>
+            <Example>
               <Page>Appointments</Page>
               <Name>Appointments</Name>
               <Title>Appointments</Title>
@@ -503,6 +509,27 @@
               <Page>DayViewStyling</Page>
               <Name>DayViewStyling</Name>
               <Title>Day View Styling</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Commands</Name>
+          <Title>Commands</Title>
+          <Examples>
+            <Example>
+              <Page>CellTap</Page>
+              <Name>CellTap</Name>
+              <Title>CellTap Command</Title>
+            </Example>
+            <Example>
+              <Page>AppointmentTap</Page>
+              <Name>AppointmentTap</Name>
+              <Title>AppointmentTap Command</Title>
+            </Example>
+            <Example>
+              <Page>TimeSlotTap</Page>
+              <Name>TimeSlotTap</Name>
+              <Title>TimeSlotTap Command</Title>
             </Example>
           </Examples>
         </Category>
@@ -964,9 +991,14 @@
               <Title>MVVM Support</Title>
             </Example>
             <Example>
+              <Page>DefaultItemTemplateSelector</Page>
+              <Name>DefaultTemplateSelector</Name>
+              <Title>Default ItemTemplateSelector</Title>
+            </Example>
+            <Example>
               <Page>ItemTemplateSelector</Page>
               <Name>ItemTemplateSelector</Name>
-              <Title>ItemTemplateSelector</Title>
+              <Title>Custom ItemTemplateSelector</Title>
             </Example>
             <Example>
               <Page>Commands</Page>
@@ -1368,6 +1400,16 @@
           <Title>Columns</Title>
           <Examples>
             <Example>
+              <Page>CellContentTemplate</Page>
+              <Name>CellContentTemplate</Name>
+              <Title>CellContent Template</Title>
+            </Example>
+            <Example>
+              <Page>CellEditTemplate</Page>
+              <Name>CellEditTemplate</Name>
+              <Title>CellEdit Template</Title>
+            </Example>
+            <Example>
               <Page>Columns</Page>
               <Name>Columns</Name>
               <Title>Columns</Title>
@@ -1399,12 +1441,27 @@
               <Name>ProgrammaticFiltering</Name>
               <Title>Programmatic Filtering</Title>
             </Example>
+            <Example>
+              <Page>FilterTemplate</Page>
+              <Name>FilterTemplate</Name>
+              <Title>Filter Control Template</Title>
+            </Example>
           </Examples>
         </Category>
         <Category>
           <Name>Grouping</Name>
           <Title>Grouping</Title>
           <Examples>
+            <Example>
+              <Page>PropertyGroupDescriptor</Page>
+              <Name>PropertyGroupDescriptor</Name>
+              <Title>PropertyGroupDescriptor</Title>
+            </Example>
+            <Example>
+              <Page>DelegateGroupDescriptorGroups</Page>
+              <Name>DelegateGroupDescriptor</Name>
+              <Title>DelegateGroupDescriptor</Title>
+            </Example>
             <Example>
               <Page>ProgrammaticGrouping</Page>
               <Name>ProgrammaticGrouping</Name>
@@ -1553,6 +1610,55 @@
       </Categories>
     </Control>
     <Control>
+      <Name>DatePicker</Name>
+      <Title>DatePicker</Title>
+      <Icon>DatePicker.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>DatePickerGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>DatePickerGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>KeyFeatures</Page>
+              <Name>KeyFeatures</Name>
+              <Title>KeyFeatures</Title>
+            </Example>
+            <Example>
+              <Page>Styling</Page>
+              <Name>Styling</Name>
+              <Title>Styling</Title>
+            </Example>
+            <Example>
+              <Page>CustomTemplates</Page>
+              <Name>CustomTemplates</Name>
+              <Title>Custom Templates</Title>
+            </Example>
+            <Example>
+              <Page>DefaultTemplates</Page>
+              <Name>DefaultTemplates</Name>
+              <Title>Default Templates</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
       <Name>DateTimePicker</Name>
       <Title>DateTimePicker</Title>
       <Icon>DateTimePicker.png</Icon>
@@ -1591,6 +1697,11 @@
               <Page>CustomTemplate</Page>
               <Name>CustomTemplate</Name>
               <Title>Custom Templates</Title>
+            </Example>
+            <Example>
+              <Page>Localization</Page>
+              <Name>Localization</Name>
+              <Title>Localization</Title>
             </Example>
           </Examples>
         </Category>
@@ -2113,19 +2224,19 @@
           <Title>Load on Demand</Title>
           <Examples>
             <Example>
-              <Page>LoadOnDemandEventAuto</Page>
-              <Name>LoadOnDemandEventAuto</Name>
-              <Title>Load on Demand - Auto</Title>
+              <Page>LoadOnDemandEvent</Page>
+              <Name>LoadOnDemandEvent</Name>
+              <Title>LoadonDemand Event</Title>
             </Example>
             <Example>
-              <Page>LoadOnDemandEventManual</Page>
-              <Name>LoadOnDemandEventManual</Name>
-              <Title>Load on Demand - Manual</Title>
+              <Page>LoadOnDemandCommand</Page>
+              <Name>LoadOnDemandCommand</Name>
+              <Title>Load on Demand Command</Title>
             </Example>
             <Example>
               <Page>LoadOnDemandCollection</Page>
               <Name>LoadOnDemandCollection</Name>
-              <Title>Load on Demand - Collection</Title>
+              <Title>LoadOnDemandCollection</Title>
             </Example>
             <Example>
               <Page>LoadOnDemandCustomizations</Page>
@@ -2534,6 +2645,11 @@
               <Name>SourceException</Name>
               <Title>Source Exception Template</Title>
             </Example>
+            <Example>
+              <Page>CustomToolbarItem</Page>
+              <Name>CustomToolbarItem</Name>
+              <Title>Pdf Toolbar Custom ToolbarItem</Title>
+            </Example>
           </Examples>
         </Category>
       </Categories>
@@ -2835,6 +2951,94 @@
               <Page>Styling</Page>
               <Name>Styling</Name>
               <Title>Styling</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>TimePicker</Name>
+      <Title>TimePicker</Title>
+      <Icon>TimePicker.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>TimePickerGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>TimePickerGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>KeyFeatures</Page>
+              <Name>KeyFeatures</Name>
+              <Title>KeyFeatures</Title>
+            </Example>
+            <Example>
+              <Page>Styling</Page>
+              <Name>Styling</Name>
+              <Title>Styling</Title>
+            </Example>
+            <Example>
+              <Page>CustomTemplates</Page>
+              <Name>CustomTemplates</Name>
+              <Title>Custom Templates</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>TimeSpanPicker</Name>
+      <Title>TimeSpanPicker</Title>
+      <Icon>TimeSpanPicker.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>TimeSpanPickerGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>TimeSpanPickerGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>KeyFeatures</Page>
+              <Name>KeyFeatures</Name>
+              <Title>KeyFeatures</Title>
+            </Example>
+            <Example>
+              <Page>Styling</Page>
+              <Name>Styling</Name>
+              <Title>Styling</Title>
+            </Example>
+            <Example>
+              <Page>CustomTemplates</Page>
+              <Name>CustomTemplates</Name>
+              <Title>Custom Templates</Title>
             </Example>
           </Examples>
         </Category>

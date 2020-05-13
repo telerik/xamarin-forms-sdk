@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerikDataGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+             xmlns:primitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.DataGridControl.ColumnsCategory.CellEditTemplateExample.CellEditTemplate">
+  <ContentView.Content>
+        <!-- >> datagrid-columns-celledittemplate-xaml -->
+        <telerikDataGrid:RadDataGrid x:Name="dataGrid" 
+                                     ItemsSource="{Binding Clubs}" 
+                                     AutoGenerateColumns="False" 
+                                     SelectionMode="None"
+                                     UserEditMode="Cell">
+            <telerikDataGrid:RadDataGrid.Columns>
+                <telerikDataGrid:DataGridTextColumn PropertyName="Name" 
+                                                    HeaderText="Name">
+                    <telerikDataGrid:DataGridColumn.CellEditTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Entry Text="{Binding Item.Name, Mode=TwoWay}" Margin="5">
+                                    <VisualElement.Behaviors>
+                                        <telerikCommon:RadEventToCommandBehavior EventName="Completed"
+                                                                                 Command="{Binding CommitEditCommand}" />
+                                    </VisualElement.Behaviors>
+                                </Entry>
+                                <Button Text="Cancel" Command="{Binding CancelEditCommand}" />
+                            </StackLayout>
+                        </DataTemplate>
+                    </telerikDataGrid:DataGridColumn.CellEditTemplate>
+                </telerikDataGrid:DataGridTextColumn>
+
+                <telerikDataGrid:DataGridBooleanColumn PropertyName="IsChampion" 
+                                                       HeaderText="Champion?">
+                    <telerikDataGrid:DataGridColumn.CellEditTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Switch IsToggled="{Binding Item.IsChampion, Mode=TwoWay}" />
+                                <Button Text="X" Command="{Binding CancelEditCommand}" />
+                                <Button Text="OK" Command="{Binding CommitEditCommand}" />
+                            </StackLayout>
+                        </DataTemplate>
+                    </telerikDataGrid:DataGridColumn.CellEditTemplate>
+                </telerikDataGrid:DataGridBooleanColumn>
+
+                <telerikDataGrid:DataGridNumericalColumn PropertyName="StadiumCapacity">
+                    <telerikDataGrid:DataGridColumn.CellEditTemplate>
+                        <DataTemplate>
+                            <StackLayout Orientation="Horizontal" 
+                                         BackgroundColor="LightGray">
+                                <Slider Maximum="80000" Minimum="30000" 
+                                        Value="{Binding Item.StadiumCapacity}" 
+                                        HorizontalOptions="FillAndExpand" />
+                                <Button Text="X" Command="{Binding CancelEditCommand}" />
+                                <Button Text="OK" Command="{Binding CommitEditCommand}" />
+                            </StackLayout>
+                        </DataTemplate>
+                    </telerikDataGrid:DataGridColumn.CellEditTemplate>
+                </telerikDataGrid:DataGridNumericalColumn>
+                <telerikDataGrid:DataGridDateColumn PropertyName="Established" 
+                                                    CellContentFormat="{}{0: yyyy/MMM/dd}">
+                    <telerikDataGrid:DataGridColumn.CellEditTemplate>
+                        <DataTemplate>
+                            <telerikInput:RadDatePicker Date="{Binding Item.Established, Mode=TwoWay}" 
+                                                        DisplayStringFormat="yyyy/MMM/dd">
+                                <telerikInput:RadDatePicker.SelectorSettings>
+                                    <telerikInput:PickerPopupSelectorSettings AcceptCommand="{Binding CommitEditCommand}"
+                                                                              CancelCommand="{Binding CancelEditCommand}"/>
+                                </telerikInput:RadDatePicker.SelectorSettings>
+                            </telerikInput:RadDatePicker>
+                        </DataTemplate>
+                    </telerikDataGrid:DataGridColumn.CellEditTemplate>
+                </telerikDataGrid:DataGridDateColumn>
+                <telerikDataGrid:DataGridTimeColumn PropertyName="Time">
+                    <telerikDataGrid:DataGridColumn.CellEditTemplate>
+                        <DataTemplate>
+                            <telerikInput:RadTimePicker Time="{Binding Item.Time, Mode=TwoWay}">
+                                <telerikInput:RadTimePicker.SelectorSettings>
+                                    <telerikInput:PickerPopupSelectorSettings AcceptCommand="{Binding CommitEditCommand}"
+                                                                              CancelCommand="{Binding CancelEditCommand}"/>
+                                </telerikInput:RadTimePicker.SelectorSettings>
+                            </telerikInput:RadTimePicker>
+                        </DataTemplate>
+                    </telerikDataGrid:DataGridColumn.CellEditTemplate>
+                </telerikDataGrid:DataGridTimeColumn>
+            </telerikDataGrid:RadDataGrid.Columns>
+        </telerikDataGrid:RadDataGrid>
+        <!-- << datagrid-columns-celledittemplate-xaml -->
+    </ContentView.Content>
+</ContentView>

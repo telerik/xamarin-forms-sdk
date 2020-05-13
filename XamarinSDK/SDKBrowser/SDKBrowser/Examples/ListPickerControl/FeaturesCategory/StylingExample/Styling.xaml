@@ -15,14 +15,18 @@
             <Style TargetType="telerikDataControls:SpinnerItemView" x:Key="ItemStyle">
                 <Setter Property="BackgroundColor" Value="#F8F8F8"/>
                 <Setter Property="CornerRadius" Value="0"/>
+                <Setter Property="TextColor" Value="#919191" />
+                <Setter Property="FontSize" Value="12"/>
             </Style>
             <!-- << listpicker-features-itemstyle -->
 
             <!-- >> listpicker-features-selecteditemstyle -->
             <Style TargetType="telerikDataControls:SpinnerItemView" x:Key="SelectedItemStyle">
-                <Setter Property="BackgroundColor" Value="LightGray"/>
+                <Setter Property="BackgroundColor" Value="#F0F0F0"/>
                 <Setter Property="CornerRadius" Value="0"/>
                 <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="TextColor" Value="#4A4949" />
+                <Setter Property="FontSize" Value="16"/>
             </Style>
             <!-- << listpicker-features-selecteditemstyle -->
 
@@ -46,8 +50,8 @@
 
             <!-- >> listpicker-style-header-style -->
             <Style TargetType="telerikInput:PickerPopupHeaderView" x:Key="headerStyle">
-                <Setter Property="BackgroundColor" Value="#00B5DC"/>
-                <Setter Property="HeightRequest" Value="60"/>
+                <Setter Property="BackgroundColor" Value="#1188FF"/>
+                <Setter Property="HeightRequest" Value="64"/>
                 <Setter Property="Margin" Value="0"/>
                 <Setter Property="Padding" Value="0"/>
                 <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
@@ -60,13 +64,15 @@
                 <Setter Property="TextColor" Value="White"/>
                 <Setter Property="HorizontalOptions" Value="Center"/>
                 <Setter Property="VerticalOptions" Value="Center"/>
-                <Setter Property="FontSize" Value="Title"/>
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
             </Style>
             <!-- << listpicker-style-header-label-style -->
 
             <!-- >> listpicker-style-footer-style -->
             <Style TargetType="telerikInput:PickerPopupFooterView" x:Key="footerStyle">
                 <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="HeightRequest" Value="60"/>
             </Style>
             <!-- << listpicker-style-footer-style -->
 
@@ -81,7 +87,7 @@
             <Style TargetType="Button" x:Key="acceptButtonStyle">
                 <Setter Property="BackgroundColor" Value="Transparent"/>
                 <Setter Property="Text" Value="OK"/>
-                <Setter Property="TextColor" Value="#00B5DC"/>
+                <Setter Property="TextColor" Value="#1188FF"/>
             </Style>
             <!-- << listpicker-style-accept-button-style -->
 
@@ -89,7 +95,7 @@
             <Style TargetType="Button" x:Key="cancelButtonStyle">
                 <Setter Property="BackgroundColor" Value="Transparent"/>
                 <Setter Property="Text" Value="CANCEL"/>
-                <Setter Property="TextColor" Value="#00B5DC"/>
+                <Setter Property="TextColor" Value="#1188FF"/>
             </Style>
             <!-- << listpicker-style-cancel-button-style -->
         </ResourceDictionary>
@@ -109,14 +115,6 @@
                 <telerikInput:RadListPicker.BindingContext>
                     <local:ViewModel/>
                 </telerikInput:RadListPicker.BindingContext>
-                <telerikInput:RadListPicker.ItemTemplate>
-                    <DataTemplate>
-                        <Label Text="{Binding Name}" 
-                               TextColor="#4A4949"
-                               VerticalTextAlignment="Center" 
-                               HorizontalTextAlignment="Center"/>
-                    </DataTemplate>
-                </telerikInput:RadListPicker.ItemTemplate>
                 <telerikInput:RadListPicker.SelectorSettings>
                     <telerikInput:PickerPopupSelectorSettings PopupOutsideBackgroundColor="#4A4949F"
                                                               PopupViewStyle="{StaticResource popupViewStyle}"

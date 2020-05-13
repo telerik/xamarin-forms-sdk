@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.TimeSpanPickerControl.FeaturesCategory.CustomTemplatesExample.CustomTemplates">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <!-- >> timespanpicker-placeholder-template -->
+            <ControlTemplate x:Key="placeholderTemplate">
+                <Button Text="Pick a time interval" 
+                        FontAttributes="Bold" 
+                        TextColor="White"
+                        BackgroundColor="#70B8FF" 
+                        HeightRequest="50" 
+                        Command="{TemplateBinding ToggleCommand}" />
+            </ControlTemplate>
+            <!-- << timespanpicker-placeholder-template -->
+
+            <!-- >> timespanpicker-display-template -->
+            <ControlTemplate x:Key="displayTemplate">
+                <Button Text="{TemplateBinding DisplayString}" 
+                        TextColor="White" 
+                        BackgroundColor="#70B8FF"
+                        HeightRequest="50"
+                        Command="{TemplateBinding ToggleCommand}" />
+            </ControlTemplate>
+            <!-- << timespanpicker-display-template -->
+
+            <!-- >> timespanpicker-header-template -->
+            <ControlTemplate x:Key="headerTemplate">
+                <Label Text="Select Duration" 
+                       TextColor="White"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       BackgroundColor="#70B8FF"/>
+            </ControlTemplate>
+            <!-- << timespanpicker-header-template -->
+
+            <!-- >> timespanpicker-footer-template -->
+            <ControlTemplate x:Key="footerTemplate">
+                <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="FillAndExpand" BackgroundColor="#70B8FF">
+                    <Button Text="&#xE80A;"
+                            FontFamily="{StaticResource IconsFontFamily}"
+                            TextColor="White"
+                            BackgroundColor="Transparent"
+                            Command="{TemplateBinding CancelCommand}" />
+                    <Button Text="&#xE809;"
+                            FontFamily="{StaticResource IconsFontFamily}"
+                            TextColor="White"
+                            BackgroundColor="Transparent"
+                            Command="{TemplateBinding AcceptCommand}" />
+                </StackLayout>
+            </ControlTemplate>
+            <!-- << timespanpicker-footer-template -->
+        </ResourceDictionary>
+    </ContentView.Resources>
+
+    <StackLayout>
+        <!-- >> timespanpicker-custom-templates -->
+        <telerikInput:RadTimeSpanPicker PlaceholderTemplate="{StaticResource placeholderTemplate}"
+                                        DisplayTemplate="{StaticResource displayTemplate}">
+            <telerikInput:RadTimeSpanPicker.SelectorSettings>
+                <telerikInput:PickerPopupSelectorSettings HeaderTemplate="{StaticResource headerTemplate}"
+                                                          FooterTemplate="{StaticResource footerTemplate}"/>
+            </telerikInput:RadTimeSpanPicker.SelectorSettings>
+        </telerikInput:RadTimeSpanPicker>
+        <!-- << timespanpicker-custom-templates -->
+    </StackLayout>
+</ContentView>

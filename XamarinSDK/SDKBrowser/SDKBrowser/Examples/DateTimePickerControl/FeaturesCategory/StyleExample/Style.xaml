@@ -123,10 +123,10 @@
 
     <StackLayout>
         <!-- >> datetimepicker-style -->
-        <telerikInput:RadDateTimePicker SpinnerHeadersStyle="{StaticResource spinnerHeaderStyle}"
+        <telerikInput:RadDateTimePicker SpinnerHeaderStyle="{StaticResource spinnerHeaderStyle}"
                                         SpinnerStyle="{StaticResource spinnerStyle}"
                                         SelectionHighlightStyle="{StaticResource selectionHighlightStyle}"
-                                        SpinnerFormatString="d"
+                                        SpinnerFormat="d"
                                         AreSpinnerHeadersVisible="True"
                                         DisplayLabelStyle="{StaticResource displayLabelStyle}"
                                         PlaceholderLabelStyle="{StaticResource placeholderLabelStyle}">

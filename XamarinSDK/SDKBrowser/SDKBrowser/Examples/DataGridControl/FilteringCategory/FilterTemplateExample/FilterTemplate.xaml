@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerikDataGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.DataGridControl.FilteringCategory.FilterTemplateExample"
+             x:Class="SDKBrowser.Examples.DataGridControl.FilteringCategory.FilterTemplateExample.FilterTemplate">
+  <ContentView.Content>
+        <Grid>
+            <!-- >> datagrid-filtering-templatecolumn -->
+            <telerikDataGrid:RadDataGrid x:Name="dataGrid"
+                                         ItemsSource="{Binding GridSource}"
+                                         AutoGenerateColumns="False"
+                                         UserEditMode="Cell">
+                <telerikDataGrid:RadDataGrid.Columns>
+                    <telerikDataGrid:DataGridNumericalColumn PropertyName="Population" />
+                    <telerikDataGrid:DataGridTemplateColumn HeaderText="City">
+                        <telerikDataGrid:DataGridTemplateColumn.CellContentTemplate>
+                            <DataTemplate>
+                                <Label Text="{Binding Name}"/>
+                            </DataTemplate>
+                        </telerikDataGrid:DataGridTemplateColumn.CellContentTemplate>
+                        <telerikDataGrid:DataGridTemplateColumn.FilterControlTemplate>
+                            <DataTemplate>
+                                <local:PopulationFilter PropertyName="Name"/>
+                            </DataTemplate>
+                        </telerikDataGrid:DataGridTemplateColumn.FilterControlTemplate>
+                    </telerikDataGrid:DataGridTemplateColumn>
+                </telerikDataGrid:RadDataGrid.Columns>
+            </telerikDataGrid:RadDataGrid>
+            <!-- << datagrid-filtering-templatecolumn -->
+        </Grid>
+    </ContentView.Content>
+</ContentView>

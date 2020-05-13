@@ -13,7 +13,9 @@
                                              DayItemFormat="EEE d MMM"
                                              AppointmentItemTimeFormat="HH mm"
                                              AppointmentItemEndDateFormat="MMM d"
-                                             AppointmentItemStartDateFormat="MMM d"/>
+                                             AppointmentItemStartDateFormat="MMM d" 
+                                             IsHeaderSticky="True"
+                                             StickyHeaderFormat="YYYY MMM"/>
         </telerikInput:RadCalendar.AgendaViewSettings>
     </telerikInput:RadCalendar>
     <!-- << calendar-agendaview-settings -->

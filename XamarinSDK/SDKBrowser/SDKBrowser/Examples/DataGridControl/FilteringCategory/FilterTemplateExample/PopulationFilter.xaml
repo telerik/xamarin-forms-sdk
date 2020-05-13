@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- >> datagrid-filtering-templatecolumn-filteringcontrol-xaml -->
+<telerikDataGrid:DataGridFilterControlBase xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.DataGridControl.FilteringCategory.FilterTemplateExample.PopulationFilter"
+            xmlns:telerikDataGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid">
+    <StackLayout Margin="10"
+                 Padding="10"
+                 BackgroundColor="LightGray">
+        <Picker x:Name="descriptorOperatorPicker"
+                TextColor="Black" />
+        <Entry x:Name="textEntry" />
+    </StackLayout>
+</telerikDataGrid:DataGridFilterControlBase>
+<!-- << datagrid-filtering-templatecolumn-filteringcontrol-xaml -->

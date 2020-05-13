@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.CalendarControl.StylingCategory.AgendaViewStickyHeadersStyleExample.AgendaViewStickyHeadersStyle">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <!-- >> calendar-agendaview-stickyheader-style -->
+            <telerikInput:AgendaStickyHeaderStyle x:Key="MyStickyHeaderStyle"
+                                                  TextColor="#EE6D4C"
+                                                  FontAttributes="Bold"
+                                                  FontSize="20"
+                                                  HorizontalTextAlignment="Center"
+                                                  DecorationColor="#EE6D4C"
+                                                  DecorationHeight="5"/>
+            <!-- << calendar-agendaview-stickyheader-style -->
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <!-- >> calendar-agendaview-setstickyheader-xaml -->
+    <telerikInput:RadCalendar x:Name="calendar"
+                              ViewMode="Agenda">
+        <telerikInput:RadCalendar.AgendaViewSettings>
+            <telerikInput:AgendaViewSettings IsHeaderSticky="True"
+                                             StickyHeaderFormat="MMMM, YYYY"
+                                             StickyHeaderStyle="{StaticResource MyStickyHeaderStyle}"/>
+        </telerikInput:RadCalendar.AgendaViewSettings>
+    </telerikInput:RadCalendar>
+    <!-- << calendar-agendaview-setstickyheader-xaml -->
+</ContentView>

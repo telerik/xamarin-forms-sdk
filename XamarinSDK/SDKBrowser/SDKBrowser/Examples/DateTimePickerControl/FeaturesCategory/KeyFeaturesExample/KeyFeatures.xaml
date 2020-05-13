@@ -20,28 +20,28 @@
     </ContentView.Resources>
     
     <StackLayout>
-        <Label Text="DateTime Picker with d date and time string format" Style="{StaticResource labelStyle}"/>
+        <Label Text="DateTime Picker with d date string format" Style="{StaticResource labelStyle}"/>
         <!-- >> datetimepicker-keyfeatures-date -->
-        <telerikInput:RadDateTimePicker StartDate="2019,12,25" 
-                                        EndDate="2020,02,14"
-                                        SpinnerFormatString="d"/>
+        <telerikInput:RadDateTimePicker MinimumDate="2019,12,25" 
+                                        MaximumDate="2020,02,14"
+                                        SpinnerFormat="d"/>
         <!-- << datetimepicker-keyfeatures-date -->
 
-        <Label Text="DateTime Picker with T date and time string format" Style="{StaticResource labelStyle}"/>
+        <Label Text="DateTime Picker with T time string format, minimum date and maximum date defined" Style="{StaticResource labelStyle}"/>
         <!-- >> datetimepicker-keyfeatures-time -->
-        <telerikInput:RadDateTimePicker StartDate="2019,12,25" 
-                                        EndDate="2020,02,14"
-                                        SpinnerFormatString="T"
+        <telerikInput:RadDateTimePicker MinimumDate="2020,01,01 9:00:00" 
+                                        MaximumDate="2021,02,01 18:00:00"
+                                        SpinnerFormat="T"
                                         DisplayStringFormat="HH:mm:ss"
                                         Placeholder="Pick a time!"
                                         AreSpinnerHeadersVisible="True"/>
         <!-- << datetimepicker-keyfeatures-time -->
 
 
-        <Label Text="DateTime Picker with g date and time string format" Style="{StaticResource labelStyle}"/>
+        <Label Text="DateTime Picker with general date short time g string format" Style="{StaticResource labelStyle}"/>
         <!-- >> datetimepicker-keyfeatures-date-time -->
-        <telerikInput:RadDateTimePicker StartDate="2019,12,25" 
-                                        EndDate="2020,02,14"
+        <telerikInput:RadDateTimePicker MinimumDate="2019,12,25" 
+                                        MaximumDate="2020,02,14"
                                         Placeholder="Pick date and time!"
                                         AreSpinnerHeadersVisible="True"/>
         <!-- << datetimepicker-keyfeatures-date-time --> 

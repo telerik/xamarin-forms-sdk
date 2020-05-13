@@ -8,6 +8,7 @@ using Telerik.XamarinForms.DataControls.ListView;
 
 namespace SDKBrowser.Examples.ListViewControl.BindableCollectionsCategory.FilterDescriptorsExample
 {
+    // >> listview-features-bindable-filterdescriptor-viewmodel
     public class ViewModel : INotifyPropertyChanged
     {
         private ObservableCollection<FilterDescriptorBase> filterDescriptors;
@@ -21,7 +22,6 @@ namespace SDKBrowser.Examples.ListViewControl.BindableCollectionsCategory.Filter
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
-        // >> listview-features-bindable-filterdescriptor-viewmodel
         public ObservableCollection<FilterDescriptorBase> FilterDescriptors
         {
             get
@@ -37,7 +37,6 @@ namespace SDKBrowser.Examples.ListViewControl.BindableCollectionsCategory.Filter
                 }
             }
         }
-        // << listview-features-bindable-filterdescriptor-viewmodel
         public bool IsFilterSwitchToggled
         {
             get
@@ -116,4 +115,5 @@ namespace SDKBrowser.Examples.ListViewControl.BindableCollectionsCategory.Filter
             }            
         }
     }
+    // << listview-features-bindable-filterdescriptor-viewmodel
 }

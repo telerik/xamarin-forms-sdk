@@ -69,8 +69,8 @@
     
     <StackLayout>
         <!-- >> datetimepicker-custom-templates -->
-        <telerikInput:RadDateTimePicker StartDate="2019,12,11" 
-                                        EndDate="2020,02,14"
+        <telerikInput:RadDateTimePicker MinimumDate="2019,12,11" 
+                                        MaximumDate="2020,02,14"
                                         PlaceholderTemplate="{StaticResource placeholderTemplate}"
                                         DisplayTemplate="{StaticResource displayTemplate}">
             <telerikInput:RadDateTimePicker.SelectorSettings>

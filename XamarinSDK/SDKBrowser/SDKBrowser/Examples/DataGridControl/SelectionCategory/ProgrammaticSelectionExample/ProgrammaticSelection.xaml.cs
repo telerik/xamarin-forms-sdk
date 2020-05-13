@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.ObjectModel;
+using System.Linq;
 using Telerik.XamarinForms.DataGrid;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,58 +14,39 @@ namespace SDKBrowser.Examples.DataGridControl.SelectionCategory.ProgrammaticSele
         {
             this.InitializeComponent();
 
+            // >> datagrid-selection-setvm
             this.BindingContext = new ViewModel();
+            // << datagrid-selection-setvm
         }
 
-        private void SelectItem(object sender, EventArgs e)
+        private void SelectItemClick(object sender, EventArgs e)
         {
-            this.SelectItem(true);
-        }
-
-        private void DeselectItem(object sender, EventArgs e)
-        {
-            this.SelectItem(false);
-        }
-
-        private void SelectItem(bool select)
-        {
-            var source = (this.BindingContext as ViewModel).GridSource;
-            var selectedItem = source[this.siPicker.SelectedIndex];
-
-            if (this.grid.SelectionUnit == DataGridSelectionUnit.Row)
+            if(this.dataGrid.SelectionUnit == DataGridSelectionUnit.Row)
             {
-               if(select)
-               {
-                    this.grid.SelectItem(selectedItem);
-               }
-               else
-               {
-                    this.grid.DeselectItem(selectedItem);
-                }
+                // >> datagrid-selection-selectitem
+                var firstMarketingItem = ((ObservableCollection<Person>)this.dataGrid.ItemsSource).First(p => p.Department == "Marketing");
+                this.dataGrid.SelectItem(firstMarketingItem);
+                // << datagrid-selection-selectitem
             }
             else
             {
-                var selectedColumn = this.grid.Columns[this.cPicker.SelectedIndex];
-
-                if(select)
-                {
-                    this.grid.SelectCell(new DataGridCellInfo(selectedItem, selectedColumn));
-                }
-                else
-                {
-                    this.grid.DeselectCell(new DataGridCellInfo(selectedItem, selectedColumn));
-                }
+                // >> datagrid-selection-selectcell
+                var firstMarketingCell = ((ObservableCollection<Person>)this.dataGrid.ItemsSource).First(p => p.Department == "Marketing");
+                this.dataGrid.SelectCell(new DataGridCellInfo(firstMarketingCell, this.dataGrid.Columns[2]));
+                // << datagrid-selection-selectcell
             }
         }
-
-        private void SelectAll(object sender, EventArgs e)
+        
+        private void SelectAllClick(object sender, EventArgs e)
         {
-            this.grid.SelectAll();
+            // >> datagrid-selection-selectall
+            this.dataGrid.SelectAll();
+            // << datagrid-selection-selectall
         }
 
-        private void DeselectAll(object sender, EventArgs e)
+        private void DeselectAllClick(object sender, EventArgs e)
         {
-            this.grid.DeselectAll();
+            this.dataGrid.DeselectAll();           
         }
     }
 }

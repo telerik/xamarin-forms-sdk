@@ -1,8 +1,7 @@
-﻿using System;
+﻿using SDKBrowser.ViewModels;
+using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using SDKBrowser.ViewModels;
+using System.Collections.ObjectModel;
 using Telerik.XamarinForms.DataGrid;
 
 namespace SDKBrowser.Examples.DataGridControl.SelectionCategory
@@ -10,36 +9,35 @@ namespace SDKBrowser.Examples.DataGridControl.SelectionCategory
     public class ViewModel : ViewModelBase
     {
         private DataGridSelectionMode selectedMode;
-        private DataGridSelectionUnit selectedUnit;
-        private int selectedIndex;
-        private int selectedColumn;
-        private bool isPickerEnabled;
+        private DataGridSelectionUnit selectedUnit;   
+        private bool isSelectAllEnabled;
 
         public ViewModel()
-        {
-            var source = new List<Person>();
-            for (int i = 18; i < 70; i++)
+        {           
+            this.GridSource = new ObservableCollection<Person>()
             {
-                source.Add(new Person() { Age = i, Name = "Name + " + i });
-            }
-            this.GridSource = source;
+                new Person { Name = "Kiko", Age = 23, Department = "Production" },
+                new Person { Name = "Jerry", Age = 23, Department = "Accounting & Finance"},
+                new Person { Name = "Ethan", Age = 51, Department = "Marketing" },
+                new Person { Name = "Isabella", Age = 25, Department = "Marketing" },
+                new Person { Name = "Joshua", Age = 45, Department = "Production" },
+                new Person { Name = "Logan", Age = 26, Department = "Production"},
+                new Person { Name = "Aaron", Age = 32, Department = "Production" },
+                new Person { Name = "Elena", Age = 37, Department = "Accounting & Finance"},
+                new Person { Name = "Ross", Age = 30, Department = "Marketing" }
+            };
+    
             this.SelectionModeSource = Enum.GetValues(typeof(DataGridSelectionMode));
             this.SelectionUnitSource = Enum.GetValues(typeof(DataGridSelectionUnit));
-            this.SelectedColumnIndexSource = Enumerable.Range(0, 3).Select(y => y).ToList();
-            this.SelectedIndexSource = Enumerable.Range(0, source.Count).Select(x => x).ToList();
-
+          
             this.SelectedMode = DataGridSelectionMode.Single;
             this.SelectedUnit = DataGridSelectionUnit.Cell;
-            this.SelectedColumn = 0;
-            this.SelectedIndex = 0;
         }
 
-        public IList GridSource { get; set; }
+        public ObservableCollection<Person> GridSource { get; set; }
         public IList SelectionModeSource { get; set; }
         public IList SelectionUnitSource { get; set; }
-        public IList SelectedIndexSource { get; set; }
-        public IList SelectedColumnIndexSource { get; set; }
-
+   
         public DataGridSelectionMode SelectedMode
         {
             get
@@ -51,6 +49,7 @@ namespace SDKBrowser.Examples.DataGridControl.SelectionCategory
                 if (this.selectedMode != value)
                 {
                     this.selectedMode = value;
+                    this.IsSelectAllEnabled = this.selectedMode == DataGridSelectionMode.Multiple;
                     this.OnPropertyChanged("SelectedMode");
                 }
             }
@@ -67,56 +66,23 @@ namespace SDKBrowser.Examples.DataGridControl.SelectionCategory
                 if (this.selectedUnit != value)
                 {
                     this.selectedUnit = value;
-                    this.IsPickerEnabled = this.selectedUnit != DataGridSelectionUnit.Row;
                     this.OnPropertyChanged("SelectedUnit");
                 }
             }
         }
 
-        public int SelectedIndex
+        public bool IsSelectAllEnabled
         {
             get
             {
-                return this.selectedIndex;
+                return this.isSelectAllEnabled;
             }
             set
             {
-                if (this.selectedIndex != value)
+                if (this.isSelectAllEnabled != value)
                 {
-                    this.selectedIndex = value;
-                    this.OnPropertyChanged("SelectedIndex");
-                }
-            }
-        }
-
-        public int SelectedColumn
-        {
-            get
-            {
-                return this.selectedColumn;
-            }
-            set
-            {
-                if (this.selectedColumn != value)
-                {
-                    this.selectedColumn = value;
-                    this.OnPropertyChanged("SelectedColumn");
-                }
-            }
-        }
-
-        public bool IsPickerEnabled
-        {
-            get
-            {
-                return this.isPickerEnabled;
-            }
-            set
-            {
-                if (this.isPickerEnabled != value)
-                {
-                    this.isPickerEnabled = value;
-                    this.OnPropertyChanged("IsPickerEnabled");
+                    this.isSelectAllEnabled = value;
+                    this.OnPropertyChanged("IsSelectAllEnabled");
                 }
             }
         }

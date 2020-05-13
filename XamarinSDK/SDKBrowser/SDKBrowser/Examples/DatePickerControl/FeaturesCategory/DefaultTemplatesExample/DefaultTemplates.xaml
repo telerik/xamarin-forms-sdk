@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.DatePickerControl.FeaturesCategory.DefaultTemplatesExample.DefaultTemplates">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <!-- >> datepicker-placeholder-default-template -->
+            <ControlTemplate x:Key="Picker_PlaceholderView_ControlTemplate">
+                <Grid>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{TemplateBinding ToggleCommand}" />
+                    </Grid.GestureRecognizers>
+                    <Label Text="{TemplateBinding Placeholder}"
+                           Style="{TemplateBinding PlaceholderLabelStyle}"
+                           AutomationId="PickerPlaceholderLabel"/>
+                </Grid>
+            </ControlTemplate>
+            <!-- << datepicker-placeholder-default-template -->
+            
+            <!-- >> datepicker-display-default-template -->
+            <ControlTemplate x:Key="Picker_DisplayView_ControlTemplate">
+                <Grid>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{TemplateBinding ToggleCommand}" />
+                    </Grid.GestureRecognizers>
+                    <Label Text="{TemplateBinding DisplayString}"
+                           Style="{TemplateBinding DisplayLabelStyle}"
+                           AutomationId="PickerDisplayLabel"/>
+                </Grid>
+            </ControlTemplate>
+            <!-- << datepicker-display-default-template -->
+            
+            <!-- >> datepicker-header-default-template -->
+            <ControlTemplate x:Key="PopupView_Header_ControlTemplate">
+                <telerikPrimitives:RadBorder BackgroundColor="{TemplateBinding BackgroundColor}"
+                                             BorderColor="{TemplateBinding BorderColor}"
+                                             BorderThickness="{TemplateBinding BorderThickness}"
+                                             CornerRadius="{TemplateBinding CornerRadius}">
+                    <Label Text="{TemplateBinding HeaderLabelText}"
+                           Style="{TemplateBinding HeaderLabelStyle}"
+                           AutomationId="PickerPopupHeaderLabel"/>
+                </telerikPrimitives:RadBorder>
+            </ControlTemplate>
+            <!-- << datepicker-header-default-template -->
+
+            <!-- >> datepicker-footer-default-template -->
+            <ControlTemplate x:Key="PopupView_Footer_ControlTemplate">
+                <telerikPrimitives:RadBorder BackgroundColor="{TemplateBinding BackgroundColor}"
+                                             BorderColor="{TemplateBinding BorderColor}"
+                                             BorderThickness="{TemplateBinding BorderThickness}"
+                                             CornerRadius="{TemplateBinding CornerRadius}">
+                    <OnPlatform x:TypeArguments="View">
+                        <On Platform="Android, iOS">
+                            <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="End">
+                                <Button Text="{TemplateBinding CancelButtonText}"
+                                        Style="{TemplateBinding CancelButtonStyle}"
+                                        Command="{TemplateBinding CancelCommand}" 
+                                        AutomationId="PickerPopupCancelButton"/>
+                                <Button Text="{TemplateBinding AcceptButtonText}"
+                                        Style="{TemplateBinding AcceptButtonStyle}"
+                                        Command="{TemplateBinding AcceptCommand}"
+                                        AutomationId="PickerPopupOkButton"/>
+                            </StackLayout>
+                        </On>
+                        <On Platform="UWP">
+                            <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="End">
+                                <Button Text="{TemplateBinding AcceptButtonText}"
+                                        Style="{TemplateBinding AcceptButtonStyle}"
+                                        Command="{TemplateBinding AcceptCommand}"
+                                        AutomationId="PickerPopupOkButton"/>
+                                <Button Text="{TemplateBinding CancelButtonText}"
+                                        Style="{TemplateBinding CancelButtonStyle}"
+                                        Command="{TemplateBinding CancelCommand}" 
+                                        AutomationId="PickerPopupCancelButton"/>
+                            </StackLayout>
+                        </On>
+                    </OnPlatform>
+                </telerikPrimitives:RadBorder>
+            </ControlTemplate>
+            <!-- << datepicker-footer-default-template -->
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <StackLayout>
+            <telerikInput:RadDatePicker MinimumDate="2020,01,1" 
+                                        MaximumDate="2025,12,31"
+                                        SpinnerFormat="MMM/dd/yyyy"
+                                        PlaceholderTemplate="{StaticResource Picker_PlaceholderView_ControlTemplate}"
+                                        DisplayTemplate="{StaticResource Picker_DisplayView_ControlTemplate}">
+                <telerikInput:RadDatePicker.SelectorSettings>
+                    <telerikInput:PickerPopupSelectorSettings HeaderTemplate="{StaticResource PopupView_Header_ControlTemplate}"
+                                                              HeaderLabelText="Date Picker"
+                                                              FooterTemplate="{StaticResource PopupView_Footer_ControlTemplate}"/>
+                </telerikInput:RadDatePicker.SelectorSettings>
+            </telerikInput:RadDatePicker>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.TimePickerControl.FeaturesCategory.CustomTemplatesExample.CustomTemplates">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <!-- >> timepicker-placeholder-template -->
+            <ControlTemplate x:Key="placeholderTemplate">
+                <Button Text="Pick a time" 
+                        FontAttributes="Bold" 
+                        TextColor="White"
+                        BackgroundColor="#B73562" 
+                        HeightRequest="50" Command="{TemplateBinding ToggleCommand}" />
+            </ControlTemplate>
+            <!-- << timepicker-placeholder-template -->
+
+            <!-- >> timepicker-display-template -->
+            <ControlTemplate x:Key="displayTemplate">
+                <Button Text="{TemplateBinding DisplayString}" 
+                        TextColor="White" 
+                        BackgroundColor="#7BAEFF"
+                        HeightRequest="50"
+                        Command="{TemplateBinding ToggleCommand}" />
+            </ControlTemplate>
+            <!-- << timepicker-display-template -->
+
+            <!-- >> timepicker-header-template -->
+            <ControlTemplate x:Key="headerTemplate">
+                <Label Text="Time Picker" 
+                       TextColor="White"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       BackgroundColor="#B73562"/>
+            </ControlTemplate>
+            <!-- << timepicker-header-template -->
+
+            <!-- >> timepicker-footer-template -->
+            <ControlTemplate x:Key="footerTemplate">
+                <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="FillAndExpand" BackgroundColor="#B73562">
+                    <Button Text="No" 
+                            TextColor="White"
+                            BackgroundColor="Transparent"
+                            Command="{TemplateBinding CancelCommand}" />
+                    <Button Text="Yes"
+                            TextColor="White"
+                            BackgroundColor="Transparent"
+                            Command="{TemplateBinding AcceptCommand}" />
+                </StackLayout>
+            </ControlTemplate>
+            <!-- << timepicker-footer-template -->
+        </ResourceDictionary>
+    </ContentView.Resources>
+
+    <StackLayout>
+        <!-- >> timepicker-custom-templates -->
+        <telerikInput:RadTimePicker SpinnerFormat="H:mm"
+                                    PlaceholderTemplate="{StaticResource placeholderTemplate}"
+                                    DisplayTemplate="{StaticResource displayTemplate}">
+            <telerikInput:RadTimePicker.SelectorSettings>
+                <telerikInput:PickerPopupSelectorSettings HeaderTemplate="{StaticResource headerTemplate}"
+                                                          FooterTemplate="{StaticResource footerTemplate}"/>
+            </telerikInput:RadTimePicker.SelectorSettings>
+        </telerikInput:RadTimePicker>
+        <!-- << timepicker-custom-templates -->
+    </StackLayout>
+</ContentView>

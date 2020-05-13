@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:commands="clr-namespace:Telerik.XamarinForms.Input.Calendar.Commands;assembly=Telerik.XamarinForms.Input"
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.CalendarControl.CommandsCategory.CellTapExample.CellTap">
+  <ContentView.Content>
+        <!-- >> calendar-commands-celltap-xaml -->
+        <telerikInput:RadCalendar DisplayDate="2020,03,24">
+            <telerikInput:RadCalendar.Commands>
+                <commands:CalendarUserCommand Id="CellTap" Command="{Binding CellTapCommand}"/>
+            </telerikInput:RadCalendar.Commands>
+        </telerikInput:RadCalendar>
+        <!-- << calendar-commands-celltap-xaml -->
+  </ContentView.Content>
+</ContentView>

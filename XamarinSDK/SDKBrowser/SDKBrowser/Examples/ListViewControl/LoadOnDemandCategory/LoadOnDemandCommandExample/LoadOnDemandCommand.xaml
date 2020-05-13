@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView x:Class="SDKBrowser.Examples.ListViewControl.LoadOnDemandCategory.LoadOnDemandCommandExample.LoadOnDemandCommand"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikListViewCommands="clr-namespace:Telerik.XamarinForms.DataControls.ListView.Commands;assembly=Telerik.XamarinForms.DataControls">
+    <Grid>
+        <!--  >> listview-loadondemand-loadondemandcommand-declaration  -->
+        <telerikDataControls:RadListView x:Name="listView"
+                                         ItemsSource="{Binding Source}"
+                                         IsLoadOnDemandEnabled="True"
+                                         IsLoadOnDemandActive="{Binding IsLoadingMoreItems}"
+                                         LoadOnDemandMode="Manual">
+            <telerikDataControls:RadListView.Commands>
+                <telerikListViewCommands:ListViewUserCommand Id="LoadOnDemand" 
+                                                             Command="{Binding LoadItemsCommand}" />
+            </telerikDataControls:RadListView.Commands>
+        </telerikDataControls:RadListView>
+        <!--  << listview-loadondemand-loadondemandcommand-declaration  -->
+    </Grid>
+</ContentView>

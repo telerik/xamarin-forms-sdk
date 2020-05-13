@@ -15,7 +15,7 @@ namespace SDKBrowser.Examples.DataGridControl.FilteringCategory.ProgrammaticFilt
         {
             this.InitializeComponent();
 
-            this.BindingContext = new ViewModel();
+            this.BindingContext = new FilteringViewModel();
 
             this.textOperatorPicker.SelectedItem = TextOperator.StartsWith;
             this.numericalOperatorPicker.SelectedItem = NumericalOperator.IsGreaterThan;

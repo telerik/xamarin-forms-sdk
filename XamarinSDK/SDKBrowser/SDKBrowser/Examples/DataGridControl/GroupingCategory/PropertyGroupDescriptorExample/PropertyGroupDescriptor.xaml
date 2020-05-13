@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerikDataGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common.Data;assembly=Telerik.XamarinForms.Common"
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.DataGridControl.GroupingCategory.PropertyGroupDescriptorExample.PropertyGroupDescriptor">
+    <!-- >> datagrid-grouping-groupheadertemplate -->
+    <telerikDataGrid:RadDataGrid x:Name="dataGrid"
+                                ItemsSource="{Binding People}">
+        <telerikDataGrid:RadDataGrid.GroupDescriptors>
+            <telerikCommon:PropertyGroupDescriptor PropertyName="Department"/>
+        </telerikDataGrid:RadDataGrid.GroupDescriptors>
+        <telerikDataGrid:RadDataGrid.GroupHeaderTemplate>
+            <DataTemplate>
+                <StackLayout Orientation="Horizontal" 
+                             Margin="5,0,0,0" 
+                             VerticalOptions="Center" >
+                    <Label Text="Employees working in: " 
+                           TextColor="DarkBlue"
+                           FontSize="Small" />
+                    <Label Text="{Binding Group.Key}" 
+                           FontAttributes="Bold" 
+                           TextColor="DarkBlue" 
+                           FontSize="Small" />
+                </StackLayout>
+            </DataTemplate>
+        </telerikDataGrid:RadDataGrid.GroupHeaderTemplate>        
+    </telerikDataGrid:RadDataGrid>
+    <!-- << datagrid-grouping-groupheadertemplate -->
+</ContentView>

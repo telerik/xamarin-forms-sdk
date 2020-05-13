@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerikDataGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.DataGridControl.ColumnsCategory.CellContentTemplateExample.CellContentTemplate">
+  <ContentView.Content>
+        <!-- >> datagrid-columns-cellcontenttemplate-xaml -->
+        <telerikDataGrid:RadDataGrid x:Name="dataGrid" 
+                                     ItemsSource="{Binding Clubs}" 
+                                     AutoGenerateColumns="False" 
+                                     UserEditMode="Cell">
+            <telerikDataGrid:RadDataGrid.Columns>
+                <telerikDataGrid:DataGridTextColumn PropertyName="Name" 
+                                                    Width="100"
+                                                    SizeMode="Fixed"
+                                                    HeaderText="Name">
+                    <telerikDataGrid:DataGridColumn.CellContentTemplate>
+                        <DataTemplate>
+                            <Label Text="{Binding Name}" 
+                                   LineBreakMode="TailTruncation"
+                                   VerticalOptions="Center"/>
+                        </DataTemplate>
+                    </telerikDataGrid:DataGridColumn.CellContentTemplate>
+                </telerikDataGrid:DataGridTextColumn>
+
+                <telerikDataGrid:DataGridBooleanColumn PropertyName="IsChampion" 
+                                                       HeaderText="Champion?">
+                    <telerikDataGrid:DataGridColumn.CellContentTemplate>
+                        <DataTemplate>
+                            <Switch IsToggled="{Binding IsChampion}"
+                                    VerticalOptions="Center"/>
+                        </DataTemplate>
+                    </telerikDataGrid:DataGridColumn.CellContentTemplate>
+                </telerikDataGrid:DataGridBooleanColumn>
+
+                <telerikDataGrid:DataGridDateColumn PropertyName="Established" 
+                                                    HeaderText="Date Established">
+                    <telerikDataGrid:DataGridColumn.CellContentTemplate>
+                        <DataTemplate>
+                            <telerikInput:RadDateTimePicker Date="{Binding Established}" 
+                                                            DisplayStringFormat="yyyy/MMM/dd"
+                                                            VerticalOptions="Center"/>
+                        </DataTemplate>
+                    </telerikDataGrid:DataGridColumn.CellContentTemplate>
+                </telerikDataGrid:DataGridDateColumn>
+
+                <telerikDataGrid:DataGridTemplateColumn HeaderText="Template Column">
+                    <telerikDataGrid:DataGridColumn.CellContentTemplate>
+                        <DataTemplate>
+                            <Label Text="{Binding Country}" 
+                                   Margin="0, 5, 0, 5"
+                                   HorizontalOptions="Center"
+                                   VerticalTextAlignment="Center"/>
+                        </DataTemplate>
+                    </telerikDataGrid:DataGridColumn.CellContentTemplate>
+                </telerikDataGrid:DataGridTemplateColumn>
+            </telerikDataGrid:RadDataGrid.Columns>
+        </telerikDataGrid:RadDataGrid>
+        <!-- << datagrid-columns-cellcontenttemplate-xaml -->
+    </ContentView.Content>
+</ContentView>
