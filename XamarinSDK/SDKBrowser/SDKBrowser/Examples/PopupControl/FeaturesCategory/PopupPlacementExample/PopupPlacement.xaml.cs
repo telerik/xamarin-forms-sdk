@@ -10,10 +10,13 @@ namespace SDKBrowser.Examples.PopupControl.FeaturesCategory.PopupPlacementExampl
         public PopupPlacement ()
         {
             InitializeComponent ();
-        }       
+        }
+
+        // >> popup-features-placement-event
         private void ShowPopup(object sender, EventArgs e)
         {
             popup.IsOpen = true;
         }
+        // << popup-features-placement-event
     }
 }

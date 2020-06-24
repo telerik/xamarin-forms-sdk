@@ -10,6 +10,10 @@ namespace SDKBrowser.Examples.AutoCompleteViewControl.FeaturesCategory.SuggestMo
         {
             InitializeComponent();
             this.BindingContext = new ViewModel();
+
+            this.autoCompleteViewSuggest.AutomationId = "suggestModeAutoCompleteView";
+            this.autoCompleteViewAppend.AutomationId = "appendModeAutoCompleteView";
+            this.autoCompleteViewSuggestAppend.AutomationId = "suggestAppendModeAutoCompleteView";
         }
     }
 }

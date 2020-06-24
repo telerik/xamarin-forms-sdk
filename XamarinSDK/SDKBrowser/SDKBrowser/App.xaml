@@ -351,15 +351,10 @@
                                                 Text="{StaticResource BackIconText}"
                                                 IsVisible="{Binding IsBackVisible, FallbackValue=False}"
                                                 Command="{Binding BackCommand}" />
-                        <StackLayout Spacing="10"
-                                     Orientation="Horizontal"
-                                     HorizontalOptions="Center">
-                            <Image VerticalOptions="Center"
-                                   Source="{Binding HeaderIcon, Converter={StaticResource ImageSourceConverter}}" />
-                            <Label VerticalOptions="Center"
-                                   Style="{StaticResource HeaderTextStyle}"
-                                   Text="{Binding HeaderTitle}" />
-                        </StackLayout>
+                        <Label VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               Style="{StaticResource HeaderTextStyle}"
+                               Text="{Binding HeaderTitle}" />
                         <telerikInput:RadButton HorizontalOptions="End"
                                                 VerticalOptions="Center"
                                                 Style="{StaticResource HeaderButtonStyle}"

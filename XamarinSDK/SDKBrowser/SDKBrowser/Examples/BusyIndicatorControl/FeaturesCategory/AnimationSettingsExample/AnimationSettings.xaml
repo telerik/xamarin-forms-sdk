@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.BusyIndicatorControl.FeaturesCategory.AnimationSettingsExample.AnimationSettings">
+    <!--  >> busyindicator-animations-settings  -->
+    <telerikPrimitives:RadBusyIndicator x:Name="BusyIndicator"
+                                       AnimationType="Animation2"
+                                       AnimationContentColor="#2374FF"
+                                       AnimationContentHeightRequest="150"
+                                       AnimationContentWidthRequest="150"
+                                       IsBusy="True">
+        <telerikPrimitives:RadBusyIndicator.Content>
+            <Label Text="This is displayed when the indicator is not busy." 
+                   TextColor="Black" />
+        </telerikPrimitives:RadBusyIndicator.Content>
+    </telerikPrimitives:RadBusyIndicator>
+    <!--  << busyindicator-animations-settings  -->
+</ContentView>

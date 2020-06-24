@@ -225,14 +225,19 @@
           <Title>Features</Title>
           <Examples>
             <Example>
+              <Page>AnimationSettings</Page>
+              <Name>AnimationSettings</Name>
+              <Title>Built-in Animations Settings</Title>
+            </Example>
+            <Example>
               <Page>AnimationsXaml</Page>
               <Name>Animations</Name>
-              <Title>Animations - Xaml</Title>
+              <Title>Custom Animation - Xaml</Title>
             </Example>
             <Example>
               <Page>AnimationsCSharp</Page>
               <Name>Animations</Name>
-              <Title>Animations - Code</Title>
+              <Title>Custom Animation - Code</Title>
             </Example>
             <Example>
               <Page>CustomBusyContent</Page>
@@ -2580,6 +2585,11 @@
               <Page>PopupPlacement</Page>
               <Name>PopupPlacement</Name>
               <Title>Popup Placement</Title>
+            </Example>
+            <Example>
+              <Page>PopupPlacementCSharp</Page>
+              <Name>PopupPlacement</Name>
+              <Title>PopupPlacement - Code</Title>
             </Example>
           </Examples>
         </Category>

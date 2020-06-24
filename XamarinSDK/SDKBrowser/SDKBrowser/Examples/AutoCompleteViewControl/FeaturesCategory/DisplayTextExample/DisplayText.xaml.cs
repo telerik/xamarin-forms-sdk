@@ -16,6 +16,9 @@ namespace SDKBrowser.Examples.AutoCompleteViewControl.FeaturesCategory.DisplayTe
         {
             InitializeComponent ();
             this.BindingContext = new ViewModel();
+
+            this.autoCompleteView.AutomationId = "plainModeAutoCompleteView";
+            this.radAutoCompleteView.AutomationId = "tokensModeAutoCompleteView";
         }
     }
 }

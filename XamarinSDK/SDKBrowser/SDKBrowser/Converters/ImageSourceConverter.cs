@@ -8,7 +8,7 @@ namespace SDKBrowser.Converters
     {
         public object Convert(object value, Type type, object parameter, CultureInfo culture)
         {
-            if (Device.RuntimePlatform == Device.UWP)
+            if (value != null && Device.RuntimePlatform == Device.UWP)
             {
                 return string.Format("Assets\\{0}", value);
             }
