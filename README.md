@@ -27,10 +27,15 @@ The solution features the following controls.
 |                                                                    | Candlestick Chart                                                                    |                                                                          | 
 |||     
 
-## How to build the solution
-In order to build the solution you will need an active trial of [Telerik UI for Xamarin](https://www.telerik.com/xamarin-ui). Once you get it, simply open the solution and add the Telerik Nuget server as described in [this article](https://docs.telerik.com/devtools/xamarin/installation-and-deployment/telerik-nuget-server). 
+## Prerequisites before building the application
 
-If you already have dev version of Telerik UI for Xamarin, you can change the referenced trial nuget package to the dev one. Simply Uninstall **Telerik.UI.For.Xamarin.Trial** and install **Telerik.UI.For.Xamarin** from the Telerik Nuget Server. 
+In order to be able to able to build the application the [Progress® Telerik® UI for Xamarin controls](https://www.telerik.com/xamarin-ui) need to be installed.
+
+### UI for Xamarin controls installation
+
+The beautiful and high-performant UI of the application is built using the UI for Xamarin controls provided by Telerik. Before building the application an installation of the controls is required. In the [official documentation](https://docs.telerik.com/devtools/xamarin/installation-and-deployment/download-product-files) of Progress® Telerik® UI for Xamarin you can find a detailed information how to install the controls both on Windows and MacOS. After the installation is finished the referenced by the solution binaries will automatically be resolved.
+
+If you prefer to use nuget packages instead of binary references Telerik provides a nuget server. The UI for Xamarin nuget package could be installed from it. [Here](https://docs.telerik.com/devtools/xamarin/installation-and-deployment/telerik-nuget-server) you can find detailed information about the Telerik nuget server and how you can setup it. Please, be aware that in order to use the nuget server a [registration](https://docs.telerik.com/devtools/xamarin/installation-and-deployment/download-product-files) is required.
 
 ## Documentation
 The documentation for Telerik UI for Xamarin can be found at the following address: https://docs.telerik.com/devtools/xamarin/introduction
