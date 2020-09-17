@@ -4,15 +4,16 @@
              xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
              xmlns:checkBoxComamnds="clr-namespace:Telerik.XamarinForms.Primitives.CheckBox.Commands;assembly=Telerik.XamarinForms.Primitives"
              x:Class="SDKBrowser.Examples.CheckBoxControl.CommandsCategory.CheckBoxCommandsExample.CheckBoxCommands">
-    <StackLayout>
-        <Label Text="Custom command"/> 
+    <StackLayout Padding="10" Orientation="Horizontal" Spacing="10">       
         <!-- >> checkbox-commands-xaml -->
         <telerikPrimitives:RadCheckBox x:Name="checkbox">
             <telerikPrimitives:RadCheckBox.Commands>
-                <checkBoxComamnds:CheckBoxUserCommand Command="{Binding IsCheckedChangedCommand}" Id="IsCheckedChanged" SuppressDefaultCommand="True"/>
+                <checkBoxComamnds:CheckBoxUserCommand Id="IsCheckedChanged" 
+                                                      Command="{Binding IsCheckedChangedCommand}"                                                       
+                                                      SuppressDefaultCommand="True"/>
             </telerikPrimitives:RadCheckBox.Commands>
         </telerikPrimitives:RadCheckBox>
-        <Label x:Name="label"/>
+        <Label Text="Select that option" />
         <!-- << checkbox-commands-xaml -->
     </StackLayout>
 </ContentView>

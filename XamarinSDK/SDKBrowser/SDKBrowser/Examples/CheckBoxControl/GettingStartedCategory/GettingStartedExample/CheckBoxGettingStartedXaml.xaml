@@ -2,15 +2,17 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SDKBrowser.Examples.CheckBoxControl.GettingStartedCategory.GettingStartedExample.CheckBoxGettingStartedXaml"
-             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
-             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
-             xmlns:telerikDataGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid">
-
-    <StackLayout>
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives">
+    <StackLayout Spacing="20">
         <!-- >> checkbox-getting-started-xaml -->
-        <telerikPrimitives:RadCheckBox x:Name="checkbox" IsChecked="False" />
-        <Label Text="{Binding Source={x:Reference checkbox}, Path=IsChecked}"/>
+        <StackLayout Orientation="Horizontal">      
+            <telerikPrimitives:RadCheckBox x:Name="checkbox" />
+            <Label Text="Agree to the Terms &amp; Conditions" />       
+        </StackLayout>
         <!-- << checkbox-getting-started-xaml -->
+        <StackLayout Orientation="Horizontal">
+            <Label Text="IsChecked value: " />
+            <Label Text="{Binding Source={x:Reference checkbox}, Path=IsChecked}" />
+        </StackLayout>        
     </StackLayout>
-
 </ContentView>

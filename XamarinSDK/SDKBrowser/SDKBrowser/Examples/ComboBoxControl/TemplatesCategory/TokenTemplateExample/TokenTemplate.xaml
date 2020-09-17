@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input" xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.ComboBoxControl.TemplatesCategory.TokenTemplateExample.TokenTemplate">
+    <StackLayout>
+        <!-- >> combobox-tokentemplate -->
+        <telerikInput:RadComboBox ItemsSource="{Binding Items}"
+                                  Placeholder="Select City!"
+                                  SelectionMode="Multiple"
+                                  DisplayMemberPath="Name"
+                                  x:Name="comboBox">
+            <telerikInput:RadComboBox.TokenTemplate>
+                <DataTemplate>
+                    <telerikPrimitives:RadBorder BackgroundColor="LightBlue"
+                                                 CornerRadius="10"
+                                                 Margin="2">
+                        <StackLayout Orientation="Horizontal" 
+                                     Margin="3">
+                            <Label Text="{Binding Name}"
+                                   TextColor="Black"
+                                   VerticalTextAlignment="Center"
+                                   Margin="2" />
+                            <Label FontFamily="{StaticResource IconsFontFamily}"
+                                   Text="&#xE80A;" FontSize="10"
+                                   VerticalTextAlignment="Center"
+                                   TextColor="Black"
+                                   Margin="2">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
+                    </telerikPrimitives:RadBorder>
+                </DataTemplate>
+            </telerikInput:RadComboBox.TokenTemplate>
+            <telerikInput:RadComboBox.ShowMoreTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding Path=., StringFormat='+{0} more items'}" 
+                           VerticalTextAlignment="Center"/>
+                </DataTemplate>
+            </telerikInput:RadComboBox.ShowMoreTemplate>
+        </telerikInput:RadComboBox>
+        <!-- << combobox-tokentemplate -->
+    </StackLayout>
+</ContentView>

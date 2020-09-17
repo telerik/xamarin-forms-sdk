@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:telerikInputnput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.ComboBoxControl.FeaturesCategory.EditingExample"
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.ComboBoxControl.FeaturesCategory.EditingExample.Editing">
+    <StackLayout>
+        <!-- >> combobox-editing -->
+        <telerikInputnput:RadComboBox ItemsSource="{Binding Items}"
+                                      SearchTextPath="Name"
+                                      DisplayMemberPath="Name"
+                                      IsEditable="True">
+            <telerikInputnput:RadComboBox.BindingContext>
+                <local:ViewModel/>
+            </telerikInputnput:RadComboBox.BindingContext>
+        </telerikInputnput:RadComboBox>
+        <!-- << combobox-editing -->
+    </StackLayout>
+</ContentView>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+             xmlns:telerikRichTextEditor="clr-namespace:Telerik.XamarinForms.RichTextEditor;assembly=Telerik.XamarinForms.RichTextEditor"
+             x:Class="SDKBrowser.Examples.RichTextEditorControl.FeaturesCategory.CommandsExample.Commands">
+    <!-- >> richtexteditor-commands-xaml -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <telerikCommon:RadUniformGrid>
+            <Button Text="Bold"
+                    Command="{Binding Source={x:Reference richTextEditor}, Path=ToggleBoldCommand}" />
+            <Button Text="Italic"
+                    Command="{Binding Source={x:Reference richTextEditor}, Path=ToggleItalicCommand}" />
+            <Button Text="Underline"
+                    Command="{Binding Source={x:Reference richTextEditor}, Path=ToggleUnderlineCommand}" />
+            <Button Text="Bullet List"
+                    Command="{Binding Source={x:Reference richTextEditor}, Path=ToggleBulletingCommand}" />
+            <Button Text="Numbered List"
+                    Command="{Binding Source={x:Reference richTextEditor}, Path=ToggleNumberingCommand}" />
+        </telerikCommon:RadUniformGrid>
+        <telerikRichTextEditor:RadRichTextEditor x:Name="richTextEditor" Grid.Row="1" />
+    </Grid>
+    <!-- << richtexteditor-commands-xaml -->
+</ContentView>

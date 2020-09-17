@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+                    xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+                    xmlns:telerikNumericInput="clr-namespace:Telerik.XamarinForms.Input.NumericInput;assembly=Telerik.XamarinForms.Input"
+                    xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+                    xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+                    mc:Ignorable="d"
+                    x:Class="SDKBrowser.Examples.CalendarControl.SchedulingCategory.SchedulingUIViews.EndRepeatAppointmentView">
+
+    <Style x:Key="EndRepeatLabelStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="{TemplateBinding SummaryTextColor}" />
+        <Setter Property="FontSize" Value="{TemplateBinding SummaryFontSize}" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="Start" />
+    </Style>
+
+    <Style x:Key="SelectionSymbolStyle" TargetType="Label">
+        <Setter Property="HorizontalOptions" Value="End" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="TextColor" Value="{TemplateBinding SelectionSymbolColor}" />
+        <Setter Property="FontSize" Value="Large" />
+    </Style>
+
+    <Style x:Key="EndRepeatOptionsItemStyle" TargetType="telerikPrimitives:RadBorder">
+        <Setter Property="BorderColor" Value="{TemplateBinding SeparatorColor}" />
+        <Setter Property="BorderThickness" Value="{TemplateBinding SeparatorThickness}" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+    </Style>
+
+    <Style x:Key="DefaultButtonStyle" TargetType="Button">
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="BackgroundColor" Value="{TemplateBinding ButtonBackgroundColor}" />
+        <Setter Property="TextColor" Value="{TemplateBinding ButtonTextColor}" />
+        <Setter Property="HeightRequest" Value="44" />
+    </Style>
+
+    <DataTemplate x:Key="EndRepeatOptionsItemTemplate">
+        <Grid HeightRequest="44">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Command="{TemplateBinding BindingContext.EndRepeatOptionTappedCommand}" 
+                                      CommandParameter="{Binding .}" />
+            </Grid.GestureRecognizers>
+
+            <Label Text="{Binding Text}" 
+                   TextColor="{TemplateBinding TextColor}"
+                   FontSize="{TemplateBinding FontSize}"
+                   HorizontalTextAlignment="Start" 
+                   VerticalTextAlignment="Center" />
+
+            <Label telerikCommon:TelerikFont.UseEmbeddedFont="True"
+                   Text="{Binding Symbol}"
+                   Style="{StaticResource SelectionSymbolStyle}"
+                   IsVisible="{Binding IsSelected}" />
+        </Grid>
+    </DataTemplate>
+
+    <ControlTemplate x:Key="EndRepeatAppointmentViewControlTemplate">
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Padding="16, 20, 16, 0" VerticalOptions="StartAndExpand">
+                    <Label Text="{telerikCommon:Localize Calendar_EndRepeatTitle}"
+                           FontAttributes="Bold"
+                           FontSize="{TemplateBinding TitleFontSize}"
+                           TextColor="{TemplateBinding TitleTextColor}"
+                           Margin="0, 0, 0, 15" 
+                           HorizontalOptions="Start">
+                    </Label>
+
+                    <telerikDataControls:NonVirtualizedItemsControl ItemsSource="{Binding EndRepeatOptions}"
+                                                                    SelectionMode="Single"
+                                                                    SelectedItemStyle="{StaticResource EndRepeatOptionsItemStyle}"
+                                                                    ItemStyle="{StaticResource EndRepeatOptionsItemStyle}"
+                                                                    ItemTemplate="{StaticResource EndRepeatOptionsItemTemplate}" />
+
+                    <Grid HeightRequest="44" 
+                          IsVisible="{Binding IsDateViewVisible}">
+
+                        <Label Text="{telerikCommon:Localize Calendar_EndRepeatLabel}"
+                               Style="{StaticResource EndRepeatLabelStyle}">
+                        </Label>
+
+                        <DatePicker telerikCommon:FocusElementHelper.IsFocused="{Binding IsDatePickerFocused}"
+                                    HorizontalOptions="EndAndExpand"
+                                    Format="dd.MM.yyyy" 
+                                    VerticalOptions="Center" 
+                                    TextColor="{TemplateBinding SummaryTextColor}"
+                                    FontSize="{TemplateBinding SummaryFontSize}"
+                                    Date="{Binding OnDate}">
+                            <DatePicker.Effects>
+                                <telerikCommon:PickerRemoveBorderEffect />
+                            </DatePicker.Effects>
+                        </DatePicker>
+                    </Grid>
+
+                    <StackLayout IsVisible="{Binding IsOccurencesViewVisible}">
+                        <StackLayout.Resources>
+                            <Style TargetType="telerikNumericInput:NumericInputButton" Class="NumericInputStyle">
+                                <Setter Property="BorderRadius" Value="{OnPlatform iOS=10, Default=2}" />
+                                <Setter Property="BorderWidth" Value="{OnPlatform iOS=2, Default=1}" />
+                                <Setter Property="BackgroundColor" Value="Transparent"/>
+                                <Setter Property="BorderColor" Value="{OnPlatform iOS='#067DFF', Default='Accent'}" />
+                                <Setter Property="TextColor"  Value="{OnPlatform iOS='#067DFF', Default='Accent'}" />
+                                <Setter Property="FontSize" Value="Large" />
+                            </Style>
+
+                            <Style TargetType="telerikNumericInput:NumericInputEntry" Class="NumericInputStyle">
+                                <Setter Property="BorderStyle">
+                                    <Setter.Value>
+                                        <telerikInput:BorderStyle CornerRadius="{OnPlatform iOS=10,Default=2}"
+                                                                  BorderThickness="{OnPlatform iOS=2, Default='0,0,0,1'}"
+                                                                  BorderColor="{OnPlatform iOS='#067DFF', Default='Accent'}" />
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                            </Style>
+                        </StackLayout.Resources>
+
+                        <Grid HeightRequest="44">
+                            <Label Text="{telerikCommon:Localize Calendar_OccurencesLabel}" 
+                                   Style="{StaticResource EndRepeatLabelStyle}" />
+
+                            <Label Text="{Binding Occurences}" 
+                                   Style="{StaticResource EndRepeatLabelStyle}"
+                                   HorizontalOptions="End" />
+                        </Grid>
+
+                        <telerikInput:RadNumericInput StyleClass="NumericInputStyle"
+                                                      Margin="58, 20, 58, 0"
+                                                      Minimum="0"
+                                                      Value="{Binding Occurences, Mode=TwoWay}" />
+                    </StackLayout>
+                </StackLayout>
+
+                <telerikPrimitives:RadBorder BorderColor="#C8C7CC"
+                                             Margin="0, 10, 0, 0" 
+                                             VerticalOptions="End"
+                                             BorderThickness="0, 1, 0, 0" >
+                    <Grid ColumnSpacing="0">
+                        <Button Grid.Column="0"
+                                Command="{Binding CancelCommand}"
+                                Style="{StaticResource DefaultButtonStyle}"
+                                Text="{telerikCommon:Localize Calendar_AppointmentCancelButton}" />
+                        <Button Grid.Column="1"
+                                Command="{Binding OKCommand}"
+                                Style="{StaticResource DefaultButtonStyle}"
+                                Text="{telerikCommon:Localize Calendar_AppointmentOKButton}" />
+                    </Grid>
+                </telerikPrimitives:RadBorder>
+            </StackLayout>
+        </ScrollView>
+    </ControlTemplate>
+</ResourceDictionary>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerikRichTextEditor="clr-namespace:Telerik.XamarinForms.RichTextEditor;assembly=Telerik.XamarinForms.RichTextEditor"
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.RichTextEditorControl.GettingStartedCategory.GettingStartedExample.RichTextEditorGettingStartedXaml">
+    <!-- >> richtexteditor-getting-started-xaml -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>    
+        <telerikRichTextEditor:RadRichTextEditorToolbar x:Name="richTextToolbar" RichTextEditor="{x:Reference richTextEditor}" />
+        <telerikRichTextEditor:RadRichTextEditor x:Name="richTextEditor" Grid.Row="1" />
+    </Grid>
+    <!-- << richtexteditor-getting-started-xaml -->
+</ContentView>

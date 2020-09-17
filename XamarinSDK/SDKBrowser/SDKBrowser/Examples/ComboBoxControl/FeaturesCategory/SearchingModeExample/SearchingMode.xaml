@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.ComboBoxControl.FeaturesCategory.SearchingModeExample.SearchingMode">
+    <StackLayout>
+        <Label Text="SearchMode" />
+        <Picker SelectedItem="{Binding SearchMode}">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type telerikInput:SearchMode}">
+                    <telerikInput:SearchMode>StartsWith</telerikInput:SearchMode>
+                    <telerikInput:SearchMode>StartsWithCaseSensitive</telerikInput:SearchMode>
+                    <telerikInput:SearchMode>Contains</telerikInput:SearchMode>
+                    <telerikInput:SearchMode>ContainsCaseSensitive</telerikInput:SearchMode>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <!-- >> combobox-searching-moode -->
+        <telerikInput:RadComboBox ItemsSource="{Binding Stores}"
+                                  DisplayMemberPath="City"
+                                  SearchTextPath="City"
+                                  SearchMode="{Binding SearchMode}"
+                                  HighlightTextColor="Red"
+                                  IsEditable="True"/>
+        <!-- << combobox-searching-moode -->
+    </StackLayout>
+</ContentView>

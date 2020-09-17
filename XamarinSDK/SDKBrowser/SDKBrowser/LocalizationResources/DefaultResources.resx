@@ -621,4 +621,139 @@
   <data name="TemplatedPicker_Popup_HeaderLabelText" xml:space="preserve">
     <value>Select Value</value>
   </data>
+  <data name="RichTextEditor_Heading1" xml:space="preserve">
+    <value>Heading 1</value>
+  </data>
+  <data name="RichTextEditor_Heading2" xml:space="preserve">
+    <value>Heading 2</value>
+  </data>
+  <data name="RichTextEditor_Heading3" xml:space="preserve">
+    <value>Heading 3</value>
+  </data>
+  <data name="RichTextEditor_Heading4" xml:space="preserve">
+    <value>Heading 4</value>
+  </data>
+  <data name="RichTextEditor_Heading5" xml:space="preserve">
+    <value>Heading 5</value>
+  </data>
+  <data name="RichTextEditor_Heading6" xml:space="preserve">
+    <value>Heading 6</value>
+  </data>
+  <data name="RichTextEditor_Paragraph" xml:space="preserve">
+    <value>Paragraph</value>
+  </data>
+  <data name="RichTextEditor_Quotation" xml:space="preserve">
+    <value>Quotation</value>
+  </data>
+  <data name="PdfViewer_SearchPlaceholder" xml:space="preserve">
+    <value>Find in document</value>
+  </data>
+  <data name="PdfViewer_SearchedTextNotFound" xml:space="preserve">
+    <value>Not found</value>
+  </data>
+  <data name="PdfViewer_Searching" xml:space="preserve">
+    <value>Searching</value>
+  </data>
+  <data name="RichTextEditor_FontFamily" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="RichTextEditor_FontSize" xml:space="preserve">
+    <value>Font Size</value>
+  </data>
+  <data name="RichTextEditor_Bold" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="RichTextEditor_Italic" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="RichTextEditor_Underline" xml:space="preserve">
+    <value>Underline</value>
+  </data>
+  <data name="RichTextEditor_FontColor" xml:space="preserve">
+    <value>Font color</value>
+  </data>
+  <data name="RichTextEditor_HighlightColor" xml:space="preserve">
+    <value>Highlight color</value>
+  </data>
+  <data name="RichTextEditor_Subscript" xml:space="preserve">
+    <value>Subscript</value>
+  </data>
+  <data name="RichTextEditor_Superscript" xml:space="preserve">
+    <value>Superscript</value>
+  </data>
+  <data name="RichTextEditor_Undo" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="RichTextEditor_Redo" xml:space="preserve">
+    <value>Redo</value>
+  </data>
+  <data name="RichTextEditor_Strike" xml:space="preserve">
+    <value>Strike</value>
+  </data>
+  <data name="RichTextEditor_AlignLeft" xml:space="preserve">
+    <value>Align to Left</value>
+  </data>
+  <data name="RichTextEditor_AlignCenter" xml:space="preserve">
+    <value>Center Text</value>
+  </data>
+  <data name="RichTextEditor_AlignJustify" xml:space="preserve">
+    <value>Justify Text</value>
+  </data>
+  <data name="RichTextEditor_AlignRight" xml:space="preserve">
+    <value>Align to Right</value>
+  </data>
+  <data name="RichTextEditor_IncreaseIndent" xml:space="preserve">
+    <value>Increase Indent</value>
+  </data>
+  <data name="RichTextEditor_DecreaseIndent" xml:space="preserve">
+    <value>Decrease Indent</value>
+  </data>
+  <data name="RichTextEditor_UnorderedList" xml:space="preserve">
+    <value>Unordered List</value>
+  </data>
+  <data name="RichTextEditor_OrderedList" xml:space="preserve">
+    <value>Ordered Indent</value>
+  </data>
+  <data name="RichTextEditor_ClearFormatting" xml:space="preserve">
+    <value>Clear Formatting</value>
+  </data>
+  <data name="RichTextEditor_FontStyles" xml:space="preserve">
+    <value>Styles</value>
+  </data>
+  <data name="RichTextEditor_AddHyperlink" xml:space="preserve">
+    <value>Hyperlink</value>
+  </data>
+  <data name="RichTextEditor_EditHyperlink" xml:space="preserve">
+    <value>Edit Hyperlink</value>
+  </data>
+  <data name="RichTextEditor_OpenHyperlink" xml:space="preserve">
+    <value>Open Hyperlink</value>
+  </data>
+  <data name="RichTextEditor_RemoveHyperlink" xml:space="preserve">
+    <value>Remove Hyperlink</value>
+  </data>
+  <data name="RichTextEditor_HyperlinkCancelButtonText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="RichTextEditor_HyperlinkHeaderText" xml:space="preserve">
+    <value>Link</value>
+  </data>
+  <data name="RichTextEditor_HyperlinkOkButtonText" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="RichTextEditor_HyperlinkTitleLabelText" xml:space="preserve">
+    <value>Link Title:</value>
+  </data>
+  <data name="RichTextEditor_HyperlinkTitlePlaceholderText" xml:space="preserve">
+    <value>Additional Info</value>
+  </data>
+  <data name="RichTextEditor_HyperlinkUrlLabelText" xml:space="preserve">
+    <value>URL:</value>
+  </data>
+  <data name="RichTextEditor_HyperlinkUrlPlaceholderText" xml:space="preserve">
+    <value>http://www....</value>
+  </data>
+  <data name="Calendar_AppointmentTitlePlaceholder" xml:space="preserve">
+    <value>Event title</value>
+  </data>
 </root>

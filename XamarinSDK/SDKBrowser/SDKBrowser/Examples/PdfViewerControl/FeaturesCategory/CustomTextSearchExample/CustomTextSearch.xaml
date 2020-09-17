@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPdfViewer="clr-namespace:Telerik.XamarinForms.PdfViewer;assembly=Telerik.XamarinForms.PdfViewer"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.PdfViewerControl.FeaturesCategory.CustomTextSearchExample"
+             x:Class="SDKBrowser.Examples.PdfViewerControl.FeaturesCategory.CustomTextSearchExample.CustomTextSearch">
+    <!-- >> pdfviewer-customtextsearch-xaml -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <telerikPdfViewer:RadPdfViewerToolbar PdfViewer="{Binding Source={x:Reference pdfViewer}}"
+                                              IsScrollable="True">
+            <telerikPdfViewer:SearchToolbarItem TextSearchTrigger="TextChanged" />
+            <telerikPdfViewer:ZoomInToolbarItem />
+            <telerikPdfViewer:ZoomOutToolbarItem />
+            <telerikPdfViewer:FitToWidthToolbarItem/>
+            <telerikPdfViewer:ToggleLayoutModeToolbarItem/>
+        </telerikPdfViewer:RadPdfViewerToolbar>
+        <telerikPdfViewer:RadPdfViewer x:Name="pdfViewer" Grid.Row="1">
+            <telerikPdfViewer:RadPdfViewer.SearchSettings>
+                <telerikPdfViewer:SearchSettings>
+                    <telerikPdfViewer:SearchSettings.TextSearchWorker>
+                        <local:MultipleWordsSearchWorker />
+                    </telerikPdfViewer:SearchSettings.TextSearchWorker>
+                </telerikPdfViewer:SearchSettings>
+            </telerikPdfViewer:RadPdfViewer.SearchSettings>
+        </telerikPdfViewer:RadPdfViewer>
+    </Grid>
+    <!-- << pdfviewer-customtextsearch-xaml -->
+</ContentView>

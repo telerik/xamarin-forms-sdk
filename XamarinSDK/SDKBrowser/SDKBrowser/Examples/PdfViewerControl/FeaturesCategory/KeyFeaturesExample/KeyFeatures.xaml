@@ -10,7 +10,8 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition />
         </Grid.RowDefinitions>
-        <telerikPdfViewer:RadPdfViewerToolbar PdfViewer="{Binding Source={x:Reference pdfViewer}}">
+        <telerikPdfViewer:RadPdfViewerToolbar PdfViewer="{Binding Source={x:Reference pdfViewer}}"
+                                              IsScrollable="True">
             <telerikPdfViewer:ZoomInToolbarItem />
             <telerikPdfViewer:ZoomOutToolbarItem />
             <telerikPdfViewer:ToggleLayoutModeToolbarItem />

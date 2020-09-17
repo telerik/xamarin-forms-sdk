@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.ComboBoxControl.HowToCategory.NoNullValueExample"
+             x:Class="SDKBrowser.Examples.ComboBoxControl.HowToCategory.NoNullValueExample.NoNullValue">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label Text="This example demonstrates how to prevent item deselection when the mode is single and there is initially selected item."
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               Margin="0, 0, 0, 5"/>
+        <!-- >> combobox-no-null-values -->
+        <telerikInput:RadComboBox Grid.Row="1"
+                                  ItemsSource="{Binding Items}"
+                                  SelectedItem="{Binding SelectedItem}"
+                                  DisplayMemberPath="Name"
+                                  IsClearButtonVisible="False"
+                                  SelectionMode="Single"
+                                  Margin="10, 0, 10, 0">
+            <telerikInput:RadComboBox.BindingContext>
+                <local:ViewModel/>
+            </telerikInput:RadComboBox.BindingContext>
+        </telerikInput:RadComboBox>
+        <!-- << combobox-no-null-values -->
+    </Grid>
+</ContentView>

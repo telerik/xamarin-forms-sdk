@@ -9,7 +9,8 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition />
         </Grid.RowDefinitions>
-        <telerikPdfViewer:RadPdfViewerToolbar PdfViewer="{Binding Source={x:Reference pdfViewer}}">
+        <telerikPdfViewer:RadPdfViewerToolbar PdfViewer="{Binding Source={x:Reference pdfViewer}}"
+                                              IsScrollable="True">
             <telerikPdfViewer:PdfViewerToolbarItemBase Text="&#xE815;" 
                                                        FontFamily="{StaticResource IconsFontFamily}" 
                                                        Command="{Binding DisplayFileSizeCommand}" />

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+                    xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+                    xmlns:telerikCalendar="clr-namespace:Telerik.XamarinForms.Input.Calendar;assembly=Telerik.XamarinForms.Input"
+                    xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+                    mc:Ignorable="d"
+                    x:Class="SDKBrowser.Examples.CalendarControl.SchedulingCategory.SchedulingUIViews.ColorPickerView">
+
+    <Style x:Key="DefaultButtonStyle" TargetType="Button">
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="BackgroundColor" Value="{TemplateBinding ButtonBackgroundColor}" />
+        <Setter Property="TextColor" Value="{TemplateBinding ButtonTextColor}" />
+        <Setter Property="HeightRequest" Value="44" />
+    </Style>
+
+    <ControlTemplate x:Key="ColorPickerViewControlTemplate">
+        <ScrollView BackgroundColor="{TemplateBinding BackgroundColor}">
+            <StackLayout >
+                <Label Text="{telerikCommon:Localize Calendar_ColorPickerTitle}"
+                       Padding="16, 20, 16, 0"
+                       FontAttributes="Bold"
+                       FontSize="{TemplateBinding TitleFontSize}"
+                       TextColor="{TemplateBinding TitleTextColor}"
+                       Margin="0, 0, 0, 15" 
+                       HorizontalOptions="Start">
+                </Label>
+
+                <telerikCalendar:CalendarColorPicker Colors="{Binding Colors}"
+                                                     Padding="16, 0"
+                                                     SelectedColor="{Binding SelectedColor, Mode=TwoWay}" />
+
+                <telerikPrimitives:RadBorder BorderColor="#C8C7CC"
+                                             Margin="0, 10, 0, 0" 
+                                             VerticalOptions="EndAndExpand"
+                                             BorderThickness="0, 1, 0, 0">
+                    <Grid ColumnSpacing="0">
+                        <Button Grid.Column="0"
+                                Style="{StaticResource DefaultButtonStyle}"
+                                Command="{Binding CancelCommand}"
+                                Text="{telerikCommon:Localize Calendar_AppointmentCancelButton}" />
+                    </Grid>
+                </telerikPrimitives:RadBorder>
+            </StackLayout>
+        </ScrollView>
+    </ControlTemplate>
+</ResourceDictionary>

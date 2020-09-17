@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:calendarCommands="clr-namespace:Telerik.XamarinForms.Input.Calendar.Commands;assembly=Telerik.XamarinForms.Input"            
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.CalendarControl.SchedulingCategory.SchedulingCommandsExample.SchedulingCommands">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <!-- >> calendar-scheduling-commands-xaml -->
+        <telerikInput:RadCalendar x:Name="calendar" 
+                                  SchedulingUiEnabled="True" 
+                                  AppointmentsSource="{Binding Appointments}"
+                                  ViewMode="Day">
+            <telerikInput:RadCalendar.Commands>
+                <calendarCommands:ShowAddAppointmentViewCommand />
+                <calendarCommands:ShowEditAppointmentViewCommand />
+            </telerikInput:RadCalendar.Commands>
+        </telerikInput:RadCalendar>
+        <!-- << calendar-scheduling-commands-xaml -->
+        <!-- >> calendar-scheduling-commands-buttons -->
+        <StackLayout Grid.Row="1" Orientation="Horizontal">
+            <Button Command="{Binding Source={x:Reference calendar}, Path=Commands[0]}"
+                    CommandParameter="{Binding AddNewAppointmentContext}"
+                    Text="Create Appointment"/>
+            <Button Command="{Binding Source={x:Reference calendar}, Path=Commands[1]}"
+                    CommandParameter="{Binding EditAppointmentContext}"
+                    Text="Edit First Appointment"/>
+        </StackLayout>
+        <!-- << calendar-scheduling-commands-buttons -->
+    </Grid>
+</ContentView>

@@ -36,6 +36,7 @@
                         <telerikPdfViewer:SelectionMenuToolbar Margin="8, 5, 8, 5"
                                                                OverflowButtonTextColor="{TemplateBinding TextColor}"
                                                                OverflowPopupBackgroundColor="{TemplateBinding Fill}"
+                                                               IsScrollable="True"
                                                                MenuItems="{TemplateBinding MenuItems}" />
                     </telerikPrimitives:RadBorder>
                 </Grid>

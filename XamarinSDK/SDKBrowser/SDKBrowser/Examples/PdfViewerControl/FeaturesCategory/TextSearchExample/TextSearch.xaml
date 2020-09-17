@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerikPdfViewer="clr-namespace:Telerik.XamarinForms.PdfViewer;assembly=Telerik.XamarinForms.PdfViewer"
+             xmlns:telerikTextSearch="clr-namespace:Telerik.Windows.Documents.Fixed.Search;assembly=Telerik.Documents.Fixed"
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.PdfViewerControl.FeaturesCategory.TextSearchExample.TextSearch">
+    <ContentView.Resources>
+        <!-- >> pdfviewer-textsearch-toaststyle -->
+        <Style x:Key="MyToastStyle" TargetType="telerikPdfViewer:SearchToast">
+            <Setter Property="Fill" Value="#FF7F7F" />
+            <Setter Property="TextColor" Value="White" />
+        </Style>
+        <!-- << pdfviewer-textsearch-toaststyle -->
+    </ContentView.Resources>
+    <!-- >> pdfviewer-textsearch-xaml -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <telerikPdfViewer:RadPdfViewerToolbar PdfViewer="{Binding Source={x:Reference pdfViewer}}"
+                                              IsScrollable="True">
+            <telerikPdfViewer:SearchToolbarItem TextSearchTrigger="TextChanged"
+                                                ToastStyle="{StaticResource MyToastStyle}" />
+            <telerikPdfViewer:ZoomInToolbarItem />
+            <telerikPdfViewer:ZoomOutToolbarItem />
+            <telerikPdfViewer:FitToWidthToolbarItem/>
+            <telerikPdfViewer:ToggleLayoutModeToolbarItem/>
+        </telerikPdfViewer:RadPdfViewerToolbar>
+        <telerikPdfViewer:RadPdfViewer x:Name="pdfViewer" Grid.Row="1">
+            <telerikPdfViewer:RadPdfViewer.SearchSettings>
+                <telerikPdfViewer:SearchSettings MainSearchResultFill="#99FF7F7F"
+                                                 SearchResultsFill="#997FC9FF">
+                    <telerikPdfViewer:SearchSettings.SearchOptions>
+                        <telerikTextSearch:TextSearchOptions>
+                            <telerikTextSearch:TextSearchOptions.WholeWordsOnly>
+                                <x:Boolean>True</x:Boolean>
+                            </telerikTextSearch:TextSearchOptions.WholeWordsOnly>
+                        </telerikTextSearch:TextSearchOptions>
+                    </telerikPdfViewer:SearchSettings.SearchOptions>
+                </telerikPdfViewer:SearchSettings>
+            </telerikPdfViewer:RadPdfViewer.SearchSettings>
+        </telerikPdfViewer:RadPdfViewer>
+    </Grid>
+    <!-- << pdfviewer-textsearch-xaml -->
+</ContentView>

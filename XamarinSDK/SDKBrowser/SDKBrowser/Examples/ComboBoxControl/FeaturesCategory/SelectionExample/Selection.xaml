@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.ComboBoxControl.FeaturesCategory.SelectionExample"
+             mc:Ignorable="d"
+             BackgroundColor="White"
+             x:Class="SDKBrowser.Examples.ComboBoxControl.FeaturesCategory.SelectionExample.Selection">
+    <StackLayout>
+        <Label Text="ComboBox with Single Selection using SelectedIndex" Margin="0, 0, 0, 5"/>
+        <!-- >> combobox-single-selection-selectedindex -->
+        <telerikInput:RadComboBox ItemsSource="{Binding Items}"
+                                  DisplayMemberPath="Name"
+                                  SelectedIndex="{Binding SelectedIndex, Mode=TwoWay}"
+                                  SelectionMode="Single">
+            <telerikInput:RadComboBox.BindingContext>
+                <local:ViewModel/>
+            </telerikInput:RadComboBox.BindingContext>
+        </telerikInput:RadComboBox>
+        <!-- << combobox-single-selection-selectedindex -->
+
+        <Label Text="ComboBox with Single Selection using SelectedItem" Margin="0, 20, 0, 5"/>
+        <!-- >> combobox-single-selection-selecteditem -->
+        <telerikInput:RadComboBox ItemsSource="{Binding Items}"
+                                  DisplayMemberPath="Name"
+                                  SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+                                  SelectionMode="Single">
+            <telerikInput:RadComboBox.BindingContext>
+                <local:ViewModel/>
+            </telerikInput:RadComboBox.BindingContext>
+        </telerikInput:RadComboBox>
+        <!-- << combobox-single-selection-selecteditem -->
+
+        <Label Text="ComboBox with Multiple Selection" Margin="0, 20, 0, 5"/>
+        <!-- >> combobox-multiple-selection -->
+        <telerikInput:RadComboBox ItemsSource="{Binding Items}"
+                                  SelectionMode="Multiple"
+                                  DisplayMemberPath="Name"
+                                  SelectedItems="{Binding SelectedItems}"
+                                  SelectionChanged="RadComboBox_SelectionChanged">
+            <telerikInput:RadComboBox.BindingContext>
+                <local:ViewModel/>
+            </telerikInput:RadComboBox.BindingContext>
+        </telerikInput:RadComboBox>
+        <!-- << combobox-multiple-selection -->
+    </StackLayout>
+</ContentView>

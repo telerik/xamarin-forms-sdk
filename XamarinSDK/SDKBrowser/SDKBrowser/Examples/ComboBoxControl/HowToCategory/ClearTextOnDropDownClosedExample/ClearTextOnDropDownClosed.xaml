@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.ComboBoxControl.HowToCategory.ClearTextOnDropDownClosedExample"
+             x:Class="SDKBrowser.Examples.ComboBoxControl.HowToCategory.ClearTextOnDropDownClosedExample.ClearTextOnDropDownClosed">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label Text="This example demonstrates how to clear the Text of the ComboBox when the mode is multiple and the dropdown is closed."
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               Margin="0, 0, 0, 5"/>
+        <!-- >> combobox-howto-cleartext-dropdown-closed -->
+        <telerikInput:RadComboBox x:Name="comboBox"
+                                  Grid.Row="1"
+                                  BackgroundColor="White"
+                                  ItemsSource="{Binding Items}"
+                                  Text="{Binding Text, Mode=TwoWay}"
+                                  DisplayMemberPath="Name"
+                                  SearchTextPath="Name"
+                                  SelectionMode="Multiple"
+                                  IsDropDownClosedOnSelection="False"
+                                  IsEditable="True"
+                                  Margin="10, 0, 10, 0"
+                                  Unfocused="comboBox_Unfocused">
+            <telerikInput:RadComboBox.BindingContext>
+                <local:ViewModel/>
+            </telerikInput:RadComboBox.BindingContext>
+        </telerikInput:RadComboBox>
+        <!-- << combobox-howto-cleartext-dropdown-closed -->
+    </Grid>
+</ContentView>

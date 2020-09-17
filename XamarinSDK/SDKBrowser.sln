@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2008
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDKBrowser.UWP", "SDKBrowser\SDKBrowser.UWP\SDKBrowser.UWP.csproj", "{1F12E361-2F76-4E96-B36A-96C03D6AFD6E}"
 EndProject

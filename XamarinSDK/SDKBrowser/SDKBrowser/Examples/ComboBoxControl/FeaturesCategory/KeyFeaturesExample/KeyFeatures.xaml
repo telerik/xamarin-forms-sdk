@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.ComboBoxControl.FeaturesCategory.KeyFeaturesExample.KeyFeatures">
+    <StackLayout>
+        <Label Text="ComboBox with Placeholder property set"/>
+        <!-- >> combobox-keyfeatures-placeholder -->
+        <telerikInput:RadComboBox Placeholder="Select City!" 
+                                  ItemsSource="{Binding Items}"
+                                  DisplayMemberPath="Name"/>
+        <!-- << combobox-keyfeatures-placeholder -->
+        <Label Text="ComboBox with IsClearButtonVisible=False"/>
+        <!-- >> combobox-keyfeatures-clearbuttonvisible-false -->
+        <telerikInput:RadComboBox IsClearButtonVisible="False" 
+                                  ItemsSource="{Binding Items}"
+                                  DisplayMemberPath="Population"
+                                  IsEditable="True"
+                                  SearchTextPath="Population"
+                                  Keyboard="Numeric"/>
+        <!-- << combobox-keyfeatures-clearbuttonvisible-false -->
+
+        <Label Text="Drop Down visibility on focus, valid for editable mode"/>
+        <!-- >> combobox-keyfeatures-dropdownvisibility-openonfocus -->
+        <telerikInput:RadComboBox OpenOnFocus="False" 
+                                  ItemsSource="{Binding Items}"
+                                  IsEditable="True"
+                                  SearchTextPath="Name"
+                                  DisplayMemberPath="Name"/>
+        <!-- << combobox-keyfeatures-dropdownvisibility-openonfocus -->
+
+        <Label Text="IsDropDown Closed when selection is made"/>
+        <!-- >> combobox-keyfeatures-dropdownvisibility-isdropdownclosed -->
+        <telerikInput:RadComboBox IsDropDownClosedOnSelection="False"
+                                  ItemsSource="{Binding Items}"
+                                  DisplayMemberPath="Name"/>
+        <!-- << combobox-keyfeatures-dropdownvisibility-isdropdownclosed -->
+    </StackLayout>
+</ContentView>

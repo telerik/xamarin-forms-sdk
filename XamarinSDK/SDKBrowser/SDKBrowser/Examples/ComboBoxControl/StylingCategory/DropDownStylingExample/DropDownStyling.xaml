@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             mc:Ignorable="d"
+             BackgroundColor="White"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.ComboBoxControl.FeaturesCategory.EditingExample"
+             x:Class="SDKBrowser.Examples.ComboBoxControl.StylingCategory.DropDownStylingExample.DropDownStyling">
+
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <!-- >> combobox-dropdownbutton-style -->
+            <Style TargetType="Button" x:Key="DropDownButtonStyle">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="WidthRequest" Value="24"/>
+                <Setter Property="HeightRequest" Value="24"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="BackgroundColor">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="Color">
+                            <On Platform="Android">Transparent</On>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="TextColor" Value="Blue"/>
+                <Setter Property="Margin">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="Android">8, 0, 4, 0</On>
+                            <On Platform="iOS">8, 6, 4, 7</On>
+                            <On Platform="UWP">6, 1, 10, 1</On>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <!-- << combobox-dropdownbutton-style -->
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <StackLayout>
+        <!-- >> combobox-dropdown-styling -->
+        <telerikInput:RadComboBox ItemsSource="{Binding Items}"
+                                  IsEditable="True" 
+                                  SearchTextPath="Name"
+                                  DisplayMemberPath="Name"
+                                  SelectionMode="Multiple"
+                                  HighlightTextColor="Black"
+                                  DropDownBorderColor="Blue"
+                                  DropDownBorderThickness="2"
+                                  DropDownCornerRadius="5"
+                                  DropDownBackgroundColor="LightBlue"
+                                  DropDownButtonStyle="{StaticResource DropDownButtonStyle}">
+            <telerikInput:RadComboBox.BindingContext>
+                <local:ViewModel/>
+            </telerikInput:RadComboBox.BindingContext>
+        </telerikInput:RadComboBox>
+        <!-- << combobox-dropdown-styling -->
+    </StackLayout>
+</ContentView>

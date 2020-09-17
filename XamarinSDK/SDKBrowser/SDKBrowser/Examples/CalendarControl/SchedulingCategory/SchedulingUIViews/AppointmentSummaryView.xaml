@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+                    xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+                    xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+                    mc:Ignorable="d"
+                    x:Class="SDKBrowser.Examples.CalendarControl.SchedulingCategory.SchedulingUIViews.AppointmentSummaryView">
+    
+    <Style x:Key="DeleteAppointmentButtonStyle" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{TemplateBinding ButtonBackgroundColor}" />
+        <Setter Property="TextColor" Value="{TemplateBinding ButtonTextColor}" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="CornerRadius" Value="0" />
+    </Style>
+
+    <Style x:Key="EditButtonStyle" TargetType="telerikInput:RadButton">
+        <Setter Property="BackgroundColor" Value="{TemplateBinding ButtonBackgroundColor}" />
+        <Setter Property="TextColor" Value="{TemplateBinding ButtonTextColor}" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="FontSize" Value="Small" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="VerticalOptions" Value="Start" />
+        <Setter Property="HeightRequest" Value="40" />
+        <Setter Property="WidthRequest" Value="{OnPlatform iOS=80, Default=88}" />
+        <Setter Property="CornerRadius" Value="{OnPlatform iOS=6, Default=2}" />
+    </Style>
+
+    <Style x:Key="AppointmentInfoLabelStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="{TemplateBinding DetailsTextColor}" />
+        <Setter Property="FontSize" Value="{TemplateBinding DetailsFontSize}" />
+    </Style>
+
+    <Style x:Key="BackSymbolLabelStyle" TargetType="Label">
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="VerticalOptions" Value="Start" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="FontSize" Value="Large" />
+        <Setter Property="HorizontalTextAlignment" Value="{OnPlatform iOS=Start, Android=Center, UWP=Center, Default=Center}" />
+        <Setter Property="TextColor" Value="{TemplateBinding BackTextColor}" />
+        <Setter Property="Margin" Value="{OnPlatform iOS='0, 9, 0, 0', Default='0, 8, 0, 0'}" />
+        <Setter Property="HeightRequest" Value="{OnPlatform iOS=22, Default=24}" />
+        <Setter Property="WidthRequest" Value="{OnPlatform iOS=22, Default=24}" />
+    </Style>
+
+    <ControlTemplate x:Key="AppointmentSummaryViewControlTemplate">
+        <Grid RowSpacing="0" 
+              BackgroundColor="{TemplateBinding BackgroundColor}"
+              BindingContext="{TemplateBinding BindingContext}">
+            <telerikPrimitives:RadPopup.Popup>
+                <telerikPrimitives:RadPopup IsOpen="{Binding IsPopupOpen}"
+                                            Content="{Binding PopupContent}"
+                                            VerticalOffset="{Binding PopupVerticalOffset}"
+                                            Placement="Center"
+                                            AnimationType="Fade"
+                                            OutsideBackgroundColor="#6F000000">
+                </telerikPrimitives:RadPopup>
+            </telerikPrimitives:RadPopup.Popup>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+                <RowDefinition Height="44" />
+            </Grid.RowDefinitions>
+            <Grid ColumnSpacing="0"
+                  Margin="{OnPlatform iOS='12, 12, 12, 0', Default='16, 12, 16, 0'}">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="{OnPlatform iOS=80, Default=88}" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Back symbol -->
+                <Label Text="&#xe80E;"
+                       telerikCommon:TelerikFont.UseEmbeddedFont="True" 
+                       Style="{StaticResource BackSymbolLabelStyle}" >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding CancelCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <StackLayout Grid.Column="1"
+                             Orientation="Horizontal"
+                             Spacing="0">
+
+                    <!--Appointment title-->
+                    <Label Text="{Binding Appointment.Title}"
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center" 
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Start" 
+                           Margin="5,0,0,0" 
+                           FontSize="{TemplateBinding AppointmentTitleFontSize}" 
+                           TextColor="{TemplateBinding AppointmentTitleTextColor}"
+                           FontAttributes="Bold" />
+
+                    <!--Appointment Color-->
+                    <telerikPrimitives:RadBorder BackgroundColor="{Binding Appointment.Color}"
+                                                 HorizontalOptions="Start"
+                                                 VerticalOptions="Start"
+                                                 MinimumHeightRequest="{OnPlatform Default=6, Android=8}"
+                                                 MinimumWidthRequest="{OnPlatform Default=6, Android=8}"
+                                                 HeightRequest="{OnPlatform Default=6, Android=8}"
+                                                 WidthRequest="{OnPlatform Default=6, Android=8}" 
+                                                 Margin="6"
+                                                 CornerRadius="{OnPlatform Default=3, Android=4}"/>
+                </StackLayout>
+
+                <telerikInput:RadButton Grid.Column="2"
+                                        Text="{telerikCommon:Localize Calendar_EditButton}"
+                                        Command="{Binding BeginEditAppointmentCommand}"
+                                        Style="{StaticResource EditButtonStyle}"/>
+            </Grid>
+
+            <!--Appointment details-->
+            <StackLayout Grid.Row="1" 
+                         Spacing="6"
+                         Margin="{OnPlatform iOS='12, 24', Default='16, 18'}">
+                <Label Text="{Binding AppointmentSummary}" 
+                       Style="{StaticResource AppointmentInfoLabelStyle}" />
+                <Label Text="{Binding RepeatOptionsDetails}" 
+                       Style="{StaticResource AppointmentInfoLabelStyle}" />
+                <Label Text="{Binding Appointment.Detail}" 
+                       Style="{StaticResource AppointmentInfoLabelStyle}" 
+                       Margin="0, 16, 0, 0" />
+            </StackLayout>
+
+            <!--Delete appointment button-->
+            <telerikPrimitives:RadBorder Grid.Row="2" 
+                                         BorderColor="#C8C7CC"
+                                         BorderThickness="0, 1, 0, 0">
+                <Button Text="{telerikCommon:Localize Calendar_DeleteButton}"
+                        Command="{Binding DeleteAppointmentCommand}"
+                        Style="{StaticResource DeleteAppointmentButtonStyle}" />
+            </telerikPrimitives:RadBorder>
+        </Grid>
+    </ControlTemplate>
+</ResourceDictionary>

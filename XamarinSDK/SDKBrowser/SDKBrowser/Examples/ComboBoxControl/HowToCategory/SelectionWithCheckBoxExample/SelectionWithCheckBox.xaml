@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             xmlns:local="clr-namespace:SDKBrowser.Examples.ComboBoxControl.HowToCategory.SelectionWithCheckBoxExample"
+             x:Class="SDKBrowser.Examples.ComboBoxControl.HowToCategory.SelectionWithCheckBoxExample.SelectionWithCheckBox">
+    <ContentView.Resources>
+        <ResourceDictionary>
+
+            <!-- >> combobox-howto-selection-checkbox-headertemplate -->
+            <DataTemplate x:Key="ComboBoxHeaderTemplate">
+                <telerikPrimitives:RadBorder>
+                    <telerikPrimitives:RadBorder.MinimumHeightRequest>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="iOS" Value="44"/>
+                            <On Platform="Android" Value="48"/>
+                            <On Platform="UWP" Value="32"/>
+                        </OnPlatform>
+                    </telerikPrimitives:RadBorder.MinimumHeightRequest>
+                    <telerikPrimitives:RadBorder.BorderColor>
+                        <OnPlatform x:TypeArguments="Color" Default="#ECECEC">
+                            <On Platform="UWP" Value="Transparent"/>
+                        </OnPlatform>
+                    </telerikPrimitives:RadBorder.BorderColor>
+                    <telerikPrimitives:RadBorder.BorderThickness>
+                        <OnPlatform x:TypeArguments="Thickness" Default="0, 0, 0, 1">
+                            <On Platform="UWP" Value="0"/>
+                        </OnPlatform>
+                    </telerikPrimitives:RadBorder.BorderThickness>
+                    <StackLayout Orientation="Horizontal"
+                                     BackgroundColor="#DADADA">
+                        <StackLayout.Padding>
+                            <OnPlatform x:TypeArguments="Thickness" Default="11, 12, 0, 12">
+                                <On Platform="UWP" Value="6, 6, 0, 6"/>
+                                <On Platform="Android" Value="11, 6, 0, 6"/>
+                            </OnPlatform>
+                        </StackLayout.Padding>
+                        <telerikPrimitives:RadCheckBox IsChecked="{Binding SelectAllChecked}"
+                                                           CheckedColor="#0E88F2"
+                                                           IndeterminateColor="#0E88F2"
+                                                           InputTransparent="True"
+                                                           VerticalOptions="Center">
+                            <telerikPrimitives:RadCheckBox.Margin>
+                                <OnPlatform x:TypeArguments="Thickness">
+                                    <On Platform="iOS" Value="3, 0, 0, 0"/>
+                                    <On Platform="Android" Value="8, 0, 0, 0"/>
+                                    <On Platform="UWP" Value="10, 0, 0, 0"/>
+                                </OnPlatform>
+                            </telerikPrimitives:RadCheckBox.Margin>
+                        </telerikPrimitives:RadCheckBox>
+                        <Label Text="Select All Cities" 
+                                   TextColor="Black"
+                                   FontAttributes="Bold"
+                                   VerticalTextAlignment="Center">
+                            <Label.Padding>
+                                <OnPlatform x:TypeArguments="Thickness">
+                                    <On Platform="iOS" Value="3, 0, 0, 0"/>
+                                    <On Platform="Android" Value="8, 13, 0, 13"/>
+                                    <On Platform="UWP" Value="10, 6, 0, 6"/>
+                                </OnPlatform>
+                            </Label.Padding>
+                        </Label>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding SelectAllCommand}"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </telerikPrimitives:RadBorder>
+            </DataTemplate>
+            <!-- << combobox-howto-selection-checkbox-headertemplate -->
+            
+            <!-- >> combobox-howto-selection-checkbox-itemtemplate -->
+            <DataTemplate x:Key="ComboBoxItemTemplate">
+                <telerikPrimitives:RadBorder>
+                    <telerikPrimitives:RadBorder.MinimumHeightRequest>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="iOS" Value="44"/>
+                            <On Platform="Android" Value="48"/>
+                            <On Platform="UWP" Value="32"/>
+                        </OnPlatform>
+                    </telerikPrimitives:RadBorder.MinimumHeightRequest>
+                    <telerikPrimitives:RadBorder.BorderColor>
+                        <OnPlatform x:TypeArguments="Color" Default="#ECECEC">
+                            <On Platform="UWP" Value="Transparent"/>
+                        </OnPlatform>
+                    </telerikPrimitives:RadBorder.BorderColor>
+                    <telerikPrimitives:RadBorder.BorderThickness>
+                        <OnPlatform x:TypeArguments="Thickness" Default="0, 0, 0, 1">
+                            <On Platform="UWP" Value="0"/>
+                        </OnPlatform>
+                    </telerikPrimitives:RadBorder.BorderThickness>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout.Padding>
+                            <OnPlatform x:TypeArguments="Thickness" Default="11, 12, 0, 12">
+                                <On Platform="UWP" Value="6, 6, 0, 6"/>
+                                <On Platform="Android" Value="11, 6, 0, 6"/>
+                            </OnPlatform>
+                        </StackLayout.Padding>
+                        <telerikPrimitives:RadCheckBox Margin="0, 0, 6, 0"
+                                                           CheckedColor="#0E88F2"
+                                                           IndeterminateColor="#0E88F2"
+                                                           InputTransparent="True"
+                                                           IsChecked="False"
+                                                           VerticalOptions="Center">
+                            <telerikPrimitives:RadCheckBox.Margin>
+                                <OnPlatform x:TypeArguments="Thickness">
+                                    <On Platform="iOS" Value="3, 0, 0, 0"/>
+                                    <On Platform="Android" Value="8, 0, 0, 0"/>
+                                    <On Platform="UWP" Value="10, 0, 0, 0"/>
+                                </OnPlatform>
+                            </telerikPrimitives:RadCheckBox.Margin>
+                        </telerikPrimitives:RadCheckBox>
+                        <Label Text="{Binding Name}"
+                                   VerticalTextAlignment="Center"
+                                   TextColor="#8A000000"
+                                   FontSize="14">
+                            <Label.Padding>
+                                <OnPlatform x:TypeArguments="Thickness">
+                                    <On Platform="iOS" Value="3, 0, 0, 0"/>
+                                    <On Platform="Android" Value="8, 13, 0, 13"/>
+                                    <On Platform="UWP" Value="10, 6, 0, 6"/>
+                                </OnPlatform>
+                            </Label.Padding>
+                        </Label>
+                    </StackLayout>
+                </telerikPrimitives:RadBorder>
+            </DataTemplate>
+            <!-- << combobox-howto-selection-checkbox-itemtemplate -->
+
+            <!-- >> combobox-howto-selection-checkbox-selecteditemtemplate -->
+            <DataTemplate x:Key="ComboBoxSelectedItemTemplate">
+                <telerikPrimitives:RadBorder>
+                    <telerikPrimitives:RadBorder.MinimumHeightRequest>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="iOS" Value="44"/>
+                            <On Platform="Android" Value="48"/>
+                            <On Platform="UWP" Value="32"/>
+                        </OnPlatform>
+                    </telerikPrimitives:RadBorder.MinimumHeightRequest>
+                    <telerikPrimitives:RadBorder.BorderColor>
+                        <OnPlatform x:TypeArguments="Color" Default="#ECECEC">
+                            <On Platform="UWP" Value="Transparent"/>
+                        </OnPlatform>
+                    </telerikPrimitives:RadBorder.BorderColor>
+                    <telerikPrimitives:RadBorder.BackgroundColor>
+                        <OnPlatform x:TypeArguments="Color" Default="#F8F8F8">
+                            <On Platform="UWP" Value="Accent"/>
+                        </OnPlatform>
+                    </telerikPrimitives:RadBorder.BackgroundColor>
+                    <telerikPrimitives:RadBorder.BorderThickness>
+                        <OnPlatform x:TypeArguments="Thickness" Default="0, 0, 0, 1">
+                            <On Platform="UWP" Value="0"/>
+                        </OnPlatform>
+                    </telerikPrimitives:RadBorder.BorderThickness>
+                    <StackLayout Orientation="Horizontal"
+                                     BackgroundColor="#F8F8F8">
+                        <StackLayout.Padding>
+                            <OnPlatform x:TypeArguments="Thickness" Default="11, 12, 0, 12">
+                                <On Platform="UWP" Value="6, 6, 0, 6"/>
+                                <On Platform="Android" Value="11, 6, 0, 6"/>
+                            </OnPlatform>
+                        </StackLayout.Padding>
+                        <telerikPrimitives:RadCheckBox Margin="0, 0, 6, 0"
+                                                           CheckedColor="#0E88F2"
+                                                           IndeterminateColor="#0E88F2"
+                                                           InputTransparent="True"
+                                                           IsChecked="True"
+                                                           VerticalOptions="Center">
+                            <telerikPrimitives:RadCheckBox.Margin>
+                                <OnPlatform x:TypeArguments="Thickness">
+                                    <On Platform="iOS" Value="3, 0, 0, 0"/>
+                                    <On Platform="Android" Value="8, 0, 0, 0"/>
+                                    <On Platform="UWP" Value="10, 0, 0, 0"/>
+                                </OnPlatform>
+                            </telerikPrimitives:RadCheckBox.Margin>
+                        </telerikPrimitives:RadCheckBox>
+                        <Label Text="{Binding Name}"
+                                   VerticalTextAlignment="Center"
+                                   TextColor="#8A000000"
+                                   FontSize="14">
+                            <Label.Padding>
+                                <OnPlatform x:TypeArguments="Thickness">
+                                    <On Platform="iOS" Value="3, 0, 0, 0"/>
+                                    <On Platform="Android" Value="8, 13, 0, 13"/>
+                                    <On Platform="UWP" Value="10, 6, 0, 6"/>
+                                </OnPlatform>
+                            </Label.Padding>
+                        </Label>
+                    </StackLayout>
+                </telerikPrimitives:RadBorder>
+            </DataTemplate>
+            <!-- << combobox-howto-selection-checkbox-selecteditemtemplate -->
+        </ResourceDictionary>
+    </ContentView.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label Text="This example demonstrates how to display CheckBox control for each item in the dropdown area of the ComboBox control and visualize header with select all functionality."
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               Margin="0, 0, 0, 5"/>
+        <!-- >> combobox-howto-selection-checkbox -->
+        <telerikInput:RadComboBox Grid.Row="1"
+                                  BackgroundColor="White"
+                                  ItemsSource="{Binding Items}"
+                                  SelectedItems="{Binding SelectedItems}"
+                                  IsDropDownClosedOnSelection="False"
+                                  SelectionMode="Multiple"
+                                  DisplayMemberPath="Name"
+                                  ItemTemplate="{StaticResource ComboBoxItemTemplate}"
+                                  SelectedItemTemplate="{StaticResource ComboBoxSelectedItemTemplate}"
+                                  HeaderTemplate="{StaticResource ComboBoxHeaderTemplate}"
+                                  Margin="10, 0, 10, 0">
+            <telerikInput:RadComboBox.BindingContext>
+                <local:ViewModel/>
+            </telerikInput:RadComboBox.BindingContext>
+            <telerikInput:RadComboBox.DropDownHeight>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <On Platform="iOS">238</On>
+                    <On Platform="UWP">244</On>
+                    <On Platform="Android">248</On>
+                </OnPlatform>
+            </telerikInput:RadComboBox.DropDownHeight>
+        </telerikInput:RadComboBox>
+        <!-- << combobox-howto-selection-checkbox -->
+    </Grid>
+</ContentView>

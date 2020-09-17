@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikRichTextEditor="clr-namespace:Telerik.XamarinForms.RichTextEditor;assembly=Telerik.XamarinForms.RichTextEditor"
+             x:Class="SDKBrowser.Examples.RichTextEditorControl.FeaturesCategory.KeyFeaturesExample.KeyFeatures">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />         
+        </Grid.RowDefinitions>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Source from a stream" FontSize="Medium" VerticalOptions="Center" />
+            <Button Text="Get HTML" Clicked="GetHTML_Clicked" />
+        </StackLayout>
+        <telerikRichTextEditor:RadRichTextEditor x:Name="richTextEditor" 
+                                                 Grid.Row="1"
+                                                 BorderThickness="1"
+                                                 BorderColor="#606060"/>
+     
+    </Grid>
+</ContentView>

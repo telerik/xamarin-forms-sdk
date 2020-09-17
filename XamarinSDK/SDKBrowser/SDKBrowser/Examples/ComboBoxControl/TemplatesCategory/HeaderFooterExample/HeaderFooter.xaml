@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input" xmlns:primitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             mc:Ignorable="d"
+             BackgroundColor="White"
+             x:Class="SDKBrowser.Examples.ComboBoxControl.TemplatesCategory.HeaderFooterExample.HeaderFooter">
+    <StackLayout>
+        <!-- >> combobox-header-footer-template -->
+        <telerikInput:RadComboBox ItemsSource="{Binding Items}" 
+                                  DisplayMemberPath="Name"
+                                  IsEditable="True"
+                                  SearchMode="Contains"
+                                  SearchTextPath="Name"
+                                  Placeholder="Select which city you want to visit"
+                                  SelectionMode="Multiple"
+                                  DropDownHeight="300"
+                                  x:Name="comboBox">
+            <telerikInput:RadComboBox.HeaderTemplate>
+                <DataTemplate>
+                    <StackLayout BackgroundColor="LightBlue">
+                        <Label Text="To Visit List!" 
+                               FontSize="20"
+                               TextColor="Black"
+                               BackgroundColor="LightBlue"
+                               VerticalOptions="Center" 
+                               HorizontalOptions="Center"/>
+                    </StackLayout>
+                </DataTemplate>
+            </telerikInput:RadComboBox.HeaderTemplate>
+            <telerikInput:RadComboBox.FooterTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Button Text="Add Items" Clicked="Button_Clicked" BackgroundColor="LightBlue"/>
+                    </StackLayout>
+                </DataTemplate>
+            </telerikInput:RadComboBox.FooterTemplate>
+        </telerikInput:RadComboBox>
+        <!-- << combobox-header-footer-template -->
+    </StackLayout>
+</ContentView>

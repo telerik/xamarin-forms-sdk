@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input" 
+             mc:Ignorable="d"
+             x:Class="SDKBrowser.Examples.ComboBoxControl.TemplatesCategory.ItemSelectedItemTemplatesExample.ItemSelectedItemTemplates">
+
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="labelStyle">
+                <Setter Property="Margin" Value="10,5,0,5"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <StackLayout>
+        <!-- >> combobox-item-selecteditem-templates -->
+        <telerikInput:RadComboBox ItemsSource="{Binding Stores}" 
+                                  DisplayMemberPath="City"
+                                  Placeholder="Select Store">
+            <telerikInput:RadComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout BackgroundColor="LightYellow" VerticalOptions="Center">
+                        <Label Text="{Binding City}" 
+                               Style="{StaticResource labelStyle}"/>
+                    </StackLayout>
+                </DataTemplate>
+            </telerikInput:RadComboBox.ItemTemplate>
+            <telerikInput:RadComboBox.SelectedItemTemplate>
+                <DataTemplate>
+                    <StackLayout BackgroundColor="LightBlue">
+                        <Label Text="{Binding Street}" Style="{StaticResource labelStyle}"/>
+                        <Label Text="{Binding Code}" FontSize="12" Margin="10,0,0,5"/>
+                    </StackLayout>
+                </DataTemplate>
+            </telerikInput:RadComboBox.SelectedItemTemplate>
+        </telerikInput:RadComboBox>
+        <!-- << combobox-item-selecteditem-templates -->
+    </StackLayout>
+</ContentView>

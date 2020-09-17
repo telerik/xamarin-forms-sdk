@@ -9,7 +9,7 @@
                                           ImagePath="ImageSource"
                                           ItemsSource="{Binding Source}"
                                           TextSearchPath="Name"
-                                          Watermark="Show Suggestions when Entry is OnFocus"/>
+                                          Watermark="Show Suggestions on focus"/>
         <!-- << autocompleteview-features-data-binding -->
     </StackLayout>
 </ContentView>

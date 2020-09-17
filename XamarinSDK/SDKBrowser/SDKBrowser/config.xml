@@ -458,6 +458,11 @@
               <Title>Timeline Styling</Title>
             </Example>
             <Example>
+              <Page>SchedulingCommands</Page>
+              <Name>SchedulingCommands</Name>
+              <Title>Scheduling Commands</Title>
+            </Example>
+            <Example>
               <Page>CustomSchedulingUi</Page>
               <Name>CustomSchedulingUi</Name>
               <Title>Custom Scheduling UI</Title>
@@ -1106,6 +1111,118 @@
               <Page>CheckBoxCommands</Page>
               <Name>CheckBoxCommands</Name>
               <Title>CheckBox Command</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>ComboBox</Name>
+      <Title>ComboBox</Title>
+      <Icon>ComboBox.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>ComboBoxGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>ComboBoxGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>KeyFeatures</Page>
+              <Name>KeyFeatures</Name>
+              <Title>Key Features</Title>
+            </Example>
+            <Example>
+              <Page>Editing</Page>
+              <Name>Editing</Name>
+              <Title>Editing</Title>
+            </Example>
+            <Example>
+              <Page>SearchingMode</Page>
+              <Name>SearchingMode</Name>
+              <Title>Search Mode</Title>
+            </Example>
+            <Example>
+              <Page>Selection</Page>
+              <Name>Selection</Name>
+              <Title>Single and Multiple Selection</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Templates</Name>
+          <Title>Templates</Title>
+          <Examples>
+            <Example>
+              <Page>ItemSelectedItemTemplates</Page>
+              <Name>ItemSelectedItemTemplates</Name>
+              <Title>Item and SelectedItem Templates</Title>
+            </Example>
+            <Example>
+              <Page>TokenTemplate</Page>
+              <Name>TokenTemplate</Name>
+              <Title>Token and ShowMore Templates</Title>
+            </Example>
+            <Example>
+              <Page>HeaderFooter</Page>
+              <Name>HeaderFooter</Name>
+              <Title>DropDown Header and Footer</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Styling</Name>
+          <Title>Styling</Title>
+          <Examples>
+            <Example>
+              <Page>ComboBoxStyling</Page>
+              <Name>ComboBoxStyling</Name>
+              <Title>ComboBox Styling</Title>
+            </Example>
+            <Example>
+              <Page>DropDownStyling</Page>
+              <Name>DropDownStyling</Name>
+              <Title>DropDown Styling</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>HowTo</Name>
+          <Title>How To</Title>
+          <Examples>
+            <Example>
+              <Page>SelectionWithCheckBox</Page>
+              <Name>SelectionWithCheckBox</Name>
+              <Title>Selection with CheckBox</Title>
+            </Example>
+            <Example>
+              <Page>NoNullValue</Page>
+              <Name>NoNullValue</Name>
+              <Title>No Null Value</Title>
+            </Example>
+            <Example>
+              <Page>DropDownClearButton</Page>
+              <Name>DropDownClearButton</Name>
+              <Title>DropDown Clear Button</Title>
+            </Example>
+            <Example>
+              <Page>ClearTextOnDropDownClosed</Page>
+              <Name>ClearTextOnDropDownClosed</Name>
+              <Title>Clear Text On DropDown Closed</Title>
             </Example>
           </Examples>
         </Category>
@@ -2651,6 +2768,16 @@
               <Title>Text Selection</Title>
             </Example>
             <Example>
+              <Page>TextSearch</Page>
+              <Name>TextSearch</Name>
+              <Title>Text Search</Title>
+            </Example>
+            <Example>
+              <Page>CustomTextSearch</Page>
+              <Name>CustomTextSearch</Name>
+              <Title>Custom Text Search</Title>
+            </Example>
+            <Example>
               <Page>SourceException</Page>
               <Name>SourceException</Name>
               <Title>Source Exception Template</Title>
@@ -2708,6 +2835,50 @@
               <Page>Configurator</Page>
               <Name>Configurator</Name>
               <Title>Configurator</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>RichTextEditor</Name>
+      <Title>RichTextEditor</Title>
+      <Icon>RichTextEditor.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>RichTextEditorGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>          
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>KeyFeatures</Page>
+              <Name>KeyFeatures</Name>
+              <Title>Key Features</Title>
+            </Example>
+            <Example>
+              <Page>RichTextEditorToolbar</Page>
+              <Name>RichTextEditorToolbar</Name>
+              <Title>RichTextEditor Toolbar</Title>
+            </Example>
+            <Example>
+              <Page>Commands</Page>
+              <Name>Commands</Name>
+              <Title>Commands</Title>
+            </Example>
+            <Example>
+              <Page>Styling</Page>
+              <Name>Styling</Name>
+              <Title>Styling</Title>
             </Example>
           </Examples>
         </Category>

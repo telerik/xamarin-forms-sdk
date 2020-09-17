@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+                    xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives" 
+                    xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+                    mc:Ignorable="d"
+                    x:Class="SDKBrowser.Examples.CalendarControl.SchedulingCategory.SchedulingUIViews.CustomRecurrenceView">
+
+    <Style x:Key="DefaultSeparatorStyle" TargetType="telerikPrimitives:RadBorder">
+        <Setter Property="HeightRequest" Value="{OnPlatform iOS=44, Android=48, UWP=68, Default=48}" />
+        <Setter Property="BorderColor" Value="{TemplateBinding SeparatorColor}" />
+        <Setter Property="BorderThickness" Value="{TemplateBinding SeparatorThickness}" />
+    </Style>
+
+    <Style x:Key="DetailsLabelStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="{TemplateBinding DetailsTextColor}" />
+        <Setter Property="FontSize" Value="{TemplateBinding DetailsFontSize}" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+    </Style>
+
+    <Style x:Key="DefaultButtonStyle" TargetType="Button">
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="BackgroundColor" Value="{TemplateBinding ButtonBackgroundColor}" />
+        <Setter Property="TextColor" Value="{TemplateBinding ButtonTextColor}" />
+        <Setter Property="HeightRequest" Value="44" />
+        <Setter Property="FontAttributes" Value="Bold" />
+    </Style>
+
+    <ControlTemplate x:Key="CustomRecurrenceViewControlTemplate">
+        <Grid BackgroundColor="{TemplateBinding BackgroundColor}">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="44" />
+            </Grid.RowDefinitions>
+
+            <ScrollView>
+                <Grid RowSpacing="0" Margin="0, 16, 0, 0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="{OnPlatform iOS=44, Default=48}" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <Label Text="{telerikCommon:Localize Calendar_CustomRecurrenceTitle}" 
+                           TextColor="{TemplateBinding TitleTextColor}"
+                           FontSize="{TemplateBinding TitleFontSize}"
+                           Margin="{OnPlatform iOS='16, 21', Default='16, 17, 16, 9'}">
+                    </Label>
+
+                    <Grid Grid.Row="1" 
+                          Margin="16, 0" 
+                          RowSpacing="0">
+
+                        <!--Frequency picker-->
+                        <telerikPrimitives:RadBorder Style="{StaticResource DefaultSeparatorStyle}">
+                            <Grid>
+                                <Label Text="{telerikCommon:Localize Calendar_CustomRecurrenceFrequency}" 
+                                       TextColor="{TemplateBinding TextColor}"
+                                       VerticalTextAlignment="Center" />
+
+                                <Picker ItemsSource="{Binding FrequencyPickerItemsSource}"
+                                        SelectedIndex="{Binding FrequencyPickerSelectedIndex, Mode=TwoWay}"
+                                        Title="{Binding FrequencyPickerTitle}" 
+                                        TextColor="{TemplateBinding TextColor}"
+                                        HorizontalOptions="End" 
+                                        BackgroundColor="Transparent"
+                                        WidthRequest="{OnPlatform iOS=70, Android=80, UWP=120}">
+                                    <Picker.Effects>
+                                        <telerikCommon:PickerRemoveBorderEffect />
+                                    </Picker.Effects>
+                                </Picker>
+                            </Grid>
+                        </telerikPrimitives:RadBorder>
+
+                        <!--Interval picker-->
+                        <telerikPrimitives:RadBorder Style="{StaticResource DefaultSeparatorStyle}" 
+                                                     Grid.Row="1">
+                            <Grid>
+                                <Label Text="{telerikCommon:Localize Calendar_CustomRecurrenceEvery}" 
+                                       TextColor="{TemplateBinding TextColor}"
+                                       VerticalTextAlignment="Center" />
+
+                                <Picker ItemsSource="{Binding IntervalPickerItemsSource}"
+                                        SelectedIndex="{Binding IntervalPickerSelectedIndex, Mode=TwoWay}"
+                                        Title="{Binding IntervalPickerTitle}"
+                                        TextColor="{TemplateBinding TextColor}"
+                                        WidthRequest="{OnPlatform iOS=70, Android=80, UWP=120}"
+                                        HorizontalOptions="End">
+                                    <Picker.Effects>
+                                        <telerikCommon:PickerRemoveBorderEffect />
+                                    </Picker.Effects>
+                                </Picker>
+                            </Grid>
+                        </telerikPrimitives:RadBorder>
+                    </Grid>
+
+                    <Label Grid.Row="2" 
+                           Margin="16, 0" 
+                           Style="{StaticResource DetailsLabelStyle}" 
+                           Text="{Binding InfoText}" />
+
+                    <Grid Grid.Row="3" 
+                          Margin="16, 0">
+
+                        <!--Weekly Days Picker-->
+                        <telerikInput:CalendarWeeklyViewPicker IsVisible="{Binding IsWeeklyViewVisible}"
+                                                               SeparatorColor="{TemplateBinding SeparatorColor}"
+                                                               DetailsTextUpdatedCommand="{Binding WeeklyInfoTextUpdatedCommand}"/>
+                        <!--Monthly Days Picker-->
+                        <telerikInput:CalendarMonthlyViewPicker IsVisible="{Binding IsMonthlyViewVisible}"
+                                                                SeparatorColor="{TemplateBinding SeparatorColor}"
+                                                                DetailsTextUpdatedCommand="{Binding MonhtlyInfoTextUpdatedCommand}"/>
+                        <!--Yearly Months Picker-->
+                        <telerikInput:CalendarYearlyViewPicker IsVisible="{Binding IsYearlyViewVisible}"
+                                                               SeparatorColor="{TemplateBinding SeparatorColor}"
+                                                               DetailsTextUpdatedCommand="{Binding YearlyInfoTextUpdatedCommand}"/>
+                    </Grid>
+                </Grid>
+            </ScrollView>
+
+            <telerikPrimitives:RadBorder Grid.Row="1"
+                                         BorderColor="#C8C7CC"
+                                         BorderThickness="0, 1, 0, 0" >
+                <Grid ColumnSpacing="0">
+                    <Button Text="{telerikCommon:Localize Calendar_AppointmentCancelButton}" 
+                            Command="{Binding CancelCommand}"
+                            Style="{StaticResource DefaultButtonStyle}" />
+
+                    <Button Grid.Column="1" 
+                            Command="{Binding OKCommand}"
+                            Text="{telerikCommon:Localize Calendar_AppointmentOKButton}" 
+                            Style="{StaticResource DefaultButtonStyle}" />
+                </Grid>
+            </telerikPrimitives:RadBorder>
+        </Grid>
+    </ControlTemplate>
+</ResourceDictionary>

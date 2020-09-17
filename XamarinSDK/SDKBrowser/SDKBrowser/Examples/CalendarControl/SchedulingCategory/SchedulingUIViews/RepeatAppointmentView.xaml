@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+                    xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+                    xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+                    mc:Ignorable="d"
+                    x:Class="SDKBrowser.Examples.CalendarControl.SchedulingCategory.SchedulingUIViews.RepeatAppointmentView">
+    
+    <Style x:Key="RepeatListItemStyle" TargetType="telerikPrimitives:RadBorder">
+        <Setter Property="BorderColor" Value="{TemplateBinding SeparatorColor}"/>
+        <Setter Property="BorderThickness" Value="{TemplateBinding SeparatorThickness}"/>
+        <Setter Property="BackgroundColor" Value="Transparent"/>
+    </Style>
+
+    <Style x:Key="SelectionSymbolStyle" TargetType="Label">
+        <Setter Property="HorizontalOptions" Value="End" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="Large"/>
+    </Style>
+
+    <Style x:Key="DefaultButtonStyle" TargetType="Button">
+        <Setter Property="Margin" Value="0"/>
+        <Setter Property="CornerRadius" Value="0"/>
+        <Setter Property="BackgroundColor" Value="{TemplateBinding ButtonBackgroundColor}" />
+        <Setter Property="TextColor" Value="{TemplateBinding ButtonTextColor}" />
+        <Setter Property="HeightRequest" Value="44" />
+        <Setter Property="FontAttributes" Value="Bold" />
+    </Style>
+
+    <DataTemplate x:Key="RepeatListItemTemplate">
+        <Grid HeightRequest="{OnPlatform iOS=44, Default=48}">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding Source={RelativeSource Mode=TemplatedParent}, Path=BindingContext.RepeatListItemTapCommand}"
+                                      CommandParameter="{Binding .}"/>
+            </Grid.GestureRecognizers>
+            <Label Text="{Binding Text}" 
+                   TextColor="{TemplateBinding TextColor}"
+                   FontSize="{TemplateBinding FontSize}"
+                   HorizontalTextAlignment="Start" 
+                   VerticalTextAlignment="Center" />
+
+            <Label telerikCommon:TelerikFont.UseEmbeddedFont="True" 
+                   Text="{Binding Symbol}" 
+                   TextColor="{Binding SymbolTextColor}"
+                   Style="{StaticResource SelectionSymbolStyle}" 
+                   IsVisible="{Binding IsSelected, Mode=TwoWay}" />
+        </Grid>
+    </DataTemplate>
+
+    <ControlTemplate x:Key="RepeatAppointmentViewControlTemplate">
+        <Grid RowSpacing="0" 
+              BackgroundColor="{TemplateBinding BackgroundColor}"
+              Margin="0, 16, 0, 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+                <RowDefinition Height="44" />
+            </Grid.RowDefinitions>
+            <Label Text="{telerikCommon:Localize Calendar_RepeatTitle}" 
+                   TextColor="{TemplateBinding TitleTextColor}"
+                   FontSize="{TemplateBinding TitleFontSize}"
+                   Margin="{OnPlatform iOS='16, 21', Default='16, 17, 16, 9'}"/>
+
+            <telerikDataControls:NonVirtualizedItemsControl Grid.Row="1" 
+                                                            Margin="16, 0" 
+                                                            ItemsSource="{Binding Source}"
+                                                            SelectionMode="None"
+                                                            SelectedItemStyle="{StaticResource RepeatListItemStyle}"
+                                                            ItemStyle="{StaticResource RepeatListItemStyle}"
+                                                            ItemTemplate="{StaticResource RepeatListItemTemplate}">
+            </telerikDataControls:NonVirtualizedItemsControl>
+
+            <telerikPrimitives:RadBorder Grid.Row="2" 
+                                         BorderColor="#C8C7CC" 
+                                         BorderThickness="0, 1, 0, 0">
+                <Grid ColumnSpacing="0">
+
+                    <Button Text="{telerikCommon:Localize Calendar_AppointmentCancelButton}"
+                            Grid.Column="0"
+                            Command="{Binding CancelCommand}"
+                            Style="{StaticResource DefaultButtonStyle}" />
+
+                    <Button Text="{telerikCommon:Localize Calendar_AppointmentOKButton}" 
+                            Grid.Column="1"
+                            Command="{Binding OKCommand}"
+                            Style="{StaticResource DefaultButtonStyle}" />
+                </Grid>
+            </telerikPrimitives:RadBorder>
+        </Grid>
+    </ControlTemplate>
+</ResourceDictionary>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+                    xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+                    mc:Ignorable="d"
+                    x:Class="SDKBrowser.Examples.CalendarControl.SchedulingCategory.SchedulingUIViews.DeleteAppointmentView">
+
+    <Style TargetType="Button" x:Key="DeleteOptionButtonStyle">
+        <Setter Property="FontSize" Value="Medium"/>
+        <Setter Property="HeightRequest" Value="57"/>
+        <Setter Property="BorderRadius" Value="15"/>
+    </Style>
+
+    <ControlTemplate x:Key="DeleteAppointmentViewControlTemplate_AndroidUWP">
+        <telerikPrimitives:RadBorder BorderThickness="1"
+                                     BorderColor="DarkGray"
+                                     BackgroundColor="White"
+                                     HorizontalOptions="Center"
+                                     VerticalOptions="Center">
+            <Grid Padding="24, 18, 41, 24" 
+                  BackgroundColor="{TemplateBinding BackgroundColor}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.ColumnSpan="2"
+                       Text="{telerikCommon:Localize Calendar_Android_DeleteSingleEvent}"
+                       FontSize="Medium"
+                       FontAttributes="Bold"
+                       Margin="0, 0, 0, 48"
+                       HorizontalTextAlignment="Start"
+                       VerticalTextAlignment="Center"/>
+
+                <StackLayout Grid.Column="1"
+                             Orientation="Horizontal"
+                             HorizontalOptions="End"
+                             VerticalOptions="End"
+                             Spacing="45">
+
+                    <Label Text="{telerikCommon:Localize Calendar_AppointmentCancelButton}"
+                           TextColor="Accent">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CancelCommand}"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                    <Label Text="{telerikCommon:Localize Calendar_AppointmentOKButton}"
+                           TextColor="Accent">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding DeleteAppointmentCommand}"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+
+            </Grid>
+        </telerikPrimitives:RadBorder>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="DeleteAppointmentViewControlTemplate_iOS">
+        <StackLayout VerticalOptions="End"
+                     HorizontalOptions="Center"
+                     WidthRequest="500"
+                     Padding="10"
+                     Spacing="8">
+            <Button Style="{StaticResource DeleteOptionButtonStyle}"
+                    Command="{Binding DeleteAppointmentCommand}"
+                    TextColor="#FF3B30"
+                    BackgroundColor="#F7F7F7"
+                    Text="{telerikCommon:Localize Calendar_iOS_DeleteSingleEvent}"/>
+
+            <Button Style="{StaticResource DeleteOptionButtonStyle}"
+                    Command="{Binding CancelCommand}"
+                    TextColor="#007AFF"
+                    BackgroundColor="#FFFFFF"
+                    Text="{telerikCommon:Localize Calendar_AppointmentCancelButton}"/>
+        </StackLayout>
+    </ControlTemplate>
+</ResourceDictionary>

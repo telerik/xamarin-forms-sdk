@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+                    xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+                    xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+                    mc:Ignorable="d"
+                    x:Class="SDKBrowser.Examples.CalendarControl.SchedulingCategory.SchedulingUIViews.SaveRecurringAppointmentView">
+
+    <telerikCommon:InvertedBooleanConverter x:Key="InvertedBooleanConverter" />
+
+    <Style x:Key="EventOptionsItemStyle" TargetType="telerikPrimitives:RadBorder">
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0" />
+    </Style>
+
+    <Style x:Key="SelectedSymbolLabelStyle" TargetType="Label">
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="TextColor" Value="Accent" />
+        <Setter Property="FontSize" Value="Large" />
+    </Style>
+
+    <Style x:Key="DefaultButtonStyle" TargetType="Button">
+        <Setter Property="FontSize" Value="Medium"/>
+        <Setter Property="BackgroundColor" Value="#F7F7F7" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="HeightRequest" Value="57" />
+    </Style>
+
+    <DataTemplate x:Key="EventOptionsItemTemplate">
+        <Grid HeightRequest="40">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Command="{TemplateBinding BindingContext.SaveOptionTappedCommand}"
+                                      CommandParameter="{Binding .}" />
+            </Grid.GestureRecognizers>
+
+            <Label Text="{Binding Text}"
+                   VerticalOptions="Center"
+                   VerticalTextAlignment="Center" />
+
+            <Label Grid.Column="1"
+                   Text="{Binding Symbol}"
+                   Margin="46, 0, 0, 0"
+                   telerikCommon:TelerikFont.UseEmbeddedFont="True"
+                   Style="{StaticResource SelectedSymbolLabelStyle}"
+                   IsVisible="{Binding IsSelected}" />
+        </Grid>
+    </DataTemplate>
+
+    <ControlTemplate x:Key="SaveRecurringAppointmentControlTemplate_AndroidUWP">
+        <telerikPrimitives:RadBorder BorderThickness="1"
+                                     BorderColor="DarkGray"
+                                     BackgroundColor="White"
+                                     HorizontalOptions="Center"
+                                     VerticalOptions="Center"
+                                     Margin="40, 0, 40, 0">
+
+            <Grid Padding="24, 18, 32, 27"
+                  BackgroundColor="{TemplateBinding BackgroundColor}"
+                  HorizontalOptions="Fill">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Label Text="{telerikCommon:Localize Calendar_Android_SaveRecurringEventTitle}"
+                       FontAttributes="Bold"
+                       FontSize="Medium"
+                       Margin="0, 0, 0, 24" />
+                <StackLayout Grid.Row="1"
+                             VerticalOptions="StartAndExpand"
+                             HorizontalOptions="Fill">
+
+                    <telerikDataControls:NonVirtualizedItemsControl ItemsSource="{Binding EventOptions}"
+                                                                    SelectionMode="Single"
+                                                                    IsVisible="{Binding AreOptionsVisible}"
+                                                                    SelectedItemStyle="{StaticResource EventOptionsItemStyle}" 
+                                                                    ItemStyle="{StaticResource EventOptionsItemStyle}" 
+                                                                    ItemTemplate="{StaticResource EventOptionsItemTemplate}"
+                                                                    Margin="0, 0, 0, 24" />
+
+                    <Label Text="{telerikCommon:Localize Calendar_Android_SaveSeriesNotification}"
+                           IsVisible="{Binding AreOptionsVisible, Converter={StaticResource InvertedBooleanConverter}}"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center" 
+                           VerticalTextAlignment="Center"
+                           Margin="0, 0, 0, 46" />
+
+                    <StackLayout Orientation="Horizontal"
+                                 Spacing="23"
+                                 HorizontalOptions="End"
+                                 VerticalOptions="End">
+                        <Label Text="{telerikCommon:Localize Calendar_AppointmentCancelButton}"
+                               TextColor="Accent">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding CancelCommand}" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Label Text="{telerikCommon:Localize Calendar_AppointmentOKButton}"
+                               TextColor="Accent" >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding SaveAppointmentCommand}" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+        </telerikPrimitives:RadBorder>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="SaveRecurringAppointmentControlTemplate_iOS">
+        <StackLayout VerticalOptions="End"
+                 HorizontalOptions="Center"
+                 WidthRequest="500"
+                 Padding="10"
+                 Spacing="8">
+
+            <StackLayout Spacing="0">
+                <telerikPrimitives:RadBorder BorderThickness="0"
+                                             CornerRadius="15">
+
+                    <StackLayout Spacing="0.2">
+                        <Button Style="{StaticResource DefaultButtonStyle}"
+                                TextColor="#FF3B30"
+                                IsVisible="{Binding AreOptionsVisible}"
+                                Command="{Binding SaveSingleRecurringEventCommand}"
+                                Text="{telerikCommon:Localize Calendar_iOS_SaveSingleRecurringEvent}" />
+
+                        <Button Style="{StaticResource DefaultButtonStyle}"
+                                TextColor="#FF3B30"
+                                Command="{Binding SaveSeriesCommand}"
+                                Text="{telerikCommon:Localize Calendar_iOS_SaveSeries}" />
+                    </StackLayout>
+
+                </telerikPrimitives:RadBorder>
+            </StackLayout>
+
+            <Button Style="{StaticResource DefaultButtonStyle}"
+                    Command="{Binding CancelCommand}"
+                    BorderRadius="15"
+                    TextColor="#007AFF" 
+                    Text="{telerikCommon:Localize Calendar_AppointmentCancelButton}" />
+
+        </StackLayout>
+    </ControlTemplate>
+</ResourceDictionary>

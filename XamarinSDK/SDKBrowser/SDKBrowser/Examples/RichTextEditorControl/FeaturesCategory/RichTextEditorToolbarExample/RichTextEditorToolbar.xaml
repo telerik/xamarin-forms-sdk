@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikRichTextEditor="clr-namespace:Telerik.XamarinForms.RichTextEditor;assembly=Telerik.XamarinForms.RichTextEditor"
+             x:Class="SDKBrowser.Examples.RichTextEditorControl.FeaturesCategory.RichTextEditorToolbarExample.RichTextEditorToolbar">
+    <!-- >> richtexteditor-toolbar-xaml -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <telerikRichTextEditor:RadRichTextEditor x:Name="richTextEditor" />
+        <telerikRichTextEditor:RadRichTextEditorToolbar x:Name="richTextToolbar"
+                                                        Grid.Row="1"
+                                                        RichTextEditor="{x:Reference richTextEditor}"
+                                                        AutoGenerateItems="False">
+            <telerikRichTextEditor:FontFamilyToolbarItem />
+            <telerikRichTextEditor:FontSizeToolbarItem />
+            <telerikRichTextEditor:BoldToolbarItem />
+            <telerikRichTextEditor:AlignLeftToolbarItem />
+            <telerikRichTextEditor:TextColorToolbarItem />
+            <telerikRichTextEditor:BulletingToolbarItem />
+            <telerikRichTextEditor:NumberingToolbarItem />
+            <telerikRichTextEditor:IndentToolbarItem />
+            <telerikRichTextEditor:OutdentToolbarItem />
+            <telerikRichTextEditor:TextFormattingToolbarItem />
+            <telerikRichTextEditor:ClearFormattingToolbarItem />
+            <telerikRichTextEditor:RichTextEditorToolbarItem IsOverflowItem="true" Description="More Text Formatting">
+                <telerikRichTextEditor:RichTextEditorToolbarItem.Items>
+                    <telerikRichTextEditor:BoldToolbarItem HorizontalOptions="Start"/>
+                    <telerikRichTextEditor:ItalicToolbarItem HorizontalOptions="Start" />
+                    <telerikRichTextEditor:UnderlineToolbarItem HorizontalOptions="Start" />
+                    <telerikRichTextEditor:SubscriptToolbarItem HorizontalOptions="Start" />
+                    <telerikRichTextEditor:SuperscriptToolbarItem HorizontalOptions="Start" />
+                    <telerikRichTextEditor:StrikethroughToolbarItem HorizontalOptions="Start" />
+                </telerikRichTextEditor:RichTextEditorToolbarItem.Items>
+            </telerikRichTextEditor:RichTextEditorToolbarItem>       
+            <telerikRichTextEditor:AddHyperlinkToolbarItem IsOverflowItem="True"/>
+        </telerikRichTextEditor:RadRichTextEditorToolbar>        
+    </Grid>
+    <!-- << richtexteditor-toolbar-xaml -->
+</ContentView>

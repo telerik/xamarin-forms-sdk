@@ -8,9 +8,11 @@ namespace SDKBrowser.Examples.CheckBoxControl.GettingStartedCategory.GettingStar
         public CheckBoxGettingStartedCSharp()
         {
             // >> checkbox-getting-started-csharp
-            var checkBox = new RadCheckBox();
+            var mainLayout = new StackLayout() { Orientation = StackOrientation.Horizontal };
+            mainLayout.Children.Add(new RadCheckBox());            
+            mainLayout.Children.Add(new Label() { Text = "Agree to the Terms & Conditions"});
             // << checkbox-getting-started-csharp
-            this.Content = checkBox;
+            this.Content = mainLayout;
         }
 
         
