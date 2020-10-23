@@ -129,6 +129,35 @@
                 </Grid>
             </DataTemplate>
 
+            <ControlTemplate x:Key="TimeBreakView_ControlTemplate">
+                <Grid Padding="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <BoxView BackgroundColor="{TemplateBinding Stroke}"
+                     HeightRequest="{TemplateBinding StrokeThickness}"
+                     VerticalOptions="Center" />
+                    <Label Text="{TemplateBinding Text}" 
+                           TextColor="{TemplateBinding TextColor}" 
+                           FontSize="{TemplateBinding FontSize}" 
+                           FontFamily="{TemplateBinding FontFamily}" 
+                           FontAttributes="{TemplateBinding FontAttributes}" 
+                           Grid.Column="1"
+                           VerticalOptions="Center" />
+                    <BoxView BackgroundColor="{TemplateBinding Stroke}"
+                             HeightRequest="{TemplateBinding StrokeThickness}"
+                             Grid.Column="2"
+                             VerticalOptions="Center" />
+                </Grid>
+            </ControlTemplate>
+
+            <DataTemplate x:Key="TimeBreakTemplate">
+                <telerikConversationalUI:TimeBreakView Text="{Binding Text}" 
+                                                       ControlTemplate="{StaticResource TimeBreakView_ControlTemplate}" />
+            </DataTemplate>
+
             <telerikConversationalUI:ChatItemTemplateSelector x:Key="MyChatItemTemplateSelector"
                                                               IncomingFirstTextMessageTemplate="{StaticResource IncomingFirstTemplate}"
                                                               IncomingMiddleTextMessageTemplate="{StaticResource IncomingMiddleTemplate}"
@@ -137,7 +166,8 @@
                                                               OutgoingFirstTextMessageTemplate="{StaticResource OutgoingFirstTemplate}"
                                                               OutgoingMiddleTextMessageTemplate="{StaticResource OutgoingMiddleTemplate}"
                                                               OutgoingSingleTextMessageTemplate="{StaticResource OutgoingSingleTemplate}"
-                                                              OutgoingLastTextMessageTemplate="{StaticResource OutgoingLastTemplate}" />
+                                                              OutgoingLastTextMessageTemplate="{StaticResource OutgoingLastTemplate}"
+                                                              TimeBreakTemplate="{StaticResource TimeBreakTemplate}" />
         </ResourceDictionary>
         <!-- << chat-features-defaultitemtemplate-resources -->
     </ContentView.Resources>

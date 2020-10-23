@@ -14,6 +14,7 @@ namespace SDKBrowser.Examples.ChatControl.FeaturesCategory.DefaultTemplateSelect
             var botAuthor = new Author { Name = "botty" };
 
             this.chat.Items.Add(new TextMessage() { Text = "Hi.", Author = botAuthor});
+            this.chat.Items.Add(new TimeBreak() { Text = "Unread" });
             this.chat.Items.Add(new TextMessage() { Text = "How can I help you?", Author = botAuthor });
         }
     }

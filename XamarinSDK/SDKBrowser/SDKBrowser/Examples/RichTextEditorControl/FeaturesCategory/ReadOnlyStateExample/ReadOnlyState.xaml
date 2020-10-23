@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:telerikRichTextEditor="clr-namespace:Telerik.XamarinForms.RichTextEditor;assembly=Telerik.XamarinForms.RichTextEditor"
+             xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+             x:Class="SDKBrowser.Examples.RichTextEditorControl.FeaturesCategory.ReadOnlyStateExample.ReadOnlyState">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <!-- >> richtexteditor-readonly-converter -->
+            <telerikCommon:InvertedBooleanConverter x:Key="invertedBooleanConverter" />
+            <!-- << richtexteditor-readonly-converter -->
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <!-- >> richtexteditor-readonly-state -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Orientation="Horizontal">
+            <Label Text="IsReadOnly State:" TextColor="Black" FontSize="20"/>
+            <Switch IsToggled="{Binding IsReadOnly, Source={x:Reference richTextEditor}}"/>
+        </StackLayout>
+        <telerikRichTextEditor:RadRichTextEditor x:Name="richTextEditor" 
+                                                 IsReadOnly="True"
+                                                 Grid.Row="1" />
+        <telerikRichTextEditor:RadRichTextEditorToolbar x:Name="richTextToolbar" 
+                                                        IsVisible="{Binding IsReadOnly, Source={x:Reference richTextEditor}, Converter={StaticResource invertedBooleanConverter}}"
+                                                        RichTextEditor="{x:Reference richTextEditor}" 
+                                                        Grid.Row="2" />
+    </Grid>
+    <!-- << richtexteditor-readonly-state -->
+</ContentView>

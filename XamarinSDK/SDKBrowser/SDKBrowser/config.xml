@@ -463,6 +463,11 @@
               <Title>Scheduling Commands</Title>
             </Example>
             <Example>
+              <Page>SchedulingUICustomization</Page>
+              <Name>SchedulingUICustomization</Name>
+              <Title>Custom AddAppointment and Summary Views</Title>
+            </Example>
+            <Example>
               <Page>CustomSchedulingUi</Page>
               <Name>CustomSchedulingUi</Name>
               <Title>Custom Scheduling UI</Title>
@@ -2778,6 +2783,11 @@
               <Title>Custom Text Search</Title>
             </Example>
             <Example>
+              <Page>ViewportSettings</Page>
+              <Name>ViewportSettings</Name>
+              <Title>Viewport Settings</Title>
+            </Example>
+            <Example>
               <Page>SourceException</Page>
               <Name>SourceException</Name>
               <Title>Source Exception Template</Title>
@@ -2874,6 +2884,11 @@
               <Page>Commands</Page>
               <Name>Commands</Name>
               <Title>Commands</Title>
+            </Example>
+            <Example>
+              <Page>ReadOnlyState</Page>
+              <Name>ReadOnlyState</Name>
+              <Title>Read-Only State</Title>
             </Example>
             <Example>
               <Page>Styling</Page>
