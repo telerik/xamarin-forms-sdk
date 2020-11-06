@@ -465,7 +465,7 @@
             <Example>
               <Page>SchedulingUICustomization</Page>
               <Name>SchedulingUICustomization</Name>
-              <Title>Custom AddAppointment and Summary Views</Title>
+              <Title>Custom Scheduling Views</Title>
             </Example>
             <Example>
               <Page>CustomSchedulingUi</Page>

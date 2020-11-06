@@ -17,8 +17,9 @@
                         <Label Text="{TemplateBinding Text}"
                                FontSize="15"
                                TextColor="Orange"
+                               VerticalOptions="Center"
                                HorizontalTextAlignment="Start"/>
-                        <Label Text="Description of the header"
+                        <Label Text="Description"
                                TextColor="LightBlue"
                                IsVisible="{TemplateBinding IsSelected}"
                                VerticalTextAlignment="Center"

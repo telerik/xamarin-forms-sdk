@@ -23,12 +23,12 @@
                 <telerikPrimitives:TabViewItem.Header>
                     <telerikPrimitives:TabViewHeaderItem>
                         <telerikPrimitives:TabViewHeaderItem.Content>
-                            <StackLayout Margin="5,0,0,0" Orientation="Horizontal">
-                                <ContentView BackgroundColor="#CA5100"
-                                             HeightRequest="10"
-                                             VerticalOptions="Center"
-                                             WidthRequest="10" />
-                                <Label Text="Folder" />
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                <telerikPrimitives:RadBorder BackgroundColor="#CA5100"
+                                                             HeightRequest="10"
+                                                             VerticalOptions="Center"
+                                                             WidthRequest="10" />
+                                <Label Text="Folder" VerticalOptions="Center" />
                             </StackLayout>
                         </telerikPrimitives:TabViewHeaderItem.Content>
                     </telerikPrimitives:TabViewHeaderItem>

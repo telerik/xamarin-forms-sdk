@@ -150,18 +150,23 @@
                     
                     <!-- Appointment Owner -->
                     <telerikPrimitives:RadBorder Style="{StaticResource EditorSeparatorStyle}">
-                        <StackLayout Orientation="Horizontal" Margin="0,3,0,3">
-                            <Label Text="Meeting Owner:"
-                                   Style="{StaticResource EditorTitleLabelStyle}" />
-                            <Editor Text="{Binding Appointment.Owner, Mode=TwoWay}"
-                                    WidthRequest="200"
-                                    AutoSize="TextChanges"
-                                    Placeholder="Meeting Owner"
-                                    FontSize="{TemplateBinding EditorFontSize}"
-                                    TextColor="{TemplateBinding EditorTextColor}"/>
-                        </StackLayout>
+                        <Grid Margin="0,3,0,3">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Meeting Owner"
+                                   Style="{StaticResource EditorTitleLabelStyle}"/>
+                            <Entry Text="{Binding Appointment.Owner, Mode=TwoWay}"
+                                   Placeholder="Meeting Owner"
+                                   WidthRequest="200"
+                                   HorizontalOptions="End"
+                                   FontSize="{TemplateBinding EditorFontSize}"
+                                   TextColor="{TemplateBinding EditorTextColor}"
+                                   Grid.Column="1"/>
+                        </Grid>
                     </telerikPrimitives:RadBorder>
-                    
+
                     <!--Appointment Color-->
                     <telerikPrimitives:RadBorder Style="{StaticResource EditorSeparatorStyle}">
                         <Grid Style="{StaticResource EditorGridStyle}">
