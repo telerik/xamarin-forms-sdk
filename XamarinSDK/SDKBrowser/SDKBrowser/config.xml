@@ -1178,6 +1178,11 @@
               <Title>Item and SelectedItem Templates</Title>
             </Example>
             <Example>
+              <Page>DefaultTemplates</Page>
+              <Name>DefaultTemplates</Name>
+              <Title>Default Item and SelectedItem Templates</Title>
+            </Example>
+            <Example>
               <Page>TokenTemplate</Page>
               <Name>TokenTemplate</Name>
               <Title>Token and ShowMore Templates</Title>

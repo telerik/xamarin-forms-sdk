@@ -28,7 +28,7 @@ namespace SDKBrowser.Examples.CalendarControl.StylingCategory.DayViewStylingExam
                         IsAllDay = true
                  },
                  new Appointment {
-                        Title = "Zhhivko Dimitrov's 36th Birthday",
+                        Title = "Zhivko Dimitrov's 36th Birthday",
                         StartDate = date.AddHours(1),
                         EndDate = date.AddHours(2),
                         IsAllDay = true
@@ -69,7 +69,7 @@ namespace SDKBrowser.Examples.CalendarControl.StylingCategory.DayViewStylingExam
                 TimelineLabelsFontSize = 11,
                 TimelineLabelsTextColor = Color.FromHex("#DEDEDE"),
                 AllDayAppointmentBackgroundColor = Color.FromHex("#F8F8F8"),
-                AllDayAppointmentTextColor = Color.Black,
+                AllDayAppointmentTextColor = Color.White,
                 AllDayAppointmentFontSize = 12,
                 AppointmentFontSize = 16,
                 AppointmentDetailsFontSize = 13,

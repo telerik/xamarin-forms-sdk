@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.ComboBoxControl.TemplatesCategory.DefaultTemplatesExample.DefaultTemplates">
+    <ContentView.Resources>
+        <!-- >> combobox-default-templates-resources -->
+        <ResourceDictionary>
+            <DataTemplate x:Key="CustomItemTemplate">
+                <telerikPrimitives:RadBorder BorderColor="Transparent"
+                                             BorderThickness="0">
+                    <telerikPrimitives:RadHighlightLabel UnformattedText="{Binding City}"
+                                                         HighlightText="{Binding Source={x:Reference comboBox}, Path=SearchText, Mode=OneWay}"
+                                                         VerticalTextAlignment="Center"
+                                                         TextColor="Black"
+                                                         HighlightTextColor="#429CE3"
+                                                         MinimumHeightRequest="32"
+                                                         Padding="10, 6, 0, 6"/>
+                </telerikPrimitives:RadBorder>
+            </DataTemplate>
+            <DataTemplate x:Key="CustomSelectedItemTemplate">
+                <telerikPrimitives:RadBorder BorderColor="Transparent"
+                                             BorderThickness="0"
+                                             BackgroundColor="#FFF7DD">
+                    <telerikPrimitives:RadHighlightLabel UnformattedText="{Binding City}"
+                                                         HighlightText="{Binding Source={x:Reference comboBox}, Path=SearchText, Mode=OneWay}"
+                                                         VerticalTextAlignment="Center"
+                                                         TextColor="Black"
+                                                         HighlightTextColor="#429CE3"
+                                                         MinimumHeightRequest="32"
+                                                         Padding="10, 6, 0, 6"/>
+                </telerikPrimitives:RadBorder>
+            </DataTemplate>
+        </ResourceDictionary>
+        <!-- << combobox-default-templates-resources -->
+    </ContentView.Resources>
+    <StackLayout>
+        <!-- >> combobox-default-templates-xaml -->
+        <telerikInput:RadComboBox x:Name="comboBox"
+                                  ItemsSource="{Binding Stores}" 
+                                  DisplayMemberPath="City"
+                                  IsEditable="true"
+                                  SearchTextPath="City"
+                                  Placeholder="Select Store"
+                                  ItemTemplate="{StaticResource CustomItemTemplate}"
+                                  SelectedItemTemplate="{StaticResource CustomSelectedItemTemplate}"/>
+        <!-- << combobox-default-templates-xaml -->
+        </StackLayout>
+</ContentView>
