@@ -27,7 +27,7 @@ namespace SDKBrowser.Droid
 
             if (Android.OS.Environment.IsExternalStorageEmulated)
             {
-                root = Android.OS.Environment.ExternalStorageDirectory.ToString();
+                root = Android.App.Application.Context.GetExternalFilesDir(null).ToString();
             }
             else
             {

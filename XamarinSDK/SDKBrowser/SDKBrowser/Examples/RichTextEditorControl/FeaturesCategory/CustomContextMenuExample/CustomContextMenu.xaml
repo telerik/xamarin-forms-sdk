@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikRichTextEditor="clr-namespace:Telerik.XamarinForms.RichTextEditor;assembly=Telerik.XamarinForms.RichTextEditor"
+             x:Class="SDKBrowser.Examples.RichTextEditorControl.FeaturesCategory.CustomContextMenuExample.CustomContextMenu">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <telerikRichTextEditor:RadRichTextEditorToolbar x:Name="richTextToolbar" RichTextEditor="{x:Reference richTextEditor}" />
+        <!-- >> richtexteditor-contextmenu-xaml -->
+        <telerikRichTextEditor:RadRichTextEditor x:Name="richTextEditor" 
+                                                 AutoGenerateContextMenu="False"
+                                                 Grid.Row="1">
+            <telerikRichTextEditor:RadRichTextEditor.ContextMenuItems>
+                <telerikRichTextEditor:BoldContextMenuItem />
+                <telerikRichTextEditor:ItalicContextMenuItem />
+                <telerikRichTextEditor:OpenHyperlinkContextMenuItem Title="Navigate" />
+                <telerikRichTextEditor:CustomContextMenuItem Title="Underline" 
+                                                             Command="{Binding Source={x:Reference richTextEditor}, Path=ToggleUnderlineCommand}"/>
+                <telerikRichTextEditor:CustomContextMenuItem Title="Info" 
+                                                             Command="{Binding Source={x:Reference richTextEditor}, Path=BindingContext.CustomInfoCommand}"
+                                                             CommandParameter="{Binding Source={x:Reference richTextEditor}, Path=SelectionRange}"/>
+
+            </telerikRichTextEditor:RadRichTextEditor.ContextMenuItems>
+        </telerikRichTextEditor:RadRichTextEditor>
+        <!-- << richtexteditor-contextmenu-xaml -->
+    </Grid>
+</ContentView>

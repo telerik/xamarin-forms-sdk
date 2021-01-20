@@ -20,8 +20,15 @@ namespace SDKBrowser.iOS
 #if TESTS
             Xamarin.Calabash.Start();
 #endif
+            Xamarin.Forms.Application.Current.UserAppTheme = OSAppTheme.Light;
+            Xamarin.Forms.Application.Current.RequestedThemeChanged += this.OnRequestedThemeChanged;
 
             return base.FinishedLaunching(app, options);
+        }
+
+        private void OnRequestedThemeChanged(object sender, AppThemeChangedEventArgs e)
+        {
+            this.Window.OverrideUserInterfaceStyle = UIUserInterfaceStyle.Light;
         }
 
 #if TESTS

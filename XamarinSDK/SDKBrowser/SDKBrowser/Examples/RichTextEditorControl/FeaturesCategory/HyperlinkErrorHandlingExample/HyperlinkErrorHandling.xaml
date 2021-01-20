@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikRichTextEditor="clr-namespace:Telerik.XamarinForms.RichTextEditor;assembly=Telerik.XamarinForms.RichTextEditor"
+             x:Class="SDKBrowser.Examples.RichTextEditorControl.FeaturesCategory.HyperlinkErrorHandlingExample.HyperlinkErrorHandling">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <telerikRichTextEditor:RadRichTextEditorToolbar x:Name="richTextToolbar" RichTextEditor="{x:Reference richTextEditor}" />
+        <!-- >> richtexteditor-hyperlinkerrorhandling-xaml -->
+        <telerikRichTextEditor:RadRichTextEditor x:Name="richTextEditor" 
+                                                 OpenHyperlinkError="RichTextEditor_OpenHyperlinkError"
+                                                 Grid.Row="1" />
+        <!-- << richtexteditor-hyperlinkerrorhandling-xaml -->
+    </Grid>
+</ContentView>

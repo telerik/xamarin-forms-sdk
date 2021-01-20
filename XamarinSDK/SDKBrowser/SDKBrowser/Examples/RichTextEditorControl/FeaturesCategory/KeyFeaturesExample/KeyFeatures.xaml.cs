@@ -37,16 +37,7 @@ namespace SDKBrowser.Examples.RichTextEditorControl.FeaturesCategory.KeyFeatures
             var htmlString = await this.richTextEditor.GetHtmlAsync();
             // << richtexteditor-keyfeatures-gethtml
 
-            var popup = new RadPopup { OutsideBackgroundColor = Color.FromHex("#6F000000")};
-            popup.PlacementTarget = this;
-
-            var containerGrid = new Grid { Padding = 20 };         
-            containerGrid.Children.Add(new Label { Text = htmlString });          
-
-            var border = new RadBorder { CornerRadius = new Thickness(8), BackgroundColor = Color.Wheat };
-            border.Content = containerGrid;
-            popup.Content = border;
-            popup.IsOpen = true;
+            await Application.Current.MainPage.DisplayAlert("Html content", htmlString, "OK");
         }
     }
 }

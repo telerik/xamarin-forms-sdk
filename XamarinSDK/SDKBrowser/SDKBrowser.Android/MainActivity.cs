@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using AndroidX.AppCompat.App;
 using SDKBrowser.Services;
 using System.Collections.Generic;
 using Telerik.XamarinForms.Common.Android;
@@ -25,6 +26,7 @@ namespace SDKBrowser.Droid
             PermissionsHelper.Activity = this;
 
             TypeRegister.Register(typeof(List<string>), typeof(Android.Runtime.JavaList), new JavaToCSharpListConverter());
+            AppCompatDelegate.DefaultNightMode = AppCompatDelegate.ModeNightNo;
             this.LoadApplication(new App());
         }
 

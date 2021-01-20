@@ -2802,6 +2802,11 @@
               <Name>CustomToolbarItem</Name>
               <Title>Pdf Toolbar Custom ToolbarItem</Title>
             </Example>
+            <Example>
+              <Page>CustomOverflowButton</Page>
+              <Name>CustomOverflowButton</Name>
+              <Title>Pdf Toolbar Custom Overflow Button</Title>
+            </Example>
           </Examples>
         </Category>
       </Categories>
@@ -2896,9 +2901,24 @@
               <Title>Read-Only State</Title>
             </Example>
             <Example>
+              <Page>HyperlinkErrorHandling</Page>
+              <Name>HyperlinkErrorHandling</Name>
+              <Title>Hyperlink Error Handling</Title>
+            </Example>
+            <Example>
+              <Page>CustomContextMenu</Page>
+              <Name>CustomContextMenu</Name>
+              <Title>Custom ContextMenu</Title>
+            </Example>
+            <Example>
               <Page>Styling</Page>
               <Name>Styling</Name>
               <Title>Styling</Title>
+            </Example>
+            <Example>
+              <Page>PickerPopupPlacement</Page>
+              <Name>PickerPopupPlacement</Name>
+              <Title>Picker Popup Placement</Title>
             </Example>
           </Examples>
         </Category>

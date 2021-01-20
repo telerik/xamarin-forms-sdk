@@ -6,7 +6,9 @@
              x:Class="SDKBrowser.Examples.CheckBoxControl.CommandsCategory.CheckBoxCommandsExample.CheckBoxCommands">
     <StackLayout Padding="10" Orientation="Horizontal" Spacing="10">       
         <!-- >> checkbox-commands-xaml -->
-        <telerikPrimitives:RadCheckBox x:Name="checkbox">
+        <telerikPrimitives:RadCheckBox x:Name="checkbox"
+                                       VerticalOptions="Start"
+                                       HorizontalOptions="Center">
             <telerikPrimitives:RadCheckBox.Commands>
                 <checkBoxComamnds:CheckBoxUserCommand Id="IsCheckedChanged" 
                                                       Command="{Binding IsCheckedChangedCommand}"                                                       

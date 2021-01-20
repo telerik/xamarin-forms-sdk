@@ -3,34 +3,73 @@
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives">
-    <!--  >> tabview-features-tabviewheader-xaml  -->
-    <telerikPrimitives:RadTabView x:Name="tabView" HeaderPosition="Bottom">
-        <telerikPrimitives:RadTabView.Header>
-            <telerikPrimitives:TabViewHeader BackgroundColor="Orange">
-                <telerikPrimitives:TabViewHeader.OverflowButtonTemplate>
-                    <DataTemplate>
-                        <Label Margin="3,0,3,0"
-                                   BackgroundColor="#CA5100"
-                                   Text=" + "
-                                   VerticalOptions="Center"/>
-                    </DataTemplate>
-                </telerikPrimitives:TabViewHeader.OverflowButtonTemplate>
-            </telerikPrimitives:TabViewHeader>
-        </telerikPrimitives:RadTabView.Header>
-        <telerikPrimitives:RadTabView.Items>
-            <telerikPrimitives:TabViewItem HeaderText="January " />
-            <telerikPrimitives:TabViewItem HeaderText="February " />
-            <telerikPrimitives:TabViewItem HeaderText="March " />
-            <telerikPrimitives:TabViewItem HeaderText="April " />
-            <telerikPrimitives:TabViewItem HeaderText="May " />
-            <telerikPrimitives:TabViewItem HeaderText="June " />
-            <telerikPrimitives:TabViewItem HeaderText="July " />
-            <telerikPrimitives:TabViewItem HeaderText="August " />
-            <telerikPrimitives:TabViewItem HeaderText="September " />
-            <telerikPrimitives:TabViewItem HeaderText="October " />
-            <telerikPrimitives:TabViewItem HeaderText="November " />
-            <telerikPrimitives:TabViewItem HeaderText="December " />
-        </telerikPrimitives:RadTabView.Items>
-    </telerikPrimitives:RadTabView>
-    <!--  << tabview-features-tabviewheader-xaml  -->
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0">
+            <Label Text="TabView with custom Header and scrolling in the header"
+                   FontAttributes="Bold"/>
+            <!--  >> tabview-features-tabviewheader-xaml -->
+            <telerikPrimitives:RadTabView x:Name="tabViewHeader" HeaderPosition="Top">
+                <telerikPrimitives:RadTabView.Header>
+                    <telerikPrimitives:TabViewHeader BackgroundColor="Orange" IsScrollable="True">
+                    </telerikPrimitives:TabViewHeader>
+                </telerikPrimitives:RadTabView.Header>
+                <telerikPrimitives:RadTabView.Items>
+                    <telerikPrimitives:TabViewItem HeaderText="January " />
+                    <telerikPrimitives:TabViewItem HeaderText="February " />
+                    <telerikPrimitives:TabViewItem HeaderText="March " />
+                    <telerikPrimitives:TabViewItem HeaderText="April " />
+                    <telerikPrimitives:TabViewItem HeaderText="May " />
+                    <telerikPrimitives:TabViewItem HeaderText="June " />
+                    <telerikPrimitives:TabViewItem HeaderText="July " />
+                    <telerikPrimitives:TabViewItem HeaderText="August " />
+                    <telerikPrimitives:TabViewItem HeaderText="September " />
+                    <telerikPrimitives:TabViewItem HeaderText="October " />
+                    <telerikPrimitives:TabViewItem HeaderText="November " />
+                    <telerikPrimitives:TabViewItem HeaderText="December " />
+                </telerikPrimitives:RadTabView.Items>
+            </telerikPrimitives:RadTabView>
+            <!--  << tabview-features-tabviewheader-xaml -->
+        </StackLayout>
+
+        <StackLayout Grid.Row="1">
+            <Label Text="TabView with Custom Header and Overflow Button" FontAttributes="Bold"/>
+            <!-- >> tabview-features-tabviewheader-overflowbutton-xaml -->
+            <telerikPrimitives:RadTabView x:Name="tabViewHeaderOverfowButton" HeaderPosition="Bottom">
+                <telerikPrimitives:RadTabView.Header>
+                    <telerikPrimitives:TabViewHeader BackgroundColor="Orange">
+                        <telerikPrimitives:TabViewHeader.OverflowButtonTemplate>
+                            <DataTemplate>
+                                <Label Margin="3,0,3,0"
+                                       BackgroundColor="#CA5100"
+                                       Text=" + "
+                                       VerticalOptions="Center"/>
+                            </DataTemplate>
+                        </telerikPrimitives:TabViewHeader.OverflowButtonTemplate>
+                    </telerikPrimitives:TabViewHeader>
+                </telerikPrimitives:RadTabView.Header>
+                <telerikPrimitives:RadTabView.Items>
+                    <telerikPrimitives:TabViewItem HeaderText="January " />
+                    <telerikPrimitives:TabViewItem HeaderText="February " />
+                    <telerikPrimitives:TabViewItem HeaderText="March " />
+                    <telerikPrimitives:TabViewItem HeaderText="April " />
+                    <telerikPrimitives:TabViewItem HeaderText="May " />
+                    <telerikPrimitives:TabViewItem HeaderText="June " />
+                    <telerikPrimitives:TabViewItem HeaderText="July " />
+                    <telerikPrimitives:TabViewItem HeaderText="August " />
+                    <telerikPrimitives:TabViewItem HeaderText="September " />
+                    <telerikPrimitives:TabViewItem HeaderText="October " />
+                    <telerikPrimitives:TabViewItem HeaderText="November " />
+                    <telerikPrimitives:TabViewItem HeaderText="December " />
+                </telerikPrimitives:RadTabView.Items>
+            </telerikPrimitives:RadTabView>
+            <!-- << tabview-features-tabviewheader-overflowbutton-xaml -->
+        </StackLayout>
+    </Grid>
+
 </ContentView>
