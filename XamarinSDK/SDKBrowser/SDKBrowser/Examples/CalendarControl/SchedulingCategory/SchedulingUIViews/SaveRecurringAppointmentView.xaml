@@ -27,7 +27,7 @@
 
     <Style x:Key="DefaultButtonStyle" TargetType="Button">
         <Setter Property="FontSize" Value="Medium"/>
-        <Setter Property="BackgroundColor" Value="#F7F7F7" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark=#1E1E1E, Default=#F7F7F7, Light=#F7F7F7}" />
         <Setter Property="CornerRadius" Value="0" />
         <Setter Property="HeightRequest" Value="57" />
     </Style>
@@ -45,7 +45,18 @@
 
             <Label Text="{Binding Text}"
                    VerticalOptions="Center"
-                   VerticalTextAlignment="Center" />
+                   VerticalTextAlignment="Center" >
+                <Label.TextColor>
+                    <AppThemeBinding Light="Default">
+                        <AppThemeBinding.Dark>
+                            <OnPlatform x:TypeArguments="Color">
+                                <On Platform="iOS, Android" Value="Default"/>
+                                <On Platform="UWP" Value="White" />
+                            </OnPlatform>
+                        </AppThemeBinding.Dark>
+                    </AppThemeBinding>
+                </Label.TextColor>
+            </Label>
 
             <Label Grid.Column="1"
                    Text="{Binding Symbol}"
@@ -58,8 +69,8 @@
 
     <ControlTemplate x:Key="SaveRecurringAppointmentControlTemplate_AndroidUWP">
         <telerikPrimitives:RadBorder BorderThickness="1"
-                                     BorderColor="DarkGray"
-                                     BackgroundColor="White"
+                                     BorderColor="{AppThemeBinding Default=DarkGray, Light=DarkGray, Dark=Black}"
+                                     BackgroundColor="{AppThemeBinding Default=White, Light=White, Dark=Black}"
                                      HorizontalOptions="Center"
                                      VerticalOptions="Center"
                                      Margin="40, 0, 40, 0">
@@ -76,7 +87,19 @@
                 <Label Text="{telerikCommon:Localize Calendar_Android_SaveRecurringEventTitle}"
                        FontAttributes="Bold"
                        FontSize="Medium"
-                       Margin="0, 0, 0, 24" />
+                       Margin="0, 0, 0, 24">
+                    <Label.TextColor>
+                        <AppThemeBinding Light="Default">
+                            <AppThemeBinding.Dark>
+                                <OnPlatform x:TypeArguments="Color">
+                                    <On Platform="iOS, Android" Value="Default"/>
+                                    <On Platform="UWP" Value="White" />
+                                </OnPlatform>
+                            </AppThemeBinding.Dark>
+                        </AppThemeBinding>
+                    </Label.TextColor>
+                </Label>
+
                 <StackLayout Grid.Row="1"
                              VerticalOptions="StartAndExpand"
                              HorizontalOptions="Fill">

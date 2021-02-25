@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
              xmlns:numericInput="clr-namespace:Telerik.XamarinForms.Input.NumericInput;assembly=Telerik.XamarinForms.Input"
+             xmlns:common="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
              mc:Ignorable="d"
              x:Class="SDKBrowser.Examples.NumericInputControl.FeaturesCategory.ControlTemplateExample.NumericControlTemplate">
     <ContentView.Resources>
@@ -29,8 +30,8 @@
 
             <ControlTemplate x:Key="CustomRadNumericInput_ControlTemplate">
                 <Grid ColumnSpacing="{StaticResource Spacing}"
-                  HeightRequest="{StaticResource Height}"
-                  MinimumHeightRequest="{StaticResource MinimumHeight}">
+              HeightRequest="{StaticResource Height}"
+              MinimumHeightRequest="{StaticResource MinimumHeight}">
                     <Grid.Resources>
                         <ResourceDictionary>
                             <Style TargetType="numericInput:NumericInputButton" Class="DefaultNumericInputButtonStyle">
@@ -77,9 +78,10 @@
                         <ColumnDefinition Width="{StaticResource ButtonWidth}"/>
                     </Grid.ColumnDefinitions>
                     <numericInput:NumericInputButton Text="{TemplateBinding DecreaseButtonText}"
-                                                     Command="{TemplateBinding DecreaseCommand}"
-                                                     StyleClass="DefaultNumericInputButtonStyle"
-                                                     AutomationId="NumericDecreaseButton"> 
+                                      Command="{TemplateBinding DecreaseCommand}"
+                                      StyleClass="DefaultNumericInputButtonStyle"
+                                      common:StyleManager.InheritedStyleClass="{TemplateBinding ActualStyleClass}"
+                                      AutomationId="NumericDecreaseButton">
                         <AutomationProperties.HelpText>
                             <OnPlatform x:TypeArguments="x:String">
                                 <On Platform="UWP" Value="NumericDecreaseButton"/>
@@ -89,17 +91,19 @@
                     </numericInput:NumericInputButton>
 
                     <numericInput:NumericInputEntry Grid.Column="1"
-                                                    x:Name="PART_Entry"
-                                                    StyleClass="DefaultNumericInputEntryStyle"
-                                                    Text="{TemplateBinding Value, Mode=OneWay}"
-                                                    InputTransparent="{TemplateBinding IsReadOnly}"
-                                                    AutomationId="NumericEntry"/>
+                                     x:Name="PART_Entry"
+                                     StyleClass="DefaultNumericInputEntryStyle"
+                                     Text="{TemplateBinding Value, Mode=OneWay}"
+                                     InputTransparent="{TemplateBinding IsReadOnly}"
+                                     common:StyleManager.InheritedStyleClass="{TemplateBinding ActualStyleClass}"
+                                     AutomationId="NumericEntry"/>
 
                     <numericInput:NumericInputButton Grid.Column="2"
-                                                     Text="{TemplateBinding IncreaseButtonText}"
-                                                     Command="{TemplateBinding IncreaseCommand}"
-                                                     StyleClass="DefaultNumericInputButtonStyle"
-                                                     AutomationId="NumericIncreaseButton">
+                                      Text="{TemplateBinding IncreaseButtonText}"
+                                      Command="{TemplateBinding IncreaseCommand}"
+                                      StyleClass="DefaultNumericInputButtonStyle"
+                                      common:StyleManager.InheritedStyleClass="{TemplateBinding ActualStyleClass}"
+                                      AutomationId="NumericIncreaseButton">
                         <AutomationProperties.HelpText>
                             <OnPlatform x:TypeArguments="x:String">
                                 <On Platform="iOS" Value="NumericIncreaseButton"/>

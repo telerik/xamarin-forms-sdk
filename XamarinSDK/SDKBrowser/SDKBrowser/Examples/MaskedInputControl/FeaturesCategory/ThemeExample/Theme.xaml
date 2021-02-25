@@ -4,7 +4,14 @@
              xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
              x:Class="SDKBrowser.Examples.MaskedInputControl.FeaturesCategory.ThemeExample.Theme">
     <StackLayout Margin="16">
-        <Label Text="The default C token allows x to be input. Using event we reject x from input."/>
-        <telerikInput:RadMaskedInput x:Name="input" Mask="CC (00)" Placeholder="#" WatermarkText="Themed RadMaskedInput" StyleClass="TelerikTheme"/>
+        <Label Text="Enter phone number:"/>
+        <!-- >> maskedinput-features-telephone-keyboard -->
+        <telerikInput:RadMaskedInput x:Name="input" 
+                                     Mask="C(999) 999-999" 
+                                     Placeholder="#" 
+                                     WatermarkText="Themed RadMaskedInput" 
+                                     Keyboard="Telephone"
+                                     StyleClass="TelerikTheme"/>
+        <!-- << maskedinput-features-telephone-keyboard -->
     </StackLayout>
 </ContentView>

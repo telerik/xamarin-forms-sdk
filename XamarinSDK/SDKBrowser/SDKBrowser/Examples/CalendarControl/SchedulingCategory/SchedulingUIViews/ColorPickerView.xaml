@@ -12,13 +12,12 @@
     <Style x:Key="DefaultButtonStyle" TargetType="Button">
         <Setter Property="Margin" Value="0" />
         <Setter Property="CornerRadius" Value="0" />
-        <Setter Property="BackgroundColor" Value="{TemplateBinding ButtonBackgroundColor}" />
         <Setter Property="TextColor" Value="{TemplateBinding ButtonTextColor}" />
         <Setter Property="HeightRequest" Value="44" />
     </Style>
 
     <ControlTemplate x:Key="ColorPickerViewControlTemplate">
-        <ScrollView BackgroundColor="{TemplateBinding BackgroundColor}">
+        <ScrollView x:Name="PART_MainContainer">
             <StackLayout >
                 <Label Text="{telerikCommon:Localize Calendar_ColorPickerTitle}"
                        Padding="16, 20, 16, 0"
@@ -30,15 +29,17 @@
                 </Label>
 
                 <telerikCalendar:CalendarColorPicker Colors="{Binding Colors}"
-                                                     Padding="16, 0"
-                                                     SelectedColor="{Binding SelectedColor, Mode=TwoWay}" />
+                                                     SeparatorColor="{TemplateBinding SeparatorColor}"
+                                                     SelectedColor="{Binding SelectedColor, Mode=TwoWay}"
+                                                     Padding="16, 0" />
 
-                <telerikPrimitives:RadBorder BorderColor="#C8C7CC"
+                <telerikPrimitives:RadBorder BorderColor="{AppThemeBinding Default=#C8C7CC, Light=#C8C7CC, Dark=#1E1E1E}"
                                              Margin="0, 10, 0, 0" 
                                              VerticalOptions="EndAndExpand"
                                              BorderThickness="0, 1, 0, 0">
                     <Grid ColumnSpacing="0">
                         <Button Grid.Column="0"
+                                x:Name="PART_CancelButton"
                                 Style="{StaticResource DefaultButtonStyle}"
                                 Command="{Binding CancelCommand}"
                                 Text="{telerikCommon:Localize Calendar_AppointmentCancelButton}" />

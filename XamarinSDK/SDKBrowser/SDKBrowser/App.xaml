@@ -301,7 +301,8 @@
                                                 Style="{StaticResource HeaderButtonStyle}"
                                                 Text="{StaticResource SearchIconText}"
                                                 IsVisible="{Binding IsSearchVisible, Converter={StaticResource InvertedBooleanConverter}, FallbackValue=True}"
-                                                Command="{Binding SearchCommand}" />
+                                                Command="{Binding SearchCommand}"
+                                                AutomationId="SearchButton"/>
                     </Grid>
                     <Grid Grid.Row="1"
                           Margin="10"

@@ -8,16 +8,14 @@
                     xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
                     mc:Ignorable="d"
                     x:Class="SDKBrowser.Examples.CalendarControl.SchedulingCategory.SchedulingUIViews.AppointmentSummaryView">
-    
+
     <Style x:Key="DeleteAppointmentButtonStyle" TargetType="Button">
-        <Setter Property="BackgroundColor" Value="{TemplateBinding ButtonBackgroundColor}" />
         <Setter Property="TextColor" Value="{TemplateBinding ButtonTextColor}" />
         <Setter Property="FontAttributes" Value="Bold" />
         <Setter Property="CornerRadius" Value="0" />
     </Style>
 
     <Style x:Key="EditButtonStyle" TargetType="telerikInput:RadButton">
-        <Setter Property="BackgroundColor" Value="{TemplateBinding ButtonBackgroundColor}" />
         <Setter Property="TextColor" Value="{TemplateBinding ButtonTextColor}" />
         <Setter Property="FontAttributes" Value="Bold" />
         <Setter Property="FontSize" Value="Small" />
@@ -29,7 +27,6 @@
     </Style>
 
     <Style x:Key="AppointmentInfoLabelStyle" TargetType="Label">
-        <Setter Property="TextColor" Value="{TemplateBinding DetailsTextColor}" />
         <Setter Property="FontSize" Value="{TemplateBinding DetailsFontSize}" />
     </Style>
 
@@ -46,16 +43,25 @@
     </Style>
 
     <ControlTemplate x:Key="AppointmentSummaryViewControlTemplate">
-        <Grid RowSpacing="0" 
-              BackgroundColor="{TemplateBinding BackgroundColor}"
+        <Grid x:Name="PART_MainGrid"
+              RowSpacing="0"
               BindingContext="{TemplateBinding BindingContext}">
             <telerikPrimitives:RadPopup.Popup>
                 <telerikPrimitives:RadPopup IsOpen="{Binding IsPopupOpen}"
                                             Content="{Binding PopupContent}"
                                             VerticalOffset="{Binding PopupVerticalOffset}"
                                             Placement="Center"
-                                            AnimationType="Fade"
-                                            OutsideBackgroundColor="#6F000000">
+                                            AnimationType="Fade">
+                    <telerikPrimitives:RadPopup.OutsideBackgroundColor>
+                        <AppThemeBinding Light="#6F000000">
+                            <AppThemeBinding.Dark>
+                                <OnPlatform x:TypeArguments="Color">
+                                    <On Platform="iOS" Value="#6F373737"/>
+                                    <On Platform="Android, UWP" Value="#6F8B8B8B" />
+                                </OnPlatform>
+                            </AppThemeBinding.Dark>
+                        </AppThemeBinding>
+                    </telerikPrimitives:RadPopup.OutsideBackgroundColor>
                 </telerikPrimitives:RadPopup>
             </telerikPrimitives:RadPopup.Popup>
             <Grid.RowDefinitions>
@@ -73,7 +79,8 @@
                 </Grid.ColumnDefinitions>
 
                 <!-- Back symbol -->
-                <Label Text="&#xe80E;"
+                <Label Text="&#xe80E;" 
+                       AutomationId="BackSymbolLabel"
                        telerikCommon:TelerikFont.UseEmbeddedFont="True" 
                        Style="{StaticResource BackSymbolLabelStyle}" >
                     <Label.GestureRecognizers>
@@ -108,30 +115,38 @@
                                                  CornerRadius="{OnPlatform Default=3, Android=4}"/>
                 </StackLayout>
 
-                <telerikInput:RadButton Grid.Column="2"
+                <telerikInput:RadButton AutomationId="EditAppointmentButton"
+                                        x:Name="PART_EditAppointmentButton"
+                                        Grid.Column="2"
                                         Text="{telerikCommon:Localize Calendar_EditButton}"
                                         Command="{Binding BeginEditAppointmentCommand}"
                                         Style="{StaticResource EditButtonStyle}"/>
             </Grid>
 
             <!--Appointment details-->
-            <StackLayout Grid.Row="1" 
+            <StackLayout x:Name="PART_DetailsStackLayout"
+                         Grid.Row="1" 
                          Spacing="6"
                          Margin="{OnPlatform iOS='12, 24', Default='16, 18'}">
-                <Label Text="{Binding AppointmentSummary}" 
+                <Label AutomationId="AppointmentSummaryLabel" 
+                       Text="{Binding AppointmentSummary}" 
                        Style="{StaticResource AppointmentInfoLabelStyle}" />
-                <Label Text="{Binding RepeatOptionsDetails}" 
+                <Label AutomationId="RepeatOptionsDetailsLabel" 
+                       Text="{Binding RepeatOptionsDetails}" 
                        Style="{StaticResource AppointmentInfoLabelStyle}" />
-                <Label Text="{Binding Appointment.Detail}" 
+                <Label AutomationId="AppointmentDetailLabel" 
+                       Text="{Binding Appointment.Detail}" 
                        Style="{StaticResource AppointmentInfoLabelStyle}" 
                        Margin="0, 16, 0, 0" />
             </StackLayout>
 
             <!--Delete appointment button-->
             <telerikPrimitives:RadBorder Grid.Row="2" 
-                                         BorderColor="#C8C7CC"
+                                         BorderColor="{AppThemeBinding Default=#C8C7CC, Light=#C8C7CC, Dark=#1E1E1E}"
                                          BorderThickness="0, 1, 0, 0">
-                <Button Text="{telerikCommon:Localize Calendar_DeleteButton}"
+                <Button AutomationId="DeleteEventButton"
+                        x:Name="PART_DeleteEventButton"
+                        Text="{telerikCommon:Localize Calendar_DeleteButton}"
                         Command="{Binding DeleteAppointmentCommand}"
                         Style="{StaticResource DeleteAppointmentButtonStyle}" />
             </telerikPrimitives:RadBorder>

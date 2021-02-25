@@ -16,8 +16,8 @@
 
     <ControlTemplate x:Key="DeleteAppointmentViewControlTemplate_AndroidUWP">
         <telerikPrimitives:RadBorder BorderThickness="1"
-                                     BorderColor="DarkGray"
-                                     BackgroundColor="White"
+                                     BorderColor="{AppThemeBinding Default=DarkGray, Light=DarkGray, Dark=Black}"
+                                     BackgroundColor="{AppThemeBinding Default=White, Light=White, Dark=Black}"
                                      HorizontalOptions="Center"
                                      VerticalOptions="Center">
             <Grid Padding="24, 18, 41, 24" 
@@ -33,7 +33,18 @@
                        FontAttributes="Bold"
                        Margin="0, 0, 0, 48"
                        HorizontalTextAlignment="Start"
-                       VerticalTextAlignment="Center"/>
+                       VerticalTextAlignment="Center">
+                    <Label.TextColor>
+                        <AppThemeBinding Light="Default">
+                            <AppThemeBinding.Dark>
+                                <OnPlatform x:TypeArguments="Color">
+                                    <On Platform="iOS, Android" Value="Default"/>
+                                    <On Platform="UWP" Value="White" />
+                                </OnPlatform>
+                            </AppThemeBinding.Dark>
+                        </AppThemeBinding>
+                    </Label.TextColor>
+                </Label>
 
                 <StackLayout Grid.Column="1"
                              Orientation="Horizontal"
@@ -69,13 +80,13 @@
             <Button Style="{StaticResource DeleteOptionButtonStyle}"
                     Command="{Binding DeleteAppointmentCommand}"
                     TextColor="#FF3B30"
-                    BackgroundColor="#F7F7F7"
+                    BackgroundColor="{AppThemeBinding Dark=#1E1E1E, Default=#F7F7F7, Light=#F7F7F7}"
                     Text="{telerikCommon:Localize Calendar_iOS_DeleteSingleEvent}"/>
 
             <Button Style="{StaticResource DeleteOptionButtonStyle}"
                     Command="{Binding CancelCommand}"
                     TextColor="#007AFF"
-                    BackgroundColor="#FFFFFF"
+                    BackgroundColor="{AppThemeBinding Dark=#1E1E1E, Default=#FFFFFF, Light=#FFFFFF}"
                     Text="{telerikCommon:Localize Calendar_AppointmentCancelButton}"/>
         </StackLayout>
     </ControlTemplate>

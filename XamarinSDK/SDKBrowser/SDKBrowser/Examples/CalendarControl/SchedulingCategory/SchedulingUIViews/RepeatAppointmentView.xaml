@@ -8,9 +8,9 @@
                     xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
                     mc:Ignorable="d"
                     x:Class="SDKBrowser.Examples.CalendarControl.SchedulingCategory.SchedulingUIViews.RepeatAppointmentView">
-    
+
     <Style x:Key="RepeatListItemStyle" TargetType="telerikPrimitives:RadBorder">
-        <Setter Property="BorderColor" Value="{TemplateBinding SeparatorColor}"/>
+        <Setter Property="BorderColor" Value="{AppThemeBinding Dark=#373737, Light=#C8C7CC, Default=#C8C7CC}" />
         <Setter Property="BorderThickness" Value="{TemplateBinding SeparatorThickness}"/>
         <Setter Property="BackgroundColor" Value="Transparent"/>
     </Style>
@@ -26,7 +26,6 @@
     <Style x:Key="DefaultButtonStyle" TargetType="Button">
         <Setter Property="Margin" Value="0"/>
         <Setter Property="CornerRadius" Value="0"/>
-        <Setter Property="BackgroundColor" Value="{TemplateBinding ButtonBackgroundColor}" />
         <Setter Property="TextColor" Value="{TemplateBinding ButtonTextColor}" />
         <Setter Property="HeightRequest" Value="44" />
         <Setter Property="FontAttributes" Value="Bold" />
@@ -53,8 +52,8 @@
     </DataTemplate>
 
     <ControlTemplate x:Key="RepeatAppointmentViewControlTemplate">
-        <Grid RowSpacing="0" 
-              BackgroundColor="{TemplateBinding BackgroundColor}"
+        <Grid x:Name="PART_MainGrid" 
+              RowSpacing="0"
               Margin="0, 16, 0, 0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -76,16 +75,18 @@
             </telerikDataControls:NonVirtualizedItemsControl>
 
             <telerikPrimitives:RadBorder Grid.Row="2" 
-                                         BorderColor="#C8C7CC" 
+                                         BorderColor="{AppThemeBinding Default=#C8C7CC, Light=#C8C7CC, Dark=#1E1E1E}"
                                          BorderThickness="0, 1, 0, 0">
                 <Grid ColumnSpacing="0">
 
-                    <Button Text="{telerikCommon:Localize Calendar_AppointmentCancelButton}"
+                    <Button x:Name="PART_CancelButton"
+                            Text="{telerikCommon:Localize Calendar_AppointmentCancelButton}"
                             Grid.Column="0"
                             Command="{Binding CancelCommand}"
                             Style="{StaticResource DefaultButtonStyle}" />
 
-                    <Button Text="{telerikCommon:Localize Calendar_AppointmentOKButton}" 
+                    <Button x:Name="PART_OkButton"
+                            Text="{telerikCommon:Localize Calendar_AppointmentOKButton}" 
                             Grid.Column="1"
                             Command="{Binding OKCommand}"
                             Style="{StaticResource DefaultButtonStyle}" />

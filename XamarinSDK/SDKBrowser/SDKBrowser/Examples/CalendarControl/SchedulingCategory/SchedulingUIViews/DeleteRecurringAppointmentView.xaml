@@ -11,7 +11,7 @@
 
     <Style x:Key="DefaultButtonStyle" TargetType="Button">
         <Setter Property="FontSize" Value="Medium"/>
-        <Setter Property="BackgroundColor" Value="#F7F7F7" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark=#1E1E1E, Default=#F7F7F7, Light=#F7F7F7}" />
         <Setter Property="CornerRadius" Value="0" />
         <Setter Property="HeightRequest" Value="57" />
     </Style>
@@ -40,9 +40,22 @@
                 <TapGestureRecognizer Command="{TemplateBinding BindingContext.DeleteOptionTappedCommand}" 
                                       CommandParameter="{Binding .}" />
             </Grid.GestureRecognizers>
+
             <Label Text="{Binding Text}"
                    VerticalOptions="Center"
-                   VerticalTextAlignment="Center" />
+                   VerticalTextAlignment="Center" >
+                <Label.TextColor>
+                    <AppThemeBinding Light="Default">
+                        <AppThemeBinding.Dark>
+                            <OnPlatform x:TypeArguments="Color">
+                                <On Platform="iOS, Android" Value="Default"/>
+                                <On Platform="UWP" Value="White" />
+                            </OnPlatform>
+                        </AppThemeBinding.Dark>
+                    </AppThemeBinding>
+                </Label.TextColor>
+            </Label>
+
             <Label Grid.Column="1" 
                    Text="{Binding Symbol}"
                    Margin="46, 0, 0, 0"
@@ -55,9 +68,9 @@
     <ControlTemplate x:Key="DeleteRecurringAppointmentControlTemplate_AndroidUWP">
         <telerikPrimitives:RadBorder HorizontalOptions="Center"
                                      VerticalOptions="Center"
-                                     BackgroundColor="White"
-                                     BorderThickness="1"
-                                     BorderColor="DarkGray">
+                                     BackgroundColor="{AppThemeBinding Default=White, Light=White, Dark=Black}"
+                                     BorderColor="{AppThemeBinding Default=DarkGray, Light=DarkGray, Dark=Black}"
+                                     BorderThickness="1">
 
             <Grid Padding="24, 18, 32, 27"
                   BackgroundColor="{TemplateBinding BackgroundColor}"
@@ -71,7 +84,18 @@
                 <Label Text="{telerikCommon:Localize Calendar_Android_DeleteRecurringEventTitle}"
                        FontSize="Medium"
                        FontAttributes="Bold"
-                       Margin="0, 0, 0, 24" />
+                       Margin="0, 0, 0, 24" >
+                    <Label.TextColor>
+                        <AppThemeBinding Light="Default">
+                            <AppThemeBinding.Dark>
+                                <OnPlatform x:TypeArguments="Color">
+                                    <On Platform="iOS, Android" Value="Default"/>
+                                    <On Platform="UWP" Value="White" />
+                                </OnPlatform>
+                            </AppThemeBinding.Dark>
+                        </AppThemeBinding>
+                    </Label.TextColor>
+                </Label>
 
                 <StackLayout Grid.Row="1"
                            VerticalOptions="StartAndExpand"

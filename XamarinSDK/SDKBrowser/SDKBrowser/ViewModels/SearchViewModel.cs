@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SDKBrowser.Services;
+using System;
 using Xamarin.Forms;
 
 namespace SDKBrowser.ViewModels
@@ -103,6 +104,27 @@ namespace SDKBrowser.ViewModels
                 StringSplitOptions.RemoveEmptyEntries);
 
             this.SearchFilter = item => this.PassesFilter(item, tokens);
+
+            this.NavigateToExampleOnSearch();
+        }
+
+        private void NavigateToExampleOnSearch()
+        {
+            var strings = this.SearchText.Split(';');
+            if (strings.Length > 1)
+            {
+                var controlName = strings[0].Trim();
+                var exampleName = strings[1].Trim();
+                if (exampleName.EndsWith("#"))
+                {
+                    exampleName = exampleName.Substring(0, exampleName.Length - 1);
+                    var backdoorService = DependencyService.Get<IBackdoorService>();
+                    if (backdoorService != null)
+                    {
+                        backdoorService.TryNavigateToExample(controlName, exampleName);
+                    }
+                }
+            }
         }
 
         protected virtual bool PassesFilter(object item, params string[] tokens)

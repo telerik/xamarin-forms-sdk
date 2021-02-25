@@ -7,7 +7,7 @@
                     xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
                     mc:Ignorable="d"
                     x:Class="SDKBrowser.Examples.CalendarControl.SchedulingCategory.SchedulingUIViews.AddAppointmentView">
-    
+
     <telerikCommon:InvertedBooleanConverter x:Key="InvertedBooleanConverter"/>
 
     <Style x:Key="EditorTitleLabelStyle" TargetType="Label">
@@ -17,7 +17,6 @@
     </Style>
 
     <Style x:Key="EditorSeparatorStyle" TargetType="telerikPrimitives:RadBorder">
-        <Setter Property="BorderColor" Value="{TemplateBinding SeparatorColor}" />
         <Setter Property="BorderThickness" Value="{TemplateBinding SeparatorThickness}" />
     </Style>
 
@@ -28,30 +27,39 @@
     <Style x:Key="DefaultButtonStyle" TargetType="Button">
         <Setter Property="Margin" Value="0"/>
         <Setter Property="CornerRadius" Value="0"/>
-        <Setter Property="BackgroundColor" Value="{TemplateBinding ButtonBackgroundColor}" />
         <Setter Property="TextColor" Value="{TemplateBinding ButtonTextColor}" />
         <Setter Property="HeightRequest" Value="44" />
     </Style>
 
     <ControlTemplate x:Key="AddAppointmentViewControlTemplate">
-        <Grid RowSpacing="0" 
-              BackgroundColor="{TemplateBinding BackgroundColor}"
+        <Grid x:Name="PART_MainGrid"
+              RowSpacing="0" 
               BindingContext="{TemplateBinding BindingContext}">
             <telerikPrimitives:RadPopup.Popup>
                 <telerikPrimitives:RadPopup IsOpen="{Binding IsPopupOpen}"
                                             Content="{Binding PopupContent}"
                                             VerticalOffset="{Binding PopupVerticalOffset}"
                                             Placement="Center"
-                                            AnimationType="Fade"
-                                            OutsideBackgroundColor="#6F000000">
+                                            AnimationType="Fade">
+                    <telerikPrimitives:RadPopup.OutsideBackgroundColor>
+                        <AppThemeBinding Light="#6F000000">
+                            <AppThemeBinding.Dark>
+                                <OnPlatform x:TypeArguments="Color">
+                                    <On Platform="iOS" Value="#6F373737"/>
+                                    <On Platform="Android, UWP" Value="#6F8B8B8B" />
+                                </OnPlatform>
+                            </AppThemeBinding.Dark>
+                        </AppThemeBinding>
+                    </telerikPrimitives:RadPopup.OutsideBackgroundColor>
                 </telerikPrimitives:RadPopup>
             </telerikPrimitives:RadPopup.Popup>
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <ScrollView >
-                <StackLayout Padding="16, 20, 16, 0" 
+            <ScrollView>
+                <StackLayout x:Name="PART_EditorStackLayout"
+                             Padding="16, 20, 16, 0" 
                              Spacing="0">
 
                     <!--Screen Title-->
@@ -62,12 +70,13 @@
                            HorizontalOptions="Start" />
 
                     <!--Appointment Title-->
-                    <telerikPrimitives:RadBorder BorderColor="{TemplateBinding SeparatorColor}" 
-                                                 Margin="{OnPlatform iOS='0, 23, 0, 20', Default='0, 23, 0, 14'}"
+                    <telerikPrimitives:RadBorder Margin="{OnPlatform iOS='0, 23, 0, 20', Default='0, 23, 0, 14'}"
                                                  BorderThickness="{OnPlatform iOS=1, Default=0}"
                                                  CornerRadius="{OnPlatform iOS=10}">
 
-                        <Entry Text="{Binding Appointment.Title, Mode=TwoWay}" 
+                        <Entry AutomationId="AppointmentTitleEntry"
+                               BackgroundColor="Transparent"
+                               Text="{Binding Appointment.Title, Mode=TwoWay}" 
                                FontSize="{TemplateBinding EditorFontSize}"
                                TextColor="{TemplateBinding EditorTextColor}"
                                Placeholder="{telerikCommon:Localize Calendar_AppointmentTitlePlaceholder}">
@@ -81,7 +90,8 @@
                             <Label Text="{telerikCommon:Localize Calendar_AppointmentAllDay}"
                                    Style="{StaticResource EditorTitleLabelStyle}" />
 
-                            <Switch OnColor="{TemplateBinding AllDaySwitchOnColor}"
+                            <Switch AutomationId="AllDaySwitch"
+                                    OnColor="{TemplateBinding AllDaySwitchOnColor}"
                                     BackgroundColor="{TemplateBinding AllDaySwitchBackgroundColor}"
                                     IsToggled="{Binding Appointment.IsAllDay}" 
                                     HorizontalOptions="End" />
@@ -97,7 +107,8 @@
                             <StackLayout Orientation="Horizontal" 
                                          HorizontalOptions="End" 
                                          VerticalOptions="Center">
-                                <DatePicker Date="{Binding StartDate}" 
+                                <DatePicker AutomationId="StartDatePicker"
+                                            Date="{Binding StartDate}" 
                                             FontSize="{TemplateBinding EditorFontSize}"
                                             TextColor="{TemplateBinding EditorTextColor}"
                                             Format="dd MMM yyyy" 
@@ -106,7 +117,8 @@
                                         <telerikCommon:PickerRemoveBorderEffect />
                                     </DatePicker.Effects>
                                 </DatePicker>
-                                <TimePicker Time="{Binding StartTime}" 
+                                <TimePicker AutomationId="StartTimePicker"
+                                            Time="{Binding StartTime}" 
                                             FontSize="{TemplateBinding EditorFontSize}"
                                             TextColor="{TemplateBinding EditorTextColor}"
                                             IsVisible="{Binding Appointment.IsAllDay, Converter={StaticResource InvertedBooleanConverter}}">
@@ -127,7 +139,8 @@
                             <StackLayout Orientation="Horizontal" 
                                          HorizontalOptions="End" 
                                          VerticalOptions="Center">
-                                <DatePicker Date="{Binding EndDate}" 
+                                <DatePicker AutomationId="EndDatePicker"
+                                            Date="{Binding EndDate}" 
                                             FontSize="{TemplateBinding EditorFontSize}"
                                             TextColor="{TemplateBinding EditorTextColor}"
                                             Format="dd MMM yyyy"
@@ -137,7 +150,8 @@
                                         <telerikCommon:PickerRemoveBorderEffect />
                                     </DatePicker.Effects>
                                 </DatePicker>
-                                <TimePicker Time="{Binding EndTime}"
+                                <TimePicker AutomationId="EndTimePicker"
+                                            Time="{Binding EndTime}"
                                             FontSize="{TemplateBinding EditorFontSize}"
                                             TextColor="{TemplateBinding EditorTextColor}"
                                             IsVisible="{Binding Appointment.IsAllDay, Converter={StaticResource InvertedBooleanConverter}}"
@@ -163,7 +177,8 @@
                                 </StackLayout.GestureRecognizers>
 
                                 <!--Open Repeats Options-->
-                                <Label VerticalOptions="Center"
+                                <Label AutomationId="RepeatOptionLabel"
+                                       VerticalOptions="Center"
                                        FontSize="{TemplateBinding EditorFontSize}"
                                        TextColor="{TemplateBinding EditorTextColor}"
                                        Text="{Binding RepeatOptionText}"
@@ -191,7 +206,8 @@
                                 </StackLayout.GestureRecognizers>
 
                                 <!--Open End Repeats Options-->
-                                <Label  VerticalOptions="Center"
+                                <Label  AutomationId="EndRepeatOptionLabel"
+                                        VerticalOptions="Center"
                                         HorizontalOptions="EndAndExpand"
                                         FontSize="{TemplateBinding EditorFontSize}"
                                         TextColor="{TemplateBinding EditorTextColor}"
@@ -212,7 +228,8 @@
                         <Grid Style="{StaticResource EditorGridStyle}">
                             <Label Text="{telerikCommon:Localize Calendar_AppointmentColor}"
                                    Style="{StaticResource EditorTitleLabelStyle}" />
-                            <Grid HorizontalOptions="End">
+                            <Grid HorizontalOptions="End" 
+                                  AutomationId="ColorPicker">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto" />
                                     <ColumnDefinition Width="Auto" />
@@ -252,29 +269,34 @@
                     </telerikPrimitives:RadBorder>
 
                     <!--Appointment Details-->
-                    <Editor Text="{Binding Appointment.Detail}"
+                    <Editor AutomationId="AppointmentDetailsEditor"
+                            Text="{Binding Appointment.Detail}"
                             FontSize="{TemplateBinding EditorFontSize}"
                             TextColor="{TemplateBinding EditorTextColor}"
+                            BackgroundColor="Transparent"
                             AutoSize="TextChanges"
                             Margin="{OnPlatform iOS='0, 23, 0, 20', Default='0, 23, 0, 14'}"
                             Placeholder="{telerikCommon:Localize Calendar_DetailsEditorPlaceholderText}">
                         <Editor.Effects>
                             <telerikCommon:NoTextOffsetEffect />
+                            <telerikCommon:EditorClearFocusedBackgroundEffect />
                         </Editor.Effects>
                     </Editor>
                 </StackLayout>
             </ScrollView>
 
-            <telerikPrimitives:RadBorder BorderColor="#C8C7CC"
+            <telerikPrimitives:RadBorder BorderColor="{AppThemeBinding Default=#C8C7CC, Light=#C8C7CC, Dark=#1E1E1E}"
                                          BorderThickness="0, 1, 0, 0" 
                                          Grid.Row="1">
                 <Grid ColumnSpacing="0">
                     <Button Grid.Column="0"
+                            x:Name="PART_CancelButton"
                             Command="{Binding CancelCommand}"
                             Style="{StaticResource DefaultButtonStyle}"
                             Text="{telerikCommon:Localize Calendar_AppointmentCancelButton}" />
 
                     <Button Grid.Column="1"
+                            x:Name="PART_OkButton"
                             Command="{Binding SaveAppointmentCommand}"
                             Style="{StaticResource DefaultButtonStyle}"
                             Text="{telerikCommon:Localize Calendar_AppointmentOKButton}" />

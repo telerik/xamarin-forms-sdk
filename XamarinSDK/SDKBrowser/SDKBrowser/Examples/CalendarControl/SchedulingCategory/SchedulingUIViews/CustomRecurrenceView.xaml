@@ -11,7 +11,6 @@
 
     <Style x:Key="DefaultSeparatorStyle" TargetType="telerikPrimitives:RadBorder">
         <Setter Property="HeightRequest" Value="{OnPlatform iOS=44, Android=48, UWP=68, Default=48}" />
-        <Setter Property="BorderColor" Value="{TemplateBinding SeparatorColor}" />
         <Setter Property="BorderThickness" Value="{TemplateBinding SeparatorThickness}" />
     </Style>
 
@@ -25,14 +24,13 @@
     <Style x:Key="DefaultButtonStyle" TargetType="Button">
         <Setter Property="Margin" Value="0" />
         <Setter Property="CornerRadius" Value="0" />
-        <Setter Property="BackgroundColor" Value="{TemplateBinding ButtonBackgroundColor}" />
         <Setter Property="TextColor" Value="{TemplateBinding ButtonTextColor}" />
         <Setter Property="HeightRequest" Value="44" />
         <Setter Property="FontAttributes" Value="Bold" />
     </Style>
 
     <ControlTemplate x:Key="CustomRecurrenceViewControlTemplate">
-        <Grid BackgroundColor="{TemplateBinding BackgroundColor}">
+        <Grid x:Name="PART_MainGrid">
             <Grid.RowDefinitions>
                 <RowDefinition />
                 <RowDefinition Height="44" />
@@ -58,13 +56,15 @@
                           RowSpacing="0">
 
                         <!--Frequency picker-->
-                        <telerikPrimitives:RadBorder Style="{StaticResource DefaultSeparatorStyle}">
+                        <telerikPrimitives:RadBorder x:Name="PART_FrequencyPickerSeparator"
+                                                     Style="{StaticResource DefaultSeparatorStyle}">
                             <Grid>
                                 <Label Text="{telerikCommon:Localize Calendar_CustomRecurrenceFrequency}" 
                                        TextColor="{TemplateBinding TextColor}"
                                        VerticalTextAlignment="Center" />
 
-                                <Picker ItemsSource="{Binding FrequencyPickerItemsSource}"
+                                <Picker AutomationId="FrequencyPicker"
+                                        ItemsSource="{Binding FrequencyPickerItemsSource}"
                                         SelectedIndex="{Binding FrequencyPickerSelectedIndex, Mode=TwoWay}"
                                         Title="{Binding FrequencyPickerTitle}" 
                                         TextColor="{TemplateBinding TextColor}"
@@ -79,14 +79,16 @@
                         </telerikPrimitives:RadBorder>
 
                         <!--Interval picker-->
-                        <telerikPrimitives:RadBorder Style="{StaticResource DefaultSeparatorStyle}" 
+                        <telerikPrimitives:RadBorder x:Name="PART_IntervalPickerSeparator"
+                                                     Style="{StaticResource DefaultSeparatorStyle}" 
                                                      Grid.Row="1">
                             <Grid>
                                 <Label Text="{telerikCommon:Localize Calendar_CustomRecurrenceEvery}" 
                                        TextColor="{TemplateBinding TextColor}"
                                        VerticalTextAlignment="Center" />
 
-                                <Picker ItemsSource="{Binding IntervalPickerItemsSource}"
+                                <Picker AutomationId="IntervalPicker"
+                                        ItemsSource="{Binding IntervalPickerItemsSource}"
                                         SelectedIndex="{Binding IntervalPickerSelectedIndex, Mode=TwoWay}"
                                         Title="{Binding IntervalPickerTitle}"
                                         TextColor="{TemplateBinding TextColor}"
@@ -125,14 +127,16 @@
             </ScrollView>
 
             <telerikPrimitives:RadBorder Grid.Row="1"
-                                         BorderColor="#C8C7CC"
+                                         BorderColor="{AppThemeBinding Default=#C8C7CC, Light=#C8C7CC, Dark=#1E1E1E}"
                                          BorderThickness="0, 1, 0, 0" >
                 <Grid ColumnSpacing="0">
-                    <Button Text="{telerikCommon:Localize Calendar_AppointmentCancelButton}" 
+                    <Button x:Name="PART_CancelButton"
+                            Text="{telerikCommon:Localize Calendar_AppointmentCancelButton}" 
                             Command="{Binding CancelCommand}"
                             Style="{StaticResource DefaultButtonStyle}" />
 
-                    <Button Grid.Column="1" 
+                    <Button x:Name="PART_OkButton"
+                            Grid.Column="1" 
                             Command="{Binding OKCommand}"
                             Text="{telerikCommon:Localize Calendar_AppointmentOKButton}" 
                             Style="{StaticResource DefaultButtonStyle}" />

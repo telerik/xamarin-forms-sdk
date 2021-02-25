@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.EntryControl.FeaturesCategory.MaxLengthExample.MaxLength">
+    <StackLayout>
+        <Label Text="RadEntry MaxLength property set to 10"/>
+        <!-- >> entry-features-maxlength -->
+        <telerikInput:RadEntry x:Name="telerikEntry" WatermarkText="Enter text" MaxLength="10" />
+        <!-- << entry-features-maxlength -->
+        <StackLayout Orientation="Horizontal">
+            <Label Text="RadEntry.Text = "/>
+            <Label Text="{Binding Source={x:Reference telerikEntry}, Path=Text}"/>
+        </StackLayout>
+    </StackLayout>
+</ContentView>
