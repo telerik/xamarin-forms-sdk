@@ -108,6 +108,11 @@
     <Content Include="Assets\AutoCompleteView.scale-150.png" />
     <Content Include="Assets\AutoCompleteView.scale-200.png" />
     <Content Include="Assets\AutoCompleteView.scale-400.png" />
+    <Content Include="Assets\Badge.scale-100.png" />
+    <Content Include="Assets\Badge.scale-125.png" />
+    <Content Include="Assets\Badge.scale-150.png" />
+    <Content Include="Assets\Badge.scale-200.png" />
+    <Content Include="Assets\Badge.scale-400.png" />
     <Content Include="Assets\Barcode.scale-100.png" />
     <Content Include="Assets\Barcode.scale-150.png" />
     <Content Include="Assets\Barcode.scale-200.png" />
@@ -198,6 +203,10 @@
     <Content Include="Assets\Fonts\seguisb.ttf" />
     <Content Include="Assets\Fonts\seguisbi.ttf" />
     <Content Include="Assets\Fonts\seguisli.ttf" />
+    <Content Include="Assets\Shadow.scale-125.png" />
+    <Content Include="Assets\Shadow.scale-150.png" />
+    <Content Include="Assets\Shadow.scale-200.png" />
+    <Content Include="Assets\Shadow.scale-400.png" />
     <Content Include="Assets\TemplatedPicker.scale-100.png" />
     <Content Include="Assets\TemplatedPicker.scale-125.png" />
     <Content Include="Assets\TemplatedPicker.scale-150.png" />
@@ -584,7 +593,7 @@
       <Version>3.1.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
-      <Version>4.8.0.1269</Version>
+      <Version>5.0.0.2012</Version>
     </PackageReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

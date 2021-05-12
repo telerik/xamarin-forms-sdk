@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             x:Class="SDKBrowser.Examples.ShadowControl.GettingStartedCategory.GettingStartedExample.ShadowGettingStartedXaml">
+    <StackLayout Margin="0, 40" HorizontalOptions="Center">
+        <!-- >> shadow-getting-started-xaml -->
+        <telerikPrimitives:RadShadow CornerRadius="10">
+            <Button Text="Click me"
+                    BackgroundColor="#D6D7D7"
+                    BorderColor="#B5B6B8"
+                    BorderWidth="1"
+                    HeightRequest="44"
+                    Padding="24, 0"
+                    CornerRadius="10"/>
+        </telerikPrimitives:RadShadow>
+        <!-- << shadow-getting-started-xaml -->
+    </StackLayout>
+</ContentView>

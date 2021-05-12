@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikBarcode="clr-namespace:Telerik.XamarinForms.Barcode;assembly=Telerik.XamarinForms.Barcode"
+             x:Class="SDKBrowser.Examples.BarcodeControl.FeaturesCategory.PDF417Example.PDF417">
+    <Grid  Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+        <!-- >> pdf417-example-xaml -->
+        <telerikBarcode:RadBarcode x:Name="Barcode"                                 
+                                   Value="Encoded data which will influence the rendered PDF417">
+            <telerikBarcode:RadBarcode.Symbology>
+                <telerikBarcode:PDF417 SizingMode="Stretch"
+                                Rows="30"
+                                ECLevel="5"/>
+            </telerikBarcode:RadBarcode.Symbology>
+        </telerikBarcode:RadBarcode>
+        <!-- << pdf417-example-xaml -->
+    </Grid>
+</ContentView>

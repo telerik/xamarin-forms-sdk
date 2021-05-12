@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             x:Class="SDKBrowser.Examples.BadgeViewControl.FeaturesCategory.BadgeAnimationExample.BadgeAnimation">
+    <StackLayout VerticalOptions="Center">
+        <!-- >> badgeview-animation -->
+        <telerikPrimitives:RadBadgeView BadgeAnimationDuration="900" 
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Center"
+                                        BadgeAnimationEasing="BounceOut"
+                                        BadgeType="Available">
+            <telerikPrimitives:RadBadgeView.Content>
+                <Image WidthRequest="60"
+                       HeightRequest="60"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center">
+                    <Image.Source >
+                        <OnPlatform x:TypeArguments="ImageSource" Default="sampleAvatar.png">
+                            <On Platform="UWP">Assets\sampleAvatar.png</On>
+                        </OnPlatform>
+                    </Image.Source>
+                </Image>
+            </telerikPrimitives:RadBadgeView.Content>
+        </telerikPrimitives:RadBadgeView>
+        <!-- << badgeview-animation -->
+    </StackLayout>
+</ContentView>

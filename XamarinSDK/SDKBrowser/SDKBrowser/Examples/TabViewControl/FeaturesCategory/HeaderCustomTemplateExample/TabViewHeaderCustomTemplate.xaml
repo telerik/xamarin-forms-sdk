@@ -16,11 +16,11 @@
                                  Margin="0, 0, 0, 8">
                         <Label Text="{TemplateBinding Text}"
                                FontSize="15"
-                               TextColor="Orange"
+                               TextColor="#9E4F2C"
                                VerticalOptions="Center"
                                HorizontalTextAlignment="Start"/>
                         <Label Text="Description"
-                               TextColor="LightBlue"
+                               TextColor="Blue"
                                IsVisible="{TemplateBinding IsSelected}"
                                VerticalTextAlignment="Center"
                                FontSize="12"/>

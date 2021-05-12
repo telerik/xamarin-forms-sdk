@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives" 
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.BadgeViewControl.FeaturesCategory.BadgeAlignPositionExample.BadgeAlignPosition">
+    <StackLayout>
+        <!-- >> badgeview-align-position-offset -->
+        <telerikPrimitives:RadBadgeView BadgeText="Add"
+                                        BadgeFontSize="Medium"
+                                        BadgeHorizontalPosition="Start"
+                                        BadgeVerticalPosition="End"
+                                        BadgeHorizontalAlignment="Start"
+                                        BadgeVerticalAlignment="Start"
+                                        BadgeCornerRadius="0"
+                                        VerticalOptions="Center">
+            <telerikPrimitives:RadBadgeView.Content>
+                <telerikInput:RadButton HeightRequest="40" 
+                                        WidthRequest="80"
+                                        Text="Shopping"
+                                        VerticalOptions="Center"
+                                        BackgroundColor="LightBlue"/>
+            </telerikPrimitives:RadBadgeView.Content>
+        </telerikPrimitives:RadBadgeView>
+        <!-- << badgeview-align-position-offset -->
+    </StackLayout>
+</ContentView>

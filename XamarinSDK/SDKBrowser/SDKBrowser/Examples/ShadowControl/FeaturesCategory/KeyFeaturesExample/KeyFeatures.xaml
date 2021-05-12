@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.ShadowControl.FeaturesCategory.KeyFeaturesExample.KeyFeatures">
+    <StackLayout Margin="5,20,5,5" Spacing="40">
+        <StackLayout Spacing="20" HorizontalOptions="Center">
+            <Label Text="Setting Shadow Color" />
+            <!-- >> shadow-features-color -->
+            <telerikPrimitives:RadShadow Color="#4488F6"
+                                         ShadowOpacity="0.7"
+                                         OffsetX="4"
+                                         OffsetY="4">
+                <telerikInput:RadButton Text="Click me"
+                    TextColor="White"
+                    BackgroundColor="#4488F6"
+                    HeightRequest="44"/>
+            </telerikPrimitives:RadShadow>
+            <!-- << shadow-features-color -->
+        </StackLayout>
+        <StackLayout Spacing="10" HorizontalOptions="Center">
+            <Label Text="Defining Transparency" />
+            <!-- >> shadow-features-opacity -->
+            <telerikPrimitives:RadShadow ShadowOpacity="0.7">
+                <telerikInput:RadButton Text="Click me"
+                    TextColor="White"
+                    BackgroundColor="#4488F6"
+                    HeightRequest="44"/>
+            </telerikPrimitives:RadShadow>
+            <!-- << shadow-features-opacity -->
+        </StackLayout>
+        <StackLayout Spacing="10" HorizontalOptions="Center">
+            <Label Text="Defining Shadow Position" />
+            <!-- >> shadow-features-position -->
+            <telerikPrimitives:RadShadow OffsetX="20"
+                                         OffsetY="20">
+                <telerikInput:RadButton Text="Click me"
+                    TextColor="White"
+                    BackgroundColor="#4488F6"
+                    HeightRequest="44"/>
+            </telerikPrimitives:RadShadow>
+            <!-- << shadow-features-position -->
+        </StackLayout>
+        <StackLayout Spacing="10" HorizontalOptions="Center">
+            <Label Text="Applying Corner Radius" />
+            <!-- >> shadow-features-cornerradius -->
+            <telerikPrimitives:RadShadow CornerRadius="20"
+                                         OffsetX="4"
+                                         OffsetY="4">
+                <telerikInput:RadButton Text="Click me"
+                    TextColor="White"
+                    BackgroundColor="#4488F6"
+                    HeightRequest="44"
+                    CornerRadius="20"/>
+            </telerikPrimitives:RadShadow>
+            <!-- << shadow-features-cornerradius -->
+        </StackLayout>
+        <StackLayout Spacing="10" HorizontalOptions="Center">
+            <Label Text="Applying Blur Radius" />
+            <!-- >> shadow-features-blurradius -->
+            <telerikPrimitives:RadShadow BlurRadius="3"
+                                         OffsetX="4"
+                                         OffsetY="4">
+                <telerikInput:RadButton Text="Click me"
+                    TextColor="White"
+                    BackgroundColor="#4488F6"
+                    HeightRequest="44"/>
+            </telerikPrimitives:RadShadow>
+            <!-- << shadow-features-blurradius -->
+        </StackLayout>
+    </StackLayout>
+</ContentView>

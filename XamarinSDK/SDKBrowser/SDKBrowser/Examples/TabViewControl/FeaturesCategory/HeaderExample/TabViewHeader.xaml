@@ -3,7 +3,14 @@
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives">
-
+    <ContentView.Resources>
+        <!-- >> tabview-features-tabviewheader-styling -->
+        <Style TargetType="telerikPrimitives:TabViewHeaderItem">
+            <Setter Property="TextColor" Value="#9E4F2C"/>
+            <Setter Property="SelectedColor" Value="Blue"/>
+        </Style>
+        <!-- << tabview-features-tabviewheader-styling -->
+    </ContentView.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -16,11 +23,13 @@
             <!--  >> tabview-features-tabviewheader-xaml -->
             <telerikPrimitives:RadTabView x:Name="tabViewHeader" HeaderPosition="Top">
                 <telerikPrimitives:RadTabView.Header>
-                    <telerikPrimitives:TabViewHeader BackgroundColor="Orange" IsScrollable="True">
+                    <telerikPrimitives:TabViewHeader BackgroundColor="#FFE5B6" 
+                                                     IsScrollable="True"
+                                                     ItemSpacing="4">
                     </telerikPrimitives:TabViewHeader>
                 </telerikPrimitives:RadTabView.Header>
                 <telerikPrimitives:RadTabView.Items>
-                    <telerikPrimitives:TabViewItem HeaderText="January " />
+                    <telerikPrimitives:TabViewItem HeaderText="January "/>
                     <telerikPrimitives:TabViewItem HeaderText="February " />
                     <telerikPrimitives:TabViewItem HeaderText="March " />
                     <telerikPrimitives:TabViewItem HeaderText="April " />
@@ -42,12 +51,15 @@
             <!-- >> tabview-features-tabviewheader-overflowbutton-xaml -->
             <telerikPrimitives:RadTabView x:Name="tabViewHeaderOverfowButton" HeaderPosition="Bottom">
                 <telerikPrimitives:RadTabView.Header>
-                    <telerikPrimitives:TabViewHeader BackgroundColor="Orange">
+                    <telerikPrimitives:TabViewHeader BackgroundColor="#FFE5B6" 
+                                                     ItemSpacing="4"
+                                                     OverflowPopupBackgroundColor="#FFE5B6">
                         <telerikPrimitives:TabViewHeader.OverflowButtonTemplate>
                             <DataTemplate>
                                 <Label Margin="3,0,3,0"
-                                       BackgroundColor="#CA5100"
+                                       BackgroundColor="#FFE5B6"
                                        Text=" + "
+                                       TextColor="#9E4F2C"
                                        VerticalOptions="Center"/>
                             </DataTemplate>
                         </telerikPrimitives:TabViewHeader.OverflowButtonTemplate>

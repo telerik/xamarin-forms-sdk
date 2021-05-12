@@ -636,10 +636,10 @@
       <Version>1.5.3.2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
-      <Version>4.8.0.1269</Version>
+      <Version>5.0.0.2012</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.TestCloud.Agent">
-      <Version>0.21.9</Version>
+      <Version>0.22.2</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -665,6 +665,30 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\RichTextEditor%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Shadow%401,5x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Shadow%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Shadow%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Shadow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Badge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Badge%401,5x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Badge%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Badge%403x.png" />
   </ItemGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

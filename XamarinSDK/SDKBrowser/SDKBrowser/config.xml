@@ -142,6 +142,70 @@
       </Categories>
     </Control>
     <Control>
+      <Name>BadgeView</Name>
+      <Title>BadgeView</Title>
+      <Icon>Badge.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>BadgeViewGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>BadgeViewGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>BadgeViewContent</Page>
+              <Name>BadgeViewContent</Name>
+              <Title>BadgeView Content and Text</Title>
+            </Example>
+            <Example>
+              <Page>BadgeAlignPosition</Page>
+              <Name>BadgeAlignPosition</Name>
+              <Title>Badge Align and Position</Title>
+            </Example>
+            <Example>
+              <Page>BadgeAnimation</Page>
+              <Name>BadgeAnimation</Name>
+              <Title>Badge Animation</Title>
+            </Example>
+            <Example>
+              <Page>BadgeTypes</Page>
+              <Name>BadgeTypes</Name>
+              <Title>Badge Types</Title>
+            </Example>
+            <Example>
+              <Page>Styling</Page>
+              <Name>Styling</Name>
+              <Title>Styling</Title>
+            </Example>
+            <Example>
+              <Page>ControlTemplate</Page>
+              <Name>ControlTemplate</Name>
+              <Title>Badge ControlTemplate</Title>
+            </Example>
+            <Example>
+              <Page>BadgeViewIntegration</Page>
+              <Name>BadgeViewIntegration</Name>
+              <Title>Integration with other controls</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
       <Name>Barcode</Name>
       <Title>Barcode</Title>
       <Icon>Barcode.png</Icon>
@@ -165,6 +229,32 @@
               <Page>KeyFeatures</Page>
               <Name>KeyFeatures</Name>
               <Title>Key Features</Title>
+            </Example>
+            <Example>
+              <Page>PDF417</Page>
+              <Name>PDF417</Name>
+              <Title>PDF417</Title>
+            </Example>
+            <Example>
+              <Page>QRCode</Page>
+              <Name>QRCode</Name>
+              <Title>QRCode</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>SwissQRCode</Name>
+          <Title>SwissQR Code</Title>
+          <Examples>
+            <Example>
+              <Page>SwissQRCode</Page>
+              <Name>SwissQRCode</Name>
+              <Title>SwissQR Code</Title>
+            </Example>
+            <Example>
+              <Page>SwissQRCodeConfiguration</Page>
+              <Name>SwissQRCodeConfiguration</Name>
+              <Title>Configuration</Title>
             </Example>
           </Examples>
         </Category>
@@ -3012,6 +3102,35 @@
               <Page>Location</Page>
               <Name>Location</Name>
               <Title>Location</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>Shadow</Name>
+      <Title>Shadow</Title>
+      <Icon>Shadow.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>ShadowGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>KeyFeatures</Page>
+              <Name>KeyFeatures</Name>
+              <Title>Key Features</Title>
             </Example>
           </Examples>
         </Category>

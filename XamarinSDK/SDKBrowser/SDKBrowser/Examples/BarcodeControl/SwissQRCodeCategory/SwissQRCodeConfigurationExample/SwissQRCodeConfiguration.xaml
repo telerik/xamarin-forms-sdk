@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikBarcode="clr-namespace:Telerik.XamarinForms.Barcode;assembly=Telerik.XamarinForms.Barcode"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.BarcodeControl.SwissQRCodeCategory.SwissQRCodeConfigurationExample.SwissQRCodeConfiguration">
+    <ContentView.Resources>
+        <Style TargetType="Label">
+            <Setter Property="WidthRequest" Value="100"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="VerticalTextAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="Entry">
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+        </Style>
+        <Style TargetType="Picker">
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+        </Style>
+    </ContentView.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <telerikBarcode:RadBarcode x:Name="barcode" 
+                                       HorizontalOptions="Start" 
+                                       Value="{Binding Value}"
+                                       ErrorMessage="{Binding Errors}">
+            </telerikBarcode:RadBarcode>
+            <Editor Grid.Column="1" Text="{Binding Errors}"/>
+        </Grid>
+
+        <ScrollView Grid.Row="1" Margin="10,0">
+            <StackLayout>
+                <Label Text="Mandatory Fields" FontAttributes="Bold"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Iban:"/>
+                    <Entry Text="{Binding IbanText}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="IbanType:"/>
+                    <Picker x:Name="IbanType" SelectedItem="{Binding IbanType}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Currency:" />
+                    <Picker x:Name="Currency" SelectedItem="{Binding CodeCurrency}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="CreditorName:"/>
+                    <Entry Text="{Binding CreditorName}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="CreditorCountry:"/>
+                    <Entry Text="{Binding CreditorCountry}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="CreditorZipCode:"/>
+                    <Entry Text="{Binding CreditorZipCode}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="CreditorCity:"/>
+                    <Entry Text="{Binding CreditorCity}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="CreditorStreet (not mandatory):"/>
+                    <Entry Text="{Binding CreditorStreet}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="CreditorHouseNumber (not mandatory):"/>
+                    <Entry Text="{Binding CreditorHouseNumber}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="ReferenceType:"/>
+                    <Picker x:Name="ReferenceType" SelectedItem="{Binding ReferenceType}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Reference (not mandatory):"/>
+                    <Entry Text="{Binding Reference}"/>
+                </StackLayout>
+
+                <Label Text="Non-Mandatory Fields" FontAttributes="Bold" Margin="0,10,0,0"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="HasAdditionalInfo"/>
+                    <Switch IsToggled="{Binding HasAdditionalInfo}" />
+                </StackLayout>
+                <StackLayout IsEnabled="{Binding HasAditionalInfo}">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="UnstructuredMessage:"/>
+                        <Entry Text="{Binding UnstructuredMessage}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="BillingInfo:"/>
+                        <Entry Text="{Binding BillingInformation}"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="HasDebtor"/>
+                    <Switch IsToggled="{Binding HasDebtor}" />
+                </StackLayout>
+                <StackLayout IsEnabled="{Binding HasDebtor}">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="DebtorName:"/>
+                        <Entry Text="{Binding DebtorName}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="DebtorCountry:"/>
+                        <Entry Text="{Binding DebtorCountry}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="DebtorZipCode:"/>
+                        <Entry Text="{Binding DebtorZipCode}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="DebtorCity:"/>
+                        <Entry Text="{Binding DebtorCity}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="DebtorStreet (not mandatory):"/>
+                        <Entry Text="{Binding DebtorStreet}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="DebtorHouseNumber (not mandatory):"/>
+                        <Entry Text="{Binding DebtorHouseNumber}"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="HasAmount"/>
+                    <Switch IsToggled="{Binding HasAmount}" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" IsEnabled="{Binding HasAmount}">
+                    <Label Text="Amount:"/>
+                    <telerikInput:RadNumericInput Minimum="0" HorizontalOptions="FillAndExpand" Value="{Binding Amount, Mode=TwoWay}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="HasAlternativeProcedures"/>
+                    <Switch IsToggled="{Binding HasAlternativeProcedures}" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" IsEnabled="{Binding HasAlternativeProcedures}">
+                    <Label Text="AlternativeProcedure1:"/>
+                    <Entry  Text="{Binding AlternativeProcedure1}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" IsEnabled="{Binding HasAlternativeProcedures}">
+                    <Label Text="AlternativeProcedure2:"/>
+                    <Entry Text="{Binding AlternativeProcedure2}"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentView>

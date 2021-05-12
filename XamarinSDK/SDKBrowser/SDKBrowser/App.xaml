@@ -42,7 +42,7 @@
             <x:String x:Key="ExpandedIconText">&#xE80D;</x:String>
             <x:String x:Key="CollapsedIconText">&#xE806;</x:String>
             <x:String x:Key="HyperlinkIconText">&#xF08E;</x:String>
-            <x:String x:Key="CheckIconText">&#xE909;</x:String>
+            <x:String x:Key="CheckIconText">&#xE809;</x:String>
             <x:String x:Key="CancelIconText">&#xE809A;</x:String>
 
             <telerikCommon:InvertedBooleanConverter x:Key="InvertedBooleanConverter" />

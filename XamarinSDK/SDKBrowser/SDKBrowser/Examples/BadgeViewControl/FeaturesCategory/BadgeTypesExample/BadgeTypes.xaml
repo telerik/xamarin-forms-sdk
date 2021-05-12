@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives" 
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.BadgeViewControl.FeaturesCategory.BadgeTypesExample.BadgeTypes">
+    <!-- >> badgeview-badge-types -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <telerikInput:RadComboBox x:Name="selectBadgeType"
+                                  Margin="0,0,0,20"/>
+        <StackLayout VerticalOptions="Center" 
+                     Grid.Row="1"
+                     HorizontalOptions="Center">
+            <telerikPrimitives:RadBadgeView x:Name="badge" 
+                                            BadgeFontSize="14"
+                                            BadgeVerticalPosition="End"
+                                            BadgeOffsetX="-15"
+                                            BadgeOffsetY="-10"
+                                            HorizontalOptions="Center"
+                                            VerticalOptions="Center">
+                <telerikPrimitives:RadBadgeView.Content>
+                    <Image WidthRequest="100"
+                           HeightRequest="100">
+                        <Image.Source >
+                            <OnPlatform x:TypeArguments="ImageSource" Default="sampleAvatar.png">
+                                <On Platform="UWP">Assets\sampleAvatar.png</On>
+                            </OnPlatform>
+                        </Image.Source>
+                    </Image>
+                </telerikPrimitives:RadBadgeView.Content>
+            </telerikPrimitives:RadBadgeView>
+        </StackLayout>
+    </Grid>
+    <!-- << badgeview-badge-types -->
+</ContentView>

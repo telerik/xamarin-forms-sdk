@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             x:Class="SDKBrowser.Examples.BadgeViewControl.FeaturesCategory.ControlTemplateExample.ControlTemplate">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <!-- >> badgeview-badge-custom-control-template -->
+            <Style TargetType="telerikPrimitives:Badge">
+                <Setter Property="ControlTemplate">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <!-- you can change the control tempalte in order to customize the bage default look  -->
+                            <telerikPrimitives:RadBorder HeightRequest="30"
+                                                         WidthRequest="60"
+                                                         BackgroundColor="#0DA6FF"
+                                                         CornerRadius="15">
+                                <StackLayout Orientation="Horizontal"
+                                             VerticalOptions="Center"
+                                             HorizontalOptions="Center">
+                                    <Label Text="{StaticResource CheckIconText}"
+                                           TextColor="White"
+                                           VerticalOptions="Center"
+                                           FontFamily="{StaticResource IconsFontFamily}"/>
+                                    <Label Text="234" 
+                                           TextColor="White"/>
+                                </StackLayout>
+                            </telerikPrimitives:RadBorder>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <!-- << badgeview-badge-custom-control-template -->
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackLayout>
+            <StackLayout.Resources>
+                <ResourceDictionary>
+                    <!-- >> badgeview-badge-control-template -->
+                    <Style TargetType="telerikPrimitives:Badge">
+                        <Setter Property="ControlTemplate">
+                            <Setter.Value>
+                                <ControlTemplate>
+                                    <!-- you can change the control tempalte in order to customize the bage default look  -->
+                                    <telerikPrimitives:RadBorder BorderThickness="{TemplateBinding BorderThickness}"
+                                                                 BorderColor="{TemplateBinding BorderColor}"
+                                                                 CornerRadius="{TemplateBinding CornerRadius}"
+                                                                 BackgroundColor="{TemplateBinding BackgroundColor}">
+                                        <Label x:Name="PART_BadgeContent"
+                                               Text="{TemplateBinding Text}" 
+                                               TextColor="{TemplateBinding TextColor}"
+                                               Margin="{TemplateBinding TextMargin}"
+                                               FontSize="{TemplateBinding FontSize}"
+                                               FontFamily="{TemplateBinding FontFamily}"
+                                               FontAttributes="{TemplateBinding FontAttributes}"
+                                               HorizontalTextAlignment="Center"
+                                               VerticalTextAlignment="Center" />
+                                    </telerikPrimitives:RadBorder>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                    <!-- << badgeview-badge-control-template -->
+                </ResourceDictionary>
+            </StackLayout.Resources>
+            <Label Text="Badge Default ControlTemplate"/>
+            <!-- >> badgeview-controltemplate -->
+            <telerikPrimitives:RadBadgeView VerticalOptions="Start"
+                                            HorizontalOptions="Start">
+                <telerikPrimitives:RadBadgeView.Content>
+                    <BoxView BackgroundColor="LightGray"
+                             VerticalOptions="Center"
+                             WidthRequest="80"
+                             HeightRequest="80"
+                             HorizontalOptions="Center"/>
+                </telerikPrimitives:RadBadgeView.Content>
+            </telerikPrimitives:RadBadgeView>
+            <!-- << badgeview-controltemplate -->
+        </StackLayout>
+        <StackLayout Grid.Row="1">
+            <Label Text="Badge Custom ControlTemplate"/>
+            <!-- >> badgeview-custom-controltemplate -->
+            <telerikPrimitives:RadBadgeView VerticalOptions="Start"
+                                            HorizontalOptions="Start">
+                <telerikPrimitives:RadBadgeView.Content>
+                    <BoxView BackgroundColor="LightGray"
+                             VerticalOptions="Center"
+                             HorizontalOptions="Center"
+                             WidthRequest="80"
+                             HeightRequest="80"/>
+                </telerikPrimitives:RadBadgeView.Content>
+            </telerikPrimitives:RadBadgeView>
+            <!-- << badgeview-custom-controltemplate -->
+        </StackLayout>
+    </Grid>
+</ContentView>

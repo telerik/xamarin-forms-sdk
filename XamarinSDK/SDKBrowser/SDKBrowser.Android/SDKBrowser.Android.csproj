@@ -443,6 +443,12 @@
     <AndroidResource Include="Resources\drawable-hdpi\RichTextEditor.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\RichTextEditor.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\RichTextEditor.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Shadow.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Shadow.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Shadow.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Badge.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Badge.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Badge.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\image.png" />
@@ -481,7 +487,7 @@
     <PackageReference Include="Xamarin.AndroidX.RecyclerView">
       <Version>1.1.0.1</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1269" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
     <PackageReference Include="Xamarin.Google.Android.Material">
       <Version>1.0.0.1</Version>

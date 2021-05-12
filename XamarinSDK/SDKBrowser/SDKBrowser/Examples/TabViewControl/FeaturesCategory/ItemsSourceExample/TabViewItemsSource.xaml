@@ -10,7 +10,9 @@
             <ControlTemplate x:Key="navHeaderTemplate">
                 <Grid BackgroundColor="Transparent" Margin="5">
                     <BoxView IsVisible="{TemplateBinding IsSelected}" BackgroundColor="LightGray" />
-                    <Label Text="{Binding HeaderTitle}" HorizontalTextAlignment="Center" />
+                    <Label Text="{Binding HeaderTitle}" 
+                           VerticalTextAlignment="Center" 
+                           HorizontalTextAlignment="Center"/>
                 </Grid>
             </ControlTemplate>
             <ControlTemplate x:Key="navContentTemplate">

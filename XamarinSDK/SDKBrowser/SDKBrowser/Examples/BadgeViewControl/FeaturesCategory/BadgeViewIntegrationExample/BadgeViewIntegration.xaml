@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives" 
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input" 
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls"
+             x:Class="SDKBrowser.Examples.BadgeViewControl.FeaturesCategory.BadgeViewIntegrationExample.BadgeViewIntegration">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <Style TargetType="telerikPrimitives:RadBadgeView" x:Key="DefaultBadgeStyle">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="BadgeHorizontalAlignment" Value="Start"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackLayout Orientation="Horizontal" 
+                     Spacing="10">
+            <!-- >> badge-integration-image -->
+            <telerikPrimitives:RadBadgeView BadgeType="Dot"
+                                            BadgeOffsetY="4"
+                                            BadgeHorizontalAlignment="End"
+                                            BadgeBackgroundColor="Blue">
+                <telerikPrimitives:RadBadgeView.Content>
+                    <Image WidthRequest="32"
+                           HeightRequest="32">
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="FileImageSource">
+                                <On Platform="iOS,Android">HamburgerMenu.png</On>
+                                <On Platform="UWP">Assets\HamburgerMenu.png</On>
+                            </OnPlatform>
+                        </Image.Source>
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ImageTapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </telerikPrimitives:RadBadgeView.Content>
+            </telerikPrimitives:RadBadgeView>
+            <!-- << badge-integration-image -->
+            <Label VerticalOptions="Center" Text="SideDrawer" />
+        </StackLayout>
+        <telerikPrimitives:RadSideDrawer x:Name="drawer" 
+                                         Grid.Row="1" 
+                                         DrawerLength="250">
+            <telerikPrimitives:RadSideDrawer.MainContent>
+                <!-- >> badge-integration-tabview -->
+                <telerikPrimitives:RadTabView x:Name="tabView"
+                                              HeaderPosition="Top">
+                    <telerikPrimitives:RadTabView.Items>
+                        <telerikPrimitives:TabViewItem>
+                            <telerikPrimitives:TabViewItem.Header>
+                                <telerikPrimitives:TabViewHeaderItem>
+                                    <telerikPrimitives:RadBadgeView BadgeText="99+"
+                                                                    BadgeBackgroundColor="#FF6F00"
+                                                                    Style="{StaticResource DefaultBadgeStyle}">
+                                        <telerikPrimitives:RadBadgeView.Content>
+                                            <Label Text="Daily Tasks"/>
+                                        </telerikPrimitives:RadBadgeView.Content>
+                                    </telerikPrimitives:RadBadgeView>
+                                </telerikPrimitives:TabViewHeaderItem>
+                            </telerikPrimitives:TabViewItem.Header>
+                            <telerikPrimitives:TabViewItem.Content>
+                                <Label Text="List with all published books:"/>
+                            </telerikPrimitives:TabViewItem.Content>
+                        </telerikPrimitives:TabViewItem>
+                        <telerikPrimitives:TabViewItem>
+                            <telerikPrimitives:TabViewItem.Header>
+                                <telerikPrimitives:TabViewHeaderItem>
+                                    <telerikPrimitives:RadBadgeView BadgeText="21"
+                                                                    Style="{StaticResource DefaultBadgeStyle}">
+                                        <telerikPrimitives:RadBadgeView.Content>
+                                            <Label Text="Calls"/>
+                                        </telerikPrimitives:RadBadgeView.Content>
+                                    </telerikPrimitives:RadBadgeView>
+                                </telerikPrimitives:TabViewHeaderItem>
+                            </telerikPrimitives:TabViewItem.Header>
+                            <telerikPrimitives:TabViewItem.Content>
+                                <Label Text="Recent calls: "/>
+                            </telerikPrimitives:TabViewItem.Content>
+                        </telerikPrimitives:TabViewItem>
+                        <telerikPrimitives:TabViewItem>
+                            <telerikPrimitives:TabViewItem.Header>
+                                <telerikPrimitives:TabViewHeaderItem>
+                                    <telerikPrimitives:RadBadgeView BadgeText="42" 
+                                                                    BadgeBackgroundColor="#56AF51"
+                                                                    Style="{StaticResource DefaultBadgeStyle}">
+                                        <telerikPrimitives:RadBadgeView.Content>
+                                            <Label Text="Completed"/>
+                                        </telerikPrimitives:RadBadgeView.Content>
+                                    </telerikPrimitives:RadBadgeView>
+                                </telerikPrimitives:TabViewHeaderItem>
+                            </telerikPrimitives:TabViewItem.Header>
+                            <telerikPrimitives:TabViewItem.Content>
+                                <Label Text="All completed tasks for this week: "/>
+                            </telerikPrimitives:TabViewItem.Content>
+                        </telerikPrimitives:TabViewItem>
+                    </telerikPrimitives:RadTabView.Items>
+                </telerikPrimitives:RadTabView>
+                <!-- << badge-integration-tabview -->
+            </telerikPrimitives:RadSideDrawer.MainContent>
+            <telerikPrimitives:RadSideDrawer.DrawerContent>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Text="Available books"/>
+                    <!-- >> badge-integration-listview -->
+                    <telerikDataControls:RadListView ItemsSource="{Binding Source}" 
+                                                     x:Name="listView"
+                                                     Grid.Row="1">
+                        <telerikDataControls:RadListView.ItemTemplate>
+                            <DataTemplate>
+                                <telerikListView:ListViewTemplateCell>
+                                    <telerikListView:ListViewTemplateCell.View>
+                                        <StackLayout Orientation="Horizontal" Margin="10, 10, 10, 0">
+                                            <telerikPrimitives:RadBadgeView BadgeText="{Binding Info}"
+                                                                            BadgeTextColor="Black"
+                                                                            Style="{StaticResource DefaultBadgeStyle}"
+                                                                            BadgeBackgroundColor="LightBlue">
+                                                <telerikPrimitives:RadBadgeView.Content>
+                                                    <Label Text="{Binding Title}" 
+                                                           FontSize="16" 
+                                                           FontAttributes="Bold" 
+                                                           TextColor="Black" 
+                                                           VerticalOptions="Center" />
+                                                </telerikPrimitives:RadBadgeView.Content>
+                                            </telerikPrimitives:RadBadgeView>
+                                        </StackLayout>
+                                    </telerikListView:ListViewTemplateCell.View>
+                                </telerikListView:ListViewTemplateCell>
+                            </DataTemplate>
+                        </telerikDataControls:RadListView.ItemTemplate>
+                    </telerikDataControls:RadListView>
+                    <!-- << badge-integration-listview -->
+                </Grid>
+            </telerikPrimitives:RadSideDrawer.DrawerContent>
+        </telerikPrimitives:RadSideDrawer>
+    </Grid>
+</ContentView>

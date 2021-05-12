@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             x:Class="SDKBrowser.Examples.BadgeViewControl.FeaturesCategory.StylingExample.Styling">
+    <StackLayout>
+        <!-- >> badgeview-styling -->
+        <telerikPrimitives:RadBadgeView BadgeText="{StaticResource ExpandedIconText}"
+                                        BadgeFontFamily="{StaticResource IconsFontFamily}"
+                                        BadgeTextColor="White"
+                                        BadgeBorderThickness="2"
+                                        BadgeCornerRadius="3"
+                                        BadgeMinimumHeight="25"
+                                        BadgeMinimumWidth="25"
+                                        BadgeFontSize="18"
+                                        BadgeBorderColor="#0DA6FF"
+                                        HorizontalOptions="Center"
+                                        BadgeBackgroundColor="#FF6F00"
+                                        x:Name="badgeView">
+            <telerikPrimitives:RadBadgeView.Content>
+                <Image WidthRequest="100"
+                       HeightRequest="100">
+                    <Image.Source >
+                        <OnPlatform x:TypeArguments="ImageSource" Default="custom_toolbar.png">
+                            <On Platform="UWP">Assets\custom_toolbar.png</On>
+                        </OnPlatform>
+                    </Image.Source>
+                </Image>
+            </telerikPrimitives:RadBadgeView.Content>
+        </telerikPrimitives:RadBadgeView>
+        <!-- << badgeview-styling -->
+    </StackLayout>
+</ContentView>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             x:Class="SDKBrowser.Examples.BadgeViewControl.FeaturesCategory.BadgeViewContentExample.BadgeViewContent">
+    <StackLayout>
+        <!-- >> badgeview-content -->
+        <telerikPrimitives:RadBadgeView BadgeText="0"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Center"
+                                        x:Name="badgeView">
+            <telerikPrimitives:RadBadgeView.Content>
+                <Button Text="Click me!"
+                        Clicked="Button_Clicked"
+                        BorderColor="Gray"
+                        BorderWidth="2"
+                        Padding="3"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"/>
+            </telerikPrimitives:RadBadgeView.Content>
+        </telerikPrimitives:RadBadgeView>
+        <!-- << badgeview-content -->
+    </StackLayout>
+</ContentView>
