@@ -238,9 +238,9 @@ namespace SDKBrowser.Examples.TabViewControl.FeaturesCategory.ItemsSourceExample
                 SetInheritedBindingContext(child, this.BindingContext);
             }
 
-            protected override void OnChildRemoved(Element child)
+            protected override void OnChildRemoved(Element child, int oldLogicalIndex)
             {
-                base.OnChildRemoved(child);
+                base.OnChildRemoved(child, oldLogicalIndex);
 
                 this.children.Remove(child);
                 SetInheritedBindingContext(child, null);

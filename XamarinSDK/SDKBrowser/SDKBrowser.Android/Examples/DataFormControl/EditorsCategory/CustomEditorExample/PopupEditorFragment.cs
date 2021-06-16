@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
+using AndroidX.Fragment.App;
 using Com.Telerik.Widget.Dataform.Engine;
 
 namespace SDKBrowser.Droid.Examples.DataFormControl.EditorsCategory.CustomEditorExample

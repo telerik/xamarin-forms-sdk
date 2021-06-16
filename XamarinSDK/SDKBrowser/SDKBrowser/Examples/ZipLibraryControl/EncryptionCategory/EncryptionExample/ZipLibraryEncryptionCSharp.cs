@@ -39,7 +39,7 @@ namespace SDKBrowser.Examples.ZipLibraryControl.EncryptionCategory.EncryptionExa
 				{
 					Children = {
 						new Label { Text = "Write some text:" },
-						new Frame { Content = inputEditor, OutlineColor = Color.Gray, BackgroundColor = Color.Transparent, Padding = new Thickness(0), HasShadow = false },
+						new Frame { Content = inputEditor, BorderColor = Color.Gray, BackgroundColor = Color.Transparent, Padding = new Thickness(0), HasShadow = false },
 						encryptionPassword,
 						encryptButton,
 						decryptionPassword,

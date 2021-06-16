@@ -12,9 +12,7 @@ namespace SDKBrowser.Examples.BadgeViewControl.FeaturesCategory.BadgeTypesExampl
         {
             InitializeComponent();
             // >> badgeview-badge-types-code-behind
-            this.selectBadgeType.ItemsSource = Enum.GetValues(typeof(BadgeType));
-            this.selectBadgeType.SelectedIndex = 0;
-            this.badge.SetBinding(RadBadgeView.BadgeTypeProperty, new Binding(nameof(this.selectBadgeType.SelectedItem), source: this.selectBadgeType));
+            this.listView.ItemsSource = Enum.GetValues(typeof(BadgeType));
             // << badgeview-badge-types-code-behind
         }
     }

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Android.App;
 using Android.Views;
 using Android.Widget;
+using AndroidX.Fragment.App;
 using Com.Telerik.Widget.Dataform.Engine;
 using Com.Telerik.Widget.Dataform.Visualization;
 using Com.Telerik.Widget.Dataform.Visualization.Core;

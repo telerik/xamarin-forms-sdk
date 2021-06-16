@@ -29,19 +29,19 @@ namespace SDKBrowser.Examples.SideDrawerControl.GettingStartedCategory.GettingSt
                 WidthRequest = 32,
                 HeightRequest = 32,
                 BorderWidth = 0,
-                BorderRadius = 0,
+                CornerRadius = 0,
                 BorderColor = Color.Transparent,
                 BackgroundColor = Color.Transparent
             };
 
             if (Device.RuntimePlatform == Device.UWP)
             {
-                hamburgerButton.Image = (FileImageSource)
+                hamburgerButton.ImageSource = (FileImageSource)
                     ImageSource.FromFile("Assets\\HamburgerMenu.png");
             }
             else
             {
-                hamburgerButton.Image = (FileImageSource)
+                hamburgerButton.ImageSource = (FileImageSource)
                     ImageSource.FromFile("HamburgerMenu.png");
             }
 

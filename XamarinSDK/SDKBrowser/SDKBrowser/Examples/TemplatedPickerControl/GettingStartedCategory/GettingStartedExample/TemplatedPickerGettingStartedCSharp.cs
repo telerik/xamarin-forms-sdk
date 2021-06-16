@@ -24,7 +24,7 @@ namespace SDKBrowser.Examples.TemplatedPickerControl.GettingStartedCategory.Gett
     {
         public TemplatedPickerCalendar()
         {
-            this.SetBinding(RadCalendar.SelectedDateProperty, new TemplateBinding("SelectedValue", BindingMode.TwoWay));
+            this.SetBinding(RadCalendar.SelectedDateProperty, new Binding("SelectedValue", mode: BindingMode.TwoWay, source: RelativeBindingSource.TemplatedParent));
         }
     }
     // << templatedpicker-getting-started-custom-calendar

@@ -6,6 +6,11 @@
     <StackLayout Margin="0, 40" HorizontalOptions="Center">
         <!-- >> shadow-getting-started-xaml -->
         <telerikPrimitives:RadShadow CornerRadius="10">
+            <telerikPrimitives:RadShadow.BackgroundColor>
+                <OnPlatform x:TypeArguments="Color" Default="Default">
+                    <On Platform="UWP" Value="#F1F2F5"/>
+                </OnPlatform>
+            </telerikPrimitives:RadShadow.BackgroundColor>
             <Button Text="Click me"
                     BackgroundColor="#D6D7D7"
                     BorderColor="#B5B6B8"

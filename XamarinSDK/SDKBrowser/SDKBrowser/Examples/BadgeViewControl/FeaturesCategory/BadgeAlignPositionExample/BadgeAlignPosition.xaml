@@ -4,22 +4,22 @@
              xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives" 
              xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
              x:Class="SDKBrowser.Examples.BadgeViewControl.FeaturesCategory.BadgeAlignPositionExample.BadgeAlignPosition">
-    <StackLayout>
+    <StackLayout HorizontalOptions="Center">
         <!-- >> badgeview-align-position-offset -->
-        <telerikPrimitives:RadBadgeView BadgeText="Add"
-                                        BadgeFontSize="Medium"
-                                        BadgeHorizontalPosition="Start"
-                                        BadgeVerticalPosition="End"
-                                        BadgeHorizontalAlignment="Start"
-                                        BadgeVerticalAlignment="Start"
-                                        BadgeCornerRadius="0"
+        <telerikPrimitives:RadBadgeView BadgeText="12"
+                                        BadgeVerticalPosition="Center"
+                                        BadgeHorizontalAlignment="End"
+                                        BadgeOffsetX="-5"
                                         VerticalOptions="Center">
             <telerikPrimitives:RadBadgeView.Content>
-                <telerikInput:RadButton HeightRequest="40" 
-                                        WidthRequest="80"
-                                        Text="Shopping"
+                <telerikInput:RadButton HeightRequest="40"
+                                        WidthRequest="180"
+                                        CornerRadius="20"
+                                        Text="Shopping Cart"
+                                        TextColor="White"
                                         VerticalOptions="Center"
-                                        BackgroundColor="LightBlue"/>
+                                        VerticalContentAlignment="Center"
+                                        BackgroundColor="#0E88F2"/>
             </telerikPrimitives:RadBadgeView.Content>
         </telerikPrimitives:RadBadgeView>
         <!-- << badgeview-align-position-offset -->

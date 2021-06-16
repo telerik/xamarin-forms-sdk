@@ -1,6 +1,6 @@
 ﻿using System;
 using SDKBrowser.Common;
-using Xamarin.Forms;
+using Xamarin.Essentials;
 
 namespace SDKBrowser.Services
 {
@@ -31,7 +31,7 @@ namespace SDKBrowser.Services
                 category.Name, example.Name);
             var uri = new Uri(url);
 
-            Device.OpenUri(uri);
+            Launcher.OpenAsync(uri);
         }
     }
 }

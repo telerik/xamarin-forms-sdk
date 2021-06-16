@@ -48,6 +48,11 @@
             <telerikPrimitives:RadShadow CornerRadius="20"
                                          OffsetX="4"
                                          OffsetY="4">
+                <telerikPrimitives:RadShadow.BackgroundColor>
+                    <OnPlatform x:TypeArguments="Color" Default="Default">
+                        <On Platform="UWP" Value="#F1F2F5"/>
+                    </OnPlatform>
+                </telerikPrimitives:RadShadow.BackgroundColor>
                 <telerikInput:RadButton Text="Click me"
                     TextColor="White"
                     BackgroundColor="#4488F6"

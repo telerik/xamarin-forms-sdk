@@ -58,7 +58,7 @@ namespace SDKBrowser.Droid.Examples.CalendarControl.StylingCategory.CustomRender
                 calendar.Get(Java.Util.CalendarField.Year) == currentYear)
             {
                 calendarCell.BorderColor = Android.Graphics.Color.ParseColor("#00FF44");
-                calendarCell.BorderWidth = Forms.Context.ToPixels(2);
+                calendarCell.BorderWidth = global::Android.App.Application.Context.ToPixels(2);
 
                 calendarCell.Typeface = boldTypeface;
             }

@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using Telerik.Windows.Documents.Fixed.Model.Actions;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -43,7 +44,7 @@ namespace SDKBrowser.Examples.PdfViewerControl.FeaturesCategory.LinkAnnotationEx
                     {
                         Device.BeginInvokeOnMainThread(() =>
                         {
-                            Device.OpenUri(uriAction.Uri);
+                            Launcher.OpenAsync(uriAction.Uri);
                         });
                     }
                 });

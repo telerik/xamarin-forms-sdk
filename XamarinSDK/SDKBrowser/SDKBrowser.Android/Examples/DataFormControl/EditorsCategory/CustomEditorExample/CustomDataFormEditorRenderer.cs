@@ -1,4 +1,4 @@
-﻿using Android.App;
+﻿using AndroidX.AppCompat.App;
 using Com.Telerik.Widget.Dataform.Engine;
 using Com.Telerik.Widget.Dataform.Visualization;
 using Com.Telerik.Widget.Dataform.Visualization.Core;
@@ -22,7 +22,7 @@ namespace SDKBrowser.Droid.Examples.DataFormControl.EditorsCategory.CustomEditor
         {
             if (property.PropertyName == "Option")
             {
-                return new PopupEditor(form, nativeProperty, ((Activity) this.Context).FragmentManager);
+                return new PopupEditor(form, nativeProperty, ((AppCompatActivity)this.Context).SupportFragmentManager);
             }
 
             return base.GetCustomEditorForProperty(form, nativeProperty, property);

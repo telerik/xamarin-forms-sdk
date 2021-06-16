@@ -60,7 +60,7 @@ namespace SDKBrowser.Droid
                 Intent intent = new Intent(Intent.ActionView);
                 intent.SetDataAndType(path, mimeType);
 
-                Forms.Context.StartActivity(Intent.CreateChooser(intent, "Choose App"));
+                global::Android.App.Application.Context.StartActivity(Intent.CreateChooser(intent, "Choose App"));
             }
 
             return;
