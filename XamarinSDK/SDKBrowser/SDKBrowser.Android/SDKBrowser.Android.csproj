@@ -449,6 +449,7 @@
     <AndroidResource Include="Resources\drawable-hdpi\Badge.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\Badge.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\Badge.png" />
+    <AndroidResource Include="Resources\xml\file_paths.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\image.png" />
@@ -466,28 +467,7 @@
     <PackageReference Include="SkiaSharp.Views.Forms">
       <Version>1.68.0</Version>
     </PackageReference>
-    <PackageReference Include="Xam.Plugins.Settings">
-      <Version>3.1.1</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.AndroidX.AppCompat">
-      <Version>1.1.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.AndroidX.AppCompat.Resources">
-      <Version>1.1.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.AndroidX.Browser">
-      <Version>1.2.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4">
-      <Version>1.0.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData">
-      <Version>2.2.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.AndroidX.RecyclerView">
-      <Version>1.1.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2083" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
     <PackageReference Include="Xamarin.Google.Android.Material">
       <Version>1.0.0.1</Version>

@@ -53,14 +53,19 @@ namespace SDKBrowser.Droid
 
             if (file.Exists())
             {
-                Android.Net.Uri path = Android.Net.Uri.FromFile(file);
+                var context = Android.App.Application.Context;
+                Android.Net.Uri path = AndroidX.Core.Content.FileProvider.GetUriForFile(context, "SDKBrowser.Android.fileprovider", file);
 
                 string extension = Android.Webkit.MimeTypeMap.GetFileExtensionFromUrl(Android.Net.Uri.FromFile(file).ToString());
                 string mimeType = Android.Webkit.MimeTypeMap.Singleton.GetMimeTypeFromExtension(extension);
                 Intent intent = new Intent(Intent.ActionView);
                 intent.SetDataAndType(path, mimeType);
+                intent.AddFlags(ActivityFlags.GrantReadUriPermission);
 
-                global::Android.App.Application.Context.StartActivity(Intent.CreateChooser(intent, "Choose App"));
+                var chooser = Intent.CreateChooser(intent, "Choose App");
+                chooser.SetFlags(ActivityFlags.NewTask);
+                chooser.AddFlags(ActivityFlags.GrantReadUriPermission);
+                context.StartActivity(chooser);
             }
 
             return;
