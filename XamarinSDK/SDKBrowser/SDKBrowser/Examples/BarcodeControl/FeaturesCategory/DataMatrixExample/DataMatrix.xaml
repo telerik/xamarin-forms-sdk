@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikBarcode="clr-namespace:Telerik.XamarinForms.Barcode;assembly=Telerik.XamarinForms.Barcode"
+             x:Class="SDKBrowser.Examples.BarcodeControl.FeaturesCategory.DataMatrixExample.DataMatrix">
+    <Grid  Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+        <!-- >> datamatrix-example-xaml -->
+        <telerikBarcode:RadBarcode x:Name="Barcode"                                 
+                                   Value="https://www.telerik.com/xamarin-ui">
+            <telerikBarcode:RadBarcode.Symbology>
+                <telerikBarcode:DataMatrix Encodation="Ascii"
+                                           SymbolSize="SquareAuto" />
+            </telerikBarcode:RadBarcode.Symbology>
+        </telerikBarcode:RadBarcode>
+        <!-- << datamatrix-example-xaml -->
+    </Grid>
+</ContentView>

@@ -29,6 +29,12 @@
     <None Remove="Examples\MapControl\world.dbf" />
     <None Remove="Examples\MapControl\world.shp" />
     <None Remove="Examples\PdfViewerControl\pdfviewer-overview.pdf" />
+    <None Remove="Examples\RichTextEditorControl\FeaturesCategory\emoji_cool.png" />
+    <None Remove="Examples\RichTextEditorControl\FeaturesCategory\emoji_loughing.png" />
+    <None Remove="Examples\RichTextEditorControl\FeaturesCategory\emoji_smile.png" />
+    <None Remove="Examples\RichTextEditorControl\FeaturesCategory\emoji_wink.png" />
+    <None Remove="Examples\RichTextEditorControl\FeaturesCategory\pick-image-demo.html" />
+    <None Remove="Examples\RichTextEditorControl\FeaturesCategory\PickYourHoliday.html" />
     <None Remove="Examples\RichTextEditorControl\FeaturesCategory\richtexteditor-htmlsource.html" />
     <None Remove="Examples\ZipLibraryControl\Resources\LoremIpsum.txt" />
     <None Remove="Examples\ZipLibraryControl\Resources\LoremIpsum.txt.zip" />
@@ -45,13 +51,21 @@
     <EmbeddedResource Include="Examples\MapControl\world.dbf" />
     <EmbeddedResource Include="Examples\MapControl\world.shp" />
     <EmbeddedResource Include="Examples\PdfViewerControl\pdfviewer-overview.pdf" />
+    <EmbeddedResource Include="Examples\RichTextEditorControl\FeaturesCategory\emoji_cool.png" />
+    <EmbeddedResource Include="Examples\RichTextEditorControl\FeaturesCategory\emoji_loughing.png" />
+    <EmbeddedResource Include="Examples\RichTextEditorControl\FeaturesCategory\emoji_smile.png" />
+    <EmbeddedResource Include="Examples\RichTextEditorControl\FeaturesCategory\emoji_wink.png" />
+    <EmbeddedResource Include="Examples\RichTextEditorControl\FeaturesCategory\pick-image-demo.html" />
+    <EmbeddedResource Include="Examples\RichTextEditorControl\FeaturesCategory\PickYourHoliday.html" />
     <EmbeddedResource Include="Examples\RichTextEditorControl\FeaturesCategory\richtexteditor-htmlsource.html" />
     <EmbeddedResource Include="Examples\ZipLibraryControl\Resources\LoremIpsum.txt" />
     <EmbeddedResource Include="Examples\ZipLibraryControl\Resources\LoremIpsum.txt.zip" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Plugin.Permissions" Version="6.0.1" />
     <PackageReference Include="SkiaSharp" Version="1.68.0" />
     <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.0" />
+    <PackageReference Include="Xam.Plugin.Media" Version="5.0.1" />
     <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2083" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
@@ -127,6 +141,12 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Examples\RichTextEditorControl\FeaturesCategory\CommandsExample\Commands.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Examples\RichTextEditorControl\FeaturesCategory\CustomImagePickerExample\CustomImagePicker.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Examples\RichTextEditorControl\FeaturesCategory\InsertImagesExample\InsertImages.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Examples\RichTextEditorControl\FeaturesCategory\KeyFeaturesExample\KeyFeatures.xaml">

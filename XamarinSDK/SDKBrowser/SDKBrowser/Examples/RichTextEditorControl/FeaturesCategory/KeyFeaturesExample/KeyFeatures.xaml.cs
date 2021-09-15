@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SDKBrowser.Behaviors;
+using System;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -29,6 +30,8 @@ namespace SDKBrowser.Examples.RichTextEditorControl.FeaturesCategory.KeyFeatures
 
             this.richTextEditor.Source = RichTextSource.FromStream(streamFunc);
             // << richtexteditor-keyfeatures-fromstream
+
+            this.richTextEditor.Behaviors.Add(new PickImageBehavior());
         }
 
         private async void GetHTML_Clicked(object sender, EventArgs e)

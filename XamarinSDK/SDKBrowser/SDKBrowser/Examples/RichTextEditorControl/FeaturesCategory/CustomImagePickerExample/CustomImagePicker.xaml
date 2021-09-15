@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikRichTextEditor="clr-namespace:Telerik.XamarinForms.RichTextEditor;assembly=Telerik.XamarinForms.RichTextEditor"
+             x:Class="SDKBrowser.Examples.RichTextEditorControl.FeaturesCategory.CustomImagePickerExample.CustomImagePicker">
+    <!-- >> richtexteditor-custom-image-picker -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <telerikRichTextEditor:RadRichTextEditor x:Name="richTextEditor"/>
+        <telerikRichTextEditor:RadRichTextEditorToolbar x:Name="richTextToolbar"
+                                                        Grid.Row="1"
+                                                        RichTextEditor="{x:Reference richTextEditor}"
+                                                        AutoGenerateItems="False">
+            <telerikRichTextEditor:ImagePickerToolbarItem x:Name="imagePicker"/>
+            <telerikRichTextEditor:FontFamilyToolbarItem />
+            <telerikRichTextEditor:FontSizeToolbarItem />
+            <telerikRichTextEditor:BoldToolbarItem />
+            <telerikRichTextEditor:ItalicToolbarItem/>
+            <telerikRichTextEditor:UnderlineToolbarItem />
+        </telerikRichTextEditor:RadRichTextEditorToolbar>
+    </Grid>
+    <!-- << richtexteditor-custom-image-picker -->
+</ContentView>

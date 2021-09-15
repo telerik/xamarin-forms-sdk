@@ -10,6 +10,7 @@ using Xamarin.Forms.Xaml;
 using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 
 using AndroidApplication = Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Application;
+using SDKBrowser.Behaviors;
 
 namespace SDKBrowser.Examples.RichTextEditorControl.FeaturesCategory.ReadOnlyStateExample
 {
@@ -32,6 +33,8 @@ namespace SDKBrowser.Examples.RichTextEditorControl.FeaturesCategory.ReadOnlySta
 
             this.richTextEditor.Source = RichTextSource.FromStream(streamFunc);
             // << richtexteditor-readonly-state-code-behind
+
+            this.richTextEditor.Behaviors.Add(new PickImageBehavior());
         }
 
         protected override void OnParentSet()

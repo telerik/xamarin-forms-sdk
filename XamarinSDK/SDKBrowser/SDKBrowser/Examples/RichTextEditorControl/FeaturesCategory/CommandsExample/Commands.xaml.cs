@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SDKBrowser.Behaviors;
+using System;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -26,6 +27,7 @@ namespace SDKBrowser.Examples.RichTextEditorControl.FeaturesCategory.CommandsExa
             });
 
             this.richTextEditor.Source = RichTextSource.FromStream(streamFunc);
+            this.richTextEditor.Behaviors.Add(new PickImageBehavior());
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using Android.Runtime;
 using AndroidX.AppCompat.App;
 using SDKBrowser.Services;
 using System.Collections.Generic;
@@ -19,6 +20,8 @@ namespace SDKBrowser.Droid
             StrictMode.SetVmPolicy(builder.Build());
 
             base.OnCreate(bundle);
+            Plugin.Media.CrossMedia.Current.Initialize();
+            Xamarin.Essentials.Platform.Init(this, bundle);
             Forms.Init(this, bundle);
 
             this.SetTheme(Resource.Style.Theme_Design_Light);
@@ -36,6 +39,13 @@ namespace SDKBrowser.Droid
             var backdoorService = DependencyService.Get<IBackdoorService>();
 
             return backdoorService.NavigateToExample(controlName, exampleName);
+        }
+
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
+        {
+            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            Plugin.Permissions.PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
 }

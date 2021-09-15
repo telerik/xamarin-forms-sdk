@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SDKBrowser.Behaviors;
+using System;
 using System.IO;
 using System.Linq;
 using Telerik.XamarinForms.RichTextEditor;
@@ -27,6 +28,7 @@ namespace SDKBrowser.Examples.RichTextEditorControl.FeaturesCategory.PickerPopup
             };
 
             this.richTextEditor.Source = RichTextSource.FromStream(streamFunc);
+            this.richTextEditor.Behaviors.Add(new PickImageBehavior());
         }
 
         protected override void OnParentSet()

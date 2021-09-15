@@ -1,4 +1,5 @@
-﻿using Telerik.XamarinForms.RichTextEditor;
+﻿using SDKBrowser.Behaviors;
+using Telerik.XamarinForms.RichTextEditor;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,6 +17,7 @@ namespace SDKBrowser.Examples.RichTextEditorControl.FeaturesCategory.HyperlinkEr
                         <p><a href='www.google.com'>Google - not absolute Url</a></p>
                         <p><a href='http:/www.wvtesting.com'>Wrong format of Url</a></p>";
             this.richTextEditor.Source = RichTextSource.FromString(htmlSource);
+            this.richTextEditor.Behaviors.Add(new PickImageBehavior());
         }
 
         // >> richtexteditor-hyperlinkerrorhandling-code

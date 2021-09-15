@@ -4,12 +4,14 @@
              xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
              x:Class="SDKBrowser.Examples.CalendarControl.FeaturesCategory.DayViewSettingsExample.DayViewSettingsAndStyle">
     <Grid>
-        <!-- >> calendar-dayview-settings -->
-    <telerikInput:RadCalendar x:Name="calendar" ViewMode="Day">
+    <!-- >> calendar-dayview-settings -->
+    <telerikInput:RadCalendar x:Name="calendar" 
+                              ViewMode="Day">
         <telerikInput:RadCalendar.DayViewSettings>
             <telerikInput:DayViewSettings DayStartTime="9:00:00"
                                           DayEndTime="18:00:00"
-                                          TimelineInterval="2:00" />
+                                          TimelineInterval="2:00"
+                                          IsCurrentTimeIndicatorVisible="True"/>
         </telerikInput:RadCalendar.DayViewSettings>
             <telerikInput:RadCalendar.DayViewStyle>
                 <telerikInput:DayViewStyle AllDayAppointmentBackgroundColor="Blue"
@@ -18,9 +20,12 @@
                                            TimelineLabelsTextColor="DarkGray"
                                            TimelineLabelsFontSize="10"
                                            AppointmentFontSize="12"
-                                           AppointmentDetailsFontSize="10"/>
+                                           AppointmentDetailsFontSize="10"
+                                           CurrentTimeIndicatorColor="Red"
+                                           CurrentTimeIndicatorWidth="5"
+                                           CurrentTimeIndicatorRadius="5" />
             </telerikInput:RadCalendar.DayViewStyle>
     </telerikInput:RadCalendar>
-        <!-- << calendar-dayview-settings -->
+    <!-- << calendar-dayview-settings -->
     </Grid>
 </ContentView>

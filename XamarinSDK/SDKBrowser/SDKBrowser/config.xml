@@ -240,6 +240,11 @@
               <Name>QRCode</Name>
               <Title>QRCode</Title>
             </Example>
+            <Example>
+              <Page>DataMatrix</Page>
+              <Name>DataMatrix</Name>
+              <Title>DataMatrix</Title>
+            </Example>
           </Examples>
         </Category>
         <Category>
@@ -2774,55 +2779,6 @@
       </Categories>
     </Control>
     <Control>
-      <Name>Popup</Name>
-      <Title>Popup</Title>
-      <Icon>Popup.png</Icon>
-      <Categories>
-        <Category>
-          <Name>GettingStarted</Name>
-          <Title>Getting Started</Title>
-          <Examples>
-            <Example>
-              <Page>PopupGettingStartedXaml</Page>
-              <Name>GettingStarted</Name>
-              <Title>Getting Started - Xaml</Title>
-            </Example>
-            <Example>
-              <Page>PopupGettingStartedCSharp</Page>
-              <Name>GettingStarted</Name>
-              <Title>Getting Started - Code</Title>
-            </Example>
-          </Examples>
-        </Category>
-        <Category>
-          <Name>Features</Name>
-          <Title>Features</Title>
-          <Examples>
-            <Example>
-              <Page>ContentTemplate</Page>
-              <Name>ContentTemplate</Name>
-              <Title>Setting ContentTemplate</Title>
-            </Example>
-            <Example>
-              <Page>ModalPopup</Page>
-              <Name>ModalPopup</Name>
-              <Title>Modal Popup</Title>
-            </Example>
-            <Example>
-              <Page>PopupPlacement</Page>
-              <Name>PopupPlacement</Name>
-              <Title>Popup Placement</Title>
-            </Example>
-            <Example>
-              <Page>PopupPlacementCSharp</Page>
-              <Name>PopupPlacement</Name>
-              <Title>PopupPlacement - Code</Title>
-            </Example>
-          </Examples>
-        </Category>
-      </Categories>
-    </Control>
-    <Control>
       <Name>PdfViewer</Name>
       <Title>PdfViewer</Title>
       <Icon>PdfViewer.png</Icon>
@@ -2906,6 +2862,55 @@
               <Page>CustomOverflowButton</Page>
               <Name>CustomOverflowButton</Name>
               <Title>Pdf Toolbar Custom Overflow Button</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>Popup</Name>
+      <Title>Popup</Title>
+      <Icon>Popup.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>PopupGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>PopupGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>ContentTemplate</Page>
+              <Name>ContentTemplate</Name>
+              <Title>Setting ContentTemplate</Title>
+            </Example>
+            <Example>
+              <Page>ModalPopup</Page>
+              <Name>ModalPopup</Name>
+              <Title>Modal Popup</Title>
+            </Example>
+            <Example>
+              <Page>PopupPlacement</Page>
+              <Name>PopupPlacement</Name>
+              <Title>Popup Placement</Title>
+            </Example>
+            <Example>
+              <Page>PopupPlacementCSharp</Page>
+              <Name>PopupPlacement</Name>
+              <Title>PopupPlacement - Code</Title>
             </Example>
           </Examples>
         </Category>
@@ -3004,6 +3009,16 @@
               <Page>HyperlinkErrorHandling</Page>
               <Name>HyperlinkErrorHandling</Name>
               <Title>Hyperlink Error Handling</Title>
+            </Example>
+            <Example>
+              <Page>InsertImages</Page>
+              <Name>InsertImages</Name>
+              <Title>Insert Images</Title>
+            </Example>
+            <Example>
+              <Page>CustomImagePicker</Page>
+              <Name>CustomImagePicker</Name>
+              <Title>Custom Image Picker</Title>
             </Example>
             <Example>
               <Page>CustomContextMenu</Page>
