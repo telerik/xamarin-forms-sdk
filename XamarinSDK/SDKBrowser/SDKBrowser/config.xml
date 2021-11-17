@@ -558,6 +558,11 @@
               <Title>Scheduling Commands</Title>
             </Example>
             <Example>
+              <Page>SchedulingUIEvents</Page>
+              <Name>SchedulingUIEvents</Name>
+              <Title>Events</Title>
+            </Example>
+            <Example>
               <Page>SchedulingUICustomization</Page>
               <Name>SchedulingUICustomization</Name>
               <Title>Custom Scheduling Views</Title>
