@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.SignaturePadControl.SavingOptionsCategory.SavingOptionsExample.SavingImage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!-- >> signaturepad-saving-image-xaml -->
+        <telerikInput:RadSignaturePad x:Name="signaturePad"
+                                      BorderThickness="1" 
+                                      BorderColor="LightGray"/>
+        <!-- << signaturepad-saving-image-xaml -->
+        <Button Text="X" 
+                BackgroundColor="Gray" 
+                TextColor="White" 
+                Command="{Binding Source={x:Reference signaturePad}, Path=ClearCommand}" 
+                HorizontalOptions="End" 
+                VerticalOptions="Start" 
+                Margin="0,10,10,0"/>        
+        <StackLayout Orientation="Horizontal" Margin="10" Spacing="10" Grid.Row="1">
+            <Button Text="Get JPEG" Clicked="GetJPEG_Clicked" />
+            <Button Text="Get PNG" Clicked="GetPNG_Clicked" />
+            <Label Text="The signature is saved with customizations, such as modified colors, thickness and more" />
+        </StackLayout>
+        <!-- >> signaturepad-image-control -->
+        <Image x:Name="signatureImage" Grid.Row="2" />
+        <!-- << signaturepad-image-control -->
+    </Grid>
+</ContentView>

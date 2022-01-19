@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.SignaturePadControl.EventsCategory.EventsExample.Events">
+    <Grid RowDefinitions="Auto,*">
+        <Label x:Name="logInfo"/>
+        <Grid Grid.Row="1">
+            <!-- >> signaturepad-events -->
+            <telerikInput:RadSignaturePad x:Name="signaturePad" BorderThickness="1" 
+                                          BorderColor="LightGray"
+                                          StrokeStarted="RadSignaturePad_StrokeStarted"
+                                          StrokeCompleted="RadSignaturePad_StrokeCompleted"
+                                          Cleared="RadSignaturePad_Cleared"/>
+            
+            <Button x:Name="clearButton" 
+                    Text="X" 
+                    BackgroundColor="Transparent" 
+                    Command="{Binding Source={x:Reference signaturePad}, Path=ClearCommand}" 
+                    HorizontalOptions="End" 
+                    VerticalOptions="Start" 
+                    Margin="0,10,10,0"/>
+            
+            <Label x:Name="timeStampLabel" 
+                   HorizontalOptions="End"
+                   VerticalOptions="End" 
+                   Margin="0,0,10,10"/>
+            <!-- << signaturepad-events -->
+        </Grid>
+    </Grid>
+</ContentView>

@@ -41,13 +41,23 @@ namespace SDKBrowser.Examples.ChartControl.CustomizationCategory.CustomPaletteEx
                 {
                     Entries =
                     {
-                        new PaletteEntry(Color.Red, Color.Blue),
-                        new PaletteEntry(Color.Green, Color.Black),
-                        new PaletteEntry(Color.Blue, Color.Yellow)
+                        new PaletteEntry(Color.FromHex("#4FB6E7"), Color.FromHex("#4FB6E7")),
+                        new PaletteEntry(Color.FromHex("#A666CE"), Color.FromHex("#A666CE")),
+                        new PaletteEntry(Color.FromHex("#9DCC00"), Color.FromHex("#9DCC00"))
+                    }
+                }, 
+                SelectionPalette = new ChartPalette
+                {
+                    Entries =
+                    {
+                        new PaletteEntry(Color.FromHex("#4FB6E7"), Color.FromHex("#4D4D4D")),
+                        new PaletteEntry(Color.FromHex("#A666CE"), Color.FromHex("#4D4D4D")),
+                        new PaletteEntry(Color.FromHex("#9DCC00"), Color.FromHex("#4D4D4D"))
                     }
                 }
             };
 
+            chart.ChartBehaviors.Add(new ChartSelectionBehavior { DataPointSelectionMode = ChartSelectionMode.None, SeriesSelectionMode = ChartSelectionMode.Single});
             chart.Series[0].SetBinding(ChartSeries.ItemsSourceProperty, "Data1");
             chart.Series[1].SetBinding(ChartSeries.ItemsSourceProperty, "Data2");
             chart.Series[2].SetBinding(ChartSeries.ItemsSourceProperty, "Data3");

@@ -450,6 +450,9 @@
     <AndroidResource Include="Resources\drawable-xhdpi\Badge.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\Badge.png" />
     <AndroidResource Include="Resources\xml\file_paths.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\SignaturePad.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\SignaturePad.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\SignaturePad.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\image.png" />

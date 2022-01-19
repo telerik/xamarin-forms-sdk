@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:telerikDataGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid" 
+             xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+             x:Class="SDKBrowser.Examples.DataGridControl.DataTableCategory.CrudOperationsExample.CrudOperations"> 
+    <!-- >> datagrid-datatable-crud -->
+    <Grid RowDefinitions="Auto,*">
+        <telerikCommon:RadWrapLayout>
+            <Button Text="Add" Clicked="AddDataClicked"/>
+            <Button Text="Update 1st item" Clicked="UpdateDataClicked" />
+            <Button Text="Delete last item" Clicked="DeleteDataClicked"/>
+        </telerikCommon:RadWrapLayout>
+        
+        <telerikDataGrid:RadDataGrid ItemsSource="{Binding Data}"
+                                     x:Name="dataGrid"
+                                     SelectionMode="Single"
+                                     SelectionUnit="Cell"
+                                     SelectionChanged="RadDataGrid_SelectionChanged"
+                                     Grid.Row="1"/>
+    </Grid>
+    <!-- << datagrid-datatable-crud -->
+</ContentView>

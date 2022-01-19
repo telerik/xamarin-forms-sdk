@@ -1713,6 +1713,27 @@
           </Examples>
         </Category>
         <Category>
+          <Name>DataTable</Name>
+          <Title>DataTable Support</Title>
+          <Examples>
+            <Example>
+              <Page>BindToDataTable</Page>
+              <Name>BindToDataTable</Name>
+              <Title>Bind To DataTable</Title>
+            </Example>
+            <Example>
+              <Page>CrudOperations</Page>
+              <Name>CrudOperations</Name>
+              <Title>CRUD Operations</Title>
+            </Example>
+            <Example>
+              <Page>Commands</Page>
+              <Name>Commands</Name>
+              <Title>Commands</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
           <Name>Decorations</Name>
           <Title>Decorations</Title>
           <Examples>
@@ -2236,6 +2257,11 @@
               <Page>BusyTemplate</Page>
               <Name>BusyTemplate</Name>
               <Title>Busy Template</Title>
+            </Example>
+            <Example>
+              <Page>Commands</Page>
+              <Name>Commands</Name>
+              <Title>ImageEditor Commands</Title>
             </Example>
           </Examples>
         </Category>
@@ -3089,6 +3115,35 @@
       </Categories>
     </Control>
     <Control>
+      <Name>Shadow</Name>
+      <Title>Shadow</Title>
+      <Icon>Shadow.png</Icon>
+      <Categories>
+        <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>ShadowGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>KeyFeatures</Page>
+              <Name>KeyFeatures</Name>
+              <Title>Key Features</Title>
+            </Example>
+          </Examples>
+        </Category>
+      </Categories>
+    </Control>
+    <Control>
       <Name>SideDrawer</Name>
       <Title>SideDrawer</Title>
       <Icon>SideDrawer.png</Icon>
@@ -3128,29 +3183,67 @@
       </Categories>
     </Control>
     <Control>
-      <Name>Shadow</Name>
-      <Title>Shadow</Title>
-      <Icon>Shadow.png</Icon>
+      <Name>SignaturePad</Name>
+      <Title>SignaturePad</Title>
+      <Icon>SignaturePad.png</Icon>
       <Categories>
         <Category>
           <Name>GettingStarted</Name>
           <Title>Getting Started</Title>
           <Examples>
             <Example>
-              <Page>ShadowGettingStartedXaml</Page>
+              <Page>SignaturePadGettingStartedXaml</Page>
               <Name>GettingStarted</Name>
-              <Title>Getting Started</Title>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>SignaturePadGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - CSharp</Title>
             </Example>
           </Examples>
         </Category>
         <Category>
-          <Name>Features</Name>
-          <Title>Features</Title>
+          <Name>Configuration</Name>
+          <Title>Configuration</Title>
           <Examples>
             <Example>
-              <Page>KeyFeatures</Page>
-              <Name>KeyFeatures</Name>
-              <Title>Key Features</Title>
+              <Page>ConfigurationOptions</Page>
+              <Name>Configuration</Name>
+              <Title>Configuration</Title>
+            </Example>
+          </Examples>
+        </Category>
+	    <Category>
+          <Name>SavingOptions</Name>
+          <Title>Saving Options</Title>
+          <Examples>
+            <Example>
+              <Page>SavingImage</Page>
+              <Name>SavingOptions</Name>
+              <Title>Saving Options</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Events</Name>
+          <Title>Events</Title>
+          <Examples>
+            <Example>
+              <Page>Events</Page>
+              <Name>Events</Name>
+              <Title>Events</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Commands</Name>
+          <Title>Commands</Title>
+          <Examples>
+            <Example>
+              <Page>ClearCommand</Page>
+              <Name>ClearCommand</Name>
+              <Title>Clear Command</Title>
             </Example>
           </Examples>
         </Category>

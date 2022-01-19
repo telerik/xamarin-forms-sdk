@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:telerikImageEditor="clr-namespace:Telerik.XamarinForms.ImageEditor;assembly=Telerik.XamarinForms.ImageEditor" xmlns:telerikImageEditorCommands="clr-namespace:Telerik.XamarinForms.ImageEditor.Commands;assembly=Telerik.XamarinForms.ImageEditor"
+             x:Class="SDKBrowser.Examples.ImageEditorControl.FeaturesCategory.CommandsExample.Commands">
+
+
+    <Grid RowDefinitions="Auto,*">
+        <Grid RowDefinitions="Auto,Auto,60,Auto" ColumnDefinitions="*,*,*,*">
+            <!-- >> imageeditor-brightness-command-xaml -->
+            <Button Text="Brightness" Grid.ColumnSpan="2" Command="{Binding BrightnessCommand, Source={x:Reference imageEditor}}">
+                <Button.CommandParameter>
+                    <telerikImageEditorCommands:BrightnessCommandContext Brightness="{Binding Value, Source={x:Reference brightness}}" />
+                </Button.CommandParameter>
+            </Button>
+            <Slider Grid.Column="2" Grid.ColumnSpan="2" Minimum="-0.5" Maximum="0.5" x:Name="brightness"/>
+            <!-- << imageeditor-brightness-command-xaml -->
+
+            <!-- >> imageeditor-hue-command-xaml -->
+            <Button Text="Hue" Grid.Row="1" Grid.ColumnSpan="2"  Command="{Binding HueCommand, Source={x:Reference imageEditor}}">
+                <Button.CommandParameter>
+                    <telerikImageEditorCommands:HueCommandContext Hue="{Binding Value, Source={x:Reference hue}}" />
+                </Button.CommandParameter>
+            </Button>
+            <Slider Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Minimum="-0.4" Maximum="0.4" x:Name="hue" />
+            <!-- << imageeditor-hue-command-xaml -->
+
+            <!-- >> imageeditor-interactive-commands-xaml -->
+            <Button Grid.Row="2" Text="Interactive Crop" Grid.ColumnSpan="2" Command="{Binding CropInteractiveCommand, Source={x:Reference imageEditor}}" />
+            <Button Grid.Row="2" Grid.Column="2" Text="Apply Crop" Command="{Binding ApplyInteractiveCommand, Source={x:Reference imageEditor}}" />
+            <Button Grid.Row="2" Grid.Column="3" Text="Cancel Crop" Command="{Binding CancelInteractiveCommand, Source={x:Reference imageEditor}}"/>
+            <!-- << imageeditor-interactive-commands-xaml -->
+
+            <!-- >> imageeditor-flip-commands-xaml -->
+            <Button Grid.Row="3" Text="Flip –" Command="{Binding FlipHorizontalCommand, Source={x:Reference imageEditor}}"/>
+            <Button Grid.Row="3" Grid.Column="1" Text="Flip |" Command="{Binding FlipVerticalCommand, Source={x:Reference imageEditor}}" />
+            <!-- << imageeditor-flip-commands-xaml -->
+
+            <!-- >> imageeditor-rotate-commands-xaml -->
+            <Button Grid.Row="3" Grid.Column="2" Text="Rotate &lt;" Command="{Binding RotateLeftCommand, Source={x:Reference imageEditor}}" />
+            <Button Grid.Row="3" Grid.Column="3" Text="Rotate &gt;" Command="{Binding RotateRightCommand, Source={x:Reference imageEditor}}" />
+            <!-- << imageeditor-rotate-commands-xaml -->
+        </Grid>
+            <!-- >> imageeditor-commands-xaml -->
+        <telerikImageEditor:RadImageEditor x:Name="imageEditor" Grid.Row="1">
+            <telerikImageEditor:RadImageEditor.Source>
+                <OnPlatform x:TypeArguments="ImageSource" Default="cat4.jpeg">
+                    <On Platform="UWP">Assets\cat4.jpeg</On>
+                </OnPlatform>
+            </telerikImageEditor:RadImageEditor.Source>
+        </telerikImageEditor:RadImageEditor>
+    </Grid>
+    <!-- << imageeditor-commands-xaml -->
+</ContentView>

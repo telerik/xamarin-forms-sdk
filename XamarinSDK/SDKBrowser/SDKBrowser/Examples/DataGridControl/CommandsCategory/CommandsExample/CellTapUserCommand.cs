@@ -9,9 +9,9 @@ using Xamarin.Forms;
 
 namespace SDKBrowser.Examples.DataGridControl.CommandsCategory.CommandsExample
 {
+    // >> datagrid-commands-celltap
     public class CellTapUserCommand : DataGridCommand
     {
-        // >> datagrid-commands-celltap
         public CellTapUserCommand()
         {
             Id = DataGridCommandId.CellTap;
@@ -23,10 +23,10 @@ namespace SDKBrowser.Examples.DataGridControl.CommandsCategory.CommandsExample
         public override void Execute(object parameter)
         {
             var context = parameter as DataGridCellInfo;
-            var cellTap =  $"CellTap Command on cell {context.Value} inside {context.Column.HeaderText} \n";
-            Application.Current.MainPage.DisplayAlert("", "You've selected " + cellTap, "OK");
+            var cellTap =  $"You tapped on {context.Value} inside {context.Column.HeaderText} column \n";
+            Application.Current.MainPage.DisplayAlert("CellTap Command: ", cellTap, "OK");
             this.Owner.CommandService.ExecuteDefaultCommand(DataGridCommandId.CellTap, parameter);
         }
-        // << datagrid-commands-celltap
     }
+    // << datagrid-commands-celltap
 }

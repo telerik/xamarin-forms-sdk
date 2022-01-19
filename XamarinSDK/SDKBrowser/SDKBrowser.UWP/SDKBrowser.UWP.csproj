@@ -207,6 +207,11 @@
     <Content Include="Assets\Shadow.scale-150.png" />
     <Content Include="Assets\Shadow.scale-200.png" />
     <Content Include="Assets\Shadow.scale-400.png" />
+    <Content Include="Assets\SignaturePad.scale-100.png" />
+    <Content Include="Assets\SignaturePad.scale-125.png" />
+    <Content Include="Assets\SignaturePad.scale-150.png" />
+    <Content Include="Assets\SignaturePad.scale-200.png" />
+    <Content Include="Assets\SignaturePad.scale-400.png" />
     <Content Include="Assets\TemplatedPicker.scale-100.png" />
     <Content Include="Assets\TemplatedPicker.scale-125.png" />
     <Content Include="Assets\TemplatedPicker.scale-150.png" />

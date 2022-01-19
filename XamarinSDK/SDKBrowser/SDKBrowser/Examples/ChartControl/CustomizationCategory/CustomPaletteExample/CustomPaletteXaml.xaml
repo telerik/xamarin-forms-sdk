@@ -9,6 +9,10 @@
         <telerikChart:RadCartesianChart.BindingContext>
             <local:ViewModel />
         </telerikChart:RadCartesianChart.BindingContext>
+        <telerikChart:RadCartesianChart.ChartBehaviors>
+            <telerikChart:ChartSelectionBehavior DataPointSelectionMode="None" 
+                                                 SeriesSelectionMode="Single" />
+        </telerikChart:RadCartesianChart.ChartBehaviors>
         <telerikChart:RadCartesianChart.VerticalAxis>
             <telerikChart:NumericalAxis />
         </telerikChart:RadCartesianChart.VerticalAxis>
@@ -32,12 +36,21 @@
         <telerikChart:RadCartesianChart.Palette>
             <telerikChart:ChartPalette>
                 <telerikChart:ChartPalette.Entries>
-                    <telerikChart:PaletteEntry FillColor="Red" StrokeColor="Blue" />
-                    <telerikChart:PaletteEntry FillColor="Green" StrokeColor="Black" />
-                    <telerikChart:PaletteEntry FillColor="Blue" StrokeColor="Yellow" />
+                    <telerikChart:PaletteEntry FillColor="#4FB6E7" StrokeColor="#4FB6E7" />
+                    <telerikChart:PaletteEntry FillColor="#A666CE" StrokeColor="#A666CE" />
+                    <telerikChart:PaletteEntry FillColor="#9DCC00" StrokeColor="#9DCC00" />
                 </telerikChart:ChartPalette.Entries>
             </telerikChart:ChartPalette>
         </telerikChart:RadCartesianChart.Palette>
+        <telerikChart:RadCartesianChart.SelectionPalette>
+            <telerikChart:ChartPalette>
+                <telerikChart:ChartPalette.Entries>
+                    <telerikChart:PaletteEntry FillColor="#4FB6E7" StrokeColor="#4D4D4D" />
+                    <telerikChart:PaletteEntry FillColor="#A666CE" StrokeColor="#4D4D4D" />
+                    <telerikChart:PaletteEntry FillColor="#9DCC00" StrokeColor="#4D4D4D" />
+                </telerikChart:ChartPalette.Entries>
+            </telerikChart:ChartPalette>
+        </telerikChart:RadCartesianChart.SelectionPalette>
     </telerikChart:RadCartesianChart>
     <!-- << chart-customization-custompalette-xaml -->
 </ContentView>

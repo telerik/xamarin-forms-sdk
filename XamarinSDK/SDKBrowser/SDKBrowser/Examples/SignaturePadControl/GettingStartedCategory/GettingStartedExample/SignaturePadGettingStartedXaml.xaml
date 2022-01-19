@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="SDKBrowser.Examples.SignaturePadControl.GettingStartedCategory.GettingStartedExample.SignaturePadGettingStartedXaml">
+    <ContentView.Content>
+        <Grid>
+            <!-- >> signaturepad-getting-started-xaml -->
+            <telerikInput:RadSignaturePad BorderThickness="1" BorderColor="LightGray"/>
+            <!-- << signaturepad-getting-started-xaml -->
+        </Grid>
+    </ContentView.Content>
+</ContentView>

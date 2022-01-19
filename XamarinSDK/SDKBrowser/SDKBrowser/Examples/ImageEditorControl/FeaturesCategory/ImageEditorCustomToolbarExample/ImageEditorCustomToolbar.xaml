@@ -18,6 +18,7 @@
         </telerikImageEditor:RadImageEditor>
         <telerikImageEditor:RadImageEditorToolbar Grid.Row="1" ImageEditor="{x:Reference imageEditor}" AutoGenerateItems="False">
             <telerikImageEditor:EffectsToolbarItem AutoGenerateItems="False">
+                <telerikImageEditor:BackToolbarItem/>
                 <telerikImageEditor:ContrastToolbarItem AutoGenerateItems="False">
                     <telerikImageEditor:CancelToolbarItem HorizontalOptions="Start" />
                     <telerikImageEditor:TemplateToolbarItem>

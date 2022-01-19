@@ -62,6 +62,12 @@
                                           ShowSuggestionView="True" 
                                           SuggestionViewHeight="100" 
                                           SuggestionViewBackgroundColor="LightBlue"/>
-        <!-- << autocompleteview-features-suggestionview -->        
+        <!-- << autocompleteview-features-suggestionview -->
+        <Label Text="SuggestionView Position" />
+        <!-- >> autocompleteview-suggestionview-position -->
+        <telerikInput:RadAutoCompleteView ItemsSource="{Binding Source}" 
+                                          TextSearchPath="Name"
+                                          SuggestionViewPosition="Top"/>
+        <!-- << autocompleteview-suggestionview-position -->
     </StackLayout>
 </ContentView>
