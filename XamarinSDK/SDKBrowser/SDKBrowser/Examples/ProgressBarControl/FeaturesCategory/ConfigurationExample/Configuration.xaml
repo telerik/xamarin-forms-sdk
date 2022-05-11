@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             x:Class="SDKBrowser.Examples.ProgressBarControl.FeaturesCategory.ConfigurationExample.Configuration">
+    <StackLayout Margin="20" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Spacing="20">
+        <StackLayout>
+            <Label Text="ProgressBar with updating Value and getting Progress" />
+            <!-- >> progressbar-configuration-value -->
+            <telerikPrimitives:RadLinearProgressBar x:Name="progressBar"/>
+            <StackLayout Orientation="Horizontal" Spacing="10">
+                <Button Text="Update" Clicked="ProgressBarUpdateClicked"/>
+                <Label Text="Progress: " VerticalOptions="Center"/>
+                <Label Text="{Binding Progress, Source={x:Reference progressBar}}" VerticalOptions="Center"/>
+            </StackLayout>
+            <!-- << progressbar-configuration-value -->
+        </StackLayout>
+        <StackLayout>
+            <Label Text="ProgressBar with Min=0 and Max=60" />
+            <!-- >> progressbar-configuration-minmax -->
+            <telerikPrimitives:RadLinearProgressBar Value="30" 
+                                                    Minimum="0"
+                                                    Maximum="60"/>
+            <!-- << progressbar-configuration-minmax -->
+        </StackLayout>
+        <StackLayout>
+            <Label Text="ProgressBar with StringFormat applied"/>
+            <!-- >> progressbar-configuration-stringformat -->
+            <telerikPrimitives:RadLinearProgressBar Value="25"
+                                                    StringFormat="N2"/>
+            <!-- << progressbar-configuration-stringformat -->
+        </StackLayout>
+        <StackLayout>
+            <Label Text="ProgressBar with ValueDisplayMode set to Value"/>
+            <!-- >> progressbar-configuration-valuedisplaymode -->
+            <telerikPrimitives:RadLinearProgressBar Value="35"
+                                                    ValueDisplayMode="Value"/>
+            <!-- << progressbar-configuration-valuedisplaymode -->
+        </StackLayout>
+        <StackLayout>
+            <Label Text="ProgressBar with ValueDisplayMode set to Text and CustomText applied"/>
+            <!-- >> progressbar-configuration-customtext -->
+            <telerikPrimitives:RadLinearProgressBar Value="45"
+                                                    ValueDisplayMode="Text"
+                                                    CustomText="loading..."/>
+            <!-- << progressbar-configuration-customtext -->
+        </StackLayout>
+        <StackLayout>
+            <Label Text="ProgressBar with Segments"/>
+            <!-- >> progressbar-configuration-segments -->
+            <telerikPrimitives:RadLinearProgressBar Value="45"
+                                                    ValueDisplayMode="Value"
+                                                    SegmentCount="8"/>
+            <!-- << progressbar-configuration-segments -->
+        </StackLayout>
+        <StackLayout>
+            <Label Text="ProgressBar with label horizontal alignment set to Center"/>
+            <!-- >> progressbar-configuration-labelalignment -->
+            <telerikPrimitives:RadLinearProgressBar Value="55"
+                                                    LabelHorizontalOptions="Center"/>
+            <!-- << progressbar-configuration-labelalignment -->
+        </StackLayout>
+    </StackLayout>
+</ContentView>

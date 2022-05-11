@@ -2030,6 +2030,11 @@
               <Title>Key Features</Title>
             </Example>
             <Example>
+              <Page>TextBinding</Page>
+              <Name>TextBinding</Name>
+              <Title>Text Binding</Title>
+            </Example>
+            <Example>
               <Page>MaxLength</Page>
               <Name>MaxLength</Name>
               <Title>Max Length</Title>
@@ -2945,6 +2950,72 @@
             </Example>
           </Examples>
         </Category>
+      </Categories>
+    </Control>
+    <Control>
+      <Name>ProgressBar</Name>
+      <Title>ProgressBar</Title>
+      <Icon>ProgressBar.png</Icon>
+      <Categories>
+		  <Category>
+          <Name>GettingStarted</Name>
+          <Title>Getting Started</Title>
+          <Examples>
+            <Example>
+              <Page>ProgressBarGettingStartedXaml</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Xaml</Title>
+            </Example>
+            <Example>
+              <Page>ProgressBarGettingStartedCSharp</Page>
+              <Name>GettingStarted</Name>
+              <Title>Getting Started - Code</Title>
+            </Example>
+          </Examples>
+        </Category>
+        <Category>
+          <Name>Features</Name>
+          <Title>Features</Title>
+          <Examples>
+            <Example>
+              <Page>Configuration</Page>
+              <Name>Configuration</Name>
+              <Title>Configuration</Title>
+            </Example>
+			  <Example>
+				  <Page>IndeterminateMode</Page>
+				  <Name>IndeterminateMode</Name>
+				  <Title>Indeterminate Mode</Title>
+			  </Example>
+			  <Example>
+				  <Page>Animation</Page>
+				  <Name>Animation</Name>
+				  <Title>Animation</Title>
+			  </Example>
+          </Examples>
+        </Category>
+		  <Category>
+			  <Name>Events</Name>
+			  <Title>Events</Title>
+			  <Examples>
+				  <Example>
+					  <Page>Events</Page>
+					  <Name>Events</Name>
+					  <Title>Events</Title>
+				  </Example>
+			  </Examples>
+		  </Category>
+		  <Category>
+			  <Name>Styling</Name>
+			  <Title>Styling</Title>
+			  <Examples>
+				  <Example>
+					  <Page>Styling</Page>
+					  <Name>Styling</Name>
+					  <Title>Styling</Title>
+				  </Example>
+			  </Examples>
+		  </Category>
       </Categories>
     </Control>
     <Control>

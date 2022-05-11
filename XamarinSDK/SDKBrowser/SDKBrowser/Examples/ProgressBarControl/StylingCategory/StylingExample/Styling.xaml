@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             x:Class="SDKBrowser.Examples.ProgressBarControl.StylingCategory.StylingExample.Styling">
+    <StackLayout Margin="20" 
+                 HorizontalOptions="FillAndExpand" 
+                 VerticalOptions="FillAndExpand" 
+                 Spacing="20">
+        <StackLayout>
+            <Label Text="ProgressBar with TrackFill property set to LightBlue" />
+            <!-- >> progressbar-styling-trackfill -->
+            <telerikPrimitives:RadLinearProgressBar Value="20"
+                                                    TrackFill="LightBlue"/>
+            <!-- << progressbar-styling-trackfill -->
+        </StackLayout>
+        <StackLayout>
+            <Label Text="ProgressBar with ProgressFill set to Orange" />
+            <!-- >> progressbar-styling-progressfill -->
+            <telerikPrimitives:RadLinearProgressBar Value="20" 
+                                                    ProgressFill="#FFAC3E"/>
+            <!-- << progressbar-styling-progressfill -->
+        </StackLayout>
+        <StackLayout>
+            <Label Text="ProgressBar Text Styling - FontSize = 20, TextColor = LightGreen"/>
+            <!-- >> progressbar-styling-text -->
+            <telerikPrimitives:RadLinearProgressBar Value="90"
+                                                    AlternateTextColor="Black"
+                                                    TextColor="#019688"
+                                                    FontSize="20"
+                                                    HeightRequest="30"/>
+            <!-- << progressbar-styling-text -->
+        </StackLayout>
+        <StackLayout>
+            <Label Text="ProgressBar with Segments and SegmentSeparatorFill and SegmentSeparatorThickness applied"/>
+            <!-- >> progressbar-styling-separator-segments -->
+            <telerikPrimitives:RadLinearProgressBar Value="25"
+                                                    SegmentCount="10"
+                                                    SegmentSeparatorFill="Black"
+                                                    SegmentSeparatorThickness="2"/>
+            <!-- << progressbar-styling-separator-segments -->
+        </StackLayout>
+        <StackLayout>
+            <Label Text="ProgressBar IndeterminateFill set to Yellow"/>
+            <!-- >> progressbar-styling-indeterminatefill -->
+            <telerikPrimitives:RadLinearProgressBar Value="25"
+                                                    IsIndeterminate="True"
+                                                    IndeterminateFill="Yellow"/>
+            <!-- << progressbar-styling-indeterminatefill -->
+        </StackLayout>
+    </StackLayout>
+</ContentView>

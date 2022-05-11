@@ -453,6 +453,9 @@
     <AndroidResource Include="Resources\drawable-hdpi\SignaturePad.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\SignaturePad.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\SignaturePad.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ProgressBar.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ProgressBar.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ProgressBar.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\image.png" />

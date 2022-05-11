@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             x:Class="SDKBrowser.Examples.ProgressBarControl.FeaturesCategory.AnimationExample.Animation">
+    
+    <StackLayout Margin="20" 
+                 HorizontalOptions="FillAndExpand" 
+                 VerticalOptions="FillAndExpand" 
+                 Spacing="20">
+        <!-- >> progressbar-progress-animation-duration-easing -->
+        <StackLayout>
+            <Label Text="Progress AnimationDuration and AnimationEasing can be viewed when the Value of the ProgressBar changes"/>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{Binding Value, Source={x:Reference progressBar}}"/>
+                <Stepper Minimum="0"
+                         Maximum="180"
+                         Increment="20"
+                         Value="{Binding Value, Source={x:Reference progressBar}}"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="ProgressAnimationDuration = 1000 and ProgressAnimationEasing = CubicIn"/>
+                <telerikPrimitives:RadLinearProgressBar x:Name="progressBar"
+                                                        Minimum="0"
+                                                        Maximum="180"
+                                                        Value="20"
+                                                        ProgressAnimationDuration="1000"
+                                                        ProgressAnimationEasing="CubicIn"/>
+            </StackLayout>
+        </StackLayout>
+        <!-- << progressbar-progress-animation-duration-easing -->
+        <StackLayout>
+            <Label Text="Animation Duration and Easing when the LinearProgressBar is in Indeterminate mode"/>
+            <StackLayout>
+                <Label Text="IndeterminateAnimationDuration = 1000 and IndeterminateAnimationEasing = CubicIn"/>
+                <!-- >> progressbar-indeterminate-animation-duration-easing -->
+                <telerikPrimitives:RadLinearProgressBar Value="25"
+                                                        IndeterminateAnimationDuration="1000"
+                                                        IndeterminateAnimationEasing="CubicIn"
+                                                        IsIndeterminate="True"/>
+                <!-- << progressbar-indeterminate-animation-duration-easing -->
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentView>

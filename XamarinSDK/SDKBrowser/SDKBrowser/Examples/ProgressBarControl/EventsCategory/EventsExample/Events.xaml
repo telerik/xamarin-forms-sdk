@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             x:Class="SDKBrowser.Examples.ProgressBarControl.EventsCategory.EventsExample.Events">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <!-- >> progressbar-events -->
+    <StackLayout Margin="20" 
+                 HorizontalOptions="FillAndExpand" 
+                 VerticalOptions="FillAndExpand" 
+                 Spacing="20">
+        <StackLayout Orientation="Horizontal">
+            <Label Text="{Binding Value, Source={x:Reference progressBar}}" 
+                   VerticalTextAlignment="Center"/>
+            <Stepper Minimum="0" 
+                     Maximum="180" 
+                     Increment="20" 
+                     Value="{Binding Value, Source={x:Reference progressBar}}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Events: "/>
+            <Label x:Name="statusLabel"/>
+        </StackLayout>
+        <telerikPrimitives:RadLinearProgressBar x:Name="progressBar"
+                                                Minimum="0"
+                                                Maximum="180"
+                                                Value="20"
+                                                ProgressChanged="OnProgressChanged"
+                                                ProgressCompleted="OnProgressCompleted"/>
+    </StackLayout>
+    <!-- << progressbar-events  -->
+</ContentView>
