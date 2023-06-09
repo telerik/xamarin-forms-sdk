@@ -1860,6 +1860,17 @@
             </Example>
           </Examples>
         </Category>
+        <Category>
+          <Name>EmptyTemplate</Name>
+          <Title>Empty Template</Title>
+          <Examples>
+            <Example>
+              <Page>EmptyTemplate</Page>
+              <Name>EmptyTemplate</Name>
+              <Title>Empty Template</Title>
+            </Example>
+          </Examples>
+        </Category>
       </Categories>
     </Control>
     <Control>
